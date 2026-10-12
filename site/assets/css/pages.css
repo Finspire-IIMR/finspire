@@ -195,3 +195,8 @@ table{border-collapse:collapse}
   .skel::after{display:none}
   ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
 }
+
+/* maker's credit under the footer */
+.fs-credit{margin-top:20px;font-size:13px;color:var(--muted)}
+.fs-credit a{color:var(--ink2);border-bottom:1px solid var(--line2);transition:color .2s,border-color .2s}
+.fs-credit a:hover{color:var(--ink);border-color:var(--ink2)}

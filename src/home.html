@@ -595,6 +595,9 @@ footer{border-top:1px solid var(--line);padding:56px 0 40px}
 .fcol b{font-weight:400;color:var(--muted);margin-bottom:6px}
 .fcol a{color:var(--ink2);transition:color .2s}
 .fcol a:hover{color:var(--ink)}
+.credit{margin-top:20px;font-size:13px;color:var(--muted)}
+.credit a{color:var(--ink2);border-bottom:1px solid var(--line2);transition:color .2s,border-color .2s}
+.credit a:hover{color:var(--ink);border-color:var(--ink2)}
 .fbot{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr;gap:24px;font-size:13px;color:var(--muted)}
 @media(max-width:700px){.fbot{grid-template-columns:1fr}}
 .fbot .logo{font-size:16px;color:var(--ink)}
@@ -1199,6 +1202,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
       <div><a class="logo" href="#top"><img class="logo-img lt" src="assets/img/logo-light.png" alt="" width="29" height="28">Finspire</a><p style="margin-top:12px">© <span id="year"></span> Finspire, IIM Ranchi</p></div>
       <p>Finspire is the student-run finance club of the IPM programme at the Indian Institute of Management Ranchi, not a financial advisor or a broker. Nothing on this site is investment advice. Repository links open the original source. Finspire Drive holds members' own notes and work; paid or copyrighted course material isn't accepted.</p>
     </div>
+    <p class="credit">Made by <a href="https://www.linkedin.com/in/somesh-jagtyani" target="_blank" rel="noopener noreferrer" data-own>Somesh Jagtyani</a>, IPM’28</p>
   </div>
 </footer>
 
@@ -1265,7 +1269,7 @@ function applySettings(skipId){
   if(skipId !== "h1") $("#h1").innerHTML = hl ? h.replace(esc(hl), () => `<span class="hl">${esc(hl)}</span>`) : h;
   if(skipId !== "sub") $("#sub").textContent = S.subline;
   if(skipId !== "annName") $("#annName").textContent = S.announcement;
-  $$('a[href^="https://www.linkedin.com/"], a[data-li]').forEach(a => { a.dataset.li = "1"; a.href = S.linkedin || LI_OLD; });
+  $$('a[href^="https://www.linkedin.com/"]:not([data-own]), a[data-li]').forEach(a => { a.dataset.li = "1"; a.href = S.linkedin || LI_OLD; });
   const mail = $("#footMail"); if(mail) mail.remove();
   if(S.email){ const a = document.createElement("a"); a.id = "footMail"; a.href = "mailto:" + S.email; a.textContent = "Email the team"; ($(".fcol-club") || $$(".fcol")[3]).appendChild(a); }
   $("#marq").innerHTML = S.roles.concat(S.roles).map(r => `<span>${esc(r)}</span>`).join("");
@@ -2089,7 +2093,7 @@ if(!reduce && "IntersectionObserver" in window){
 
 /* ---------- Edit mode: change the page in place, then publish ---------- */
 S.copy = S.copy || {};
-const ED_EXCL = "#mnBoard,#mnNews,#mnTod,.mn-ctas,.mn-lbl,.fcol-tools,.gl-term,.gl-tip,.fs-acct,.fs-toasts,.fs-modal,#grid,#tiles,#pwList,#pwMap,#driveGrid,#driveCtas,#driveCount,footer a[href='#drive'],#egrid,#chips,#megaCols,#marq,.device-wrap,.pscreen,.field-stage,.repo-bar,.hero-copy,.announce,.mega,.mobile-menu,.nav,.stat .n,#footTracks,#footPaths,#footMail,.fbot > div,.acc-head,.ed-bar,.ed-dialog,.toast,.edit-fab,.mini,.stack,.ill,.candles";
+const ED_EXCL = ".credit,#mnBoard,#mnNews,#mnTod,.mn-ctas,.mn-lbl,.fcol-tools,.gl-term,.gl-tip,.fs-acct,.fs-toasts,.fs-modal,#grid,#tiles,#pwList,#pwMap,#driveGrid,#driveCtas,#driveCount,footer a[href='#drive'],#egrid,#chips,#megaCols,#marq,.device-wrap,.pscreen,.field-stage,.repo-bar,.hero-copy,.announce,.mega,.mobile-menu,.nav,.stat .n,#footTracks,#footPaths,#footMail,.fbot > div,.acc-head,.ed-bar,.ed-dialog,.toast,.edit-fab,.mini,.stack,.ill,.candles";
 const ED_TAGS = "h2,h3,h4,p,li,span,small,b,em,blockquote,figcaption,a,.acc-item .b,.stat .l";
 const INLINE_OK = new Set(["SPAN","BR","B","EM","STRONG","I","A"]);
 const simpleEl = el => el.textContent.trim() && [...el.childNodes].every(n => n.nodeType === 3 || (n.nodeType === 1 && INLINE_OK.has(n.tagName.toUpperCase())));
