@@ -9,12 +9,22 @@
 <title>Finspire</title>
 <meta name="description" content="Finspire is the finance club of the IPM programme at IIM Ranchi: a curated learning repository, learning paths, live markets, a finance dictionary and the club library.">
 <link rel="icon" type="image/png" href="assets/img/logo-light.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/plex-sans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="assets/fonts/plex-mono-400-latin.woff2">
+<script src="config.js"></script>
+<script>(function(c){if(c&&c.googleClientId&&!(c.features&&c.features.signin===false))document.documentElement.classList.add("fs-signin")})(window.FINSPIRE_CONFIG)</script>
 <link rel="stylesheet" href="assets/css/shell.css">
-<link rel="stylesheet" href="assets/css/markets.css">
+<!-- markets.css only styles the Markets & News block further down: it loads without blocking the hero -->
+<link rel="stylesheet" href="assets/css/markets.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="assets/css/markets.css"></noscript>
 <style>
+@font-face{font-family:"IBM Plex Sans";font-style:normal;font-weight:300 700;font-display:swap;src:url("assets/fonts/plex-sans-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:400;font-display:swap;src:url("assets/fonts/plex-mono-400-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";font-style:normal;font-weight:500;font-display:swap;src:url("assets/fonts/plex-mono-500-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Plex Sans Fallback";src:local("Arial");size-adjust:101.27%;ascent-override:100.72%;descent-override:26.66%;line-gap-override:0%}
+@font-face{font-family:"Plex Mono Fallback";src:local("Menlo"),local("Courier New");size-adjust:100%;ascent-override:102.35%;descent-override:27.09%;line-gap-override:0%}
+@font-face{font-family:"Outfit";font-style:normal;font-weight:600 700;font-display:swap;src:url("assets/fonts/outfit-latin.woff2") format("woff2")}
+@font-face{font-family:"Instrument Serif";font-style:italic;font-weight:400;font-display:swap;src:url("assets/fonts/instrument-serif-italic-latin.woff2") format("woff2")}
 img{max-width:100%}
 :root{
   --bg:#141416; --bg2:#1A1A1F; --bg3:#222228; --bg4:#2B2B33;
@@ -23,8 +33,10 @@ img{max-width:100%}
   --accent:#DB2930; --accent-hover:#EA3A42; --accent-soft:rgba(219,41,48,.18); --accent-ink:#FF6B71;
   --bull:#3DBE86; --bull-soft:rgba(61,190,134,.16); --bear:#E46F6A; --bear-soft:rgba(228,111,106,.16);
   --shadow:0 30px 80px -30px rgba(0,0,0,.7);
-  --sans:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
-  --mono:"IBM Plex Mono",Menlo,Consolas,monospace;
+  --sans:"IBM Plex Sans","Plex Sans Fallback","Helvetica Neue",Arial,sans-serif;
+  --display:"Outfit","IBM Plex Sans","Helvetica Neue",Arial,sans-serif;   /* rounded geometric: headings */
+  --serif:"Instrument Serif","Playfair Display",Georgia,"Times New Roman",serif;   /* italic accent word in headings */
+  --mono:"IBM Plex Mono","Plex Mono Fallback",Menlo,Consolas,monospace;
   --hdr:96px;
 }
 .light{
@@ -38,7 +50,9 @@ img{max-width:100%}
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{overflow-x:clip;scroll-behavior:smooth;color-scheme:dark}
+/* scroll-behavior:smooth is switched on from JS after load, so arriving at index.html#paths from another page lands
+   instantly while in-page anchor links still glide */
+html{overflow-x:clip;color-scheme:dark}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
@@ -52,6 +66,10 @@ ul{margin:0;padding:0;list-style:none}
 .h2 .dim{color:var(--muted)}
 .lede{color:var(--ink2);font-size:clamp(16px,1.4vw,19px);max-width:60ch}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+#main:focus-visible{outline:none}
+/* keyboard users: the first Tab stop jumps past the header (same pill as pages.css) */
+.skip{position:fixed;left:16px;top:-60px;z-index:300;height:40px;display:inline-flex;align-items:center;padding:0 16px;border-radius:999px;background:var(--ink);color:var(--bg);font-weight:500;font-size:14px;transition:top .2s}
+.skip:focus{top:calc(12px + env(safe-area-inset-top,0px))}
 
 /* Buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 22px;border-radius:999px;font-weight:500;font-size:15px;line-height:1;white-space:nowrap;transition:background .25s,border-color .25s,transform .25s cubic-bezier(.2,.7,.2,1),box-shadow .25s}
@@ -79,10 +97,13 @@ ul{margin:0;padding:0;list-style:none}
 .hdr.light-mode .nav{color:var(--ink)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px;color:var(--ink)}
 .logo{display:flex;align-items:center;gap:11px;font-weight:500;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
-.logo-img{height:34px;width:auto;display:block}
-.logo-img.dk{display:none}
-.hdr.light-mode .logo-img.lt{display:none}
-.hdr.light-mode .logo-img.dk{display:block}
+/* both marks are stacked and cross-fade with the header, so the wordmark never vanishes mid-fade over a light band */
+.logo{position:relative}
+.logo-img{height:34px;width:auto;display:block;transition:opacity .35s}
+.logo-img.dk{position:absolute;left:0;top:50%;transform:translateY(-50%);opacity:0}
+.hdr.light-mode .logo-img.lt{opacity:0}
+.hdr.light-mode .logo-img.dk{opacity:1}
+.fbot .logo-img.dk{display:none}
 .nav-links{display:flex;align-items:center;gap:6px}
 .nl{display:inline-flex;align-items:center;gap:6px;height:42px;padding:0 16px;border-radius:999px;font-size:15.5px;font-weight:500;color:var(--ink2);transition:background .2s,color .2s}
 .nl:hover,.nl[aria-expanded="true"]{color:var(--ink);background:var(--line)}
@@ -99,12 +120,18 @@ ul{margin:0;padding:0;list-style:none}
 .hdr-acct{display:inline-flex;align-items:center}
 @media(max-width:1279px) and (min-width:961px){.nav-in{gap:16px}.nav-links{gap:2px}.nl{padding:0 13px;font-size:15px}}
 @media(max-width:1139px) and (min-width:961px){.logo .wm{display:none}.nl{padding:0 11px;font-size:14.5px}.nav-cta .btn{height:40px;padding:0 18px;font-size:14.5px}}
-.burger{display:none;width:42px;height:42px;border-radius:10px;place-items:center}
-.burger span{display:block;width:18px;height:1.5px;background:var(--ink);margin:2.5px 0}
-@media(max-width:960px){.nav-links,.nav-cta .nl,.nav-cta .btn-primary{display:none}.burger{display:grid;margin-right:-8px}.hdr .logo{min-height:44px}}
-.mobile-menu{display:grid;gap:2px;padding:6px 0 18px;border-top:1px solid var(--line);background:var(--bg);color:var(--ink)}
-.mobile-menu a{padding:13px 4px;font-size:17px;font-weight:500;border-bottom:1px solid var(--line)}
+.burger{display:none;width:44px;height:44px;border-radius:10px;place-items:center;align-content:center;flex:none;margin-right:-10px}
+.burger span{display:block;width:18px;height:1.5px;background:var(--ink);margin:2.5px 0;transition:transform .25s cubic-bezier(.2,.7,.2,1),opacity .2s}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(4px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-4px) rotate(-45deg)}
+@media(max-width:960px){.nav-links,.nav-cta .nl,.nav-cta .btn-primary{display:none}.burger{display:grid}.hdr .logo{min-height:44px}}
+.mobile-menu{display:grid;gap:2px;padding:6px clamp(16px,4vw,40px) 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg);color:var(--ink);max-height:calc(100vh - var(--hdr) - 10px);max-height:calc(100svh - var(--hdr) - 10px);overflow-y:auto;overscroll-behavior:contain;box-shadow:0 36px 48px -28px rgba(0,0,0,.75);animation:fsMenuIn .28s cubic-bezier(.2,.7,.2,1)}
+@keyframes fsMenuIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.mobile-menu a{display:flex;align-items:center;min-height:52px;padding:0 4px;font-size:17px;font-weight:500;border-bottom:1px solid var(--line)}
 .mobile-menu a:last-child{border-bottom:0}
+.mobile-menu a[aria-current]{color:var(--accent-ink)}
+.mobile-menu .btn{margin-top:16px;height:46px;min-height:0;padding:0 22px;justify-content:center;font-size:15px;color:#fff;border-bottom:0}
 @media(min-width:961px){.mobile-menu{display:none!important}}
 .mobile-menu small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:14px 4px 4px}
 
@@ -114,8 +141,8 @@ ul{margin:0;padding:0;list-style:none}
 .mega-in{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:0;padding-block:28px}
 .mega-col{padding:6px 28px;border-left:1px solid var(--line);display:grid;gap:10px;align-content:start}
 .mega-col:first-child{border-left:0;padding-left:0}
-.mega-col h4{font-size:22px;font-weight:500;letter-spacing:-.02em}
-.mega-col h5{margin:0;font-size:16px;font-weight:500}
+.mega-col .h4{font-size:22px;font-weight:500;letter-spacing:-.02em;color:var(--ink);text-wrap:balance}
+.mega-col .h5{margin:0;font-size:16px;font-weight:500;color:var(--ink)}
 .mega-col p{font-size:14px;color:var(--ink2)}
 .mega-col .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:8px}
 .mega-col a.item{font-size:14.5px;color:var(--ink2);padding:3px 0;transition:color .2s}
@@ -123,8 +150,8 @@ ul{margin:0;padding:0;list-style:none}
 .mega-col .tk{display:flex;flex-direction:column;gap:2px}
 .mega-foot{border-top:1px solid var(--line);background:var(--bg3)}
 .mega-foot .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;flex-wrap:wrap}
-.mega-foot h5{margin:0;font-size:18px;font-weight:500;display:flex;align-items:center;gap:10px}
-.mega-foot h5 i{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);font-style:normal;font-size:14px}
+.mega-foot .h5{margin:0;font-size:18px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:10px}
+.mega-foot .h5 i{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--accent-soft);color:var(--accent-ink);font-style:normal;font-size:14px}
 .mega-foot p{font-size:14px;color:var(--ink2)}
 @media(max-width:960px){.mega{display:none}}
 
@@ -133,18 +160,23 @@ ul{margin:0;padding:0;list-style:none}
 .hero-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:#0D0D11}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;display:block;transform-origin:50% 68%;will-change:transform}
 .hero-copy{position:absolute;left:0;right:0;top:calc(var(--hdr) - 4px);z-index:3;text-align:center;display:grid;justify-items:center;gap:14px;padding-inline:16px;will-change:transform,opacity}
-.hero-copy h1{font-family:var(--sans);font-weight:700;font-size:clamp(40px,6.8vw,94px);line-height:1;letter-spacing:-.04em;color:#fff;max-width:14ch;text-shadow:0 0 60px rgba(255,255,255,.14),0 8px 40px rgba(0,0,0,.45)}
-.hero-copy h1 .hl{position:relative;display:inline-block;background:linear-gradient(95deg,#FF8A8F,#DB2930 70%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 0 22px rgba(219,41,48,.5))}
+.hero-copy h1{font-family:var(--display);font-weight:700;font-size:clamp(40px,6.8vw,94px);line-height:1;letter-spacing:-.04em;color:#fff;max-width:14ch;text-shadow:0 0 60px rgba(255,255,255,.14),0 8px 40px rgba(0,0,0,.45)}
+.hero-copy h1 .hl{position:relative;display:inline-block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.1em;line-height:.85;letter-spacing:-.01em;padding-right:.04em;background:linear-gradient(95deg,#FF8A8F,#DB2930 70%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;text-shadow:none;filter:drop-shadow(0 0 22px rgba(219,41,48,.5))}
 .hero-copy h1 .hl::after{content:"";position:absolute;left:2%;right:2%;bottom:-.02em;height:.07em;background:#DB2930;border-radius:99px;transform:scaleX(0);transform-origin:left;animation:ul .9s cubic-bezier(.2,.7,.2,1) .7s forwards}
 @keyframes ul{to{transform:scaleX(1)}}
 .hero-copy p{font-family:var(--sans);font-weight:300;font-size:clamp(17px,1.6vw,22px);line-height:1.45;color:#DCDCE2;max-width:54ch;letter-spacing:0}
 .hero-ctas{display:flex;gap:8px;align-items:center;margin-top:2px;flex-wrap:wrap;justify-content:center}
 .hero-ctas .btn{height:34px;padding:0 16px;font-size:13px;gap:6px}
+/* on touch screens (phones in either orientation) the first tap on the site is a full-size button */
+@media(pointer:coarse){.hero-ctas .btn{height:44px;padding:0 20px;font-size:15px;gap:8px}}
 .hero-form .field{display:flex;align-items:center;height:50px;padding:0 6px 0 20px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);gap:8px;width:min(460px,90vw)}
 .hero-form input{flex:1;min-width:0;background:none;border:0;color:#fff;font:inherit;font-size:15.5px;outline:none}
 .hero-form input::placeholder{color:rgba(255,255,255,.6)}
 .hero-form .field:focus-within{border-color:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.28)}
 @media(max-width:720px){.hero-copy{top:calc(var(--hdr) + 14px)}.hero-note{display:none}}
+/* landscape phones: a shorter headline block so the laptop sits below the buttons instead of behind them */
+@media(max-height:560px){.hero-note{display:none}}
+@media(max-height:560px) and (min-width:721px){.hero-copy{gap:10px;top:calc(var(--hdr) - 10px)}.hero-copy h1{font-size:clamp(36px,13vh,56px)}.hero-copy p{font-size:15px;max-width:64ch}.hero-ctas .btn{height:40px}}
 .hero-form .btn{height:40px}
 .hero-note{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;max-width:92vw;background:rgba(18,18,22,.9);color:#D7D7DE;font-size:12.5px;padding:10px 18px;border-radius:14px;text-align:center;white-space:normal}
 .hero-shade{position:absolute;inset:0;background:var(--bg);opacity:0;z-index:2;pointer-events:none}
@@ -212,20 +244,21 @@ html.rm .hero-note{position:relative;left:auto;bottom:auto;transform:none;margin
 .product-copy{display:grid;gap:36px;align-content:center}
 .product-copy .h2{font-size:clamp(30px,3.4vw,44px);font-weight:600}
 .acc{display:grid}
-.acc-item{display:grid;grid-template-columns:18px 1fr;gap:0 10px;padding:18px 0;border-top:1px solid var(--line);color:var(--ink2);position:relative;cursor:pointer}
-.acc-head{grid-column:1/-1;display:grid;grid-template-columns:18px 1fr;gap:0 10px;text-align:left;align-items:start;padding:0}
+.acc-item{display:grid;grid-template-columns:18px 1fr;gap:0 10px;padding:0;border-top:1px solid var(--line);color:var(--ink2);position:relative;cursor:pointer}
+/* the row's padding sits on the button, so the whole row is the hit area and the focus ring wraps it */
+.acc-head{grid-column:1/-1;display:grid;grid-template-columns:18px 1fr;gap:0 10px;text-align:left;align-items:start;padding:18px 0;width:100%;min-height:44px;border-radius:6px}
 .acc-item:last-child{border-bottom:1px solid var(--line)}
 .acc-item .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:9px;opacity:0;transition:opacity .3s}
 .acc-item .t{font-size:17px;font-weight:500;color:var(--ink)}
-.acc-item .b{grid-column:2;font-size:15px;color:var(--ink2);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .5s cubic-bezier(.2,.7,.2,1),opacity .4s,margin .4s,visibility .5s}
+.acc-item .b{grid-column:2;font-size:15px;color:var(--ink2);max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s cubic-bezier(.2,.7,.2,1),opacity .25s,margin .25s,visibility .3s}
 .acc-item .b .link{margin-top:12px;font-size:14px}
 .acc-item.on .dot{opacity:1}
-.acc-item.on .b{max-height:220px;opacity:1;margin-top:8px;visibility:visible}
+.acc-item.on .b{max-height:220px;opacity:1;margin:-10px 0 18px;visibility:visible}
 .acc-item .prog{position:absolute;left:0;top:-1px;height:1px;width:100%;background:var(--accent);opacity:0;transform:scaleX(0);transform-origin:left center}
 .acc-item.on .prog{opacity:1;transition:transform var(--dur,7s) linear}
 .product-panel{position:relative}
 .pscreen{position:relative;aspect-ratio:1000/640;max-width:100%;border-radius:18px;overflow:hidden;background:#141418;border:1px solid var(--line2);box-shadow:var(--shadow)}
-.pview{width:1000px;height:640px;position:absolute;left:0;top:0;transform-origin:0 0;transform:scale(var(--s,1));opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s;background:#141418;color:#EDEDF1;font-size:13px;padding:26px 30px;display:grid;gap:18px;align-content:start}
+.pview{width:1000px;height:640px;position:absolute;left:0;top:0;transform-origin:0 0;transform:scale(var(--s,1));opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;background:#141418;color:#EDEDF1;font-size:13px;padding:26px 30px;display:grid;gap:18px;align-content:start}
 .pview.on{opacity:1;visibility:visible}
 .pv-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .pv-h h4{font-size:26px;font-weight:500;letter-spacing:-.02em;color:#fff}
@@ -332,16 +365,29 @@ html.rm .hero-note{position:relative;left:auto;bottom:auto;transform:none;margin
 .mn-kid span{font-size:14.5px;color:var(--ink);line-height:1.5}
 .mn-tod .link{justify-self:start;font-size:14.5px}
 .mn-empty{padding:18px 0 14px;font-size:14.5px;color:var(--muted)}
-.mn-wait{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
-.mn-wait i{display:block;height:92px;border-radius:14px;background:var(--bg2);border:1px solid var(--line)}
-.mn-wait.rows{grid-template-columns:1fr;gap:10px;padding:14px 0}
+/* placeholders the same size as the live widgets, so nothing moves when they mount */
+.mn-wait{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.mn-wait i{display:block;height:136px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);animation:mnPulse 1.8s ease-in-out infinite}
+@keyframes mnPulse{50%{opacity:.6}}
+#mnBoard .mn-wait{margin-bottom:44px}   /* the live board's gap + status line (collapses with .mn-board's 16px) */
+.mn-wait.rows{grid-template-columns:1fr;gap:8px;padding:14px 0 0;align-content:start}
 .mn-wait.rows i{height:14px;border:0;border-radius:7px;background:var(--bg3)}
-.mn-wait.rows i:nth-child(2){width:82%}.mn-wait.rows i:nth-child(3){width:64%}
-@media(max-width:1060px){.mn-wait{grid-template-columns:repeat(3,minmax(0,1fr))}}
+#mnNews .mn-wait.rows{min-height:289px;padding-top:12px}
+/* three headlines: a short meta line, then two lines of headline (the third one shorter) */
+#mnNews .mn-wait.rows i:nth-child(3n+1){height:11px;width:36%;margin-top:14px}
+#mnNews .mn-wait.rows i:nth-child(1){margin-top:0}
+#mnNews .mn-wait.rows i:nth-child(3n+2){height:16px;width:96%}
+#mnNews .mn-wait.rows i:nth-child(3n){height:16px;width:64%}
+/* term card: a title, the category, three lines of meaning */
+#mnTodBody .mn-wait{min-height:336px;padding:4px 0 0}
+#mnTodBody .mn-wait i:nth-child(1){height:30px;width:52%;margin-bottom:6px}
+#mnTodBody .mn-wait i:nth-child(2){height:12px;width:34%;margin-bottom:10px}
+#mnTodBody .mn-wait i:nth-child(4){width:88%}
+#mnTodBody .mn-wait i:nth-child(5){width:58%}
 
 /* Quote */
 .quote{padding-block:0 clamp(72px,9vw,130px);text-align:center}
-.quote blockquote{margin:0 auto;max-width:26ch;font-size:clamp(26px,3.6vw,46px);line-height:1.2;letter-spacing:-.025em;font-weight:500;color:var(--ink)}
+.quote blockquote{margin:0 auto;max-width:26ch;font-family:var(--serif);font-style:italic;font-size:clamp(30px,4vw,52px);line-height:1.15;letter-spacing:-.01em;font-weight:400;color:var(--ink)}
 .quote blockquote .dim{color:var(--muted)}
 .quote figcaption{margin-top:28px;color:var(--ink2);font-size:15px}
 .quote figcaption b{display:block;font-weight:500;color:var(--ink);font-size:17px}
@@ -355,8 +401,15 @@ html.rm .hero-note{position:relative;left:auto;bottom:auto;transform:none;margin
 .search{position:relative}
 .search input{width:100%;height:50px;padding:0 16px 0 46px;border-radius:12px;border:1px solid var(--line2);background:var(--bg2);font:inherit;font-size:16px;color:var(--ink);transition:border-color .2s,box-shadow .2s}
 .search input::placeholder{color:var(--muted)}
+.search input{text-overflow:ellipsis}
 .search input:focus{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft);outline:none}
 .search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}
+.search input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.search input.has-x{padding-right:52px}
+/* clear (×), the same 40 px control as the Dictionary's search */
+.search .sx{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--ink2);transition:background .15s,color .15s}
+.search .sx:hover{background:var(--line);color:var(--ink)}
+.search .sx svg{position:static;transform:none;width:18px;height:18px;color:inherit}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line2);background:var(--bg2);font-size:13.5px;font-weight:500;color:var(--ink2);transition:all .2s;display:inline-flex;align-items:center;gap:7px}
 .chip:hover{border-color:var(--ink2);color:var(--ink)}
@@ -407,6 +460,9 @@ html.rm .hero-note{position:relative;left:auto;bottom:auto;transform:none;margin
 .rr-meta{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
 @media(max-width:720px){.rr-meta{flex-direction:row;flex-wrap:wrap;align-items:center}}
 .rr-main h4{font-size:17px;font-weight:500;letter-spacing:-.01em;margin:0;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+/* the headline opens the resource too (the only link used to be the small "Open" at the far right) */
+.rr-main .rt{color:inherit;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color .2s}
+.rr-main .rt:hover,.rrow:hover .rt{text-decoration-color:var(--line2)}
 .rr-main .src{font-size:13px;color:var(--muted);margin-top:2px}
 .rr-main .desc{font-size:14px;color:var(--ink2);margin-top:6px;max-width:70ch}
 .start{font-style:normal;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--accent);color:#fff}
@@ -474,6 +530,7 @@ a.df:hover .go svg{transform:translate(2px,-2px)}
 
 /* Start here: pathway chooser */
 #paths{scroll-margin-top:var(--hdr);padding-block:clamp(64px,8vw,120px) clamp(48px,6vw,80px)}
+.sec-head{display:grid;gap:14px;max-width:720px}   /* same rhythm as .repo-head / .events-head / .field-head */
 .pathway{display:grid;grid-template-columns:1fr 1.55fr;gap:clamp(18px,3vw,36px);align-items:start;margin-top:clamp(24px,3vw,40px)}
 @media(max-width:900px){.pathway{grid-template-columns:1fr}}
 .pw-list{display:grid;gap:10px;position:sticky;top:calc(var(--hdr) + 12px)}
@@ -539,7 +596,7 @@ a.df:hover .go svg{transform:translate(2px,-2px)}
 .stat{text-align:center;padding:8px 16px;border-left:1px solid var(--line)}
 .stat:first-child{border-left:0}
 @media(max-width:800px){.stat:nth-child(3){border-left:0}}
-.stat .n{font-family:var(--sans);font-size:clamp(40px,6vw,80px);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
+.stat .n{font-family:var(--display);font-size:clamp(40px,6vw,80px);font-weight:600;letter-spacing:-.04em;line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
 .stat .l{margin-top:14px;color:var(--ink2);font-size:15px}
 
 /* Events */
@@ -661,6 +718,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   .hero-copy{top:calc(var(--hdr) + 10px);gap:12px}
   .hero-copy p{font-size:15.5px;line-height:1.45;max-width:34ch}
   .hero-ctas{gap:8px}
+  .hero-ctas .btn{height:44px;padding:0 20px;font-size:15px;gap:8px}
   .h2{font-size:clamp(28px,8vw,34px)}
   .lede{font-size:15.5px}
   .sec-head{gap:10px;margin-bottom:28px}
@@ -671,7 +729,8 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   .product-copy .h2{font-size:28px}
   .product-panel{display:none}
   .acc-item .prog{display:none}
-  .acc-item{padding:15px 0}
+  .acc-head{padding:15px 0}
+  .acc-item.on .b{margin:-7px 0 15px}
   .acc-item .t{font-size:16px}
   .acc-item .b{font-size:14.5px}
   .mn{padding-block:32px 36px;scroll-margin-top:calc(var(--hdr) + 8px)}
@@ -698,8 +757,14 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   .mn-kid{padding:0;border:0;background:none;gap:2px}
   .mn-kid span{font-size:14px;color:var(--ink2);line-height:1.5}
   .mn-wait{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-  .mn-wait i{height:68px}
+  .mn-wait i{height:95px;border-radius:12px}
   .mn-wait i:nth-child(n+4){display:none}
+  #mnBoard .mn-wait{margin-bottom:28px}
+  #mnNews .mn-wait.rows{min-height:241px;padding-top:4px}
+  #mnNews .mn-wait.rows i:nth-child(n+4){display:block}
+  #mnTodBody .mn-wait{min-height:189px}
+  #mnTodBody .mn-wait i:nth-child(n+4){display:block}
+  #mnTodBody .mn-wait i:nth-child(2){display:none}
   /* live widgets (markets.css / news.js markup): one row of slim tiles that scrolls sideways (the fourth peeks in), two-line headlines */
   #mnBoard .mk-mini{gap:8px}
   #mnBoard .mk-mini-g{display:flex;gap:8px;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:none}
@@ -730,14 +795,21 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   .repo-bar{margin-bottom:12px;padding-block:8px 10px}
   .repo-tools{gap:10px;grid-template-columns:minmax(0,1fr)}
   .chips,.selects,.subtools,.search{min-width:0;max-width:100%}
-  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  /* the chip row bleeds edge to edge and snaps, like .chips on the sub-pages; the cut-off chip is a hint to scroll */
+  .chips{flex-wrap:nowrap;overflow-x:auto;padding-bottom:2px;scrollbar-width:none;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px;overscroll-behavior-x:contain;max-width:none}
   .chips::-webkit-scrollbar{display:none}
-  .chip{flex:none;height:34px;font-size:13px}
+  .chip{flex:none;height:40px;font-size:13.5px}
+  .fs-xrow{scroll-snap-type:x proximity;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 24px),transparent)}
+  .fs-xrow > *{scroll-snap-align:start}
   /* 2x2: level | format / cost | count + clear. 16px text so iOS doesn't zoom on focus */
   .subtools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 8px}
   .selects{display:contents}
-  .selects select{width:100%;min-width:0;height:36px;font-size:16px;padding:0 26px 0 10px;background-position:right 10px center}
+  .selects select{width:100%;min-width:0;height:44px;font-size:16px;padding:0 26px 0 10px;background-position:right 10px center}
   .subtools > div:last-child{justify-content:space-between;min-width:0}
+  #clear{min-height:44px;padding:0 8px;margin-right:-8px}
+  .clear,.link{min-height:40px;display:inline-flex;align-items:center}
+  .rrow .open,.pw-step .open,.rr-side .open{min-height:44px;padding:0 6px;margin:-11px -6px;display:inline-flex;align-items:center}
+  .search .sx{right:5px}
   .rg-head{padding:16px 4px}
   .rg-head h3{font-size:18px}
   .rg-head p{font-size:13.5px}
@@ -786,23 +858,34 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   .two .box{padding:24px 22px;gap:10px}
   .two ul{display:none}
   footer{padding:40px 0 32px}
-  .fcols{grid-template-columns:1fr 1fr;gap:24px}
+  .fcols{grid-template-columns:1fr 1fr;gap:24px 16px}
+  .fcol{gap:0}
+  .fcol b{margin-bottom:4px}
+  .fcol a{min-height:44px;display:flex;align-items:center}
   .fcol:nth-child(1),.fcol:nth-child(2){display:none}
   .fbot{margin-top:32px;padding-top:20px;gap:14px;font-size:12.5px}
 }
+
+/* Display typography: Outfit for headings, one Instrument Serif italic word per heading (em.ital) */
+.h1,.h2{font-family:var(--display);font-weight:600;letter-spacing:-.025em}
+em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.08em;line-height:.9;letter-spacing:-.01em}
 
 /* Motion */
 .rv{transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
 .rv.pre{opacity:0;transform:translateY(14px)}
 @media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto!important}
   .rv,.rv.pre{opacity:1;transform:none;transition:none}
   .marq-track{animation:none}
   .acc-item .prog{display:none}
-  *{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  .hero-copy h1 .hl::after{animation:none;transform:none}
+  .mn-wait i{animation:none}
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}
 }
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="hdr" id="hdr">
   <a class="announce" href="dictionary/">New · <span class="long" style="color:inherit"><span id="annName">The Finspire Dictionary</span> — </span><span id="dictCount">Hundreds of</span> finance terms in plain words <span aria-hidden="true">→</span></a>
@@ -821,15 +904,15 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
         <a class="nl" href="#events">Events</a>
       </nav>
       <div class="nav-cta">
-        <div class="hdr-acct" id="hdrAcct"></div>
-        <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Join Finspire</a>
+        <div class="hdr-acct fs-acct" id="hdrAcct"></div>
+        <a class="btn btn-primary join" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer" title="Join Finspire on LinkedIn (opens in a new tab)" aria-label="Join Finspire on LinkedIn (opens in a new tab)">Join Finspire</a>
         <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="mega" id="mega" hidden>
       <div class="wrap mega-in" id="megaCols"></div>
       <div class="mega-foot"><div class="wrap">
-        <div><h5><i aria-hidden="true">→</i>New to finance?</h5><p>Start with a learning path: a short, ordered sequence from zero to pitch-ready.</p></div>
+        <div><p class="h5"><i aria-hidden="true">→</i>New to finance?</p><p>Start with a learning path: a short, ordered sequence from zero to pitch-ready.</p></div>
         <a class="btn btn-ghost sm" href="#paths">Pick a path</a>
       </div></div>
     </div>
@@ -840,12 +923,12 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
       <a href="dictionary/">Dictionary</a>
       <a href="library/">Library</a>
       <a href="#events">Events</a>
-      <a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Join on LinkedIn ↗</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer" aria-label="Join Finspire on LinkedIn (opens in a new tab)">Join on LinkedIn ↗</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
 <section class="hero" id="top">
   <div class="hero-sticky">
     <canvas class="hero-bg" id="landscape" role="img" aria-label="Illustration: a rising candlestick chart over a perspective grid, with a glowing trend line"></canvas>
@@ -857,7 +940,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
         <a class="btn btn-glass" href="#repository">Open the repository</a>
       </div>
     </div>
-    <div class="device-wrap" id="deviceWrap">
+    <div class="device-wrap" id="deviceWrap" aria-hidden="true">
       <div class="device">
         <div class="screen" id="screen1">
           <div class="dash fit" id="dash">
@@ -907,7 +990,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
               </div>
             </div>
           </div>
-          <div class="splash" id="splash" aria-hidden="true"><img src="data:image/png;base64,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" alt=""></div>
+          <div class="splash" id="splash" aria-hidden="true"><img src="assets/img/dash-mock.png" alt="" width="640" height="544" decoding="async"></div>
         </div>
         <div class="deck" aria-hidden="true"></div>
       </div>
@@ -920,7 +1003,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
 <section class="product" id="about">
   <div class="wrap product-in">
     <div class="product-copy rv">
-      <h2 class="h2">Everything you need to learn finance.<br>All in one place.</h2>
+      <h2 class="h2">Everything you need to <em class="ital">learn</em> finance.<br>All in one place.</h2>
       <div class="acc" id="acc">
         <div class="acc-item on" data-view="0"><button class="acc-head" aria-expanded="true" aria-controls="acc-b0"><span class="prog"></span><span class="dot"></span><span class="t">The repository</span></button><div class="b" id="acc-b0">Curated resources across CFA, valuation, markets, hard skills and soft skills, each tagged with a level, a format and whether it's free. Search it, filter it, open the source.<br><a class="link" href="#repository">Browse the repository →</a></div></div>
         <div class="acc-item" data-view="1"><button class="acc-head" aria-expanded="false" aria-controls="acc-b1"><span class="prog"></span><span class="dot"></span><span class="t">Learning paths</span></button><div class="b" id="acc-b1">Four ordered sequences we'd hand a junior on day one: zero to markets, valuation in a summer, the CFA Level I runway and pitch-ready finance.<br><a class="link" href="#paths">See the paths →</a></div></div>
@@ -930,9 +1013,9 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
     </div>
     <div class="product-panel rv">
       <div class="pscreen" id="pscreen">
-        <div class="pview on" id="pv0"></div>
-        <div class="pview" id="pv1"></div>
-        <div class="pview" id="pv2">
+        <div class="pview on" id="pv0" aria-hidden="true"></div>
+        <div class="pview" id="pv1" aria-hidden="true"></div>
+        <div class="pview" id="pv2" aria-hidden="true">
           <div class="pv-h"><h4>Bulls &amp; Bears</h4><span>Stock pitch · flagship</span></div>
           <div class="pv-cols">
             <div class="pv-card"><h5>How the competition runs</h5><div class="st">
@@ -955,7 +1038,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
             <div><span>Day 3</span><span><b>DCF and sanity checks</b>Terminal value, sensitivity tables, comparables, and defending the number.</span></div>
           </div></div>
         </div>
-        <div class="pview" id="pv3">
+        <div class="pview" id="pv3" aria-hidden="true">
           <div class="pv-h"><h4>Market wrap &amp; alumni</h4><span>Every week · every season</span></div>
           <div class="pv-cols">
             <div class="pv-card"><h5>Market wrap · Fridays</h5><div class="ag">
@@ -982,7 +1065,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
     <div class="mn-head">
       <div class="mn-copy rv">
         <span class="eyebrow">Markets &amp; News</span>
-        <h2 class="h2" id="mnTitle">Today's markets, <span class="dim">explained.</span></h2>
+        <h2 class="h2" id="mnTitle">Today's markets, <span class="dim"><em class="ital">explained</em>.</span></h2>
         <p class="lede">Live prices, the latest headlines and the words behind them. Tap or hover an underlined term for its plain meaning.</p>
       </div>
       <div class="mn-ctas rv">
@@ -990,15 +1073,15 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
         <a class="btn btn-ghost" href="dictionary/">Open the Dictionary</a>
       </div>
     </div>
-    <div class="mn-board rv" id="mnBoard" role="region" aria-label="Live market prices"><div class="mn-wait" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div class="mn-board" id="mnBoard" role="region" aria-label="Live market prices"><div class="mn-wait" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
     <div class="mn-grid">
-      <div class="mn-news rv" role="region" aria-label="Latest headlines">
+      <div class="mn-news" role="region" aria-label="Latest headlines">
         <div class="mn-lbl"><span>Latest headlines</span><a href="markets/#news">All news <span aria-hidden="true">→</span></a></div>
-        <div id="mnNews"><div class="mn-wait rows" aria-hidden="true"><i></i><i></i><i></i></div></div>
+        <div id="mnNews"><div class="mn-wait rows" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
       </div>
-      <article class="mn-tod rv" id="mnTod" aria-label="Term of the day">
+      <article class="mn-tod" id="mnTod" aria-label="Term of the day">
         <div class="mn-tod-top"><span class="mn-lbl-txt">Term of the day</span><span class="mn-tod-date" id="mnTodDate"></span></div>
-        <div id="mnTodBody"><div class="mn-wait rows" aria-hidden="true"><i></i><i></i><i></i></div></div>
+        <div id="mnTodBody"><div class="mn-wait rows" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></div>
       </article>
     </div>
   </div>
@@ -1009,11 +1092,11 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
     <div class="wrap">
       <div class="sec-head rv">
         <span class="eyebrow">Start here</span>
-        <h2 class="h2">Learning finance has been a maze. <span class="dim">Now it's a map.</span></h2>
+        <h2 class="h2">Learning finance has been a maze. <span class="dim">Now it's a <em class="ital">map</em>.</span></h2>
         <p class="lede">Pick where you are. Each path is a short, ordered sequence of repository entries, in the order that actually works. Finish one and move to the next.</p>
       </div>
       <div class="pathway">
-        <div class="pw-list rv" id="pwList" role="tablist" aria-label="Choose your starting point"></div>
+        <div class="pw-list rv" id="pwList" role="group" aria-label="Choose your starting point"></div>
         <div class="pw-map rv" id="pwMap"></div>
       </div>
     </div>
@@ -1023,23 +1106,24 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
     <div class="wrap">
       <div class="repo-head rv">
         <span class="eyebrow">The repository</span>
-        <h2 class="h2">Everything worth reading, watching and building.</h2>
+        <h2 class="h2">Everything worth reading, watching and <em class="ital">building</em>.</h2>
         <p class="lede">Each track in the order we'd actually learn it. Every entry links straight to the source. Green means free.</p>
       </div>
       <div class="repo-steps rv">
-        <div class="rstep"><i>1</i><div><b>Pick a track</b><span>Every track below is closed until you open it. Click a track name to see its entries in learning order.</span></div></div>
-        <div class="rstep"><i>2</i><div><b>Begin at "Start here"</b><span>One entry per track is marked as the first thing to open. Do that one first.</span></div></div>
+        <div class="rstep"><i>1</i><div><b>Pick a track</b><span>Open a track to see its entries in the order we would learn them.</span></div></div>
+        <div class="rstep"><i>2</i><div><b>Begin at “Start here”</b><span>One entry per track is marked as the first thing to open. Do that one first.</span></div></div>
         <div class="rstep"><i>3</i><div><b>Or follow a path</b><span>New to finance? The learning paths above pick the entries and the order for you.</span></div></div>
       </div>
       <div class="tiles6 rv" id="tiles"></div>
     </div>
     <div class="repo-bar">
       <div class="wrap repo-tools">
-        <label class="search">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-          <input id="q" type="search" placeholder="Search: DCF, options, Excel, Damodaran…" autocomplete="off" aria-label="Search resources">
-        </label>
-        <div class="chips" id="chips" role="group" aria-label="Track"></div>
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Search: DCF, options, Excel, Damodaran…" autocomplete="off" aria-label="Search resources" enterkeyhint="search">
+          <button class="sx" id="qx" type="button" aria-label="Clear search" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+        </div>
+        <div class="chips fs-xrow" id="chips" role="group" aria-label="Track"></div>
         <div class="subtools">
           <div class="selects">
             <select id="lvl" aria-label="Level"><option value="">All levels</option><option value="b">Beginner</option><option value="i">Intermediate</option><option value="a">Advanced</option></select>
@@ -1067,7 +1151,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
         <div class="drive-head">
           <div class="drive-copy">
             <span class="eyebrow">Finspire Drive</span>
-            <h2 class="h2">The club's own shelf. <span class="dim">Built by members.</span></h2>
+            <h2 class="h2">The club's own <em class="ital">shelf</em>. <span class="dim">Built by members.</span></h2>
             <p class="lede">Templates, notes and past work from Finspire members. Sign in with your IIM Ranchi account and the files open right here, in the Library. Made something useful? Add it for the next batch.</p>
             <span class="drive-count" id="driveCount"></span>
           </div>
@@ -1075,9 +1159,9 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
         </div>
         <div class="drive-grid" id="driveGrid"></div>
         <div class="drive-steps" id="driveSteps">
-          <div><i>1</i><span><b>Open "Add your files"</b>It's above. Sign in with your IIM Ranchi Google account and choose the file to upload.</span></div>
-          <div><i>2</i><span><b>Drop your file in</b>Only your own work, or files that are free to share. Name it "Topic – Your name – Year".</span></div>
-          <div><i>3</i><span><b>The core team files it</b>Uploads are reviewed and moved into the right folder above.</span></div>
+          <div><i>1</i><span><b>Press “Add your files”</b>It is the button above. Sign in with your IIM Ranchi Google account.</span></div>
+          <div><i>2</i><span><b>Drop your file in</b>Only your own work, or files that are free to share. Name it “Topic – Your name – Year”.</span></div>
+          <div><i>3</i><span><b>The team files it</b>Every upload is checked and moved into the right folder.</span></div>
         </div>
       </div>
     </div>
@@ -1097,7 +1181,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   <div class="wrap">
     <div class="field-head rv">
       <span class="eyebrow">Move the market</span>
-      <h2 class="h2">The market moves. <span class="dim">So does this.</span></h2>
+      <h2 class="h2">The market <em class="ital">moves</em>. <span class="dim">So does this.</span></h2>
       <p class="lede">Every symbol here is something you'll meet in the repository. Push them around, and click any term for a one-line definition and the track that teaches it.</p>
     </div>
     <div class="field-stage rv" id="stage" aria-label="Interactive field of finance terms that react to the cursor" role="img">
@@ -1109,7 +1193,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
 </section>
 
 <section class="roles">
-  <div class="wrap"><h2 class="h2 rv">Built for every finance career <span class="dim">that starts on campus.</span></h2></div>
+  <div class="wrap"><h2 class="h2 rv">Built for every finance <em class="ital">career</em> <span class="dim">that starts on campus.</span></h2></div>
   <div class="marq" aria-hidden="true"><div class="marq-track" id="marq"></div></div>
 </section>
 
@@ -1144,7 +1228,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
 
 <section class="stats">
   <div class="wrap">
-    <h2 class="h2 rv">You're building something to last your whole career. <span class="dim">So are we.</span></h2>
+    <h2 class="h2 rv">You're building something to last your whole <em class="ital">career</em>. <span class="dim">So are we.</span></h2>
     <div class="stat-grid rv">
       <div class="stat"><div class="n" data-stat="total" data-count="57" data-suffix="+">57+</div><div class="l">Resources curated</div></div>
       <div class="stat"><div class="n" data-count="6" id="statTracksN">6</div><div class="l">Learning tracks</div></div>
@@ -1158,7 +1242,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   <div class="wrap">
     <div class="events-head rv">
       <span class="eyebrow">Flagship events</span>
-      <h2 class="h2">Where the repository gets used.</h2>
+      <h2 class="h2">Where the repository gets <em class="ital">used</em>.</h2>
       <p class="lede">Dates for each edition go up on LinkedIn and the campus mailer.</p>
     </div>
     <div class="egrid" id="egrid"></div>
@@ -1167,7 +1251,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
 
 <section class="cta">
   <div class="wrap" style="display:grid;justify-items:center;gap:26px">
-    <h2 class="h2 rv">Finance, learned <span class="dim">from the ground up.</span></h2>
+    <h2 class="h2 rv">Finance, <em class="ital">learned</em> <span class="dim">from the ground up.</span></h2>
     <div class="cta-row rv">
       <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Join Finspire</a>
       <a class="btn btn-ghost" href="#repository">Open the repository ↗</a>
@@ -1218,10 +1302,8 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   <button class="primary" id="edPublish" data-ed="publish">Publish</button>
 </div>
 <script type="application/json" id="siteData">__SITE_DATA__</script>
-<script src="config.js"></script>
 <script src="assets/js/finspire.js"></script>
-<script src="assets/js/markets.js" defer></script>
-<script src="assets/js/news.js" defer></script>
+<!-- assets/js/markets.js and news.js are added by the Markets & News block once that section is near the screen -->
 
 <script>
 /* ---------- Data (data/site-data.json, embedded at build time by scripts/build_site.py; saved by Edit mode) ---------- */
@@ -1277,7 +1359,8 @@ function applySettings(skipId){
 }
 
 /* ---------- Dictionary term count (data/glossary/meta.json is published by the build) ---------- */
-fetch("data/glossary/meta.json").then(r => r.ok ? r.json() : null).then(m => { if(m && m.n) $("#dictCount").textContent = Number(m.n).toLocaleString("en-IN"); }).catch(() => {});
+const META = fetch("data/glossary/meta.json").then(r => r.ok ? r.json() : null).catch(() => null);
+META.then(m => { if(m && m.n) $("#dictCount").textContent = Number(m.n).toLocaleString("en-IN"); });
 
 /* ---------- Everything rendered from data ---------- */
 const state = {k: "", q: "", l: "", f: "", cost: ""};
@@ -1301,8 +1384,8 @@ function renderMocks(){
 function renderMega(){
   const keys = Object.keys(TRACKS), groups = [];
   for(let i = 0; i < keys.length; i += keys.length > 4 ? 2 : 1) groups.push(keys.slice(i, i + (keys.length > 4 ? 2 : 1)));
-  $("#megaCols").innerHTML = `<div class="mega-col"><img src="assets/img/logo-light.png" alt="" style="height:40px;width:auto"><h4>The repository</h4><p>${R.length} curated resources across ${keys.length} tracks, each in learning order and tagged by level, format and cost. Free for every student.</p><a class="btn btn-ghost sm" href="#repository" data-track="" style="justify-self:start;margin-top:6px">Open the repository ↗</a></div>` +
-    groups.slice(0, 3).map(g => `<div class="mega-col">${g.map(k => `<div class="tk"><h5>${esc(TRACKS[k])}</h5><span class="lbl">Start here</span>${trackItems(k).slice(0, 4).map(r => `<a class="item" href="#repository" data-track="${k}" data-q="${esc(r.t)}">${esc(r.t)}</a>`).join("")}<a class="item" href="#repository" data-track="${k}" style="color:var(--accent-ink)">All ${counts[k] || 0} in ${esc(TRACKS[k])} →</a></div>`).join("")}</div>`).join("");
+  $("#megaCols").innerHTML = `<div class="mega-col"><img src="assets/img/logo-light.png" alt="" style="height:40px;width:auto"><p class="h4">The repository</p><p>${R.length} curated resources across ${keys.length} tracks, each in learning order and tagged by level, format and cost. Free for every student.</p><a class="btn btn-ghost sm" href="#repository" data-track="" style="justify-self:start;margin-top:6px">Open the repository ↗</a></div>` +
+    groups.slice(0, 3).map(g => `<div class="mega-col">${g.map(k => `<div class="tk"><p class="h5">${esc(TRACKS[k])}</p><span class="lbl">Start here</span>${trackItems(k).slice(0, 4).map(r => `<a class="item" href="#repository" data-track="${k}" data-q="${esc(r.t)}">${esc(r.t)}</a>`).join("")}<a class="item" href="#repository" data-track="${k}" style="color:var(--accent-ink)">All ${counts[k] || 0} in ${esc(TRACKS[k])} →</a></div>`).join("")}</div>`).join("");
 }
 function renderTiles(){
   $("#tiles").innerHTML = Object.entries(TRACKS).map(([k, n]) => { const st = startOf(k); return `<button class="ttile ${state.k === k ? "on" : ""}" data-tile="${k}"><div class="th"><h3>${esc(n)}</h3><span class="n">${counts[k] || 0} entries</span></div><p>${esc(TRACK_META[k].blurb)}</p>${st ? `<small>Start here: ${esc(st.t)}</small>` : ""}</button>`; }).join("");
@@ -1317,8 +1400,8 @@ function row(r, start){
   const i = R.indexOf(r);
   return `<article class="rrow">
     <div class="rr-meta"><span class="lvl ${r.l}">${LEVELS[r.l]}</span><span class="fmt">${esc(r.f)}</span></div>
-    <div class="rr-main"><h4><span${edAttr(`r.${i}.t`)}>${esc(r.t)}</span>${start ? '<em class="start">Start here</em>' : ""}</h4><div class="src"${edAttr(`r.${i}.s`)}>${esc(r.s)}</div><p class="desc"${edAttr(`r.${i}.d`)}>${esc(r.d)}</p></div>
-    <div class="rr-side">${r.free ? '<span class="free">Free</span>' : '<span class="paid">Paid</span>'}<a class="open" href="${esc(r.u)}" target="_blank" rel="noopener">Open ${arrow}</a>${gear(`r:${i}`)}</div>
+    <div class="rr-main"><h4>${ED.on ? `<span${edAttr(`r.${i}.t`)}>${esc(r.t)}</span>` : `<a class="rt" href="${esc(r.u)}" target="_blank" rel="noopener">${esc(r.t)}</a>`}${start ? '<em class="start">Start here</em>' : ""}</h4><div class="src"${edAttr(`r.${i}.s`)}>${esc(r.s)}</div><p class="desc"${edAttr(`r.${i}.d`)}>${esc(r.d)}</p></div>
+    <div class="rr-side">${r.free ? '<span class="free">Free</span>' : '<span class="paid">Paid</span>'}<a class="open" href="${esc(r.u)}" target="_blank" rel="noopener" aria-label="Open ${esc(r.t)} (${esc(r.s)})">Open ${arrow}</a>${gear(`r:${i}`)}</div>
   </article>`;
 }
 function render(){
@@ -1349,7 +1432,7 @@ function renderPaths(){
   if(selPath >= PATHS.length) selPath = 0;
   const changedSel = shownPath !== -1 && shownPath !== selPath; shownPath = selPath;
   const tag = ED.on ? "div" : "button";
-  $("#pwList").innerHTML = PATHS.map((p, i) => `<${tag} class="pw-item ${i === selPath ? "on" : ""}" data-sel="${i}" id="path-${slug(p.n)}" role="tab" aria-selected="${i === selPath}"><span class="n">${i + 1}</span><span class="who"${edAttr(`p.${i}.who`)}>${esc(p.who || "Path " + (i + 1))}</span><b${edAttr(`p.${i}.n`)}>${esc(p.n)}</b><span class="hint"${edAttr(`p.${i}.hint`)}>${esc(p.hint || "")}</span><small${edAttr(`p.${i}.dur`)}>${esc(p.dur)}</small></${tag}>`).join("");
+  $("#pwList").innerHTML = PATHS.map((p, i) => `<${tag} class="pw-item ${i === selPath ? "on" : ""}" data-sel="${i}" id="path-${slug(p.n)}"${ED.on ? "" : ` type="button" aria-pressed="${i === selPath}"`}><span class="n">${i + 1}</span><span class="who"${edAttr(`p.${i}.who`)}>${esc(p.who || "Path " + (i + 1))}</span><b${edAttr(`p.${i}.n`)}>${esc(p.n)}</b><span class="hint"${edAttr(`p.${i}.hint`)}>${esc(p.hint || "")}</span><small${edAttr(`p.${i}.dur`)}>${esc(p.dur)}</small></${tag}>`).join("");
   const p = PATHS[selPath];
   if(!p){ $("#pwMap").innerHTML = `<div class="pw-empty">No paths yet.</div>`; $("#footPaths").innerHTML = ""; return; }
   const steps = p.steps.map(t => byTitle[t]).filter(Boolean), next = PATHS[(selPath + 1) % PATHS.length];
@@ -1358,7 +1441,7 @@ function renderPaths(){
       <p${edAttr(`p.${selPath}.d`)}>${esc(p.d)}</p>
       <div class="acts">${steps[0] ? `<a class="btn btn-ink sm" href="${esc(steps[0].u)}" target="_blank" rel="noopener">Start with step 1 ↗</a>` : ""}<a class="btn btn-ghost sm" href="#repository">Browse the full repository</a></div>
     </div>
-    <div class="pw-steps">${steps.length ? steps.map((r, i) => `<div class="pw-step"><i>${i + 1}</i><div><div class="t">${esc(r.t)}</div><div class="m">${esc(r.s)} · ${esc(r.f)} · ${LEVELS[r.l]}${r.free ? " · Free" : ""}</div><div class="d">${esc(r.d)}</div></div><a class="open" href="${esc(r.u)}" target="_blank" rel="noopener">Open ${arrow}</a></div>`).join("") : `<div class="pw-empty">This path has no steps yet.${ED.on ? " Use ⋯ to add resource titles." : ""}</div>`}</div>
+    <div class="pw-steps">${steps.length ? steps.map((r, i) => `<div class="pw-step"><i>${i + 1}</i><div><div class="t">${esc(r.t)}</div><div class="m">${esc(r.s)} · ${esc(r.f)} · ${LEVELS[r.l]}${r.free ? " · Free" : ""}</div><div class="d">${esc(r.d)}</div></div><a class="open" href="${esc(r.u)}" target="_blank" rel="noopener" aria-label="Open ${esc(r.t)} (${esc(r.s)})">Open ${arrow}</a></div>`).join("") : `<div class="pw-empty">This path has no steps yet.${ED.on ? " Use ⋯ to add resource titles." : ""}</div>`}</div>
     ${PATHS.length > 1 ? `<div class="pw-next"><span>Finished this one?</span><button class="link" data-sel="${(selPath + 1) % PATHS.length}">Next: ${esc(next.n)} →</button></div>` : ""}`;
   $("#footTracks").innerHTML = Object.entries(TRACKS).map(([k, n]) => `<a href="#repository" data-track="${k}">${esc(n)}</a>`).join("");
   $("#footPaths").innerHTML = PATHS.map((p, i) => `<a href="#paths" data-sel="${i}">${esc(p.n)}</a>`).join("");
@@ -1388,8 +1471,21 @@ function renderFormats(){
   const fmts = [...new Set(R.map(r => r.f))].sort(); const sel = $("#fmt"), cur = sel.value;
   sel.innerHTML = '<option value="">All formats</option>' + fmts.map(f => `<option value="${esc(f)}">${esc(f)}</option>`).join(""); sel.value = fmts.includes(cur) ? cur : ""; if(state.f !== sel.value){ state.f = sel.value; render(); }
 }
-let belowDone = false;
-function renderBelow(){ if(belowDone) return; belowDone = true; renderMocks(); renderMega(); render(); renderPaths(); renderDrive(); renderEvents(); renderFormats(); }
+// Everything below the hero is built in slices so no single task blocks a scroll frame: the learning paths and the
+// repository first (what the first scroll reaches), then events, Drive, the mocks and the mega menu as the browser idles.
+// Anything that needs a slice earlier (the mega menu opening, a #hash on arrival, Edit mode) asks for it by name.
+let belowDone = false; const built = {};
+const SLICES = {
+  core(){ render(); renderPaths(); renderFormats(); },
+  events: renderEvents, drive: renderDrive, mocks: renderMocks, mega: renderMega
+};
+function buildSlice(k){ if(built[k]) return; built[k] = true; SLICES[k](); }
+function renderBelow(all){
+  if(belowDone) return; belowDone = true;
+  buildSlice("core");
+  if(all) Object.keys(SLICES).forEach(buildSlice);
+  else { const idle = window.requestIdleCallback || (f => setTimeout(f, 60)); ["events", "drive", "mocks", "mega"].forEach(k => idle(() => buildSlice(k), {timeout: 1500})); }
+}
 const svgI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const DRIVE_ICONS = {
   folder: svgI('<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'),
@@ -1418,7 +1514,8 @@ function renderDrive(){
     (hasLink(DRIVE.root) ? `<a class="btn btn-primary" href="${esc(LIB_ON ? lib("library/") : DRIVE.root)}"${LIB_ON ? "" : ' target="_blank" rel="noopener noreferrer"'}>Open the full Drive ${arrowR}</a>` : "") +
     (hasLink(DRIVE.inbox) ? `<a class="btn btn-ghost" href="${esc(LIB_ON ? lib("library/#upload") : DRIVE.inbox)}"${LIB_ON ? "" : ' target="_blank" rel="noopener noreferrer"'}>Add your files ${arrowR}</a>` : "") +
     (ED.on ? `<button class="btn btn-ghost sm" data-gear="dr:0">⋯ Main Drive &amp; upload links</button>` : "");
-  $("#driveCount").textContent = !F.length ? "" : open === 0 ? "Folders opening soon" : open === F.length ? `${F.length} folder${F.length === 1 ? "" : "s"}` : `${open} of ${F.length} folders open`;
+  // the counter only appears once most folders are linked; before that it would just advertise the gap
+  $("#driveCount").textContent = !F.length || open * 2 < F.length ? "" : open === F.length ? `${F.length} folder${F.length === 1 ? "" : "s"}` : `${open} of ${F.length} folders open`;
   $("#driveSteps").style.display = (ED.on || hasLink(DRIVE.inbox)) ? "" : "none";
   $("#driveGrid").innerHTML = F.map((f, i) => {
     const has = hasLink(f.u), tag = has && !ED.on ? "a" : "div", fid = has ? driveFolderId(f.u) : null, inLib = LIB_ON && isDrive(f.u);
@@ -1433,40 +1530,37 @@ function renderDrive(){
     </${tag}>`;
   }).join("") + (ED.on ? `<button class="ed-add df-add" data-adddrive="1">+ Add a Drive folder</button>` : "");
 }
-function renderAll(){ belowDone = false; recount(); applySettings(); renderNumbers(); renderBelow(); }
+function renderAll(){ belowDone = false; Object.keys(built).forEach(k => built[k] = false); recount(); applySettings(); renderNumbers(); renderBelow(true); }
 $("#year").textContent = new Date().getFullYear();
 // the hero paints first; everything below the fold is built a moment later, or at once if someone scrolls or clicks
 recount(); applySettings(); renderNumbers(); renderDash();
-if(location.hash) renderBelow();
+if(location.hash) renderBelow(true);   // arriving at index.html#paths (#events …): the section must exist before the jump
 else {
-  (window.requestIdleCallback || (f => setTimeout(f, 250)))(renderBelow, {timeout: 900});
-  ["scroll", "pointerdown", "keydown", "wheel", "touchstart"].forEach(ev => addEventListener(ev, renderBelow, {once: true, passive: true, capture: true}));
+  (window.requestIdleCallback || (f => setTimeout(f, 250)))(() => renderBelow(), {timeout: 900});
+  // from a scroll or a tap: let that frame paint first, then build
+  const soon = () => requestAnimationFrame(() => setTimeout(() => renderBelow(), 0));
+  ["scroll", "pointerdown", "keydown", "wheel", "touchstart"].forEach(ev => addEventListener(ev, soon, {once: true, passive: true, capture: true}));
 }
-// Arriving from another page at index.html#paths (or #events …): the live Markets & News block above grows while it
-// loads, which would leave a smooth jump short of its section. Hold the section in place until the page settles or
-// the visitor scrolls themselves.
-if(/^#[A-Za-z][\w-]*$/.test(location.hash) && document.getElementById(location.hash.slice(1)) && "ResizeObserver" in window){
-  const target = document.getElementById(location.hash.slice(1));
-  let moved = false;
-  const settle = () => { if(!moved) target.scrollIntoView({behavior: "instant", block: "start"}); };
-  ["wheel", "touchstart", "keydown", "pointerdown"].forEach(ev => addEventListener(ev, () => { moved = true; }, {once: true, passive: true, capture: true}));
-  const ro = new ResizeObserver(settle); ro.observe(document.body);
-  setTimeout(() => ro.disconnect(), 5000);
-}
+// in-page anchors glide; the initial jump to a #section from another page has already happened instantly by now
+addEventListener("load", () => { if(!reduce) document.documentElement.style.scrollBehavior = "smooth"; }, {once: true});
 
 /* ---------- Repository controls ---------- */
 $("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; state.k = b.dataset.k; if(state.k) openSet.add(state.k); render(); });
 $("#tiles").addEventListener("click", e => { const b = e.target.closest(".ttile"); if(!b) return; state.k = state.k === b.dataset.tile ? "" : b.dataset.tile; if(state.k) openSet.add(state.k); render(); if(state.k){ const g = document.getElementById("track-" + state.k); if(g){ const bar = $(".repo-bar"), stuck = getComputedStyle(bar).position === "sticky"; const y = g.getBoundingClientRect().top + scrollY - 72 - (stuck ? bar.offsetHeight : 0) - 16; scrollTo({top: y, behavior: reduce ? "auto" : "smooth"}); } } });
 $("#grid").addEventListener("click", e => { const b = e.target.closest("[data-toggle]"); if(!b) return; const k = b.dataset.toggle; if(state.k === k){ state.k = ""; openSet.delete(k); } else if(openSet.has(k)) openSet.delete(k); else { openSet.add(k); enterKey = k; } render(); });
-$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+const qIn = $("#q"), qX = $("#qx");
+const syncQx = () => { const has = !!qIn.value; qX.hidden = !has; qIn.classList.toggle("has-x", has); };
+qIn.addEventListener("input", e => { state.q = e.target.value; syncQx(); render(); });
+qX.addEventListener("click", () => { qIn.value = ""; state.q = ""; syncQx(); render(); qIn.focus(); });
+qIn.addEventListener("keydown", e => { if(e.key === "Escape" && qIn.value){ e.preventDefault(); qX.click(); } });
 $("#lvl").addEventListener("change", e => { state.l = e.target.value; render(); });
 $("#fmt").addEventListener("change", e => { state.f = e.target.value; render(); });
 $("#cost").addEventListener("change", e => { state.cost = e.target.value; render(); });
-$("#clear").addEventListener("click", () => { Object.assign(state, {k: "", q: "", l: "", f: "", cost: ""}); openSet.clear(); $("#q").value = ""; $("#lvl").value = ""; $("#fmt").value = ""; $("#cost").value = ""; render(); });
+$("#clear").addEventListener("click", () => { Object.assign(state, {k: "", q: "", l: "", f: "", cost: ""}); openSet.clear(); $("#q").value = ""; syncQx(); $("#lvl").value = ""; $("#fmt").value = ""; $("#cost").value = ""; render(); });
 function openRepo(k, q){
   renderBelow();
   Object.assign(state, {k: k || "", q: q || "", l: "", f: "", cost: ""}); if(state.k) openSet.add(state.k);
-  $("#q").value = state.q; $("#lvl").value = ""; $("#fmt").value = ""; $("#cost").value = "";
+  $("#q").value = state.q; syncQx(); $("#lvl").value = ""; $("#fmt").value = ""; $("#cost").value = "";
   render();
   document.getElementById("repository").scrollIntoView({behavior: reduce ? "auto" : "smooth"});
 }
@@ -1479,7 +1573,7 @@ document.addEventListener("click", e => {
 const hdr = $("#hdr"), lightBand = document.querySelector(".light");
 const megaBtn = $("#megaBtn"), mega = $("#mega");
 let megaTimer = null, megaAt = 0;
-function openMega(focusIn){ renderBelow(); clearTimeout(megaTimer); if(mega.hidden) megaAt = Date.now(); mega.hidden = false; megaBtn.setAttribute("aria-expanded","true"); if(focusIn === true){ const first = mega.querySelector("a"); if(first) first.focus(); } }
+function openMega(focusIn){ renderBelow(); buildSlice("mega"); clearTimeout(megaTimer); if(mega.hidden) megaAt = Date.now(); mega.hidden = false; megaBtn.setAttribute("aria-expanded","true"); if(focusIn === true){ const first = mega.querySelector("a"); if(first) first.focus(); } }
 function closeMega(){ clearTimeout(megaTimer); mega.hidden = true; megaBtn.setAttribute("aria-expanded","false"); }
 function delayClose(){ clearTimeout(megaTimer); megaTimer = setTimeout(closeMega, 160); }
 // a click right after hover opened the menu keeps it open (hover then click shouldn't close it again)
@@ -1491,10 +1585,19 @@ mega.addEventListener("mouseleave", delayClose);
 document.addEventListener("keydown", e => { if(e.key === "Escape" && !mega.hidden){ const inside = mega.contains(document.activeElement); closeMega(); if(inside) megaBtn.focus(); } });
 document.addEventListener("click", e => { if(!mega.hidden && !e.target.closest("#mega") && !e.target.closest("#megaBtn")) closeMega(); });
 const burger = $("#burger"), mobileMenu = $("#mobileMenu");
-function setMenu(open){ mobileMenu.hidden = !open; burger.setAttribute("aria-expanded", String(open)); burger.setAttribute("aria-label", open ? "Close menu" : "Open menu"); }
+// the open menu locks the page behind it (html.fs-lock from shell.css) and closes on an outside tap, Escape, a tab
+// switch or a resize back to the desktop header, the same as Finspire.header.init on the sub-pages
+function setMenu(open){
+  if(open === !mobileMenu.hidden) return;
+  mobileMenu.hidden = !open; burger.setAttribute("aria-expanded", String(open)); burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.documentElement.classList.toggle("fs-lock", open);
+}
 burger.addEventListener("click", () => setMenu(mobileMenu.hidden));
-mobileMenu.addEventListener("click", e => { if(e.target.tagName === "A") setMenu(false); });
+mobileMenu.addEventListener("click", e => { if(e.target.closest("a")) setMenu(false); });
+document.addEventListener("click", e => { if(!mobileMenu.hidden && !e.target.closest("#mobileMenu,#burger")) setMenu(false); });
 document.addEventListener("keydown", e => { if(e.key === "Escape" && !mobileMenu.hidden){ setMenu(false); burger.focus(); } });
+document.addEventListener("visibilitychange", () => { if(document.hidden) setMenu(false); });
+addEventListener("resize", () => { if(innerWidth >= 961) setMenu(false); });
 if(FS) FS.ui.mountAccount($("#hdrAcct"));
 
 /* ---------- Hero scene: the market at dawn (canvas) ---------- */
@@ -1502,7 +1605,8 @@ const land = $("#landscape");
 const scene = {w:0, h:0, layers:[], parts:[], t0:null, raf:null, visible:true, mx:0, my:0, tx:0, ty:0, cx:-1, cy:-1, ccx:-1, ccy:-1, zoom:0, rx:0, ry:0, devS:.18, devDy:24, cp:0, co:1, hdrB:106, geo:null, pres:0, trail:[], forming:null, ref:null, refY:0, px:-1, py:-1, sqx:0, sqy:0, snap:false, hx:0, hy:0};
 const easeOut = t => 1 - Math.pow(1 - t, 3);
 function buildScene(){
-  const dpr = Math.min(1.5, devicePixelRatio || 1);
+  // while the laptop zooms the canvas is scaled up anyway, so it is drawn at 1x then (fewer pixels per frame)
+  const dpr = Math.min(scene.lowRes ? 1 : 1.5, devicePixelRatio || 1);
   const w = land.clientWidth, h = land.clientHeight; if(!w || !h) return;
   if(scene.layers.length && w === scene.w && h === scene.h && dpr === scene.dpr) return false;
   land.width = Math.round(w * dpr); land.height = Math.round(h * dpr); scene.w = w; scene.h = h; scene.dpr = dpr;
@@ -1590,13 +1694,15 @@ function drawScene(t){
   c.globalAlpha = .09; c.beginPath();
   for(let i = -9; i <= 9; i++){ const xb = w * .5 + i * w * .17; c.moveTo(w * .5 + mx * w * .04, hz); c.lineTo(xb + mx * w * .01, h); }
   c.stroke(); c.globalAlpha = 1;
-  // particles: data dust drifting upward
-  c.fillStyle = "rgb(255,214,216)";
-  scene.parts.forEach(p => {
-    const y = ((p.y - t * p.s) % 1 + 1) % 1; c.globalAlpha = p.a * (.55 + .45 * Math.sin(t * 1.7 + p.ph));
-    c.fillRect(p.x * w + mx * 40 * p.r - p.r, y * h * .78 + my * 22 * p.r - p.r, p.r * 2, p.r * 2);
-  });
-  c.globalAlpha = 1;
+  // particles: data dust drifting upward (skipped once the laptop covers most of the scene)
+  if(scene.zoom <= .5){
+    c.fillStyle = "rgb(255,214,216)";
+    scene.parts.forEach(p => {
+      const y = ((p.y - t * p.s) % 1 + 1) % 1; c.globalAlpha = p.a * (.55 + .45 * Math.sin(t * 1.7 + p.ph));
+      c.fillRect(p.x * w + mx * 40 * p.r - p.r, y * h * .78 + my * 22 * p.r - p.r, p.r * 2, p.r * 2);
+    });
+    c.globalAlpha = 1;
+  }
   // candle wall: candles near the cursor are pulled toward it and magnified, like demand pulling price
   const sig = Math.max(70, w * .075);
   const fx = scene.layers.map((L, li) => {
@@ -1717,10 +1823,12 @@ heroSticky.addEventListener("pointermove", e => {
 heroSticky.addEventListener("pointerleave", () => { scene.tx = 0; scene.ty = 0; scene.px = -1; scene.py = -1; });
 function sceneFrame(ts){
   if(!scene.t0) scene.t0 = ts; drawScene((ts - scene.t0) / 1000);
-  if(scene.visible && !reduce) scene.raf = requestAnimationFrame(sceneFrame); else scene.raf = null;
+  if(sceneWanted()) scene.raf = requestAnimationFrame(sceneFrame); else scene.raf = null;
 }
-function drawLandscape(){ const changed = buildScene(); if(reduce){ if(changed !== false) drawScene(0); } else if(!scene.raf && scene.visible) scene.raf = requestAnimationFrame(sceneFrame); }
-new IntersectionObserver(es => { scene.visible = es[0].isIntersecting; if(scene.visible && !scene.raf && !reduce) scene.raf = requestAnimationFrame(sceneFrame); }).observe(land);
+// the scene animates only while it can be seen: on screen, and not yet covered by the shade at the end of the zoom
+const sceneWanted = () => scene.visible && !scene.shaded && !reduce;
+function drawLandscape(){ const changed = buildScene(); if(reduce){ if(changed !== false) drawScene(0); } else if(!scene.raf && sceneWanted()) scene.raf = requestAnimationFrame(sceneFrame); }
+new IntersectionObserver(es => { scene.visible = es[0].isIntersecting; if(!scene.raf && sceneWanted()) scene.raf = requestAnimationFrame(sceneFrame); }).observe(land);
 
 /* ---------- Fit fixed-design mocks into their frames ---------- */
 function fit(el, designW){ const frame = el.parentElement; const s = frame.clientWidth / designW; el.style.transform = `scale(${s})`; }
@@ -1743,7 +1851,7 @@ function measureHero(){
   };
   const small = PHONE.matches, s0 = small ? .34 : .18;
   const need = (scene.geo.copyBottom + 28 + scene.geo.devH * s0 / 2 - innerHeight / 2) / innerHeight * 100;
-  scene.dy0 = clamp(Math.max(small ? 33 : 24, need), 20, 40); scene.s0 = s0;
+  scene.dy0 = clamp(Math.max(small ? 33 : 24, need), 20, innerHeight < 560 ? 46 : 40); scene.s0 = s0;   // landscape phones: lower still
   lastP = -1;
   return scene.geo;
 }
@@ -1756,11 +1864,17 @@ function applyDevice(){
 const ease = t => 1 - Math.pow(1 - t, 3);
 const SC = {y: 0, heroTop: 0, heroBottom: 0, lbTop: 0, lbBottom: 0};
 let ticking = false, lastP = -1, isScrolled = null, isLight = null;
+// the hero sits at the top of the document and the light band's place only changes when the page's size does, so the
+// scroll handler never measures anything: it works from scrollY and this cache (refreshed when the body resizes)
+const DOC = {heroH: 0, lbTop: 0, lbH: 0};
+function measureDoc(){ DOC.heroH = hero.offsetHeight; DOC.lbTop = lightBand.offsetTop; DOC.lbH = lightBand.offsetHeight; }
 function readScroll(){
   SC.y = scrollY;
-  const hr = hero.getBoundingClientRect(); SC.heroTop = hr.top; SC.heroBottom = hr.bottom;
-  const lb = lightBand.getBoundingClientRect(); SC.lbTop = lb.top; SC.lbBottom = lb.bottom;
+  SC.heroTop = -SC.y; SC.heroBottom = DOC.heroH - SC.y;
+  SC.lbTop = DOC.lbTop - SC.y; SC.lbBottom = DOC.lbTop + DOC.lbH - SC.y;
 }
+measureDoc();
+if(window.ResizeObserver) new ResizeObserver(() => { measureDoc(); readScroll(); if(!ticking){ ticking = true; requestAnimationFrame(writeScroll); } }).observe(document.body);
 function onScroll(){
   readScroll();   // reads happen in the scroll event, when layout is already clean
   if(ticking) return; ticking = true;
@@ -1776,12 +1890,14 @@ function writeScroll(){
   const geo = scene.geo || measureHero();
   if(PHONE.matches){
     // phones: one still screen, no scroll-zoom; the laptop just sits on the floor showing the logo
-    if(lastP !== 0){ lastP = 0; scene.zoom = 0; scene.devS = scene.s0 || .34; scene.devDy = scene.dy0 || 33; applyDevice(); scene.cp = 0; scene.co = 1; heroCopy.style.opacity = ""; heroCopy.style.transform = ""; heroCopy.style.pointerEvents = ""; land.style.transform = ""; heroShade.style.opacity = 0; splash.style.opacity = ""; heroNote.style.opacity = ""; }
+    if(lastP !== 0){ lastP = 0; scene.zoom = 0; scene.devS = scene.s0 || .34; scene.devDy = scene.dy0 || 33; applyDevice(); scene.cp = 0; scene.co = 1; heroCopy.style.opacity = ""; heroCopy.style.transform = ""; heroCopy.style.pointerEvents = ""; land.style.transform = ""; heroShade.style.opacity = 0; splash.style.opacity = ""; heroNote.style.opacity = ""; setSceneRes(false); setShaded(false); }
     return;
   }
   const p = clamp(-SC.heroTop / Math.max(1, geo.heroH - innerHeight), 0, 1);
   if(p === lastP) return;   // nothing in the hero changes while you scroll further down the page
   lastP = p;
+  setSceneRes(p > .02 || (scene.lowRes && p > 0));
+  setShaded(p >= .92 || (scene.shaded && p > .88));   // the shade has fully covered the canvas: stop drawing it
   const zoom = ease(clamp(p / .8, 0, 1)), s0 = scene.s0, dy0 = scene.dy0;
   scene.zoom = zoom; scene.devS = s0 + (1 - s0) * zoom; scene.devDy = dy0 - (dy0 - 2) * zoom; applyDevice();
   const cp = clamp(p / .2, 0, 1); scene.cp = -40 * cp; scene.co = 1 - cp;
@@ -1793,21 +1909,27 @@ function writeScroll(){
   splash.style.opacity = 1 - clamp((p - .1) / .28, 0, 1);
   heroNote.style.opacity = 1 - clamp(p / .15, 0, 1);
 }
+function setSceneRes(low){ if(low === !!scene.lowRes) return; scene.lowRes = low; drawLandscape(); }
+function setShaded(on){
+  if(on === !!scene.shaded) return; scene.shaded = on;
+  if(on){ if(scene.raf){ cancelAnimationFrame(scene.raf); scene.raf = null; } }
+  else if(!scene.raf && sceneWanted()) scene.raf = requestAnimationFrame(sceneFrame);
+}
 addEventListener("scroll", onScroll, {passive:true});
 let resizeT = 0, lastVW = innerWidth;
 addEventListener("resize", () => {
-  fitAll(); readScroll(); lastP = -1; writeScroll();
+  fitAll(); measureDoc(); readScroll(); lastP = -1; writeScroll();
   clearTimeout(resizeT);
   resizeT = setTimeout(() => {
     // buildScene skips itself when the canvas size is unchanged (a phone's toolbar sliding doesn't change 100svh)
-    drawLandscape(); measureHero(); readScroll(); writeScroll();
+    drawLandscape(); measureHero(); measureDoc(); readScroll(); writeScroll();
     if(innerWidth !== lastVW){ lastVW = innerWidth; drawDashChart(); }
   }, 80);
 });
-if(document.fonts) document.fonts.ready.then(() => { measureHero(); onScroll(); });
+if(document.fonts) document.fonts.ready.then(() => { measureHero(); measureDoc(); onScroll(); });
 // the headline block can change size (fonts arriving, edits in Edit mode): re-measure whenever it does
 if(window.ResizeObserver) new ResizeObserver(() => { measureHero(); onScroll(); }).observe(heroCopy);
-drawLandscape(); fitAll(); measureHero(); onScroll();
+drawLandscape(); fitAll(); measureHero(); measureDoc(); onScroll();
 
 /* ---------- Dashboard chart ---------- */
 function drawDashChart(){
@@ -2431,42 +2553,83 @@ document.addEventListener("click", e => { if(!e.target.closest("[data-ghforget]"
   const h = FS ? FS.dom.h : null;
   const note = (el, msg) => { el.textContent = ""; const p = document.createElement("p"); p.className = "mn-empty"; p.textContent = msg; el.appendChild(p); };
   let near = false, started = false;
+  // markets.js and news.js (and the data they fetch) are only loaded once this section is close to the screen, so a
+  // phone that has not scrolled past the hero downloads nothing for it
+  const pending = {};
+  const need = (global, src) => window[global] ? Promise.resolve() : (pending[src] || (pending[src] = new Promise((res, rej) => {
+    const s = document.createElement("script"); s.src = src; s.onload = res; s.onerror = () => rej(new Error("could not load " + src)); document.head.appendChild(s);
+  })));
   function mount(){
     if(started || !near || document.readyState === "loading") return;
     started = true;
+    termOfDay();   // one tiny fetch, independent of the widgets
     const board = $("#mnBoard"), news = $("#mnNews");
-    const M = window.FinspireMarkets, N = window.FinspireNews;
-    try{ if(M?.mountMini){ board.textContent = ""; M.mountMini(board, ["NIFTY", "SENSEX", "SPX", "US10Y", "BRENT", "USDINR"]); } else note(board, "Live prices aren't available right now."); }
-    catch(e){ note(board, "Live prices aren't available right now."); setTimeout(() => { throw e; }); }
-    try{ if(N?.mountTeaser){ news.textContent = ""; N.mountTeaser(news, {count: 3}); } else note(news, "Headlines aren't available right now."); }
-    catch(e){ note(news, "Headlines aren't available right now."); setTimeout(() => { throw e; }); }
-    termOfDay();
+    const fail = (el, msg) => e => { note(el, msg); if(e && e.message && !/could not load/.test(e.message)) setTimeout(() => { throw e; }); };
+    need("FinspireMarkets", "assets/js/markets.js").then(() => {
+      const M = window.FinspireMarkets;
+      if(M?.mountMini){ board.textContent = ""; M.mountMini(board, ["NIFTY", "SENSEX", "SPX", "US10Y", "BRENT", "USDINR"]); } else note(board, "Live prices aren't available right now.");
+    }).catch(fail(board, "Live prices aren't available right now."));
+    need("FinspireNews", "assets/js/news.js").then(() => {
+      const N = window.FinspireNews;
+      if(N?.mountTeaser){ news.textContent = ""; N.mountTeaser(news, {count: 3}); } else note(news, "Headlines aren't available right now.");
+    }).catch(fail(news, "Headlines aren't available right now."));
+  }
+  // today's date in India, the way Finspire.glossary.termOfDay keys its pick
+  function istKey(){
+    try{ return new Intl.DateTimeFormat("en-CA", {timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit"}).format(new Date()); }
+    catch(e){ return new Date(Date.now() + 19800000).toISOString().slice(0, 10); }
+  }
+  // data/glossary/tod.json holds yesterday's, today's and tomorrow's picks (IST) so the card never needs the full index.
+  // Accepted shapes: {days:{"YYYY-MM-DD":row}} · {"YYYY-MM-DD":row} · [row with date] · {today:row, …}
+  function todPick(d){
+    const key = istKey(), byDate = x => x && (x.date === key || x.d === key || x.day === key);
+    let row = null;
+    if(Array.isArray(d)) row = d.find(byDate);
+    else if(d && typeof d === "object"){
+      const days = d.days || d.picks || d;
+      row = Array.isArray(days) ? days.find(byDate) : (days[key] || (d.today && (!d.today.date || d.today.date === key) ? d.today : null));
+    }
+    return row && row.id && row.term ? row : null;
+  }
+  function showTerm(body, t){
+    const dictHref = FS.url((FS.cfg.pages?.dictionary || "dictionary/") + "#t=" + encodeURIComponent(t.id));
+    const lvl = FS.glossary.LEVELS[t.level];
+    const kid = h("div", {class: "mn-kid", hidden: !t.kid}, h("b", null, "Like I’m three"), h("span", null, t.kid || ""));
+    const cat = h("p", {class: "mn-tod-cat", hidden: !t.catName}, t.catName || "");
+    body.textContent = "";
+    body.appendChild(h("div", {class: "mn-tod-in"},
+      h("div", {class: "mn-tod-term"}, h("h3", null, t.term), lvl ? h("span", {class: "gl-lvl " + t.level}, lvl) : null),
+      cat,
+      h("p", {class: "mn-tod-def"}, t.short || "Open the Dictionary for its meaning."),
+      kid,
+      h("a", {class: "link", href: dictHref}, "Open in Dictionary ", h("span", {"aria-hidden": "true"}, "→"))));
+    // phones: the same link sits in the card's label row instead of taking a line of its own
+    const top = $("#mnTod .mn-tod-top"), old = top.querySelector(".mn-tod-open"); if(old) old.remove();
+    top.appendChild(h("a", {class: "mn-tod-open", href: dictHref, "aria-label": "Open " + t.term + " in the Dictionary"}, "Dictionary ", h("span", {"aria-hidden": "true"}, "→")));
+    return {kid, cat};
   }
   function termOfDay(){
     const body = $("#mnTodBody");
     if(!FS){ note(body, "The dictionary isn't available right now."); return; }
     $("#mnTodDate").textContent = FS.fmt.date(Date.now(), {year: undefined, timeZone: "Asia/Kolkata"});
-    FS.glossary.load().then(() => {
+    const fromIndex = () => FS.glossary.load().then(() => {
       const t = FS.glossary.termOfDay();
       if(!t){ note(body, "The dictionary is still being filled in. Check back soon."); return; }
-      const cat = FS.glossary.cats()[t.cat], lvl = FS.glossary.LEVELS[t.level];
-      const dictHref = FS.url((FS.cfg.pages?.dictionary || "dictionary/") + "#t=" + encodeURIComponent(t.id));
-      const kid = h("div", {class: "mn-kid", hidden: true}, h("b", null, "Like I'm three"), h("span"));
-      body.textContent = "";
-      body.appendChild(h("div", {class: "mn-tod-in"},
-        h("div", {class: "mn-tod-term"}, h("h3", null, t.term), lvl ? h("span", {class: "gl-lvl " + t.level}, lvl) : null),
-        cat ? h("p", {class: "mn-tod-cat"}, cat.name) : null,
-        h("p", {class: "mn-tod-def"}, t.short || "Open the Dictionary for its meaning."),
-        kid,
-        h("a", {class: "link", href: dictHref}, "Open in Dictionary ", h("span", {"aria-hidden": "true"}, "→"))));
-      // phones: the same link sits in the card's label row instead of taking a line of its own
-      const top = $("#mnTod .mn-tod-top"), old = top.querySelector(".mn-tod-open"); if(old) old.remove();
-      top.appendChild(h("a", {class: "mn-tod-open", href: dictHref, "aria-label": "Open " + t.term + " in the Dictionary"}, "Dictionary ", h("span", {"aria-hidden": "true"}, "→")));
-      FS.glossary.entry(t.id).then(e => { if(e && e.kid){ kid.lastChild.textContent = e.kid; kid.hidden = false; } }).catch(() => {});
+      const cat = FS.glossary.cats()[t.cat];
+      const parts = showTerm(body, Object.assign({}, t, {catName: cat ? cat.name : ""}));
+      FS.glossary.entry(t.id).then(e => { if(e && e.kid){ parts.kid.lastChild.textContent = e.kid; parts.kid.hidden = false; } }).catch(() => {});
     }).catch(() => note(body, "The dictionary isn't available right now."));
+    // the build says whether tod.json exists (meta.json "tod"), so a build without it never logs a 404
+    META.then(m => m && m.tod ? FS.fetchJSON(typeof m.tod === "string" ? "data/glossary/" + m.tod : "data/glossary/tod.json") : Promise.reject()).then(d => {
+      const t = todPick(d); if(!t) return fromIndex();
+      const slug = /^[a-z0-9]+(-[a-z0-9]+)*$/.test(String(t.cat || ""));
+      const parts = showTerm(body, Object.assign({}, t, {catName: t.catName || t.cat_name || t.category || (t.cat && !slug ? t.cat : "")}));
+      // the category's name comes with the index if the file only carried its id (filled in later, no waiting)
+      if(!parts.cat.textContent && slug){ const fill = () => { const c = FS.glossary.cats()[t.cat]; if(c){ parts.cat.textContent = c.name; parts.cat.hidden = false; } }; if(FS.glossary.loaded()) fill(); else FS.on("glossary", fill); }
+    }, fromIndex);
   }
   if("IntersectionObserver" in window){
-    const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ near = true; io.disconnect(); mount(); } }, {rootMargin: "700px 0px"});
+    const io = new IntersectionObserver(es => { if(es.some(e => e.isIntersecting)){ near = true; io.disconnect(); mount(); } }, {rootMargin: "200px 0px"});
     io.observe(sec);
   } else near = true;
   if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", mount, {once: true}); else mount();

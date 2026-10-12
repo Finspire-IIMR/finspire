@@ -58,6 +58,19 @@ def main():
     bg = ROOT / "scripts/build_glossary.py"
     if bg.exists():
         subprocess.run([sys.executable, str(bg), "--out", str(d / "glossary")], check=True)
+        # news-terms shards: the dictionary page loads one small file per topic (data/live/news-terms/<cat>.json)
+        try:
+            idx = json.loads((d / "glossary/index.json").read_text())
+            terms = json.loads((d / "live/news-terms.json").read_text())
+            cat_of = {row[0]: row[2] for row in idx.get("t", [])}
+            shards = {}
+            for tid, items in terms.items():
+                shards.setdefault(cat_of.get(tid, "other"), {})[tid] = items
+            (d / "live/news-terms").mkdir(parents=True, exist_ok=True)
+            for cat in idx.get("cats", {}):
+                (d / "live/news-terms" / f"{cat}.json").write_text(json.dumps(shards.get(cat, {}), ensure_ascii=False, separators=(",", ":")))
+        except Exception as e:
+            print("warning: news-terms shards not built:", e, file=sys.stderr)
     else:
         print("warning: scripts/build_glossary.py missing, no glossary", file=sys.stderr)
     demo = ROOT / "tests/fixtures/demo"

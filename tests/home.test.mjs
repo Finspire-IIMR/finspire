@@ -100,16 +100,20 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
 // =====================================================================================================================
 {
   const p = await open(base, { width: 1280, height: 900 });
-  await waitFor(p, "document.readyState === 'complete' && window.FinspireMarkets && window.FinspireNews", 10000);
+  await waitFor(p, "document.readyState === 'complete' && document.querySelectorAll('#grid .rgroup').length === 6", 10000);
   const head = await q(p, `({doctype: !!document.doctype, root: document.querySelector('meta[name="fs-root"]')?.content, fs: typeof Finspire, mk: typeof window.FinspireMarkets, nw: typeof window.FinspireNews,
+    scripts: [...document.scripts].map(s => (s.getAttribute("src") || "")).filter(Boolean),
     css: [...document.styleSheets].map(s => s.href || "").filter(Boolean).map(h => new URL(h).pathname.replace(/^.*\\/assets\\//, "assets/")),
+    mkMedia: [...document.styleSheets].find(s => /markets\\.css/.test(s.href || ""))?.media.mediaText,
     data: (() => { try { JSON.parse(document.getElementById("siteData").textContent); return true; } catch (e) { return false; } })(),
     tpl: document.documentElement.innerHTML.includes("__" + "SRC_TEMPLATE__") || document.documentElement.innerHTML.includes("__" + "DRIVE_DEFAULT__"),
+    b64: document.documentElement.innerHTML.includes("data:image/png;base64"), mock: document.querySelector('#splash img')?.getAttribute('src'),
     b64logo: [...document.querySelectorAll('img.logo-img, .dash-org img, .mega-col img')].some(i => i.src.startsWith("data:")),
     logos: [...document.querySelectorAll('header .logo-img')].map(i => i.getAttribute("src"))})`);
   check("page: a full HTML document with fs-root ./ and the site data embedded once", head.doctype && head.root === "./" && head.data && !head.tpl, head);
-  check("page: loads finspire.js, shell.css and markets.css; markets.js + news.js present", head.fs === "object" && head.css.includes("assets/css/shell.css") && head.css.includes("assets/css/markets.css") && head.mk === "object" && head.nw === "object", head);
-  check("page: logos come from assets/img (no inline base64 logos)", !head.b64logo && head.logos.join() === "assets/img/logo-light.png,assets/img/logo-dark.png", head.logos);
+  check("page: loads finspire.js and shell.css; markets.css applies without blocking; markets.js + news.js are not loaded until the Markets & News block is near", head.fs === "object" && head.css.includes("assets/css/shell.css") && head.css.includes("assets/css/markets.css") && head.mkMedia === "all" &&
+    head.mk === "undefined" && head.nw === "undefined" && head.scripts.join() === "config.js,assets/js/finspire.js", head);
+  check("page: logos come from assets/img (no inline base64 logos); the laptop mock is a cacheable PNG", !head.b64logo && head.logos.join() === "assets/img/logo-light.png,assets/img/logo-dark.png" && !head.b64 && head.mock === "assets/img/dash-mock.png", head.logos);
   check("no console errors after load", p.errors.length === 0, p.errors);
   check("below-the-fold rendered after idle (6 tracks, paths)", (await q(p, "document.querySelectorAll('#grid .rgroup').length")) === 6 && (await q(p, "document.querySelectorAll('#pwList .pw-item').length")) >= 4);
   check("laptop has an inline transform", await q(p, "!!document.getElementById('deviceWrap').style.transform"));
@@ -516,6 +520,119 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   check("reduced motion: Markets & News still mounts", await waitFor(p, "document.querySelector('#mnTodBody .mn-tod-in') && document.querySelectorAll('#mnNews a[href^=\"https://\"]').length >= 3", 8000));
   await shot(p, "desktop-reduced-motion.png");
   check("reduced motion: no console errors", p.errors.length === 0, p.errors);
+  done(p);
+}
+
+// =====================================================================================================================
+// 8. Smooth UI: skip link, no layout shift around Markets & News, hero scene stops when covered, hit areas, menus
+// =====================================================================================================================
+const MN = "(()=>{const s=document.getElementById('markets-news'); const g=sel=>{const e=s.querySelector(sel); return e? e.offsetHeight : null}; return {sec: s.offsetHeight, board: g('#mnBoard'), news: g('#mnNews'), tod: g('#mnTodBody'), paths: Math.round(document.getElementById('paths').getBoundingClientRect().top + scrollY)}})()";
+const MOUNTED = "document.querySelectorAll('#mnNews a[href^=\"https://\"]').length >= 3 && document.querySelector('#mnTodBody .mn-tod-in') && /\\d/.test(document.getElementById('mnBoard').textContent)";
+{
+  const p = await open(base, { width: 1280, height: 900 });
+  // keyboard: the first Tab stop is the skip link, Enter lands on <main>
+  await p.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Tab", code: "Tab" }); await p.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Tab", code: "Tab" }); await sleep(300);
+  const sk = await q(p, "(()=>{const a=document.activeElement, r=a.getBoundingClientRect(); return {cls: a.className, text: a.textContent, top: Math.round(r.top), h: Math.round(r.height)}})()");
+  await p.send("Input.dispatchKeyEvent", { type: "keyDown", key: "Enter", code: "Enter" }); await p.send("Input.dispatchKeyEvent", { type: "keyUp", key: "Enter", code: "Enter" }); await sleep(300);
+  check("keyboard: the first Tab stop is a visible 'Skip to content' pill and Enter moves focus to <main>", sk.cls === "skip" && sk.text === "Skip to content" && sk.top === 12 && sk.h === 40 && (await q(p, "document.activeElement.id")) === "main", sk);
+  check("smooth scrolling is switched on after load (initial #fragment jumps stay instant)", (await q(p, "document.documentElement.style.scrollBehavior")) === "smooth");
+  // placeholders are the size of the live widgets (checked against real data below): nothing below moves when they mount
+  check("Markets & News: placeholders in place before the widgets load", (await q(p, "!!document.querySelector('#mnBoard .mn-wait') && !!document.querySelector('#mnNews .mn-wait') && !!document.querySelector('#mnTodBody .mn-wait')")));
+  await goTo(p, "#markets-news", 80);
+  const ok = await waitFor(p, MOUNTED, 10000); await sleep(1500);
+  check("Markets & News: markets.js + news.js arrived with the section, no reveal animation on the live widgets", ok && (await q(p, "typeof FinspireMarkets === 'object' && typeof FinspireNews === 'object' && !document.querySelector('#mnBoard.rv, .mn-news.rv, #mnTod.rv')")));
+  check("term of the day: curly apostrophe in 'Like I’m three'", (await q(p, "document.querySelector('#mnTod .mn-kid b')?.textContent")) === "Like I’m three");
+  // hero scene: stops drawing once the shade covers it, resumes on the way back
+  await p.js("scrollTo({top:0,behavior:'instant'}); 1"); await sleep(500);
+  const h0 = await q(p, "({raf: !!scene.raf, shaded: !!scene.shaded})");
+  await p.js("scrollTo({top:2600,behavior:'instant'}); 1"); await sleep(500);
+  const h1 = await q(p, "({raf: !!scene.raf, shaded: !!scene.shaded, shade: document.getElementById('heroShade').style.opacity})");
+  await p.js("scrollTo({top:0,behavior:'instant'}); 1"); await sleep(500);
+  const h2 = await q(p, "({raf: !!scene.raf, shaded: !!scene.shaded, low: !!scene.lowRes})");
+  check("hero: the canvas animates at the top, stops once the shade has covered it, and resumes on the way back", h0.raf && !h0.shaded && !h1.raf && h1.shaded && h1.shade === "1" && h2.raf && !h2.shaded && !h2.low, { h0, h1, h2 });
+  // semantics
+  const a = await q(p, `({tabs: document.querySelectorAll('[role=tab],[role=tablist]').length, group: document.getElementById('pwList').getAttribute('role'), pressed: [...document.querySelectorAll('#pwList .pw-item')].map(b => b.getAttribute('aria-pressed')).join(),
+    megaH: document.querySelectorAll('#mega h4, #mega h5').length, megaP: document.querySelectorAll('#mega p.h4, #mega p.h5').length, mock: document.getElementById('deviceWrap').getAttribute('aria-hidden'), pv: [...document.querySelectorAll('.pview')].every(v => v.getAttribute('aria-hidden') === 'true'),
+    openUnlabelled: [...document.querySelectorAll('a.open')].filter(x => !/^Open .+ \\(.+\\)$/.test(x.getAttribute('aria-label') || '')).length, openN: document.querySelectorAll('a.open').length,
+    join: document.querySelector('.nav-cta .btn-primary').getAttribute('aria-label'), joinTitle: document.querySelector('.nav-cta .btn-primary').getAttribute('title'),
+    mobJoin: (() => { const l = document.querySelector('#mobileMenu a:last-child'); return l.className + '|' + l.getAttribute('aria-label'); })(),
+    acc: (() => { const i = document.querySelectorAll('.acc-item')[1], b = i.querySelector('.acc-head'); return [Math.round(i.getBoundingClientRect().height), Math.round(b.getBoundingClientRect().height), getComputedStyle(i).padding]; })(),
+    pview: getComputedStyle(document.querySelector('.pview')).transitionDuration, accB: getComputedStyle(document.querySelector('.acc-item .b')).transitionDuration.split(',')[0].trim()})`);
+  check("starting points: a group of toggle buttons (aria-pressed), no half-built tabs pattern", a.tabs === 0 && a.group === "group" && a.pressed === "true,false,false,false", a);
+  check("headings: the laptop mock and product-tour mocks are aria-hidden; the mega menu uses styled <p>, not h4/h5", a.megaH === 0 && a.megaP >= 7 && a.mock === "true" && a.pv, a);
+  check("repository + paths: every 'Open' link is named 'Open <title> (<source>)'", a.openN >= 5 && a.openUnlabelled === 0, a);
+  check("join buttons: header 'Join Finspire' says it opens LinkedIn in a new tab; the burger menu ends in the red button", /LinkedIn.*new tab/.test(a.join) && a.joinTitle === a.join && a.mobJoin === "btn btn-primary|Join Finspire on LinkedIn (opens in a new tab)", a);
+  check("product tour: the accordion row is the button (hit area = whole row) and the panel transitions in 0.3 s", Math.abs(a.acc[0] - a.acc[1]) <= 1 && a.acc[1] >= 44 && a.acc[2] === "0px" && a.pview === "0.3s, 0.3s" && a.accB === "0.3s", a);
+  const cp = await q(p, "({step1: document.querySelector('.rstep span').textContent, step2: document.querySelector('.rstep:nth-child(2) b').textContent, drive: [...document.querySelectorAll('#driveSteps > div')].map(d => d.textContent.trim()), count: document.getElementById('driveCount').textContent, linked: DRIVE.folders.filter(f => /^https?:\\/\\/\\S+$/.test(f.u || '')).length, n: DRIVE.folders.length})");
+  check("copy: repository step 1 says what to do (no 'Click'); Drive steps are plain with typographic quotes", cp.step1 === "Open a track to see its entries in the order we would learn them." && cp.step2 === "Begin at “Start here”" &&
+    /^1Press “Add your files”/.test(cp.drive[0]) && /“Topic – Your name – Year”/.test(cp.drive[1]) && /^3The team files it/.test(cp.drive[2]) && !/It's above/.test(cp.drive[0]), cp);
+  check("Drive: the 'N of 9 folders open' counter is hidden while fewer than half the folders are linked", cp.linked * 2 < cp.n ? cp.count === "" : cp.count !== "", cp);
+  // repository: the title opens the resource; the search has a clear button
+  await goTo(p, "#repository", 60); await p.js("document.querySelector('[data-toggle=\"val\"]').click(); 1"); await sleep(400);
+  const rr = await q(p, "(()=>{const r=document.querySelector('#track-val .rrow'); const t=r.querySelector('a.rt'), o=r.querySelector('a.open'); return {same: t && o && t.href === o.href && t.target === '_blank', text: t?.textContent, n: document.querySelectorAll('#track-val .rrow a.rt').length}})()");
+  check("repository rows: the headline is a link to the same resource as 'Open'", rr.same && rr.text && rr.n > 5, rr);
+  await p.js("(()=>{const i=document.getElementById('q'); i.value='dcf'; i.dispatchEvent(new Event('input',{bubbles:true})); return 1})()"); await sleep(250);
+  const qx1 = await q(p, "(()=>{const x=document.getElementById('qx'), r=x.getBoundingClientRect(); return {shown: !x.hidden, w: Math.round(r.width), h: Math.round(r.height), label: x.getAttribute('aria-label'), n: document.querySelectorAll('#grid .rrow').length}})()");
+  await p.js("document.getElementById('qx').click(); 1"); await sleep(250);
+  const qx2 = await q(p, "({hidden: document.getElementById('qx').hidden, v: document.getElementById('q').value, q: state.q, focus: document.activeElement.id, n: document.querySelectorAll('#grid .rrow').length})");
+  check("repository search: a 40 px clear (×) button appears while typing, empties the search, re-renders and keeps focus in the field", qx1.shown && qx1.w === 40 && qx1.h === 40 && qx1.label === "Clear search" && qx2.hidden && qx2.v === "" && qx2.q === "" && qx2.focus === "q" && qx2.n !== qx1.n, { qx1, qx2 });
+  check("smooth UI (desktop): no console errors", p.errors.length === 0, p.errors);
+  done(p);
+}
+for (const [name, opts] of [["desktop", { width: 1280, height: 900 }], ["phone", { width: 390, height: 844, mobile: true, scale: 2 }]]) {
+  // real build data: the placeholders are sized to the live board (3 × 2 tiles + status line), three two-line headlines and a term card
+  const p = await open(base, Object.assign({ real: true }, opts));
+  const ph = await p.js(MN);
+  await goTo(p, "#markets-news", 80);
+  const ok = await waitFor(p, MOUNTED.replace("https://", "http"), 10000); await sleep(1500);
+  const lv = await p.js(MN);
+  check(`${name}, real data: Markets & News keeps its height when the live widgets replace the placeholders (≤ 40 px)`, ok && Math.abs(lv.sec - ph.sec) <= 40 && Math.abs(lv.paths - ph.paths) <= 40 && Math.abs(lv.board - ph.board) <= 30, { placeholder: ph, live: lv });
+  done(p);
+}
+{
+  const p = await open(base, { width: 390, height: 844, mobile: true, scale: 2 });
+  const sz = await q(p, `(()=>{const g=s=>{const e=document.querySelector(s); if(!e) return null; const r=e.getBoundingClientRect(); return [Math.round(r.width), Math.round(r.height)]};
+    return {cta: [...document.querySelectorAll('.hero-ctas .btn')].map(b => Math.round(b.getBoundingClientRect().height)), ctaFs: getComputedStyle(document.querySelector('.hero-ctas .btn')).fontSize, burger: g('#burger'), chip: g('.chip'), chipFs: getComputedStyle(document.querySelector('.chip')).fontSize,
+      chips: [Math.round(document.getElementById('chips').getBoundingClientRect().left), Math.round(document.getElementById('chips').getBoundingClientRect().right)], xrow: document.getElementById('chips').classList.contains('fs-xrow'), snap: getComputedStyle(document.getElementById('chips')).scrollSnapType,
+      sel: g('#lvl'), selFs: getComputedStyle(document.getElementById('lvl')).fontSize, clear: g('#clear'), fcol: [...document.querySelectorAll('.fcol a')].filter(a => a.offsetParent).map(a => Math.round(a.getBoundingClientRect().height)), acc: g('.acc-head'), qFs: getComputedStyle(document.getElementById('q')).fontSize}})()`);
+  check("phone: hero buttons are 44 px tall at 15 px (the first tap on the site)", sz.cta.every(h => h === 44) && sz.ctaFs === "15px", sz);
+  check("phone: burger 44 px; chips 40 px / 13.5 px in an edge-to-edge snapping row; selects 44 px at 16 px; Clear filters ≥ 44 px; footer links ≥ 44 px; accordion rows ≥ 44 px", sz.burger[0] === 44 && sz.burger[1] === 44 && sz.chip[1] === 40 && sz.chipFs === "13.5px" && sz.chips[0] === 0 && sz.chips[1] === 390 && sz.xrow && /x/.test(sz.snap) &&
+    sz.sel[1] === 44 && sz.selFs === "16px" && sz.clear[1] >= 44 && sz.fcol.length > 5 && sz.fcol.every(h => h >= 44) && sz.acc[1] >= 44 && sz.qFs === "16px", sz);
+  // burger menu: animates, locks the page, closes on an outside tap
+  await tap(p, "#burger"); await sleep(400);
+  const m1 = await q(p, "(()=>{const m=document.getElementById('mobileMenu'), cs=getComputedStyle(m), b=document.querySelector('#mobileMenu .btn'); return {open: !m.hidden, lock: document.documentElement.classList.contains('fs-lock'), anim: cs.animationName, scroll: cs.overflowY, pad: cs.paddingLeft, x: getComputedStyle(document.querySelector('#burger span')).transform !== 'none', btnH: Math.round(b.getBoundingClientRect().height), btnW: Math.round(b.getBoundingClientRect().width)}})()");
+  await tap(p, "#about .h2"); await sleep(400);
+  const m2 = await q(p, "({open: !document.getElementById('mobileMenu').hidden, lock: document.documentElement.classList.contains('fs-lock'), exp: document.getElementById('burger').getAttribute('aria-expanded')})");
+  check("phone: the burger menu slides in, morphs the burger into an X, locks the page and closes on a tap outside; it ends in a full-width red Join button", m1.open && m1.lock && m1.anim === "fsMenuIn" && m1.scroll === "auto" && m1.pad === "16px" && m1.x && m1.btnH === 46 && m1.btnW === 358 && !m2.open && !m2.lock && m2.exp === "false", { m1, m2 });
+  // placeholders on the phone too
+  const ph = await p.js(MN);
+  await goTo(p, "#markets-news", 72);
+  const ok = await waitFor(p, MOUNTED, 10000); await sleep(1500);
+  const lv = await p.js(MN);
+  check("phone: Markets & News keeps its height when the widgets mount (≤ 24 px)", ok && Math.abs(lv.sec - ph.sec) <= 24 && Math.abs(lv.paths - ph.paths) <= 24, { placeholder: ph, live: lv });
+  // repository rows on the phone: 44 px hit areas on 'Open' and a tappable headline
+  await goTo(p, "#repository", 60); await p.js("document.querySelector('[data-toggle=\"val\"]').click(); 1"); await sleep(400);
+  const op = await q(p, "(()=>{const r=document.querySelector('#track-val .rrow'); const o=r.querySelector('a.open').getBoundingClientRect(), t=r.querySelector('a.rt').getBoundingClientRect(); return {openH: Math.round(o.height), title: Math.round(t.height), pw: Math.round(document.querySelector('.pw-step .open').getBoundingClientRect().height)}})()");
+  check("phone: 'Open' links in repository rows and path steps are 44 px tall; the row title is a link", op.openH >= 44 && op.pw >= 44 && op.title > 0, op);
+  check("phone: no sideways scroll, no console errors", (await noOverflow(p)) && p.errors.length === 0, p.errors);
+  done(p);
+}
+{
+  // landscape phone 844 × 390: no overlap in the hero, the menu scrolls
+  const p = await open(base, { width: 844, height: 390, mobile: true, scale: 2 });
+  const l = await q(p, "(()=>{const c=document.querySelector('.hero-copy').getBoundingClientRect(), d=document.querySelector('.device').getBoundingClientRect(); return {copyBottom: Math.round(c.bottom), devTop: Math.round(d.top), note: getComputedStyle(document.querySelector('.hero-note')).display, cta: Math.round(document.querySelector('.hero-ctas .btn').getBoundingClientRect().height)}})()");
+  check("landscape phone: the disclaimer note is hidden and the laptop sits below the buttons", l.note === "none" && l.devTop >= l.copyBottom && l.cta >= 40, l);
+  await tap(p, "#burger"); await sleep(400);
+  await p.js("document.getElementById('mobileMenu').scrollTop = 1000; 1"); await sleep(200);
+  const mm = await q(p, "(()=>{const m=document.getElementById('mobileMenu'); const ev=[...m.querySelectorAll('a')].find(a => a.textContent.trim() === 'Events').getBoundingClientRect(); return {scrolls: m.scrollHeight > m.clientHeight, fits: m.getBoundingClientRect().bottom <= innerHeight + 1, eventsVisible: ev.top >= 0 && ev.bottom <= innerHeight}})()");
+  check("landscape phone: the burger menu stays inside the screen and scrolls, so Events and Join can be reached", mm.scrolls && mm.fits && mm.eventsVisible, mm);
+  check("landscape: no console errors", p.errors.length === 0, p.errors);
+  done(p);
+}
+{
+  const p = await open(base, { width: 1280, height: 900, reducedMotion: true });
+  const rm = await q(p, "({sb: getComputedStyle(document.documentElement).scrollBehavior, inline: document.documentElement.style.scrollBehavior, ul: getComputedStyle(document.querySelector('.hero-copy h1 .hl'), '::after').animationName, menuAnim: getComputedStyle(document.getElementById('mobileMenu')).animationDuration})");
+  check("reduced motion: instant scrolling, no headline underline animation, no menu animation", rm.sb === "auto" && rm.inline === "" && rm.ul === "none", rm);
   done(p);
 }
 

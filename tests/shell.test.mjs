@@ -120,6 +120,15 @@ const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a
   const tod = await p.js(`(()=>{const G=Finspire.glossary, a=G.termOfDay(new Date("2026-10-12T02:00:00+05:30")), b=G.termOfDay(new Date("2026-10-12T23:00:00+05:30")), c=G.termOfDay(new Date("2026-10-13T09:00:00+05:30"));
     return [a&&a.id, b&&b.id, a&&a.level, Object.keys(G.cats()).length]})()`);
   check("termOfDay(): same term all IST day, beginner/intermediate", tod[0] && tod[0] === tod[1] && ["b", "i"].includes(tod[2]) && tod[3] > 0, tod);
+  // glossary v2: phrases.json + tod.json + entry shards (fixture built by scripts/build_glossary.py above)
+  const v2 = await p.js(`(async()=>{const G=Finspire.glossary; const ix=await (await fetch("../data/glossary/index.json")).json(); const ph=await (await fetch("../data/glossary/phrases.json")).json();
+    const today=await G.today(); const todF=await (await fetch("../data/glossary/tod.json")).json();
+    const key=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Kolkata",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+    return {v:ix.v, hlInRows:ix.t.every(r=>!r[6].length), phrases:Object.keys(ph.hl||{}).length, shards:typeof ix.shards, today:today.id, todFile:(todF.days[key]||{}).id, js:G.termOfDay().id,
+      catName:today.catName, loaded:G.loaded(), rows:G.rows().length}})()`);
+  check("glossary v2: rows carry no phrases, phrases.json does; today() = tod.json = termOfDay()", v2.v === 2 && v2.hlInRows && v2.phrases > 0 && v2.shards === "object" && v2.today && v2.today === v2.todFile && v2.today === v2.js && v2.catName && v2.loaded, v2);
+  const a11y = await p.js(`(()=>{const q=[...document.querySelectorAll("[data-term]")]; return {n:q.length, ok:q.every(e=>e.getAttribute("role")==="button" && e.getAttribute("aria-haspopup")==="dialog" && e.getAttribute("aria-expanded")==="false" && e.tabIndex===0)}})()`);
+  check("a11y: every term is a button that opens a dialog (role, aria-haspopup, aria-expanded, tabindex)", a11y.n > 5 && a11y.ok, a11y);
 
   // tooltip: hover --------------------------------------------------------------------------------------------------
   const termSel = '#prose .gl-term[data-term="repo-rate"]';
@@ -129,6 +138,7 @@ const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a
   let t = await tipState(p);
   const tr = await p.js(`(()=>{const r=document.querySelector(${JSON.stringify(termSel)}).getBoundingClientRect(); return [r.left,r.top,r.right,r.bottom]})()`);
   check("tip: hover opens with term, level, meaning, dictionary link", t.open && t.term === "Repo rate" && t.lvl === "Beginner" && t.def.length > 20 && t.href === "../dictionary/#t=repo-rate", t);
+  check("tip: the open term says aria-expanded=true", await p.js(`document.querySelector(${JSON.stringify(termSel)}).getAttribute("aria-expanded")`) === "true");
   check("tip: inside viewport and not covering the term", t.rect[0] >= 0 && t.rect[2] <= t.vw && t.rect[1] >= 0 && t.rect[3] <= t.vh && !overlaps(t.rect, tr), { tip: t.rect, term: tr });
   check("tip: Save offered to the local guest (no client id yet, so everyone is a guest)", t.save === true, t);
   await p.shot(join(OUT, "desktop-tip-hover.png"));
@@ -140,6 +150,7 @@ const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a
   check("tip: stays open while the pointer is over it", (await tipState(p)).open);
   await mouseTo(p, 1200, 860); await sleep(450);
   check("tip: closes on pointer leave", !(await tipState(p)).open);
+  check("tip: closed term says aria-expanded=false", await p.js(`document.querySelector(${JSON.stringify(termSel)}).getAttribute("aria-expanded")`) === "false");
 
   // tooltip on [data-term] labels + unknown id
   await hover(p, '.demo-lbl[data-term="nifty-50"]'); await sleep(350);
@@ -235,6 +246,14 @@ const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a
   check("modal: backdrop closes", !(await p.js(`!!document.querySelector(".fs-modal")`)));
 
   check("desktop: no horizontal overflow", await noOverflow(p));
+  const shell = await p.js(`(()=>{const cs=e=>getComputedStyle(e); return {fcols:cs(document.querySelector(".fcols")).gridTemplateColumns.split(" ").length, cols:[...document.querySelectorAll(".fcol b")].map(b=>b.textContent),
+    repoPad:cs(document.querySelector('.nl[href$="#repository"]')).paddingRight, h2:cs(document.querySelector(".h2")||document.body).fontSize, acct:cs(document.querySelector(".fs-acct")).display,
+    fonts:[...document.fonts].filter(f=>f.status==="loaded").map(f=>f.family).sort(), gf:!!document.querySelector('link[href*="fonts.googleapis"]'), preload:document.querySelectorAll('link[rel=preload][as=font]').length,
+    icon:(document.querySelector('link[rel=icon]')||{}).getAttribute("href"), join:document.querySelector(".nav-cta .join").getAttribute("aria-label")}})()`);
+  check("footer: five columns, same blocks as the home page", shell.fcols === 5 && shell.cols.join() === "Repository,Start here,Tools,Club,Follow", shell);
+  check("header: Repository link reserves the home chevron's slot; Join carries its new-tab label", shell.repoPad === "36px" && /opens in a new tab/.test(shell.join), shell);
+  check("type: section headings use the home scale (53.76px at 1280)", shell.h2 === "53.76px", shell.h2);
+  check("fonts: self-hosted Plex loaded, no Google Fonts link, preloads present, hidden empty account slot", shell.fonts.includes("IBM Plex Sans") && shell.fonts.includes("IBM Plex Mono") && !shell.gf && shell.preload >= 2 && shell.acct === "none" && /icon\.png$/.test(shell.icon), shell);
   await p.js("scrollTo(0,0), true"); await sleep(200);
   await p.shot(join(OUT, "desktop-top.png"));
   await p.shot(join(OUT, "desktop-full.png"), { fullPage: true });
@@ -316,16 +335,17 @@ const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a
     const r=s=>{const e=document.querySelector(s).getBoundingClientRect(); return [Math.round(e.width),Math.round(e.height)]};
     return {links:v(".nav-links"), join:v(".nav-cta .join"), burger:v(".burger"), name:v(".fs-acct-name"), acct:r(".fs-acct-btn"), burgerSz:r(".burger"),
       gutter:Math.round(document.querySelector(".pg-head").getBoundingClientRect().left)}})()`);
-  check("phone header: burger + compact avatar, links hidden", !hd.links && !hd.join && hd.burger && !hd.name && hd.acct[0] >= 40 && hd.acct[1] >= 40 && hd.burgerSz[1] >= 40, hd);
+  check("phone header: burger (44px) + compact avatar, links hidden", !hd.links && !hd.join && hd.burger && !hd.name && hd.acct[0] >= 40 && hd.acct[1] >= 40 && hd.burgerSz[0] === 44 && hd.burgerSz[1] === 44, hd);
   check("phone: 16px gutters", hd.gutter === 16, hd.gutter);
   await p.shot(join(OUT, "phone-top.png"));
   await tap(p, ".burger");
   const mm = await p.js(`(()=>{const m=document.querySelector(".mobile-menu"); return {open:!m.hidden, exp:document.querySelector(".burger").getAttribute("aria-expanded"),
     links:[...m.querySelectorAll("a")].map(a=>a.textContent.trim()), minH:Math.min(...[...m.querySelectorAll("a")].map(a=>a.getBoundingClientRect().height))}})()`);
   check("phone: burger opens the menu (nav order, tap targets)", mm.open && mm.exp === "true" && mm.links.slice(0, 6).join() === "Start here,Repository,Markets,Dictionary,Library,Events" && mm.minH >= 40, mm);
+  check("phone: menu ends in the red Join on LinkedIn button and locks page scroll", mm.links[6] === "Join on LinkedIn ↗" && await p.js(`document.documentElement.classList.contains("fs-lock") && document.querySelector(".mobile-menu .btn-primary") !== null`), mm.links[6]);
   await p.shot(join(OUT, "phone-menu.png"));
   await key(p, "Escape"); await sleep(200);
-  check("phone: Escape closes the menu", await p.js(`document.querySelector(".mobile-menu").hidden`));
+  check("phone: Escape closes the menu and unlocks scroll", await p.js(`document.querySelector(".mobile-menu").hidden && !document.documentElement.classList.contains("fs-lock")`));
   // account menu on phone
   await tap(p, ".fs-acct-btn");
   const am = await p.js(`(()=>{const m=document.querySelector(".fs-menu"); const r=m.getBoundingClientRect(); return {open:!m.hidden, l:r.left, r:r.right, vw:innerWidth}})()`);
@@ -346,6 +366,14 @@ const overlaps = (a, b) => a[0] < b[2] && b[0] < a[2] && a[1] < b[3] && b[1] < a
   await p.shot(join(OUT, "phone-sheet.png"));
   await tapAt(p, 195, 120);
   check("phone: tapping the scrim closes the sheet", !(await tipState(p)).open);
+  // the grab handle drags the sheet; a pull of more than 60px closes it
+  await tap(p, '#hl1 .gl-term[data-term="nifty-50"]');
+  const hn = await p.js(`(()=>{const r=document.querySelector(".gl-tip-in").getBoundingClientRect(); return [r.x+r.width/2, r.y+12]})()`);
+  await p.send("Input.dispatchTouchEvent", { type: "touchStart", touchPoints: [{ x: hn[0], y: hn[1] }] });
+  for (let i = 1; i <= 6; i++) { await p.send("Input.dispatchTouchEvent", { type: "touchMove", touchPoints: [{ x: hn[0], y: hn[1] + i * 20 }] }); await sleep(30); }
+  const mid = await p.js(`document.querySelector(".gl-tip-in").style.transform`);
+  await p.send("Input.dispatchTouchEvent", { type: "touchEnd", touchPoints: [] }); await sleep(400);
+  check("phone: dragging the sheet handle down closes it", /translateY\(\d+px\)/.test(mid) && !(await tipState(p)).open, mid);
   await tap(p, '#prose .gl-term[data-term="repo-rate"]');
   t = await tipState(p);
   check("phone: sheet close button works", t.open && t.sheet);

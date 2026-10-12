@@ -422,19 +422,27 @@ function errorPanel(e, retry) {
 
 /* ---------------------------------------------------------------- folder icon cards (gate preview + library home) */
 function folderCard(f, onOpen) {
-  const has = !!f.id, tag = has && onOpen ? "button" : "div";
+  const has = !!f.id, tag = has && onOpen ? "button" : "div", id = "libfc" + f.i;
   return h(tag, { class: "lib-fc" + (has ? "" : " soon"), type: tag === "button" ? "button" : null, "data-lib-folder": f.id || "", "data-name": f.t,
+      "aria-labelledby": tag === "button" ? id + "t" : null, "aria-describedby": tag === "button" && f.d ? id + "d" : null,
       onclick: tag === "button" ? () => onOpen(f) : null },
     h("span", { class: "lib-fc-ic" }, I(f.icon)),
-    h("span", { class: "lib-fc-t" }, f.t),
-    f.d ? h("span", { class: "lib-fc-d" }, f.d) : null,
-    f.tags.length ? h("span", { class: "lib-fc-tags" }, f.tags.map(x => h("span", null, x))) : h("span"),
-    h("span", { class: "lib-fc-go" }, has ? [h("span", null, "Open folder"), I("right")] : h("span", null, "Coming soon")));
+    h("span", { class: "lib-fc-t", id: id + "t" }, f.t),
+    f.d ? h("span", { class: "lib-fc-d", id: id + "d" }, f.d) : null,
+    f.tags.length ? h("span", { class: "lib-fc-tags", "aria-hidden": "true" }, f.tags.map(x => h("span", null, x))) : h("span"),
+    h("span", { class: "lib-fc-go", "aria-hidden": "true" }, has ? [h("span", null, "Open folder"), I("right")] : h("span", null, "Coming soon")));
 }
 
 /* ================================================================ screens ================================================= */
 const head = D.querySelector(".lib-head");
-function setScreen(name) { root.dataset.screen = name; if (head) head.classList.toggle("compact", name === "browser"); }
+function setScreen(name) {
+  root.dataset.screen = name;
+  if (!head) return;
+  head.classList.toggle("compact", name === "browser");
+  // "Open it here." is the call to action; once the browser or viewer is showing it has been answered
+  const dim = head.querySelector(".dim");
+  if (dim) dim.textContent = name === "browser" ? "" : name === "off" ? "Opening soon." : "Open it here.";
+}
 
 /* ---- gate (signed out) and "open the library" (signed in, no Drive token yet) ---- */
 function renderIntro() {
@@ -448,14 +456,14 @@ function renderIntro() {
       btn(k === "dictionary" ? "Open the Dictionary" : "Markets & News", { kind: i ? "btn-ghost" : "btn-primary", href: F.url(F.cfg.pages[k]) }));
     left.append(
       h("span", { class: "lib-lock" }, I("lock"), "Members only"),
-      h("h2", { class: "lib-intro-h" }, "Opens with IIM Ranchi sign-in."),
-      h("p", { class: "lib-intro-p" }, "The Library is for IIM Ranchi students. It opens here once IIM Ranchi sign-in is switched on for the site. Until then, this is what's inside."),
+      h("h2", { class: "lib-intro-h" }, "Opens with IIM Ranchi ", h("em", { class: "ital" }, "sign-in"), "."),
+      h("p", { class: "lib-intro-p" }, "The Library is for IIM Ranchi students and opens here once IIM Ranchi sign-in is switched on. Here is what is inside."),
       go.length ? h("div", { class: "lib-intro-acts", "data-lib-off-signin": "" }, go) : null,
-      h("p", { class: "lib-intro-note" }, "Club members can ask a Finspire admin for files in the meantime."));
+      h("p", { class: "lib-intro-note" }, "Until then, ask any Finspire member and we will send the file."));
   } else if (!u) {
     left.append(
       h("span", { class: "lib-lock" }, I("lock"), "Members only"),
-      h("h2", { class: "lib-intro-h" }, "Sign in with your IIM Ranchi account."),
+      h("h2", { class: "lib-intro-h" }, "Sign in with your IIM Ranchi ", h("em", { class: "ital" }, "account"), "."),
       h("p", { class: "lib-intro-p" }, "The Library holds notes, templates and past work shared by Finspire members. It is open to IIM Ranchi students: sign in with your @" + F.cfg.allowedDomain + " Google account to read and download files here."),
       h("div", { class: "lib-intro-acts" },
         h("button", { class: "fs-gbtn lib-signin", type: "button", "data-lib-signin": "", onclick: () => {
@@ -465,36 +473,35 @@ function renderIntro() {
       h("p", { class: "lib-intro-note" }, "Only @" + F.cfg.allowedDomain + " accounts can sign in. Finspire sees your name and email, and can only read the club's shared folders."));
   } else {
     left.append(
-      h("span", { class: "lib-lock ok" }, I("check"), "Signed in as " + (u.email || u.name)),
-      h("h2", { class: "lib-intro-h" }, "Welcome, " + (u.given || u.name || "there") + "."),
+      h("span", { class: "lib-lock ok", title: u.email || null }, I("check"), h("span", { class: "lib-lock-t" }, "Signed in as " + (u.given || u.name || u.email))),
+      h("h2", { class: "lib-intro-h" }, "Welcome, ", h("em", { class: "ital" }, u.given || u.name || "there"), "."),
       h("p", { class: "lib-intro-p" }, "Open the Library to browse the club's folders. Google asks once for permission to read them. Finspire can't change or delete anything in your Drive."),
       h("div", { class: "lib-intro-acts" },
         btn("Open the library", { kind: "btn-primary", icon: "book", attrs: { "data-lib-open": "" }, onclick: ev => openLibrary(ev.currentTarget) })),
       h("p", { class: "lib-intro-note" }, "Files open inside this page. Nothing is posted or shared for you."),
       h("div", { class: "lib-consent", role: "note" },
         h("b", null, "About Google's permission screen"),
-        h("p", null, "Google will say Finspire wants to \u201csee and download all your Google Drive files\u201d. That is Google's standard wording for read-only access. Finspire only opens the club's shared folders, never your own files."),
-        h("p", null, "The permission stays in this browser tab for about an hour, nothing is sent to any Finspire server, and Finspire cannot change or delete anything. You can remove it any time at ",
+        h("p", null, "Google will ask you to let Finspire \u201csee and download all your Google Drive files\u201d. That is Google\u2019s standard wording for read-only access: Finspire opens only the club\u2019s shared folders and cannot change or delete anything. The permission lasts about an hour in this tab and can be removed at ",
           h("a", { href: "https://myaccount.google.com/permissions", target: "_blank", rel: "noopener noreferrer" }, "myaccount.google.com/permissions"), ".")));
   }
+  // signed out, "open" only means "has a link": say linked; locked rows carry a visible status, not just a padlock
   const rowIn = f => [h("span", { class: "lib-il-ic" }, I(f.icon)), h("span", { class: "lib-il-t" }, f.t),
-    h("span", { class: "lib-il-s" }, f.id ? (u ? I("right") : I("lock")) : "Coming soon")];
+    h("span", { class: "lib-il-s" }, f.id ? (u ? I("right") : h("span", { class: "lib-il-lock" }, I("lock"), "Members")) : "Coming soon")];
   const list = h("ul", { class: "lib-intro-list", "aria-label": "Folders in the Library" },
     S.folders.length ? S.folders.map(f => h("li", { class: f.id ? "" : "soon" },
       u && f.id ? h("button", { class: "lib-il-b", type: "button", "data-lib-folder": f.id, "aria-label": "Open " + f.t,
-        onclick: ev => openLibrary(ev.currentTarget, () => nav([{ id: f.id, name: f.t }])) }, rowIn(f)) : h("div", { class: "lib-il-b" }, rowIn(f)))) :
+        onclick: ev => openLibrary(ev.currentTarget, () => nav([{ id: f.id, name: f.t }])) }, rowIn(f))
+      : h("div", { class: "lib-il-b", title: f.id ? "Opens after sign-in" : null }, rowIn(f)))) :
       h("li", { class: "soon" }, h("span", { class: "lib-il-t" }, "Folder list not available right now.")));
+  const count = !n ? "" : open === n ? plural(n, "folder") : open + " of " + n + (u ? " open" : " linked");
   const right = h("div", { class: "lib-intro-side" },
-    h("div", { class: "lib-intro-side-h" }, h("span", null, "Inside the Library"),
-      h("span", { class: "lib-count" }, !n ? "" : open === n ? plural(n, "folder") : open + " of " + n + " open")), list);
+    h("div", { class: "lib-intro-side-h" }, h("span", null, "Inside the Library"), h("span", { class: "lib-count" }, count)), list);
   F.dom.clear(root).appendChild(h("section", { class: "lib-intro", "aria-label": u ? "Open the Library" : "Sign in to the Library" }, left, right));
 }
 
 /* ---- the Library is switched off for this site (cfg.features.library false): only reachable by a direct link ---- */
 function renderOff() {
   setScreen("off");
-  const dim = head && head.querySelector(".dim");
-  if (dim) dim.textContent = "Opening soon.";
   const go = ["dictionary", "markets"].filter(k => F.feature(k)).map(k =>
     btn(k === "dictionary" ? "Open the Dictionary" : "Markets & News", { kind: "btn-ghost", href: F.url(F.cfg.pages[k]) }));
   F.dom.clear(root).appendChild(h("section", { class: "lib-off", "data-lib-off": "" },
@@ -523,6 +530,7 @@ async function openLibrary(button, then) {
     }
     sset("fs.lib.open", "1");
     S.opened = true;
+    S.focusNext = true;                                 // the button that had focus is about to be replaced
     if (then) { UI = null; then(); } else route();
   } finally {
     if (button) { button.removeAttribute("aria-busy"); button.classList.remove("busy"); }
@@ -565,7 +573,8 @@ function frame() {
   sort.value = S.sort;
   sort.addEventListener("change", () => { S.sort = sort.value; renderList(); });
   const sortWrap = h("label", { class: "lib-sortw" }, h("span", { class: "sr-only" }, "Sort"), sort, I("down"));
-  const add = canUpload() ? btn("Add a file", { kind: "btn-ink", sm: true, icon: "upload", attrs: { "data-lib-upload": "" }, onclick: openUpload }) : null;
+  const add = canUpload() ? btn([h("span", { class: "lib-btn-long" }, "Add a file"), h("span", { class: "lib-btn-short" }, "Add")],
+    { kind: "btn-ink", sm: true, icon: "upload", attrs: { "data-lib-upload": "", title: "Add a file to the Library", "aria-label": "Add a file to the Library" }, onclick: openUpload }) : null;
   const tools = h("div", { class: "lib-tools" }, h("div", { class: "lib-search" }, I("search"), input, clearQ), sortWrap, add);
   const barIn = h("div", { class: "lib-bar-in" }, h("nav", { class: "lib-nav", "aria-label": "Folder path" }, back, crumbs));
   const bar = h("div", { class: "lib-bar" }, barIn);
@@ -583,7 +592,7 @@ function frame() {
   return UI;
 }
 function renderCrumbs() {
-  const ui = frame(), list = [{ id: "", name: "Library" }].concat(S.path);
+  const ui = frame(), list = [{ id: "", name: S.path.length ? "Library" : "All folders" }].concat(S.path);
   F.dom.clear(ui.crumbs);
   list.forEach((c, i) => {
     const last = i === list.length - 1;
@@ -604,6 +613,7 @@ function renderHome() {
   const ui = frame();
   renderCrumbs();
   const c = F.dom.clear(ui.content);
+  c.style.minHeight = "";
   if (S.q.length >= 2) { renderSearch(); return; }
   const rec = recentList();
   if (rec.length) {
@@ -620,8 +630,9 @@ function renderHome() {
       }))));
   }
   const n = S.folders.length, open = openFolders().length;
+  const title = h("h2", { class: "lib-h2", tabindex: "-1" }, "Folders");
   c.appendChild(h("section", { class: "lib-sec", "aria-label": "Folders" },
-    h("div", { class: "lib-sec-h" }, h("h2", { class: "lib-h2" }, "Folders"),
+    h("div", { class: "lib-sec-h" }, title,
       h("span", { class: "lib-count" }, !n ? "" : open === n ? plural(n, "folder") : open + " of " + n + " folders open")),
     n ? h("div", { class: "lib-fgrid" }, S.folders.map(f => folderCard(f, x => nav([{ id: x.id, name: x.t }]))))
       : h("div", { class: "empty" }, h("b", null, "No folders yet"), h("span", null, "A Finspire admin adds folders from the home page."))));
@@ -631,6 +642,13 @@ function renderHome() {
       h("p", null, "Add your notes or templates for the next batch. A Finspire admin reviews every upload before it appears here.")),
     btn("Add a file", { kind: "btn-ghost", icon: "upload", attrs: { "data-lib-share": "" }, onclick: openUpload })));
   say("Library home. " + plural(open, "folder") + " open.");
+  takeFocus(title);
+}
+/* after a click on a card, row, crumb or Back, keyboard focus moves to the new heading so Tab carries on from there */
+function takeFocus(el) {
+  if (!S.focusNext || !el) return;
+  S.focusNext = false;
+  try { el.focus({ preventScroll: true }); } catch (e) {}
 }
 
 /* ---- folder view ---- */
@@ -641,8 +659,14 @@ async function showFolder() {
   S.items = null; S.error = null;
   if (S.type !== "all") S.type = "all";
   const c = F.dom.clear(ui.content);
-  c.appendChild(h("div", { class: "lib-fhead" }, h("h2", { class: "lib-h2 lib-ftitle" }, here.name || "Folder"), h("span", { class: "lib-count skel", style: "width:70px;height:14px" })));
-  c.appendChild(skeletonRows(6));
+  c.style.minHeight = "";
+  const title = h("h2", { class: "lib-h2 lib-ftitle", tabindex: "-1" }, here.name || "Folder");
+  c.appendChild(h("div", { class: "lib-fhead" }, title, h("span", { class: "lib-count skel", style: "width:70px;height:14px" })));
+  // as many skeleton rows as the folder had last time (4 when unknown), and the content keeps that height so the footer never jumps up
+  const known = S.lists.get(here.id);
+  c.appendChild(skeletonRows(known ? Math.max(1, Math.min(12, known.list.length)) : 4));
+  c.style.minHeight = Math.ceil(c.getBoundingClientRect().height) + "px";
+  takeFocus(title);
   // names of unknown path parts (deep link)
   if (S.path.some(p => !p.name)) {
     try {
@@ -685,14 +709,17 @@ function sorted(list) {
 }
 function renderList() {
   if (!S.items || !UI) return;
-  const c = F.dom.clear(UI.content), here = S.path[S.path.length - 1];
+  const was = D.activeElement, c0 = UI.content;
+  const keep = c0.contains(was) ? (was.classList.contains("lib-ftitle") ? ".lib-ftitle" : was.dataset.libType ? '[data-lib-type="' + was.dataset.libType + '"]' : "") : "";
+  const c = F.dom.clear(c0), here = S.path[S.path.length - 1];
   const all = S.items, q = S.q.toLowerCase();
+  if (all.some(f => openMode(f) === "pdf" || openMode(f) === "export")) loadPdfjs().catch(() => {});
   const counts = {}; all.forEach(f => { const k = kindOf(f.mimeType); counts[k] = (counts[k] || 0) + 1; });
   const kinds = Object.keys(KINDS).filter(k => counts[k]);
   if (S.type !== "all" && !counts[S.type]) S.type = "all";
   const shown = sorted(all.filter(f => (S.type === "all" || kindOf(f.mimeType) === S.type) && (!q || f.name.toLowerCase().includes(q))));
   c.appendChild(h("div", { class: "lib-fhead" },
-    h("h2", { class: "lib-h2 lib-ftitle" }, here.name || "Folder"),
+    h("h2", { class: "lib-h2 lib-ftitle", tabindex: "-1" }, here.name || "Folder"),
     h("span", { class: "lib-count", "data-lib-count": String(all.length) }, plural(all.length, "item")),
     h("button", { class: "lib-iconbtn lib-refresh", type: "button", "aria-label": "Refresh folder", title: "Refresh", onclick: () => { S.lists.delete(here.id); showFolder(); } }, I("refresh"))));
   if (kinds.length > 1) {
@@ -702,21 +729,35 @@ function renderList() {
           label, h("span", { class: "n" }, String(n)))));
     c.appendChild(chips);
   }
+  let empty = null;
   if (!all.length) {
     c.appendChild(h("div", { class: "empty lib-empty" }, h("span", { class: "lib-err-ic" }, I("folder")), h("b", null, "This folder is empty"),
       h("span", null, canUpload() ? "Have something useful for it? Use Add a file." : "Files will appear here once a Finspire admin adds them.")));
   } else if (!shown.length) {
-    c.appendChild(h("div", { class: "empty lib-empty" }, h("b", null, q ? "Nothing in this folder matches “" + S.q + "”" : "No files of this type"),
-      h("span", null, q ? "Results from other folders are below." : "Choose All to see everything.")));
+    empty = h("div", { class: "empty lib-empty" }, h("b", null, q ? "Nothing in this folder matches “" + S.q + "”" : "No files of this type"),
+      h("span", null, q ? "Looking in other folders…" : "Choose All to see everything."));
+    c.appendChild(empty);
   } else {
     c.appendChild(listEl(shown, false));
   }
+  const results = n => say(n ? n + " result" + (n === 1 ? "" : "s") + " for “" + S.q + "”" : "No results for “" + S.q + "”");
   if (q.length >= 2) {
     const more = h("section", { class: "lib-sec lib-more", "aria-label": "Results in other folders" },
       h("div", { class: "lib-sec-h" }, h("h3", { class: "lib-h3" }, "In other folders")), skeletonRows(2));
     c.appendChild(more);
-    driveSearch(S.q, new Set(all.map(f => f.id)), more);
-  }
+    driveSearch(S.q, new Set(all.map(f => f.id)), more, (res, e) => {
+      if (!more.isConnected) return;
+      if (e) { if (empty) empty.lastChild.textContent = errText(e).short; return; }
+      if (!res.length && empty) {
+        // nothing here and nothing elsewhere: one panel says so, instead of two stacked ones
+        more.remove();
+        F.dom.clear(empty).append(h("b", null, "No files match “" + S.q + "”."), h("span", null, "Search looks at file names in the club’s folders and the sub-folders you have opened."));
+        empty.setAttribute("data-lib-noresults", "");
+      } else if (empty) empty.lastChild.textContent = "Results from other folders are below.";
+      results(shown.length + res.length);
+    });
+  } else if (q) results(shown.length);
+  if (keep) { const el = c.querySelector(keep); if (el) try { el.focus({ preventScroll: true }); } catch (e) {} }
 }
 function listEl(items, withFolder) {
   return h("div", { class: "lib-list", role: "list" },
@@ -738,10 +779,12 @@ function rowEl(f, withFolder) {
   const main = h("button", { class: "lib-row-main", type: "button", "data-lib-item": f.id, "data-kind": k, "data-name": f.name,
       onclick: () => isF ? nav(withFolder ? folderPathFor(f) : S.path.concat([{ id: f.id, name: f.name }])) : openViewer(f) },
     b,
-    h("span", { class: "lib-row-name" }, h("span", { class: "lib-row-t" }, f.name),
+    h("span", { class: "lib-row-name" }, h("span", { class: "lib-row-t" }, f.name), h("span", { class: "sr-only" }, ", "),
       h("span", { class: "lib-row-sub" }, where ? h("span", { class: "lib-row-in" }, "in " + where) : null, h("span", { class: "lib-row-meta" }, sub))),
-    h("span", { class: "lib-row-date" }, fmtDate(f.modifiedTime)),
-    h("span", { class: "lib-row-size" }, isF ? "—" : (fmtSize(f.size) || "—")));
+    h("span", { class: "lib-row-date", "aria-hidden": "true" }, fmtDate(f.modifiedTime)),
+    h("span", { class: "lib-row-size", "aria-hidden": "true" }, isF ? "—" : (fmtSize(f.size) || "—")));
+  const om = openMode(f);
+  if (om === "pdf" || om === "export") main.addEventListener("pointerover", () => { loadPdfjs().catch(() => {}); }, { once: true });
   const act = isF ? h("span", { class: "lib-row-go", "aria-hidden": "true" }, I("right"))
     : openMode(f) === "none" ? h("span", { class: "lib-row-go" })
     : h("button", { class: "lib-iconbtn lib-row-dl", type: "button", "aria-label": "Download " + f.name, title: "Download", "data-lib-dl": f.id, onclick: e => download(f, e.currentTarget) }, I("download"), h("span", { class: "lib-btn-t sr-only" }, "Download"));
@@ -760,7 +803,7 @@ function folderPathFor(f) {
 
 /* ---- search across the configured folders (Drive-side, name contains) ---- */
 let searchAC = null;
-async function driveSearch(q, exclude, box) {
+async function driveSearch(q, exclude, box, onDone) {
   if (searchAC) searchAC.abort();
   const ac = searchAC = new AbortController();
   const parents = [...new Set(openFolders().map(f => f.id).concat([...S.searchIds]))].slice(0, 40);
@@ -770,12 +813,15 @@ async function driveSearch(q, exclude, box) {
     const res = (await drive().search(q, parents, ac.signal)).filter(f => !exclude.has(f.id));
     if (ac.signal.aborted) return;
     res.forEach(f => { if (f.mimeType === FOLDER) S.names.set(f.id, f.name); });
-    put(res.length ? listEl(sorted(res), true) : h("p", { class: "lib-note", "data-lib-noresults": "" }, exclude.size ? "No other matches." : "No files match “" + q + "”."));
-    if (!exclude.size) say(plural(res.length, "result") + " for " + q);
+    put(res.length ? listEl(sorted(res), true) : exclude.size ? h("p", { class: "lib-note" }, "No other matches.")
+      : h("div", { class: "empty lib-empty", "data-lib-noresults": "" }, h("b", null, "No files match “" + q + "”."), h("span", null, "Search looks at file names in the club’s folders and the sub-folders you have opened.")));
+    if (!exclude.size) say(res.length ? res.length + " result" + (res.length === 1 ? "" : "s") + " for “" + q + "”" : "No results for “" + q + "”");
+    if (onDone) onDone(res, null);
   } catch (e) {
     if (isAbort(e)) return;
     if (e.kind === "auth") { renderAuthLost(); return; }
     put(h("p", { class: "lib-note" }, errText(e).short));
+    if (onDone) onDone([], e);
   }
 }
 function renderSearch() {
@@ -785,14 +831,17 @@ function renderSearch() {
       h("button", { class: "lib-textbtn", type: "button", onclick: () => { UI.input.value = ""; UI.clearQ.hidden = true; onQuery(); } }, "Clear")),
     skeletonRows(3));
   c.appendChild(box);
-  c.appendChild(h("p", { class: "lib-note" }, "Searches file names in the club's folders and the sub-folders you have opened."));
-  driveSearch(S.q, new Set(), box);
+  const note = h("p", { class: "lib-note" }, "Searches file names in the club's folders and the sub-folders you have opened.");
+  c.appendChild(note);
+  driveSearch(S.q, new Set(), box, res => { if (!res.length) note.remove(); });
 }
 function onQuery() {
   if (!UI) return;
   S.q = UI.input.value.trim();
   UI.clearQ.hidden = !UI.input.value;
   if (!S.path.length) renderHome(); else renderList();
+  // query cleared: the status goes back to the folder summary
+  if (!S.q && S.path.length && S.items) say((S.path[S.path.length - 1].name || "Folder") + ". " + plural(S.items.length, "item") + ".");
 }
 
 /* ---------------------------------------------------------------- routing */
@@ -803,6 +852,7 @@ function pathFromHash() {
 }
 const pathKey = p => p.map(x => x.id).join("/");
 function nav(path) {
+  S.focusNext = true;
   const want = path.length ? "#f=" + pathKey(path) : "";
   if (location.hash !== want && !(want === "" && !location.hash)) {
     history.pushState(null, "", want || location.pathname + location.search);
@@ -853,9 +903,11 @@ function openViewer(f) {
   const dl = h("button", { class: "lib-vbtn lib-vw-dl", type: "button", "data-lib-dl": f.id, "aria-label": "Download " + f.name, onclick: e => download(f, e.currentTarget, true) },
     I("download"), h("span", { class: "lib-btn-t" }, "Download"));
   const x = h("button", { class: "lib-vbtn lib-vw-x", type: "button", "aria-label": "Close viewer", "data-lib-close": "", onclick: () => v.close() }, I("x"));
-  const metaEl = h("span", { class: "lib-vw-meta" }, [md === "export" ? KIND_LABEL[k] + " · opened as PDF" : KIND_LABEL[k], fmtSize(f.size), f.folderName || (S.path[0] && S.path[0].name) || ""].filter(Boolean).join(" · "));
+  const gkind = { document: "Google Doc", presentation: "Google Slides", spreadsheet: "Google Sheet", drawing: "Google Drawing" }[String(f.mimeType || "").slice(GA.length)];
+  const metaEl = h("span", { class: "lib-vw-meta" }, [md === "export" ? (gkind || KIND_LABEL[k]) + " · shown as PDF" : KIND_LABEL[k], fmtSize(f.size), f.folderName || (S.path[0] && S.path[0].name) || ""].filter(Boolean).join(" · "));
   const top = h("div", { class: "lib-vw-top" }, badge(k), h("div", { class: "lib-vw-id" }, h("b", { class: "lib-vw-name", title: f.name }, f.name), metaEl), h("div", { class: "lib-vw-acts" }, dl, x));
-  const stage = h("div", { class: "lib-vw-stage", tabindex: "0", "aria-label": f.name, "data-lib-stage": md });
+  const stage = h("div", { class: "lib-vw-stage", tabindex: "0", role: "region", "data-lib-stage": md,
+    "aria-label": f.name + (md === "pdf" || md === "export" ? ", document. Arrow keys move between pages." : md === "image" ? ", image. Arrow keys scroll." : "") });
   const tools = h("div", { class: "lib-vw-tools", hidden: true });
   const body = h("div", { class: "lib-vw-body" }, stage, tools);
   v.stage = stage; v.tools = tools; v.body = body;
@@ -915,14 +967,18 @@ function loader(v, label) {
   const el = h("div", { class: "lib-load", "data-lib-loading": "" }, badge(kindOf(v.f.mimeType), "lg"),
     h("b", null, label), h("div", { class: "lib-prog indet", role: "progressbar", "aria-label": label }, bar), txt);
   F.dom.clear(v.stage).appendChild(el);
-  const prog = el.querySelector(".lib-prog");
-  return (got, total) => {
+  const prog = el.querySelector(".lib-prog"), title = el.querySelector("b");
+  const onP = (got, total) => {
     if (total) { prog.classList.remove("indet"); const p = Math.min(100, got / total * 100); bar.style.transform = "scaleX(" + (p / 100) + ")"; prog.setAttribute("aria-valuenow", String(Math.round(p))); txt.textContent = fmtSize(got) + " of " + fmtSize(total); }
     else txt.textContent = fmtSize(got) + " loaded";
   };
+  onP.label = t => { title.textContent = t; prog.setAttribute("aria-label", t); };
+  return onP;
 }
-async function fetchFor(v, label) {
-  const onP = loader(v, label);
+/* `pending`: a promise the viewer still waits for (PDF.js); until it resolves the loader says so instead of "Starting…" */
+async function fetchFor(v, label, pending) {
+  const onP = loader(v, pending ? "Loading the PDF viewer…" : label);
+  if (pending) pending.then(() => { if (!v.closed && onP.label) onP.label(label); }, () => {});
   try { return await fileBlob(v.f, onP, v.ac.signal); }
   catch (e) {
     if (isAbort(e) || v.closed) return null;
@@ -939,7 +995,7 @@ function reopen(v) { if (v.md === "pdf" || v.md === "export") openPdf(v); else i
 /* ---- PDF ---- */
 async function openPdf(v) {
   const libP = loadPdfjs(); libP.catch(() => {});
-  const blob = await fetchFor(v, v.md === "export" ? "Converting to PDF…" : "Opening " + v.f.name);
+  const blob = await fetchFor(v, v.md === "export" ? "Converting to PDF…" : "Opening " + v.f.name, libP);
   if (!blob) return;
   let lib;
   try { lib = await libP; } catch (e) { if (!v.closed) stageMessage(v, "alert", "The PDF viewer didn't load", "Check your connection and try again.", () => openPdf(v)); return; }
@@ -984,7 +1040,8 @@ async function openPdf(v) {
 }
 function buildPdfTools(v) {
   const input = h("input", { class: "lib-pgin", type: "text", inputmode: "numeric", pattern: "[0-9]*", value: "1", "aria-label": "Page number", "data-lib-page": "", autocomplete: "off" });
-  const total = h("span", { class: "lib-pgof" }, "of " + v.n);
+  const total = h("span", { class: "lib-pgof", id: "libPgOf" }, "of " + v.n);
+  v.stage.setAttribute("aria-describedby", "libPgOf");
   const prev = h("button", { class: "lib-tbtn", type: "button", "aria-label": "Previous page", "data-lib-prev": "", onclick: () => goPage(v, v.cur - 1) }, I("up"));
   const next = h("button", { class: "lib-tbtn", type: "button", "aria-label": "Next page", "data-lib-next": "", onclick: () => goPage(v, v.cur + 1) }, I("down"));
   const zout = h("button", { class: "lib-tbtn", type: "button", "aria-label": "Zoom out", "data-lib-zout": "", onclick: () => stepZoom(v, -1) }, I("minus"));
@@ -1196,14 +1253,18 @@ function openUpload() {
   const chosen = h("div", { class: "lib-up-file", hidden: true });
   const prog = h("div", { class: "lib-prog", role: "progressbar", "aria-label": "Upload progress", hidden: true }, h("i"));
   const status = h("p", { class: "lib-up-status", role: "status" });
-  const drop = h("label", { class: "lib-drop", for: "libUpFile" }, I("upload"), h("b", null, "Choose a file"), h("span", null, PHONE.matches ? "Up to 100 MB" : "or drop it here · up to 100 MB"), input);
+  const drop = h("label", { class: "lib-drop", for: "libUpFile" }, I("upload"), h("b", null, "Choose a file"), h("span", { class: "sr-only" }, ", "),
+    h("span", null, PHONE.matches ? "Up to 100 MB" : "or drop it here · up to 100 MB"), input);
+  let go = null;
+  const armed = on => { if (go) go.setAttribute("aria-disabled", on ? "false" : "true"); };
   const pick = f => {
     if (!f) return;
     if (f.size > MAX_UPLOAD) { status.textContent = "That file is larger than 100 MB. Share a smaller version."; status.className = "lib-up-status bad"; return; }
     file = f; status.textContent = ""; status.className = "lib-up-status";
     F.dom.clear(chosen).append(badge(kindOf(f.type)), h("span", { class: "lib-up-n" }, h("b", null, f.name), h("span", null, fmtSize(f.size))),
-      h("button", { class: "lib-iconbtn", type: "button", "aria-label": "Remove file", onclick: () => { file = null; chosen.hidden = true; drop.hidden = false; input.value = ""; } }, I("x")));
-    chosen.hidden = false; drop.hidden = true;
+      h("button", { class: "lib-iconbtn", type: "button", "aria-label": "Remove file", onclick: () => { file = null; chosen.hidden = true; drop.hidden = false; input.value = ""; armed(false); input.focus({ preventScroll: true }); } }, I("x")));
+    chosen.hidden = false; drop.hidden = true; armed(true);
+    if (go) go.focus({ preventScroll: true });
   };
   input.addEventListener("change", () => pick(input.files && input.files[0]));
   ["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
@@ -1218,9 +1279,11 @@ function openUpload() {
         h("li", null, "Name it “Topic – Your name – Year”.")),
       drop, chosen, prog, status
     ],
-    actions: [{ label: "Cancel", kind: "ghost" }, { label: "Upload", kind: "primary", keepOpen: true, onClick: (mm, ev) => start(ev.currentTarget) }]
+    actions: [{ label: "Cancel", kind: "ghost" }, { label: "Upload", kind: "primary", keepOpen: true, onClick: (mm, ev) => start(ev.currentTarget) }],
+    initialFocus: "#libUpFile"
   });
   m.card.setAttribute("data-lib-upload-dialog", "");
+  go = m.card.querySelector(".fs-modal-acts .primary"); armed(false);
   async function start(b) {
     if (busy) return;
     if (!file) { status.textContent = "Choose a file first."; status.className = "lib-up-status bad"; return; }
@@ -1282,9 +1345,6 @@ async function boot() {
   buildFolders();
   // sign-in switched off: folders shared "anyone with the link" can still be browsed with the public API key
   if (!signinOn() && (S.demo || F.cfg.driveApiKey)) { S.keyMode = true; S.opened = true; }
-  // the header copy promises sign-in; say only what is true for this site's switches
-  const lede = head && head.querySelector(".lede");
-  if (lede && (!signinOn() || !F.feature("library"))) lede.textContent = "Notes, templates and past work from Finspire members, read and downloaded inside the site.";
   root.removeAttribute("aria-busy");
   route();
   F.on("auth", u => {

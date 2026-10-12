@@ -8,13 +8,15 @@
 <meta name="color-scheme" content="dark">
 <title>Dictionary · Finspire</title>
 <meta name="description" content="Finance terms explained in plain language, with examples, related ideas and the headlines they appear in.">
-<link rel="icon" type="image/png" href="../assets/img/logo-light.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-sans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-mono-400-latin.woff2">
 <link rel="stylesheet" href="../assets/css/pages.css">
 <link rel="stylesheet" href="../assets/css/shell.css">
 <link rel="stylesheet" href="../assets/css/dictionary.css">
+<script src="../config.js"></script>
+<script>(function(c){if(c&&c.googleClientId&&!(c.features&&c.features.signin===false))document.documentElement.classList.add("fs-signin")})(window.FINSPIRE_CONFIG)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -57,8 +59,8 @@
   <div class="wrap dc-top">
     <header class="pg-head dc-head">
       <p class="eyebrow">Dictionary</p>
-      <h1 class="h1">Finance, in plain words.</h1>
-      <p class="lede" id="dcLede">Short meanings, everyday analogies and worked examples for the terms you meet in class and in the news.</p>
+      <h1 class="h1">Finance, in <em class="ital">plain</em> words.</h1>
+      <p class="lede" id="dcLede">Plain meanings for the finance terms you meet in class and in the news, with everyday analogies, worked examples and the headlines they appear in.</p>
       <div class="dc-search" role="search">
         <label class="sr-only" for="dcQ">Search the dictionary</label>
         <svg class="dc-search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
@@ -71,14 +73,19 @@
     </header>
     <aside class="dc-tod" id="dcTod" aria-labelledby="dcTodLbl">
       <p class="dc-tod-top"><span class="eyebrow" id="dcTodLbl">Term of the day</span><span class="dc-tod-date" id="dcTodDate"></span></p>
-      <div class="dc-tod-body" id="dcTodBody">
-        <span class="skel skel-line w60"></span><span class="skel skel-line w80"></span><span class="skel skel-line w40"></span>
+      <div class="dc-tod-body" id="dcTodBody" aria-busy="true">
+        <span class="skel skel-line dc-skel-term"></span><span class="skel skel-line w40"></span>
+        <span class="dc-skel-def"><span class="skel skel-line w80"></span><span class="skel skel-line w80"></span><span class="skel skel-line w60"></span></span>
+        <span class="skel dc-skel-btn"></span>
       </div>
     </aside>
   </div>
 
   <div class="wrap dc-me-slot" id="dcMeSlot">
-    <div class="dc-me" id="me" role="region" aria-labelledby="dcMeTitle" tabindex="-1"></div>
+    <div class="dc-me" id="me" role="region" aria-labelledby="dcMeTitle" tabindex="-1" aria-busy="true">
+      <div class="dc-me-head"><h2 class="dc-h2" id="dcMeTitle">Your dictionary</h2></div>
+      <div class="dc-me-grid" aria-hidden="true"><div class="dc-card dc-card-skel"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></div><div class="dc-card dc-card-skel"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></div><div class="dc-card dc-card-skel"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></div></div>
+    </div>
   </div>
 
   <section class="wrap dc-topics" aria-labelledby="dcTopicsTitle">
@@ -86,23 +93,23 @@
       <h2 class="dc-h2" id="dcTopicsTitle">Browse by topic</h2>
       <div class="dc-sec-head-r">
         <p class="dc-legend" aria-hidden="true"><span><i class="b"></i>Beginner</span><span><i class="i"></i>Intermediate</span><span><i class="a"></i>Advanced</span></p>
-        <button class="dc-more-btn" id="dcCatsMore" type="button" aria-expanded="false" aria-controls="dcCats" hidden></button>
+        <button class="dc-more-btn" id="dcCatsMore" type="button" aria-expanded="false" aria-controls="dcCats" disabled>Show all topics</button>
       </div>
     </div>
-    <div class="dc-cats" id="dcCats" aria-label="Topics"></div>
+    <div class="dc-cats fs-xrow" id="dcCats" aria-label="Topics" aria-busy="true"><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div><div class="dc-cat dc-cat-skel" aria-hidden="true"><span class="skel skel-line w60"></span><span class="skel skel-line w40"></span></div></div>
   </section>
 
   <section class="wrap dc-work" id="dcWork" aria-labelledby="dcListTitle">
     <div class="dc-col">
-      <div class="dc-tools">
+      <div class="dc-tools" id="dcTools">
         <div class="dc-tools-row">
-          <h2 class="dc-h2" id="dcListTitle">All terms</h2>
-          <div class="dc-levels" id="dcLevels" role="group" aria-label="Level"></div>
+          <h2 class="dc-h2" id="dcListTitle" tabindex="-1">All terms</h2>
+          <div class="dc-levels" id="dcLevels" role="group" aria-label="Level"><button class="dc-seg" type="button" aria-pressed="true" data-level="">All levels</button><button class="dc-seg b" type="button" aria-pressed="false" data-level="b">Beginner</button><button class="dc-seg i" type="button" aria-pressed="false" data-level="i">Intermediate</button><button class="dc-seg a" type="button" aria-pressed="false" data-level="a">Advanced</button></div>
         </div>
-        <nav class="dc-az" id="dcAz" aria-label="Jump to letter"></nav>
-        <p class="dc-count" id="dcCount" aria-live="polite" aria-atomic="true"></p>
+        <nav class="dc-az fs-xrow" id="dcAz" aria-label="Jump to letter"><button class="dc-l dc-l-all" type="button" aria-pressed="true" aria-label="All letters" data-l="">All</button><button class="dc-l" type="button" aria-pressed="false" data-l="A">A</button><button class="dc-l" type="button" aria-pressed="false" data-l="B">B</button><button class="dc-l" type="button" aria-pressed="false" data-l="C">C</button><button class="dc-l" type="button" aria-pressed="false" data-l="D">D</button><button class="dc-l" type="button" aria-pressed="false" data-l="E">E</button><button class="dc-l" type="button" aria-pressed="false" data-l="F">F</button><button class="dc-l" type="button" aria-pressed="false" data-l="G">G</button><button class="dc-l" type="button" aria-pressed="false" data-l="H">H</button><button class="dc-l" type="button" aria-pressed="false" data-l="I">I</button><button class="dc-l" type="button" aria-pressed="false" data-l="J">J</button><button class="dc-l" type="button" aria-pressed="false" data-l="K">K</button><button class="dc-l" type="button" aria-pressed="false" data-l="L">L</button><button class="dc-l" type="button" aria-pressed="false" data-l="M">M</button><button class="dc-l" type="button" aria-pressed="false" data-l="N">N</button><button class="dc-l" type="button" aria-pressed="false" data-l="O">O</button><button class="dc-l" type="button" aria-pressed="false" data-l="P">P</button><button class="dc-l" type="button" aria-pressed="false" data-l="Q">Q</button><button class="dc-l" type="button" aria-pressed="false" data-l="R">R</button><button class="dc-l" type="button" aria-pressed="false" data-l="S">S</button><button class="dc-l" type="button" aria-pressed="false" data-l="T">T</button><button class="dc-l" type="button" aria-pressed="false" data-l="U">U</button><button class="dc-l" type="button" aria-pressed="false" data-l="V">V</button><button class="dc-l" type="button" aria-pressed="false" data-l="W">W</button><button class="dc-l" type="button" aria-pressed="false" data-l="X">X</button><button class="dc-l" type="button" aria-pressed="false" data-l="Y">Y</button><button class="dc-l" type="button" aria-pressed="false" data-l="Z">Z</button><button class="dc-l" type="button" aria-pressed="false" aria-label="Numbers" data-l="#" disabled>0–9</button></nav>
       </div>
-      <ul class="dc-list" id="dcList" role="listbox" aria-label="Terms" tabindex="0"></ul>
+      <p class="dc-count" id="dcCount" aria-live="polite" aria-atomic="true">Loading the dictionary…</p>
+      <ul class="dc-list" id="dcList" role="listbox" aria-label="Terms" tabindex="0" aria-busy="true"><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li><li class="dc-row dc-skel" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span></li></ul>
       <div class="dc-empty" id="dcEmpty" hidden></div>
       <div class="dc-sentinel" id="dcSentinel" aria-hidden="true"></div>
     </div>
@@ -141,7 +148,6 @@
   </div>
 </footer>
 
-<script src="../config.js"></script>
 <script src="../assets/js/finspire.js"></script>
 <script src="../assets/js/dictionary.js"></script>
 </body>

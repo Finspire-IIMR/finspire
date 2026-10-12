@@ -123,9 +123,12 @@ function emit(evt, data) {
 }
 
 /* ---------- fetch ---------- */
+/* bust: true = a new URL every 5 minutes (the data pipeline runs every 15), so moving between pages inside that window
+   hits the HTTP cache or gets a cheap 304; a number = that period in ms (markets.js passes 60000 for the 2.6 KB snapshot). */
 function fetchJSON(p, opts = {}) {
   let u = url(p);
-  if (opts.bust) u += (u.includes("?") ? "&" : "?") + "t=" + Math.floor(Date.now() / 60000);
+  const period = typeof opts.bust === "number" && opts.bust > 0 ? opts.bust : 300000;
+  if (opts.bust) u += (u.includes("?") ? "&" : "?") + "t=" + Math.floor(Date.now() / period);
   return fetch(u, { cache: opts.bust ? "no-cache" : "default", credentials: "same-origin" }).then(r => {
     if (!r.ok) throw new Error("HTTP " + r.status + " for " + p);
     return r.json();
@@ -406,9 +409,10 @@ async function signIn() {
   }
   if (!cfg.googleClientId) { signInDialog(); throw new Error("not-configured"); }
   if (!tokenClient) {
-    loadGis();
-    toast("Google sign-in is still loading. Try again in a moment.");
-    throw new Error("gis-loading");
+    // first click as a guest: the script is not loaded yet; wait for it (still inside the user activation on fast
+    // connections; otherwise say so instead of silently doing nothing)
+    try { await Promise.race([loadGis(), new Promise((_, rej) => setTimeout(() => rej(new Error("gis-loading")), 2500))]); }
+    catch (e) { toast(e.message === "gis-loading" ? "Google sign-in is still loading. Try again in a moment." : "Couldn't load Google sign-in. Check your connection and try again.", { kind: "error" }); throw e; }
   }
   const tok = await requestToken(BASE, "select_account");
   let p;
@@ -460,7 +464,7 @@ function getToken(scopes) {
   if (demo) return Promise.resolve("demo-token");
   const t = liveToken(sc);
   if (t) return Promise.resolve(t.token);
-  if (!tokenClient) { loadGis(); return Promise.reject(new Error("gis-loading")); }
+  if (!tokenClient) return loadGis().then(() => requestToken(sc, "")).then(tok => tok.token);
   return requestToken(sc, "").then(tok => tok.token);
 }
 function hasToken(scopes) { if (!user) return false; if (demo) return true; return !!liveToken(normScopes(scopes)); }
@@ -637,8 +641,8 @@ const ready = (async () => {
   }
   if (cfg.googleClientId && cfg.features.signin !== false) {
     const saved = parse(sget(LS, AUTH_KEY), null);
-    if (validUser(saved)) setUser(saved); else if (saved) sdel(LS, AUTH_KEY);
-    loadGis();
+    if (validUser(saved)) { setUser(saved); loadGis(); }   // Google's 100 KB script only for someone who is signed in;
+    else if (saved) sdel(LS, AUTH_KEY);                      // guests load it on the Sign in click (signIn/getToken)
   }
   return user;
 })();
@@ -653,7 +657,7 @@ const auth = {
 
 /* ================================================================ Glossary ========================================== */
 const LEVELS = { b: "Beginner", i: "Intermediate", a: "Advanced" };
-const G = { p: null, idx: null, rows: [], byId: new Map(), S: [], ent: {}, trieH: null, trieA: null, deferred: [] };
+const G = { p: null, idx: null, rows: [], byId: new Map(), S: [], ent: {}, hl: {}, shards: {}, trieH: null, trieA: null, compiled: false, finish: null, deferred: [] };
 const norm = s => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/&/g, " and ").replace(/[^a-z0-9]+/g, " ").trim();
 /* Phrase matching: a character trie per kind (hl lower-cased, abbr case-sensitive), walked only from word starts.
    Same rules as a word-bounded, longest-first alternation regex, but linear in the text length however large the
@@ -684,9 +688,16 @@ function scanTrie(T, trie, out) {
     if (end > i) { out.push({ id, start: i, end }); i = end - 1; }
   }
 }
+/* Built glossary v2 (scripts/build_glossary.py): index.json has the rows (no highlight phrases; `hl` in a row is empty
+   unless an older v1 index is served), phrases.json has {hl: {id: [phrase…]}}. Both are fetched together; search, get()
+   and cats() work as soon as the index is parsed, loaded() and the "glossary" event wait for the phrase tries, which
+   are built in idle slices of ≤ 8 ms so nothing blocks the main thread; a match()/annotate() call mid-build finishes the
+   build on the spot. Neither file is cache-busted (they change only on deploy). */
+const idle = fn => (W.requestIdleCallback ? W.requestIdleCallback(fn, { timeout: 400 }) : setTimeout(() => fn({ timeRemaining: () => 8 }), 0));
 function load() {
   if (G.p) return G.p;
-  G.p = fetchJSON("data/glossary/index.json").then(ix => {
+  G.loading = true;
+  const ixP = fetchJSON("data/glossary/index.json").then(ix => {
     const rows = [], byId = new Map(), S = [];
     for (const t of (ix && ix.t) || []) {
       if (!Array.isArray(t) || !t[0]) continue;
@@ -695,24 +706,46 @@ function load() {
       const tn = norm(r.term), al = [...new Set(r.aliases.concat(r.abbr).map(norm).filter(Boolean))];
       S.push({ r, t: tn, tw: tn.split(" "), al, alw: al.map(a => a.split(" ")) });
     }
-    Object.assign(G, { idx: ix, rows, byId, S });
-    compile();
+    Object.assign(G, { idx: ix, rows, byId, S, shards: (ix && ix.shards) || {} });
+    return ix;
+  });
+  const phP = fetchJSON("data/glossary/phrases.json").then(j => (j && j.hl) || {}, () => null);   // v1 index: phrases are in the rows
+  G.p = Promise.all([ixP, phP]).then(([ix, hl]) => {
+    G.hl = hl || {};
+    return new Promise(res => compileSlices(res));
+  }).then(() => {
+    const ix = G.idx;
     emit("glossary", ix);
     const d = G.deferred.splice(0); d.forEach(([el, o]) => { if (el.isConnected) annotate(el, o); });
     return ix;
-  }, err => { G.p = null; throw err; });
+  }, err => { G.p = null; G.loading = false; throw err; });
   return G.p;
 }
-function compile() {
-  const hl = new Map(), ab = new Map();
-  for (const r of G.rows) {
-    for (const p of r.hl || []) { const k = String(p).toLowerCase().trim(); if (k && !hl.has(k)) hl.set(k, r.id); }
-    for (const a of r.abbr || []) { const k = String(a).trim(); if (k && !ab.has(k)) ab.set(k, r.id); }
-  }
-  G.trieH = buildTrie(hl); G.trieA = buildTrie(ab);
+const phrasesOf = r => (r.hl && r.hl.length) ? r.hl : (G.hl[r.id] || []);
+function compileSlices(done) {
+  const trieH = new Map(), trieA = new Map(), seenH = new Set(), seenA = new Set();
+  const rows = G.rows; let i = 0;
+  const insert = (root, k, id) => { let n = root; for (let c = 0; c < k.length; c++) { let nx = n.get(k[c]); if (!nx) { nx = new Map(); n.set(k[c], nx); } n = nx; } if (!n.has("\0")) n.set("\0", id); };
+  const step = (budget) => {
+    const t0 = performance.now();
+    while (i < rows.length) {
+      const r = rows[i++];
+      for (const p of phrasesOf(r)) { const k = String(p).toLowerCase().trim(); if (k && !seenH.has(k)) { seenH.add(k); insert(trieH, k, r.id); } }
+      for (const a of r.abbr || []) { const k = String(a).trim(); if (k && !seenA.has(k)) { seenA.add(k); insert(trieA, k, r.id); } }
+      if (budget && (i & 31) === 0 && performance.now() - t0 > budget) return false;
+    }
+    G.trieH = trieH; G.trieA = trieA; G.compiled = true; G.finish = null;
+    return true;
+  };
+  G.compiled = false;
+  G.finish = () => { if (!G.compiled) step(0); };          // match()/annotate() called mid-build: finish now
+  const tick = () => { if (G.compiled || step(8)) { done(); return; } idle(tick); };
+  idle(tick);
 }
+function compile() { compileSlices(() => {}); G.finish && G.finish(); }   // synchronous fallback (tests, old callers)
 function rawMatches(text) {
   const out = [];
+  if (G.finish) G.finish();
   scanTrie(lowerSame(text), G.trieH, out);
   scanTrie(text, G.trieA, out);
   return out.sort((a, b) => a.start - b.start || (b.end - b.start) - (a.end - a.start));
@@ -733,6 +766,7 @@ function pick(cands, seen, once) {
 }
 function match(text) {
   if (!G.idx || !text) return [];
+  if (!G.compiled && !G.finish) return [];   // index in, phrases still on the wire
   // first occurrence of each term: choose by position, longest among overlaps
   const c = rawMatches(String(text)), seen = new Set(), res = [];
   let lastEnd = -1;
@@ -749,7 +783,8 @@ function match(text) {
 const SKIP = "input,textarea,select,option,code,pre,kbd,samp,script,style,noscript,button,svg,math,iframe,.gl-term,[data-term],[data-no-gloss],[contenteditable=''],[contenteditable='true'],.fs-menu,.gl-tip";
 function annotate(el, o = {}) {
   if (!el) return [];
-  if (!G.idx) { G.deferred.push([el, o]); load().catch(() => {}); return []; }
+  if (!G.idx || (!G.compiled && !G.finish)) { G.deferred.push([el, o]); load().catch(() => {}); return []; }
+  if (G.finish) G.finish();
   const max = o.max == null ? Infinity : o.max, once = o.once !== false;
   if (el.closest && el.closest(SKIP) && el.closest(SKIP) !== el) return [];
   const walker = D.createTreeWalker(el, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT, {
@@ -767,7 +802,7 @@ function annotate(el, o = {}) {
     for (const m of ms) {
       if (ids.length >= max) break;
       if (m.start > pos) frag.appendChild(D.createTextNode(text.slice(pos, m.start)));
-      frag.appendChild(h("span", { class: "gl-term", "data-term": m.id, tabindex: "0" }, text.slice(m.start, m.end)));
+      frag.appendChild(h("span", { class: "gl-term", "data-term": m.id, tabindex: "0", role: "button", "aria-haspopup": "dialog", "aria-expanded": "false" }, text.slice(m.start, m.end)));
       pos = m.end; seen.add(m.id); if (!ids.includes(m.id)) ids.push(m.id);
     }
     if (pos === 0) continue;
@@ -837,7 +872,11 @@ function entry(id) {
   return load().then(() => {
     const r = G.byId.get(id);
     if (!r) throw new Error("unknown term " + id);
-    const p = G.ent[r.cat] || (G.ent[r.cat] = fetchJSON("data/glossary/entries/" + encodeURIComponent(r.cat) + ".json").catch(e => { delete G.ent[r.cat]; throw e; }));
+    // entries/<cat>.json, or the shard (<cat>-2.json …) whose sorted-id range holds this id (index.json "shards")
+    const starts = G.shards[r.cat] || []; let n = 1;
+    for (const s of starts) { if (id >= s) n++; else break; }
+    const file = r.cat + (n > 1 ? "-" + n : "");
+    const p = G.ent[file] || (G.ent[file] = fetchJSON("data/glossary/entries/" + encodeURIComponent(file) + ".json").catch(e => { delete G.ent[file]; throw e; }));
     return p.then(map => {
       const e = (map && map[id]) || {};
       const cats = (G.idx && G.idx.cats) || {};
@@ -859,12 +898,27 @@ function termOfDay(date) {
   for (const ch of "finspire:" + key) { hsh ^= ch.charCodeAt(0); hsh = Math.imul(hsh, 16777619) >>> 0; }
   return list[hsh % list.length];
 }
+/* Term of the day without the index: scripts/build_glossary.py writes data/glossary/tod.json ({days: {"YYYY-MM-DD": row}}
+   for yesterday, today and tomorrow IST, same pick as termOfDay). ~1 KB, so a card can paint before the 300 KB index. */
+let todP = null;
+function today() {
+  if (!todP) todP = fetchJSON("data/glossary/tod.json", { bust: 3600000 }).then(j => {
+    let key;
+    try { key = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date()); }
+    catch (e) { key = new Date(Date.now() + 19800000).toISOString().slice(0, 10); }
+    const r = j && j.days && j.days[key];
+    if (!r || !r.id) throw new Error("tod-miss");
+    return r;
+  }).catch(() => load().then(() => { const r = termOfDay(); if (!r) throw new Error("no-terms");
+    const cats = glossary.cats(); return Object.assign({ catName: (cats[r.cat] && cats[r.cat].name) || r.cat, kid: "" }, r); }));
+  return todP;
+}
 const glossary = {
-  LEVELS, load, search, entry, match, annotate, termOfDay,
+  LEVELS, load, search, entry, match, annotate, termOfDay, today,
   get: id => G.byId.get(id) || null,
   cats: () => (G.idx && G.idx.cats) || {},
   rows: () => G.rows,
-  loaded: () => !!G.idx
+  loaded: () => !!G.idx && (G.compiled || !!G.finish)   // index in and phrases ready to match (or finishable on demand)
 };
 
 /* ================================================================ Tooltip =========================================== */
@@ -896,6 +950,15 @@ function initTip() {
         h("div", { class: "gl-tip-foot" }, parts.open, parts.save),
         parts.arrow));
     scrim = h("div", { class: "gl-scrim", hidden: true, onclick: () => hide(true) });
+    // phone sheet: the grab handle drags; a pull of more than 60px closes it (no translate under reduced motion)
+    const inner = el.firstChild; let dy0 = null, dy = 0;
+    inner.addEventListener("touchstart", e => { if (mode !== "sheet" || e.touches.length !== 1) return; dy0 = e.touches[0].clientY; dy = 0; inner.style.transition = "none"; }, { passive: true });
+    inner.addEventListener("touchmove", e => { if (dy0 == null) return; dy = Math.max(0, e.touches[0].clientY - dy0);
+      if (!reduce.matches) inner.style.transform = dy ? "translateY(" + Math.round(dy) + "px)" : ""; }, { passive: true });
+    const endDrag = () => { if (dy0 == null) return; const d = dy; dy0 = null; dy = 0;
+      inner.style.transition = ""; inner.style.transform = "";
+      if (d > 60) hide(true); };
+    inner.addEventListener("touchend", endDrag); inner.addEventListener("touchcancel", endDrag);
     el.addEventListener("pointerenter", e => { if (e.pointerType !== "touch") clearTimeout(leaveT); });
     el.addEventListener("pointerleave", e => { if (e.pointerType !== "touch" && mode === "hover") scheduleHide(); });
     el.addEventListener("keydown", e => { if (e.key === "Escape") { e.stopPropagation(); hide(true); } });
@@ -972,7 +1035,7 @@ function initTip() {
     if (!id) return;
     clearTimeout(hoverT); clearTimeout(leaveT);
     const sheet = o.mode === "sheet" || !t;
-    if (cur && cur !== t) { cur.classList.remove("gl-on"); cur.removeAttribute("aria-describedby"); }
+    if (cur && cur !== t) { cur.classList.remove("gl-on"); cur.removeAttribute("aria-describedby"); cur.setAttribute("aria-expanded", "false"); }
     const changed = id !== curId || !open;
     cur = t; curId = id; mode = sheet ? "sheet" : (o.mode || "hover");
     fill(id);
@@ -982,7 +1045,7 @@ function initTip() {
     el.setAttribute("aria-modal", sheet ? "true" : "false");
     if (sheet) { el.style.left = ""; el.style.top = ""; el.removeAttribute("data-side"); scrim.hidden = false; requestAnimationFrame(() => scrim.classList.add("gl-show")); }
     else { scrim.classList.remove("gl-show"); scrim.hidden = true; place(t, o.x, o.y); }
-    if (t) { t.classList.add("gl-on"); t.setAttribute("aria-describedby", "gl-tip-def"); }
+    if (t) { t.classList.add("gl-on"); t.setAttribute("aria-describedby", "gl-tip-def"); termA11y(t); t.setAttribute("aria-expanded", "true"); }
     if (!open) { el.classList.remove("gl-show"); void el.offsetWidth; }
     el.classList.add("gl-show");
     open = true; openedAt = Date.now();
@@ -999,7 +1062,7 @@ function initTip() {
     el.classList.remove("gl-show");
     if (scrim) { scrim.classList.remove("gl-show"); setTimeout(() => { if (!open) scrim.hidden = true; }, reduce.matches ? 0 : 220); }
     const t = cur;
-    if (t) { t.classList.remove("gl-on"); t.removeAttribute("aria-describedby"); }
+    if (t) { t.classList.remove("gl-on"); t.removeAttribute("aria-describedby"); t.setAttribute("aria-expanded", "false"); }
     if (restore && t && t.isConnected && (el.contains(D.activeElement) || D.activeElement === D.body)) { quietFocus = t; try { t.focus({ preventScroll: true }); } catch (e) {} quietFocus = null; }
     else if (el.contains(D.activeElement)) D.activeElement.blur();
     cur = null; curId = null; mode = null;
@@ -1007,6 +1070,18 @@ function initTip() {
   function scheduleHide() { clearTimeout(leaveT); leaveT = setTimeout(() => hide(false), 180); }
   const termOf = n => (n && n.nodeType === 1 && n.closest) ? n.closest("[data-term]") : null;
   const inTip = n => !!(el && n && el.contains(n));
+  /* every [data-term] is a button that opens a dialog (screen readers otherwise hear plain text): set once per element
+     for what is on the page now and for whatever pages render later */
+  function termA11y(t) {
+    if (!t || t.tagName === "BUTTON" || t.tagName === "A" || t.hasAttribute("aria-haspopup")) return;
+    if (!t.hasAttribute("role")) t.setAttribute("role", "button");
+    t.setAttribute("aria-haspopup", "dialog");
+    if (!t.hasAttribute("aria-expanded")) t.setAttribute("aria-expanded", "false");
+    if (!t.hasAttribute("tabindex")) t.setAttribute("tabindex", "0");
+  }
+  const termA11yAll = rootEl => { if (rootEl.nodeType !== 1) return; if (rootEl.hasAttribute("data-term")) termA11y(rootEl); rootEl.querySelectorAll("[data-term]").forEach(termA11y); };
+  termA11yAll(D.body || D.documentElement);
+  if (W.MutationObserver) new MutationObserver(recs => { for (const r of recs) for (const n of r.addedNodes) termA11yAll(n); }).observe(D.documentElement, { childList: true, subtree: true });
 
   D.addEventListener("pointerdown", e => { lastPtr = e.pointerType || "mouse"; lastDown = Date.now(); downTerm = termOf(e.target); }, true);
   D.addEventListener("pointerover", e => {
@@ -1117,7 +1192,8 @@ function mountAccount(el) {
       h("div", { class: "fs-menu-who" }, avatar(user, true), h("div", { class: "fs-menu-who-txt" }, h("b", null, user.name || user.given), h("span", null, user.email))),
       items);
     const focusables = () => items.filter(i => i.getAttribute("role") === "menuitem");
-    const onDoc = e => { if (!el.contains(e.target)) closeMenu(); };
+    const onDoc = e => { if (!e.target.closest || !e.target.closest(".fs-acct")) closeMenu(); };
+    const onScroll = () => closeMenu();
     const onEsc = e => { if (e.key === "Escape") { e.preventDefault(); const back = menu.contains(D.activeElement) || D.activeElement === btn; closeMenu(); if (back) btn.focus(); } };
     const onKey = e => {
       const f = focusables(), i = f.indexOf(D.activeElement);
@@ -1133,14 +1209,22 @@ function mountAccount(el) {
         const r = btn.getBoundingClientRect();
         Object.assign(menu.style, { position: "fixed", left: "16px", right: "16px", width: "auto", top: Math.round(r.bottom + 10) + "px" });
       } else menu.style.cssText = "";
-      D.addEventListener("pointerdown", onDoc, true); D.addEventListener("keydown", onEsc); menu.addEventListener("keydown", onKey);
+      // outside tap on any input (pointerdown and, for browsers that only send touch events first, touchstart), scroll
+      // and Escape all close it; listeners are attached only while it is open
+      D.addEventListener("pointerdown", onDoc, true); D.addEventListener("touchstart", onDoc, { capture: true, passive: true });
+      W.addEventListener("scroll", onScroll, { passive: true, capture: true });
+      D.addEventListener("keydown", onEsc); menu.addEventListener("keydown", onKey);
+      if (tipApi) tipApi.hide();
       if (focusFirst) focusables()[0].focus();
     };
     closeMenu = () => {
       if (menu.hidden) return;
       menu.hidden = true; btn.setAttribute("aria-expanded", "false");
-      D.removeEventListener("pointerdown", onDoc, true); D.removeEventListener("keydown", onEsc); menu.removeEventListener("keydown", onKey);
+      D.removeEventListener("pointerdown", onDoc, true); D.removeEventListener("touchstart", onDoc, { capture: true });
+      W.removeEventListener("scroll", onScroll, { capture: true });
+      D.removeEventListener("keydown", onEsc); menu.removeEventListener("keydown", onKey);
     };
+    el._fsClose = () => closeMenu();
     btn.addEventListener("click", () => { if (menu.hidden) openMenu(false); else closeMenu(); });
     btn.addEventListener("keydown", e => { if ((e.key === "ArrowDown" || e.key === "Enter" || e.key === " ") && menu.hidden) { e.preventDefault(); openMenu(true); } });
     menu.addEventListener("click", e => { if (e.target.closest("a")) closeMenu(); });
@@ -1155,7 +1239,7 @@ function signInDialog(reason) {
     return modal({
       title: "Sign-in isn't switched on yet",
       head: h("div", { class: "fs-si-mark" }, h("img", { src: url("assets/img/logo-light.png"), alt: "" })),
-      body: [h("p", null, "A Finspire admin needs to connect Google sign-in (see SETUP.md)."),
+      body: [h("p", null, "Google sign-in for IIM Ranchi accounts is not switched on yet."),
              h("p", { class: "fs-si-note" }, "Markets, News and the Dictionary work without signing in.")],
       actions: [{ label: "OK", kind: "primary" }],
       className: "fs-si"
@@ -1179,7 +1263,7 @@ function signInDialog(reason) {
   gbtn.addEventListener("click", () => { m.close("signin"); signIn().catch(() => {}); });
   return m;
 }
-const ui = { toast, modal, mountAccount, signInDialog };
+const ui = { toast, modal, mountAccount, signInDialog, lockScroll };   // lockScroll(on): nested page-scroll lock with scrollbar compensation
 
 /* ================================================================ Sub-page header =================================== */
 let hdrState = null;
@@ -1198,20 +1282,26 @@ function headerInit() {
   if (burger && menu) {
     if (!menu.id) menu.id = nextId("fs-mm");
     burger.setAttribute("aria-controls", menu.id);
+    let isOpen = false;
     const set = openIt => {
+      openIt = !!openIt;
       menu.hidden = !openIt;
       burger.setAttribute("aria-expanded", String(openIt));
       burger.setAttribute("aria-label", openIt ? "Close menu" : "Open menu");
       hdr.classList.toggle("menu-open", openIt);
+      if (openIt !== isOpen) { isOpen = openIt; lockScroll(openIt); }   // the page must not scroll under the open menu
+      if (openIt) { hdr.querySelectorAll(".fs-acct").forEach(a => { if (a._fsClose) a._fsClose(); }); if (tipApi) tipApi.hide(); }
     };
     set(false);
     burger.addEventListener("click", () => set(menu.hidden));
     menu.addEventListener("click", e => { if (e.target.closest("a")) set(false); });
     D.addEventListener("keydown", e => { if (e.key === "Escape" && !menu.hidden) { set(false); burger.focus(); } });
     D.addEventListener("pointerdown", e => { if (!menu.hidden && !hdr.contains(e.target)) set(false); }, true);
+    D.addEventListener("visibilitychange", () => { if (D.hidden && !menu.hidden) set(false); });
     const mq = W.matchMedia("(min-width: 961px)");
     const onMq = () => { if (mq.matches) set(false); };
     if (mq.addEventListener) mq.addEventListener("change", onMq); else if (mq.addListener) mq.addListener(onMq);
+    W.addEventListener("resize", () => { if (mq.matches && !menu.hidden) set(false); }, { passive: true });
   }
   // aria-current from the page path
   const normPath = p => decodeURI(p).replace(/\/index\.html?$/, "/");

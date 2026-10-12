@@ -8,13 +8,19 @@
 <meta name="color-scheme" content="dark">
 <title>Library · Finspire</title>
 <meta name="description" content="The Finspire Library: notes, templates and past work from club members, opened inside the site with an IIM Ranchi account.">
-<link rel="icon" type="image/png" href="../assets/img/logo-light.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-sans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-mono-400-latin.woff2">
 <link rel="stylesheet" href="../assets/css/pages.css">
 <link rel="stylesheet" href="../assets/css/shell.css">
 <link rel="stylesheet" href="../assets/css/library.css">
+<!-- PDF.js is fetched from cdnjs the first time a PDF opens; warm the connection and the module so the viewer starts quickly -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="modulepreload" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs" crossorigin>
+<link rel="prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs" as="script" crossorigin>
+<script src="../config.js"></script>
+<script>(function(c){if(c&&c.googleClientId&&!(c.features&&c.features.signin===false))document.documentElement.classList.add("fs-signin")})(window.FINSPIRE_CONFIG)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -57,13 +63,13 @@
   <div class="wrap">
     <header class="pg-head lib-head">
       <p class="eyebrow">Library</p>
-      <h1 class="h1">The club's shelf. <span class="dim">Open it here.</span></h1>
-      <p class="lede">Notes, templates and past work from Finspire members. Read and download them inside the site with your IIM Ranchi account.</p>
+      <h1 class="h1">The club's <em class="ital">shelf</em>. <span class="dim">Open it here.</span></h1>
+      <p class="lede">Notes, templates and past work from Finspire members. Open them here with your IIM Ranchi account.</p>
     </header>
     <div id="lib" class="lib" data-screen="loading">
       <div class="lib-intro lib-intro-skel" aria-hidden="true">
-        <div class="lib-intro-copy"><span class="skel" style="width:130px;height:28px;border-radius:999px"></span><span class="skel skel-line w80" style="height:30px;margin-top:22px"></span><span class="skel skel-line w60" style="height:30px"></span><span class="skel skel-line w80" style="margin-top:18px"></span><span class="skel skel-line w60"></span></div>
-        <div class="lib-intro-side"><span class="skel skel-block"></span><span class="skel skel-block"></span></div>
+        <div class="lib-intro-copy"><span class="skel lib-skel-pill"></span><span class="skel skel-line w80 lib-skel-h"></span><span class="skel skel-line w60 lib-skel-h"></span><span class="skel skel-line w80 lib-skel-p"></span><span class="skel skel-line w80"></span><span class="skel skel-line w40"></span><span class="skel lib-skel-btn"></span><span class="skel skel-line w60 lib-skel-note"></span><span class="skel skel-line w40"></span></div>
+        <div class="lib-intro-side"><span class="lib-intro-side-h"><span class="skel lib-skel-cap"></span><span class="skel lib-skel-cap"></span></span><span class="lib-intro-list"><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span><span class="skel lib-skel-il"></span></span></div>
       </div>
     </div>
   </div>
@@ -91,7 +97,6 @@
   </div>
 </footer>
 
-<script src="../config.js"></script>
 <script src="../assets/js/finspire.js"></script>
 <script src="../assets/js/library.js"></script>
 </body>

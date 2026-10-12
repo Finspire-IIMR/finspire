@@ -16,10 +16,13 @@ const CAT_ORDER = ["accounting", "ratios", "corp-fin", "valuation", "modeling", 
   "bonds", "rates", "central-banks", "macro", "fiscal", "fx-trade", "derivatives", "options", "commodities", "banking", "credit",
   "ib-deals", "pe-vc", "funds", "portfolio", "quant", "behavioral", "personal", "tax", "fintech", "crypto", "esg", "real-estate",
   "history", "jargon", "governance", "strategy", "cfa"];
-const CHUNK = 60, CATS_COLLAPSED = 11, DAY = 864e5, BOX_DAYS = [1, 2, 4, 8, 16], QUIZ_N = 10;
+const CHUNK = 60, FIRST = 24, CATS_COLLAPSED = 11, DAY = 864e5, BOX_DAYS = [1, 2, 4, 8, 16], QUIZ_N = 10, DEBOUNCE = 80;
 const VIA = { search: "via search", browse: "via browse", tooltip: "via tooltip", news: "via news" };
 const mqDesk = W.matchMedia("(min-width: 961px)");
 const mqReduce = W.matchMedia("(prefers-reduced-motion: reduce)");
+const mqPhone = W.matchMedia("(max-width: 720px)");
+const idle = (fn, ms) => ("requestIdleCallback" in W ? W.requestIdleCallback(fn, { timeout: ms || 400 }) : setTimeout(fn, 1));
+const cancelIdle = id => ("cancelIdleCallback" in W ? W.cancelIdleCallback(id) : clearTimeout(id));
 const num = n => F.fmt.num(n, 0);
 const plural = (n, one, many) => num(n) + " " + (n === 1 ? one : (many || one + "s"));
 const scrollOpts = () => (mqReduce.matches ? "auto" : "smooth");
@@ -50,10 +53,10 @@ function obj(v) { return v && typeof v === "object" && !Array.isArray(v) ? v : {
 
 /* ---------- state + elements ---------- */
 const st = { q: "", cat: "", level: "", letter: "", rows: [], shown: 0, active: -1, open: null, ready: false, failed: false,
-  sorted: [], catsOpen: false, news: undefined, newsP: null, token: 0, returnTo: null, meRecentAll: false, meSavedAll: false };
+  sorted: [], catsOpen: false, news: null, newsAll: null, newsCat: {}, newsMiss: {}, token: 0, returnTo: null, meRecentAll: false, meSavedAll: false, pending: false, tod: null, fill: 0 };
 const el = {
   q: $("dcQ"), qx: D.querySelector(".dc-q-x"), lede: $("dcLede"), tod: $("dcTodBody"), todDate: $("dcTodDate"),
-  cats: $("dcCats"), catsMore: $("dcCatsMore"), levels: $("dcLevels"), az: $("dcAz"), count: $("dcCount"), title: $("dcListTitle"),
+  cats: $("dcCats"), catsMore: $("dcCatsMore"), levels: $("dcLevels"), az: $("dcAz"), count: $("dcCount"), title: $("dcListTitle"), tools: $("dcTools"),
   list: $("dcList"), empty: $("dcEmpty"), sentinel: $("dcSentinel"), side: $("dcSide"), entry: $("dcEntry"), desk: $("dcDesk"),
   me: $("me"), meSlot: $("dcMeSlot"), work: $("dcWork"), main: $("main")
 };
@@ -74,15 +77,15 @@ function optId(i) { return "dco-" + i; }
 function rowEl(r, i) {
   const searching = !!st.q.trim();
   return h("li", { class: "dc-row" + (r.id === st.open ? " dc-on" : "") + (i === st.active ? " dc-act" : ""), role: "option",
-      id: optId(i), "aria-selected": String(i === st.active), dataset: { i: String(i), id: r.id } },
+      id: optId(i), "aria-selected": String(i === st.active), "aria-setsize": String(st.rows.length), "aria-posinset": String(i + 1), dataset: { i: String(i), id: r.id } },
     h("span", { class: "dc-row-top" },
       h("span", { class: "dc-row-term" }, r.term),
       searching && !st.cat ? h("span", { class: "dc-row-cat" }, catName(r.cat)) : null,
       lvlPill(r.level)),
     r.short ? h("span", { class: "dc-row-short" }, r.short) : null);
 }
-function appendChunk(upTo) {
-  const end = Math.min(st.rows.length, Math.max(st.shown + CHUNK, upTo == null ? 0 : upTo + 1));
+function appendChunk(upTo, exact) {
+  const end = Math.min(st.rows.length, exact ? upTo + 1 : Math.max(st.shown + CHUNK, upTo == null ? 0 : upTo + 1));
   if (end <= st.shown) return;
   const frag = D.createDocumentFragment();
   const grouped = !st.q.trim() && !st.letter;
@@ -100,11 +103,18 @@ function renderList() {
   st.shown = 0;
   st.active = st.q.trim() && st.rows.length ? 0 : -1;
   clear(el.list);
+  if (st.fill) { cancelIdle(st.fill); st.fill = 0; }
   el.list.removeAttribute("aria-activedescendant");
   el.q.removeAttribute("aria-activedescendant");
-  if (st.ready) appendChunk();
-  if (st.active >= 0) { el.q.setAttribute("aria-activedescendant", optId(0)); el.list.setAttribute("aria-activedescendant", optId(0)); }
-  el.q.setAttribute("aria-expanded", String(!!st.q.trim() && st.rows.length > 0));
+  if (st.ready) {
+    // the first rows paint with this frame; the rest of the chunk follows in an idle slice so typing never waits
+    appendChunk(FIRST - 1, true);
+    if (st.shown < st.rows.length && st.shown < CHUNK) st.fill = idle(() => { st.fill = 0; appendChunk(CHUNK - 1, true); });
+    el.list.removeAttribute("aria-busy");
+  }
+  const expanded = !!st.q.trim() && st.rows.length > 0;
+  el.q.setAttribute("aria-expanded", String(expanded));
+  if (st.active >= 0) { if (expanded) el.q.setAttribute("aria-activedescendant", optId(0)); el.list.setAttribute("aria-activedescendant", optId(0)); }
   el.list.hidden = !st.rows.length;
   renderCount();
   renderEmpty();
@@ -115,7 +125,7 @@ function renderCount() {
   if (!st.ready) { el.count.textContent = st.failed ? "" : "Loading the dictionary…"; return; }
   const n = st.rows.length, q = st.q.trim(), lv = st.level ? " · " + LEVELS[st.level] : "";
   el.title.textContent = q ? "Search results" : (st.cat ? catName(st.cat) : "All terms");
-  if (q) el.count.textContent = (n ? plural(n, "result") : "No results") + " for “" + q + "”" + (st.cat ? " in " + catName(st.cat) : "") + lv;
+  if (q) el.count.textContent = n ? plural(n, "result") + " for “" + q + "”" + (st.cat ? " in " + catName(st.cat) : "") + lv : "";
   else el.count.textContent = plural(n, "term") + (st.letter ? " starting with " + (st.letter === "#" ? "a number" : st.letter) : "") + lv;
 }
 function closeMatches(q) {
@@ -132,7 +142,7 @@ function renderEmpty() {
   if (!st.ready) {
     el.empty.hidden = !st.failed;
     if (st.failed) el.empty.append(h("b", null, "The dictionary is not available right now."),
-      h("p", null, "Check your connection and try again."), h("button", { class: "btn btn-ghost sm", type: "button", onclick: boot }, "Try again"));
+      h("p", null, "Check your connection and try again."), h("button", { class: "btn btn-ghost sm", type: "button", onclick: retry }, "Try again"));
     return;
   }
   el.empty.hidden = st.rows.length > 0;
@@ -167,7 +177,8 @@ function setActive(i, scroll) {
   const o = $(optId(i));
   if (!o) return;
   o.classList.add("dc-act"); o.setAttribute("aria-selected", "true");
-  el.q.setAttribute("aria-activedescendant", o.id); el.list.setAttribute("aria-activedescendant", o.id);
+  if (el.q.getAttribute("aria-expanded") === "true") el.q.setAttribute("aria-activedescendant", o.id); else el.q.removeAttribute("aria-activedescendant");
+  el.list.setAttribute("aria-activedescendant", o.id);
   if (scroll !== false) {
     const hdr = D.querySelector(".hdr"), r = o.getBoundingClientRect();
     const top = (hdr ? hdr.getBoundingClientRect().bottom : 72) + 8;
@@ -209,7 +220,7 @@ function renderCats() {
   el.cats.append(card("", "All topics", st.sorted.length, all, 0));
   ids.forEach((id, i) => el.cats.append(card(id, catName(id), G.cats()[id].n, mix[id] || { b: 0, i: 0, a: 0 }, i + 1)));
   const extra = ids.length + 1 - (CATS_COLLAPSED + 1);
-  el.catsMore.hidden = extra <= 0;
+  el.catsMore.hidden = extra <= 0; el.catsMore.disabled = false;
   el.cats.classList.toggle("dc-open", st.catsOpen);
   el.catsMore.textContent = st.catsOpen ? "Show fewer topics" : "Show all " + ids.length + " topics";
   el.catsMore.setAttribute("aria-expanded", String(st.catsOpen));
@@ -219,51 +230,85 @@ function selectCat(id) {
   renderCats(); renderList();
   const r = el.work.getBoundingClientRect();
   if (r.top > W.innerHeight * 0.6) el.work.scrollIntoView({ behavior: scrollOpts(), block: "start" });
-  const b = el.cats.querySelector('.dc-cat[aria-pressed="true"]');
-  if (b && !mqDesk.matches) b.scrollIntoView({ block: "nearest", inline: "center", behavior: scrollOpts() });
+  nudge(el.cats.querySelector('.dc-cat[aria-pressed="true"]'));
 }
 function renderLevels() {
-  clear(el.levels);
-  [["", "All levels"], ["b", "Beginner"], ["i", "Intermediate"], ["a", "Advanced"]].forEach(([k, label]) =>
-    el.levels.append(h("button", { class: "dc-seg" + (k ? " " + k : ""), type: "button", "aria-pressed": String(st.level === k), dataset: { level: k },
-      onclick: () => { st.level = k; renderLevels(); renderList(); } }, label)));
+  el.levels.querySelectorAll(".dc-seg").forEach(b => b.setAttribute("aria-pressed", String(st.level === (b.dataset.level || ""))));
 }
+function nudge(btn) {                 // keep the pressed chip in view inside a sideways-scrolling row (phones)
+  if (btn && !mqDesk.matches) { try { btn.scrollIntoView({ inline: "nearest", block: "nearest", behavior: scrollOpts() }); } catch (e) {} }
+}
+let azKey = "";
 function renderAz() {
   if (!st.ready) return;
-  const have = new Set();
-  for (const r of st.sorted) if ((!st.cat || r.cat === st.cat) && (!st.level || r.level === st.level)) have.add(r._l);
-  if (st.letter && !have.has(st.letter) && !st.q.trim()) { st.letter = ""; }
-  clear(el.az);
-  el.az.hidden = !!st.q.trim();
-  const btn = (k, label, aria) => h("button", { class: "dc-l" + (k === "" ? " dc-l-all" : ""), type: "button", "aria-pressed": String(st.letter === k),
-    disabled: k !== "" && !have.has(k), "aria-label": aria || null, dataset: { l: k },
-    onclick: () => { st.letter = st.letter === k ? "" : k; renderList(); } }, label);
-  el.az.append(btn("", "All", "All letters"));
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(c => el.az.append(btn(c, c)));
-  if (have.has("#")) el.az.append(btn("#", "0–9", "Numbers"));
+  const searching = !!st.q.trim();
+  el.az.hidden = searching;
+  if (searching) return;                                   // hidden while typing: nothing to recount
+  const key = st.cat + "|" + st.level;
+  if (key !== azKey) {                                     // which letters have terms only changes with topic/level
+    azKey = key;
+    const have = new Set();
+    for (const r of st.sorted) if ((!st.cat || r.cat === st.cat) && (!st.level || r.level === st.level)) have.add(r._l);
+    if (st.letter && !have.has(st.letter)) st.letter = "";
+    el.az.querySelectorAll(".dc-l").forEach(b => { const k = b.dataset.l || ""; b.disabled = k !== "" && !have.has(k); });
+  }
+  el.az.querySelectorAll(".dc-l").forEach(b => b.setAttribute("aria-pressed", String(st.letter === (b.dataset.l || ""))));
 }
 
 /* ================================================================ term of the day ================================ */
-function renderTod() {
-  const r = G.termOfDay();
-  clear(el.tod);
+function istKey(d) {
+  try { return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(d || new Date()); }
+  catch (e) { return new Date((d || new Date()).getTime() + 19800000).toISOString().slice(0, 10); }
+}
+// data/glossary/tod.json holds yesterday/today/tomorrow (IST) picks so the card paints before the 800 KB index arrives
+function todFromJson(j) {
+  const key = istKey();
+  const pick = x => x && typeof x === "object" && (x.id || x.kid || x.term) ? x : null;
+  let x = null;
+  if (Array.isArray(j)) x = j.find(d => d && (d.date === key || d.d === key || d.day === key));
+  else if (j && typeof j === "object") x = pick(j[key]) || pick(obj(j.days)[key]) || pick(obj(j.picks)[key]) || (Array.isArray(j.days) ? j.days.find(d => d && (d.date === key || d.d === key)) : null);
+  x = pick(x); if (!x) return null;
+  const id = String(x.id || (typeof x.kid === "string" && !x.term ? x.kid : "") || "");
+  if (!id) return null;
+  return { id, term: x.term || id, cat: x.cat || "", catName: x.catName || x.cat_name || x.category || "", level: x.level || "", short: x.short || "" };
+}
+function loadTod() {
+  return F.fetchJSON("data/glossary/tod.json").then(j => { const r = todFromJson(j); if (r && !el.tod.dataset.id) renderTod(r); }, () => {});
+}
+function renderTod(fromJson) {
+  const r = fromJson || G.termOfDay();
+  if (!fromJson && el.tod.dataset.id && (!r || el.tod.dataset.id === r.id)) return;     // already painted from tod.json (keep it even if the index fails)
+  clear(el.tod); el.tod.removeAttribute("aria-busy");
   try { el.todDate.textContent = F.fmt.date(Date.now(), { timeZone: "Asia/Kolkata" }); } catch (e) { el.todDate.textContent = ""; }
   if (!r) { el.tod.append(h("p", { class: "muted" }, st.failed ? "Not available right now." : "Updating…")); return; }
   el.tod.dataset.id = r.id;
+  const cat = (st.ready && catName(r.cat)) || r.catName || r.cat || "";
   el.tod.append(
     h("h2", { class: "dc-tod-term" }, h("a", { href: "#t=" + encodeURIComponent(r.id), onclick: e => { e.preventDefault(); st.returnTo = { kind: "el", node: e.currentTarget }; openEntry(r.id, { via: "browse", push: true, reveal: true }); } }, r.term)),
-    h("p", { class: "dc-tod-meta" }, lvlPill(r.level), h("span", null, catName(r.cat))),
+    h("p", { class: "dc-tod-meta" }, lvlPill(r.level), h("span", null, cat)),
     h("p", { class: "dc-tod-def" }, r.short || ""),
     h("a", { class: "btn btn-ghost sm dc-tod-go", href: "#t=" + encodeURIComponent(r.id), onclick: e => { e.preventDefault(); st.returnTo = { kind: "el", node: e.currentTarget }; openEntry(r.id, { via: "browse", push: true, reveal: true }); } },
       "Read the entry", icon("arrow")));
 }
 
 /* ================================================================ entry view ===================================== */
-function loadNews() {
-  if (st.newsP) return st.newsP;
-  st.newsP = F.fetchJSON("data/live/news-terms.json", { bust: true }).then(j => { st.news = obj(j); return st.news; },
-    () => { st.news = null; st.newsP = null; return null; });
-  return st.newsP;
+// "In the news": data/live/news-terms/<cat>.json is a small per-topic shard; news-terms.json (the whole map) is the
+// fallback. Both resolve to {termId: [stories]} or null. A prefetch never falls back to the big file.
+function loadNewsAll() {
+  if (st.newsAll) return st.newsAll;
+  st.newsAll = F.fetchJSON("data/live/news-terms.json", { bust: true }).then(j => obj(j), () => { st.newsAll = null; return null; });
+  return st.newsAll;
+}
+function loadNews(cat, o = {}) {
+  if (!cat) return loadNewsAll();
+  if (st.newsCat[cat]) return st.newsCat[cat];
+  if (st.newsMiss[cat]) return o.prefetch ? Promise.resolve(undefined) : loadNewsAll();      // no shard for this topic: ask once
+  const p = F.fetchJSON("data/live/news-terms/" + encodeURIComponent(cat) + ".json", { bust: true }).then(j => obj(j), () => {
+    delete st.newsCat[cat]; st.newsMiss[cat] = true;
+    return o.prefetch ? undefined : loadNewsAll();
+  });
+  st.newsCat[cat] = p;
+  return p;
 }
 function numberize(text) {
   // wrap amounts, percentages and figures so examples read like a worksheet; text nodes only
@@ -362,13 +407,14 @@ function renderEntry(e) {
   if (e.formula) out.append(section("formula", "Formula", h("pre", { class: "dc-formula", tabindex: "0", "aria-label": "Formula" }, h("code", null, e.formula))));
   const rel = arr(e.related).map(id => G.get(id)).filter(Boolean);
   if (rel.length) out.append(section("related", "Related terms", h("div", { class: "dc-rel" }, rel.map(r =>
-    h("button", { class: "chip dc-relchip", type: "button", dataset: { id: r.id }, onclick: () => openEntry(r.id, { via: "browse", push: true }) }, r.term, icon("arrow"))))));
+    h("button", { class: "chip dc-relchip", type: "button", dataset: { id: r.id }, onclick: () => { if (!st.returnTo) st.returnTo = { kind: "row", id: r.id }; openEntry(r.id, { via: "browse", push: true }); } }, r.term, icon("arrow"))))));
   const news = h("div", { class: "dc-news", "aria-busy": "true" }, h("span", { class: "skel skel-line w80" }), h("span", { class: "skel skel-line w60" }));
   out.append(section("news", "In the news", news));
-  out.append(h("p", { class: "dc-efoot" }, "Found a mistake or a term we should add? Tell a Finspire member."));
+  out.append(h("p", { class: "dc-efoot" }, "Found a mistake or a term we should add? ",
+    h("a", { href: "https://www.linkedin.com/company/finspire-iimranchi/", target: "_blank", rel: "noopener noreferrer" }, "Tell us on LinkedIn ↗")));
   [detail, example].forEach(n => { if (n) { G.annotate(n); unwrapSelf(n, e.id); } });
   const id = e.id;
-  loadNews().then(map => { if (st.open === id) fillNews(news, map, id); });
+  loadNews(e.cat).then(map => { if (st.open === id) fillNews(news, map, id); });
 }
 function fillNews(box, map, id) {
   clear(box); box.removeAttribute("aria-busy");
@@ -427,7 +473,7 @@ function openEntry(id, o = {}) {
   el.entry.hidden = false;
   applyMode();
   markOpenRow();
-  if (!st.ready) { if (st.failed) renderMissing(id); else renderEntrySkeletonPlain(); return; }
+  if (!st.ready) { if (st.failed) renderMissing(id); else { st.pending = true; renderEntrySkeletonPlain(); } return; }
   const r = G.get(id);
   if (!r) { renderMissing(id); }
   else {
@@ -439,7 +485,7 @@ function openEntry(id, o = {}) {
       if (box) box.replaceChildren(h("div", { class: "dc-err" }, h("p", null, "The full entry is not available right now."),
         h("button", { class: "btn btn-ghost sm", type: "button", onclick: () => openEntry(id, { via: "browse" }) }, "Try again")));
     });
-    loadNews();
+    loadNews(r.cat);
   }
   el.side.scrollTop = 0;
   if (o.reveal && !sheetMode()) {
@@ -471,9 +517,9 @@ function restoreFocus() {
   let t = null;
   if (rt && rt.kind === "row") {
     if (rt.from === "q") t = el.q;
-    else { const i = st.rows.findIndex(r => r.id === rt.id); if (i >= 0) { setActive(i, false); t = el.list; } }
+    else { const i = st.rows.findIndex(r => r.id === rt.id); if (i >= 0 && i < Math.max(st.shown, CHUNK)) { setActive(i, false); t = el.list; } }   // only a row that is already on the page
   } else if (rt && rt.kind === "el" && rt.node && rt.node.isConnected) t = rt.node;
-  if (!t) t = sheetMode() ? el.q : (mqDesk.matches ? el.me : el.q);
+  if (!t) t = sheetMode() ? el.title : el.me;
   try { t.focus({ preventScroll: true }); } catch (e) {}
 }
 
@@ -540,36 +586,47 @@ function renderMe() {
         onclick: () => { if (F.auth.enabled()) F.auth.signIn().catch(() => {}); else F.ui.signInDialog(); } }, icon("google"), "Sign in"));
     return;
   }
-  if (!st.ready) { el.me.append(h("h2", { class: "dc-h2", id: "dcMeTitle" }, "Your dictionary"), h("p", { class: "muted" }, "Updating…")); return; }
+  if (!st.ready) {
+    el.me.append(h("div", { class: "dc-me-head" }, h("h2", { class: "dc-h2", id: "dcMeTitle" }, "Your dictionary")));
+    if (st.failed) { el.me.removeAttribute("aria-busy"); el.me.append(h("div", { class: "dc-card dc-empty dc-me-fail" }, h("p", { class: "dc-me-empty" }, "Not available right now."),
+      h("button", { class: "btn btn-ghost sm", type: "button", dataset: { focusKey: "retry" }, onclick: retry }, "Try again"))); }
+    else { el.me.setAttribute("aria-busy", "true"); el.me.append(h("div", { class: "dc-me-grid", "aria-hidden": "true" }, [0, 1, 2].map(() =>
+      h("div", { class: "dc-card dc-card-skel" }, h("span", { class: "skel skel-line w40" }), h("span", { class: "skel skel-line w80" }))))); }
+    return;
+  }
+  el.me.removeAttribute("aria-busy");
+  const phone = mqPhone.matches;
   const srs = srsMap(), due = dueIds(), hist = arr(S.get("dict.history", [])).filter(x => x && G.get(x.id)), saved = arr(S.get("dict.saved", [])).filter(id => G.get(id));
   const boxes = [0, 0, 0, 0, 0];
   Object.keys(srs).forEach(id => { const b = Math.min(5, Math.max(1, +srs[id].box || 1)); if (G.get(id)) boxes[b - 1]++; });
   const tracked = boxes.reduce((a, b) => a + b, 0);
   const nDue = due.length;
 
-  const rev = h("div", { class: "dc-card dc-rev" },
+  const idle = !nDue && !tracked && !saved.length && !hist.length;      // nothing to revise yet: a quiet ghost button, not the loudest control on the page
+  const revEmpty = !tracked && !nDue;
+  const rev = h("div", { class: "dc-card dc-rev" + (phone && revEmpty ? " dc-empty" : "") },
     h("div", { class: "dc-rev-top" },
       h("span", { class: "dc-rev-ic" }, IC.revise()),
       h("h3", { class: "dc-h3" }, "Revise"),
       tracked ? h("span", { class: "dc-card-n" }, num(tracked) + " in review") : null),
     h("p", { class: "dc-rev-txt" }, nDue ? "A ten-question round from your saved and recent words. Right answers come back later; misses come back tomorrow."
-      : (tracked ? "Nothing is due right now. You can still practise." : "Save a few words or look some up, then test yourself here.")),
+      : (tracked ? "Nothing is due right now. You can still practise." : "Save or look up a few words, then test yourself.")),
     tracked ? h("div", { class: "dc-boxes", role: "img", "aria-label": "Words by box: " + boxes.map((n, i) => "box " + (i + 1) + " " + n).join(", ") },
       boxes.map((n, i) => h("span", { class: "dc-box" + (n ? " on" : "") }, h("b", null, num(n)), h("small", null, BOX_DAYS[i] + "d")))) : null,
-    h("button", { class: "btn btn-primary dc-rev-go", type: "button", dataset: { focusKey: "revise" }, onclick: () => startQuiz({}) },
-      IC.revise(), nDue ? "Revise · " + plural(nDue, "word") + " due" : "Revise now"));
+    h("button", { class: "btn " + (idle ? "btn-ghost" : "btn-primary") + " sm dc-rev-go", type: "button", dataset: { focusKey: "revise" }, onclick: () => startQuiz({}) },
+      IC.revise(), nDue ? "Revise · " + plural(nDue, "word") + " due" : idle ? "Try a quick quiz" : "Revise now"));
 
-  const recentN = st.meRecentAll ? 40 : 6;
-  const recent = h("div", { class: "dc-card dc-recent" },
+  const recentN = st.meRecentAll ? 40 : (phone ? 3 : 6);
+  const recent = h("div", { class: "dc-card dc-recent" + (phone && !hist.length ? " dc-empty" : "") },
     h("div", { class: "dc-card-h" }, h("h3", { class: "dc-h3" }, "Recent lookups"), hist.length ? h("span", { class: "dc-card-n" }, num(hist.length)) : null),
     hist.length ? h("ul", { class: "dc-me-list" }, hist.slice(0, recentN).map(x => h("li", null,
       termBtn(x.id, h("span", { class: "dc-me-via" }, x.via && x.via !== "browse" && VIA[x.via] ? h("span", { class: "dc-via v-" + x.via }, VIA[x.via]) : null, h("span", { class: "dc-ago" }, F.fmt.ago(x.at))))))) :
-      h("p", { class: "dc-me-empty" }, "Words you open here, and terms you hover on the Markets page, show up here."),
-    hist.length > 6 ? h("button", { class: "dc-more-btn", type: "button", dataset: { focusKey: "recentAll" }, onclick: () => { st.meRecentAll = !st.meRecentAll; renderMe(); } },
-      st.meRecentAll ? "Show fewer" : "Show all " + num(Math.min(hist.length, 40))) : null);
+      h("p", { class: "dc-me-empty" }, "Terms you open here or on the Markets page will appear here."),
+    hist.length > recentN || (st.meRecentAll && hist.length > 3) ? h("button", { class: "dc-more-btn", type: "button", dataset: { focusKey: "recentAll" }, onclick: () => { st.meRecentAll = !st.meRecentAll; renderMe(); } },
+      st.meRecentAll ? "Show fewer" : "All recent · " + num(Math.min(hist.length, 40))) : null);
 
   const savedN = st.meSavedAll ? 200 : 10;
-  const sv = h("div", { class: "dc-card dc-saved" },
+  const sv = h("div", { class: "dc-card dc-saved" + (phone && !saved.length ? " dc-empty" : "") },
     h("div", { class: "dc-card-h" }, h("h3", { class: "dc-h3" }, "Saved words"), saved.length ? h("span", { class: "dc-card-n" }, num(saved.length)) : null),
     saved.length ? h("div", { class: "dc-chips" }, saved.slice(0, savedN).map(id => termBtn(id, null, "chip dc-savechip"))) :
       h("p", { class: "dc-me-empty" }, "Use the star on any entry to keep a word here."),
@@ -608,8 +665,18 @@ function masker(r) {
   const re = new RegExp("(^|[^A-Za-z0-9])(" + uniq.map(reEsc).join("|") + ")(?![A-Za-z0-9])", "gi");
   return t => String(t || "").replace(re, (m, pre) => pre + "____");
 }
+const STOP = new Set(["and", "the", "for", "with", "from", "into", "per", "non", "vs"]);
+function termWords(r) {
+  const names = [r.term].concat(arr(r.aliases), arr(r.abbr)).join(" ").toLowerCase().replace(/\([^)]*\)/g, " ");
+  return new Set(names.split(/[^a-z0-9]+/).filter(w => w.length >= 3 && !STOP.has(w)));
+}
+// never a related term, never a term that shares a word with the answer (Repo rate vs Policy rate are both "right")
 function distractors(r, want, test) {
-  const pool = G.rows().filter(x => x.id !== r.id && x.short && x.short !== r.short && x.term.toLowerCase() !== r.term.toLowerCase());
+  const rel = new Set(arr(r.related)), words = termWords(r);
+  const alias = new Set([r.term].concat(arr(r.aliases)).map(s => String(s).toLowerCase()));
+  const clash = x => rel.has(x.id) || arr(x.related).includes(r.id) || alias.has(String(x.term).toLowerCase()) ||
+    arr(x.aliases).some(a => alias.has(String(a).toLowerCase())) || [...termWords(x)].some(w => words.has(w));
+  const pool = G.rows().filter(x => x.id !== r.id && x.short && x.short !== r.short && !clash(x));
   const same = shuffle(pool.filter(x => x.cat === r.cat));
   const out = [];
   const take = list => { for (const x of list) { if (out.length >= want) break; if (!out.includes(x) && (!test || test(x, out))) out.push(x); } };
@@ -699,10 +766,10 @@ async function runQuiz(m, body, focus) {
       try { next.focus({ preventScroll: true }); } catch (e) {}
     };
     const promptEl = q.type === "kid"
-      ? h("div", { class: "dc-qz-prompt dc-qz-kid" }, h("span", { class: "dc-kid-ic" }, IC.blocks()), h("p", null, q.prompt))
-      : h("p", { class: "dc-qz-prompt" + (q.type === "term" ? " dc-qz-term" : "") }, q.prompt);
+      ? h("div", { class: "dc-qz-prompt dc-qz-kid", tabindex: "-1" }, h("span", { class: "dc-kid-ic" }, IC.blocks()), h("p", null, q.prompt))
+      : h("p", { class: "dc-qz-prompt" + (q.type === "term" ? " dc-qz-term" : ""), tabindex: "-1" }, q.prompt);
     body.append(
-      h("div", { class: "dc-qz-prog" }, h("span", null, "Question " + (i + 1) + " of " + qs.length), h("span", { class: "dc-qz-score" }, res.filter(x => x.ok).length + " right")),
+      h("div", { class: "dc-qz-prog" }, h("span", null, "Question " + (i + 1) + " of " + qs.length), h("span", { class: "sr-only" }, ", "), h("span", { class: "dc-qz-score" }, res.filter(x => x.ok).length + " right")),
       h("div", { class: "dc-qz-bar", "aria-hidden": "true" }, h("i", { style: { width: ((i) / qs.length * 100) + "%" } })),
       h("p", { class: "dc-qz-label", id: "dcQzLabel" }, q.label),
       promptEl,
@@ -714,7 +781,7 @@ async function runQuiz(m, body, focus) {
       if (k >= 0 && k < buttons.length && e.key.length === 1) { e.preventDefault(); pick(k); }
     };
     body.addEventListener("keydown", keyH);
-    try { (buttons[0] || body).focus({ preventScroll: true }); } catch (e) {}
+    try { promptEl.focus({ preventScroll: true }); } catch (e) {}       // the question is read before the options
     body.scrollTop = 0; m.card.scrollTop = 0;
   };
   const end = () => {
@@ -739,16 +806,28 @@ async function runQuiz(m, body, focus) {
 }
 
 /* ================================================================ events ========================================= */
-let qRaf = 0;
+let qTimer = 0;
+const flushQ = () => { if (qTimer) { clearTimeout(qTimer); qTimer = 0; } renderList(); };
 el.q.addEventListener("input", () => {
   st.q = el.q.value; el.qx.hidden = !el.q.value;
   if (st.q.trim()) st.letter = "";
-  if (!qRaf) qRaf = requestAnimationFrame(() => { qRaf = 0; renderList(); });
+  el.main.classList.toggle("dc-searching", !!st.q.trim());        // the page re-arranges at once; the list follows the last keystroke
+  if (!st.q.trim() && D.activeElement !== el.q) el.main.classList.remove("dc-qfocus");
+  clearTimeout(qTimer); qTimer = setTimeout(() => { qTimer = 0; renderList(); }, DEBOUNCE);
 });
+el.q.addEventListener("focus", () => {                       // phone: collapse the head and bring the box up so results fit above the keyboard
+  if (!mqPhone.matches) return;
+  el.main.classList.add("dc-qfocus");
+  requestAnimationFrame(() => {
+    const top = el.q.getBoundingClientRect().top + W.scrollY - 73 - 12;
+    if (Math.abs(W.scrollY - top) > 4) W.scrollTo({ top, behavior: scrollOpts() });
+  });
+});
+el.q.addEventListener("blur", () => { if (!st.q.trim()) el.main.classList.remove("dc-qfocus"); });
 el.q.addEventListener("keydown", e => {
   if (e.key === "ArrowDown") { e.preventDefault(); setActive(st.active + 1); }
   else if (e.key === "ArrowUp") { e.preventDefault(); setActive(st.active - 1); }
-  else if (e.key === "Enter") { e.preventDefault(); if (qRaf) { cancelAnimationFrame(qRaf); qRaf = 0; renderList(); } if (st.rows.length && (st.q.trim() || st.active >= 0)) openActive(); }
+  else if (e.key === "Enter") { e.preventDefault(); if (qTimer) flushQ(); if (st.rows.length && (st.q.trim() || st.active >= 0)) openActive(); }
   else if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); if (el.q.value) setQuery(""); else el.q.blur(); }
 });
 el.qx.addEventListener("click", () => { setQuery(""); el.q.focus(); });
@@ -778,6 +857,16 @@ el.list.addEventListener("pointerover", e => {      // warm the category file be
   clearTimeout(pfT); pfT = setTimeout(() => { G.entry(o.dataset.id).catch(() => {}); }, 120);
 });
 el.catsMore.addEventListener("click", () => { st.catsOpen = !st.catsOpen; renderCats(); });
+el.levels.addEventListener("click", e => {
+  const b = e.target.closest(".dc-seg"); if (!b || !st.ready) return;
+  st.level = b.dataset.level || ""; renderLevels(); renderList(); nudge(b);
+});
+el.az.addEventListener("click", e => {
+  const b = e.target.closest(".dc-l"); if (!b || b.disabled || !st.ready) return;
+  const k = b.dataset.l || "";
+  st.letter = st.letter === k ? "" : k; renderList(); nudge(b);
+  if (!mqDesk.matches && k) { const r = el.list.getBoundingClientRect(), top = el.tools.getBoundingClientRect().bottom; if (r.top < top) el.list.scrollIntoView({ block: "start", behavior: scrollOpts() }); }
+});
 
 if ("IntersectionObserver" in W) {
   new IntersectionObserver(ents => { if (ents.some(x => x.isIntersecting) && st.shown < st.rows.length) appendChunk(); }, { rootMargin: "900px 0px" }).observe(el.sentinel);
@@ -813,33 +902,44 @@ F.on("store", key => {
 F.on("auth", () => { queueMe(); syncSave(); });
 
 /* ================================================================ boot =========================================== */
+function retry() {                       // after a failed load: back to the skeletons, then boot again
+  st.failed = false;
+  el.list.hidden = false; el.list.setAttribute("aria-busy", "true"); clear(el.list);
+  for (let i = 0; i < 8; i++) el.list.append(h("li", { class: "dc-row dc-skel", "aria-hidden": "true" }, h("span", { class: "skel skel-line w40" }), h("span", { class: "skel skel-line w80" })));
+  clear(el.cats); el.cats.setAttribute("aria-busy", "true");
+  for (let i = 0; i < 12; i++) el.cats.append(h("div", { class: "dc-cat dc-cat-skel", "aria-hidden": "true" }, h("span", { class: "skel skel-line w60" }), h("span", { class: "skel skel-line w40" })));
+  boot();
+}
 function boot() {
   st.failed = false;
   renderLevels();
   renderCount(); renderEmpty();
-  el.list.hidden = false;
-  clear(el.list);
-  for (let i = 0; i < 8; i++) el.list.append(h("li", { class: "dc-row dc-skel", "aria-hidden": "true" }, h("span", { class: "skel skel-line w40" }), h("span", { class: "skel skel-line w80" })));
   renderMe();
+  if (!el.tod.dataset.id) loadTod();
   G.load().then(() => {
     const rows = G.rows();
     rows.forEach(r => { r._l = letterOf(r.term); r._k = sortKey(r.term); });
     st.sorted = rows.slice().sort((a, b) => a._k < b._k ? -1 : a._k > b._k ? 1 : 0);
     st.ready = true;
-    if (el.lede && rows.length) el.lede.textContent = "Plain meanings for " + num(rows.length) + " finance terms, with everyday analogies, worked examples and the headlines they appear in.";
+    el.cats.removeAttribute("aria-busy");
+    if (el.tod.dataset.id && !G.get(el.tod.dataset.id)) delete el.tod.dataset.id;     // tod.json named a term the index no longer has
     renderTod(); renderCats(); renderList(); renderMe();
+    if (st.pending) { st.pending = false; st.open = null; }                       // an entry opened before the index: open it for real now
     route(true);
+    idle(() => {                                                                  // warm the news shard for what is most likely to open next
+      const open = st.open && G.get(st.open), tod = el.tod.dataset.id && G.get(el.tod.dataset.id);
+      [open, tod].filter(Boolean).forEach(r => loadNews(r.cat, { prefetch: true }).catch(() => {}));
+    }, 2000);
   }, () => {
     st.failed = true;
-    clear(el.list); el.list.hidden = true;
-    renderCount(); renderEmpty(); renderTod();
-    clear(el.cats); el.cats.append(h("p", { class: "muted" }, "Not available right now."));
+    clear(el.list); el.list.hidden = true; el.list.removeAttribute("aria-busy");
+    renderCount(); renderEmpty(); renderTod(); renderMe();
+    clear(el.cats); el.cats.removeAttribute("aria-busy"); el.cats.append(h("p", { class: "muted dc-cats-fail" }, "Not available right now."));
     if (parseHash().t) route(true);
   });
 }
 applyMode();
 el.qx.append(icon("x"));
-const mqPhone = W.matchMedia("(max-width: 720px)");
 const setPh = () => { el.q.placeholder = mqPhone.matches ? "Search a term, e.g. EBITDA" : "Search a term, e.g. repo rate or EBITDA"; };
 setPh(); if (mqPhone.addEventListener) mqPhone.addEventListener("change", setPh);
 if (el.q.value) { st.q = el.q.value; el.qx.hidden = false; }

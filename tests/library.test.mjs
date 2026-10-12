@@ -73,6 +73,9 @@ async function setFile(p, sel, path) {
   const rows = await p.js(`[...document.querySelectorAll(".lib-intro-list li")].map(li=>li.textContent)`);
   check("gate: previews the folder names from site-data", rows.length === NF && rows.some(r => r.includes("Interview questions")), rows);
   check("gate: folders without a link say Coming soon", rows.filter(r => r.includes("Coming soon")).length === NSOON, rows.filter(r => r.includes("Coming soon")).length);
+  check("gate: linked folders carry a visible Members status, not just a padlock", rows.filter(r => /Members$/.test(r.trim())).length === NF - NSOON, rows);
+  check("gate: count says linked, not open (nothing can be opened yet)", (await txt(p, ".lib-intro-side .lib-count")) === (NSOON ? (NF - NSOON) + " of " + NF + " linked" : NF + " folders"), await txt(p, ".lib-intro-side .lib-count"));
+  check("gate: lede is the one written in the HTML (no rewrite after boot)", /Open them here with your IIM Ranchi account\./.test(await txt(p, ".lib-head .lede")));
   check("gate: no file browser for the guest", !(await p.js(`!!document.querySelector(".lib-browser, [data-lib-open]")`)));
   await p.shot(join(OUT, "d-0-gate-no-client-id.png"));
   // sign-in usable (demo) but signed out: the gate offers IIM Ranchi sign-in
@@ -91,6 +94,8 @@ const p = await open(DEMO);
 await waitFor(p, `!!document.querySelector("[data-lib-open]")`);
 check("signed in: 'Open the library' shown before any Drive access", !!(await p.js(`!!document.querySelector("[data-lib-open]")`)));
 check("signed in: greets the student", (await txt(p, ".lib-intro-h")).includes("Demo"));
+check("signed in: pill shows the first name, the email in its title", (await txt(p, ".lib-lock-t")) === "Signed in as Demo" && (await p.js(`document.querySelector(".lib-lock.ok").title`)).includes("@"));
+check("signed in: consent explanation is one paragraph", await p.js(`document.querySelectorAll(".lib-consent p").length`) === 1);
 await p.shot(join(OUT, "d-2-open.png"));
 await click(p, "[data-lib-open]");
 await waitFor(p, `document.querySelectorAll(".lib-fc").length > 0`);
@@ -100,20 +105,31 @@ check("home: linked folders are buttons, the rest Coming soon", await p.js(`docu
   await p.js(`[...document.querySelectorAll(".lib-fc.soon")].every(e => e.textContent.includes("Coming soon"))`));
 check("home: folder ids parsed from /folders/, ?id= and /u/0/ links", await p.js(`["demoCfaResources01","demoMembersNotes01","demoCoverLetters01","17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk"].every(id => document.querySelector('[data-lib-folder="'+id+'"]'))`));
 check("home: Add a file shown (inbox configured)", !!(await p.js(`!!document.querySelector("[data-lib-upload]")`)));
+check("home: root crumb reads All folders", (await crumbs(p)).join() === "All folders", await crumbs(p));
+check("home: the H1 call to action leaves once the Library is open", (await txt(p, ".lib-head .dim")) === "" && (await txt(p, ".lib-head .h1")).trim() === "The club's shelf.");
+check("home: folder cards are named by their title and described by their text", await p.js(`[...document.querySelectorAll("button.lib-fc")].every(b => document.getElementById(b.getAttribute("aria-labelledby")||"") && b.querySelector(".lib-fc-go").getAttribute("aria-hidden") === "true")`));
+check("home: keyboard focus moved to the Folders heading after opening", await p.js(`document.activeElement && document.activeElement.textContent === "Folders"`));
 await p.shot(join(OUT, "d-3-home.png"));
 
 // folders + breadcrumb ------------------------------------------------------------------------------------------
-await click(p, `button.lib-fc[data-lib-folder="demoCfaResources01"]`);
-check("folder: skeleton while loading", !!(await p.js(`!!document.querySelector(".lib-skel-row")`)));
+// (read the skeleton in the same tick as the click: the demo Drive answers after 300 ms)
+const skel = await p.js(`(()=>{document.querySelector('button.lib-fc[data-lib-folder="demoCfaResources01"]').click();
+  const c=document.querySelector(".lib-content"); return {rows:document.querySelectorAll(".lib-skel-row").length, min:parseInt(c.style.minHeight)||0, focus:document.activeElement.className}})()`);
+check("folder: skeleton while loading (4 rows when the size is unknown)", skel.rows === 4, skel);
+check("folder: content keeps the skeleton height so the footer never jumps up", skel.min > 200, skel);
+check("folder: focus moves to the folder title", /lib-ftitle/.test(skel.focus), skel);
 await waitFor(p, `!!document.querySelector('[data-lib-item="demoCfaLevel1Fold"]')`);
 check("folder: lists children, folders first", (await p.js(`[...document.querySelectorAll(".lib-row-t")].map(e=>e.textContent)`)).join("|") === "Level I|Level II|Reading list.txt");
 check("folder: hash routes to the folder", await p.js("location.hash") === "#f=demoCfaResources01");
 await click(p, `[data-lib-item="demoCfaLevel1Fold"]`);
 await waitFor(p, `!!document.querySelector('[data-lib-item="demoCfaNotesPdf01"]')`);
 check("sub-folder: breadcrumb Library › CFA resources › Level I", (await crumbs(p)).join(" / ") === "Library / CFA resources / Level I", await crumbs(p));
+check("sub-folder: focus stays on the title once the list renders", await p.js(`document.activeElement && document.activeElement.classList.contains("lib-ftitle")`));
+check("sub-folder: row name reads name, then kind · size · date once", await p.js(`(()=>{const m=document.querySelector('[data-lib-item="demoCfaNotesPdf01"]'); const hid=[...m.querySelectorAll(".lib-row-date,.lib-row-size")].every(e=>e.getAttribute("aria-hidden")==="true"); return hid && /PDF · 2\.6 KB · 9 Oct 2026/.test(m.querySelector(".lib-row-meta").textContent)})()`));
 check("sub-folder: sizes and dates shown", (await txt(p, '[data-lib-item="demoCfaNotesPdf01"]')).includes("2.6 KB") && (await txt(p, '[data-lib-item="demoCfaNotesPdf01"]')).includes("9 Oct 2026"));
 check("sub-folder: type filter chips", (await p.js(`[...document.querySelectorAll("[data-lib-type]")].map(e=>e.dataset.libType)`)).join() === "all,pdf,image");
 await click(p, `[data-lib-type="image"]`);
+check("filter: the pressed chip keeps focus after the list re-renders", await p.js(`document.activeElement && document.activeElement.dataset.libType === "image"`));
 check("filter: Images shows only the image", (await p.js(`[...document.querySelectorAll("[data-lib-item]")].map(e=>e.dataset.kind)`)).join() === "image");
 await click(p, `[data-lib-type="all"]`);
 await p.js(`(()=>{const s=document.querySelector("[data-lib-sort]"); s.value="new"; s.dispatchEvent(new Event("change"))})()`);
@@ -131,9 +147,11 @@ check("browser back: returns to Level I", (await crumbs(p)).length === 3);
 // PDF viewer ----------------------------------------------------------------------------------------------------
 await click(p, `[data-lib-item="demoCfaNotesPdf01"]`);
 check("viewer: opens inside the page with a progress state", !!(await p.js(`!!document.querySelector(".fs-modal.lib-vw")`)));
+check("viewer: the stage is a labelled region", await p.js(`(()=>{const s=document.querySelector("[data-lib-stage]"); return s.getAttribute("role")==="region" && /Sample CFA notes\.pdf, document/.test(s.getAttribute("aria-label"))})()`));
 const rendered = await waitFor(p, `document.querySelectorAll(".lib-pg.on canvas").length >= 1`, 20000);
 check("pdf: pages render with PDF.js", !!rendered);
 check("pdf: page counter of 3", (await txt(p, ".lib-pgof")) === "of 3" && await p.js(`document.querySelector("[data-lib-page]").value`) === "1");
+check("pdf: the page counter describes the stage", await p.js(`document.getElementById(document.querySelector("[data-lib-stage]").getAttribute("aria-describedby")||"") === document.querySelector(".lib-pgof")`));
 check("pdf: canvas painted (not blank)", await p.js(`(()=>{const c=document.querySelector(".lib-pg.on canvas"); const d=c.getContext("2d").getImageData(0,0,c.width,c.height).data; let dark=0; for(let i=0;i<d.length;i+=40) if(d[i]<120) dark++; return dark>50})()`));
 check("pdf: rendered at devicePixelRatio (canvas ≥ css size)", await p.js(`(()=>{const c=document.querySelector(".lib-pg.on canvas"); return c.width >= c.getBoundingClientRect().width - 1})()`));
 check("viewer: no redirect to Google Drive", !(await p.js(`location.href.includes("google.com")`)));
@@ -196,7 +214,12 @@ check("download: row button saves the image by name", dl2 && dl2.href.startsWith
 await click(p, "[data-lib-q]");
 await p.type("notes"); await sleep(900);
 check("search: filters this folder", (await p.js(`[...document.querySelectorAll(".lib-list:not(.lib-more .lib-list) .lib-row-t")].map(e=>e.textContent)`)).join() === "Sample CFA notes.pdf");
+check("search: status announces the result count", /^\d+ results? for “notes”$/.test(await txt(p, "p.sr-only[role=status]")), await txt(p, "p.sr-only[role=status]"));
+await p.js(`(()=>{const i=document.querySelector("[data-lib-q]"); i.value="zzzz"; i.dispatchEvent(new Event("input"))})()`); await sleep(1000);
+check("search: nothing here and nothing elsewhere → one panel, no 'In other folders'", await p.js(`document.querySelectorAll(".lib-empty").length === 1 && !document.querySelector(".lib-more") && !!document.querySelector("[data-lib-noresults]")`) && (await txt(p, ".lib-empty")).includes("No files match “zzzz”"));
+check("search: status says no results", (await txt(p, "p.sr-only[role=status]")) === "No results for “zzzz”");
 await p.js(`(()=>{const i=document.querySelector("[data-lib-q]"); i.value=""; i.dispatchEvent(new Event("input"))})()`); await sleep(500);
+check("search: clearing restores the folder summary", (await txt(p, "p.sr-only[role=status]")) === "Level I. 3 items.", await txt(p, "p.sr-only[role=status]"));
 
 // recent ----------------------------------------------------------------------------------------------------------
 await click(p, `[data-lib-crumb="0"]`);
@@ -230,7 +253,7 @@ await p.shot(join(OUT, "d-10-denied.png"));
 await p.js(`location.hash = "#f=17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk"`);
 await waitFor(p, `!!document.querySelector('[data-lib-item="demoInterviewDoc1"]')`);
 await click(p, `[data-lib-item="demoInterviewDoc1"]`);
-check("google doc: exported to PDF in the same viewer", !!(await waitFor(p, `document.querySelectorAll(".lib-pg.on canvas").length >= 1`, 10000)) && (await txt(p, ".lib-vw-meta")).includes("opened as PDF"));
+check("google doc: exported to PDF in the same viewer", !!(await waitFor(p, `document.querySelectorAll(".lib-pg.on canvas").length >= 1`, 10000)) && (await txt(p, ".lib-vw-meta")).startsWith("Google Doc · shown as PDF"));
 await click(p, ".lib-vw [data-lib-dl]"); await sleep(400);
 check("google doc: downloads as Interview guide.pdf", (await p.js("window.__dl.slice(-1)[0].name")) === "Interview guide.pdf");
 await key(p, "Escape"); await sleep(400);
@@ -247,9 +270,11 @@ check("empty folder: plain message", (await txt(p, ".lib-empty")).includes("This
 // upload --------------------------------------------------------------------------------------------------------------
 await click(p, "[data-lib-upload]"); await sleep(300);
 check("upload: dialog explains admin review", (await txt(p, "[data-lib-upload-dialog]")).includes("reviews each upload"));
+check("upload: starts at Choose a file, Upload dimmed until a file is chosen", await p.js(`document.activeElement.id === "libUpFile" && document.querySelector("[data-lib-upload-dialog] .fs-mbtn.primary").getAttribute("aria-disabled") === "true"`));
 await setFile(p, "[data-lib-file]", join(HERE, "fixtures/demo/files/reading-list.txt"));
 await sleep(200);
 check("upload: chosen file shown", (await txt(p, ".lib-up-file")).includes("reading-list.txt"));
+check("upload: Upload becomes live once a file is chosen", await p.js(`document.querySelector("[data-lib-upload-dialog] .fs-mbtn.primary").getAttribute("aria-disabled") === "false"`));
 await p.shot(join(OUT, "d-12-upload.png"));
 await click(p, "[data-lib-upload-dialog] .fs-mbtn.primary");
 await waitFor(p, `!!document.querySelector("[data-lib-uploaded]")`, 5000);
@@ -283,13 +308,16 @@ p.close();
   await waitFor(q, `document.querySelectorAll(".lib-fc").length > 0`);
   check("phone home: one column of folders", await q.js(`(()=>{const a=[...document.querySelectorAll(".lib-fc")].slice(0,2).map(e=>e.getBoundingClientRect()); return a[0].left===a[1].left && a[1].top>a[0].bottom})()`));
   check("phone home: no sideways scroll", await noOverflow(q));
+check("phone home: Add keeps a label and a full accessible name", await q.js(`(()=>{const e=document.querySelector("[data-lib-upload]"); const r=e.getBoundingClientRect(); return e.innerText.trim()==="Add" && r.height>=44 && r.width>=44 && e.getAttribute("aria-label")==="Add a file to the Library"})()`));
+check("phone home: folder cards use the shared surface token", await q.js(`getComputedStyle(document.querySelector("button.lib-fc")).backgroundColor === getComputedStyle(document.querySelector(".lib-rc")||document.body).backgroundColor || getComputedStyle(document.querySelector("button.lib-fc")).backgroundColor === "rgb(26, 26, 31)"`));
   await q.shot(join(OUT, "m-3-home.png"));
   await tap(q, `button.lib-fc[data-lib-folder="demoCfaResources01"]`);
   await waitFor(q, `!!document.querySelector('[data-lib-item="demoCfaLevel1Fold"]')`);
   await tap(q, `[data-lib-item="demoCfaLevel1Fold"]`);
   await waitFor(q, `!!document.querySelector('[data-lib-item="demoCfaNotesPdf01"]')`);
   check("phone folder: rows are big tap targets", await q.js(`[...document.querySelectorAll(".lib-row-main, .lib-row-dl, .lib-crumb, .lib-back:not([hidden]), [data-lib-type]")].every(e=>{const r=e.getBoundingClientRect(); return r.height>=40 && (r.width>=40)})`));
-  check("phone folder: search input ≥ 16px", await q.js(`parseFloat(getComputedStyle(document.querySelector("[data-lib-q]")).fontSize) >= 16`));
+  check("phone folder: search placeholder is not clipped", await q.js(`(()=>{const i=document.querySelector("[data-lib-q]"); const c=document.createElement("span"); c.style.cssText="position:absolute;visibility:hidden;white-space:nowrap;font:"+getComputedStyle(i).font; c.textContent=i.placeholder; document.body.appendChild(c); const w=c.getBoundingClientRect().width; c.remove(); const cs=getComputedStyle(i); return i.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight) >= w})()`));
+check("phone folder: search input ≥ 16px", await q.js(`parseFloat(getComputedStyle(document.querySelector("[data-lib-q]")).fontSize) >= 16`));
   check("phone folder: chips scroll sideways (no wrap)", await q.js(`getComputedStyle(document.querySelector(".lib-chips")).flexWrap === "nowrap"`));
   check("phone folder: 16px gutters", await q.js(`Math.round(document.querySelector(".lib-list").getBoundingClientRect().left) === 16`));
   await q.js(`scrollTo(0, 300)`); await sleep(300);
@@ -322,6 +350,24 @@ p.close();
   check("phone: no sideways scroll", await noOverflow(q));
   check("phone: zero console errors", q.errors.length === 0, q.errors);
   q.close();
+}
+
+// ================================================================================================= landscape phone 844×390
+{
+  const L = { width: 844, height: 390, mobile: true, scale: 2 };
+  const l = await open(DEMO + "#f=demoCfaResources01/demoCfaLevel1Fold", L);
+  await waitFor(l, `!!document.querySelector("[data-lib-open]")`);
+  await tap(l, "[data-lib-open]");
+  await waitFor(l, `!!document.querySelector('[data-lib-item="demoCfaNotesPdf01"]')`);
+  await tap(l, `[data-lib-item="demoCfaNotesPdf01"]`);
+  await waitFor(l, `document.querySelectorAll(".lib-pg.on canvas").length >= 1`, 20000);
+  { const fr = await l.js(`(()=>{const r=document.querySelector(".lib-vw .fs-modal-card").getBoundingClientRect(); return [r.left, r.top, Math.round(r.width), Math.round(r.height), innerWidth, innerHeight]})()`);
+    check("landscape viewer: full screen on a short viewport", fr[0] === 0 && Math.abs(fr[1]) < 1 && fr[2] === fr[4] && fr[3] === fr[5], fr); }
+  check("landscape viewer: toolbar docked at the bottom, not floating over the page", await l.js(`Math.round(document.querySelector(".lib-vw-tools").getBoundingClientRect().bottom) === innerHeight`));
+  check("landscape viewer: top bar is compact (≤ 60px)", await l.js(`document.querySelector(".lib-vw-top").getBoundingClientRect().height <= 60`), await l.js(`document.querySelector(".lib-vw-top").getBoundingClientRect().height`));
+  await l.shot(join(OUT, "l-1-pdf.png"));
+  check("landscape: zero console errors", l.errors.length === 0, l.errors);
+  l.close();
 }
 
 // ================================================================================================= feature switches

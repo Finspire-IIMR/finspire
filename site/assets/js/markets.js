@@ -5,7 +5,7 @@
    window.FinspireMarkets
      mountTicker(el)            continuous scrolling ticker of every catalog instrument (links to markets/#mk-<ID>)
      mountMini(el, ids)         compact live board (home page), default ids NIFTY SENSEX SPX US10Y BRENT USDINR
-     mountStatus(el)            "Live · updated 10:42:13 IST · refreshing every 15 s" line
+     mountStatus(el)            "Live · updated 10:42 IST" line (role=status; only the state sentence is announced)
      mountPage(root)            the Markets page (auto-runs for <main data-mk-page>)
      refresh() → Promise        poll the live sources now
      state()                    {state, liveAt, snapAt, failures, quotes}
@@ -62,7 +62,7 @@ const RAW = [
   ["NATGAS", "commodities", "cnbc", "@NG.1", "px", "Natural gas", "NAT GAS", "Futures · $ per MMBtu", 3, "h24", ["natural-gas"]],
   ["COPPER", "commodities", "cnbc", "@HG.1", "px", "Copper", "COPPER", "Futures · $ per pound", 3, "h24", ["copper"]],
   ["USDINR", "fx", "cnbc", "INR=", "px", "USD/INR", "USD/INR", "Rupees per U.S. dollar", 3, "h24", ["usd-inr", "exchange-rate"]],
-  ["DXY", "fx", "cnbc", ".DXY", "px", "Dollar index", "DXY", "Dollar vs six major currencies", 2, "h24", ["us-dollar-index", "dollar-index", "dxy"]],
+  ["DXY", "fx", "cnbc", ".DXY", "px", "Dollar index", "DXY", "Dollar vs six currencies", 2, "h24", ["us-dollar-index", "dollar-index", "dxy"]],
   ["EURUSD", "fx", "cnbc", "EUR=", "px", "EUR/USD", "EUR/USD", "Dollars per euro", 4, "h24", ["currency-pair", "exchange-rate"]],
   ["USDJPY", "fx", "cnbc", "JPY=", "px", "USD/JPY", "USD/JPY", "Yen per dollar", 2, "h24", ["currency-pair", "exchange-rate"]],
   ["GBPUSD", "fx", "cnbc", "GBP=", "px", "GBP/USD", "GBP/USD", "Dollars per pound", 4, "h24", ["currency-pair", "exchange-rate"]],
@@ -140,12 +140,13 @@ function session(inst, now) {
   if (!(wk && mins < o)) { k = 1; while (((p.wd + k) % 7) === 0 || ((p.wd + k) % 7) === 6) k++; }
   return { open, at: at(k, o), kind: "ex" };
 }
-function sessionText(inst, s, now) {
+/* short = card footer ("Closes 21:00", "Opens Tue 09:15"; IST is stated once in the hint) */
+function sessionText(inst, s, now, short) {
   if (!s) return "";
-  if (s.kind === "always") return "Trades around the clock";
-  const t = istHM(s.at), sameDay = istDay(s.at) === istDay(now);
+  if (s.kind === "always") return short ? "Around the clock" : "Trades around the clock";
+  const t = short ? fmt.time(s.at, IST) : istHM(s.at), sameDay = istDay(s.at) === istDay(now);
   const when = sameDay ? t : istWd(s.at) + " " + t;
-  if (s.kind === "24h") return s.open ? "Trades around the clock on weekdays" : "Reopens " + when;
+  if (s.kind === "24h") return s.open ? (short ? "Weekdays, around the clock" : "Trades around the clock on weekdays") : "Reopens " + when;
   return (s.open ? "Closes " : "Opens ") + when;
 }
 /* India: Moneycontrol's market_state wins when it is fresh (it knows holidays). */
@@ -243,7 +244,8 @@ function mergeQuotes(got, stamp) {
     const n = got[id], o = hub.q[id];
     if (!n) continue;
     n.at = stamp;
-    if (o && o.last !== n.last) changed.set(id, n.last > o.last ? 1 : -1);
+    // a live price replacing the saved snapshot is a baseline, not a move: no flash (direction 0)
+    if (o && o.last !== n.last) changed.set(id, o.live ? (n.last > o.last ? 1 : -1) : 0);
     else if (o && (o.chg !== n.chg || o.high !== n.high || o.low !== n.low || o.state !== n.state)) changed.set(id, 0);
     else if (!o) changed.set(id, 0);
     hub.q[id] = n;
@@ -268,13 +270,17 @@ function loadSnapshot() {
   }, () => { if (!hub.snap) hub.snap = { quotes: {}, policy: [], curve: null, failed: true }; return new Map(); });
   return hub.snapP;
 }
+/* a Moneycontrol symbol that answered 5xx is left alone for the next few polls (the snapshot covers it meanwhile) */
+const mcSkip = {};
 function poll() {
   if (hub.inflight) return hub.inflight;
   clearTimeout(hub.timer); hub.timer = 0;
   const syms = CAT.filter(c => c.prov === "cnbc").map(c => c.sym);
-  const mc = CAT.filter(c => c.prov === "mc");
+  const mc = CAT.filter(c => c.prov === "mc").filter(c => { if (mcSkip[c.id] > 0) { mcSkip[c.id]--; return false; } return true; });
   const jobs = [getJSON(CNBC_URL + encodeURIComponent(syms.join("|")) + CNBC_TAIL).then(parseCnbc)]
-    .concat(mc.map(c => getJSON(MC_URL + encodeURIComponent(c.sym)).then(j => { const q = parseMc(j); if (!q) throw new Error("no price"); return { [c.id]: q }; })));
+    .concat(mc.map(c => getJSON(MC_URL + encodeURIComponent(c.sym))
+      .catch(e => { if (/HTTP 5\d\d/.test(String(e && e.message))) mcSkip[c.id] = 4; throw e; })
+      .then(j => { const q = parseMc(j); if (!q) throw new Error("no price"); return { [c.id]: q }; })));
   hub.inflight = Promise.allSettled(jobs).then(res => {
     const got = {}; let ok = 0; const bad = [];
     res.forEach((r, i) => {
@@ -283,7 +289,9 @@ function poll() {
     });
     const now = Date.now();
     for (const id in got) got[id].live = true;
+    const first = !hub.liveAt;
     const changed = mergeQuotes(got, now);
+    if (first) changed.forEach((v, k) => changed.set(k, 0));   // the first live merge is a baseline: text updates, nothing flashes
     const next = ok ? "live" : "fallback";
     if (D.hidden) { hub.prevState = next; hub.state = "paused"; } else hub.state = next;
     if (ok) { hub.liveAt = now; hub.failures = 0; hub.partial = [...new Set(bad)]; }
@@ -382,9 +390,14 @@ function termEl(c, cls) {
   applyTerm(el);
   return el;
 }
+/* a term label is a button that opens the dictionary tip (dialog); el._mkNoTab keeps it out of the Tab order where the
+   tile around it is already one tab stop */
 function applyTerm(el) {
   const id = el._mkInst ? termFor(el._mkInst) : (el._mkTerms ? el._mkTerms.find(t => F.glossary.get(t)) : null);
-  if (id) { el.setAttribute("data-term", id); el.tabIndex = 0; el.classList.add("mk-term"); }
+  if (id) {
+    el.setAttribute("data-term", id); el.tabIndex = el._mkNoTab ? -1 : 0; el.classList.add("mk-term");
+    el.setAttribute("role", "button"); el.setAttribute("aria-haspopup", "dialog");
+  }
 }
 function phraseTerm(text, ids, cls) {
   const el = h("span", { class: cls || "" }, text);
@@ -395,81 +408,147 @@ function phraseTerm(text, ids, cls) {
 const termEls = new Set();
 function track(el) { termEls.add(el); return el; }
 F.on("glossary", () => { termEls.forEach(el => { if (el.isConnected) applyTerm(el); else termEls.delete(el); }); });
+/* The dictionary index (the biggest file) is fetched after the first live poll has answered, when the thread is free:
+   prices and news come first, the underlines and tooltips a moment later. */
+let glossaryQueued = false;
+function loadGlossaryAfterPrices() {
+  if (glossaryQueued || F.glossary.loaded()) return;
+  glossaryQueued = true;
+  let done = false, off = null;
+  const go = () => {
+    if (done) return;
+    done = true; if (off) off();
+    const fn = () => F.glossary.load().catch(() => {});
+    if ("requestIdleCallback" in W) W.requestIdleCallback(fn, { timeout: 1500 }); else setTimeout(fn, 200);
+  };
+  const ready = () => hub.liveAt || hub.state === "fallback" || hub.failures;
+  if (ready()) { go(); return; }
+  off = subscribe(() => { if (ready()) setTimeout(go, 0); });
+  setTimeout(go, 6000);   // slow sources must not hold the dictionary back for ever
+}
 
 /* ------------------------------------------------------------------ status line */
+/* {st, text, clock}: text is the announced part (changes only with the state), clock the minute stamp beside it */
 function statusInfo() {
-  const sec = Math.round(pollMs() / 1000);
   const s = hub.state;
-  if (s === "loading") return { st: "loading", text: "Loading prices…" };
-  if (s === "paused") return { st: "paused", text: "Paused" + (hub.liveAt ? " · updated " + istClock(hub.liveAt) + " IST" : "") + " · resumes when you come back" };
-  if (s === "live") return { st: "live", text: "Live · updated " + istClock(hub.liveAt) + " IST · refreshing every " + sec + " s" };
+  if (s === "loading") return { st: "loading", text: "Loading prices…", clock: "" };
+  if (s === "paused") return { st: "paused", text: "Paused · resumes when you come back", clock: "" };
+  if (s === "live") return { st: "live", text: "Live", clock: " · updated " + istHM(hub.liveAt) };
   if (s === "fallback" || s === "snapshot") {
-    if (!hub.snapAt && !Object.keys(hub.q).length) return { st: "fallback", text: s === "snapshot" ? "Connecting to live prices…" : "Prices not available right now" };
-    const when = hub.snapAt ? " (" + whenIST(hub.snapAt) + ")" : "";
-    return { st: s === "snapshot" ? "loading" : "fallback", text: s === "snapshot" ? "Last saved prices" + when + " · connecting to live prices…" : "Showing last saved prices" + when + " · retrying every " + sec + " s" };
+    if (!hub.snapAt && !Object.keys(hub.q).length) return { st: "fallback", text: s === "snapshot" ? "Connecting to live prices…" : "Prices not available right now", clock: "" };
+    const when = hub.snapAt ? " from " + whenIST(hub.snapAt) : "";
+    return { st: s === "snapshot" ? "loading" : "fallback", text: "Saved prices" + when + (s === "snapshot" ? " · connecting" : " · reconnecting"), clock: "" };
   }
-  return { st: "loading", text: "" };
+  return { st: "loading", text: "", clock: "" };
 }
 function mountStatus(el) {
   if (!el || el._mk) return;
   el._mk = 1;
   el.classList.add("mk-status");
   el.setAttribute("role", "status");
-  const dot = h("i", { class: "mk-sdot", "aria-hidden": "true" }), txt = h("span", { class: "mk-stext" });
-  F.dom.clear(el); el.append(dot, txt);
-  const upd = () => { const i = statusInfo(); el.dataset.state = i.st; setText(txt, i.text); };
+  el.title = "Refreshes every " + Math.round(pollMs() / 1000) + " s while this tab is open";
+  const dot = h("i", { class: "mk-sdot", "aria-hidden": "true" }), txt = h("span", { class: "mk-stext" }), clk = h("span", { class: "mk-stime", "aria-hidden": "true" });
+  F.dom.clear(el); el.append(dot, h("span", { class: "mk-sbody" }, txt, clk));
+  const t0 = Date.now();
+  let hold = 0;
+  const upd = () => {
+    const i = statusInfo();
+    // the saved-prices sentence is worth showing only when live prices take longer than 1.5 s
+    if (i.st === "loading" && hub.state === "snapshot" && Date.now() - t0 < 1500) {
+      if (!hold) hold = setTimeout(() => { hold = 0; upd(); }, 1500 - (Date.now() - t0));
+      return;
+    }
+    el.dataset.state = i.st;
+    setText(txt, i.text);       // announced only when the sentence itself changes
+    setText(clk, i.clock);      // the minute stamp is decorative for screen readers
+  };
   upd();
   subscribe(upd);
 }
 
 /* ------------------------------------------------------------------ ticker */
+const PAUSE_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>';
+const PLAY_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l11-6.5a1 1 0 0 0 0-1.72l-11-6.5A1 1 0 0 0 8 5.5z"/></svg>';
+function svgEl(markup) { const t = D.createElement("template"); t.innerHTML = markup; return t.content.firstChild; }   // static markup only
+/* The tape is built once the saved snapshot is in (the skeleton holds its place until then), so it never scrolls
+   label-only cells and never re-sizes when the numbers land. The board exposes every quote to screen readers, so the
+   tape itself is decorative: one tab stop (the pause button) instead of 41 links. */
 function mountTicker(el) {
   if (!el || el._mk) return;
   el._mk = 1;
-  el.classList.add("mk-tape");
-  el.setAttribute("role", "region");
-  el.setAttribute("aria-label", "Live prices ticker");
+  el.classList.add("mk-tape-slot");
+  if (!el.children.length) el.appendChild(h("div", { class: "mk-tape-skel", "aria-hidden": "true" }));
   const onPage = !!D.querySelector("[data-mk-page]");
   const refs = [];
+  let track_ = null, view = null, built = false, empty = false, paused = false;
   const mkSet = clone => {
-    const ul = h("ul", { class: "mk-tape-set", "aria-hidden": clone ? "true" : null });
+    const ul = h("ul", { class: "mk-tape-set" + (clone ? " mk-tape-clone" : ""), "aria-hidden": "true" });
     CAT.forEach(c => {
       const v = h("span", { class: "mk-tv" }), m = h("span", { class: "mk-tc" }, arrow(), h("span", { class: "mk-tcv" }));
       const href = onPage ? "#mk-" + c.id : mkHref(c.id);
-      const a = h(href ? "a" : "span", { class: "mk-ti", href, tabindex: clone ? "-1" : null },
-        h("b", { class: "mk-tn" }, c.tick), v, m);
+      const a = h(href ? "a" : "span", { class: "mk-ti", href, tabindex: "-1" }, h("b", { class: "mk-tn" }, c.tick), v, m);
       ul.appendChild(h("li", null, a));
       refs.push({ c, v, m, mv: m.lastChild, a });
     });
     return ul;
   };
-  const track_ = h("div", { class: "mk-tape-track" }, mkSet(false), mkSet(true));
-  F.dom.clear(el); el.appendChild(track_);
+  function build() {
+    built = true; empty = false;
+    track_ = h("div", { class: "mk-tape-track" }, mkSet(false), mkSet(true));
+    view = h("div", { class: "mk-tape-view" }, track_);
+    const btn = h("button", { class: "mk-tape-pause", type: "button", "aria-pressed": "false", "aria-label": "Pause ticker", title: "Pause ticker" }, svgEl(PAUSE_SVG));
+    btn.addEventListener("click", () => {
+      paused = !paused;
+      el.classList.toggle("mk-paused", paused);
+      btn.setAttribute("aria-pressed", String(paused));
+      btn.setAttribute("aria-label", paused ? "Play ticker" : "Pause ticker"); btn.title = paused ? "Play ticker" : "Pause ticker";
+      btn.replaceChildren(svgEl(paused ? PLAY_SVG : PAUSE_SVG));
+    });
+    F.dom.clear(el);
+    el.classList.add("mk-tape"); el.classList.remove("mk-tape-empty");
+    el.setAttribute("role", "region");
+    el.setAttribute("aria-label", "Live prices ticker");
+    el.append(view, btn);
+    // the animation runs only while the ticker is on screen and the tab is visible
+    if ("IntersectionObserver" in W) new IntersectionObserver(es => es.forEach(e => el.classList.toggle("mk-off", !e.isIntersecting))).observe(el);
+    // the loop length follows the set's real width (fonts, value widths)
+    if ("ResizeObserver" in W) new ResizeObserver(() => sizeTape()).observe(track_.firstChild);
+    else if (D.fonts && D.fonts.ready) D.fonts.ready.then(sizeTape);
+  }
+  function showEmpty() {
+    if (empty) return;
+    empty = true;
+    el.classList.add("mk-tape", "mk-tape-empty");
+    el.replaceChildren(h("p", { class: "mk-tape-msg", role: "status" }, "Prices not available right now"));
+  }
   const upd = changed => {
+    if (!built) {
+      if (hub.q && Object.keys(hub.q).length) build();
+      else if (hub.state === "fallback" || (hub.snap && hub.snap.failed && hub.failures)) showEmpty();
+      else return;
+      if (!built) return;
+      changed = null;
+    }
     for (const r of refs) {
       if (changed && !changed.has(r.c.id)) continue;
-      const q = hub.q[r.c.id], d = dirOf(q);
+      const q = hub.q[r.c.id], d = dirOf(q), na = !q || q.last == null;
+      r.a.classList.toggle("mk-na", na);
       setText(r.v, valText(r.c, q));
-      setText(r.mv, moveText(r.c, q).replace(/^[+−]/, ""));
+      setText(r.mv, na ? "" : moveText(r.c, q).replace(/^[+−]/, ""));
       setDir(r.m, d);
-      r.a.setAttribute("aria-label", r.c.name + " " + valText(r.c, q) + ", " + (d > 0 ? "up " : d < 0 ? "down " : "") + moveText(r.c, q).replace(/^[+−]/, ""));
       if (changed && changed.get(r.c.id)) flash(r.v, changed.get(r.c.id));
     }
-    if (!changed) sizeTape();
   };
-  let sized = 0;
+  let sized = 0, lastW = 0;
   function sizeTape() {
-    if (sized) return;
+    if (sized || !track_) return;
     sized = 1;
     requestAnimationFrame(() => {
-      const w = track_.firstChild.getBoundingClientRect().width;
-      if (w > 0) track_.style.setProperty("--mk-dur", Math.round(w / 42) + "s");
       sized = 0;
+      const w = track_.firstChild.getBoundingClientRect().width;
+      if (w > 0 && Math.abs(w - lastW) > 2) { lastW = w; track_.style.setProperty("--mk-dur", Math.round(w / 42) + "s"); }
     });
   }
-  // the animation runs only while the ticker is on screen and the tab is visible
-  if ("IntersectionObserver" in W) new IntersectionObserver(es => es.forEach(e => el.classList.toggle("mk-off", !e.isIntersecting))).observe(el);
-  if (D.fonts && D.fonts.ready) D.fonts.ready.then(() => { sized = 0; sizeTape(); });
   subscribe(upd);
 }
 
@@ -497,12 +576,13 @@ function card(c) {
     h("div", { class: "mk-track" }, r.fill, r.prev, r.mark),
     h("div", { class: "mk-range-l" }, r.lo, h("span", { class: "mk-range-k" }, "Day range"), r.hi));
   r.asof = h("span", { class: "mk-asof" }); r.sess = h("span", { class: "mk-sess" });
+  r.delay = h("span", { class: "mk-delay", title: "Quote is delayed by the source", hidden: true }, "delayed");
   r.el = h("article", { class: "mk-card", id: "mk-" + c.id, tabindex: "-1", "aria-label": c.name },
     h("div", { class: "mk-card-top" }, h("h3", { class: "mk-name" }, r.name), r.pill),
     h("p", { class: "mk-sub" }, c.sub),
     h("div", { class: "mk-px" }, r.last, r.chg),
     r.rng,
-    h("div", { class: "mk-foot" }, r.asof, r.sess));
+    h("div", { class: "mk-foot" }, r.asof, r.delay, r.sess));
   return r;
 }
 function updCard(r, d, now) {
@@ -520,8 +600,9 @@ function updCard(r, d, now) {
     setText(r.lo, c.kind === "yld" ? fmt.num(b.lo, 3) : fmt.num(b.lo, c.dp)); setText(r.hi, c.kind === "yld" ? fmt.num(b.hi, 3) : fmt.num(b.hi, c.dp));
     r.rng.setAttribute("aria-label", "Day range " + r.lo.textContent + " to " + r.hi.textContent + ", last " + r.last.textContent);
   } else { setText(r.lo, ""); setText(r.hi, ""); r.rng.setAttribute("aria-label", "Day range not available"); }
-  setText(r.asof, asOfText(q, now, true) + (q && q.rt === false && q.asOf && !/^\d{4}-\d{2}-\d{2}$/.test(q.asOf) ? " · delayed" : ""));
-  r.asof.title = asOfText(q, now) + (q && q.rt === false ? " (delayed quote)" : "");
+  setText(r.asof, asOfText(q, now, true));
+  r.asof.title = asOfText(q, now);
+  r.delay.hidden = !(q && q.rt === false && q.asOf && !/^\d{4}-\d{2}-\d{2}$/.test(q.asOf));
   updSess(r, now);
 }
 function updSess(r, now) {
@@ -531,7 +612,8 @@ function updSess(r, now) {
   setText(r.pill.lastChild, open ? "Open" : "Closed");
   const S = SESS[r.c.sess];
   r.pill.title = S && S.o ? S.where + " " + S.o + "–" + S.c + " local time, Mon–Fri (approx.; holidays not shown)" : "";
-  setText(r.sess, s ? sessionText(r.c, Object.assign({}, s, { open: !!open }), now) : "");
+  setText(r.sess, s ? sessionText(r.c, Object.assign({}, s, { open: !!open }), now, true) : "");
+  r.sess.title = s ? sessionText(r.c, Object.assign({}, s, { open: !!open }), now) : "";
   return open;
 }
 
@@ -586,17 +668,25 @@ function mountBoard(seg, board) {
     else if (e.key === "Home") j = 0; else if (e.key === "End") j = ids.length - 1;
     if (j != null) { e.preventDefault(); select(ids[j], true); tabs[ids[j]].focus(); }
   });
-  let cur = null, userPicked = false;
+  let cur = null, userPicked = false, hT = 0;
   function select(id, user) {
     if (user) userPicked = true;
     if (cur === id) return;
+    const animate = !!cur && !reduce.matches, h0 = animate ? board.offsetHeight : 0;
     cur = id;
     REGIONS.forEach(g => {
       const on = g.id === id;
-      panels[g.id].hidden = !on;
+      panels[g.id].setAttribute("aria-hidden", String(!on));   // hidden panels stay in the grid and cross-fade
       tabs[g.id].setAttribute("aria-selected", String(on));
       tabs[g.id].tabIndex = on ? 0 : -1;
     });
+    if (animate) {   // the board slides to the new panel's height instead of jumping; everything below moves with it
+      clearTimeout(hT);
+      board.style.height = h0 + "px"; board.classList.add("mk-anim");
+      const h1 = panels[id].offsetHeight;
+      requestAnimationFrame(() => { board.style.height = h1 + "px"; });
+      hT = setTimeout(() => { board.style.height = ""; board.classList.remove("mk-anim"); }, 300);
+    }
     seg.dataset.cur = id;
     if (user) { try { sessionStorage.setItem("mk.region", id); } catch (e) {} }
     const t = tabs[id];
@@ -620,9 +710,11 @@ function mountBoard(seg, board) {
     const best = ranks.slice().sort((a, b) => b[1] - a[1])[0];
     return best[1] > 0 ? best[0] : "india";
   }
+  let firstData = true;
   const upd = changed => {
     const now = Date.now();
-    for (const id in cards) if (!changed || changed.has(id)) updCard(cards[id], changed ? changed.get(id) : 0, now);
+    const all = !changed || !changed.size;   // first paint, a refresh with nothing new, or an empty snapshot: paint every card
+    for (const id in cards) if (all || changed.has(id)) updCard(cards[id], changed ? changed.get(id) || 0 : 0, now);
     REGIONS.forEach(g => {
       const info = regionInfo(g, now), t = tabs[g.id];
       t._st.classList.toggle("mk-open", info.open > 0);
@@ -631,8 +723,11 @@ function mountBoard(seg, board) {
       setText(t._mv, txt); setDir(t._mv, dirOf(lead[1]));
       t.setAttribute("aria-label", g.name + (info.open ? ", " + info.open + " of " + info.n + " markets open" : ", markets closed") + (txt ? ", " + txt : ""));
     });
-    if (!cur) { select(defaultRegion(now)); if (location.hash) goHash(); }
+    // the region was picked from exchange hours before any data; the first data only matters on an Indian holiday
+    if (firstData) { firstData = false; if (!userPicked) { const d = defaultRegion(now); if (d !== cur) select(d); } }
   };
+  select(defaultRegion(Date.now()));
+  if (location.hash) requestAnimationFrame(goHash);
   // refresh open/closed every 30 s (cheap; skipped while hidden)
   setInterval(() => { if (!D.hidden && hub.snap) { const now = Date.now(); for (const id in cards) updSess(cards[id], now); upd(new Map()); } }, 30000);
   function goHash() {
@@ -713,6 +808,7 @@ function renderPolicy(el, policy) {
       h("tr", { class: "mk-pol-bank" }, h("th", { colspan: "4", scope: "colgroup" }, g.short ? h("span", { class: "mk-bank-tag" }, g.short) : null, h("span", null, g.key))));
     g.rows.forEach(p => {
       const val = policyValue(p), missing = val === "—";
+      if (missing && p.manual) return;   // a hand-kept rate with no value yet is left out rather than shown as a dash
       const nm = track(phraseTerm(p.name || p.id || "", [p.term].concat(POLICY_TERMS[p.id] || []).filter(Boolean), "mk-pol-name"));
       const asOf = p.asOf ? fmt.date(p.asOf) : "";
       body.appendChild(h("tr", { class: "mk-pol-r" + (missing ? " mk-na" : "") },
@@ -721,7 +817,7 @@ function renderPolicy(el, policy) {
         h("td", { class: "mk-pol-d" }, missing ? h("span", { class: "mk-muted" }, "Not available right now") : asOf + (p.stale ? " (last saved)" : "")),
         h("td", { class: "mk-pol-s" }, srcLink(p))));
     });
-    tb.appendChild(body);
+    if (body.children.length > 1) tb.appendChild(body);
   });
   el.appendChild(tb);
 }
@@ -838,12 +934,14 @@ function curveNote(el, T, ser) {
     const d10 = y10 - M.y[i10], d2 = y2 - M.y[i2], sM = M.y[i10] - M.y[i2], dg = s - sM;
     const mv = (d, n) => Math.abs(d) < 0.005 ? `the ${n} is unchanged` : `the ${n} has ${d > 0 ? "risen" : "fallen"} ${bp(d)}`;
     const since = M.date ? "Since " + fmt.date(M.date, { year: undefined }) : "Over the past month";
-    const gap = Math.abs(dg) < 0.05 ? `so the gap is about the same (${fmt.num(sM, 2)} then, ${fmt.num(s, 2)} now)`
-      : `so the curve is ${dg > 0 ? "steeper" : "flatter"}: the gap went from ${fmt.num(sM, 2)} to ${fmt.num(s, 2)} points`;
+    const gap = Math.abs(dg) < 0.05 ? `so the gap is about the same (${fmt.num(sM, 2)} pp then, ${fmt.num(s, 2)} pp now)`
+      : `so the curve is ${dg > 0 ? "steeper" : "flatter"}: the gap went from ${fmt.num(sM, 2)} pp to ${fmt.num(s, 2)} pp`;
     body.appendChild(h("p", null, `${since}, ${mv(d10, "10-year")} and ${mv(d2, "2-year")}, ${gap}.`));
   }
   el.appendChild(body);
-  F.glossary.annotate(body, { max: 6 });
+  // underlines come once the dictionary index is in (it loads after prices and news); annotate() queues itself
+  if (F.glossary.loaded()) F.glossary.annotate(body, { max: 6 });
+  else F.on("glossary", () => { if (body.isConnected) F.glossary.annotate(body, { max: 6 }); });
 }
 
 /* ------------------------------------------------------------------ world trading hours (in IST) */
@@ -917,7 +1015,9 @@ function mountMini(el, ids) {
   el.classList.add("mk-mini");
   const tiles = ids.map(id => {
     const c = BY[id], r = { c };
-    r.name = track(termEl(c, "mk-tile-n"));
+    r.name = h("span", { class: "mk-tile-n" }, c.name);
+    r.name._mkInst = c; r.name._mkNoTab = true;   // the tile's link is the one tab stop; the tip still opens on hover/tap
+    track(r.name); applyTerm(r.name);
     r.dot = h("i", { class: "mk-dot", "aria-hidden": "true" });
     r.v = h("span", { class: "mk-tile-v" }, "—");
     r.m = h("span", { class: "mk-tile-c mk-flat" }, arrow(), h("span", null, "—"));
@@ -950,7 +1050,7 @@ function mountMini(el, ids) {
   };
   setInterval(() => { if (!D.hidden && hub.snap) upd(new Map()); }, 30000);
   subscribe(upd);
-  if (!F.glossary.loaded()) F.glossary.load().catch(() => {});
+  loadGlossaryAfterPrices();
 }
 
 /* ------------------------------------------------------------------ Markets page */
@@ -978,8 +1078,8 @@ function mountPage(root) {
   });
   root.querySelectorAll("[data-mk-term]").forEach(el => { el._mkTerms = el.getAttribute("data-mk-term").split(/\s+/); track(el); applyTerm(el); });
   const foot = D.getElementById("fsFootNote");
-  if (foot) foot.textContent = "Prices: CNBC, Moneycontrol; may be delayed. Market hours approximate (holidays not shown). News: publishers' feeds.";
-  F.glossary.load().catch(() => {});
+  if (foot) foot.textContent = "Prices from CNBC and Moneycontrol, may be delayed. News from the publishers’ feeds; headlines link to the source.";
+  loadGlossaryAfterPrices();
 }
 
 const API = {

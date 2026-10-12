@@ -26,7 +26,9 @@ TOP = ROOT.parent                                             # session folder w
 OUT = TOP / "artifact-out"
 
 BASE = ["assets/css/pages.css", "assets/css/shell.css", "assets/js/finspire.js",
-        "assets/img/logo-light.png", "assets/img/logo-dark.png"]
+        "assets/img/logo-light.png", "assets/img/logo-dark.png", "assets/img/icon.png", "assets/img/apple-touch-icon.png",
+        "assets/fonts/plex-sans-latin.woff2", "assets/fonts/plex-mono-400-latin.woff2", "assets/fonts/plex-mono-500-latin.woff2",
+        "assets/fonts/outfit-latin.woff2", "assets/fonts/instrument-serif-italic-latin.woff2"]
 PAGES = {
     "dictionary": {"copy": ["assets/css/dictionary.css", "assets/js/dictionary.js"], "live": ["news-terms.json"]},
     "markets": {"copy": ["assets/css/markets.css", "assets/js/markets.js", "assets/js/news.js"],
@@ -81,6 +83,20 @@ def main():
         src = ROOT / "data/live" / name
         if src.exists(): shutil.copy2(src, out / "data/live" / name)
         else: (out / "data/live" / name).write_text(json.dumps(stubs[name]))
+    # news-terms shards: the dictionary page reads data/live/news-terms/<cat>.json first (whole file is the fallback)
+    try:
+        idx = json.loads((out / "data/glossary/index.json").read_text())
+        terms = json.loads((out / "data/live/news-terms.json").read_text())
+        cat_of = {row[0]: row[2] for row in idx.get("t", [])}
+        shards = {}
+        for tid, items in terms.items():
+            shards.setdefault(cat_of.get(tid, "other"), {})[tid] = items
+        (out / "data/live/news-terms").mkdir(parents=True, exist_ok=True)
+        for cat in idx.get("cats", {}):
+            (out / "data/live/news-terms" / f"{cat}.json").write_text(json.dumps(shards.get(cat, {}), ensure_ascii=False, separators=(",", ":")))
+    except Exception as e:
+        print("warning: news-terms shards not built:", e, file=sys.stderr)
+
     files = {str(p.relative_to(out)): os.path.relpath(p, TOP) for p in sorted(out.rglob("*")) if p.is_file()}
     total = sum((out / k).stat().st_size for k in files)
     (out / "_files.json").write_text(json.dumps(files, indent=1))

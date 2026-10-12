@@ -8,15 +8,17 @@
 <meta name="color-scheme" content="dark">
 <title>Markets &amp; News · Finspire</title>
 <meta name="description" content="Live prices from India and the world's major markets, interest rates and the yield curve, and today's financial news with key terms explained.">
-<link rel="icon" type="image/png" href="../assets/img/logo-light.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-sans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-mono-400-latin.woff2">
 <link rel="preconnect" href="https://quote.cnbc.com" crossorigin>
 <link rel="preconnect" href="https://priceapi.moneycontrol.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="../assets/css/pages.css">
 <link rel="stylesheet" href="../assets/css/shell.css">
 <link rel="stylesheet" href="../assets/css/markets.css">
+<script src="../config.js"></script>
+<script>(function(c){if(c&&c.googleClientId&&!(c.features&&c.features.signin===false))document.documentElement.classList.add("fs-signin")})(window.FINSPIRE_CONFIG)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -62,14 +64,14 @@
     <div class="mk-hero">
     <header class="pg-head mk-head">
       <p class="eyebrow">Markets &amp; News</p>
-      <h1 class="h1">Markets, live. <span class="dim">Explained as they move.</span></h1>
+      <h1 class="h1">Markets, <em class="ital">live</em>. <span class="dim">Explained as they move.</span></h1>
       <p class="lede">Prices from India and the world's major markets, the interest rates behind them, and today's financial news. Underlined words open a plain meaning from the Finspire Dictionary.</p>
       <p class="mk-status" data-mk-status data-state="loading"><i class="mk-sdot" aria-hidden="true"></i><span class="mk-stext">Loading prices…</span></p>
     </header>
     <section class="mk-clk-wrap" aria-label="World trading hours" data-mk-clock></section>
     </div>
 
-    <nav class="mk-jump" aria-label="On this page">
+    <nav class="mk-jump fs-xrow" aria-label="On this page">
       <a href="#board">Stock markets</a>
       <a href="#rates">Interest rates</a>
       <a href="#more">Commodities &amp; currencies</a>
@@ -80,7 +82,7 @@
       <div class="mk-sec-head mk-sec-head-row">
         <div>
           <p class="eyebrow">Stock markets</p>
-          <h2 class="h3" id="mkBoardH">Indices by region</h2>
+          <h2 class="h2" id="mkBoardH">Indices by <em class="ital">region</em></h2>
         </div>
         <div class="mk-seg" data-mk-seg>
           <span class="mk-seg-sk"></span><span class="mk-seg-sk"></span><span class="mk-seg-sk"></span><span class="mk-seg-sk"></span>
@@ -94,13 +96,13 @@
           <div class="mk-card mk-sk-card" aria-hidden="true"><span class="skel skel-line w40"></span><span class="skel skel-line w60"></span><span class="skel mk-sk-big"></span><span class="skel skel-line w80"></span></div>
         </div>
       </div>
-      <p class="mk-hint">The bar under each price runs from today's low to today's high; the dot is the latest price and the tick is yesterday's close. Open and closed follow each exchange's regular weekday hours, shown in IST.</p>
+      <p class="mk-hint">The bar runs from today’s low to today’s high. The dot is the latest price, the tick is yesterday’s close. Open/closed uses each exchange’s usual weekday hours; times are IST.</p>
     </section>
 
     <section class="mk-sec" id="rates" aria-labelledby="mkRatesH">
       <div class="mk-sec-head">
         <p class="eyebrow">Interest rates</p>
-        <h2 class="h2" id="mkRatesH">The price of money</h2>
+        <h2 class="h2" id="mkRatesH">The price of <em class="ital">money</em></h2>
         <p class="lede">Central banks set short-term policy rates. Bond markets set longer-term yields. Together they decide what loans, deposits and mortgages cost.</p>
       </div>
       <div class="mk-rates">
@@ -142,14 +144,14 @@
     <section class="mk-sec" id="more" aria-labelledby="mkMoreH">
       <div class="mk-sec-head">
         <p class="eyebrow">Commodities, currencies &amp; crypto</p>
-        <h2 class="h2" id="mkMoreH">What the world trades</h2>
+        <h2 class="h2" id="mkMoreH">What the world <em class="ital">trades</em></h2>
       </div>
       <div class="mk-trio">
         <article class="mk-box"><div class="mk-box-h"><h3 class="mk-box-t">Commodities</h3><p class="mk-box-s">Front-month futures, in U.S. dollars.</p></div><ul data-mk-rows="commodities"><li class="mk-row mk-sk-row"><span class="skel skel-line w80"></span></li><li class="mk-row mk-sk-row"><span class="skel skel-line w60"></span></li></ul></article>
         <article class="mk-box"><div class="mk-box-h"><h3 class="mk-box-t">Currencies</h3><p class="mk-box-s">How much of one currency buys another. USD/INR up means a weaker rupee.</p></div><ul data-mk-rows="fx"><li class="mk-row mk-sk-row"><span class="skel skel-line w80"></span></li><li class="mk-row mk-sk-row"><span class="skel skel-line w60"></span></li></ul></article>
         <article class="mk-box"><div class="mk-box-h"><h3 class="mk-box-t">Crypto</h3><p class="mk-box-s">Trades every day, around the clock.</p></div><ul data-mk-rows="crypto"><li class="mk-row mk-sk-row"><span class="skel skel-line w80"></span></li></ul><p class="mk-box-note">Bitcoin and ether are the two largest cryptocurrencies by market value. Their prices often swing several percent in a day, far more than major stock indices.</p></article>
       </div>
-      <p class="mk-srcnote">Prices from CNBC and Moneycontrol, may be delayed; market hours approximate (holidays not shown). Policy rates from the RBI, FRED (Federal Reserve and ECB) and the Bank of England; yield curve from the U.S. Treasury. Nothing here is investment advice.</p>
+      <p class="mk-srcnote">Prices from CNBC and Moneycontrol and may be delayed. Market hours are approximate and ignore holidays. Policy rates from the RBI, FRED (Fed and ECB) and the Bank of England; yield curve from the U.S. Treasury.</p>
     </section>
   </div>
 
@@ -157,8 +159,8 @@
     <div class="wrap">
       <div class="nw-head">
         <p class="eyebrow">News</p>
-        <h2 class="h2" id="nwH">Today's financial news, <span class="dim">with the jargon explained.</span></h2>
-        <p class="lede">Headlines from Indian and global publishers over the last three days. Hover or tap an underlined word for its meaning; each story links to the publisher.</p>
+        <h2 class="h2" id="nwH">Today's financial news, <span class="dim">with the jargon <em class="ital">explained</em>.</span></h2>
+        <p class="lede">Headlines from Indian and global publishers over the last three days. Tap an underlined word for its meaning. Each story opens on the publisher’s site.</p>
       </div>
       <div data-nw-feed></div>
     </div>
@@ -187,7 +189,6 @@
   </div>
 </footer>
 
-<script src="../config.js"></script>
 <script src="../assets/js/finspire.js"></script>
 <script src="../assets/js/markets.js"></script>
 <script src="../assets/js/news.js"></script>

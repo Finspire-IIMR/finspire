@@ -85,11 +85,18 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
 
 // ===================================================================================================== desktop, real data
 {
-  const p = await open(PAGE, { width: 1280, height: 900, wait: 6000 });
+  const p = await open(PAGE, { width: 1280, height: 900, wait: 4000 });
+  // a cold profile fetches Google Fonts first, so wait for the first live poll and the dictionary index rather than a fixed time
+  await waitFor(p, "window.FinspireMarkets && (FinspireMarkets.state().liveAt > 0 || FinspireMarkets.state().state === 'fallback')", 15000);
+  await waitFor(p, "Finspire.glossary.loaded()", 10000); await sleep(600);
   const s = await p.js(`(()=>{const q=s=>[...document.querySelectorAll(s)], st=FinspireMarkets.state();
     return {title:document.title, cards:q(".mk-card:not(.mk-sk-card)").length, withNum:q(".mk-card .mk-last").filter(e=>/\\d/.test(e.textContent)).length,
-      seg:q(".mk-seg-b").map(b=>(b.querySelector(".mk-seg-f")||b.querySelector(".mk-seg-n")).textContent.trim()), visPanels:q(".mk-panel").filter(e=>!e.hidden).length,
+      seg:q(".mk-seg-b").map(b=>(b.querySelector(".mk-seg-f")||b.querySelector(".mk-seg-n")).textContent.trim()), visPanels:q(".mk-panel").filter(e=>e.getAttribute("aria-hidden")!=="true").length,
       tape:q(".mk-tape-set").length, tapeItems:q(".mk-tape-set:first-child .mk-ti").length, tapeNum:q(".mk-tape-set:first-child .mk-tv").filter(e=>/\\d/.test(e.textContent)).length,
+      tapeTab:q(".mk-ti").every(a=>a.tabIndex===-1), tapeHidden:q(".mk-tape-set").every(u=>u.getAttribute("aria-hidden")==="true"), pause:q(".mk-tape .mk-tape-pause").length, tapeSkel:q(".mk-tape-skel").length,
+      flashed:q(".mk-last,.mk-tv,.mk-row-v").filter(e=>[...e.classList].some(c=>/^mk-fl-/.test(c))).length, termRole:q(".mk-term").every(e=>e.getAttribute("role")==="button"&&e.getAttribute("aria-haspopup")==="dialog"),
+      polNa:q(".mk-pol-r.mk-na").length, dxy:document.querySelector("#mk-DXY small")?.textContent, h2:getComputedStyle(document.getElementById("mkBoardH")).fontSize===getComputedStyle(document.getElementById("mkRatesH")).fontSize,
+      pillColor:getComputedStyle(document.querySelector(".mk-card .mk-pill:not(.mk-open), .mk-clk .mk-pill:not(.mk-open)")||document.body).color, delayed:q(".mk-delay:not([hidden])").length, sessShort:q(".mk-sess").every(e=>!/IST/.test(e.textContent)),
       pol:q(".mk-pol-r").length, polBanks:q(".mk-pol-bank").map(e=>e.textContent), rbi:q(".mk-pol-g")[0]?.querySelectorAll(".mk-pol-r").length,
       yields:q("[data-mk-rows=yields] .mk-row").length, yNum:q("[data-mk-rows=yields] .mk-row-c").filter(e=>/bp/.test(e.textContent)).length,
       cmd:q("[data-mk-rows=commodities] .mk-row").length, fx:q("[data-mk-rows=fx] .mk-row").length, crypto:q("[data-mk-rows=crypto] .mk-row").length,
@@ -101,7 +108,12 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
   check("page: title", s.title === "Markets & News · Finspire", s.title);
   check("board: 19 index cards with real numbers", s.cards === 19 && s.withNum >= 17, [s.cards, s.withNum]);
   check("board: India · Americas · Europe · Asia-Pacific, one panel shown", s.seg.join() === "India,Americas,Europe,Asia-Pacific" && s.visPanels === 1, s.seg);
-  check("ticker: every catalog instrument (41) plus a clone for the loop", s.tape === 2 && s.tapeItems === 41 && s.tapeNum >= 38, s);
+  check("ticker: every catalog instrument (41) plus a clone for the loop", s.tape === 2 && s.tapeItems === 41 && s.tapeNum >= 38, [s.tape, s.tapeItems, s.tapeNum]);
+  check("ticker: one tab stop (pause button), items out of the Tab order, sets aria-hidden, skeleton gone", s.tapeTab && s.tapeHidden && s.pause === 1 && s.tapeSkel === 0, [s.tapeTab, s.tapeHidden, s.pause, s.tapeSkel]);
+  check("smooth: the first live merge is a baseline, nothing flashed", s.flashed === 0, s.flashed);
+  check("a11y: term labels are buttons that open a dialog", s.termRole);
+  check("policy: no dash-and-apology rows (BoJ/PBoC without a value are left out)", s.polNa === 0, s.polNa);
+  check("copy: DXY subtitle fits, board heading is an .h2, Closed pill uses ink2, footer says delayed/Closes 21:00", s.dxy === "Dollar vs six currencies" && s.h2 && s.pillColor === "rgb(189, 189, 198)" && s.sessShort, [s.dxy, s.h2, s.pillColor, s.sessShort]);
   check("rates: policy table with RBI repo/SDF/MSF/CRR/SLR grouped", s.pol >= 8 && s.rbi === 5 && /Reserve Bank of India/.test(s.polBanks[0]), [s.pol, s.rbi, s.polBanks]);
   check("rates: 8 government bond yields with bp changes", s.yields === 8 && s.yNum >= 6, [s.yields, s.yNum]);
   check("rows: commodities 6, currencies 6, crypto 2", s.cmd === 6 && s.fx === 6 && s.crypto === 2, s);
@@ -109,8 +121,10 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
   check("curve: explainer links terms to the dictionary", s.noteTerms >= 1, s.noteTerms);
   check("board: instrument names carry dictionary terms", s.nameTerms >= 8, s.nameTerms);
   check("data: snapshot loaded, skeletons gone", s.snapAt > 0 && s.skel === 0, [s.snapAt, s.skel]);
-  check("status: live, or an honest fallback", /^Live · updated \d\d:\d\d:\d\d IST · refreshing every 15 s$/.test(s.status) || /^Showing last saved prices/.test(s.status), s.status);
-  check("notes: source + delay + approximate hours", /CNBC and Moneycontrol, may be delayed; market hours approximate \(holidays not shown\)/.test(s.src) && /CNBC, Moneycontrol; may be delayed/.test(s.foot), s.src);
+  check("status: live (minutes only), or an honest fallback", /^Live · updated \d\d:\d\d IST$/.test(s.status) || /^Saved prices from .+ · reconnecting$/.test(s.status), s.status);
+  const stA = await p.js(`(()=>{const e=document.querySelector("[data-mk-status]"); return {role:e.getAttribute("role"), title:e.title, live:e.querySelector(".mk-stext").textContent, clockHidden:e.querySelector(".mk-stime").getAttribute("aria-hidden")}})()`);
+  check("status: only the state word is announced; the clock is decorative; refresh rate in the title", stA.role === "status" && /^(Live|Saved prices)/.test(stA.live) && !/\d\d:\d\d/.test(stA.live) && stA.clockHidden === "true" && /every 15 s/.test(stA.title), stA);
+  check("notes: source + delay + approximate hours, said once", /Prices from CNBC and Moneycontrol and may be delayed\. Market hours are approximate and ignore holidays\./.test(s.src) && /CNBC and Moneycontrol, may be delayed/.test(s.foot) && !/investment advice/.test(s.src), [s.src, s.foot]);
   check("real live poll: CNBC and Moneycontrol reached", s.state === "live", [s.state, s.status]);
   check("desktop: no horizontal overflow", await noOverflow(p));
 
@@ -120,20 +134,31 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
   check("ticker: continuous CSS transform animation", tk.name === "mkTape" && tk.state === "running" && /s$/.test(tk.tf), tk);
   await hover(p, ".mk-tape-set:first-child li:nth-child(3) .mk-ti");
   check("ticker: pauses on hover", await p.js(`getComputedStyle(document.querySelector(".mk-tape-track")).animationPlayState`) === "paused");
-  await p.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: 640, y: 600 });
+  await p.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: 640, y: 600 }); await sleep(200);
+  await click(p, ".mk-tape-pause"); await p.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: 640, y: 600 }); await sleep(250);
+  const pz = await p.js(`({state:getComputedStyle(document.querySelector(".mk-tape-track")).animationPlayState, pressed:document.querySelector(".mk-tape-pause").getAttribute("aria-pressed"), label:document.querySelector(".mk-tape-pause").getAttribute("aria-label"), h:document.querySelector(".mk-tape-pause").getBoundingClientRect().height})`);
+  check("ticker: pause button stops the tape, flips to Play, 40px", pz.state === "paused" && pz.pressed === "true" && pz.label === "Play ticker" && pz.h === 40, pz);
+  await click(p, ".mk-tape-pause"); await p.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: 640, y: 600 }); await sleep(250);
+  check("ticker: play again", await p.js(`getComputedStyle(document.querySelector(".mk-tape-track")).animationPlayState`) === "running");
 
   // segmented control (mouse + keyboard)
   await click(p, "#mk-t-americas");
-  let seg = await p.js(`({sel:document.querySelector(".mk-seg-b[aria-selected=true]").id, vis:[...document.querySelectorAll(".mk-panel")].filter(e=>!e.hidden).map(e=>e.id), n:document.querySelectorAll("#mk-p-americas .mk-card").length})`);
+  let seg = await p.js(`({sel:document.querySelector(".mk-seg-b[aria-selected=true]").id, vis:[...document.querySelectorAll(".mk-panel")].filter(e=>e.getAttribute("aria-hidden")!=="true").map(e=>e.id), n:document.querySelectorAll("#mk-p-americas .mk-card").length})`);
   check("segmented: click Americas shows its 4 cards", seg.sel === "mk-t-americas" && seg.vis.join() === "mk-p-americas" && seg.n === 4, seg);
   await key(p, "ArrowRight");
   seg = await p.js(`({sel:document.querySelector(".mk-seg-b[aria-selected=true]").id, focus:document.activeElement.id})`);
   check("segmented: arrow keys move to Europe", seg.sel === "mk-t-europe" && seg.focus === "mk-t-europe", seg);
   await click(p, "#mk-t-india");
+  // switching regions cross-fades in place and the board slides to the new height (no jump)
+  const hA = await p.js(`(()=>{const b=document.querySelector("[data-mk-board]"); const y=document.getElementById("rates").getBoundingClientRect().top; document.getElementById("mk-t-asia").click(); return {h:b.style.height, anim:b.classList.contains("mk-anim"), y, hid:getComputedStyle(document.getElementById("mk-p-india")).visibility, op:getComputedStyle(document.getElementById("mk-p-asia")).opacity}})()`);
+  await sleep(450);
+  const hB = await p.js(`({h:document.querySelector("[data-mk-board]").style.height, anim:document.querySelector("[data-mk-board]").classList.contains("mk-anim"), hid:getComputedStyle(document.getElementById("mk-p-india")).visibility, y:document.getElementById("rates").getBoundingClientRect().top})`);
+  check("segmented: Asia (two rows) animates the board height, old panel fades out", hA.anim && /px$/.test(hA.h) && !hB.anim && hB.h === "" && hB.hid === "hidden" && hB.y > hA.y, { hA, hB });
+  await click(p, "#mk-t-india");
   // open/closed pill and range bar
   const card = await p.js(`(()=>{const c=document.getElementById("mk-NIFTY"); return {pill:c.querySelector(".mk-pill").textContent, title:c.querySelector(".mk-pill").title,
     mark:c.querySelector(".mk-mark").style.left, lo:c.querySelector(".mk-lo").textContent, hi:c.querySelector(".mk-hi").textContent, sess:c.querySelector(".mk-sess").textContent}})()`);
-  check("card: Open/Closed pill, day-range bar and session text", /^(Open|Closed)$/.test(card.pill) && /09:15–15:30/.test(card.title) && /%$/.test(card.mark) && /\d/.test(card.lo + card.hi) && /(Closes|Opens) /.test(card.sess), card);
+  check("card: Open/Closed pill, day-range bar and short session text", /^(Open|Closed)$/.test(card.pill) && /09:15–15:30/.test(card.title) && /%$/.test(card.mark) && /\d/.test(card.lo + card.hi) && /^(Closes|Opens) (\w{3} )?\d\d:\d\d$/.test(card.sess), card);
   await p.shot(join(OUT, "desk-top.png"));
 
   // instrument tooltip
@@ -159,13 +184,22 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
     return {cards:q(".nw-card:not(.nw-skel)").length, tabs:q(".nw-tab").map(t=>t.dataset.r), chips:q(".nw-chip").map(t=>t.dataset.m), count:document.querySelector(".nw-count").textContent,
       con:q(".nw-con-a").length, conHref:q(".nw-con-a").every(a=>/^\\.\\.\\/dictionary\\/#t=/.test(a.getAttribute("href"))), conDef:q(".nw-con-d").every(e=>e.textContent.length>10),
       hlTerms:q(".nw-h .gl-term").length, inLink:q(".nw-h .gl-term").every(e=>e.closest("a.nw-a")), why:q(".nw-why").length, chipsC:q(".nw-ccc").length,
+      whyTexts:q(".nw-why span").map(e=>e.textContent), whyDup:(()=>{const t=q(".nw-why span").map(e=>e.textContent); return t.length-new Set(t).size})(), bareLens:q(".nw-card").filter(c=>!c.querySelector(".nw-s")&&!c.querySelector(".nw-ccc")&&c.querySelector(".nw-why")).length,
+      srOnly:q(".nw-a").every(a=>/opens the publisher in a new tab/.test(a.querySelector(".nw-sr")?.textContent||"")), chipRole:q(".nw-ccc").every(e=>e.getAttribute("role")==="button"&&e.getAttribute("aria-haspopup")==="dialog"),
+      countLive:document.querySelector(".nw-count .nw-count-t")?.getAttribute("aria-live"), clearHidden:document.querySelector(".nw-count .nw-clear")?.hidden, conN:q(".nw-con-a").length,
+      qH:Math.round(document.querySelector(".nw-q").getBoundingClientRect().height), chipH:Math.round(document.querySelector(".nw-chip").getBoundingClientRect().height),
+      sideTop:document.querySelector(".nw-side").style.top, sideMax:getComputedStyle(document.querySelector(".nw-side")).maxHeight, sideFits:document.querySelector(".nw-side").getBoundingClientRect().height <= innerHeight - 72 - 40 + 1,
       links:q(".nw-a").every(a=>a.target==="_blank" && a.rel==="noopener noreferrer" && /^https?:/.test(a.href)), meta:document.querySelector(".nw-meta").textContent,
       light:!!document.querySelector("#news.light"), upd:document.querySelector(".nw-upd").textContent, seen:+localStorage.getItem("fs:guest:news.seen")}})()`);
   check("news: 24 cards from real news.json", nw.cards === 24 && /Showing 24 of \d+ stories/.test(nw.count), [nw.cards, nw.count]);
   check("news: region tabs (non-empty only) and market chips", nw.tabs[0] === "all" && nw.tabs.length >= 4 && nw.tabs.every(t => ["all", "in", "us", "eu", "ap", "me", "gl"].includes(t)) && nw.chips.includes("all") && nw.chips.length >= 5, [nw.tabs, nw.chips]);
-  check("news: concepts strip (up to 8, plain meanings, dictionary links)", nw.con >= 1 && nw.con <= 8 && nw.conHref && nw.conDef, nw.con);
+  check("news: concepts strip (plain meanings, dictionary links)", nw.con >= 1 && nw.con <= 8 && nw.conHref && nw.conDef, nw.con);
   check("news: headline terms highlighted inside the links", nw.hlTerms >= 3 && nw.inLink, nw.hlTerms);
-  check("news: concept chips and Why-it-matters lines", nw.chipsC >= 5 && nw.why >= 5, [nw.chipsC, nw.why]);
+  check("news: concept chips and Why-it-matters lines", nw.chipsC >= 5 && nw.why >= 3, [nw.chipsC, nw.why]);
+  check("news: each lens appears once per list and never on a bare headline", nw.whyDup === 0 && nw.bareLens === 0 && nw.why <= 9, [nw.whyDup, nw.bareLens, nw.why]);
+  check("a11y: headline links warn about the new tab, concept chips are dialog buttons, count is the live region and Clear is a stable hidden button", nw.srOnly && nw.chipRole && nw.countLive === "polite" && nw.clearHidden === true, [nw.srOnly, nw.chipRole, nw.countLive, nw.clearHidden]);
+  check("news toolbar: search and chips share one 36px height", nw.qH === 36 && nw.chipH === 36, [nw.qH, nw.chipH]);
+  check("concepts aside: 6 at most on desktop, pinned just under the header, fits the window", nw.conN <= 6 && nw.sideTop === "92px" && /calc|px/.test(nw.sideMax) && nw.sideFits, [nw.conN, nw.sideTop, nw.sideMax, nw.sideFits]);
   check("news: links open the publisher in a new tab, safely", nw.links);
   check("news: light band, update line, last visit remembered", nw.light && /News updated .* checks for new stories every 3 min/.test(nw.upd) && nw.seen > Date.now() - 600000, [nw.upd, nw.seen]);
   await p.shot(join(OUT, "desk-news.png"));
@@ -189,7 +223,7 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
   const chipId = await p.js(`[...document.querySelectorAll(".nw-chip")].find(c=>c.dataset.m!=="all" && c.dataset.m!=="mine" && !c.classList.contains("nw-zero")).dataset.m`);
   await click(p, `.nw-chip[data-m=${chipId}]`);
   const f2 = await p.js(`(()=>({n:+(document.querySelector(".nw-count").textContent.match(/of (\\d+)/)||[0,0])[1], pressed:document.querySelector(".nw-chip[aria-pressed=true]").dataset.m,
-    clear:!!document.querySelector(".nw-count .nw-clear")}))()`);
+    clear:!!document.querySelector(".nw-count .nw-clear:not([hidden])")}))()`);
   check("news filter: market chip (single select) narrows India further", f2.pressed === chipId && f2.n > 0 && f2.n <= f1.n && f2.clear, [chipId, f2]);
   await click(p, ".nw-count .nw-clear");
   await click(p, ".nw-q"); await p.type("rupee"); await sleep(500);
@@ -253,7 +287,7 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
 
   const p2 = await open(PAGE, { width: 1280, height: 900, wait: 5000, routes: [u => /quote\.cnbc\.com|priceapi\.moneycontrol\.com/.test(u) ? { fail: true } : null] });
   const fb = await p2.js(`({status:document.querySelector("[data-mk-status]").textContent, state:FinspireMarkets.state().state, v:document.querySelector("#mk-NIFTY .mk-last").textContent})`);
-  check("fallback: live sources down → last saved prices with time, numbers kept", fb.state === "fallback" && /^Showing last saved prices \(.+\)/.test(fb.status) && /\d/.test(fb.v), fb);
+  check("fallback: live sources down → saved prices with time, numbers kept", fb.state === "fallback" && /^Saved prices from .+ · reconnecting$/.test(fb.status) && /\d/.test(fb.v), fb);
   done(p2, "fallback", BLOCKED);
 }
 
@@ -279,7 +313,7 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
     hidden:document.querySelector(".nw-pill").hidden, terms:[...c[0].querySelectorAll(".nw-h .gl-term")].map(e=>e.dataset.term), why:c[0].querySelector(".nw-why")?.textContent||"",
     focus:document.activeElement.closest(".nw-card")?.dataset.id, n:document.querySelectorAll(".nw-card").length}})()`);
   check("new stories: click inserts them on top, marked fresh", ins.ids.join() === "test0000001,test0000002" && ins.fresh && ins.hidden && ins.focus === "test0000001" && ins.n === 26, ins);
-  check("new stories: terms highlighted, central-bank lens", ins.terms.includes("repo-rate") && /Policy-rate changes reset borrowing costs/.test(ins.why), ins);
+  check("new stories: terms highlighted, central-bank lens", ins.terms.includes("repo-rate") && /Policy-rate changes reset borrowing costs|Central banks move rates to steer inflation/.test(ins.why), ins);
   await p.shot(join(OUT, "desk-news-inserted.png"));
   done(p, "news pill");
 }
@@ -288,10 +322,12 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
 {
   const p = await open(PAGE, { width: 1280, height: 900, wait: 4000 });
   const pick = await p.js(`(()=>{const c=document.querySelector(".nw-card .nw-ccc"); return c ? c.dataset.term : null})()`);
-  await p.js(`localStorage.setItem("fs:guest:news.seen", String(Date.now()-3*3600e3)); localStorage.setItem("fs:guest:dict.saved", JSON.stringify([${JSON.stringify(pick)}])); true`);
+  // "last visit" is set just before the newest story, so the check does not depend on how fresh the saved news.json is
+  const newest = await p.js(`Date.parse(document.querySelector(".nw-card time").getAttribute("datetime"))`);
+  await p.js(`localStorage.setItem("fs:guest:news.seen", String(${newest} - 60000)); localStorage.setItem("fs:guest:dict.saved", JSON.stringify([${JSON.stringify(pick)}])); true`);
   await p.goto(PAGE, 4500);
   await p.js(`document.getElementById("news").scrollIntoView({behavior:"instant"}); true`); await sleep(300);
-  const nv = await p.js(`(()=>{const c=[...document.querySelectorAll(".nw-card")]; const seen=Date.now()-3*3600e3;
+  const nv = await p.js(`(()=>{const c=[...document.querySelectorAll(".nw-card")]; const seen=${newest} - 60000;
     return {newN:document.querySelectorAll(".nw-new").length, ok:c.every(x=>!!x.querySelector(".nw-new")===(Date.parse(x.querySelector("time").getAttribute("datetime"))>seen-120000) || true),
       mine:!!document.querySelector(".nw-chip.nw-mine"), mineN:+(document.querySelector(".nw-chip.nw-mine .nw-n")?.textContent||0), star:document.querySelectorAll(".nw-ccc-mine").length}})()`);
   check("new dot: stories newer than the last visit are marked New", nv.newN > 0, nv);
@@ -331,7 +367,9 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
     return {seg:[Math.round(seg.left), Math.round(seg.right)], segFit:segB.every(r=>r.right<=seg.right+1 && r.left>=seg.left-1), segN:segB.length, small,
       gutter:[Math.round(g.left), Math.round(vw-g.right)], q:getComputedStyle(document.querySelector(".nw-q")).fontSize,
       chipsScroll:getComputedStyle(document.querySelector(".nw-chips")).overflowX, chipsWrap:getComputedStyle(document.querySelector(".nw-chips")).flexWrap,
-      tabsScroll:getComputedStyle(document.querySelector(".nw-tabs")).overflowX, tableStack:getComputedStyle(document.querySelector(".mk-pol-r")).display, cols:getComputedStyle(document.querySelector(".nw-layout")).gridTemplateColumns.split(" ").length}})()`);
+      tabsScroll:getComputedStyle(document.querySelector(".nw-tabs")).overflowX, tableStack:getComputedStyle(document.querySelector(".mk-pol-r")).display, cols:getComputedStyle(document.querySelector(".nw-layout")).gridTemplateColumns.split(" ").length,
+    asOf:getComputedStyle(document.querySelector(".mk-pol-d"),"::before").content, ccScroll:getComputedStyle(document.querySelector(".nw-cc")).overflowX, ccWrap:getComputedStyle(document.querySelector(".nw-cc")).flexWrap, cccH:Math.round(document.querySelector(".nw-ccc").getBoundingClientRect().height),
+    foot:getComputedStyle(document.querySelector(".mk-foot")).fontSize, tn:getComputedStyle(document.querySelector(".mk-tn")).fontSize, termTap:Math.round(document.querySelector(".mk-card .mk-name-t").getBoundingClientRect().height), status:document.querySelector("[data-mk-status]").getBoundingClientRect().height}})()`);
   check("phone: no horizontal overflow", await noOverflow(p));
   check("phone: segmented control fits (4 segments)", ph.segFit && ph.segN === 4 && ph.seg[0] === 16 && ph.seg[1] === 374, ph.seg);
   check("phone: 16px gutters", ph.gutter[0] === 16 && ph.gutter[1] === 16, ph.gutter);
@@ -339,6 +377,8 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
   check("phone: region tabs and chips scroll sideways", ph.chipsScroll === "auto" && ph.chipsWrap === "nowrap" && ph.tabsScroll === "auto", ph);
   check("phone: policy table stacks, news in one column", ph.tableStack === "grid" && ph.cols === 1, ph);
   check("phone: tap targets ≥ 40px", ph.small.length === 0, ph.small);
+  check("phone: policy dates say As of; concept chips scroll in one 36px row", ph.asOf === '"As of "' && ph.ccScroll === "auto" && ph.ccWrap === "nowrap" && ph.cccH === 36, [ph.asOf, ph.ccScroll, ph.ccWrap, ph.cccH]);
+  check("phone: footer 12px, ticker labels 11.5px, term labels ≥ 32px tall, status on one line", ph.foot === "12px" && ph.tn === "11.5px" && ph.termTap >= 32 && ph.status < 30, [ph.foot, ph.tn, ph.termTap, ph.status]);
   await p.shot(join(OUT, "phone-0-top.png"));
   await tap(p, "#mk-t-asia");
   const pa = await p.js(`({sel:document.querySelector(".mk-seg-b[aria-selected=true]").id, n:[...document.querySelectorAll("#mk-p-asia .mk-card")].filter(e=>e.offsetParent).length})`);
@@ -374,9 +414,9 @@ const setHidden = (p, on) => p.js(`Object.defineProperty(document,"hidden",{conf
 // ===================================================================================== reduced motion
 {
   const p = await open(PAGE, { width: 390, height: 844, mobile: true, reducedMotion: true, wait: 4500 });
-  const rm = await p.js(`(()=>{const t=document.querySelector(".mk-tape"), tr=document.querySelector(".mk-tape-track"); return {anim:getComputedStyle(tr).animationName, ox:getComputedStyle(t).overflowX,
-    scrolls:t.scrollWidth>t.clientWidth, clone:getComputedStyle(document.querySelector(".mk-tape-set[aria-hidden]")).display}})()`);
-  check("reduced motion: ticker becomes a static strip you can scroll", rm.anim === "none" && rm.ox === "auto" && rm.scrolls && rm.clone === "none", rm);
+  const rm = await p.js(`(()=>{const t=document.querySelector(".mk-tape-view"), tr=document.querySelector(".mk-tape-track"); return {anim:getComputedStyle(tr).animationName, ox:getComputedStyle(t).overflowX, sb:getComputedStyle(t).scrollbarWidth,
+    scrolls:t.scrollWidth>t.clientWidth, clone:getComputedStyle(document.querySelector(".mk-tape-clone")).display, pause:getComputedStyle(document.querySelector(".mk-tape-pause")).display}})()`);
+  check("reduced motion: ticker becomes a strip you can scroll (thin scrollbar), no pause button, no clone", rm.anim === "none" && rm.ox === "auto" && rm.sb === "thin" && rm.scrolls && rm.clone === "none" && rm.pause === "none", rm);
   check("reduced motion: no overflow", await noOverflow(p));
   done(p, "reduced motion");
 }
@@ -402,8 +442,9 @@ a{color:inherit;text-decoration:none}ol,ul{margin:0;padding:0}p,h3{margin:0}butt
         tape:q(".mk-tape-set:first-child .mk-ti").length, tapeHref:document.querySelector(".mk-ti")?.getAttribute("href"), status:document.querySelector(".mk-mini .mk-status")?.textContent,
         heads:q(".nw-t-item:not(.nw-skel) .nw-t-a").length, meta:q(".nw-t-meta").map(e=>e.textContent), terms:q(".nw-t-h .gl-term").length,
         foreign:q("body *").filter(e=>e.className && typeof e.className==="string" && e.closest("#tk,#mini,#teaser") && e.className.split(/\\s+/).some(c=>c && !/^(mk-|nw-|gl-|fs-)/.test(c))).map(e=>e.className).slice(0,5),
-        tileBg:getComputedStyle(document.querySelector(".mk-tile")).backgroundColor, nameTerm:q(".mk-tile-n[data-term]").length}})()`);
-    check(label + ": mini board with 6 live tiles linking to the Markets page", w.tiles === 6 && w.nums >= 5 && w.href === "../markets/index.html#mk-NIFTY" && /^(Live|Last saved|Showing)/.test(w.status), w);
+        tileBg:getComputedStyle(document.querySelector(".mk-tile")).backgroundColor, nameTerm:q(".mk-tile-n[data-term]").length, tileTab:q(".mk-tile-n").every(e=>e.tabIndex===-1)}})()`);
+    check(label + ": mini board with 6 live tiles linking to the Markets page", w.tiles === 6 && w.nums >= 5 && w.href === "../markets/index.html#mk-NIFTY" && /^(Live|Saved prices|Prices)/.test(w.status), w);
+    check(label + ": one tab stop per tile (term label out of the Tab order, still a tooltip)", w.nameTerm >= 4 && w.tileTab, [w.nameTerm, w.tileTab]);
     check(label + ": ticker mounts and links to the Markets page", w.tape === 41 && /^\.\.\/markets\/index\.html#mk-/.test(w.tapeHref), w.tapeHref);
     check(label + ": teaser with 3 headlines, source and time", w.heads === 3 && w.meta.length === 3 && w.meta.every(m => /ago|just now|yesterday/.test(m)), w.meta);
     check(label + ": only mk-/nw-/gl- classes, dark tiles", w.foreign.length === 0 && w.tileBg === "rgb(26, 26, 31)", [w.foreign, w.tileBg]);

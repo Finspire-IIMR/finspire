@@ -20,18 +20,30 @@ const REG_ORDER = ["in", "us", "eu", "ap", "me", "gl"];
 const MK_ORDER = ["stocks", "rates", "cb", "fx", "cmd", "crypto", "econ", "deals", "policy"];
 const REG_DEF = { in: "India", us: "United States", eu: "Europe & UK", ap: "Asia-Pacific", me: "Middle East & Africa", gl: "Global" };
 const MK_DEF = { stocks: "Stocks", rates: "Bonds & rates", cb: "Central banks", fx: "Currencies", cmd: "Commodities & energy", crypto: "Crypto", econ: "Economy", deals: "Companies & deals", policy: "Policy & regulation" };
-/* One plain line per primary market tag: what a reader should watch for. */
+/* Short "Why it matters" lines per primary market tag (two or three variants each, picked by the story id so the
+   same story always gets the same line and neighbouring stories differ). Shown once per market in a list. */
 const LENS = {
-  stocks: "Share prices move on earnings and expectations; a big move in a heavyweight stock can swing the whole index.",
-  rates: "Bond yields set borrowing costs for governments and companies; when yields rise, the prices of existing bonds fall.",
-  cb: "Policy-rate changes reset borrowing costs; bond yields, the rupee and bank stocks usually react first.",
-  fx: "Exchange rates change what imports cost and what exporters earn; a weaker rupee makes oil and electronics dearer in India.",
-  cmd: "Commodity prices feed into inflation and company costs; India imports most of its oil, so crude moves the rupee and fuel prices.",
-  crypto: "Crypto prices swing far more than stocks and often move on regulation news and on how much risk investors want to take.",
-  econ: "Growth, jobs and inflation data shape what central banks do next; markets react to the surprise against forecasts, not the number alone.",
-  deals: "Results, mergers and fund-raises change what a company is worth; the share price reacts to how the news compares with what was expected.",
-  policy: "New rules and taxes change the economics of whole sectors; markets price in the impact as soon as the details are clear."
+  stocks: ["Earnings and expectations move share prices; one heavyweight can swing the whole index.",
+    "A stock jumps when results beat what the market expected, not just when they are good.",
+    "Index moves add up thousands of trades; the big names carry most of the weight."],
+  rates: ["Yields set borrowing costs for governments and companies; when yields rise, existing bond prices fall.",
+    "A higher 10-year yield makes loans, mortgages and company debt dearer for years ahead."],
+  cb: ["Policy-rate changes reset borrowing costs; yields, the rupee and bank stocks react first.",
+    "Central banks move rates to steer inflation; markets react to the hints as much as the decision."],
+  fx: ["Exchange rates set what imports cost and what exporters earn; a weaker rupee makes oil dearer in India.",
+    "The rupee moves on oil prices, foreign fund flows and the dollar; the RBI steps in to smooth big swings."],
+  cmd: ["Commodity prices feed into inflation and company costs; India imports most of its oil.",
+    "Crude moves the rupee and fuel prices; gold rises when investors want safety."],
+  crypto: ["Crypto swings far more than stocks and often moves on regulation news and investors' appetite for risk.",
+    "Bitcoin trades around the clock; a weekend move can set the tone before stock markets open."],
+  econ: ["Growth, jobs and inflation data shape what central banks do next; the surprise against forecasts is what moves markets.",
+    "A strong number can hurt stocks if it means rates stay higher for longer."],
+  deals: ["Results, mergers and fund-raises change what a company is worth; the price reacts to the gap with expectations.",
+    "A deal is judged on the price paid and the fit; the buyer's shares often fall and the target's rise."],
+  policy: ["New rules and taxes change the economics of whole sectors; markets price in the impact as soon as the details are clear.",
+    "Regulation decides who can sell what; a rule change can lift or sink a sector in a day."]
 };
+function hashId(s) { let x = 0; for (let i = 0; i < s.length; i++) x = (x * 31 + s.charCodeAt(i)) >>> 0; return x; }
 /* A lens is shown only when the story's own words back up the tag (feeds tag whole sections, e.g. every story in a
    markets feed gets "stocks"), so a story about crop damage never gets a line about share prices. */
 const LENS_CHECK = {
@@ -45,10 +57,11 @@ const LENS_CHECK = {
   policy: /\b(sebi|regulat\w+|rules?|tax(es)?|gst|tariffs?|budget|law|bill|ban|ministry|government|curbs?|sanctions?|norms|guidelines)\b/i,
   stocks: /\b(shares?|stocks?|sensex|nifty|indices|index|equit(y|ies)|ipo|rall(y|ies|ied)|slump\w*|traders?|investors?|market cap\w*|listed|bourses?|wall street|dalal street|s&p|nasdaq|dow)\b/i
 };
+/* → {mk, text} for the first market tag the story's own words back up, or null */
 function lensOf(it) {
   const text = it.t + " " + it.s;
-  for (const m of it.mk) if (LENS[m] && (!LENS_CHECK[m] || LENS_CHECK[m].test(text))) return LENS[m];
-  return "";
+  for (const m of it.mk) if (LENS[m] && (!LENS_CHECK[m] || LENS_CHECK[m].test(text))) return { mk: m, text: LENS[m][hashId(it.id) % LENS[m].length] };
+  return null;
 }
 const PAGE = 24;
 const pollMs = () => Math.max(30, +F.cfg.newsPollSeconds || 180) * 1000;
@@ -107,7 +120,18 @@ function myWords() {
   (Array.isArray(hist) ? hist : []).slice(0, 40).forEach(x => { if (x && typeof x.id === "string" && !out.has(x.id)) out.set(x.id, "looked"); });
   return out;
 }
-const glossaryReady = () => Promise.race([F.glossary.load().catch(() => null), new Promise(r => setTimeout(r, 5000))]);
+/* an external link that says so to screen readers (sighted readers see the publisher name beside it) */
+const extA = (u, cls, text) => F.dom.ext(u, { class: cls }, text, h("span", { class: "nw-sr" }, " (opens the publisher in a new tab)"));
+const NEAR = { root: null, rootMargin: "600px 0px", threshold: 0 };
+/* the dictionary index is the biggest file: fetch it once `el` is near the screen (or the first tooltip asks for it) */
+function loadGlossaryNear(el, done) {
+  const go = () => F.glossary.load().then(() => done && done(true), () => done && done(false));
+  if (F.glossary.loaded()) { done && done(true); return; }
+  if (!("IntersectionObserver" in W)) { go(); return; }
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); go(); } }, NEAR);
+  io.observe(el);
+}
+const idle = fn => ("requestIdleCallback" in W) ? W.requestIdleCallback(fn, { timeout: 800 }) : setTimeout(fn, 60);
 
 /* dictionary ids for an item: the pipeline's list plus a fresh match (the dictionary keeps growing) */
 function termsOf(it) {
@@ -139,21 +163,21 @@ function mountTeaser(el, opts) {
   for (let i = 0; i < count; i++) list.appendChild(h("li", { class: "nw-t-item nw-skel" }, h("span", { class: "nw-sk nw-sk-s" }), h("span", { class: "nw-sk" }), h("span", { class: "nw-sk nw-sk-m" })));
   el.appendChild(list);
   let key = "";
+  // headlines go up as soon as news.json is in; the underlines follow when the dictionary index arrives
   const render = items => {
-    glossaryReady().then(() => {
-      const top = items.slice(0, count), k = top.map(i => i.id).join(",") + "|" + F.glossary.rows().length;
-      if (k === key) { tickTimes(el); return; }
-      key = k;
-      if (!top.length) { list.replaceChildren(h("li", { class: "nw-t-empty" }, hub.failed ? "News is not available right now." : "Updating…")); return; }
-      list.replaceChildren(...top.map(it => {
-        const a = F.dom.ext(it.u, { class: "nw-t-a" }, it.t);
-        const hd = h("p", { class: "nw-t-h" }, a);
-        F.glossary.annotate(hd, { max: 3 });
-        return h("li", { class: "nw-t-item" }, h("p", { class: "nw-t-meta" }, h("span", { class: "nw-src" }, it.src), h("span", { class: "nw-sep", "aria-hidden": "true" }, "·"), timeEl(it)), hd);
-      }));
-    });
+    const top = items.slice(0, count), k = top.map(i => i.id).join(",") + "|" + F.glossary.rows().length;
+    if (k === key) { tickTimes(el); return; }
+    key = k;
+    if (!top.length) { list.replaceChildren(h("li", { class: "nw-t-empty" }, hub.failed ? "News is not available right now." : "Updating…")); return; }
+    list.replaceChildren(...top.map(it => {
+      const hd = h("p", { class: "nw-t-h" }, extA(it.u, "nw-t-a", it.t));
+      if (F.glossary.loaded()) F.glossary.annotate(hd, { max: 3 });
+      return h("li", { class: "nw-t-item" }, h("p", { class: "nw-t-meta" }, h("span", { class: "nw-src" }, it.src), h("span", { class: "nw-sep", "aria-hidden": "true" }, "·"), timeEl(it)), hd);
+    }));
   };
   subscribe(render);
+  F.on("glossary", () => { if (el.isConnected) render(hub.items); });
+  loadGlossaryNear(el);
   setInterval(() => { if (!D.hidden && el.isConnected) tickTimes(el); }, 60000);
 }
 
@@ -161,14 +185,16 @@ function mountTeaser(el, opts) {
 function mountFeed(el) {
   if (!el || el._nw) return;
   el._nw = 1;
-  const S = { region: "all", market: "all", q: "", mine: false, words: new Map(), shown: PAGE, items: [], known: new Set(), pending: [], seenAt: 0, ready: false, fresh: new Set() };
+  const S = { region: "all", market: "all", q: "", mine: false, words: new Map(), shown: PAGE, items: [], known: new Set(), pending: [], seenAt: 0, ready: false, fresh: new Set(), lensSeen: new Set(), gfail: false };
   /* controls */
-  const tabs = h("div", { class: "nw-tabs", role: "group", "aria-label": "Region" });
-  const chips = h("div", { class: "nw-chips", role: "group", "aria-label": "Market" });
+  const tabs = h("div", { class: "nw-tabs fs-xrow", role: "group", "aria-label": "Region" });
+  const chips = h("div", { class: "nw-chips fs-xrow", role: "group", "aria-label": "Market" });
   const input = h("input", { class: "nw-q", type: "search", placeholder: "Search headlines", "aria-label": "Search news", autocomplete: "off", spellcheck: "false", enterkeyhint: "search" });
   const search = h("label", { class: "nw-search" }, svg(SEARCH_SVG), input);
   const pill = h("button", { class: "nw-pill", type: "button", hidden: true }, h("span", { class: "nw-pill-arw", "aria-hidden": "true" }, "↑"), h("span", null, ""));
-  const count = h("p", { class: "nw-count", "aria-live": "polite" });
+  const countTxt = h("span", { class: "nw-count-t", "aria-live": "polite", "aria-atomic": "true" });
+  const clearBtn = h("button", { class: "nw-clear", type: "button", hidden: true, onclick: () => clearAll() }, "Clear filters");
+  const count = h("p", { class: "nw-count" }, countTxt, clearBtn);
   const list = h("ol", { class: "nw-list", "aria-label": "News stories" });
   const more = h("button", { class: "nw-more", type: "button", hidden: true }, "Show more");
   const concepts = h("ol", { class: "nw-con-list" });
@@ -204,7 +230,7 @@ function mountFeed(el) {
     const tab = (id, label) => {
       const n = byQ.filter(it => inRegion(it, id) && inMarket(it, S.market)).length;
       return h("button", { class: "nw-tab" + (n ? "" : " nw-zero"), type: "button", "aria-pressed": String(S.region === id), "data-r": id,
-        onclick: () => { if (S.region !== id) { S.region = id; S.shown = PAGE; update(true); } } }, label, h("span", { class: "nw-n" }, String(n)));
+        onclick: () => { if (S.region !== id) { S.region = id; S.shown = PAGE; update(true); reveal(tabs, ".nw-tab[aria-pressed=true]"); } } }, label, h("span", { class: "nw-n" }, String(n)));
     };
     tabs.replaceChildren(tab("all", "All"), ...regs.map(r => tab(r, N.rg[r] || r)));
     const mks = MK_ORDER.concat(Object.keys(N.mk).filter(k => !MK_ORDER.includes(k))).filter(m => S.items.some(it => it.mk.includes(m)));
@@ -212,7 +238,7 @@ function mountFeed(el) {
     const chip = (id, label) => {
       const n = byQ.filter(it => inMarket(it, id) && inRegion(it, S.region)).length;
       return h("button", { class: "nw-chip" + (n ? "" : " nw-zero"), type: "button", "aria-pressed": String(S.market === id), "data-m": id,
-        onclick: () => { S.market = S.market === id && id !== "all" ? "all" : id; S.shown = PAGE; update(true); } }, label, h("span", { class: "nw-n" }, String(n)));
+        onclick: () => { S.market = S.market === id && id !== "all" ? "all" : id; S.shown = PAGE; update(true); reveal(chips, ".nw-chip[aria-pressed=true]"); } }, label, h("span", { class: "nw-n" }, String(n)));
     };
     const mineN = S.words.size ? S.items.filter(it => matchQ(it) && inRegion(it, S.region) && inMarket(it, S.market) && isMine(it)).length : 0;
     if (S.mine && !S.words.size) S.mine = false;
@@ -221,35 +247,45 @@ function mountFeed(el) {
       onclick: () => { S.mine = !S.mine; S.shown = PAGE; update(true); } }, F.dom.icon("star"), "Your words", h("span", { class: "nw-n" }, String(mineN))) : null;
     chips.replaceChildren(...[mine, chip("all", "All markets"), ...mks.map(m => chip(m, N.mk[m] || m))].filter(Boolean));
   }
+  /* phones: keep the pressed tab or chip in view inside its scrolling row (never scrolls the page) */
+  function reveal(row, sel) {
+    const b = row.querySelector(sel);
+    if (!b || row.scrollWidth <= row.clientWidth + 2) return;
+    try { b.scrollIntoView({ inline: "nearest", block: "nearest", behavior: reduce.matches ? "auto" : "smooth" }); } catch (e) {}
+  }
 
   function cardEl(it) {
     const N = names();
     const isNew = (S.seenAt && it.ts > S.seenAt) || S.fresh.has(it.id);
     const txt = h("div", { class: "nw-txt" },
-      h("h3", { class: "nw-h" }, F.dom.ext(it.u, { class: "nw-a" }, it.t)),
+      h("h3", { class: "nw-h" }, extA(it.u, "nw-a", it.t)),
       it.s ? h("p", { class: "nw-s" }, it.s) : null);
-    const found = F.glossary.annotate(txt, { max: 6 });
+    const found = F.glossary.loaded() ? F.glossary.annotate(txt, { max: 6 }) : [];
     const all = found.concat(termsOf(it).filter(id => !found.includes(id)));
     const ids = all.filter(id => S.words.has(id)).concat(all.filter(id => !S.words.has(id))).slice(0, 4);   // the reader's own words first
     const tags = it.rg.map(r => N.rg[r]).filter(Boolean).concat(it.mk.map(m => N.mk[m]).filter(Boolean));
+    // one lens per market per list, and never on a bare headline (no snippet, no concepts) so those stay compact
     const lens = lensOf(it);
+    const showLens = lens && !S.lensSeen.has(lens.mk) && (it.s || ids.length);
+    if (showLens) S.lensSeen.add(lens.mk);
     return h("li", { class: "nw-card" + (S.fresh.has(it.id) ? " nw-fresh" : ""), "data-id": it.id },
       h("div", { class: "nw-meta" },
         h("span", { class: "nw-src" }, it.src), h("span", { class: "nw-sep", "aria-hidden": "true" }, "·"), timeEl(it),
         isNew ? h("span", { class: "nw-new", title: "New since your last visit" }, h("i", { "aria-hidden": "true" }), "New") : null,
         tags.length ? h("span", { class: "nw-tags" }, tags.map(t => h("span", { class: "nw-tag" }, t))) : null),
       txt,
-      ids.length ? h("div", { class: "nw-cc" }, h("span", { class: "nw-cc-k" }, "Concepts"),
-        ids.map(id => h("span", { class: "nw-ccc" + (S.words.has(id) ? " nw-ccc-mine" : ""), "data-term": id, tabindex: "0",
+      ids.length ? h("div", { class: "nw-cc fs-xrow" }, h("span", { class: "nw-cc-k" }, "Concepts"),
+        ids.map(id => h("span", { class: "nw-ccc" + (S.words.has(id) ? " nw-ccc-mine" : ""), "data-term": id, tabindex: "0", role: "button", "aria-haspopup": "dialog",
           title: S.words.get(id) === "saved" ? "One of your saved words" : S.words.has(id) ? "You looked this up recently" : null },
           S.words.has(id) ? F.dom.icon("star") : null, (F.glossary.get(id) || {}).term || id))) : null,
-      lens ? h("p", { class: "nw-why" }, h("b", null, "Why it matters"), h("span", null, lens)) : null);
+      showLens ? h("p", { class: "nw-why" }, h("b", null, "Why it matters"), h("span", null, lens.text)) : null);
   }
 
   function renderList(keepShown) {
     const v = visible();
     if (!keepShown) S.shown = Math.max(PAGE, Math.min(S.shown, v.length));
     const slice = v.slice(0, S.shown);
+    S.lensSeen.clear();
     if (!v.length) {
       const clr = h("button", { class: "nw-clear", type: "button", onclick: clearAll }, "Clear filters");
       list.replaceChildren(h("li", { class: "nw-empty" }, h("b", null, S.items.length ? "No stories match" : (hub.failed ? "News is not available right now" : "Updating…")),
@@ -260,7 +296,9 @@ function mountFeed(el) {
   }
   function setCount(a, b) {
     const filtered = S.region !== "all" || S.market !== "all" || S.mine || S.q;
-    count.replaceChildren(...[b ? `Showing ${a} of ${b} ${b === 1 ? "story" : "stories"}` : "", filtered && b ? h("button", { class: "nw-clear", type: "button", onclick: clearAll }, "Clear filters") : null].filter(Boolean));
+    const s = b ? `Showing ${a} of ${b} ${b === 1 ? "story" : "stories"}` : "";
+    if (countTxt.textContent !== s) countTxt.textContent = s;
+    clearBtn.hidden = !(filtered && b);   // a stable control: toggled, never rebuilt, so focus stays where it was
   }
   function clearAll() { S.region = "all"; S.market = "all"; S.mine = false; S.q = ""; input.value = ""; S.shown = PAGE; update(true); }
   more.addEventListener("click", () => {
@@ -277,11 +315,17 @@ function mountFeed(el) {
   });
 
   function renderConcepts() {
+    if (!F.glossary.loaded()) {   // keep the skeleton (and the two-column layout) until the index is in
+      if (S.gfail) { aside.hidden = true; el.classList.add("nw-no-side"); }
+      return;
+    }
     const now = Date.now(), newest = S.items.length ? S.items[0].ts : now;
     const ref = now - newest > 86400e3 ? newest : now;
     const counts = new Map();
     S.items.forEach(it => { if (ref - it.ts <= 86400e3) termsOf(it).forEach(id => counts.set(id, (counts.get(id) || 0) + 1)); });
-    const top = [...counts.entries()].filter(([id]) => F.glossary.get(id)).sort((a, b) => b[1] - a[1]).slice(0, 8);
+    // the card must fit a 900px-tall window beside the feed; the phone strip scrolls sideways and can hold more
+    const max = W.matchMedia && W.matchMedia("(max-width:960px)").matches ? 8 : 6;
+    const top = [...counts.entries()].filter(([id]) => F.glossary.get(id)).sort((a, b) => b[1] - a[1]).slice(0, max);
     requestAnimationFrame(stickAside);
     aside.hidden = !top.length;
     el.classList.toggle("nw-no-side", !top.length);
@@ -292,14 +336,14 @@ function mountFeed(el) {
         h("span", { class: "nw-con-d" }, r.short || (dict ? "Open in the Dictionary" : "")),
         dict ? h("span", { class: "nw-con-go", "aria-hidden": "true" }, "Open in Dictionary →") : null];
       return h("li", { class: "nw-con-i" }, dict ? h("a", { class: "nw-con-a", href: dictHref(id) }, inner)
-        : h("div", { class: "nw-con-a", "data-term": id, tabindex: "0" }, inner));
+        : h("div", { class: "nw-con-a", "data-term": id, tabindex: "0", role: "button", "aria-haspopup": "dialog" }, inner));
     }));
   }
-  /* the concepts panel sticks below the header; when it is taller than the window it sticks by its bottom edge */
+  /* the concepts panel sticks just below the header; CSS caps its height to the window and lets it scroll inside */
   function stickAside() {
     if (aside.hidden || getComputedStyle(aside).position !== "sticky") { aside.style.top = ""; return; }
     const hdr = parseFloat(getComputedStyle(D.documentElement).getPropertyValue("--hdr")) || 72;
-    aside.style.top = Math.round(Math.min(hdr + 20, W.innerHeight - aside.offsetHeight - 20)) + "px";
+    aside.style.top = Math.round(hdr + 20) + "px";
   }
   W.addEventListener("resize", () => requestAnimationFrame(stickAside), { passive: true });
   function setLive() {
@@ -329,7 +373,7 @@ function mountFeed(el) {
     if (top < 80) list.scrollIntoView({ block: "start", behavior: reduce.matches ? "auto" : "smooth" });
     const a = list.querySelector(".nw-a");
     if (a) { try { a.focus({ preventScroll: true }); } catch (e) {} }
-    setTimeout(() => { S.fresh.clear(); list.querySelectorAll(".nw-fresh").forEach(c => c.classList.remove("nw-fresh")); }, 4000);
+    setTimeout(() => { S.fresh.clear(); list.querySelectorAll(".nw-fresh").forEach(c => c.classList.remove("nw-fresh")); }, 2200);
   });
 
   let qt = 0;
@@ -341,8 +385,9 @@ function mountFeed(el) {
       S.ready = true;
       S.items = items.slice();
       S.items.forEach(it => S.known.add(it.id));
-      update(true); renderConcepts(); setLive();
-      F.header.refresh();
+      // cards first (what the reader came for); the tab counts and the concepts card follow when the thread is free
+      renderList(true);
+      idle(() => { buildControls(); renderConcepts(); setLive(); F.header.refresh(); });
       return;
     }
     const known = new Set(S.pending.map(i => i.id));
@@ -351,12 +396,14 @@ function mountFeed(el) {
     if (!S.items.length && !S.pending.length) renderList(true);
     setLive();
   };
-  Promise.all([F.auth.ready.catch(() => null), glossaryReady()]).then(() => {
+  // the feed waits for the saved session only (its personal words); the dictionary index comes when the feed is near
+  F.auth.ready.catch(() => null).then(() => {
     S.words = myWords();
     S.seenAt = +F.store.get("news.seen", 0) || 0;
     F.store.set("news.seen", Date.now());
     subscribe(onData);
   });
+  loadGlossaryNear(el, ok => { if (!ok) { S.gfail = true; if (S.ready) renderConcepts(); } });
   let wt = 0;
   F.on("store", key => {
     if (key !== "*" && key !== "dict.saved" && key !== "dict.history") return;
@@ -372,7 +419,8 @@ function mountFeed(el) {
         if (on !== c.classList.contains("nw-ccc-mine")) { c.classList.toggle("nw-ccc-mine", on); if (on) c.prepend(F.dom.icon("star")); else { const s = c.querySelector("svg"); if (s) s.remove(); } } });
     }, 250);
   });
-  F.on("glossary", () => { if (S.ready) { S.items.forEach(it => { it._hay = null; }); renderList(true); renderConcepts(); } });
+  // the index arrived: underlines, concept chips, the personal chip's count and the concepts card all depend on it
+  F.on("glossary", () => { if (S.ready) { S.items.forEach(it => { it._hay = null; }); buildControls(); renderList(true); renderConcepts(); } });
   setInterval(() => { if (!D.hidden && S.ready) { tickTimes(list); setLive(); } }, 60000);
 }
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Build the dictionary from content/glossary/*.json into <out>/index.json and <out>/entries/<cat>.json.
+"""Build the dictionary from content/glossary/*.json into <out>/index.json (terms for search, tooltips and the list),
+<out>/phrases.json (highlight phrases, loaded by pages only to underline text), <out>/entries/<cat>[-n].json (full
+entries, ≤ 60 KB a file) and <out>/tod.json (term of the day for yesterday/today/tomorrow IST).
 
 Validates and normalises every entry, drops duplicates (same id or same term), resolves `related` term names to ids,
 and makes auto-highlight phrases (`hl`) and acronyms (`abbr`) unique across the dictionary so a phrase in the news
@@ -36,6 +38,26 @@ volume volatility beta alpha delta gamma theta vega rho moat churn runway unicor
 NEVER_HL = {"crore", "crores", "lakh", "lakhs", "lakh crore", "lakh crores", "million", "millions", "billion", "billions",
             "trillion", "trillions", "per cent", "percent", "percentage"}
 BAD_ABBR = {"IT", "US", "AI", "CAT", "MAT", "PE", "IV", "OR", "AND", "ON", "IN", "AT", "ALL", "ARE", "CAN", "ONE", "NEW", "UK", "EU"}
+
+SHARD_KB = 60   # entries/<cat>.json larger than this is split (see below)
+
+def term_of_day_file(entries):
+    """data/glossary/tod.json: the term of the day for yesterday, today and tomorrow (IST), picked exactly as
+    Finspire.glossary.termOfDay does (FNV-1a over "finspire:YYYY-MM-DD" into the beginner/intermediate terms sorted by
+    id), so a card can show it from this ~1 KB file instead of the whole index. The 15-minute workflow rebuilds it."""
+    import datetime
+    pool = sorted((e for e in entries if e["level"] in ("b", "i") and e["short"]), key=lambda e: e["id"]) or entries
+    days = {}
+    now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
+    for d in (-1, 0, 1):
+        key = (now + datetime.timedelta(days=d)).strftime("%Y-%m-%d")
+        h = 2166136261
+        for ch in "finspire:" + key:
+            h = ((h ^ ord(ch)) * 16777619) & 0xFFFFFFFF
+        e = pool[h % len(pool)]
+        days[key] = {"id": e["id"], "term": e["term"], "cat": e["cat"], "catName": CATS[e["cat"]], "level": e["level"],
+                     "short": e["short"], "kid": e["kid"]}
+    return {"v": 1, "tz": "Asia/Kolkata", "days": days}
 
 def slug(s): return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s.lower())).strip("-")
 def key(s): return re.sub(r"[^a-z0-9]+", "", re.sub(r"\([^)]*\)", " ", s.lower().replace("&", " and ")))
@@ -83,7 +105,9 @@ def main():
     if not entries:
         print("no glossary entries found in", src, file=sys.stderr)
         out.mkdir(parents=True, exist_ok=True)
-        (out / "index.json").write_text(json.dumps({"v": 1, "n": 0, "cats": {}, "t": []}))
+        (out / "index.json").write_text(json.dumps({"v": 2, "n": 0, "cats": {}, "t": [], "shards": {}}))
+        (out / "phrases.json").write_text(json.dumps({"v": 2, "hl": {}}))
+        (out / "tod.json").write_text(json.dumps({"v": 1, "tz": "Asia/Kolkata", "days": {}}))
         return
 
     # resolve related names → ids
@@ -129,21 +153,43 @@ def main():
     cats = {}
     for e in entries:
         cats.setdefault(e["cat"], 0); cats[e["cat"]] += 1
-    index = {"v": 1, "n": len(entries),
-             "cats": {c: {"name": CATS[c], "n": cats[c]} for c in CATS if c in cats},
-             "t": [[e["id"], e["term"], e["cat"], e["level"], e["short"], e["aliases"],
-                    sorted(hl_of.get(e["id"], []), key=len, reverse=True), sorted(ab_of.get(e["id"], []))] for e in entries]}
+    enc = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":"))
     (out / "entries").mkdir(parents=True, exist_ok=True)
     for old in (out / "entries").glob("*.json"): old.unlink()
-    enc = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":"))
-    (out / "index.json").write_text(enc(index))
-    (out / "meta.json").write_text(enc({"n": len(entries), "cats": len(cats)}))   # tiny file for counts on other pages
+
+    # entry shards: one file per category, split by sorted id when it would exceed SHARD_KB; the first part keeps the
+    # plain <cat>.json name, later parts are <cat>-2.json, <cat>-3.json … and index.json lists where each one starts
+    shards = {}
     for c in cats:
-        (out / "entries" / f"{c}.json").write_text(enc({e["id"]: {k: e[k] for k in ("kid", "detail", "example", "formula", "related")}
-                                                        for e in entries if e["cat"] == c}))
+        rows = sorted((e for e in entries if e["cat"] == c), key=lambda e: e["id"])
+        parts, cur, size = [], {}, 2
+        for e in rows:
+            body = {k: e[k] for k in ("kid", "detail", "example", "formula", "related")}
+            n = len(enc({e["id"]: body}).encode("utf-8"))
+            if cur and size + n > SHARD_KB * 1024:
+                parts.append(cur); cur, size = {}, 2
+            cur[e["id"]] = body; size += n
+        if cur: parts.append(cur)
+        for i, part in enumerate(parts):
+            (out / "entries" / (f"{c}.json" if i == 0 else f"{c}-{i + 1}.json")).write_text(enc(part))
+        if len(parts) > 1:
+            shards[c] = [next(iter(p)) for p in parts[1:]]
+
+    # the page index: no highlight phrases (they live in phrases.json and are only needed to underline text)
+    index = {"v": 2, "n": len(entries),
+             "cats": {c: {"name": CATS[c], "n": cats[c]} for c in CATS if c in cats},
+             "t": [[e["id"], e["term"], e["cat"], e["level"], e["short"], e["aliases"], [], sorted(ab_of.get(e["id"], []))] for e in entries],
+             "shards": shards}
+    (out / "index.json").write_text(enc(index))
+    phrases = {"v": 2, "hl": {e["id"]: sorted(hl_of[e["id"]], key=len, reverse=True) for e in entries if hl_of.get(e["id"])}}
+    (out / "phrases.json").write_text(enc(phrases))
+    (out / "meta.json").write_text(enc({"n": len(entries), "cats": len(cats)}))   # tiny file for counts on other pages
+    (out / "tod.json").write_text(enc(term_of_day_file(entries)))
     size = (out / "index.json").stat().st_size
+    psize = (out / "phrases.json").stat().st_size
     print(f"glossary: {len(entries)} terms in {len(cats)} categories; {len(owner_hl)} highlight phrases, {len(owner_ab)} acronyms; "
-          f"index {size//1024} KB; {unresolved} related names unresolved; {len(problems)} problems")
+          f"index {size//1024} KB + phrases {psize//1024} KB; {sum(len(v) + 1 for v in shards.values())} shards in {len(shards)} split categories; "
+          f"{unresolved} related names unresolved; {len(problems)} problems")
     for p in problems[:20]: print("  -", p)
 
 if __name__ == "__main__":

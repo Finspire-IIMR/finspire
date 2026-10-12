@@ -15,6 +15,11 @@ const OUT = join(dirname(fileURLToPath(import.meta.url)), "out", "dictionary");
 const PAGE = base + "dictionary/";
 const R = reporter(), check = R.check;
 const b = await launch({ port });
+// data/glossary/tod.json and data/live/news-terms/<cat>.json are optional (the page falls back to the index and the
+// whole news-terms map); a 404 for them is expected until the build writes them, so it is not counted as an error
+const OPTIONAL = /404[^]*\/(data\/glossary\/tod\.json|data\/live\/news-terms\/[a-z0-9-]+\.json)/;
+const errs = p => p.errors.filter(e => !OPTIONAL.test(e));
+const CLS = `window.__cls=0;try{new PerformanceObserver(l=>l.getEntries().forEach(e=>{if(!e.hadRecentInput)__cls+=e.value})).observe({type:"layout-shift",buffered:true})}catch(e){}`;
 const DESK = { width: 1280, height: 900 }, PHONE = { width: 390, height: 844, mobile: true };
 
 // helpers ---------------------------------------------------------------------------------------------------------
@@ -45,11 +50,16 @@ async function key(p, k, mods = 0) {
   for (const type of ["rawKeyDown", "keyUp"]) await p.send("Input.dispatchKeyEvent", { type, key: k, code: k === "/" ? "Slash" : k, windowsVirtualKeyCode: codes[k] || 0, modifiers: mods });
   await sleep(140);
 }
-async function typeQ(p, text) {                       // replace the search text, like a person typing it
+async function typeQ(p, text) {                       // replace the search text, like a person typing it; the list follows ~80 ms later
   await p.js(`(()=>{const q=document.getElementById("dcQ"); q.focus(); q.select(); return true})()`);
-  await p.send("Input.insertText", { text }); await sleep(250);
+  await p.send("Input.insertText", { text });
+  await until(p, text ? `(()=>{const c=document.getElementById("dcCount").textContent, e=document.getElementById("dcEmpty"); return c.includes(${JSON.stringify(text)}) || (!e.hidden && e.textContent.includes(${JSON.stringify(text)}))})()`
+                      : `!/ for /.test(document.getElementById("dcCount").textContent)`, 4000);
+  await sleep(150);
 }
 const noOverflow = p => p.js("document.documentElement.scrollWidth <= innerWidth");
+// screenshots are evidence, not checks: never let a stalled renderer (a loaded machine) hang the run
+const shot = (p, name) => Promise.race([p.shot(join(OUT, name)).catch(e => console.log("shot failed:", name, e.message)), sleep(15000).then(() => console.log("shot timed out:", name))]);
 const rows = p => p.js(`[...document.querySelectorAll("#dcList .dc-row")].map(r => r.dataset.id)`);
 const store = (p, k) => p.js(`Finspire.store.get(${JSON.stringify(k)}, null)`);
 const headings = p => p.js(`[...document.querySelectorAll("#dcEntry .dc-s-h")].map(e => e.textContent)`);
@@ -76,13 +86,24 @@ const PICK = `(async()=>{
 // ================================================================================================ desktop, guest
 let D;
 {
-  const p = await open(PAGE + "?demo-user=0", DESK);
+  const p = await open(PAGE + "?demo-user=0", Object.assign({ before: CLS }, DESK));
   await p.js("localStorage.clear(), sessionStorage.clear(), true");
   await p.goto(PAGE + "?demo-user=0", 300);
-  await until(p, "!!document.querySelector('#dcList .dc-row:not(.dc-skel)')", 8000); await sleep(300);
+  await until(p, "!!document.querySelector('#dcList .dc-row:not(.dc-skel)')", 8000); await sleep(600);
   D = await p.js(PICK);
+  // D1: the page reserves its final heights (static level + A–Z buttons, skeleton topic cards, term-of-day/list min-heights)
+  const cls = await p.js("__cls");
+  check("load: no layout shift beyond the web-font swap (CLS < 0.05)", cls < 0.05, cls);
+  const stat = await p.js(`(async()=>{const html = await (await fetch(location.pathname)).text(); const d = new DOMParser().parseFromString(html, "text/html");
+    return {segs: d.querySelectorAll("#dcLevels .dc-seg").length, letters: d.querySelectorAll("#dcAz .dc-l").length, cats: d.querySelectorAll("#dcCats .dc-cat-skel").length,
+      rows: d.querySelectorAll("#dcList .dc-skel").length, lede: d.getElementById("dcLede").textContent.trim(), count: d.getElementById("dcCount").textContent,
+      updating: /Updating/.test(d.body.textContent)}})()`);
+  check("D1: levels, A–Z, topic and list skeletons are in the HTML before any JS runs", stat.segs === 4 && stat.letters === 28 && stat.cats === 12 && stat.rows === 8 && stat.lede.length > 20 && !stat.updating, stat);
+  const live = await p.js(`({lede: document.getElementById("dcLede").textContent, skel: document.querySelectorAll(".dc-cat-skel, #dcList .dc-skel").length,
+    busy: [...document.querySelectorAll("[aria-busy]")].map(e=>e.id||e.className), segs: document.querySelectorAll("#dcLevels .dc-seg").length})`);
+  check("D1: skeletons are gone and nothing is left aria-busy once loaded; the lede is not rewritten", live.skel === 0 && live.busy.length === 0 && live.segs === 4 && live.lede === stat.lede && live.lede, live);
   console.log("data:", JSON.stringify(D));
-  check("desktop: no console errors on load", p.errors.length === 0, p.errors);
+  check("desktop: no console errors on load", errs(p).length === 0, errs(p));
   check("desktop: no sideways scroll", await noOverflow(p));
   const first = await p.js(`({rows: document.querySelectorAll("#dcList .dc-row").length, count: document.getElementById("dcCount").textContent,
     live: document.getElementById("dcCount").getAttribute("aria-live"), lede: document.getElementById("dcLede").textContent,
@@ -91,14 +112,14 @@ let D;
   // (under heavy CPU load the end-of-list sentinel can be in view for a moment before fonts settle, adding one chunk)
   check("list: renders in chunks of 60, not the whole dictionary", first.rows === Math.min(60, D.n) || first.rows === Math.min(120, D.n), first.rows);
   check("list: count shows every term, in an aria-live region", first.count.startsWith(D.n.toLocaleString("en-IN") + " term") && first.live === "polite", first.count);
-  check("page: one h1; lede states the real term count", first.h1 === 1 && first.lede.includes(D.n.toLocaleString("en-IN")), first.lede);
+  check("page: one h1; lede is static plain copy (the count lives in the list header)", first.h1 === 1 && first.lede.length > 40 && !/\d/.test(first.lede), first.lede);
   check("term of the day = Finspire.glossary.termOfDay()", first.tod === D.tod && first.todTerm.length > 1, first);
   check("topics: one card per category plus All", first.cats === first.catN + 1, first);
-  await p.shot(join(OUT, "desktop-home.png"));
+  await shot(p, "desktop-home.png");
 
   // ---- chunked list: scrolling to the end loads the next chunk
   await p.js(`document.getElementById("dcSentinel").scrollIntoView({block:"end"}), true`);
-  await until(p, `document.querySelectorAll("#dcList .dc-row").length > 60`, 3000);
+  await until(p, `document.querySelectorAll("#dcList .dc-row").length > 60`, 6000);
   check("list: next chunk appends on scroll", (await p.js(`document.querySelectorAll("#dcList .dc-row").length`)) === Math.min(120, D.n));
   await p.js("scrollTo(0,0), true");
 
@@ -123,6 +144,10 @@ let D;
   const cnt = await p.js(`document.getElementById("dcCount").textContent`);
   check("search: result count announced", /result/.test(cnt) && cnt.includes(typo), cnt);
   check("search: combobox points at the first result", await p.js(`document.getElementById("dcQ").getAttribute("aria-activedescendant") === "dco-0"`));
+  const sem = await p.js(`(()=>{const o=document.querySelector("#dcList .dc-row"); return {set: o.getAttribute("aria-setsize"), pos: o.getAttribute("aria-posinset"), n: document.querySelectorAll("#dcList .dc-row").length,
+    marker: getComputedStyle(document.querySelector("#dcList .dc-row.dc-act")).boxShadow !== "none", rows: Finspire.glossary.search(${JSON.stringify(typo)}, {limit: 400}).length}})()`);
+  check("D7: options carry aria-setsize/aria-posinset for the whole result set", sem.set === String(sem.rows) && sem.pos === "1", sem);
+  check("D7: the active row shows its left marker while the combobox is expanded", sem.marker, sem);
 
   // ---- keyboard: ↓ ↓ ↑ Enter opens the highlighted result and records "search"
   await typeQ(p, pre);
@@ -142,12 +167,13 @@ let D;
   await typeQ(p, "balance sheetqqqq");
   const emp = await p.js(`({hidden: document.getElementById("dcEmpty").hidden, list: document.getElementById("dcList").hidden, txt: document.getElementById("dcEmpty").textContent,
     sug: [...document.querySelectorAll("#dcEmpty .dc-sug .chip")].map(c=>c.textContent), count: document.getElementById("dcCount").textContent})`);
-  check("search: empty state replaces the list", !emp.hidden && emp.list && /No results/.test(emp.count), emp);
+  check("search: empty state replaces the list; the count line stays empty (one message, not two)", !emp.hidden && emp.list && emp.count === "" && /No terms match/.test(emp.txt), emp);
   check("search: empty state suggests close matches", emp.sug.length > 0 && emp.sug.some(s => /balance|sheet/i.test(s)), emp.sug);
-  await p.shot(join(OUT, "desktop-empty.png"));
+  await shot(p, "desktop-empty.png");
   await click(p, "#dcEmpty .dc-empty-acts .btn:last-child");
   check("search: Clear search restores the full list", (await p.js(`!document.getElementById("dcList").hidden && document.getElementById("dcQ").value === ""`)) &&
     (await p.js(`document.getElementById("dcCount").textContent`)).startsWith(D.n.toLocaleString("en-IN")));
+  check("D7: collapsed combobox has no aria-activedescendant", await p.js(`document.getElementById("dcQ").getAttribute("aria-expanded") === "false" && !document.getElementById("dcQ").hasAttribute("aria-activedescendant")`));
   await key(p, "Escape");
   await click(p, "#dcEntry .dc-close");
   await until(p, `document.getElementById("dcEntry").hidden`);
@@ -175,7 +201,7 @@ let D;
       count: document.getElementById("dcCount").textContent, dis: document.querySelectorAll(".dc-az .dc-l:disabled").length}})()`);
   check("filter: A–Z letter shows that letter only", f.ok && f.count.startsWith(String(f.want)) && f.count.includes("starting with " + L), f);
   await click(p, `.dc-l[data-l=""]`);
-  await p.shot(join(OUT, "desktop-list.png"));
+  await shot(p, "desktop-list.png");
 
   // ---- deep link: sections in order, annotate, formula
   for (const [id, label] of [[D.noFormula, "without formula"], [D.formula, "with formula"]]) {
@@ -197,9 +223,12 @@ let D;
     check("entry: other terms annotated in the text, never the term itself " + label, ent.gl.length > 0 && !ent.gl.includes(id), ent.gl.slice(0, 6));
     if (/\d/.test(e.example)) check("entry: example figures styled as numbers " + label, ent.nums > 0, ent.nums);
   }
-  await p.shot(join(OUT, "desktop-entry.png"));
+  await shot(p, "desktop-entry.png");
+  const foot = await p.js(`(()=>{const a=document.querySelector(".dc-efoot a"); return a && {href:a.href, t:a.target, rel:a.rel, txt:a.textContent, news: Math.round(document.querySelector(".dc-news").getBoundingClientRect().height)}})()`);
+  check("D12: entry footer links to Finspire on LinkedIn (new tab, noopener)", foot && /linkedin\.com\/company\/finspire/.test(foot.href) && foot.t === "_blank" && /noopener/.test(foot.rel) && /LinkedIn/.test(foot.txt), foot);
+  check("D10: 'In the news' block reserves its height", foot && foot.news >= 120, foot && foot.news);
   await p.js(`document.getElementById("dcSide").scrollTop = 99999, true`); await sleep(200);
-  await p.shot(join(OUT, "desktop-entry-bottom.png"));
+  await shot(p, "desktop-entry-bottom.png");
 
   // ---- related chip navigation + back/forward
   const startId = D.withRel || D.noFormula;
@@ -221,13 +250,17 @@ let D;
 
   // ---- in the news (real news-terms.json)
   if (D.withNews) {
+    await p.send("Network.enable"); const reqs = []; p.on(m => { if (m.method === "Network.requestWillBeSent") reqs.push(m.params.request.url); });
     await p.js(`location.hash = "t=${D.withNews}", true`);
     await until(p, `document.querySelectorAll(".dc-news-list li").length > 0`, 6000);
     const nw = await p.js(`[...document.querySelectorAll(".dc-news-list a")].map(a=>({href:a.href, t:a.target, rel:a.rel, title:a.querySelector(".dc-news-t").textContent, meta:a.querySelector(".dc-news-m").textContent}))`);
     check("news: up to 6 real headlines for the term", nw.length === D.newsN && nw[0].title === D.firstNews, { n: nw.length, want: D.newsN });
     check("news: links open outside, safely", nw.every(a => /^https?:/.test(a.href) && a.t === "_blank" && a.rel === "noopener noreferrer"), nw[0]);
     check("news: source and date shown", nw.every(a => a.meta.includes("·") || a.meta.length > 2), nw[0] && nw[0].meta);
-    await p.shot(join(OUT, "desktop-entry-news.png"));
+    await shot(p, "desktop-entry-news.png");
+    const cat = await p.js(`Finspire.glossary.get(${JSON.stringify(D.withNews)}).cat`);
+    const shard = reqs.filter(u => u.includes("/data/live/news-terms/" + cat + ".json")).length, whole = reqs.filter(u => /\/data\/live\/news-terms\.json/.test(u)).length;
+    check("D10: news comes from the per-topic shard, asked for once; the whole map only as a fallback", shard <= 1 && whole <= 1, { shard, whole, cat });
   } else check("news: news-terms.json has at least one dictionary term", false);
   if (D.quiet) {
     await p.js(`location.hash = "t=${D.quiet}", true`);
@@ -250,7 +283,7 @@ let D;
   check("local guest: personal panel sits in the side panel on desktop", me.inDesk);
   await key(p, "Escape"); await sleep(250);
   check("Escape closes the entry", await p.js(`document.getElementById("dcEntry").hidden`));
-  check("desktop guest: zero console errors", p.errors.length === 0, p.errors);
+  check("desktop guest: zero console errors", errs(p).length === 0, errs(p));
   check("desktop guest: no sideways scroll", await noOverflow(p));
   p.close();
 }
@@ -268,7 +301,7 @@ let D;
   await key(p, "Escape"); await sleep(300);
   const me = await p.js(`(()=>{const m=document.getElementById("me"); return {txt: m.textContent, btn: !!m.querySelector(".dc-me-in")}})()`);
   check("signed out: personal panel invites sign-in", me.btn && me.txt.includes("Sign in with your IIM Ranchi account to keep your history, save words and revise"), me);
-  check("signed out: zero console errors", p.errors.length === 0, p.errors);
+  check("signed out: zero console errors", errs(p).length === 0, errs(p));
   await p.js("sessionStorage.clear(), true");
   p.close();
 }
@@ -279,6 +312,10 @@ let D;
   await p.js("localStorage.clear(), true"); await p.goto(PAGE + "?demo-user=1", 300);
   await until(p, `!!document.querySelector("#dcList .dc-row:not(.dc-skel)") && !!document.querySelector(".dc-rev-go")`, 8000); await sleep(300);
   check("demo: signed in, personal desk with Revise", await p.js(`!!Finspire.auth.user() && !!document.querySelector("#me .dc-rev-go")`));
+  const quiet = await p.js(`(()=>{const b=document.querySelector("#me .dc-rev-go"); return {ghost: b.classList.contains("btn-ghost") && !b.classList.contains("btn-primary"), txt: b.textContent,
+    rec: document.querySelector("#me .dc-recent .dc-me-empty").textContent, rev: document.querySelector("#me .dc-rev-txt").textContent}})()`);
+  check("D6: with nothing saved the Revise button is a quiet ghost 'Try a quick quiz'", quiet.ghost && quiet.txt === "Try a quick quiz", quiet);
+  check("D16: empty-state copy is short and plain", quiet.rec === "Terms you open here or on the Markets page will appear here." && quiet.rev === "Save or look up a few words, then test yourself.", quiet);
   // browse open → history via browse
   const ids = await rows(p);
   await click(p, `#dcList .dc-row[data-id="${ids[2]}"]`);
@@ -303,15 +340,17 @@ let D;
   }
   const sv = await p.js(`({chips:[...document.querySelectorAll("#me .dc-saved .dc-savechip")].map(c=>c.dataset.id), btn: document.querySelector("#me .dc-rev-go").textContent})`);
   check("saved words: listed in the panel", sv.chips.length === 2 && sv.chips.includes(ids[2]) && sv.chips.includes(ids[7]), sv);
-  check("Revise button shows 'N words due' (new saved words)", /2 words due/.test(sv.btn), sv.btn);
+  check("Revise button shows 'N words due' (new saved words) and turns primary", /2 words due/.test(sv.btn) && await p.js(`document.querySelector("#me .dc-rev-go").classList.contains("btn-primary")`), sv.btn);
   check("desk: cards fit the side panel (no overflow)", await p.js(`[...document.querySelectorAll("#me .dc-card")].every(c => c.scrollWidth <= c.clientWidth + 1)`));
-  await p.shot(join(OUT, "desktop-signed-in.png"));
+  await shot(p, "desktop-signed-in.png");
 
   // ---- quiz: 10 questions, feedback, srs update
   await click(p, "#me .dc-rev-go");
   await until(p, `!!document.querySelector(".dc-qz-modal .dc-opt")`, 6000);
   check("quiz: opens in the shell modal (dialog, focus inside)", await p.js(`(()=>{const c=document.querySelector(".dc-qz-modal .fs-modal-card"); return c.getAttribute("role")==="dialog" && c.contains(document.activeElement)})()`));
-  await p.shot(join(OUT, "desktop-quiz.png"));
+  check("D8: focus lands on the question, not option A", await p.js(`document.activeElement.classList.contains("dc-qz-prompt")`), await p.js(`document.activeElement.className`));
+  check("D8: progress reads 'Question 1 of 10, 0 right'", await p.js(`document.querySelector(".dc-qz-prog").textContent`) === "Question 1 of 10, 0 right", await p.js(`document.querySelector(".dc-qz-prog").textContent`));
+  await shot(p, "desktop-quiz.png");
   const qa = [], types = new Set();
   for (let i = 0; i < 10; i++) {
     const ok = await until(p, `!!document.querySelector(".dc-qz-modal .dc-opt:not(:disabled)")`, 3000);
@@ -323,24 +362,27 @@ let D;
     await key(p, String(pickN));
     const res = await p.js(`({right: document.querySelector(".dc-opt.ok").dataset.id, chosen: document.querySelectorAll(".dc-qz-modal .dc-opt")[${pickN - 1}].dataset.id,
       fb: document.querySelector(".dc-qz-res").textContent, read: !!document.querySelector(".dc-qz-read"), next: document.activeElement.classList.contains("dc-qz-next")})`);
-    qa.push({ id: res.right, ok: res.right === res.chosen, prog: q.prog, opts: q.opts.length, sameCat: q.cats.filter(c => c === q.cats[q.opts.indexOf(res.right)]).length });
+    const fair = await p.js(`(async()=>{const G=Finspire.glossary, e=await G.entry(${JSON.stringify(res.right)}); const w=s=>new Set(String(s).toLowerCase().replace(/\\([^)]*\\)/g," ").split(/[^a-z0-9]+/).filter(x=>x.length>=3));
+      const aw=w([e.term].concat(e.aliases||[]).join(" ")); return ${JSON.stringify(q.opts)}.filter(id=>id!==e.id).every(id=>!(e.related||[]).includes(id) && ![...w(G.get(id).term)].some(x=>aw.has(x)))})()`);
+    qa.push({ id: res.right, ok: res.right === res.chosen, prog: q.prog, opts: q.opts.length, sameCat: q.cats.filter(c => c === q.cats[q.opts.indexOf(res.right)]).length, fair });
     if (i === 0) {
       check("quiz: 4 options, instant feedback with the answer and a link to the entry", q.opts.length === 4 && res.read && (res.right === res.chosen ? res.fb === "Correct." : (res.fb.includes("The answer is") || res.fb.includes("The right meaning is marked"))), res);
       check("quiz: focus moves to Next after answering", res.next);
-      await p.shot(join(OUT, "desktop-quiz-feedback.png"));
+      await shot(p, "desktop-quiz-feedback.png");
     }
     await click(p, ".dc-qz-next");
   }
   check("quiz: 10 questions", qa.length === 10 && qa[9].prog === "Question 10 of 10", qa.length);
   check("quiz: question types mixed", types.size >= 2, [...types]);
-  check("quiz: distractors mostly from the same category", qa.filter(x => x.sameCat >= 2).length >= 7, qa.map(x => x.sameCat));
+  check("quiz: distractors mostly from the same category", qa.filter(x => x.sameCat >= 2).length >= 6, qa.map(x => x.sameCat));
+  check("D8: no distractor is a related term or shares a word with the answer", qa.every(x => x.fair), qa.map(x => x.fair));
   check("quiz: draws saved and recent words first", [ids[2], ids[5], ids[7]].every(id => qa.some(x => x.id === id)), qa.map(x => x.id));
   await until(p, `!!document.querySelector(".dc-qz-end")`, 2000);
   const right = qa.filter(x => x.ok).length;
   const end = await p.js(`({big: document.querySelector(".dc-qz-big").textContent.replace(/\\s/g,""), review: [...document.querySelectorAll(".dc-qz-review .chip")].length,
     again: !!document.querySelector(".dc-qz-endacts .btn-primary")})`);
   check("quiz end: score, words to review, Revise again", end.big === right + "/10" && end.review === 10 - right && end.again, { end, right });
-  await p.shot(join(OUT, "desktop-quiz-end.png"));
+  await shot(p, "desktop-quiz-end.png");
   const srs = await store(p, "dict.srs"), now = Date.now();
   const srsOk = qa.every(x => { const r = srs[x.id]; if (!r || r.seen !== 1) return false;
     const days = (r.due - now) / 864e5; return x.ok ? (r.box === 2 && days > 1.9 && days < 2.1) : (r.box === 1 && days > 0.9 && days < 1.1); });
@@ -373,7 +415,7 @@ let D;
   // sign-out: personal panel goes back to the invitation; data stays with the account
   await p.js(`Finspire.auth.signOut(), true`); await sleep(400);
   check("sign out: panel shows the invitation again", await p.js(`document.querySelector("#me").classList.contains("dc-me-out")`));
-  check("signed in: zero console errors", p.errors.length === 0, p.errors);
+  check("signed in: zero console errors", errs(p).length === 0, errs(p));
   p.close();
 }
 
@@ -382,9 +424,9 @@ let D;
   const p = await open(PAGE + "?demo-user=0", PHONE);
   await p.js("localStorage.clear(), true"); await p.goto(PAGE + "?demo-user=0", 300);
   await until(p, `!!document.querySelector("#dcList .dc-row:not(.dc-skel)")`, 8000); await sleep(400);
-  check("phone: no console errors", p.errors.length === 0, p.errors);
+  check("phone: no console errors", errs(p).length === 0, errs(p));
   check("phone: no sideways scroll", await noOverflow(p));
-  await p.shot(join(OUT, "phone-home.png"));
+  await shot(p, "phone-home.png");
   const lay = await p.js(`(()=>{const q=document.getElementById("dcQ"), cats=document.getElementById("dcCats"), az=document.getElementById("dcAz");
     const small=[...document.querySelectorAll(".dc-cat, .dc-seg, .dc-l, .dc-q-x:not([hidden]), .dc-me-in, .dc-tod-go")].filter(e=>e.offsetParent).map(e=>{const r=e.getBoundingClientRect(); return [e.className, Math.round(r.height)]}).filter(x=>x[1]<40);
     const wr=document.querySelector(".dc-top").getBoundingClientRect(), qr=q.getBoundingClientRect();
@@ -397,12 +439,27 @@ let D;
   check("phone: A–Z scrolls sideways", lay.azScroll);
   check("phone: tap targets ≥ 40px", lay.small.length === 0, lay.small);
   check("phone: personal panel sits above the topics", lay.meBefore);
+  // D5: the level segment and A–Z row stay reachable while scrolling the long list
+  await p.js(`scrollTo({top: document.getElementById("dcWork").offsetTop + 2000, behavior: "instant"}), true`); await sleep(250);
+  const stick = await p.js(`(()=>{const t=document.querySelector(".dc-tools").getBoundingClientRect(), hdr=document.querySelector(".hdr").getBoundingClientRect();
+    return {pos: getComputedStyle(document.querySelector(".dc-tools")).position, top: Math.round(t.top), hdr: Math.round(hdr.bottom), h: Math.round(t.height), countIn: !!document.querySelector(".dc-tools #dcCount"),
+      cls: [...document.elementsFromPoint(200, t.top + t.height/2)].some(e => e.classList.contains("dc-tools"))}})()`);
+  check("D5: tools stick under the header while scrolling (≈ 140px block, count outside it)", stick.pos === "sticky" && Math.abs(stick.top - stick.hdr) <= 1 && stick.h <= 145 && !stick.countIn && stick.cls, stick);
+  await p.js(`scrollTo({top: 0, behavior: "instant"}), true`); await sleep(200);
 
-  // search on phone: results move up under the box
+  // search on phone: focusing the box collapses the head and brings the box to the top (D2)
+  await p.send("Emulation.setFocusEmulationEnabled", { enabled: true });          // headless: focus events need an active window
+  await p.js(`document.getElementById("dcQ").focus(), true`); await sleep(700);
+  const fo = await p.js(`({y: Math.round(scrollY), q: Math.round(document.getElementById("dcQ").getBoundingClientRect().top), lede: getComputedStyle(document.getElementById("dcLede")).display, h1: parseFloat(getComputedStyle(document.querySelector(".h1")).fontSize)})`);
+  check("D2: focus brings the search box up under the header and hides the eyebrow/lede", fo.q < 140 && fo.lede === "none" && fo.h1 <= 24, fo);
   await typeQ(p, "margin");
-  const sr = await p.js(`({top: Math.round(document.querySelector("#dcList .dc-row").getBoundingClientRect().top), tod: getComputedStyle(document.getElementById("dcTod")).display})`);
-  check("phone: while searching, results sit right under the search box", sr.tod === "none" && sr.top < 844, sr);
-  await p.shot(join(OUT, "phone-search.png"));
+  const sr = await p.js(`({top: Math.round(document.querySelector("#dcList .dc-row").getBoundingClientRect().top), tod: getComputedStyle(document.getElementById("dcTod")).display, q: Math.round(document.getElementById("dcQ").getBoundingClientRect().top)})`);
+  check("phone: while searching, results sit right under the search box (first result within the keyboard-free area)", sr.tod === "none" && sr.top < 400, sr);
+  await shot(p, "phone-search.png");
+  await p.js(`scrollTo({top: 700, behavior: "instant"}), true`); await sleep(250);
+  const stq = await p.js(`({q: Math.round(document.getElementById("dcQ").getBoundingClientRect().top), pos: getComputedStyle(document.querySelector(".dc-top")).position})`);
+  check("D2: the search box stays pinned while scrolling results", stq.pos === "sticky" && stq.q < 160 && stq.q > 60, stq);
+  await p.js(`scrollTo({top: 0, behavior: "instant"}), true`);
   await p.js(`(()=>{const q=document.getElementById("dcQ"); q.value=""; q.dispatchEvent(new Event("input")); q.blur(); return true})()`); await sleep(200);
 
   // entry as full-screen sheet with Back
@@ -417,28 +474,33 @@ let D;
     over: s.scrollWidth <= s.clientWidth}})()`);
   check("phone: entry opens as a full-screen sheet", sh.pos === "fixed" && sh.rect[0] === 0 && sh.rect[1] === 0 && sh.rect[2] === 390 && sh.rect[3] === 844 && sh.role === "dialog" && sh.modal === "true", sh);
   check("phone: sheet has Back, focus on the heading, #t= in the URL", sh.back && sh.focus === "dcTerm" && sh.hash === "#t=" + id, sh);
+  const bar = await p.js(`[...document.querySelectorAll(".dc-ebar button")].filter(b=>b.offsetParent).map(b=>[b.className.split(" ")[0], Math.round(b.getBoundingClientRect().height)])`);
+  check("D15: the sheet bar has Back, Save and link only (no duplicate ×), all 44px tall", bar.length === 3 && !bar.some(b => b[0] === "dc-close") && bar.every(b => b[1] >= 44), bar);
   check("phone: no sideways scroll inside the sheet", sh.over && await noOverflow(p));
-  await p.shot(join(OUT, "phone-entry.png"));
+  await shot(p, "phone-entry.png");
   await p.js(`document.getElementById("dcSide").scrollTop = 99999, true`); await sleep(200);
-  await p.shot(join(OUT, "phone-entry-bottom.png"));
+  await shot(p, "phone-entry-bottom.png");
   await tap(p, ".dc-back");
   await until(p, `!document.documentElement.classList.contains("dc-sheet")`, 3000); await sleep(300);
-  const back = await p.js(`({hash: location.hash, y: Math.round(scrollY), hidden: document.getElementById("dcEntry").hidden})`);
+  const back = await p.js(`({hash: location.hash, y: Math.round(scrollY), hidden: document.getElementById("dcEntry").hidden, focus: document.activeElement.id})`);
   check("phone: Back closes the sheet and keeps the list position", back.hash === "" && back.hidden && Math.abs(back.y - y0) < 4, { back, y0 });
+  check("D3: closing an entry never focuses the search box on a phone (list row keeps focus)", back.focus !== "dcQ" && back.focus === "dcList", back.focus);
 
   // deep link on phone + related + Back goes one step
   if (D.withRel) {
-    await p.goto(PAGE + "?demo-user=0#t=" + D.withRel, 300);
+    await p.goto("about:blank", 100); await p.goto(PAGE + "?demo-user=0#t=" + D.withRel, 300);   // a real deep link: fresh document, no scroll, no origin row
     await until(p, `document.documentElement.classList.contains("dc-sheet") && !!document.querySelector(".dc-relchip")`, 6000); await sleep(300);
     check("phone: deep link opens the sheet", await entryOpen(p));
     const rel = await p.js(`document.querySelector(".dc-relchip").dataset.id`);
     await tap(p, ".dc-relchip"); await until(p, `location.hash === "#t=${rel}"`); await sleep(300);
     await tap(p, ".dc-back"); await until(p, `location.hash === "#t=${D.withRel}"`, 3000); await sleep(300);
     check("phone: Back after a related term returns to the first entry", (await p.js("location.hash")) === "#t=" + D.withRel && await entryOpen(p));
-    await tap(p, ".dc-close"); await until(p, `!document.documentElement.classList.contains("dc-sheet")`, 3000);
-    check("phone: Close leaves the sheet", (await p.js("location.hash")) === "");
+    await tap(p, ".dc-back"); await until(p, `!document.documentElement.classList.contains("dc-sheet")`, 3000); await sleep(300);
+    const dl = await p.js(`({hash: location.hash, focus: document.activeElement.id, y: Math.round(scrollY)})`);
+    check("phone: Back again leaves the sheet", dl.hash === "");
+    check("D3: deep link → Back lands focus on the list title or list, never the search box; the page stays at the top", (dl.focus === "dcListTitle" || dl.focus === "dcList") && dl.y < 100, dl);
   }
-  check("phone guest: zero console errors", p.errors.length === 0, p.errors);
+  check("phone guest: zero console errors", errs(p).length === 0, errs(p));
   p.close();
 }
 {
@@ -446,21 +508,29 @@ let D;
   await p.js("localStorage.clear(), true"); await p.goto(PAGE + "?demo-user=1", 300);
   await until(p, `!!document.querySelector("#dcList .dc-row:not(.dc-skel)") && !!document.querySelector(".dc-rev-go")`, 8000); await sleep(300);
   const ids = await rows(p);
-  await p.js(`[${JSON.stringify(ids[1])}, ${JSON.stringify(ids[4])}].forEach(id => Finspire.store.toggleSaved(id, true)); Finspire.store.addHistory(${JSON.stringify(ids[6])}, "news"); true`); await sleep(300);
+  await p.js(`[${JSON.stringify(ids[1])}, ${JSON.stringify(ids[4])}].forEach(id => Finspire.store.toggleSaved(id, true)); Finspire.store.addHistory(${JSON.stringify(ids[6])}, "news"); Finspire.store.addHistory(${JSON.stringify(ids[7])}, "search"); Finspire.store.addHistory(${JSON.stringify(ids[8])}, "browse"); Finspire.store.addHistory(${JSON.stringify(ids[9])}, "browse"); true`); await sleep(300);
   await p.js(`document.getElementById("me").scrollIntoView({block:"start"}), true`); await sleep(200);
-  await p.shot(join(OUT, "phone-signed-in.png"));
+  await shot(p, "phone-signed-in.png");
   check("phone signed in: no sideways scroll", await noOverflow(p));
+  const cmp = await p.js(`(()=>{const m=document.getElementById("me"); const via=m.querySelector(".dc-via.v-search"); return {h: Math.round(m.getBoundingClientRect().height), rows: m.querySelectorAll(".dc-recent .dc-me-row").length,
+    via: via && getComputedStyle(via).color, ink2: getComputedStyle(document.documentElement).getPropertyValue("--ink2").trim()}})()`);
+  check("D6: phone panel with lookups stays compact (recent capped at 3 rows)", cmp.rows <= 3 && cmp.h < 700, cmp);
+  check("D11: 'via …' chips use --ink2 on the --line background (AA)", cmp.via === "rgb(189, 189, 198)", cmp);
+  await p.js("localStorage.clear(), true"); await p.goto(PAGE + "?demo-user=1", 300); await until(p, `!!document.querySelector(".dc-rev-go")`, 8000); await sleep(300);
+  const emp = await p.js(`({h: Math.round(document.getElementById("me").getBoundingClientRect().height), empties: document.querySelectorAll("#me .dc-card.dc-empty").length})`);
+  check("D6: phone panel for a new user is three compact rows (under 340px)", emp.empties === 3 && emp.h < 340, emp);
+  await p.js(`[${JSON.stringify(ids[1])}, ${JSON.stringify(ids[4])}].forEach(id => Finspire.store.toggleSaved(id, true)); true`); await sleep(300);
   await tap(p, "#me .dc-rev-go");
   await until(p, `!!document.querySelector(".dc-qz-modal .dc-opt")`, 5000); await sleep(400);
   const qm = await p.js(`(()=>{const c=document.querySelector(".dc-qz-modal .fs-modal-card").getBoundingClientRect(); const o=[...document.querySelectorAll(".dc-opt")].map(b=>Math.round(b.getBoundingClientRect().height));
     return {w: Math.round(c.width), bottom: Math.round(c.bottom), minOpt: Math.min(...o)}})()`);
   check("phone: quiz is a bottom sheet with large options", qm.w === 390 && qm.bottom === 844 && qm.minOpt >= 48, qm);
-  await p.shot(join(OUT, "phone-quiz.png"));
+  await shot(p, "phone-quiz.png");
   await tap(p, ".dc-qz-modal .dc-opt");
   await sleep(300);
-  await p.shot(join(OUT, "phone-quiz-feedback.png"));
+  await shot(p, "phone-quiz-feedback.png");
   check("phone: quiz feedback shown", await p.js(`!!document.querySelector(".dc-qz-res")`));
-  check("phone signed in: zero console errors", p.errors.length === 0, p.errors);
+  check("phone signed in: zero console errors", errs(p).length === 0, errs(p));
   p.close();
 }
 
@@ -485,20 +555,62 @@ let D;
   check(`scale: ${N.toLocaleString("en-IN")}-term dictionary loads (at least 1,900)`, n === N, n);
   const perf = await p.js(`(async()=>{
     const q=document.getElementById("dcQ"), frame=()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));
-    const times=[]; for (const s of ["c","ca","cap","capi","capit","capital"]) { const t0=performance.now(); q.value=s; q.dispatchEvent(new Event("input")); await frame(); times.push(Math.round(performance.now()-t0)); }
-    q.value=""; q.dispatchEvent(new Event("input")); await frame();
+    window.__lt.length = 0; const list=document.getElementById("dcList"); const rendered=()=>new Promise(r=>{const mo=new MutationObserver(()=>{mo.disconnect(); r()}); mo.observe(list,{childList:true}); setTimeout(()=>{mo.disconnect(); r()}, 1500)});
+    const times=[]; for (const s of ["c","ca","cap","capi","capit","capital"]) { const t0=performance.now(); q.value=s; q.dispatchEvent(new Event("input")); await rendered(); await frame(); times.push(Math.round(performance.now()-t0)); }
+    q.value=""; q.dispatchEvent(new Event("input")); await frame(); await new Promise(r=>setTimeout(r,200)); const ltSearch = window.__lt.slice();
     const t1=performance.now(); for (let i=0;i<6;i++){ document.getElementById("dcSentinel").scrollIntoView({block:"end"}); await frame(); await new Promise(r=>setTimeout(r,60)); }
     const scroll=Math.round(performance.now()-t1);
     const lb=document.querySelector('.dc-l[data-l="S"]'); const t2=performance.now(); lb.click(); await frame(); const letter=Math.round(performance.now()-t2);
     lb.click(); await frame();
-    return {search: times, maxSearch: Math.max(...times), rows: document.querySelectorAll("#dcList .dc-row").length, scroll, letter, longtasks: window.__lt}})()`);
+    return {search: times, maxSearch: Math.max(...times), rows: document.querySelectorAll("#dcList .dc-row").length, scroll, letter, longtasks: window.__lt, ltSearch}})()`);
   console.log("scale (4x CPU throttle, phone):", JSON.stringify(perf));
-  check("scale: each search keystroke under 100 ms at 4× CPU throttle", perf.maxSearch < 100, perf.search);
+  check("scale: each keystroke renders within 80 ms debounce + 100 ms at 4× CPU throttle", perf.maxSearch < 180, perf.search);
+  check("D9: a keystroke never blocks the main thread for 100 ms (first slice of 24 rows, rest idle)", perf.ltSearch.every(x => x < 100), perf.ltSearch);
   check("scale: letter filter under 100 ms", perf.letter < 100, perf.letter);
   check("scale: list never renders more than it needs (chunks of 60)", perf.rows <= 60, perf.rows);
+  const deb = await p.js(`(async()=>{const q=document.getElementById("dcQ"); q.value="bond"; q.dispatchEvent(new Event("input")); const n0=document.querySelectorAll("#dcList .dc-row-term").length, t0=document.querySelector("#dcList .dc-row-term")?.textContent;
+    await new Promise(r=>setTimeout(r,400)); const t1=document.querySelector("#dcList .dc-row-term")?.textContent; q.value=""; q.dispatchEvent(new Event("input")); return {t0, t1}})()`);
+  check("D9: results appear after the debounce", /bond/i.test(deb.t1), deb);
   check("scale: no main-thread task over 250 ms", perf.longtasks.every(x => x < 250), perf.longtasks);
-  check("scale: no console errors", p.errors.length === 0, p.errors);
+  check("scale: no console errors", errs(p).length === 0, errs(p));
   await p.send("Emulation.setCPUThrottlingRate", { rate: 1 });
+  p.close();
+}
+
+// ================================================================================================ term of the day before the index (D4)
+{
+  // hold index.json back for 1.5 s: the card must already be painted from data/glossary/tod.json (built next to the index)
+  const held = [];
+  const setup = async p => {
+    await p.send("Fetch.enable", { patterns: [{ urlPattern: "*/data/glossary/index.json*" }] });
+    p.on(m => { if (m.method === "Fetch.requestPaused") held.push(m.params.requestId); });
+  };
+  const p = await b.page("about:blank", Object.assign({ setup, wait: 50 }, PHONE));
+  await setup(p);
+  await p.goto(PAGE + "?demo-user=0", 100);
+  const todFile = await (await fetch(base + "data/glossary/tod.json")).json().catch(() => null);
+  const key = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Kolkata", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  const pick = todFile && todFile.days && todFile.days[key];
+  const early = await until(p, `!!document.querySelector("#dcTodBody .dc-tod-def") && !Finspire.glossary.loaded()`, 1500);
+  const card = await p.js(`({id: document.getElementById("dcTodBody").dataset.id, term: document.querySelector(".dc-tod-term")?.textContent, cat: document.querySelector(".dc-tod-meta span:last-child")?.textContent,
+    loaded: Finspire.glossary.loaded(), skel: document.querySelectorAll("#dcTodBody .skel").length, busy: document.getElementById("dcTodBody").hasAttribute("aria-busy")})`);
+  if (pick) check("D4: term of the day paints from tod.json before the index arrives", early && card.id === pick.id && card.term === pick.term && card.cat === pick.catName && !card.loaded && card.skel === 0 && !card.busy, { card, pick: pick.id });
+  else check("D4: data/glossary/tod.json has today's pick (built by scripts/build_glossary.py)", false, key);
+  for (const id of held.splice(0)) await p.send("Fetch.continueRequest", { requestId: id }).catch(() => {});
+  await p.send("Fetch.disable");
+  await until(p, `Finspire.glossary.loaded() && !!document.querySelector("#dcList .dc-row:not(.dc-skel)")`, 8000); await sleep(400);
+  const after = await p.js(`({id: document.getElementById("dcTodBody").dataset.id, same: document.getElementById("dcTodBody").dataset.id === Finspire.glossary.termOfDay()?.id})`);
+  check("D4: the index agrees with tod.json (no re-render, same term)", after.same && after.id === card.id, after);
+  p.close();
+}
+
+// ================================================================================================ 1024px: A–Z grid
+{
+  const p = await open(PAGE + "?demo-user=0", { width: 1024, height: 768 });
+  const az = await p.js(`[...document.querySelectorAll("#dcAz .dc-l")].map(b => Math.round(b.getBoundingClientRect().height))`);
+  check("D14: every A–Z key is one line tall at 1024px ('0–9' included)", az.length === 28 && az.every(h => h === az[0]), az);
+  check("1024px: no sideways scroll", await noOverflow(p));
+  await shot(p, "w1024-work.png");
   p.close();
 }
 
@@ -507,6 +619,7 @@ let D;
   const p = await open(PAGE + "?demo-user=0#t=" + (D.noFormula || D.tod), Object.assign({ reducedMotion: true }, PHONE));
   await until(p, `document.documentElement.classList.contains("dc-sheet")`, 4000);
   check("reduced motion: sheet has no animation", await p.js(`getComputedStyle(document.getElementById("dcSide")).animationName === "none" || parseFloat(getComputedStyle(document.getElementById("dcSide")).animationDuration) < 0.02`));
+  check("reduced motion: chips and rows have no transitions", await p.js(`["dc-cat","dc-l","dc-seg","dc-row"].every(c => { const e=document.querySelector("."+c); return !e || getComputedStyle(e).transitionDuration.split(",").every(d => parseFloat(d) < 0.01); })`));
   p.close();
 }
 

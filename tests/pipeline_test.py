@@ -562,7 +562,7 @@ try {{
         return []
     finally:
         srv.kill()
-    g = fn.Glossary(json.loads((gl_dir / "index.json").read_text()))
+    g = fn.Glossary(fn.load_glossary(str(gl_dir / "index.json")))   # index + phrases.json, as fetch_news.py reads them
     diffs = []
     for t, js_m in zip(texts, res["out"]):
         py = [[m["id"], m["start"], m["end"]] for m in g.match(t)]

@@ -9,13 +9,18 @@
 <!-- PAGE: replace the title and description -->
 <title>Page name · Finspire</title>
 <meta name="description" content="One plain sentence about this page.">
-<link rel="icon" type="image/png" href="../assets/img/logo-light.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<!-- fonts are self-hosted (assets/fonts/, declared at the top of pages.css); preload the three faces the first paint uses -->
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-sans-latin.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../assets/fonts/plex-mono-400-latin.woff2">
 <link rel="stylesheet" href="../assets/css/pages.css">
 <link rel="stylesheet" href="../assets/css/shell.css">
 <!-- PAGE: page stylesheet here, e.g. <link rel="stylesheet" href="../assets/css/markets.css"> -->
+<!-- config first (1 KB, same origin): with sign-in configured, html.fs-signin reserves the Sign in pill's slot before
+     finspire.js renders it, so the nav never nudges sideways on load -->
+<script src="../config.js"></script>
+<script>(function(c){if(c&&c.googleClientId&&!(c.features&&c.features.signin===false))document.documentElement.classList.add("fs-signin")})(window.FINSPIRE_CONFIG)</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -38,7 +43,7 @@
       </nav>
       <div class="nav-cta">
         <div class="fs-acct" data-fs-account></div>
-        <a class="btn btn-primary join" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join Finspire</a>
+        <a class="btn btn-primary join" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer" title="Join Finspire on LinkedIn (opens in a new tab)" aria-label="Join Finspire on LinkedIn (opens in a new tab)">Join Finspire</a>
         <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -49,7 +54,7 @@
       <a href="../dictionary/">Dictionary</a>
       <a href="../library/">Library</a>
       <a href="../index.html#events">Events</a>
-      <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join Finspire</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer" aria-label="Join Finspire on LinkedIn (opens in a new tab)">Join on LinkedIn ↗</a>
     </nav>
   </div>
 </header>
@@ -69,10 +74,13 @@
 
 <footer class="fs-foot">
   <div class="wrap">
+    <!-- five columns, the same blocks as the home footer. The home fills Repository and Start here from site-data.json
+         (tracks and paths); keep these names in step with it. -->
     <div class="fcols">
-      <nav class="fcol" aria-label="Learn"><b>Learn</b><a href="../index.html#paths">Start here</a><a href="../index.html#repository">Repository</a><a href="../index.html#events">Events</a></nav>
+      <nav class="fcol" aria-label="Repository"><b>Repository</b><a href="../index.html#repository">CFA &amp; certifications</a><a href="../index.html#repository">Valuation &amp; modeling</a><a href="../index.html#repository">Markets &amp; trading</a><a href="../index.html#repository">Hard skills</a><a href="../index.html#repository">Soft skills &amp; communication</a><a href="../index.html#repository">Reading &amp; listening</a></nav>
+      <nav class="fcol" aria-label="Start here"><b>Start here</b><a href="../index.html#paths">Zero to markets</a><a href="../index.html#paths">Valuation in a summer</a><a href="../index.html#paths">CFA Level I runway</a><a href="../index.html#paths">Pitch-ready finance</a></nav>
       <nav class="fcol" aria-label="Tools"><b>Tools</b><a href="../markets/">Markets &amp; News</a><a href="../dictionary/">Dictionary</a><a href="../library/">Library</a></nav>
-      <nav class="fcol" aria-label="Club"><b>Club</b><a href="../index.html#about">About Finspire</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join the club</a></nav>
+      <nav class="fcol" aria-label="Club"><b>Club</b><a href="../index.html#about">About Finspire</a><a href="../library/">Finspire Drive</a><a href="../index.html#events">Flagship events</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join the club</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Suggest a resource</a></nav>
       <nav class="fcol" aria-label="Follow"><b>Follow</b><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://iimranchi.ac.in/" target="_blank" rel="noopener noreferrer">IIM Ranchi</a></nav>
     </div>
     <div class="fbot">
@@ -89,7 +97,7 @@
   </div>
 </footer>
 
-<script src="../config.js"></script>
+<!-- config.js is loaded in <head> (see above) -->
 <script src="../assets/js/finspire.js"></script>
 <!-- PAGE: page script here, e.g. <script src="../assets/js/markets.js"></script> -->
 </body>

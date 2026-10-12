@@ -584,16 +584,28 @@ class Glossary:
         return ids
 
 
+def _read_index(path):
+    """index.json plus, since glossary v2, the highlight phrases from phrases.json next to it (merged back into row[6])."""
+    path = pathlib.Path(path)
+    ix = json.loads(path.read_text())
+    ph = path.with_name("phrases.json")
+    if ph.exists():
+        hl = (json.loads(ph.read_text()) or {}).get("hl") or {}
+        for row in ix.get("t", []):
+            if isinstance(row, list) and len(row) >= 8 and not row[6]:
+                row[6] = hl.get(row[0], [])
+    return ix
+
 def load_glossary(path):
     if path:
         try:
-            return json.loads(pathlib.Path(path).read_text())
+            return _read_index(path)
         except Exception as e:
             log(f"glossary {path} not readable: {e}")
     for cand in (ROOT / "dist/data/glossary/index.json",):
         if cand.exists():
             try:
-                return json.loads(cand.read_text())
+                return _read_index(cand)
             except Exception:
                 pass
     bg = ROOT / "scripts/build_glossary.py"
@@ -601,7 +613,7 @@ def load_glossary(path):
         tmp = pathlib.Path(tempfile.mkdtemp(prefix="fs-gloss-"))
         try:
             subprocess.run([sys.executable, str(bg), "--out", str(tmp)], check=True, capture_output=True, timeout=120)
-            return json.loads((tmp / "index.json").read_text())
+            return _read_index(tmp / "index.json")
         except Exception as e:
             log("could not build a glossary:", e)
     return None
