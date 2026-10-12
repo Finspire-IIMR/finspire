@@ -16,3 +16,7 @@ Sign-in is tested with demo mode (`?demo-user=1`, localhost only).
 `integrate.test.mjs` takes the base URL of a build served under a sub-folder (e.g. `http://127.0.0.1:8800/finspire/`)
 and, optionally, a third argument: the base URL of the claude.ai dictionary build (`scripts/build_artifact.py`) served
 the same way with `../finspire.html` wrapped by `../tools/wrap.py` as its `index.html`. `run_all.sh` sets both up.
+
+Every page opened through `tests/lib/cdp.mjs` runs as if `site/config.js` had no Google client id (sign-in not set up),
+so results do not change when an admin pastes one in; `?demo-user=1` still makes sign-in usable. Pass
+`{realConfig: true}` to `page()` to use `config.js` as deployed (`integrate.test.mjs` does this once per page).

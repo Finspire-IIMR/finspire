@@ -13,6 +13,9 @@ const port = +(process.argv[3] || 9405);
 const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = join(HERE, "out", "library");
 const LIB = base + "library/";
+// folder counts come from the site's own data/site-data.json (admins add folders over time)
+const SITE_FOLDERS = ((await (await fetch(base + "data/site-data.json")).json()).drive || {}).folders || [];
+const NF = SITE_FOLDERS.length, NSOON = SITE_FOLDERS.filter(f => !/^https?:\/\/\S+$/.test(f.u || "")).length;
 const DEMO = LIB + "?demo-user=1&demo-drive=1";
 const R = reporter(), check = R.check;
 const b = await launch({ port });
@@ -68,8 +71,8 @@ async function setFile(p, sel, path) {
   check("gate (no client id): says it opens once IIM Ranchi sign-in is switched on", /opens here once IIM Ranchi sign-in is switched on/.test(await txt(p, ".lib-intro-p")) && /opens with IIM Ranchi sign-in/i.test(await txt(p, ".lib-intro-h")));
   check("gate (no client id): no Google button, no account control, no sign-in prompt", await p.js(`!document.querySelector("[data-lib-signin], .fs-gbtn, [data-fs-signin]") && document.querySelector("[data-fs-account]").hidden`));
   const rows = await p.js(`[...document.querySelectorAll(".lib-intro-list li")].map(li=>li.textContent)`);
-  check("gate: previews the folder names from site-data", rows.length === 8 && rows[1].includes("Interview questions"), rows);
-  check("gate: folders without a link say Coming soon", rows.filter(r => r.includes("Coming soon")).length === 7, rows.filter(r => r.includes("Coming soon")).length);
+  check("gate: previews the folder names from site-data", rows.length === NF && rows.some(r => r.includes("Interview questions")), rows);
+  check("gate: folders without a link say Coming soon", rows.filter(r => r.includes("Coming soon")).length === NSOON, rows.filter(r => r.includes("Coming soon")).length);
   check("gate: no file browser for the guest", !(await p.js(`!!document.querySelector(".lib-browser, [data-lib-open]")`)));
   await p.shot(join(OUT, "d-0-gate-no-client-id.png"));
   // sign-in usable (demo) but signed out: the gate offers IIM Ranchi sign-in
@@ -91,8 +94,9 @@ check("signed in: greets the student", (await txt(p, ".lib-intro-h")).includes("
 await p.shot(join(OUT, "d-2-open.png"));
 await click(p, "[data-lib-open]");
 await waitFor(p, `document.querySelectorAll(".lib-fc").length > 0`);
-check("home: folder cards from site-data", await p.js(`document.querySelectorAll(".lib-fc").length`) === 8);
-check("home: linked folders are buttons, the rest Coming soon", await p.js(`document.querySelectorAll("button.lib-fc").length`) === 6 &&
+check("home: folder cards from site-data", await p.js(`document.querySelectorAll(".lib-fc").length`) === NF);
+check("home: linked folders are buttons, the rest Coming soon", await p.js(`document.querySelectorAll("button.lib-fc").length + document.querySelectorAll(".lib-fc.soon").length`) === NF &&
+  await p.js(`document.querySelectorAll("button.lib-fc").length`) >= 6 &&
   await p.js(`[...document.querySelectorAll(".lib-fc.soon")].every(e => e.textContent.includes("Coming soon"))`));
 check("home: folder ids parsed from /folders/, ?id= and /u/0/ links", await p.js(`["demoCfaResources01","demoMembersNotes01","demoCoverLetters01","17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk"].every(id => document.querySelector('[data-lib-folder="'+id+'"]'))`));
 check("home: Add a file shown (inbox configured)", !!(await p.js(`!!document.querySelector("[data-lib-upload]")`)));
@@ -323,7 +327,7 @@ p.close();
 // ================================================================================================= feature switches
 // config.js assigns window.FINSPIRE_CONFIG; this setter merges feature switches into whatever it assigns.
 const features = f => `(() => { let c; Object.defineProperty(window, "FINSPIRE_CONFIG", { configurable: true,
-  get() { return c; }, set(v) { c = Object.assign({}, v, { features: Object.assign({}, v && v.features, ${JSON.stringify(f)}) }); } }); })();`;
+  get() { return c; }, set(v) { c = Object.assign({}, v, { googleClientId: "", features: Object.assign({}, v && v.features, ${JSON.stringify(f)}) }); } }); })();`;
 {
   // sign-in switched off, no public Drive key: the gate says so plainly and keeps the folder preview
   const g = await open(LIB + "?demo-user=0&demo-drive=0", { before: HOOK + features({ signin: false }) });
@@ -331,7 +335,7 @@ const features = f => `(() => { let c; Object.defineProperty(window, "FINSPIRE_C
   check("signin off: gate shown (guests have no Drive access)", await g.js(`document.querySelector("#lib").dataset.screen`) === "gate");
   check("signin off: no Google button, no account control", await g.js(`!document.querySelector("[data-lib-signin]") && !document.querySelector("[data-lib-open]") && document.querySelector("[data-fs-account]").hidden`));
   check("signin off: says the Library opens with IIM Ranchi sign-in", /opens with IIM Ranchi sign-in/i.test(await txt(g, ".lib-intro-h")));
-  check("signin off: still previews the folder names", await g.js(`document.querySelectorAll(".lib-intro-list li").length`) === 8);
+  check("signin off: still previews the folder names", await g.js(`document.querySelectorAll(".lib-intro-list li").length`) === NF);
   check("signin off: links to the Dictionary built from cfg.pages", await g.js(`(document.querySelector("[data-lib-off-signin] a")||{}).getAttribute("href")`) === "../dictionary/");
   check("signin off: no sideways scroll", await noOverflow(g));
   await g.shot(join(OUT, "d-14-signin-off.png"));
@@ -342,7 +346,7 @@ const features = f => `(() => { let c; Object.defineProperty(window, "FINSPIRE_C
   // sign-in switched off but folders reachable with the API key (demo Drive stands in): browse without signing in
   const k = await open(LIB + "?demo-user=1&demo-drive=1", { before: HOOK + features({ signin: false }) });
   await waitFor(k, `document.querySelectorAll(".lib-fc").length > 0`);
-  check("signin off + key: folders open without a sign-in step", await k.js(`document.querySelector("#lib").dataset.screen`) === "browser" && await k.js(`document.querySelectorAll("button.lib-fc").length`) === 6);
+  check("signin off + key: folders open without a sign-in step", await k.js(`document.querySelector("#lib").dataset.screen`) === "browser" && await k.js(`document.querySelectorAll("button.lib-fc").length`) >= 6);
   check("signin off + key: no upload (needs a Google account)", !(await k.js(`!!document.querySelector("[data-lib-upload], [data-lib-share]")`)));
   await click(k, `button.lib-fc[data-lib-folder="demoMembersNotes01"]`);
   await waitFor(k, `!!document.querySelector('[data-lib-item="demoNotesDcf00001"]')`);

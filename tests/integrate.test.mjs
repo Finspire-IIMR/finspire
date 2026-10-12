@@ -262,13 +262,38 @@ section("home Drive cards → Library folder");
     if (first === "open") await click(p, "[data-lib-open]", 1500);
     const lib = await waitFor(p, `(()=>{const c=document.querySelector(".lib-crumb.cur"); return c && document.querySelectorAll("[data-lib-item]").length ? {crumb:c.textContent, hash:location.hash, search:location.search, path:location.pathname, items:document.querySelectorAll("[data-lib-item]").length} : null})()`, 8000);
     const fid = card.href.split("?f=")[1];
-    check("home Drive card opens the Library on that folder", lib && lib.path === BP + "library/" && lib.hash === "#f=" + fid && lib.crumb === card.t && lib.items > 0 && !/[?&]f=/.test(lib.search), lib);
+    // two folders in site-data may share one Drive link; the breadcrumb then shows either title
+    const SAME_ID = await (await fetch(base + "data/site-data.json")).json().then(d => (d.drive.folders || []).filter(f => (f.u || "").includes(fid)).map(f => f.t));
+    check("home Drive card opens the Library on that folder", lib && lib.path === BP + "library/" && lib.hash === "#f=" + fid && (lib.crumb === card.t || SAME_ID.includes(lib.crumb)) && lib.items > 0 && !/[?&]f=/.test(lib.search), lib);
     await p.shot(join(OUT, "drive-to-library.png"));
     if (await p.js(`!!document.querySelector(".lib-crumb[data-lib-crumb='0']")`)) await click(p, ".lib-crumb[data-lib-crumb='0']", 800);
     const back = await p.js(`({hash:location.hash, folders:document.querySelectorAll("button.lib-fc").length})`);
     check("Library: the breadcrumb goes back to the Library home after a home-page deep link", back.hash === "" && back.folders > 0, back);
   }
   done(p, "drive");
+}
+
+// ================================================================================================ config.js as deployed
+section("config.js as deployed (sign-in follows the real client id)");
+{
+  const rows = {};
+  for (const [name, path] of [["home", ""], ["dictionary", "dictionary/"], ["library", "library/"]]) {
+    const p = await open(base + path + "?demo-user=0", Object.assign({ realConfig: true }, DESK));
+    await p.js("localStorage.clear(), true"); await p.goto(base + path + "?demo-user=0", 3500);
+    rows[name] = await p.js(`Finspire.auth.ready.then(()=>({cid: !!Finspire.cfg.googleClientId, on: Finspire.feature("signin"), pill: !!document.querySelector(".hdr [data-fs-signin]"),
+      acctHidden: document.querySelector(".hdr .fs-acct, .hdr [data-fs-account], #hdrAcct").hidden, guest: !!(Finspire.auth.user()||{}).guest,
+      libBtn: !!document.querySelector("[data-lib-signin]"), dictBtn: !!document.querySelector("#me .dc-me-in")}))`);
+    rows[name].errors = p.errors.slice();
+    done(p, "deployed config " + name);
+  }
+  const cid = rows.home.cid;
+  if (cid) {
+    check("client id set in config.js: Sign in appears in the header on every page, nobody is a guest", Object.values(rows).every(r => r.on && r.pill && !r.acctHidden && !r.guest), rows);
+    check("client id set: the Library gate offers Continue with Google, the Dictionary invites sign-in", rows.library.libBtn && rows.dictionary.dictBtn, rows);
+  } else {
+    check("no client id in config.js: no Sign in anywhere, everyone is a local guest", Object.values(rows).every(r => !r.on && !r.pill && r.acctHidden && r.guest && !r.libBtn && !r.dictBtn), rows);
+  }
+  check("deployed config: no console errors", Object.values(rows).every(r => r.errors.length === 0), Object.fromEntries(Object.entries(rows).map(([k, r]) => [k, r.errors])));
 }
 
 // ================================================================================================ claude.ai dictionary-only build

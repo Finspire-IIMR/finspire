@@ -4,6 +4,11 @@
 import { spawn } from "node:child_process"; import { mkdtempSync, writeFileSync, mkdirSync } from "node:fs";
 import { join, dirname } from "node:path"; import { tmpdir } from "node:os";
 export const sleep = ms => new Promise(r => setTimeout(r, ms));
+// Pages run as if site/config.js had no Google client id (sign-in not set up yet), so every suite is deterministic
+// whatever an admin has pasted into config.js. Demo mode (?demo-user=1) still makes sign-in usable. Pass
+// {realConfig: true} to page() to use config.js exactly as deployed.
+export const NO_CLIENT_ID = `(() => { let c; try { Object.defineProperty(window, "FINSPIRE_CONFIG", { configurable: true, enumerable: true,
+  get() { return c; }, set(v) { c = v && typeof v === "object" ? Object.assign({}, v, { googleClientId: "" }) : v; } }); } catch (e) {} })();`;
 const CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
 export async function launch({port = 9400, headless = true} = {}){
@@ -14,7 +19,7 @@ export async function launch({port = 9400, headless = true} = {}){
   if(!ok) throw new Error("Chrome did not start on port " + port);
   const pages = [];
   return {
-    async page(url, {width = 1280, height = 900, mobile = false, scale = 1, reducedMotion = false, wait = 2500, before} = {}){
+    async page(url, {width = 1280, height = 900, mobile = false, scale = 1, reducedMotion = false, wait = 2500, before, realConfig = false} = {}){
       const t = await (await fetch(`http://127.0.0.1:${port}/json/new?about:blank`, {method: "PUT"})).json();
       const ws = new WebSocket(t.webSocketDebuggerUrl); await new Promise(r => ws.onopen = r);
       let id = 0; const pend = new Map(), errors = [], listeners = [];
@@ -29,7 +34,8 @@ export async function launch({port = 9400, headless = true} = {}){
       await send("Emulation.setDeviceMetricsOverride", {width, height, deviceScaleFactor: scale, mobile});
       if(mobile) await send("Emulation.setTouchEmulationEnabled", {enabled: true, maxTouchPoints: 5});
       if(reducedMotion) await send("Emulation.setEmulatedMedia", {features: [{name: "prefers-reduced-motion", value: "reduce"}]});
-      if(before) await send("Page.addScriptToEvaluateOnNewDocument", {source: before});
+      const pre = (realConfig ? "" : NO_CLIENT_ID) + (before || "");
+      if(pre) await send("Page.addScriptToEvaluateOnNewDocument", {source: pre});
       await send("Page.navigate", {url}); await sleep(wait);
       const p = {
         send, errors, on: f => listeners.push(f),

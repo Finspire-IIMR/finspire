@@ -355,16 +355,19 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
     keys.drive === "drive|p|1" && keys.about === "about|h2|1" && keys.quote === "quote|blockquote|1" && keys.foot === FOOT && keys.tools === 0 && keys.live === 0 && keys.leak === 0, Object.assign({}, keys, { foot: keys.foot === FOOT ? "same" : keys.foot }));
   // Drive link editing still works (ported from tools/smoke.mjs)
   await goTo(p, "#drive");
-  await p.js("document.querySelector('#driveGrid .df .go [data-gear=\"d:0\"]').click(); 1"); await sleep(200);
+  // indexes come from the live data (admins add folders): the first folder still without a link, and the next new one
+  const EI = await q(p, "DRIVE.folders.findIndex(f => !/^https?:\\/\\/\\S+$/.test(f.u || '') || f.u === 'https://')"), NI = await q(p, "DRIVE.folders.length");
+  await p.js(`document.querySelector('#driveGrid .df .go [data-gear="d:${EI}"]').click(); 1`); await sleep(200);
   await p.js("(()=>{const f=document.querySelector('#edDialog form'); f.querySelector('[name=u]').value='https://drive.google.com/drive/folders/EXAMPLE_FOLDER_ID_123?usp=sharing'; f.requestSubmit(); return 1})()"); await sleep(250);
   await p.js("document.querySelector('[data-adddrive]').click(); 1"); await sleep(300);
-  await p.js("(()=>{const el=document.querySelector('[data-b=\"d.8.t\"]'); el.textContent='Case competitions'; el.dispatchEvent(new Event('input',{bubbles:true})); el.blur(); return 1})()"); await sleep(400);
+  await p.js(`(()=>{const el=document.querySelector('[data-b="d.${NI}.t"]'); el.textContent='Case competitions'; el.dispatchEvent(new Event('input',{bubbles:true})); el.blur(); return 1})()`); await sleep(400);
   await p.js("(()=>{const el=document.querySelector('#markets-news h2'); el.textContent='Markets, made plain.'; el.dispatchEvent(new Event('input',{bubbles:true})); el.blur(); return 1})()"); await sleep(300);
-  const ed = await q(p, "({u: DRIVE.folders[0].u, n: DRIVE.folders.length, t: DRIVE.folders[8]?.t, dirty: ED.dirty, copy: S.copy['markets-news|h2|1']})");
-  check("edit mode: paste a Drive link, add a folder, edit copy", ed.u.includes("EXAMPLE_FOLDER_ID_123") && ed.n === 9 && ed.t === "Case competitions" && ed.dirty && ed.copy === "Markets, made plain.", ed);
+  const ed = await q(p, `({u: DRIVE.folders[${EI}].u, n: DRIVE.folders.length, t: DRIVE.folders[${NI}]?.t, dirty: ED.dirty, copy: S.copy['markets-news|h2|1']})`);
+  check("edit mode: paste a Drive link, add a folder, edit copy", EI >= 0 && ed.u.includes("EXAMPLE_FOLDER_ID_123") && ed.n === NI + 1 && ed.t === "Case competitions" && ed.dirty && ed.copy === "Markets, made plain.", ed);
   await shot(p, "desktop-edit-mode.png");
 
-  // publish with no repository configured
+  // publish with no repository configured (whatever config.js holds, start from an empty github block)
+  await p.js("Finspire.cfg.github.owner = ''; Finspire.cfg.github.repo = ''; 1");
   await click(p, "#edPublish"); await sleep(400);
   const ns = await q(p, "({title: document.querySelector('.fs-modal.fs-show .fs-modal-title')?.textContent, calls: __gh.calls.length})");
   check("publish: explains an admin must fill github owner/repo in config.js first", /isn't set up yet/.test(ns.title || "") && ns.calls === 0 && /config\.js/.test(await q(p, "document.querySelector('.fs-modal.fs-show').textContent")), ns);
@@ -385,7 +388,7 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   let parsed = null; try { parsed = JSON.parse(put.txt); } catch (e) {}
   check("publish: GET for the sha, then PUT data/site-data.json with the token", put && put.url === "https://api.github.com/repos/finspire-club/finspire-site/contents/data/site-data.json" && put.auth === "Bearer github_pat_TESTTOKEN_0123456789abcdef" &&
     put.msg === "Update site content from Edit mode" && put.branch === "main" && put.sha === "sha-remote-1" && (await q(p, "__gh.calls[0].method + ' ' + __gh.calls[0].url")).startsWith("GET https://api.github.com/repos/finspire-club/finspire-site/contents/data/site-data.json?ref=main"), put && { ...put, txt: put.txt.length });
-  check("publish: the PUT body decodes (base64, UTF-8) to the edited site JSON", put && put.txt === expected && parsed && parsed.drive.folders[0].u.includes("EXAMPLE_FOLDER_ID_123") && parsed.drive.folders[8].t === "Case competitions" &&
+  check("publish: the PUT body decodes (base64, UTF-8) to the edited site JSON", put && put.txt === expected && parsed && parsed.drive.folders[EI].u.includes("EXAMPLE_FOLDER_ID_123") && parsed.drive.folders[NI].t === "Case competitions" &&
     parsed.settings.copy["markets-news|h2|1"] === "Markets, made plain." && parsed.resources.length > 50 && put.txt.includes("Bulls & Bears"), parsed && { folders: parsed.drive.folders.length });
   const after = await q(p, "({toast: [...document.querySelectorAll('.fs-toast')].map(t => t.textContent).join(' | '), state: document.getElementById('edState').textContent, dirty: ED.dirty, token: localStorage.getItem('fs.gh.token')})");
   check("publish: toast says it's saved and the live site updates in about a minute; token kept in this browser", /Saved — the live site updates in about a minute\./.test(after.toast) && !after.dirty && after.token === "github_pat_TESTTOKEN_0123456789abcdef", after);
@@ -422,7 +425,7 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   await p.js("document.querySelector('#edDialog [data-ghforget]')?.click(); 1"); await sleep(200);
   check("edit mode: Forget GitHub token (in Site settings) removes it from this browser", hasForget && (await q(p, "localStorage.getItem('fs.gh.token')")) === null);
   await p.js("document.querySelector('#edDialog [data-close]')?.click(); document.querySelector('[data-ed=\"done\"]').click(); 1"); await sleep(400);
-  const d1 = await q(p, "({anchor: document.querySelector('#driveGrid a.df')?.getAttribute('href'), editing: document.documentElement.classList.contains('editing'), fab: !document.getElementById('editFab').hidden})");
+  const d1 = await q(p, "({anchor: [...document.querySelectorAll('#driveGrid a.df')].map(a => a.getAttribute('href')).find(h => h.includes('EXAMPLE_FOLDER_ID_123')), editing: document.documentElement.classList.contains('editing'), fab: !document.getElementById('editFab').hidden})");
   check("after editing: the pasted folder opens in the Library and Edit site is back", d1.anchor === "./library/?f=EXAMPLE_FOLDER_ID_123" && !d1.editing && d1.fab, d1);
   check("edit mode: no console errors", p.errors.length === 0, p.errors);
   await p.js("localStorage.removeItem('fs.gh.token'); 1");
@@ -508,7 +511,7 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
 {
   const p = await open(base, { width: 1280, height: 900, reducedMotion: true });
   const rm = await q(p, "({rm: document.documentElement.classList.contains('rm'), inline: document.getElementById('deviceWrap').style.transform, pre: document.querySelectorAll('.rv.pre').length, drive: document.querySelectorAll('#driveGrid .df').length})");
-  check("reduced motion: static hero, nothing hidden, Drive present", rm.rm && rm.inline === "" && rm.pre === 0 && rm.drive === 8, rm);
+  check("reduced motion: static hero, nothing hidden, Drive present", rm.rm && rm.inline === "" && rm.pre === 0 && rm.drive === await q(p, "DRIVE.folders.length") && rm.drive >= 8, rm);
   await goTo(p, "#markets-news", 80);
   check("reduced motion: Markets & News still mounts", await waitFor(p, "document.querySelector('#mnTodBody .mn-tod-in') && document.querySelectorAll('#mnNews a[href^=\"https://\"]').length >= 3", 8000));
   await shot(p, "desktop-reduced-motion.png");
