@@ -251,7 +251,7 @@
     "abbr": [],
     "short": "A measure of whether two investments' returns tend to rise and fall together or move in opposite directions.",
     "kid": "On sunny days, more ice cream and more sunglasses get sold, so they go up together. Umbrellas do the opposite. This shows which things go up and down together.",
-    "detail": "Covariance measures the joint variability of two assets' returns. Positive covariance means they tend to be above their averages at the same time; negative covariance means one tends to be above its average when the other is below. It is calculated as the average product of the two assets' deviations from their means. Covariance is the building block of portfolio risk: the variance of a two-asset portfolio depends on each asset's variance plus twice the weighted covariance between them, which is why combining assets with low or negative covariance reduces risk. Beta is also defined using covariance, as a stock's covariance with the market divided by the market's variance. The common confusion is reading its size as the strength of the relationship. Covariance is in squared return units and grows with each asset's volatility, so it cannot be compared across pairs; correlation rescales it to between -1 and +1.",
+    "detail": "Covariance measures the joint variability of two assets' returns. Positive covariance means they tend to be above their averages at the same time; negative covariance means one tends to be above its average when the other is below. It is calculated as the average product of the two assets' deviations from their means. Covariance is the building block of portfolio risk: the variance of a two-asset portfolio is each asset's weighted variance plus twice their weighted covariance, which is why combining assets with low or negative covariance reduces risk. Beta is also defined using covariance, as a stock's covariance with the market divided by the market's variance. The common confusion is reading its size as the strength of the relationship. Covariance is in squared return units and grows with each asset's volatility, so it cannot be compared across pairs; correlation rescales it to between -1 and +1.",
     "example": "Say stock A returned 10% and then 20% over two years, while stock B returned 4% and then 8%. Their means are 15% and 6%, the paired deviations are (-5, -2) and (+5, +2), and the products are 10 and 10, so the sample covariance is (10 + 10) / (2 - 1) = 20, in percent squared.",
     "formula": "Cov(A,B) = Sum of [(RA - Mean of RA) x (RB - Mean of RB)] / (n - 1)",
     "related": [
@@ -274,8 +274,6 @@
       "positive correlation"
     ],
     "hl": [
-      "correlation",
-      "correlations",
       "correlation coefficient",
       "negative correlation",
       "positive correlation",
@@ -793,7 +791,7 @@
     "kid": "If only your kite string snaps, only your kite falls while your friends' kites keep flying. Flying many kites means one snapped string does not spoil the day.",
     "detail": "Unsystematic risk is the part of an asset's volatility caused by events specific to that company or its industry: a management scandal, a product recall, a lost contract, a regulatory penalty or an accounting fraud. Because such events are largely independent across companies, their effects tend to cancel out in a well-diversified portfolio; studies suggest holding 20 to 30 stocks across sectors removes most of it. Since investors can eliminate this risk cheaply, theory says the market does not reward bearing it, so a concentrated portfolio carries extra risk without extra expected return. In variance terms, total risk equals systematic plus unsystematic risk. A stark Indian example is Satyam Computer Services, whose shares collapsed in January 2009 after its chairman confessed to accounting fraud, a shock specific to one company rather than to the IT sector. A common mistake is assuming a famous company carries no specific risk.",
     "example": "Say you put ₹1 lakh into one stock that halves after a fraud is discovered: you lose ₹50,000. Spread equally across 20 unrelated stocks, the same event hits only the ₹5,000 in that stock, costing ₹2,500, or 2.5% of the portfolio.",
-    "formula": "Total risk (variance) = Systematic risk + Unsystematic risk",
+    "formula": "Total variance = β² x Market variance + Specific (residual) variance",
     "related": [
       "Systematic risk",
       "Diversification",
@@ -913,7 +911,7 @@
     ],
     "short": "The average loss on a portfolio's very worst days, such as the worst 5 days in 100, showing how bad really bad days get.",
     "kid": "On your clumsiest days, you spill a lot of juice. This looks only at those clumsiest days and asks how much you spill on them, on average.",
-    "detail": "Conditional value at risk (CVaR), also called expected shortfall (ES), is the expected loss given that the loss exceeds the VaR threshold. If a portfolio's one-day 95% VaR is ₹20 lakh, CVaR averages all losses on the worst 5% of days, so it is always at least as large as VaR. It answers the question VaR leaves open: when a bad day comes, how bad is it likely to be? CVaR is a coherent risk measure, meaning that combining positions never makes measured risk exceed the sum of their separate risks, and it is easier to optimise than VaR. The Basel Committee's Fundamental Review of the Trading Book replaced 99% VaR with 97.5% expected shortfall for bank market-risk capital. Cautions: CVaR depends on a few extreme observations, so it is harder to estimate and backtest reliably, and like VaR it relies on the history or model chosen.",
+    "detail": "Conditional value at risk (CVaR), also called expected shortfall (ES), is the expected loss given that the loss exceeds the VaR threshold. If a portfolio's one-day 95% VaR is ₹20 lakh, CVaR averages all losses on the worst 5% of days, so it is always at least as large as VaR. It answers the question VaR leaves open: when a bad day comes, how bad is it likely to be? CVaR is a coherent risk measure; among other properties, combining positions never makes measured risk exceed the sum of their separate risks, and it is easier to optimise than VaR. The Basel Committee's Fundamental Review of the Trading Book replaced 99% VaR with 97.5% expected shortfall for bank market-risk capital. Cautions: CVaR depends on a few extreme observations, so it is harder to estimate and backtest reliably, and like VaR it relies on the history or model chosen.",
     "example": "Say a portfolio's 20 worst days out of 400, the worst 5%, produced losses averaging ₹28 lakh, while the 95% VaR, the loss at the edge of that group, was ₹18 lakh. The 95% CVaR is ₹28 lakh, telling the risk manager that losses beyond VaR are, on average, ₹10 lakh deeper than the VaR figure.",
     "formula": "CVaR = Average of losses greater than VaR = E[Loss | Loss > VaR]",
     "related": [

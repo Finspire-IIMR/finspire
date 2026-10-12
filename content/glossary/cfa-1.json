@@ -55,7 +55,7 @@
     "abbr": [],
     "short": "The first of the three CFA exams, testing broad basic knowledge of investment tools, ethics and financial analysis through multiple-choice questions.",
     "kid": "This is the first level of the big game. It checks that you know lots of small facts, like learning all your letters before you read stories.",
-    "detail": "Level I is the first of the three CFA Program exams. It tests knowledge and basic application across ten topic areas, from ethics, quantitative methods and economics to financial statement analysis, equity, fixed income, derivatives, alternatives and portfolio management. Under the format as of 2025, it has 180 standalone multiple-choice questions split across two sessions of 2 hours 15 minutes, with no negative marking for wrong answers, and candidates must also complete a short practical skills module before receiving results. Ethics carries the largest single topic weight. It is the natural starting point for students: under the eligibility rules as of 2025, anyone within 23 months of finishing a bachelor's degree can sit Level I, but must graduate before moving on to Level II. The common confusion: Level I is wide rather than deep, and many candidates underestimate how much time financial statement analysis and fixed income demand.",
+    "detail": "Level I is the first of the three CFA Program exams. It tests knowledge and basic application across ten topic areas, from ethics, quantitative methods and economics to financial statement analysis, equity, fixed income, derivatives, alternatives and portfolio management. Under the format as of 2025, it has 180 standalone multiple-choice questions split across two sessions of 2 hours 15 minutes, with no negative marking for wrong answers, and candidates must also complete a short practical skills module before receiving results. Ethics carries the largest single topic weight. It is the natural starting point for students: under the eligibility rules as of 2025, students who are 23 months or less from completing a bachelor's degree can sit Level I, but must graduate before registering for Level II. The common confusion: Level I is wide rather than deep, and many candidates underestimate how much time financial statement analysis and fixed income demand.",
     "example": "Level I has 180 questions in two sessions of 135 minutes each, so 270 minutes in total, or 270 x 60 / 180 = 90 seconds per question. A candidate planning 300 hours of study at 20 hours a week needs 15 weeks of preparation.",
     "formula": "",
     "related": [
@@ -227,7 +227,7 @@
     ],
     "short": "Voluntary global rules, set by CFA Institute, for how investment firms calculate and present their track records so investors can compare them fairly.",
     "kid": "When you show your drawings, you must show all of them, not just your best three. These rules make everyone show their drawings the same way, so we can compare fairly.",
-    "detail": "The Global Investment Performance Standards (GIPS) are voluntary, worldwide ethical standards, created and maintained by CFA Institute, for how investment firms calculate and present past returns to prospective clients. The core ideas are fair representation and full disclosure. A firm claiming compliance must do so for the whole firm, put every actual fee-paying discretionary portfolio into a composite of portfolios with the same strategy, use standard methods such as time-weighted returns, and disclose fees, benchmarks and the number of portfolios. Firms may hire an independent verifier to test their policies. The current edition took effect in 2020. GIPS matters because it stops cherry-picking and lets investors compare managers like for like. The common confusion: compliance shows the numbers are presented honestly, not that performance is good, and it is not a SEBI requirement in India.",
+    "detail": "The Global Investment Performance Standards (GIPS) are voluntary, worldwide ethical standards, created and maintained by CFA Institute, for how investment firms calculate and present past returns to prospective clients. The core ideas are fair representation and full disclosure. A firm claiming compliance must do so for the whole firm, put every actual fee-paying discretionary portfolio into a composite of portfolios with the same strategy, use standard methods such as time-weighted returns, and disclose fees, benchmarks and the number of portfolios. Firms may hire an independent verifier to test their policies. The current edition took effect in 2020. GIPS matters because it stops cherry-picking and lets investors compare managers like for like. The common confusion: compliance shows the numbers are presented honestly, not that performance is good, and under SEBI rules as of 2025 it is not mandatory in India.",
     "example": "Say a hypothetical manager, ABC Asset Managers, runs 10 equal-sized large-cap portfolios: 8 returned 12% and 2 returned 4%. Showing only the best 8 would advertise 12%, but a GIPS composite must include all 10, giving (8 x 12% + 2 x 4%) / 10 = 10.4%.",
     "formula": "",
     "related": [
@@ -314,7 +314,6 @@
     "aliases": [
       "MNPI",
       "inside information",
-      "unpublished price sensitive information",
       "Standard II(A)"
     ],
     "hl": [
@@ -381,7 +380,7 @@
     "short": "CFA Standard III(A): act in clients' best interests with care and prudence, putting them ahead of your employer and yourself.",
     "kid": "When you look after your little brother's toys, you treat them as more important than your own. His toys first, yours later.",
     "detail": "Duty of loyalty refers to Standard III(A) of the CFA Institute Standards of Professional Conduct, titled Loyalty, Prudence and Care. Members and candidates owe clients a duty of loyalty and must act with reasonable care and prudent judgement, placing clients' interests ahead of their employer's and their own. That means identifying who the client really is (for a pension fund, the members rather than the sponsoring company), following the client's mandate, seeking the best execution for trades, treating brokerage commissions as the client's property and voting proxies in the client's interest. It closely mirrors the legal idea of fiduciary duty. The common confusion: loyalty to clients is different from loyalty to an employer under Standard IV(A); when the two clash, clients come first.",
-    "example": "Say a fund manager can route a client's ₹1 crore trade through a broker charging 0.05%, or ₹50,000, or through her firm's own broking arm charging 0.10%, or ₹1 lakh, for the same execution quality. Loyalty to the client means choosing the cheaper broker and saving the client ₹50,000.",
+    "example": "Say a fund manager can route a client's ₹10 crore trade through a broker charging 0.05%, or ₹50,000, or through her firm's own broking arm charging 0.10%, or ₹1 lakh, for the same execution quality. Loyalty to the client means choosing the cheaper broker and saving the client ₹50,000.",
     "formula": "",
     "related": [
       "Fiduciary duty",
@@ -479,7 +478,7 @@
     "short": "CFA Standard III(E): keep client information private, unless it concerns illegal activity, the law requires disclosure, or the client agrees.",
     "kid": "When a friend tells you a secret, you keep it, even after you stop playing together. You only tell a grown-up if someone might get hurt.",
     "detail": "Preservation of confidentiality is Standard III(E) of the CFA Institute Standards of Professional Conduct. Members and candidates must keep information about current, former and prospective clients confidential. There are three exceptions: the information concerns illegal activity by the client, disclosure is required by law, or the client permits it. The duty continues after the relationship ends, and cooperating with an investigation by CFA Institute's Professional Conduct Program is not a breach. It matters because clients share sensitive details about their wealth, health, family and business plans that could harm them if leaked. The common confusion: confidentiality does not protect wrongdoing. If a client appears to be laundering money, the adviser should follow the law and firm procedures, which may require reporting it, for example to India's Financial Intelligence Unit.",
-    "example": "Say a wealth manager handles ₹25 crore for a business family and mentions at a dinner party that they 'just moved ₹5 crore, a fifth of their money, into gold'. Even without naming them publicly, that breaches Standard III(E); answering a tax authority's legal notice about the same account would not.",
+    "example": "Say a wealth manager handles ₹25 crore for a business family and tells friends at a private dinner that the family 'just moved ₹5 crore, a fifth of their money, into gold'. Even in private conversation, that breaches Standard III(E); answering a tax authority's legal notice about the same account would not.",
     "formula": "",
     "related": [
       "Duty of loyalty",
@@ -575,8 +574,7 @@
     ],
     "hl": [
       "soft dollars",
-      "soft dollar",
-      "soft-dollar",
+      "soft dollar arrangements",
       "soft commissions",
       "soft commission"
     ],
@@ -780,7 +778,6 @@
     "aliases": [
       "CMA India",
       "ICMAI",
-      "CMA",
       "Institute of Cost Accountants of India"
     ],
     "hl": [
@@ -886,8 +883,8 @@
     ],
     "short": "A UK-based global accountancy body whose qualification, built on international accounting standards, is recognised in many countries.",
     "kid": "A badge for number-checkers that many countries accept, like a swimming badge you can show at pools all over the world.",
-    "detail": "The Association of Chartered Certified Accountants (ACCA) is a UK-based global accountancy body, founded in 1904, whose qualification is recognised in many countries. Students pass up to 13 exams across three stages, Applied Knowledge, Applied Skills and Strategic Professional, complete an ethics and professional skills module, and gain three years of relevant work experience. The syllabus is built on international standards such as IFRS, which suits global finance, audit and shared-services roles, including at the many global capability centres in India. Students with relevant degrees or qualifications can get exemptions from some early papers. The common confusion: ACCA membership is not a licence to sign statutory audits of Indian companies; that right belongs to chartered accountants who are members of ICAI.",
-    "example": "ACCA has 3 Applied Knowledge, 6 Applied Skills and 4 Strategic Professional exams, so 3 + 6 + 4 = 13 in all. A student exempted from, say, 3 early papers would sit the remaining 10.",
+    "detail": "The Association of Chartered Certified Accountants (ACCA) is a UK-based global accountancy body, founded in 1904, whose qualification is recognised in many countries. Under the structure as of 2025, students pass up to 13 exams across three stages, Applied Knowledge, Applied Skills and Strategic Professional, complete an ethics and professional skills module, and gain three years of relevant work experience. The syllabus is built on international standards such as IFRS, which suits global finance, audit and shared-services roles, including at the many global capability centres in India. Students with relevant degrees or qualifications can get exemptions from some early papers. The common confusion: ACCA membership is not a licence to sign statutory audits of Indian companies; that right belongs to chartered accountants who are members of ICAI.",
+    "example": "Under the structure as of 2025, ACCA has 3 Applied Knowledge, 6 Applied Skills and 4 Strategic Professional exams, so 3 + 6 + 4 = 13 in all. A student exempted from, say, 3 early papers would sit the remaining 10.",
     "formula": "",
     "related": [
       "IFRS",
@@ -949,7 +946,7 @@
     "abbr": [],
     "short": "A single-exam CFA Institute qualification, formerly the Certificate in ESG Investing, on how environmental, social and governance factors are used in investing.",
     "kid": "A short course that teaches how to check if a big factory is kind to nature and people, like checking that a playground is clean and everyone plays fair.",
-    "detail": "The Sustainable Investing Certificate, called the Certificate in ESG Investing until CFA Institute renamed it in April 2025, teaches how environmental, social and governance factors are analysed and used in investment decisions. It was first developed by CFA Society of the UK and is now run by CFA Institute; the curriculum did not change with the new name. Topics include ESG markets and frameworks, climate change, social and governance analysis, engagement and stewardship, ESG integration in valuation, and portfolio construction and reporting. It is a single computer-based multiple-choice exam with no formal prerequisites, so students can take it alongside their studies. It suits analysts, wealth managers and anyone moving into sustainability research or reporting, such as BRSR work in India. The common confusion: it is a standalone certificate, not a step towards the CFA charter, and does not let anyone use the CFA designation.",
+    "detail": "The Sustainable Investing Certificate, called the Certificate in ESG Investing until CFA Institute renamed it in 2025, teaches how environmental, social and governance factors are analysed and used in investment decisions. It was first developed by CFA Society of the UK and is now run by CFA Institute. Topics include ESG markets and frameworks, climate change, social and governance analysis, engagement and stewardship, ESG integration in valuation, and portfolio construction and reporting. It is a single computer-based multiple-choice exam with no formal prerequisites, so students can take it alongside their studies. It suits analysts, wealth managers and anyone moving into sustainability research or reporting, such as BRSR work in India. The common confusion: it is a standalone certificate, not a step towards the CFA charter, and does not let anyone use the CFA designation.",
     "example": "A typical skill tested is weighted average carbon intensity. A portfolio with 60% in a company emitting 100 tonnes of CO2 per ₹1 crore of revenue and 40% in one emitting 50 tonnes has an intensity of 0.6 x 100 + 0.4 x 50 = 80 tonnes per ₹1 crore.",
     "formula": "",
     "related": [

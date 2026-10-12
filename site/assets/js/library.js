@@ -470,7 +470,12 @@ function renderIntro() {
       h("p", { class: "lib-intro-p" }, "Open the Library to browse the club's folders. Google asks once for permission to read them. Finspire can't change or delete anything in your Drive."),
       h("div", { class: "lib-intro-acts" },
         btn("Open the library", { kind: "btn-primary", icon: "book", attrs: { "data-lib-open": "" }, onclick: ev => openLibrary(ev.currentTarget) })),
-      h("p", { class: "lib-intro-note" }, "Files open inside this page. Nothing is posted or shared for you."));
+      h("p", { class: "lib-intro-note" }, "Files open inside this page. Nothing is posted or shared for you."),
+      h("div", { class: "lib-consent", role: "note" },
+        h("b", null, "About Google's permission screen"),
+        h("p", null, "Google will say Finspire wants to \u201csee and download all your Google Drive files\u201d. That is Google's standard wording for read-only access. Finspire only opens the club's shared folders, never your own files."),
+        h("p", null, "The permission stays in this browser tab for about an hour, nothing is sent to any Finspire server, and Finspire cannot change or delete anything. You can remove it any time at ",
+          h("a", { href: "https://myaccount.google.com/permissions", target: "_blank", rel: "noopener noreferrer" }, "myaccount.google.com/permissions"), ".")));
   }
   const rowIn = f => [h("span", { class: "lib-il-ic" }, I(f.icon)), h("span", { class: "lib-il-t" }, f.t),
     h("span", { class: "lib-il-s" }, f.id ? (u ? I("right") : I("lock")) : "Coming soon")];

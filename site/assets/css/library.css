@@ -379,3 +379,9 @@ button.lib-fc:hover .lib-fc-go svg{transform:translateX(3px)}
   .lib-prog.indet i{width:100%;opacity:.5}
   .fs-modal.lib-vw .fs-modal-card{transform:none!important}
 }
+
+/* explains Google's broad wording for read-only Drive access before the student sees it */
+.lib-consent{margin-top:18px;padding:14px 16px;border-radius:14px;border:1px solid var(--line2);background:var(--bg3);max-width:56ch;display:grid;gap:6px}
+.lib-consent b{font-size:14px;font-weight:600;color:var(--ink)}
+.lib-consent p{font-size:13.5px;line-height:1.5;color:var(--ink2)}
+.lib-consent a{color:var(--accent-ink);border-bottom:1px solid currentColor}

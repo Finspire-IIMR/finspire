@@ -262,10 +262,7 @@
       "gamestop saga",
       "gamestop frenzy",
       "gamestop mania",
-      "wallstreetbets",
-      "meme stock mania",
-      "meme-stock mania",
-      "meme stock frenzy",
+      "gme squeeze",
       "roaring kitty"
     ],
     "abbr": [],
@@ -479,13 +476,12 @@
       "Hindenburg-Adani row"
     ],
     "hl": [
-      "hindenburg report",
-      "hindenburg research",
-      "hindenburg allegations",
-      "hindenburg's report",
       "adani-hindenburg",
       "adani hindenburg",
-      "hindenburg-adani"
+      "hindenburg-adani",
+      "hindenburg adani",
+      "hindenburg report on adani",
+      "hindenburg-adani row"
     ],
     "abbr": [],
     "short": "The 2023 episode where Hindenburg Research, a firm betting on falling shares, accused the Adani Group of fraud, wiping over $100 billion off its value.",
@@ -792,11 +788,11 @@
       "Think & Learn insolvency"
     ],
     "hl": [
-      "byju's",
-      "byjus",
       "byju's crisis",
       "byju's collapse",
       "byju's insolvency",
+      "byjus crisis",
+      "byju's lenders",
       "byju raveendran"
     ],
     "abbr": [],
@@ -1086,7 +1082,7 @@
     "short": "The slump in China's real estate sector since 2021, as heavily indebted developers such as Evergrande and Country Garden defaulted and home prices fell.",
     "kid": "Imagine builders who borrowed lots of bricks to build houses they had already promised to families. When the brick sellers stopped helping, many houses were left half-built and people stopped wanting new ones.",
     "detail": "For two decades property and related industries made up roughly a quarter of China's economy, with developers borrowing heavily and pre-selling flats before building them. In August 2020 Beijing introduced the 'three red lines', caps on developers' debt ratios, to curb risk. Cut off from new credit, many developers ran short of cash. Evergrande, with over $300 billion of liabilities, defaulted on dollar bonds in late 2021 and was ordered liquidated by a Hong Kong court in January 2024; Country Garden defaulted in 2023. Unfinished projects led to mortgage boycotts, sales and land auctions slumped, local governments lost land revenue, and household wealth, mostly held in housing, fell. Beijing has eased rules and backed project completion step by step. Common confusion: this is a slow-burning, state-managed crisis, not a single Lehman-style crash, and it weighs on global demand for commodities such as iron ore.",
-    "example": "Under one red line, liabilities excluding advance payments from buyers must be below 70% of assets excluding those payments. Say XYZ Homes has $100 billion of assets and $85 billion of liabilities, including $20 billion of advances: its ratio is (85 - 20) / (100 - 20) = 81%, so it breaches the line and cannot add debt.",
+    "example": "Under one red line, liabilities excluding advance payments from buyers must be below 70% of assets excluding those payments. Say XYZ Homes has $100 billion of assets and $85 billion of liabilities, including $20 billion of advances: its ratio is (85 - 20) / (100 - 20) = 65 / 80, about 81%, so it breaches the line. Each breach cut the yearly debt growth a developer was allowed (from 15% with no breaches), and breaching all three meant no new debt at all.",
     "formula": "Three red lines: (Liabilities - Advance receipts) / (Assets - Advance receipts) must stay under 70%; Net debt / Equity must stay under 100%; Cash / Short-term debt must stay above 1",
     "related": [
       "Default",

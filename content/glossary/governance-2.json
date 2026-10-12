@@ -576,7 +576,7 @@
   "abbr": [],
   "short": "A public research report by an investor betting on a company's share price falling, setting out alleged problems such as fraud, hidden debt or overvaluation.",
   "kid": "Imagine a child who says, 'I bet that tall block tower will fall,' and then shows everyone the wobbly blocks at the bottom. They might be right, but they also win the bet if it falls.",
-  "detail": "A short-seller report is published by an activist short seller, a firm that first takes a short position (selling borrowed shares, or using derivatives, to profit from a fall) and then makes its case public. Reports typically allege accounting fraud, undisclosed related parties, round-tripping, hidden debt or poor governance. Well-known firms include Muddy Waters, Citron and Hindenburg Research, which closed in January 2025. Hindenburg's January 2023 report on the Adani Group was followed by a loss of more than $100 billion in the group's market value within weeks, and by regulatory scrutiny in India. Some campaigns have been vindicated, as with Wirecard, which collapsed in 2020; others fade. The common confusion: the author profits if the price falls, so a report is a set of allegations from an interested party; check the claims against filings and the company's response before acting.",
+  "detail": "A short-seller report is published by an activist short seller, a firm that first takes a short position (selling borrowed shares, or using derivatives, to profit from a fall) and then makes its case public. Reports typically allege accounting fraud, undisclosed related parties, round-tripping, hidden debt or poor governance. Well-known firms include Muddy Waters, Citron and Hindenburg Research, which closed in January 2025. Hindenburg's January 2023 report on the Adani Group was followed by a loss of more than $100 billion in the group's market value within weeks, and by a SEBI probe that in September 2025 rejected its related-party allegations. Some campaigns have been vindicated, as with Wirecard, which collapsed in 2020; others fade. The common confusion: the author profits if the price falls, so a report is a set of allegations from an interested party; check the claims against filings and the company's response before acting.",
   "example": "Say a short seller sells 1 lakh borrowed shares of ABC Ltd at ₹800 and then publishes a report alleging hidden debt. If the share falls 30% to ₹560 and it buys back, it makes 1 lakh x ₹240 = ₹2.4 crore before borrowing costs; if the share instead rises to ₹900, it loses ₹1 crore.",
   "formula": "",
   "related": [
@@ -602,17 +602,20 @@
   ],
   "hl": [
    "competition commission of india",
-   "competition commission",
    "competition act",
    "cci probe",
    "cci penalty",
-   "cci order"
+   "cci order",
+   "cci approval",
+   "cci approves",
+   "cci clears",
+   "cci nod"
   ],
   "abbr": [
    "CCI"
   ],
   "short": "India's competition regulator, which stops cartels and abuse of market dominance and must approve large mergers and acquisitions before they close.",
-  "kid": "If a few big kids secretly agree to charge everyone more for marbles, or one kid bullies others out of the game, a fair referee steps in so everyone can play and trade fairly.",
+  "kid": "If a few big kids secretly agree to charge everyone more for marbles, or one kid bullies others out of the game, a fair referee steps in so everyone can play and swap fairly.",
   "detail": "The Competition Commission of India (CCI) enforces the Competition Act 2002, which replaced the old MRTP Act. It became fully active in 2009 and began reviewing mergers in 2011. It acts on three fronts: anti-competitive agreements such as cartels and bid-rigging, abuse of a dominant position, and combinations, meaning mergers and acquisitions above size thresholds, which need its approval before completion. Penalties can reach 10% of average turnover over the last three years, and for cartels up to three times profit if that is higher. A 2023 amendment added a deal-value test, so large acquisitions of digital firms with few assets also need approval, plus settlement and commitment options. In 2022 it fined Google ₹1,337.76 crore over Android practices. Appeals go to the NCLAT. The common confusion: being big or dominant is legal; only abusing that dominance is not, and the CCI does not set prices.",
   "example": "Say ABC Ltd is found to be part of a price-fixing cartel, with turnover of ₹9,000 crore, ₹10,000 crore and ₹11,000 crore over the last three years. Its average turnover is ₹30,000 crore / 3 = ₹10,000 crore, so a penalty at 10% of average turnover could be up to ₹1,000 crore.",
   "formula": "",
@@ -1023,7 +1026,7 @@
   "abbr": [],
   "short": "The legal rule that a company's shareholders can lose at most the money they invested, not their personal savings, if the company fails.",
   "kid": "If you put one coin into a shared piggy bank for a class party and the party goes badly, you lose only that coin. Nobody can come and take your toys from home.",
-  "detail": "Limited liability means the owners of a company are not personally responsible for its debts beyond the amount they invested, or agreed to pay, for their shares. It rests on the idea that a company is a separate legal person, confirmed in the 1897 British case Salomon v Salomon. This protection lets millions of passive investors buy shares without risking their homes, which makes stock markets and diversification possible. Indian companies signal it in their names with Limited or Private Limited. LLPs extend it to partners, while sole proprietors and partners in ordinary partnerships face unlimited liability. A limited liability company (LLC) is a specific US business form. The common confusions: the company itself remains fully liable for its debts; courts can lift the corporate veil in cases of fraud; and promoters who sign personal guarantees for bank loans, common in India, are personally on the hook.",
+  "detail": "Limited liability means the owners of a company are not personally responsible for its debts beyond the amount they invested, or agreed to pay, for their shares. It rests on the idea that a company is a separate legal person, confirmed by Britain's House of Lords in Salomon v Salomon in 1896. This protection lets millions of passive investors buy shares without risking their homes, which makes stock markets and diversification possible. Indian companies signal it in their names with Limited or Private Limited. LLPs extend it to partners, while sole proprietors and partners in ordinary partnerships face unlimited liability. A limited liability company (LLC) is a specific US business form. The common confusions: the company itself remains fully liable for its debts; courts can lift the corporate veil in cases of fraud; and promoters who sign personal guarantees for bank loans, common in India, are personally on the hook.",
   "example": "Say you buy 1,000 shares of ABC Ltd at ₹200 each, investing ₹2 lakh. If ABC collapses owing creditors ₹500 crore, the most you can lose is your ₹2 lakh. A sole proprietor running the same business would be personally liable for all of it.",
   "formula": "",
   "related": [
@@ -1052,7 +1055,7 @@
   ],
   "abbr": [],
   "short": "A company whose shares cannot be offered to the public or freely traded, owned by a small group such as founders, family or investors.",
-  "kid": "A private club lets in only invited friends, and you cannot sell your place to a stranger without the club agreeing. Everyone in the club is still kept safe from big losses.",
+  "kid": "A private club lets in only invited friends, and you cannot give your place to a stranger unless the club agrees.",
   "detail": "In India, the Companies Act 2013 defines a private limited company (Pvt Ltd) as one whose articles restrict the transfer of shares, cap members at 200 (excluding employees) and forbid inviting the public to buy its securities. It needs at least two members and two directors, and its shareholders enjoy limited liability. Most start-ups and family businesses start this way: it is cheap to run and can issue shares to investors and stock options to employees. A public limited company needs at least seven members and three directors and may raise money from the public, so a private company must convert into a public one before an IPO. An LLP, under the LLP Act 2008, is a different form: partners have limited liability but there are no shares, which suits professional firms. The common confusion: public does not mean listed; many public limited companies never list.",
   "example": "Say three founders start ABC Pvt Ltd with 10,000 shares of ₹10 each, split 4,000, 3,000 and 3,000. A VC then invests ₹5 crore for 2,500 new shares, taking the total to 12,500, so the VC owns 2,500 / 12,500 = 20% and the founders are diluted to 32%, 24% and 24%.",
   "formula": "",
@@ -1078,8 +1081,7 @@
   "hl": [
    "glass-steagall",
    "glass steagall",
-   "glass-steagall act",
-   "gramm-leach-bliley"
+   "glass-steagall act"
   ],
   "abbr": [],
   "short": "A 1933 US law that separated ordinary deposit-taking banks from investment banks dealing in securities; its key separation was repealed in 1999.",

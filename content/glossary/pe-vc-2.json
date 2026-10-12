@@ -19,7 +19,7 @@
   "abbr": [],
   "short": "Buying a small company mainly to hire its people, rather than for its product or sales, which are often shut down afterwards.",
   "kid": "Sometimes a big team wants the clever kids from a small team. So it buys the small team's lemonade stand just to bring those kids over, and then closes the stand.",
-  "detail": "An acqui-hire is an acquisition where the buyer's real goal is the target's team, usually engineers, designers or researchers, not its revenue or customers. The startup's product is often wound down, and the price is judged per head rather than on earnings or cash flows. Big tech companies use acqui-hires to add scarce skills faster than normal recruiting allows; in AI, some recent deals have paired hiring a startup's founders with a licence to its technology instead of a full purchase. For founders and their VC investors, an acqui-hire is often a soft landing: investors may get back only part of their money, and much of the value can go to employees as joining and retention bonuses rather than to shareholders. The common confusion is calling every purchase of a small startup an acqui-hire; if the buyer keeps and grows the product, it is an ordinary acquisition.",
+  "detail": "An acqui-hire is an acquisition where the buyer's real goal is the target's team, usually engineers, designers or researchers, not its revenue or customers. The startup's product is often wound down, and the price is judged per head rather than on earnings or cash flows. Big tech companies use acqui-hires to add scarce skills faster than normal recruiting allows; in AI, several deals since 2024 have paired hiring a startup's founders with a licence to its technology instead of a full purchase. For founders and their VC investors, an acqui-hire is often a soft landing: investors may get back only part of their money, and much of the value can go to employees as joining and retention bonuses rather than to shareholders. The common confusion is calling every purchase of a small startup an acqui-hire; if the buyer keeps and grows the product, it is an ordinary acquisition.",
   "example": "Say BigSoft Ltd pays ₹60 crore for XYZ Labs, a startup with 20 engineers and almost no revenue, and shuts down XYZ's app. The price works out to ₹3 crore per engineer, and if ₹20 crore of it is paid as retention bonuses to the team, only ₹40 crore reaches XYZ's shareholders.",
   "formula": "",
   "related": [
@@ -76,12 +76,10 @@
    "limited partner",
    "limited partners"
   ],
-  "abbr": [
-   "LPs"
-  ],
+  "abbr": [],
   "short": "An investor, such as a pension fund, that puts money into a private equity or venture capital fund but does not run it.",
   "kid": "Some grown-ups give their coins to a trusted friend who is good at picking lemonade stands to help. Then they wait and share whatever those stands earn.",
-  "detail": "A limited partner (LP) is an investor in a private fund set up as a limited partnership. Typical LPs are pension funds, insurers, university endowments, sovereign wealth funds, funds of funds, family offices and wealthy individuals. LPs commit a sum up front, pay cash in when the general partner issues capital calls, and receive distributions when investments are sold. Their liability is limited to what they committed, and in return they stay passive: they do not choose deals. They negotiate fees, carry and governance in the limited partnership agreement and often sit on an advisory committee. In India most PE and VC funds are SEBI-registered alternative investment funds, often set up as trusts, where investors are often called contributors, though the industry still says LPs; SIDBI's Fund of Funds for Startups is a major domestic LP. Do not confuse an LP with a shareholder in the fund management firm itself.",
+  "detail": "A limited partner (LP) is an investor in a private fund set up as a limited partnership. Typical LPs are pension funds, insurers, university endowments, sovereign wealth funds, funds of funds, family offices and wealthy individuals. LPs commit a sum up front, pay cash in when the general partner issues capital calls, and receive distributions when investments are sold. Their liability is limited to what they committed, and in return they stay passive: they do not choose deals. They negotiate fees, carry and governance in the limited partnership agreement and often sit on an advisory committee. In India, domestic PE and VC funds are SEBI-registered alternative investment funds, often set up as trusts, where investors are often called contributors, though the industry still says LPs; SIDBI's Fund of Funds for Startups is a major domestic LP. Do not confuse an LP with a shareholder in the fund management firm itself.",
   "example": "Say a pension fund commits $50 million to a $500 million buyout fund. It is an LP holding 10% of the fund's commitments, and the most it can lose is the $50 million it promised.",
   "formula": "",
   "related": [
@@ -306,8 +304,7 @@
   "aliases": [
    "waterfall",
    "European waterfall",
-   "American waterfall",
-   "catch-up"
+   "American waterfall"
   ],
   "hl": [
    "distribution waterfall",
@@ -522,7 +519,7 @@
   ],
   "abbr": [],
   "short": "A company that a private equity or venture capital fund has invested in and holds as one of its investments.",
-  "kid": "If you use your coins to help ten friends start lemonade stands, each of those stands is one of your stands.",
+  "kid": "If you use your coins to help ten friends start lemonade stands, each of those stands is one you help and share in.",
   "detail": "A portfolio company, or portco, is any business in which a PE or VC fund holds a stake. A fund's returns are simply the sum of what happens to its portfolio companies, so GPs spend much of their time on them: taking board seats, hiring executives, setting budgets, arranging follow-on funding, pursuing bolt-on acquisitions and eventually planning an exit. Buyout funds usually own a few large portfolio companies with control, while venture funds hold minority stakes in many startups, expecting most of their returns from a handful of winners. Portfolio companies report regularly to the fund, which values them each quarter for its LPs. Indian AIF regulations use the phrase investee company for the same idea. The common confusion is to think a portfolio company manages investments; it is an ordinary operating business that happens to be owned, in part or in full, by a fund.",
   "example": "Say XYZ Ventures has ₹400 crore to invest and backs 25 startups with an average cheque of ₹16 crore. Each of the 25 is a portfolio company, and if three of them later return ₹1,200 crore between them, those three alone give the fund three times the ₹400 crore it invested.",
   "formula": "",
@@ -621,8 +618,8 @@
   ],
   "short": "Buying a company mainly with borrowed money, where the debt is later repaid from the bought company's own cash flows.",
   "kid": "You want a bigger lemonade stand, so you borrow most of the coins. The stand's own sales slowly pay the coins back, and in the end the stand is mostly yours.",
-  "detail": "A leveraged buyout (LBO) is an acquisition, usually by a PE fund, financed with a large proportion of debt, often 50% to 70% of the price, and a smaller slice of equity. The debt sits on the acquired company and is repaid from its cash flows, so steady cash generation matters. Returns come from growing earnings, selling at a higher multiple, and paying down debt, which lifts the owners' equity even if the company's value stays flat. Leverage magnifies gains and losses and raises default risk if earnings fall. KKR's takeover of RJR Nabisco, agreed in 1988, is the best-known LBO. Indian banks long faced tight RBI limits on funding share purchases, eased only for some corporate acquisitions from late 2025, so Indian buyouts often use NBFC, private-credit or offshore debt. The common confusion is to think the PE firm itself owes the debt; usually the acquired company does.",
-  "example": "Say a fund buys ABC Ltd for ₹1,000 crore using ₹400 crore of equity and ₹600 crore of debt. If ABC's cash flows, after interest, repay ₹300 crore of debt over five years and the company is sold for the same ₹1,000 crore, the equity is worth ₹1,000 crore - ₹300 crore = ₹700 crore, a 1.75x MOIC from debt paydown alone.",
+  "detail": "A leveraged buyout (LBO) is an acquisition, usually by a PE fund, financed with a large proportion of debt, often 50% to 70% of the price, and a smaller slice of equity. The debt sits on the acquired company and is repaid from its cash flows. Returns come from growing earnings, selling at a higher multiple and paying down debt, which lifts the owners' equity even if the company's value stays flat. Leverage magnifies gains and losses and raises default risk if earnings fall. KKR's takeover of RJR Nabisco, agreed in 1988, is the best-known LBO. Under RBI rules as of 2025, Indian banks could barely fund share purchases; an October 2025 proposal opens bank acquisition finance mainly to strategic corporate buyers, so Indian PE buyouts rely on NBFC, private-credit or offshore debt. The common confusion is that the PE firm owes the debt; usually the acquired company does.",
+  "example": "Say a fund buys ABC Ltd for ₹1,000 crore using ₹400 crore of equity and ₹600 crore of debt. If ABC's cash flows, after interest, repay ₹300 crore of debt over five years and the company is sold for the same ₹1,000 crore, ₹300 crore of debt remains and the equity is worth ₹1,000 crore - ₹300 crore = ₹700 crore, a 1.75x MOIC (700 / 400) from debt paydown alone.",
   "formula": "Equity value at exit = Exit enterprise value - Net debt at exit; MOIC = Equity value at exit / Equity invested",
   "related": [
    "Buyout",
@@ -810,14 +807,13 @@
    "vc exits",
    "liquidity event",
    "liquidity events",
-   "partial exit",
    "investor exit",
    "investor exits"
   ],
   "abbr": [],
   "short": "The way a private equity or venture capital investor sells its stake in a company to turn the investment back into cash.",
   "kid": "After helping a lemonade stand grow, you sell your part of it to someone else and take your coins home.",
-  "detail": "In private markets, an exit is the sale or listing that turns a fund's holding in a portfolio company into cash or tradable shares. The main routes are an IPO, followed by gradual sales on the stock market; a trade sale to a strategic buyer; a secondary sale to another PE fund or investor; a buyback by promoters; and continuation funds. Because PE and VC returns are realised only at exit, GPs plan exit routes before investing, and a weak exit climate leaves LPs waiting for cash. India's busy IPO market has made listings a major exit route in recent years. The common confusion is with an exit load on mutual funds, a fee for redeeming units early, or with a trader exiting a position; in PE, exit means realising a long-held private stake.",
+  "detail": "In private markets, an exit is the sale or listing that turns a fund's holding in a portfolio company into cash or tradable shares. The main routes are an IPO, followed by gradual sales on the stock market; a trade sale to a strategic buyer; a secondary sale to another PE fund or investor; a buyback by promoters; and continuation funds. Because PE and VC returns are realised only at exit, GPs plan exit routes before investing, and a weak exit climate leaves LPs waiting for cash. Since 2021, India's busy IPO market has made listings a major exit route. The common confusion is with an exit load on mutual funds, a fee for redeeming units early, or with a trader exiting a position; in PE, exit means realising a long-held private stake.",
   "example": "Say a VC fund invested ₹10 crore for 10% of ABC Tech in 2018 and sells that stake in ABC's IPO in 2024 for ₹60 crore. The exit returns 6.0x its money, a ₹50 crore gain, and the cash flows back to the fund's LPs as distributions.",
   "formula": "",
   "related": [
@@ -842,7 +838,6 @@
   "hl": [
    "secondary transaction",
    "secondary transactions",
-   "secondaries",
    "secondaries market",
    "secondaries fund",
    "secondaries funds",
@@ -948,7 +943,7 @@
   "abbr": [],
   "short": "A new fund a private equity manager sets up to buy prized companies from its own older fund, letting investors cash out or stay in.",
   "kid": "A play group is ending, but its best tower is not finished. A new group takes over the tower: some children leave with a reward, and others stay to finish building it.",
-  "detail": "A continuation fund is the main form of GP-led secondary. When an older fund nears the end of its life but the GP thinks some portfolio companies still have room to grow, it sets up a new vehicle to buy them from the old fund. Existing LPs can take cash or roll their stake into the new vehicle, while secondary investors fund those who leave. The GP keeps managing the assets, often with new fees and a reset carry. These deals have grown fast since about 2020, as IPO and M&A exits slowed. Because the GP sits on both sides and influences the price, these deals usually need an independent fairness opinion and LP advisory committee consent. The common confusion is to treat a continuation fund as a true exit; the company has not been sold to a new owner.",
+  "detail": "A continuation fund is the main form of GP-led secondary. When an older fund nears the end of its life but the GP thinks some portfolio companies still have room to grow, it sets up a new vehicle to buy them from the old fund. Existing LPs can take cash or roll their stake into the new vehicle, while secondary investors fund those who leave. The GP keeps managing the assets, often with new fees and a reset carry. These deals have grown fast since about 2020, especially after 2022, when IPO and M&A exits slowed. Because the GP sits on both sides and influences the price, these deals usually need an independent fairness opinion and LP advisory committee consent. The common confusion is to treat a continuation fund as a true exit; the company has not been sold to a new owner.",
   "example": "Say an old fund's best holding, ABC Ltd, is valued at $300 million. The GP sets up a continuation fund that buys ABC for $300 million; LPs owning 60% choose to cash out and receive $180 million, paid by new secondary investors, while LPs owning 40% roll their $120 million into the new vehicle.",
   "formula": "",
   "related": [

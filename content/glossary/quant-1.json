@@ -36,9 +36,10 @@
       "middle value"
     ],
     "hl": [
-      "median",
       "median estimate",
-      "median forecast"
+      "median estimates",
+      "median forecast",
+      "median forecasts"
     ],
     "abbr": [],
     "short": "The middle number when a set of values is lined up from smallest to largest; half the values lie above it and half below.",
@@ -71,7 +72,7 @@
     "abbr": [],
     "short": "The steady yearly growth rate that would turn the starting amount into the ending amount; the true average of returns over time.",
     "kid": "Your plant grows a lot one week and only a little the next. The geometric mean asks how fast it would have grown if it had grown at the same steady pace every week and still ended up just as tall.",
-    "detail": "The geometric mean of n returns is the nth root of the product of (1 + each return), minus 1. It is the constant per-period rate that compounds the starting value into the ending value, which makes it the honest measure of past multi-period performance; CAGR is simply the geometric mean return over the period. It is always less than or equal to the arithmetic mean, and the gap widens as returns become more volatile, by roughly half the variance. This 'volatility drag' is why a 50% fall followed by a 50% rise leaves you down 25%, not back where you started. Indian mutual fund factsheets quote returns for periods over one year as CAGR for this reason. The common mistake is presenting the arithmetic average of yearly returns as what an investor earned; it overstates the result whenever returns swing.",
+    "detail": "The geometric mean of n returns is the nth root of the product of (1 + each return), minus 1. It is the constant per-period rate that compounds the starting value into the ending value, which makes it the honest measure of past multi-period performance; CAGR is simply the geometric mean return over the period. It is always less than or equal to the arithmetic mean, and the gap widens as returns become more volatile, by roughly half the variance. This 'volatility drag' is why a 50% fall followed by a 50% rise leaves you down 25%, not back where you started. Under SEBI rules as of 2025, Indian mutual funds must quote returns for periods over one year as CAGR for this reason. The common mistake is presenting the arithmetic average of yearly returns as what an investor earned; it overstates the result whenever returns swing.",
     "example": "Say ₹1 lakh rises 50% in year one to ₹1.5 lakh and falls 20% in year two to ₹1.2 lakh. The arithmetic mean return is (50 - 20) / 2 = 15%, but the geometric mean is √(1.5 × 0.8) - 1 = √1.2 - 1 ≈ 9.54% a year, and ₹1 lakh × 1.0954² ≈ ₹1.2 lakh confirms it.",
     "formula": "Geometric mean return = [(1 + r1) × (1 + r2) × ... × (1 + rn)]^(1/n) - 1",
     "related": [
@@ -301,8 +302,7 @@
     "cat": "quant",
     "level": "i",
     "aliases": [
-      "excess kurtosis",
-      "peakedness"
+      "excess kurtosis"
     ],
     "hl": [
       "kurtosis",
@@ -469,7 +469,7 @@
     "short": "A score from 0 to 1 (or 0% to 100%) showing how much of one variable's movement a statistical model built on other variables explains.",
     "kid": "You try to guess how many cups of lemonade you will sell by looking at how hot it is. If your guesses are almost always right, your score is close to one; if the weather hardly helps, it is close to zero.",
     "detail": "R-squared measures the proportion of the variation in the dependent variable that a regression explains: 1 minus the ratio of unexplained (residual) variation to total variation. In a simple one-variable regression it equals the square of the correlation coefficient. Investors meet it in fund analytics, where R-squared against a benchmark shows how much of a fund's movement the index explains: an index fund should be close to 1, while a genuinely active fund will be lower. It also tells you how much to trust a fund's beta or alpha estimate. Common confusions: a high R-squared does not mean the model is correct or causal; a low one does not make a relationship useless, since daily returns are noisy; and adding variables never lowers R-squared, which is why adjusted R-squared penalises extra variables.",
-    "example": "Say a fund's returns regressed on its benchmark give an R-squared of 0.81. Then 81% of the variation in the fund's returns is explained by the benchmark, and the correlation between the two is √0.81 = 0.9.",
+    "example": "Say a fund's returns regressed on its benchmark give an R-squared of 0.81. Then 81% of the variation in the fund's returns is explained by the benchmark, and since the two move in the same direction, their correlation is √0.81 = 0.9.",
     "formula": "R² = 1 - (Sum of squared residuals / Total sum of squares)",
     "related": [
       "Regression analysis",

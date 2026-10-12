@@ -297,8 +297,8 @@
  "related":["Operating leverage","Capex cycle","Fixed costs","Order backlog","Economies of scale","Output gap"]},
 
 {"id":"china-plus-one","term":"China plus one","cat":"strategy","level":"b",
- "aliases":["China+1","China Plus One strategy","Supply-chain diversification"],
- "hl":["china plus one","china+1","china plus one strategy","supply-chain diversification","supply chain diversification"],
+ "aliases":["China+1","China Plus One strategy","China-plus-one"],
+ "hl":["china plus one","china+1","china plus one strategy","china-plus-one"],
  "abbr":[],
  "short":"A strategy where global companies keep operations in China but add factories or suppliers in at least one other country to spread risk.",
  "kid":"If all your crayons come from one friend and she gets sick, you have none. So you keep her crayons but also get some from another friend, just in case.",
@@ -316,10 +316,10 @@
  "detail":"Perfect competition is economists' benchmark market structure. It assumes many buyers and sellers, each too small to move the price; identical products; free entry and exit; perfect information; and no transaction costs. Each firm is a price taker: it can sell any quantity at the market price but nothing above it, so it produces where marginal cost equals price. In the long run, entry and exit push economic profit to zero, meaning firms earn just enough to cover all costs, including a normal return on the owners' capital and time. Real markets only approximate it; farm produce in mandis, some commodity markets and major currency markets come close. It matters for investors because the closer an industry is to perfect competition, the harder it is to earn returns above the cost of capital. Common confusion: zero economic profit does not mean zero accounting profit.",
  "example":"Say 1,000 farmers sell identical wheat at the market price of ₹2,500 a quintal, and one farmer's full cost, including a fair return on his land and time, is also ₹2,500. Selling 100 quintals brings ₹2.5 lakh, exactly covering his ₹2.5 lakh of costs; if he asks ₹2,600, buyers simply go to another farmer.",
  "formula":"Profit-maximising output: Price = Marginal cost",
- "related":["Monopolistic competition","Monopoly","Oligopoly","Marginal cost and marginal revenue","Law of supply and demand","Economic value added"]},
+ "related":["Monopolistic competition","Monopoly","Oligopoly","Marginal cost and marginal revenue","Law of supply and demand","Economic profit"]},
 
 {"id":"monopolistic-competition","term":"Monopolistic competition","cat":"strategy","level":"b",
- "aliases":["monopolistically competitive market","imperfect competition"],
+ "aliases":["monopolistically competitive market","Chamberlinian competition"],
  "hl":["monopolistic competition","monopolistically competitive"],
  "abbr":[],
  "short":"A market with many firms selling similar but not identical products, so each has a little pricing power thanks to its brand or features.",
@@ -369,7 +369,7 @@
  "short":"A company that runs cloud computing and data centres on a massive global scale, such as Amazon Web Services, Microsoft Azure or Google Cloud.",
  "kid":"Imagine a giant library with millions of shelves that anyone can rent space in. A few huge companies build these libraries for computers all over the world.",
  "detail":"Hyperscalers are the handful of firms that build and operate enormous fleets of data centres to sell computing, storage and AI services on demand. The core group is Amazon Web Services, Microsoft Azure and Google Cloud, with Meta and Oracle often included because of their data-centre scale, and Alibaba Cloud in China. Their size lets them buy chips, power and land cheaply and spread costs across millions of customers. They matter to markets because their capital spending sets demand for chips, servers, networking, power equipment and data-centre real estate, so their quarterly spending plans move chip and equipment stocks worldwide. Hyperscalers have announced multi-billion-dollar data-centre investments in India, and Indian IT services firms partner with them on cloud migration work. Common confusion: hyperscaler describes scale, not any company with a data centre; colocation providers that rent space and power to hyperscalers run a different business.",
- "example":"Say four hyperscalers each plan $90 billion of capital spending in a year, $360 billion in total. If 40% of it goes to AI chips and servers, that is $144 billion of orders flowing to chipmakers and server builders.",
+ "example":"Say four hypothetical hyperscalers each plan $90 billion of capital spending in a year, $360 billion in total. If 40% of it goes to AI chips and servers, that is $144 billion of orders flowing to chipmakers and server builders.",
  "formula":"",
  "related":["AI capex","Cloud computing","Data centre","Capital expenditure","Vendor financing","AI trade"]},
 

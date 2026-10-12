@@ -26,7 +26,7 @@
     ],
     "short": "Digital money that exists only as entries on a shared computer record, moved directly between users without a bank in the middle.",
     "kid": "Imagine everyone in class writes down who has how many stickers in one shared notebook. Nobody holds real stickers; the notebook itself shows what you own, and everyone checks it together.",
-    "detail": "A cryptocurrency is a digital asset whose ownership is recorded on a blockchain, a ledger copied across many computers, and moved using secret cryptographic keys rather than through a bank. No central bank issues it; software rules create new units. Bitcoin, launched in 2009, was the first of thousands. Prices swing sharply because there are no cash flows to anchor value: price rests on demand, scarcity and belief in the network. In India, crypto is not legal tender. The law calls it a virtual digital asset (VDA), and under the rules as of 2025 gains are taxed at a flat 30% plus cess, losses cannot be set off against any income, even other crypto gains, and 1% TDS applies on transfers above a threshold. A common confusion: a central bank digital currency, such as the RBI's e-rupee, is not a cryptocurrency; it is state-issued money.",
+    "detail": "A cryptocurrency is a digital asset whose ownership is recorded on a blockchain, a ledger copied across many computers, and moved using secret cryptographic keys rather than through a bank. No central bank issues it; software rules create new units. Bitcoin, launched in 2009, was the first of thousands. Prices swing sharply because there are no cash flows to anchor value: price rests on demand, scarcity and belief in the network. In India, crypto is not legal tender. The law calls it a virtual digital asset (VDA), and under the rules as of 2025 gains are taxed at a flat 30% plus surcharge and cess, losses cannot be set off against any income, even other crypto gains, and 1% TDS applies on transfers above a threshold. A common confusion: a central bank digital currency, such as the RBI's e-rupee, is not a cryptocurrency; it is state-issued money.",
     "example": "Say Riya buys a token for ₹1 lakh and sells it for ₹1.5 lakh. Under the rules as of 2025, her ₹50,000 gain is taxed at 30%, or ₹15,000, plus 4% cess of ₹600, so ₹15,600 in all. The exchange also deducts 1% TDS of ₹1,500 on the sale, which she can claim against that tax bill.",
     "formula": "",
     "related": [
@@ -126,7 +126,7 @@
       "ETH"
     ],
     "short": "A shared digital ledger that can run small programs as well as payments; its own coin, ether, pays the fees for using it.",
-    "kid": "Ethereum is like a big shared toy box that follows rules all by itself, such as 'give the ball to whoever finishes the puzzle first'. To use it, you pay with its own play coins, called ether.",
+    "kid": "Ethereum is like a big shared toy box that follows rules all by itself, such as 'give the ball to whoever finishes the puzzle first'. To use it, you hand over a few of its own special play coins.",
     "detail": "Ethereum is a public blockchain, proposed by Vitalik Buterin in 2013 and launched in July 2015, that can run smart contracts: programs that execute automatically when set conditions are met. Ether (ETH), its native currency, pays transaction fees, called gas, and has long been the second-largest cryptocurrency by market value after bitcoin. Most DeFi applications, stablecoins and NFTs were first built on Ethereum, and many tokens follow its ERC-20 standard. In September 2022 an upgrade known as the Merge switched Ethereum from proof of work to proof of stake, cutting its energy use by about 99.95%. Validators now lock up at least 32 ETH each to help secure the network and earn rewards. US spot ether ETFs began trading in July 2024. A common confusion: Ethereum is the network and ether is the coin, though news reports often use the two names interchangeably.",
     "example": "A simple ether transfer uses 21,000 units of gas. If the gas price is 20 gwei (a gwei is one-billionth of an ether), the fee is 21,000 × 20 = 420,000 gwei, or 0.00042 ETH. If congestion pushes the price to 100 gwei, the same transfer costs 0.0021 ETH.",
     "formula": "Transaction fee = Gas used × (Base fee + Priority fee)",
@@ -156,7 +156,7 @@
     ],
     "abbr": [],
     "short": "Any cryptocurrency other than bitcoin, from large ones like ether to thousands of small, little-known coins.",
-    "kid": "If bitcoin is the very first and most famous sticker in an album, altcoins are all the other stickers that came after it. Some are popular and some are almost forgotten.",
+    "kid": "Think of the very first and most famous sticker ever made. Altcoins are all the other stickers that came after it: some are popular and some are almost forgotten.",
     "detail": "Altcoin, short for alternative coin, means any cryptocurrency other than bitcoin. The group is huge and mixed: ether and other large networks with real usage, stablecoins pegged to the dollar, exchange tokens, and thousands of tiny projects and memecoins. Many altcoins aim to improve on bitcoin's speed, fees or programmability; others are near-copies with little to set them apart. As a group they are usually more volatile than bitcoin, tending to rise faster in crypto booms and fall harder in busts, which is why traders watch bitcoin dominance, bitcoin's share of total crypto market value. A falling dominance during a rally is often called altcoin season. Liquidity is a real risk: small altcoins can trade thinly on a few exchanges, and many from the 2017 and 2021 booms are now nearly worthless. A common confusion: some writers exclude ether and stablecoins from the term, so check how it is used.",
     "example": "Say the whole crypto market is worth $2 trillion and bitcoin accounts for $1.2 trillion. Bitcoin dominance is $1.2 trillion / $2 trillion = 60%, and altcoins together make up the remaining $800 billion, or 40%.",
     "formula": "Bitcoin dominance = Bitcoin market value / Total crypto market value",
@@ -176,9 +176,8 @@
     "level": "b",
     "aliases": [
       "stablecoins",
-      "USDT",
-      "USDC",
-      "Tether"
+      "stable coin",
+      "dollar stablecoin"
     ],
     "hl": [
       "stablecoin",
@@ -245,8 +244,7 @@
     "level": "i",
     "aliases": [
       "meme coin",
-      "meme token",
-      "Dogecoin"
+      "meme token"
     ],
     "hl": [
       "memecoin",
@@ -390,7 +388,7 @@
     ],
     "short": "A way for a crypto project to raise money by selling newly created tokens directly to the public, often before its product exists.",
     "kid": "Imagine a friend selling tickets for a lemonade stand they have not built yet. You pay now, hoping the tickets will be worth more once the stand opens, but it might never open.",
-    "detail": "An initial coin offering is a crowdfunding sale in which a project issues new tokens in exchange for cryptocurrencies such as ether, or for cash, to fund development. Ethereum itself was financed this way in 2014. ICOs exploded in 2017 and 2018, raising billions of dollars, often on the strength of a white paper alone, with no audited accounts, prospectus or investor protections. Many projects failed or turned out to be scams. Regulators responded: China banned ICOs in 2017, and the US SEC said many tokens sold this way were securities and brought enforcement cases. In India, ICOs are not regulated as securities offerings, so buyers get none of the protections SEBI gives in an IPO. A common confusion: an ICO is not like an IPO; buyers get tokens, not shares, and usually no legal claim on profits or assets.",
+    "detail": "An initial coin offering is a crowdfunding sale in which a project issues new tokens in exchange for cryptocurrencies such as ether, or for cash, to fund development. Ethereum itself was financed this way in 2014. ICOs exploded in 2017 and 2018, raising billions of dollars, often on the strength of a white paper alone, with no audited accounts, prospectus or investor protections. Many projects failed or turned out to be scams. Regulators responded: China banned ICOs in 2017, and the US SEC said many tokens sold this way were securities and brought enforcement cases. India had no specific framework for ICOs as of 2025, so buyers get none of the protections SEBI gives in an IPO. A common confusion: an ICO is not like an IPO; buyers get tokens, not shares, and usually no legal claim on profits or assets.",
     "example": "Say a hypothetical project, XYZ Network, sells 200 million tokens at $0.10 each, raising $20 million. If the tokens list on exchanges at $0.30, an early buyer who paid $1,000 for 10,000 tokens holds $3,000; if the project fails and the price drops to $0.01, the same holding is worth $100.",
     "formula": "",
     "related": [
@@ -700,8 +698,7 @@
     "level": "a",
     "aliases": [
       "automated market maker",
-      "AMM",
-      "LP tokens"
+      "AMM"
     ],
     "hl": [
       "liquidity pool",
@@ -784,7 +781,7 @@
     "kid": "Staking is like giving your marbles to the playground helper to hold while they keep the games fair. For helping, you get a few extra marbles back, but if the helper cheats, some marbles are taken away.",
     "detail": "Staking is the process of locking up tokens on a proof-of-stake blockchain so they can be used to validate transactions. Validators, chosen partly by how much they have staked, propose and confirm blocks and earn rewards from new issuance and fees; if they cheat or go offline, part of their stake can be slashed. On Ethereum, running a validator needs at least 32 ETH, so most people stake through exchanges or pools. Liquid staking services such as Lido issue a receipt token, like stETH, that can be traded or used in DeFi while the original ether stays staked. Rewards are variable and paid in the token itself, so a falling price can wipe them out. Other risks include withdrawal delays and failure of the platform holding your stake. A common confusion: staking is not a fixed deposit; neither the reward rate nor the rupee value of your holding is guaranteed.",
     "example": "Say you stake 10 ETH at a reward rate of 3% a year, earning 10 × 3% = 0.3 ETH, so you hold 10.3 ETH after a year. If ether starts at $2,000, your 10 ETH is worth $20,000; if it falls 20% to $1,600, your 10.3 ETH is worth $16,480, a loss of $3,520 despite the rewards.",
-    "formula": "Staking reward = Amount staked × Annual reward rate × Years staked",
+    "formula": "Staking reward ≈ Amount staked × Annual reward rate × Years staked (ignoring compounding)",
     "related": [
       "Proof of stake",
       "Ethereum",
@@ -875,7 +872,7 @@
     "short": "A way of securing a blockchain where computers race to solve a costly puzzle; the winner adds the next block and earns new coins.",
     "kid": "Proof of work is like a big puzzle race. Everyone tries to finish the puzzle first, and the winner gets to write the next page in the class diary and earns a sticker.",
     "detail": "Proof of work is the consensus mechanism that secures Bitcoin and some other blockchains. Miners repeatedly run a hash function on a candidate block, changing a number each time, until the output falls below a target; finding it takes enormous trial and error, but anyone can check the answer instantly. The winner adds the block and collects the block reward plus fees. Bitcoin adjusts the difficulty every 2,016 blocks, about two weeks, to keep blocks arriving roughly every 10 minutes as total computing power changes. Security comes from cost: rewriting history would require out-computing the rest of the network, a so-called 51% attack. The main drawback is energy use: Bitcoin's is comparable to that of a mid-sized country, and mining gravitates to wherever electricity is cheapest. A common confusion: miners are not solving useful maths problems; the work is deliberately wasteful, and that cost is what makes cheating expensive.",
-    "example": "Say a mining firm controls 2% of Bitcoin's total computing power. With about 144 blocks a day, it expects to win 144 × 2% = 2.88 blocks a day, which at the 3.125 BTC block reward set by the April 2024 halving comes to 9 BTC a day, before fees and electricity costs.",
+    "example": "Say a mining firm controls 2% of Bitcoin's total computing power. With about 144 blocks a day, it expects to win 144 × 2% = 2.88 blocks a day, which at the 3.125 BTC block reward in force since the April 2024 halving comes to 9 BTC a day, before fees and electricity costs.",
     "formula": "Expected share of blocks = Miner's hash rate / Total network hash rate",
     "related": [
       "Proof of stake",

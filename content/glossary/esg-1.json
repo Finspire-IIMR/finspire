@@ -336,7 +336,7 @@
       "supply chain emissions"
     ],
     "abbr": [],
-    "short": "All other indirect greenhouse gases linked to a company, released by its suppliers and by customers using or discarding its products.",
+    "short": "Indirect greenhouse gases from a company's value chain, released by its suppliers and by customers using or discarding its products, excluding purchased power.",
     "kid": "When you bake a cake, the farm that grew the wheat made some smoke, and the cars that brought your guests made some smoke too. This counts all of that smoke, not just your oven.",
     "detail": "Scope 3 emissions are all indirect emissions in a company's value chain that are not counted in Scope 2. The Greenhouse Gas Protocol sorts them into 15 categories: upstream, such as purchased goods, transport and business travel, and downstream, such as the use and disposal of sold products. For many companies Scope 3 is by far the largest part of the footprint. For an oil producer, burning the fuel it sells dwarfs its own operations; for a bank, the financed emissions of its loans and investments are Scope 3. Investors watch Scope 3 because it reveals exposure to the energy transition that Scope 1 and 2 hide. It is also the hardest to measure, relying on supplier data and estimates, and the same tonne can appear in several companies' Scope 3. The common confusion is assuming low Scope 1 and 2 means a low-carbon business.",
     "example": "Say ABC Motors reports Scope 1 emissions of 50,000 tonnes, Scope 2 of 1.5 lakh tonnes and Scope 3 of 38 lakh tonnes, mostly from customers driving its petrol cars. Its total footprint is 40 lakh tonnes, of which Scope 3 is 38 / 40 = 95%.",
@@ -389,8 +389,7 @@
     "aliases": [
       "Carbon trading",
       "Voluntary carbon market",
-      "Carbon Credit Trading Scheme",
-      "CCTS"
+      "Compliance carbon market"
     ],
     "hl": [
       "carbon market",
@@ -442,9 +441,7 @@
       "emissions allowances",
       "carbon permits"
     ],
-    "abbr": [
-      "ETS"
-    ],
+    "abbr": [],
     "short": "A government scheme that caps total emissions, issues permits up to that cap, and lets companies buy and sell those permits.",
     "kid": "The teacher hands out only 20 noise tickets for the whole class each day, and a few less every week. Children who stay quiet can swap their spare tickets with chatty ones.",
     "detail": "An emissions trading system, also called cap and trade, sets a legal limit (the cap) on total emissions from covered sectors and creates that many allowances, each permitting one tonne of CO2 equivalent. Allowances are auctioned or handed out free, and every year firms must surrender enough to cover their verified emissions. Firms that can cut cheaply sell spare allowances, while those facing high costs buy them, so emissions fall where it is cheapest. The cap shrinks over time, which tends to push the allowance price up. The EU ETS, launched in 2005, is the best-known example; China's national ETS, started in 2021, covers more emissions than any other. India's CCTS uses intensity targets rather than an absolute cap. The common confusion with a carbon tax: an ETS fixes the quantity of emissions and lets the price float, while a tax fixes the price and lets the quantity adjust.",
@@ -475,7 +472,7 @@
     "abbr": [],
     "short": "A tax charged on each tonne of greenhouse gas released, usually collected on fossil fuels, to make polluting more expensive.",
     "kid": "If every sweet wrapper you drop costs you one sticker, you will soon start using the bin. This makes smoke cost something, so people make less of it.",
-    "detail": "A carbon tax is a government levy per tonne of CO2 equivalent, usually collected on coal, oil and gas according to their carbon content. It is the simplest form of carbon pricing, the broader idea of making polluters pay for the damage, or externality, their emissions cause; the other main form is an emissions trading system. Finland introduced the first carbon tax in 1990 and Sweden followed in 1991. India has no explicit carbon tax, but it levied a clean energy cess on coal, raised to ₹400 per tonne in 2016 and later folded into the GST compensation cess, which acted as an implicit carbon price. The key confusion: a tax gives price certainty but no guaranteed emissions outcome, while cap and trade guarantees quantity but not price. Rates vary widely and change often, so check current figures.",
+    "detail": "A carbon tax is a government levy per tonne of CO2 equivalent, usually collected on coal, oil and gas according to their carbon content. It is the simplest form of carbon pricing, the broader idea of making polluters pay for the damage, or externality, their emissions cause; the other main form is an emissions trading system. Finland introduced the first carbon tax in 1990 and Sweden followed in 1991. India has no explicit carbon tax, but it levied a clean energy cess on coal, raised to ₹400 per tonne in 2016 and later folded into the GST compensation cess, which acted as an implicit carbon price until that cess was scrapped in India's September 2025 GST overhaul. The key confusion: a tax gives price certainty but no guaranteed emissions outcome, while cap and trade guarantees quantity but not price. Rates vary widely and change often, so check current figures.",
     "example": "Say a country sets a carbon tax of $50 per tonne of CO2. Burning one litre of petrol releases about 2.3 kg of CO2, so the tax adds 2.3 / 1,000 × $50 = $0.115, about 11.5 cents, per litre. A factory emitting 20,000 tonnes a year would pay 20,000 × $50 = $1 million.",
     "formula": "Carbon tax bill = Emissions (tonnes of CO2e) × Tax rate per tonne",
     "related": [

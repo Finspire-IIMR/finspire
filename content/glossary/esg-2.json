@@ -200,7 +200,7 @@
   ],
   "short": "An EU law that makes fund managers disclose how they handle sustainability, sorting funds into groups often called Article 6, 8 and 9.",
   "kid": "In Europe, grown-ups who look after other people's piggy banks must put a label on each one. The label says how much that piggy bank tries to help nature and people.",
-  "detail": "The Sustainable Finance Disclosure Regulation (SFDR) is a European Union law that has applied since March 2021 to asset managers, insurers, pension providers and advisers in the EU. It requires them to explain how sustainability risks enter their investment decisions and, for larger firms, to report the principal adverse impacts of their investments on the environment and society. Funds disclose under three main articles: Article 6 funds make no sustainability claims; Article 8 funds, often called light green, promote environmental or social characteristics; Article 9 funds, often called dark green, have sustainable investment as their objective. In 2022-23 many managers downgraded Article 9 funds to Article 8 after regulators clarified the bar. Common confusion: SFDR was designed as a disclosure regime, not a quality label, though the market treats it as one. The EU has proposed replacing the articles with simpler product categories, so check the current rules.",
+  "detail": "The Sustainable Finance Disclosure Regulation (SFDR) is a European Union law that has applied since March 2021 to asset managers, insurers, pension providers and advisers in the EU. It requires them to explain how sustainability risks enter their investment decisions and, for larger firms, to report the principal adverse impacts of their investments on the environment and society. Funds disclose under three main articles: Article 6 funds make no sustainability claims; Article 8 funds, often called light green, promote environmental or social characteristics; Article 9 funds, often called dark green, have sustainable investment as their objective. In 2022-23 many managers downgraded Article 9 funds to Article 8 after regulators clarified the bar. Common confusion: SFDR was designed as a disclosure regime, not a quality label, though the market treats it as one. In late 2025 the European Commission proposed replacing the articles with simpler product categories.",
   "example": "Say ABC Green Equity Fund, a hypothetical Article 8 fund with $800 million of assets, commits that at least 30% of its portfolio will be sustainable investments. It must therefore hold at least 0.30 × $800 million = $240 million in investments that meet its stated sustainability test.",
   "formula": "",
   "related": [
@@ -224,12 +224,8 @@
    "eu taxonomy",
    "eu green taxonomy",
    "eu sustainable finance taxonomy",
-   "green taxonomy",
-   "green taxonomies",
    "taxonomy-aligned",
-   "taxonomy alignment",
-   "climate finance taxonomy",
-   "sustainable finance taxonomy"
+   "taxonomy alignment"
   ],
   "abbr": [],
   "short": "The European Union's official list of which business activities count as environmentally sustainable, with technical tests each activity must pass.",
@@ -394,7 +390,6 @@
    "paris accord",
    "paris climate deal",
    "paris climate pact",
-   "paris goals",
    "paris-aligned",
    "nationally determined contributions",
    "nationally determined contribution",
@@ -406,7 +401,7 @@
   ],
   "short": "The 2015 global climate treaty in which countries agreed to keep warming well below 2°C and set their own emission-cutting plans.",
   "kid": "Lots of children in one big class all promised to help keep the playground cool and clean. Each child wrote down what they will do, and they check every few years.",
-  "detail": "The Paris Agreement is a treaty under the UN climate convention, adopted at COP21 in Paris in December 2015 and in force since November 2016. Its goal is to hold the rise in global average temperature to well below 2°C above pre-industrial levels and to pursue efforts to limit it to 1.5°C. Each country sets its own targets in a nationally determined contribution (NDC), updated every five years, with a five-yearly global stocktake of progress. Article 6 lets countries trade emission reductions. India's 2022 NDC aims to cut the emissions intensity of its GDP by 45% from 2005 levels by 2030 and to have about 50% of its power capacity from non-fossil sources by 2030, alongside a net-zero goal for 2070. The agreement's goals shape carbon pricing and investor pledges. Common confusion: the agreement binds countries to submit and report targets, not to hit a specific emission level.",
+  "detail": "The Paris Agreement is a treaty under the UN climate convention, adopted at COP21 in Paris in December 2015 and in force since November 2016. Its goal is to hold the rise in global average temperature to well below 2°C above pre-industrial levels and to pursue efforts to limit it to 1.5°C. Each country sets its own targets in a nationally determined contribution (NDC), updated every five years, with a five-yearly global stocktake of progress. Article 6 lets countries trade emission reductions. India's NDC, as updated in 2022, aims to cut the emissions intensity of its GDP by 45% from 2005 levels by 2030 and to have about 50% of its power capacity from non-fossil sources by 2030, alongside a net-zero goal for 2070. Its goals shape carbon pricing and investor pledges. Common confusion: the agreement binds countries to submit and report targets, not to hit a specific emission level.",
   "example": "Say a country's emissions intensity was 0.40 kg of CO2 per dollar of GDP in 2005. A 45% cut, the size of India's 2030 NDC target, brings it to 0.40 × (1 − 0.45) = 0.22 kg per dollar. Total emissions can still rise if GDP grows faster than intensity falls.",
   "formula": "",
   "related": [
@@ -426,7 +421,7 @@
   "aliases": [
    "COP",
    "UN climate summit",
-   "COP30"
+   "UNFCCC COP"
   ],
   "hl": [
    "conference of the parties",
@@ -434,7 +429,6 @@
    "un climate summits",
    "un climate talks",
    "un climate conference",
-   "global climate summit",
    "cop26",
    "cop27",
    "cop28",
@@ -637,7 +631,7 @@
   ],
   "short": "India's government-run carbon market: heavy industries get emission targets, earn tradable certificates if they beat them and must buy certificates if they miss.",
   "kid": "Each factory is told how much smoke it may make. A factory that makes less smoke gets reward stickers, and a factory that makes too much must buy stickers from the good ones.",
-  "detail": "The Carbon Credit Trading Scheme (CCTS) is India's compliance carbon market, notified in June 2023 under the amended Energy Conservation Act. The Bureau of Energy Efficiency administers it, Grid Controller of India runs the registry, and trading happens on power exchanges under rules set by the Central Electricity Regulatory Commission. Under the compliance mechanism, obligated companies in energy-intensive sectors receive greenhouse gas emission intensity targets, measured in tonnes of CO2 equivalent per tonne of product. A company that beats its target earns carbon credit certificates, each worth one tonne of CO2 equivalent; one that misses must buy certificates or face a penalty. An offset mechanism lets other projects earn credits. Targets for the first sectors, including aluminium and cement, were notified in 2025. Common confusion: unlike the EU's cap-and-trade system, the CCTS caps emissions per unit of output, not total emissions, so absolute emissions can rise as output grows.",
+  "detail": "The Carbon Credit Trading Scheme (CCTS) is India's compliance carbon market, notified in June 2023 under the amended Energy Conservation Act. The Bureau of Energy Efficiency administers it, Grid Controller of India runs the registry, and trading happens on power exchanges under rules set by the Central Electricity Regulatory Commission. Under the rules as of 2025, obligated companies in energy-intensive sectors receive emission intensity targets, measured in tonnes of CO2 equivalent per tonne of product. A company that beats its target earns carbon credit certificates, each worth one tonne of CO2 equivalent; one that misses must buy certificates or face a penalty. An offset mechanism lets other projects earn credits. Targets for the first sectors, including aluminium and cement, were notified in 2025. Common confusion: unlike the EU's cap-and-trade system, the CCTS caps emissions per unit of output, not total emissions, so absolute emissions can rise as output grows.",
   "example": "Say ABC Cement, a hypothetical obligated company, has a target of 0.80 tonnes of CO2 per tonne of cement, produces 50 lakh tonnes and achieves 0.76. It earns (0.80 − 0.76) × 50,00,000 = 2,00,000 certificates. If certificates trade at, say, ₹800 each, they are worth 2,00,000 × ₹800 = ₹16 crore.",
   "formula": "Certificates earned (negative means certificates to buy) = (Target emission intensity − Actual emission intensity) × Output",
   "related": [
