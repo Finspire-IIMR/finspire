@@ -196,22 +196,7 @@ table{border-collapse:collapse}
   ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
 }
 
-/* maker's signature card under the footer */
-.maker{display:flex;align-items:center;gap:16px;margin-top:28px;padding:16px 18px;border-radius:18px;color:var(--ink);text-decoration:none;
-  background:linear-gradient(120deg,rgba(219,41,48,.16),rgba(255,255,255,.03) 55%);border:1px solid rgba(255,255,255,.14);
-  transition:border-color .25s,transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
-.maker:hover,.maker:focus-visible{border-color:rgba(219,41,48,.6);transform:translateY(-2px);box-shadow:0 18px 44px -24px rgba(219,41,48,.7)}
-.maker-av{flex:none;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:600;font-size:17px;letter-spacing:.03em;color:#fff;
-  background:linear-gradient(135deg,#FF6B71,#DB2930 60%,#9E1A20);box-shadow:0 0 0 4px rgba(219,41,48,.18)}
-.maker-txt{display:grid;gap:2px;min-width:0}
-.maker-txt small{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#FF6B71}
-.maker-txt b{font-size:20px;font-weight:600;letter-spacing:-.015em;color:#F4F4F6;line-height:1.2}
-.maker-txt span{font-size:13.5px;color:#BDBDC6}
-.maker-go{margin-left:auto;display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;border-radius:999px;background:#F4F4F6;color:#141416;
-  font-size:14px;font-weight:500;white-space:nowrap;transition:background .2s}
-.maker-go svg{width:16px;height:16px;color:#0A66C2}
-.maker-go i{font-style:normal;transition:transform .25s}
-.maker:hover .maker-go{background:#fff}
-.maker:hover .maker-go i{transform:translate(2px,-2px)}
-@media(max-width:600px){.maker{flex-wrap:wrap;gap:14px}.maker-go{margin-left:68px}}
-@media(prefers-reduced-motion:reduce){.maker,.maker-go i{transition:none}.maker:hover{transform:none}}
+/* maker's credit, centred under the footer */
+.fs-credit{margin-top:32px;text-align:center;font-size:19.5px;line-height:1.4;color:var(--muted)}
+.fs-credit a{color:var(--ink2);border-bottom:1px solid var(--line2);transition:color .2s,border-color .2s}
+.fs-credit a:hover{color:var(--ink);border-color:var(--ink2)}
