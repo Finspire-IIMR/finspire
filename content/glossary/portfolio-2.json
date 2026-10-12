@@ -1,0 +1,1055 @@
+[
+ {
+  "id": "equity-risk-premium",
+  "term": "Equity risk premium",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "ERP",
+   "market risk premium",
+   "equity premium"
+  ],
+  "hl": [
+   "equity risk premium",
+   "equity risk premiums",
+   "market risk premium",
+   "equity premium"
+  ],
+  "abbr": [],
+  "short": "The extra return investors expect from shares over a safe government bond, as payment for bearing the ups and downs of the stock market.",
+  "kid": "Riding a wobbly bike is scarier than walking. So your friend promises you an extra sweet if you ride the bike instead of walking.",
+  "detail": "The equity risk premium is the return investors demand from a broad stock portfolio above the risk-free rate, usually a government bond yield. It can be measured backward, as the historical gap between stock and bond returns, or forward, as an implied figure backed out from today's prices and expected earnings or dividends. The ERP is a core input in the capital asset pricing model, where cost of equity = risk-free rate + beta x ERP, so it directly shapes discount rates, company valuations and hurdle rates. Indian analysts typically use the 10-year G-sec yield as the risk-free rate and add an ERP estimate, which varies by source and over time. The common confusion is to treat the ERP as a guaranteed extra return: it is an expected reward for risk, and stocks can trail bonds for many years.",
+  "example": "Say the 10-year government bond yields 7% and you expect a broad stock index to return 12.5% a year over the long run. The implied equity risk premium is 12.5% - 7% = 5.5%. A stock with a beta of 1.2 would then have a cost of equity of 7% + 1.2 x 5.5% = 13.6%.",
+  "formula": "ERP = Expected market return - Risk-free rate",
+  "related": [
+   "Risk-free rate",
+   "Capital asset pricing model",
+   "Cost of equity",
+   "Beta",
+   "Risk-return trade-off"
+  ]
+ },
+ {
+  "id": "rebalancing",
+  "term": "Rebalancing",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "portfolio rebalancing",
+   "rebalance"
+  ],
+  "hl": [
+   "portfolio rebalancing",
+   "rebalance portfolio",
+   "rebalance portfolios",
+   "rebalancing portfolios",
+   "rebalance their portfolios"
+  ],
+  "abbr": [],
+  "short": "Buying and selling holdings to bring a portfolio back to its planned mix, such as 60% shares and 40% bonds, after prices have moved.",
+  "kid": "You like your fruit bowl to have the same number of apples and bananas. If someone adds lots of apples, you swap a few for bananas so it is even again.",
+  "detail": "Rebalancing is the act of restoring a portfolio to its target asset allocation after market moves have pushed the weights off course. If shares rally, they grow into a larger slice than planned, so the investor sells some shares and buys bonds or other lagging assets. It can be done on a calendar, say yearly, or whenever a weight drifts beyond a band, such as 5 percentage points from target. Rebalancing keeps risk at the level the investor chose and builds in a disciplined habit of trimming winners and adding to laggards. Costs matter: in India, selling can trigger capital gains tax and mutual fund exit loads, so many investors rebalance by directing fresh SIP money or new savings to the underweight asset instead. The common confusion is with index rebalancing, where an index provider changes the stocks inside an index; portfolio rebalancing is about an investor's own mix.",
+  "example": "Say you start with ₹10 lakh split 60:40, so ₹6 lakh in equity and ₹4 lakh in debt. Equity rises 25% to ₹7.5 lakh while debt stays at ₹4 lakh, making the total ₹11.5 lakh with equity at about 65%. To return to 60:40 you sell ₹0.6 lakh of equity and buy debt, ending with ₹6.9 lakh in equity and ₹4.6 lakh in debt.",
+  "formula": "",
+  "related": [
+   "Asset allocation",
+   "60/40 portfolio",
+   "Investment policy statement",
+   "Buy and hold",
+   "Index rebalancing"
+  ]
+ },
+ {
+  "id": "tail-risk",
+  "term": "Tail risk",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "tail event",
+   "tail-risk hedging",
+   "left tail"
+  ],
+  "hl": [
+   "tail risk",
+   "tail risks",
+   "tail-risk",
+   "tail event",
+   "tail events",
+   "tail-risk hedging",
+   "tail risk hedging",
+   "tail hedge",
+   "tail hedges"
+  ],
+  "abbr": [],
+  "short": "The chance of a rare but extreme market move, especially a large loss, far bigger than normal day-to-day swings.",
+  "kid": "Most days it drizzles a little, but once in a long while a huge storm comes. Tail risk is that rare big storm.",
+  "detail": "Tail risk is the risk of outcomes that lie in the far ends, or tails, of a return distribution, typically more than three standard deviations from the average. In finance the main worry is the left tail: sudden, severe losses such as the 2008 global financial crisis or the March 2020 Covid crash. Market returns have fatter tails than a normal bell curve predicts, so models that assume normality, including some value-at-risk measures, understate how often such shocks occur. Investors manage tail risk through diversification across asset classes, smaller position sizes, cash reserves, or buying protection such as out-of-the-money put options, an approach called tail-risk hedging. The common confusion is to equate tail risk with volatility: a portfolio can look calm for years and still carry a large hidden tail risk, for example from leverage or from selling options.",
+  "example": "Under a normal bell curve, a one-day fall of 5 standard deviations should happen about once in 14,000 years of trading. Yet on 19 October 1987 the US Dow Jones Industrial Average fell 22.6% in a single day, commonly described as a move of more than 20 standard deviations, which is why practitioners say real markets have fat tails.",
+  "formula": "",
+  "related": [
+   "Black swan",
+   "Value at risk",
+   "Fat tails",
+   "Kurtosis",
+   "Put option",
+   "Drawdown"
+  ]
+ },
+ {
+  "id": "black-swan",
+  "term": "Black swan",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "black swan event",
+   "black swans"
+  ],
+  "hl": [
+   "black swan",
+   "black swans",
+   "black swan event",
+   "black swan events"
+  ],
+  "abbr": [],
+  "short": "A rare, unexpected event with huge consequences that people confidently explain only after it has happened.",
+  "kid": "Everyone thought all swans were white, until one day someone saw a black one. A black swan is a big surprise nobody saw coming.",
+  "detail": "The term was popularised by Nassim Nicholas Taleb in his 2007 book The Black Swan. It describes an event with three features: it is an outlier beyond normal expectations, it has an extreme impact, and afterwards people build stories that make it seem predictable. The name comes from the old European belief that all swans were white, overturned when black swans were found in Australia. In markets, commonly cited examples include the 9/11 attacks and the 2008 financial crisis, while Taleb himself argued that the 2020 pandemic was foreseeable and so not a true black swan. The lesson for investors is not to predict black swans but to build portfolios that survive them, by avoiding excessive leverage, holding reserves and diversifying. The common confusion is to call every sharp sell-off a black swan; a fall that models already flagged as possible is better described as tail risk.",
+  "example": "On 15 January 2015 the Swiss National Bank suddenly scrapped its floor of 1.20 francs per euro, and within minutes the euro fell below 1.00 franc, a drop of more than 16%. A trader long euros against francs with 20 times leverage would have lost more than three times the money posted (20 x 16% = 320%), and several currency brokers suffered crippling losses that day.",
+  "formula": "",
+  "related": [
+   "Tail risk",
+   "Fat tails",
+   "Systemic risk",
+   "Stress testing",
+   "Leverage"
+  ]
+ },
+ {
+  "id": "liquidity-risk",
+  "term": "Liquidity risk",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "market liquidity risk",
+   "funding liquidity risk",
+   "illiquidity risk"
+  ],
+  "hl": [
+   "liquidity risk",
+   "liquidity risks",
+   "funding liquidity risk",
+   "market liquidity risk",
+   "illiquidity risk"
+  ],
+  "abbr": [],
+  "short": "The danger that you cannot sell an asset quickly without cutting its price sharply, or cannot raise cash to meet a payment when due.",
+  "kid": "You want to swap your big toy castle for sweets right now, but nobody wants it today. You might have to give it away for just a few sweets.",
+  "detail": "Liquidity risk has two linked forms. Market liquidity risk is the risk that an asset cannot be sold quickly near its fair price because few buyers exist, so the bid-ask spread widens or the seller must accept a steep discount. Funding liquidity risk is the risk that an investor, fund or company cannot raise cash to meet obligations such as redemptions, margin calls or maturing debt. The two feed each other in a crisis, as forced selling pushes prices down and triggers more margin calls. Small caps, unlisted shares, property and lower-rated bonds carry more of it. In India, the 2018 IL&FS default and the 2020 winding-up of six Franklin Templeton debt schemes showed how funds holding hard-to-sell bonds can freeze. The common confusion is to mix up liquidity with solvency: a firm can own more than it owes and still fail if it cannot raise cash in time.",
+  "example": "Say a debt fund holds ₹50 crore face value of a thinly traded bond that a dealer values at par, ₹100 per ₹100 of face value. Hit by redemptions, the fund must sell within a day and the best bid is ₹92. It raises ₹46 crore instead of ₹50 crore, a ₹4 crore loss caused purely by having to sell in a hurry.",
+  "formula": "",
+  "related": [
+   "Bid-ask spread",
+   "Market depth",
+   "Margin call",
+   "Solvency",
+   "Asset-liability mismatch"
+  ]
+ },
+ {
+  "id": "concentration-risk",
+  "term": "Concentration risk",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "concentrated portfolio",
+   "single-stock risk"
+  ],
+  "hl": [
+   "concentration risk",
+   "concentration risks",
+   "concentrated portfolio",
+   "concentrated portfolios",
+   "single-stock risk"
+  ],
+  "abbr": [],
+  "short": "The extra danger of having too much money in one stock, sector, borrower or theme, so one bad event can cause a big loss.",
+  "kid": "If you carry all your eggs in one basket and trip, every egg breaks. Using a few baskets keeps most of them safe.",
+  "detail": "Concentration risk arises when a large share of a portfolio, a bank's loan book or a company's revenue depends on a single name, sector, region or counterparty. Diversification reduces company-specific risk, so a concentrated portfolio carries more risk that the market does not reward: one fraud, regulatory change or lost contract can do lasting damage. Employees holding mostly their employer's shares face a double hit, since the job and the savings can vanish together, as Enron staff discovered in 2001. Regulators limit concentration: SEBI caps how much an Indian mutual fund scheme can put into a single company, and the RBI sets large exposure limits for banks, with the exact limits set by the rules in force. The common confusion is to treat owning many stocks as diversification; holding 20 IT or bank stocks still leaves heavy concentration in one sector.",
+  "example": "Say an investor has ₹20 lakh, with ₹14 lakh in her employer's shares and ₹6 lakh in an index fund. If the employer's stock falls 50% and the index fund is flat, her portfolio drops by ₹7 lakh, or 35%. Had she held only ₹1.4 lakh in the employer's stock, the same fall would have cost her ₹0.7 lakh.",
+  "formula": "",
+  "related": [
+   "Diversification",
+   "Idiosyncratic risk",
+   "Position sizing",
+   "Asset allocation",
+   "Large exposure framework"
+  ]
+ },
+ {
+  "id": "inflation-risk",
+  "term": "Inflation risk",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "purchasing power risk"
+  ],
+  "hl": [
+   "inflation risk",
+   "inflation risks",
+   "purchasing power risk"
+  ],
+  "abbr": [],
+  "short": "The danger that rising prices eat away what your money and investment returns can actually buy over time.",
+  "kid": "Today your coin buys two sweets. If sweets cost more next year, the same coin might buy only one.",
+  "detail": "Inflation risk, also called purchasing power risk, is the risk that inflation turns out higher than expected and erodes the real value of future cash flows. It hits fixed payments hardest: a bond paying a set coupon, a fixed deposit, an annuity or a pension that is not linked to prices. Long-dated bonds are most exposed, because unexpected inflation usually pushes yields up and their prices down. Equities, real estate, commodities and inflation-indexed bonds, such as US TIPS or India's earlier inflation-indexed bonds, offer partial protection, though none is perfect in the short run. For Indian savers the risk is real because consumer inflation has often been higher than in developed economies, so a deposit can earn a positive nominal return and a negative real one. The common confusion is to look only at the headline interest rate and ignore what remains after inflation and tax.",
+  "example": "Say you keep ₹1 lakh in a deposit paying 6% a year while inflation runs at 7%. After one year you have ₹1,06,000, but goods that cost ₹1,00,000 now cost ₹1,07,000, so your purchasing power has fallen by about 0.93% (1.06 / 1.07 - 1).",
+  "formula": "Real value = Nominal value / (1 + Inflation rate)^n",
+  "related": [
+   "Inflation",
+   "Real return",
+   "Inflation hedge",
+   "Inflation-indexed bond",
+   "Fisher equation"
+  ]
+ },
+ {
+  "id": "currency-risk",
+  "term": "Currency risk",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "exchange rate risk",
+   "FX risk",
+   "forex risk",
+   "foreign exchange risk"
+  ],
+  "hl": [
+   "currency risk",
+   "currency risks",
+   "exchange rate risk",
+   "exchange-rate risk",
+   "fx risk",
+   "forex risk"
+  ],
+  "abbr": [],
+  "short": "The chance that exchange-rate moves shrink the value of money you will receive, or raise what you owe, in a foreign currency.",
+  "kid": "You trade your marbles for your cousin's stickers. If tomorrow each sticker is worth fewer marbles, your stickers swap back for fewer marbles than before.",
+  "detail": "Currency risk arises whenever cash flows, assets or liabilities are in a currency other than the one an investor or company measures results in. An Indian investor in a US fund earns the fund's dollar return plus or minus the change in the rupee-dollar rate. Exporters such as IT services firms gain when the rupee weakens and lose when it strengthens, while importers and companies with dollar loans face the opposite. The risk can be reduced by hedging with forwards, futures, options or currency swaps, or naturally by matching foreign revenue with foreign costs. Hedging has a cost, roughly tied to the interest-rate gap between the two currencies. The common confusion is to judge a foreign investment only by its local-market return; for a rupee-based investor, a weaker rupee can turn a modest US gain into a solid one, and a stronger rupee can do the reverse.",
+  "example": "Say you invest $10,000 in a US index fund when $1 = ₹80, costing ₹8 lakh. A year later the fund is up 10% to $11,000 and the rupee has weakened to ₹85 per dollar, so your holding is worth ₹9.35 lakh, a rupee return of about 16.9%. Had the rupee strengthened to ₹76 instead, it would be worth ₹8.36 lakh, a gain of just 4.5%.",
+  "formula": "Home-currency return = (1 + Foreign-currency return) x (1 + % change in the foreign currency's value against the home currency) - 1",
+  "related": [
+   "Exchange rate",
+   "Currency forward",
+   "Hedging",
+   "Natural hedge",
+   "Interest rate parity"
+  ]
+ },
+ {
+  "id": "sequence-of-returns-risk",
+  "term": "Sequence-of-returns risk",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "sequence risk",
+   "sequence of returns risk"
+  ],
+  "hl": [
+   "sequence-of-returns risk",
+   "sequence of returns risk",
+   "sequence risk"
+  ],
+  "abbr": [],
+  "short": "The risk that poor returns arriving early in retirement, while you are withdrawing money, do lasting damage even if average returns are fine.",
+  "kid": "You take two sweets from your jar every day. If the jar gets knocked over on the first day, it runs empty much sooner than if the spill happened near the end.",
+  "detail": "Sequence-of-returns risk is the risk that the order in which returns occur, not just their average, decides how much money is left. For an investor who neither adds nor withdraws, order does not matter: a 20% fall followed by a 25% rise ends where a 25% rise followed by a 20% fall does. Once money is being withdrawn, as in retirement or a systematic withdrawal plan, losses in the early years force the sale of more units at low prices, leaving less capital to recover. A mirror risk affects savers near the end of their working years, when the portfolio is largest. Common defences are holding a cash or debt bucket covering a few years of spending, lowering equity exposure around retirement, and trimming withdrawals after bad years. The common confusion is to assume that two portfolios with the same average return must end with the same wealth.",
+  "example": "Say two retirees each start with ₹1 crore and withdraw ₹10 lakh at the end of each of two years. One earns -20% then +20%: ₹80 lakh - ₹10 lakh = ₹70 lakh, then ₹84 lakh - ₹10 lakh = ₹74 lakh. The other earns +20% then -20%: ₹1.2 crore - ₹10 lakh = ₹1.1 crore, then ₹88 lakh - ₹10 lakh = ₹78 lakh, ending ₹4 lakh richer with the same returns in a different order.",
+  "formula": "",
+  "related": [
+   "Systematic withdrawal plan",
+   "Retirement planning",
+   "Drawdown",
+   "Asset allocation",
+   "Investment horizon"
+  ]
+ },
+ {
+  "id": "risk-parity",
+  "term": "Risk parity",
+  "cat": "portfolio",
+  "level": "a",
+  "aliases": [
+   "risk parity portfolio",
+   "equal risk contribution",
+   "risk-balanced portfolio"
+  ],
+  "hl": [
+   "risk parity",
+   "risk-parity",
+   "risk parity fund",
+   "risk parity funds",
+   "risk parity portfolio",
+   "risk parity portfolios",
+   "equal risk contribution"
+  ],
+  "abbr": [],
+  "short": "A way of building a portfolio so each asset class contributes an equal share of total risk, rather than an equal share of money.",
+  "kid": "On a seesaw, a big child and a small child can balance if the small one sits further out. Risk parity arranges things so no single side tips the seesaw.",
+  "detail": "Risk parity allocates capital so that each asset class contributes roughly the same amount of risk to the portfolio, usually measured using volatilities and correlations. In a traditional 60/40 portfolio, equities are far more volatile than bonds, so they often account for around 90% of total risk while being only 60% of the money. A risk parity portfolio therefore holds more bonds and other low-volatility assets and, to reach a useful expected return, often applies leverage to them. Bridgewater popularised the idea with its All Weather strategy in the 1990s, aiming for balance across growth and inflation environments. The approach suffers when stocks and bonds fall together, as in 2022, because the leveraged bond holdings no longer cushion equity losses. The common confusion is to think risk parity means equal amounts in each asset; it means equal risk, which usually requires very unequal amounts.",
+  "example": "Say equities have volatility of 18% a year and bonds 6%, and assume they are uncorrelated. Equal risk contribution then means weights inversely proportional to volatility: equities get 6 / (18 + 6) = 25% and bonds 18 / (18 + 6) = 75%. Each has the same weighted volatility, 25% x 18% = 4.5% and 75% x 6% = 4.5%, so each supplies half the portfolio's risk.",
+  "formula": "Risk contribution of asset i = w_i x Cov(r_i, r_p) / σ_p; risk parity sets these contributions equal for all assets",
+  "related": [
+   "Asset allocation",
+   "60/40 portfolio",
+   "Volatility",
+   "Correlation",
+   "Leverage",
+   "Diversification"
+  ]
+ },
+ {
+  "id": "kelly-criterion",
+  "term": "Kelly criterion",
+  "cat": "portfolio",
+  "level": "a",
+  "aliases": [
+   "Kelly formula",
+   "Kelly bet sizing",
+   "Kelly ratio"
+  ],
+  "hl": [
+   "kelly criterion",
+   "kelly formula",
+   "kelly bet sizing",
+   "kelly betting"
+  ],
+  "abbr": [],
+  "short": "A formula for choosing what fraction of your money to stake on a bet or trade so your wealth grows fastest over many rounds.",
+  "kid": "If a game is a little in your favour, you should play with some of your marbles but never all of them. Kelly tells you how many to use each time.",
+  "detail": "The Kelly criterion, set out by Bell Labs scientist John L. Kelly Jr. in 1956, gives the bet size that maximises the expected logarithm of wealth, which is the same as maximising long-run compound growth. For a simple bet that wins b times the stake with probability p and loses the stake with probability q = 1 - p, the optimal fraction is (bp - q) / b. If the edge is zero or negative, Kelly says bet nothing. Edward Thorp applied it to blackjack and trading. Full Kelly is aggressive and assumes the true probabilities are known, which markets rarely allow, so practitioners usually bet half Kelly or less. Betting more than Kelly adds risk and actually lowers long-run growth; at roughly twice Kelly, expected growth falls to about zero. The common confusion is to treat Kelly as a target rather than an upper limit on position size.",
+  "example": "Say a bet pays even money (b = 1) and you win 60% of the time. Kelly says stake (1 x 0.6 - 0.4) / 1 = 0.2, or 20% of your bankroll each round. With ₹1 lakh you would bet ₹20,000; after a win you have ₹1.2 lakh and the next bet is ₹24,000.",
+  "formula": "Kelly fraction f = (b x p - q) / b, where p = probability of winning, q = 1 - p and b = net payout per unit staked",
+  "related": [
+   "Position sizing",
+   "Expected value",
+   "Compounding",
+   "Drawdown",
+   "Risk of ruin"
+  ]
+ },
+ {
+  "id": "time-value-of-money",
+  "term": "Time value of money",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "TVM"
+  ],
+  "hl": [
+   "time value of money"
+  ],
+  "abbr": [],
+  "short": "The idea that a rupee today is worth more than a rupee in the future, because today's money can be invested to earn more.",
+  "kid": "A coin today is better than a coin next year. If you plant a seed today, it has a whole year to grow into a bigger plant.",
+  "detail": "The time value of money is the principle that money available now is worth more than the same amount received later, because it can be invested to earn a return, because inflation erodes future purchasing power, and because a future payment carries some risk of not arriving. It underpins nearly all of finance: compounding moves money forward in time to a future value, and discounting brings future cash flows back to a present value. Loan EMIs, bond prices, retirement plans and discounted cash flow valuations all rest on it. The discount rate reflects the return available on alternatives of similar risk, so a riskier cash flow is discounted more heavily. The common confusion is to add up money received in different years as if each rupee were equal, which overstates the worth of distant payments, such as a lottery paid over 20 years or an insurance plan's maturity benefit.",
+  "example": "At 10% a year, ₹1 lakh today grows to ₹1,10,000 in one year, so ₹1,10,000 due in a year has a present value of ₹1 lakh. Likewise, ₹1,21,000 due in two years is worth ₹1,21,000 / 1.1^2 = ₹1,00,000 today.",
+  "formula": "PV = FV / (1 + r)^n; FV = PV x (1 + r)^n",
+  "related": [
+   "Present value",
+   "Future value",
+   "Discount rate",
+   "Compounding",
+   "Discounted cash flow",
+   "Net present value"
+  ]
+ },
+ {
+  "id": "compounding",
+  "term": "Compounding",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "compound returns",
+   "power of compounding",
+   "compounding effect"
+  ],
+  "hl": [
+   "power of compounding",
+   "compounding effect",
+   "compound returns",
+   "compounded returns",
+   "compound interest"
+  ],
+  "abbr": [],
+  "short": "Earning returns on your past returns as well as on your original money, so wealth grows faster and faster over time.",
+  "kid": "A snowball rolling down a hill picks up snow, and the bigger it gets, the more snow it picks up with every roll.",
+  "detail": "Compounding is the process by which returns are reinvested and themselves earn returns, so growth builds on a rising base. With simple interest, ₹1 lakh at 10% earns ₹10,000 every year; with compounding, the second year's ₹11,000 is earned on ₹1,10,000, and so on. The result is exponential growth, and time is the most powerful input: doubling the investment horizon more than doubles the gain. The rule of 72 gives a quick estimate of doubling time: divide 72 by the annual rate in percent. Compounding works against borrowers too, which is why unpaid credit card balances snowball. For Indian savers, starting an SIP early often matters more than the exact fund chosen, because early contributions have the longest to compound. The common confusion is to expect compounding to look dramatic in the early years; the curve is flat at first and steepens only later, so patience and avoiding interruptions matter.",
+  "example": "₹1 lakh invested at 12% a year, compounded annually, grows to about ₹3.11 lakh in 10 years, ₹9.65 lakh in 20 years and ₹29.96 lakh in 30 years. Simple interest at the same rate would give only ₹2.2 lakh, ₹3.4 lakh and ₹4.6 lakh.",
+  "formula": "FV = PV x (1 + r/m)^(m x n), where m = compounding periods per year and n = years",
+  "related": [
+   "Time value of money",
+   "Compound annual growth rate",
+   "Rule of 72",
+   "Systematic investment plan",
+   "Investment horizon"
+  ]
+ },
+ {
+  "id": "holding-period-return",
+  "term": "Holding period return",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "HPR",
+   "holding period yield"
+  ],
+  "hl": [
+   "holding period return",
+   "holding period returns",
+   "holding period yield"
+  ],
+  "abbr": [],
+  "short": "The total percentage gain or loss on an investment over the whole time you held it, counting both price change and income received.",
+  "kid": "You bought a toy for 10 coins, a friend paid you 1 coin to borrow it, and you sold it for 12. You got 13 coins back for your 10, so you gained 3.",
+  "detail": "Holding period return measures the total return earned over the full period an asset was owned, whatever its length, by adding the price change and any income such as dividends, interest or rent, and dividing by the starting price. It is the simplest return measure and the building block for others. Because it is not annualised, an HPR of 30% over five years and 30% over six months describe very different performances; to compare them, convert to an annualised rate using (1 + HPR)^(1/n) - 1, where n is the number of years. HPRs for consecutive periods can be linked by multiplying their (1 + HPR) terms, which is how time-weighted returns are built. The common confusion is to ignore dividends or to compare HPRs over different periods directly; another is to forget that taxes and transaction costs reduce the return an investor actually keeps.",
+  "example": "Say you buy a share at ₹500, receive dividends of ₹20 and sell it two years later at ₹580. The holding period return is (580 - 500 + 20) / 500 = 20%, which works out to an annualised return of about 9.54% (1.2^0.5 - 1).",
+  "formula": "HPR = (Ending value - Beginning value + Income received) / Beginning value",
+  "related": [
+   "Total return",
+   "Compound annual growth rate",
+   "Time-weighted return",
+   "Dividend yield",
+   "Annualised return"
+  ]
+ },
+ {
+  "id": "total-return",
+  "term": "Total return",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "total returns"
+  ],
+  "hl": [
+   "total return",
+   "total returns"
+  ],
+  "abbr": [],
+  "short": "An investment's complete gain over a period: the change in its price plus all income it paid, such as dividends or interest, usually reinvested.",
+  "kid": "Your apple tree grows taller, and it also gives you apples to eat. Counting both the taller tree and the apples is the whole prize.",
+  "detail": "Total return captures everything an investor earns from holding an asset: capital gains or losses plus income such as dividends, coupons or rent, normally assuming the income is reinvested. For a company's shareholders it is called total shareholder return, and many boards link executive pay to TSR relative to peers. The distinction matters because price indices ignore dividends: the Nifty 50 shown on screens is a price index, while the Nifty 50 Total Return Index adds dividends back, and since 2018 SEBI has required Indian mutual funds to benchmark against total return indices. Over long periods the gap compounds into a large difference. For bonds, total return includes coupons plus price changes from moving yields, so a bond fund can lose money in a year when yields rise even though it collects interest. The common confusion is to judge a dividend-paying stock or fund by its price change alone.",
+  "example": "Say you buy 100 shares of a hypothetical XYZ Ltd at ₹200, collect ₹8 per share in dividends, and the price ends the year at ₹210. The price return is 5%, but the total return is (210 - 200 + 8) / 200 = 9%, nearly double.",
+  "formula": "Total return = (Ending price - Beginning price + Income) / Beginning price",
+  "related": [
+   "Holding period return",
+   "Total return index",
+   "Total shareholder return",
+   "Dividend yield",
+   "Capital gain",
+   "Price return"
+  ]
+ },
+ {
+  "id": "time-weighted-return",
+  "term": "Time-weighted return",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "TWR",
+   "TWRR",
+   "time-weighted rate of return"
+  ],
+  "hl": [
+   "time-weighted return",
+   "time-weighted returns",
+   "time weighted return",
+   "time-weighted rate of return"
+  ],
+  "abbr": [
+   "TWRR"
+  ],
+  "short": "A return measure that strips out the effect of money being added or withdrawn, showing how well the investments themselves performed.",
+  "kid": "To see how fast a runner is, you time each lap, no matter how many friends join in or leave along the way.",
+  "detail": "Time-weighted return measures the compound growth of one unit of money invested over a period, removing the effect of the size and timing of cash flows. The period is split into sub-periods at every deposit or withdrawal, the return of each sub-period is calculated, and the results are chain-linked by multiplying (1 + r) terms. Because a fund manager usually does not control when investors put money in or take it out, TWR is the fairer yardstick for judging the manager, and the Global Investment Performance Standards (GIPS) require it in most cases. Mutual fund returns published in India from NAV per unit are effectively time-weighted, since NAV per unit is unaffected by flows. The common confusion is to expect your own experience to match the fund's TWR: if you invested heavily just before a fall, your money-weighted return can be far lower than the fund's reported figure.",
+  "example": "Say a portfolio grows from ₹10 lakh to ₹11 lakh in the first half of the year (+10%). The investor then adds ₹9 lakh, making ₹20 lakh, which falls to ₹19 lakh by year-end (-5%). The time-weighted return is 1.10 x 0.95 - 1 = 4.5%, regardless of the ₹9 lakh deposit.",
+  "formula": "TWR = (1 + r1) x (1 + r2) x ... x (1 + rn) - 1, where each r is the return of a sub-period between cash flows",
+  "related": [
+   "Money-weighted return",
+   "Holding period return",
+   "Global Investment Performance Standards",
+   "Net asset value",
+   "Benchmark"
+  ]
+ },
+ {
+  "id": "money-weighted-return",
+  "term": "Money-weighted return",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "MWR",
+   "MWRR",
+   "money-weighted rate of return",
+   "dollar-weighted return"
+  ],
+  "hl": [
+   "money-weighted return",
+   "money-weighted returns",
+   "money weighted return",
+   "money-weighted rate of return",
+   "dollar-weighted return",
+   "dollar-weighted returns"
+  ],
+  "abbr": [
+   "MWRR"
+  ],
+  "short": "The return an investor actually earned on their own money, reflecting when and how much they added or withdrew along the way.",
+  "kid": "If you put most of your marbles into a game just before a bad round, you lose a lot, even if other rounds go well. When you joined in changes how you did.",
+  "detail": "Money-weighted return is the internal rate of return of an investor's cash flows: the single discount rate at which the present value of all contributions equals the present value of all withdrawals plus the ending value. Larger amounts invested for longer carry more weight, so it reflects both the investments' performance and the investor's own timing. It is the right measure of what an individual actually earned, and in India it is what the XIRR spreadsheet function calculates for SIPs and irregular investments. It is also standard for private equity and real estate funds, where the manager controls when capital is called and returned. The common confusion is to compare a personal MWR directly with a fund's time-weighted return: the gap between them is the effect of the investor's timing, often called the behaviour gap, and it is frequently negative because many investors buy after rallies and sell after falls.",
+  "example": "Take the case where ₹10 lakh grows to ₹11 lakh in six months, the investor adds ₹9 lakh, and the ₹20 lakh falls to ₹19 lakh by year-end. The money-weighted return solves 10 x (1 + r) + 9 x (1 + r)^0.5 = 19 (in ₹ lakh), which gives r = 0%. That is well below the 4.5% time-weighted return, because most of the money arrived just before the fall.",
+  "formula": "Solve for r: Sum of CF_t / (1 + r)^t = 0, with contributions negative and withdrawals plus the ending value positive",
+  "related": [
+   "Time-weighted return",
+   "Internal rate of return",
+   "XIRR",
+   "Systematic investment plan",
+   "Behaviour gap"
+  ]
+ },
+ {
+  "id": "investment-policy-statement",
+  "term": "Investment policy statement",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "IPS"
+  ],
+  "hl": [
+   "investment policy statement",
+   "investment policy statements"
+  ],
+  "abbr": [],
+  "short": "A written document setting out an investor's goals, risk tolerance, constraints and rules for managing a portfolio, agreed before investing.",
+  "kid": "Before a long trip, your family writes down where you are going, how much you can spend and when to stop for snacks. That list keeps everyone calm when the road gets bumpy.",
+  "detail": "An investment policy statement is the governing document for a portfolio, agreed between an investor and an adviser or adopted by an institution's board. A typical IPS states return objectives and risk tolerance, then the constraints, often summarised as time horizon, liquidity needs, legal and regulatory limits, taxes and unique circumstances. It sets the strategic asset allocation with permitted ranges, the benchmark for each asset class, rebalancing rules, and how and how often performance will be reviewed. Pension funds, endowments, insurers and family offices rely on one, and for individuals, the risk profiling and documented advice used by SEBI-registered investment advisers serve a similar purpose. Its real value shows in a crash, when it reminds everyone of the plan agreed in calmer times. The common confusion is to treat an IPS as a list of stock picks; it sets rules and process, not individual securities.",
+  "example": "Say a 30-year-old with ₹15 lakh writes an IPS targeting 10% a year over 25 years for retirement. It sets 70% equity and 30% debt, keeps six months of expenses (₹3 lakh) outside the portfolio, and requires rebalancing whenever equity moves outside a 65% to 75% band.",
+  "formula": "",
+  "related": [
+   "Asset allocation",
+   "Risk tolerance",
+   "Investment horizon",
+   "Benchmark",
+   "Rebalancing"
+  ]
+ },
+ {
+  "id": "investment-horizon",
+  "term": "Investment horizon",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "time horizon",
+   "holding period"
+  ],
+  "hl": [
+   "investment horizon",
+   "investment horizons",
+   "investing horizon"
+  ],
+  "abbr": [],
+  "short": "How long you plan to keep your money invested before you need to spend it, which shapes how much risk you can take.",
+  "kid": "If you want ice cream tomorrow, keep your coins in your pocket. If you are saving for a bike in a few years, you can plant them like seeds and let them grow.",
+  "detail": "The investment horizon is the length of time an investor expects to hold a portfolio before needing the money for a goal, such as a car in two years, a child's education in twelve or retirement in thirty. It is a key input in choosing an asset allocation. Equities are volatile from year to year, but over longer horizons bad years have more time to be offset, so long-horizon money can usually take more equity risk, while short-horizon money belongs in deposits or liquid and short-duration debt funds. Many investors have one horizon per goal. Horizons shrink as goals approach, which is why target-date and glide-path approaches shift money from equity to debt over time. The common confusion is to equate a long horizon with no risk: long stretches of poor equity returns do happen, and a forced early withdrawal can turn a long-horizon plan into a short one.",
+  "example": "Say you need ₹5 lakh in 18 months for a course fee and also invest ₹5 lakh for retirement 25 years away. The first sum suits a fixed deposit or short-term debt fund, because a 30% equity fall just before the fee is due could leave you with only ₹3.5 lakh. The second can sit mostly in equity, where a 30% fall has decades to recover.",
+  "formula": "",
+  "related": [
+   "Asset allocation",
+   "Risk tolerance",
+   "Sequence-of-returns risk",
+   "Goal-based investing",
+   "Buy and hold"
+  ]
+ },
+ {
+  "id": "core-satellite-strategy",
+  "term": "Core-satellite strategy",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "core and satellite portfolio",
+   "core-satellite approach"
+  ],
+  "hl": [
+   "core-satellite strategy",
+   "core-satellite approach",
+   "core-satellite portfolio",
+   "core and satellite portfolio",
+   "core-satellite investing"
+  ],
+  "abbr": [],
+  "short": "A portfolio plan with a large, low-cost core, usually index funds, plus smaller satellite holdings chosen to try to beat the market.",
+  "kid": "Your lunchbox has a big, filling sandwich you eat every day, plus a small treat that changes. The sandwich keeps you full, and the treat makes it fun.",
+  "detail": "A core-satellite strategy splits a portfolio in two. The core, often 60% to 80% of the money, holds broad, diversified, low-cost investments such as Nifty 50 or Sensex index funds, total-market ETFs and high-quality debt, designed to capture market returns reliably. The satellites hold the rest in higher-conviction or higher-risk ideas: active funds, sector or thematic funds, small caps, individual stocks, international funds or alternatives. The structure keeps costs down and limits how far the portfolio can lag its benchmark, while leaving room for active views. It also shows clearly which part of performance comes from the market and which from the investor's own choices. The common confusion is to let the satellites grow until they become the portfolio; without position limits and periodic rebalancing, a core-satellite plan drifts into a concentrated, high-cost portfolio.",
+  "example": "Say you invest ₹10 lakh, with ₹7.5 lakh in a Nifty 50 index fund and ₹2.5 lakh split across a small-cap fund and five stocks. If the core earns 12% and the satellites earn 20%, the portfolio earns 0.75 x 12% + 0.25 x 20% = 14%. If the satellites instead lose 10%, it still earns 0.75 x 12% + 0.25 x (-10%) = 6.5%.",
+  "formula": "",
+  "related": [
+   "Index fund",
+   "Active management",
+   "Passive investing",
+   "Asset allocation",
+   "Rebalancing"
+  ]
+ },
+ {
+  "id": "60-40-portfolio",
+  "term": "60/40 portfolio",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "60-40 portfolio",
+   "sixty-forty portfolio",
+   "balanced portfolio"
+  ],
+  "hl": [
+   "60/40 portfolio",
+   "60/40 portfolios",
+   "60-40 portfolio",
+   "60-40 portfolios",
+   "sixty-forty portfolio",
+   "60/40 strategy"
+  ],
+  "abbr": [],
+  "short": "A classic portfolio that keeps about 60% in shares for growth and 40% in bonds for stability and income.",
+  "kid": "You put six bouncy balls and four steady building blocks in your toy box. The balls make it exciting and the blocks keep the box from tipping over.",
+  "detail": "The 60/40 portfolio puts roughly 60% in equities and 40% in high-quality bonds, rebalanced periodically. The idea is that stocks provide long-run growth while bonds provide income and tend to cushion equity sell-offs, because in many past downturns falling interest rates lifted bond prices as shares fell. It became the standard reference point for balanced US pension funds and advisers, and in India hybrid mutual funds offer similar blends within SEBI's category rules. Its weakness showed in 2022, when high inflation pushed interest rates up and both US stocks and bonds fell sharply, giving the 60/40 one of its worst years in decades. The common confusion is to think 60/40 splits risk evenly; because equities are much more volatile, they drive most of its ups and downs, which is the gap that risk parity tries to close.",
+  "example": "Say a $100,000 portfolio is 60/40 and in one year stocks return 20% while bonds return 5%. The portfolio gains 0.6 x 20% + 0.4 x 5% = 14%, ending at $114,000. In a year when stocks fall 20% and bonds rise 5%, it loses 0.6 x 20% - 0.4 x 5% = 10%, half the stock market's fall.",
+  "formula": "Portfolio return = 0.6 x Equity return + 0.4 x Bond return",
+  "related": [
+   "Asset allocation",
+   "Rebalancing",
+   "Risk parity",
+   "Hybrid fund",
+   "Diversification"
+  ]
+ },
+ {
+  "id": "liability-driven-investing",
+  "term": "Liability-driven investing",
+  "cat": "portfolio",
+  "level": "a",
+  "aliases": [
+   "LDI",
+   "liability-driven investment"
+  ],
+  "hl": [
+   "liability-driven investing",
+   "liability-driven investment",
+   "liability driven investing",
+   "ldi strategy",
+   "ldi strategies",
+   "ldi fund",
+   "ldi funds"
+  ],
+  "abbr": [
+   "LDI"
+  ],
+  "short": "An approach used by pension funds and insurers that invests to match future obligations, rather than simply chasing the highest return.",
+  "kid": "If you promised your friend ten sweets next Saturday, you save in a way that makes sure exactly ten are ready by then.",
+  "detail": "Liability-driven investing builds a portfolio around the liabilities it must pay, typically pensions or insurance claims, rather than a market benchmark. The core step is to estimate the present value and interest-rate sensitivity of those future payments, then hold assets, mainly long-dated government and corporate bonds, inflation-linked bonds and interest rate swaps, whose value moves in step with them. A fall in interest rates, which raises the value of the liabilities, then also raises the value of the assets, protecting the funding ratio. A smaller growth portfolio of equities and other assets aims to close any deficit. UK pension schemes used leveraged LDI heavily, and in September 2022 a sharp jump in gilt yields after the mini-budget forced collateral calls and fire sales until the Bank of England intervened. The common confusion is to think LDI is low risk by definition; leverage and collateral needs can create serious liquidity risk.",
+  "example": "Say a pension fund must pay $100 million in 10 years and 10-year zero-coupon government bonds yield 4%. The liability's present value is $100 million / 1.04^10, about $67.6 million. Buying $67.6 million of those zero-coupon bonds now locks in the payment, whatever happens to interest rates in between.",
+  "formula": "Funding ratio = Market value of assets / Present value of liabilities",
+  "related": [
+   "Duration",
+   "Immunisation",
+   "Pension fund",
+   "Interest rate swap",
+   "Asset-liability management"
+  ]
+ },
+ {
+  "id": "alternative-investments",
+  "term": "Alternative investments",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "alternatives",
+   "alternative assets"
+  ],
+  "hl": [
+   "alternative investments",
+   "alternative assets",
+   "alternative asset manager",
+   "alternative asset managers",
+   "alternative asset class"
+  ],
+  "abbr": [],
+  "short": "Investments outside the traditional trio of listed shares, bonds and cash, such as private equity, hedge funds, real estate, commodities and art.",
+  "kid": "Most children collect toy cars or dolls, but some collect stamps, shells or old coins. Those unusual collections are the alternatives.",
+  "detail": "Alternative investments is a broad label for assets other than publicly traded equities, bonds and cash. The usual list includes private equity and venture capital, hedge funds, private credit, real estate and infrastructure, commodities, and collectibles such as art or wine. Investors use them for diversification, for returns not available in public markets, or for protection against inflation. The trade-offs are typically higher fees, less transparency, large minimum investments, valuations that are estimated rather than set by daily trading, and long lock-ups that create liquidity risk. In India, many such strategies reach investors through SEBI-registered Alternative Investment Funds, whose minimum ticket is high under the rules as of 2025, while exchange-listed REITs and InvITs offer smaller entry points. The common confusion is to read smooth reported returns as low risk: appraisal-based valuations understate true volatility.",
+  "example": "Say an investor puts ₹5 lakh of a ₹50 lakh portfolio, or 10%, into a listed REIT and a gold ETF. If the other ₹45 lakh in equities and bonds falls 8% in a bad year while the alternatives rise 4%, the portfolio falls 0.9 x 8% - 0.1 x 4% = 6.8% rather than 8%.",
+  "formula": "",
+  "related": [
+   "Private equity",
+   "Hedge fund",
+   "Real estate investment trust",
+   "Alternative investment fund",
+   "Asset class",
+   "Commodities"
+  ]
+ },
+ {
+  "id": "asset-class",
+  "term": "Asset class",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "asset classes"
+  ],
+  "hl": [
+   "asset class",
+   "asset classes"
+  ],
+  "abbr": [],
+  "short": "A group of investments that behave similarly and follow the same rules, such as equities, bonds, cash, real estate or commodities.",
+  "kid": "Sorting your toys into boxes for cars, dolls and blocks makes it easy to see what you have. Each box holds a different kind of toy.",
+  "detail": "An asset class is a category of investments with similar risk and return characteristics, similar sensitivity to economic forces, and similar legal and regulatory treatment. The traditional classes are equities, fixed income and cash or cash equivalents; real estate, commodities and alternatives are often added. Asset classes behave differently across the economic cycle, so combining them is the basis of diversification and asset allocation, which research suggests explains most of the variation in a diversified portfolio's returns over time. Each class contains sub-classes, such as large-cap and small-cap equity or government and corporate bonds. In India, the main classes for households are equity, debt, gold and real estate, and SEBI's mutual fund categories map broadly onto them. The common confusion is to treat a product as an asset class: a mutual fund, ETF or ULIP is a wrapper, and what matters is the asset class held inside it.",
+  "example": "Say a ₹20 lakh portfolio holds ₹10 lakh in equity funds, ₹6 lakh in debt funds, ₹2 lakh in gold ETFs and ₹2 lakh in a liquid fund. By asset class it is 50% equity, 30% debt, 10% gold and 10% cash equivalents, even though it holds four different products.",
+  "formula": "",
+  "related": [
+   "Asset allocation",
+   "Diversification",
+   "Equity",
+   "Fixed income",
+   "Alternative investments",
+   "Correlation"
+  ]
+ },
+ {
+  "id": "benchmark",
+  "term": "Benchmark",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "benchmark index",
+   "fund benchmark"
+  ],
+  "hl": [
+   "fund benchmark",
+   "fund benchmarks",
+   "beat the benchmark",
+   "beat its benchmark",
+   "beat their benchmarks",
+   "outperformed its benchmark",
+   "underperformed its benchmark",
+   "benchmark-beating"
+  ],
+  "abbr": [],
+  "short": "A standard, usually a market index, against which an investment's or fund manager's performance is measured.",
+  "kid": "To know if you ran fast, you race alongside your friend. Your friend is the measuring stick you compare yourself with.",
+  "detail": "A benchmark is the yardstick used to judge a portfolio's return and risk. For an equity fund it is usually an index matching its style, such as the Nifty 50 for a large-cap fund or a small-cap index for a small-cap fund; for a debt fund, a bond index of similar duration and credit quality. A good benchmark is investable, chosen in advance and representative of what the manager can buy. The gap between portfolio and benchmark returns is the active return, and the volatility of that gap is tracking error. SEBI requires Indian mutual funds to show returns against the total return version of their benchmark, which includes dividends, and has standardised benchmarks by category. The common confusion is to use the wrong yardstick: a small-cap fund beating the Sensex in a small-cap rally says little about skill. News also uses benchmark loosely for key rates and headline indices.",
+  "example": "Say a large-cap fund returns 14% in a year in which its benchmark index returns 12%. Its active return is 14% - 12% = 2 percentage points, and because fund returns are reported after expenses, that edge is what investors actually received over the index.",
+  "formula": "Active return = Portfolio return - Benchmark return",
+  "related": [
+   "Stock market index",
+   "Total return index",
+   "Tracking error",
+   "Alpha",
+   "Active management",
+   "Index fund"
+  ]
+ },
+ {
+  "id": "real-return",
+  "term": "Real return",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "inflation-adjusted return"
+  ],
+  "hl": [
+   "real return",
+   "real returns",
+   "inflation-adjusted return",
+   "inflation-adjusted returns"
+  ],
+  "abbr": [],
+  "short": "The return on an investment after removing the effect of inflation, showing how much your buying power has really grown.",
+  "kid": "Your piggy bank grew from ten coins to eleven, but toys now cost more too. What matters is how many more toys you can buy, not just how many more coins you have.",
+  "detail": "Real return is the return earned after adjusting for inflation, while nominal return is the headline figure in money terms. The exact link is the Fisher relation: (1 + nominal) = (1 + real) x (1 + inflation). For small rates, real return is roughly nominal return minus inflation, but the shortcut gets worse as rates rise. Real returns decide whether savings actually build wealth, which is why long-term planners and economists compare asset classes in real terms. In India, a fixed deposit earning, say, 7% before tax when consumer inflation is 6% delivers a real return of under 1%, and after tax it can turn negative. The common confusion is to ignore tax: the real after-tax return is what an investor finally keeps, and a positive nominal return can still mean a loss of purchasing power.",
+  "example": "Say a debt fund returns 9% in a year when inflation is 5%. The exact real return is 1.09 / 1.05 - 1 = 3.81%, slightly less than the 4% given by simple subtraction.",
+  "formula": "Real return = (1 + Nominal return) / (1 + Inflation rate) - 1",
+  "related": [
+   "Nominal return",
+   "Inflation",
+   "Fisher equation",
+   "Inflation risk",
+   "Real interest rate"
+  ]
+ },
+ {
+  "id": "inflation-hedge",
+  "term": "Inflation hedge",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "hedge against inflation"
+  ],
+  "hl": [
+   "inflation hedge",
+   "inflation hedges",
+   "hedge against inflation",
+   "hedges against inflation"
+  ],
+  "abbr": [],
+  "short": "An investment expected to keep or grow its value when prices rise, protecting what your money can buy.",
+  "kid": "If sweets keep costing more, saving real sweets in a jar can be smarter than saving coins. The sweets in the jar still fill your tummy, whatever the price.",
+  "detail": "An inflation hedge is an asset whose value or income tends to rise with the general price level, so it preserves purchasing power. Common candidates are inflation-indexed bonds, whose principal or coupons are linked to a price index; real estate and infrastructure, where rents and tolls can be reset; commodities, which are themselves part of the price index; gold; and shares of companies with pricing power. Their reliability varies with the time frame. Inflation-indexed bonds hedge most directly, though their prices still move with real interest rates. Gold has protected Indian households over long periods, helped by the rupee's long-run weakening against the dollar, but it can lag for years at a time. Equities tend to keep up with inflation over decades yet often fall when inflation surges unexpectedly. The common confusion is to treat any asset that rose in one inflationary episode as a dependable hedge.",
+  "example": "Say inflation runs at 6% a year for 10 years, so a basket costing ₹1 lakh rises to about ₹1.79 lakh. Cash earning nothing then buys only about 56% of that basket, while ₹1 lakh in an asset growing 8% a year would reach about ₹2.16 lakh, more than keeping pace.",
+  "formula": "",
+  "related": [
+   "Inflation",
+   "Inflation-indexed bond",
+   "Real return",
+   "Gold",
+   "Inflation risk",
+   "Real assets"
+  ]
+ },
+ {
+  "id": "risk-return-trade-off",
+  "term": "Risk-return trade-off",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "risk-reward trade-off"
+  ],
+  "hl": [
+   "risk-return trade-off",
+   "risk-return tradeoff",
+   "risk-return trade-offs",
+   "risk-reward trade-off",
+   "risk-reward tradeoff"
+  ],
+  "abbr": [],
+  "short": "The principle that investments offering higher expected returns usually come with a greater chance of losses or bigger swings in value.",
+  "kid": "Climbing the tall tree lets you pick more apples, but you might fall. Staying on the low branches is safer, but you pick fewer.",
+  "detail": "The risk-return trade-off says that, in reasonably efficient markets, investors demand higher expected returns for accepting more risk. Treasury bills and bank deposits sit at the low end, high-quality bonds above them, then large-company shares, small-company shares, and venture capital and other high-risk assets at the top. The key word is expected: taking more risk raises the average outcome investors hope for, but also widens the range of results, so it can mean bigger losses. Modern portfolio theory formalises the idea and shows that diversification can improve the trade-off by cutting risk that earns no reward, while the capital asset pricing model says only market-wide risk is compensated. The common confusion is to think risk guarantees reward: a concentrated bet on one small company carries high risk without a matching expected return, and any product promising high returns with low risk deserves suspicion.",
+  "example": "Say a bank deposit offers a sure 7%, while an equity fund has an expected return of 12% with a typical range of -8% to +32% in any one year. The extra 5 percentage points of expected return is the payment for accepting that much wider range of outcomes.",
+  "formula": "",
+  "related": [
+   "Equity risk premium",
+   "Modern portfolio theory",
+   "Sharpe ratio",
+   "Capital asset pricing model",
+   "Efficient frontier",
+   "Diversification"
+  ]
+ },
+ {
+  "id": "market-timing",
+  "term": "Market timing",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "timing the market",
+   "time the market"
+  ],
+  "hl": [
+   "market timing",
+   "timing the market",
+   "time the market"
+  ],
+  "abbr": [],
+  "short": "Trying to move money in and out of markets based on predictions of when prices will rise or fall.",
+  "kid": "Trying to jump into the pool only when the water is perfectly warm is hard, because you cannot tell when it will change. Often it is easier to just stay in.",
+  "detail": "Market timing is the strategy of shifting between asset classes, or between investments and cash, based on forecasts drawn from economic signals, valuations or price trends. To succeed, a timer must be right twice: when to get out and when to get back in. Much of the stock market's long-run gain comes from a small number of very strong days, and these often fall close to the worst days, in volatile periods when fearful investors are out. Missing a handful can sharply cut long-run returns, hence the saying that time in the market beats timing the market. Investor flow data also show many people buying after rallies and selling after falls. Valuation-linked equity levels in Indian balanced advantage funds are a mild, rules-based form of timing. The common confusion is to mix up rebalancing with timing: rebalancing follows fixed rules, not forecasts.",
+  "example": "Say an investor puts ₹1 lakh in an index fund that returns 10% a year for 20 years, reaching about ₹6.73 lakh. If being out of the market on a few of the best days cuts the annual return to 7%, the same ₹1 lakh grows to only about ₹3.87 lakh, more than ₹2.8 lakh less.",
+  "formula": "",
+  "related": [
+   "Buy and hold",
+   "Rebalancing",
+   "Systematic investment plan",
+   "Tactical asset allocation",
+   "Behavioural finance"
+  ]
+ },
+ {
+  "id": "buy-and-hold",
+  "term": "Buy and hold",
+  "cat": "portfolio",
+  "level": "b",
+  "aliases": [
+   "buy-and-hold investing",
+   "long-term investing"
+  ],
+  "hl": [
+   "buy-and-hold",
+   "buy-and-hold investing",
+   "buy-and-hold strategy",
+   "buy-and-hold investors",
+   "buy and hold strategy"
+  ],
+  "abbr": [],
+  "short": "Buying good investments and keeping them for many years, ignoring short-term price swings rather than trading in and out.",
+  "kid": "You plant a mango tree and look after it for years instead of digging it up every week to check the roots. Over time it grows big and gives lots of mangoes.",
+  "detail": "Buy and hold is a long-term strategy: the investor buys a diversified portfolio or carefully chosen shares and keeps them through market ups and downs, selling only when goals or the underlying business change. It rests on three ideas: markets have tended to rise over long periods, short-term moves are hard to predict, and frequent trading adds costs and taxes that drag on returns. In India, long-term capital gains on listed equity are taxed at a lower rate than short-term gains under the rules as of 2025, which further rewards patience. Warren Buffett's remark that his favourite holding period is forever captures the mindset. The common confusion is to treat buy and hold as buy and forget: portfolios still need periodic review and rebalancing, and clinging to a stock whose business has permanently deteriorated is neglect, not discipline.",
+  "example": "Say you put ₹2 lakh in an index fund and hold it for 15 years at 11% a year, ending with about ₹9.57 lakh. A trader who earns the same 11% before costs but loses 1.5 percentage points a year to brokerage, spreads and short-term taxes nets 9.5% and ends with about ₹7.80 lakh.",
+  "formula": "",
+  "related": [
+   "Market timing",
+   "Passive investing",
+   "Index fund",
+   "Coffee can investing",
+   "Long-term capital gains",
+   "Compounding"
+  ]
+ },
+ {
+  "id": "coffee-can-investing",
+  "term": "Coffee can investing",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "coffee can portfolio"
+  ],
+  "hl": [
+   "coffee can investing",
+   "coffee can portfolio",
+   "coffee can portfolios",
+   "coffee can approach"
+  ],
+  "abbr": [],
+  "short": "Buying a handful of high-quality companies and leaving them untouched for about ten years, as if locked away in a can.",
+  "kid": "Long ago, people hid their treasures in a tin under the bed and did not touch it for years. This idea is about choosing a few good things and then patiently leaving them alone.",
+  "detail": "The coffee can idea was described by US fund manager Robert Kirby in a 1984 article, named after the old American habit of hiding valuables in a coffee can. Kirby found that a client's late husband, who had bought each recommended stock and never sold, had beaten the managed account thanks to a few huge winners. In India it was popularised by Saurabh Mukherjea and co-authors in the 2018 book Coffee Can Investing, which screens for companies with high return on capital employed and steady revenue growth every year for a decade, then holds them for about ten years. The appeal is low turnover, low cost and letting strong businesses compound. The common confusion is to think any portfolio left alone is a coffee can: the method depends on strict quality filters at the start and accepts that some holdings will fail while a few big winners carry the result.",
+  "example": "Say you put ₹1 lakh into each of 10 stocks, ₹10 lakh in all, and do not touch them for 10 years. If four go to zero, four double and two rise tenfold, you end with ₹8 lakh + ₹20 lakh = ₹28 lakh, 2.8 times your money, even though 40% of the picks failed.",
+  "formula": "",
+  "related": [
+   "Buy and hold",
+   "Quality investing",
+   "Return on capital employed",
+   "Compounding",
+   "Concentration risk"
+  ]
+ },
+ {
+  "id": "contrarian-investing",
+  "term": "Contrarian investing",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "contrarian",
+   "contra investing"
+  ],
+  "hl": [
+   "contrarian investing",
+   "contrarian investor",
+   "contrarian investors",
+   "contrarian bet",
+   "contrarian bets",
+   "contrarian strategy",
+   "contra fund",
+   "contra funds"
+  ],
+  "abbr": [],
+  "short": "Deliberately going against the crowd: buying what most investors are selling or ignoring, and selling what they are excited about.",
+  "kid": "When every child rushes to the swings, the slide is empty and easy to use. A contrarian heads for the slide when everyone else wants the swings.",
+  "detail": "Contrarian investing rests on the idea that crowds overreact: excessive pessimism pushes some assets below fair value and excessive optimism pushes others above it. A contrarian seeks unloved sectors, beaten-down stocks or assets investors are fleeing, and is wary of popular, richly valued themes. Research such as De Bondt and Thaler's 1985 study found that past long-term losers tended to outperform past winners over the following years. Warren Buffett's advice to be fearful when others are greedy and greedy when others are fearful captures the spirit. In India, contra funds are a distinct mutual fund category under SEBI's scheme categorisation rules. The common confusion is to think being different is enough: a stock can be cheap because its business is broken, so contrarians need evidence the crowd is wrong and patience to look wrong for a while.",
+  "example": "Say a sector panic takes a quality stock from ₹500 to ₹300, a 40% fall, although its earnings drop only 10%. If the market later values it at its old price-to-earnings multiple on the lower earnings, the price recovers to ₹450, a 50% gain for a contrarian who bought at ₹300.",
+  "formula": "",
+  "related": [
+   "Value investing",
+   "Behavioural finance",
+   "Herd behaviour",
+   "Momentum investing",
+   "Market sentiment",
+   "Margin of safety"
+  ]
+ },
+ {
+  "id": "position-sizing",
+  "term": "Position sizing",
+  "cat": "portfolio",
+  "level": "i",
+  "aliases": [
+   "position size",
+   "sizing"
+  ],
+  "hl": [
+   "position sizing",
+   "position size",
+   "position sizes"
+  ],
+  "abbr": [],
+  "short": "Deciding how much money to put into each single investment or trade, so that no one loss can do serious damage.",
+  "kid": "In a game of marbles, you only play a few marbles each round. That way, losing one round never means losing your whole bag.",
+  "detail": "Position sizing sets how large each holding or trade should be relative to total capital. A long-term investor might cap any single stock at, say, 5% of the portfolio and any sector at 25%. Traders often use fixed-fractional sizing: decide the maximum loss per trade, such as 1% of capital, then divide by the distance to the stop-loss to find the number of shares. Volatility-based sizing gives smaller positions to more volatile assets, and the Kelly criterion offers a mathematical upper bound when the edge can be estimated. Good sizing matters as much as good selection: a correct idea in a tiny position barely helps, while a wrong idea in a huge position can be ruinous. The common confusion is to size by conviction alone; the right size also depends on the asset's volatility, its liquidity and how it moves with the rest of the portfolio.",
+  "example": "Say a trader has ₹10 lakh and will risk at most 1%, or ₹10,000, on one trade. Buying a stock at ₹500 with a stop-loss at ₹475 risks ₹25 per share, so the position is ₹10,000 / ₹25 = 400 shares, worth ₹2 lakh.",
+  "formula": "Number of shares = (Capital x Risk per trade %) / (Entry price - Stop-loss price)",
+  "related": [
+   "Kelly criterion",
+   "Stop-loss",
+   "Concentration risk",
+   "Risk management",
+   "Diversification",
+   "Volatility"
+  ]
+ },
+ {
+  "id": "roys-safety-first-ratio",
+  "term": "Roy's safety-first ratio",
+  "cat": "portfolio",
+  "level": "a",
+  "aliases": [
+   "safety-first ratio",
+   "Roy's safety-first criterion",
+   "SFRatio"
+  ],
+  "hl": [
+   "safety-first ratio",
+   "safety first ratio",
+   "roy's safety-first",
+   "safety-first criterion"
+  ],
+  "abbr": [],
+  "short": "A measure that ranks portfolios by how unlikely they are to fall below a minimum acceptable return; the higher the ratio, the better.",
+  "kid": "You need at least five apples to bake a pie. You pick the basket that is least likely to give you fewer than five.",
+  "detail": "Roy's safety-first criterion, proposed by economist A. D. Roy in 1952, says an investor should choose the portfolio that minimises the probability of returns falling below a threshold, such as the return needed to cover spending. The ratio measures how many standard deviations the expected return lies above that threshold. If returns are roughly normal, a higher ratio means a lower chance of shortfall, and that probability can be read from the normal distribution. The Sharpe ratio is a special case in which the threshold is the risk-free rate. It suits goal-based investors, such as a retiree who cannot afford a year below 4%; shortfall risk is the broader term for missing such a target. The common confusion is to rely on the ratio blindly when returns have fat tails; if extreme losses are more common than the normal curve assumes, the true shortfall probability is higher.",
+  "example": "Say you need at least 4% a year. Portfolio A expects 10% with a standard deviation of 15%, giving (10 - 4) / 15 = 0.40; Portfolio B expects 8% with a standard deviation of 8%, giving (8 - 4) / 8 = 0.50. B is preferred: under a normal distribution its chance of returning below 4% is about 31%, against about 34% for A.",
+  "formula": "SFRatio = (Expected portfolio return - Threshold return) / Standard deviation of portfolio return",
+  "related": [
+   "Sharpe ratio",
+   "Standard deviation",
+   "Downside risk",
+   "Value at risk",
+   "Normal distribution"
+  ]
+ },
+ {
+  "id": "indifference-curve",
+  "term": "Indifference curve",
+  "cat": "portfolio",
+  "level": "a",
+  "aliases": [
+   "indifference curves",
+   "investor indifference curve"
+  ],
+  "hl": [
+   "indifference curve",
+   "indifference curves"
+  ],
+  "abbr": [],
+  "short": "A curve joining all the mixes of risk and expected return that would make a particular investor equally happy.",
+  "kid": "Would you rather have two sweets for sure, or flip a coin and maybe win four? If you like both choices the same, they sit on the same happy line.",
+  "detail": "In portfolio theory, an indifference curve plots combinations of expected return and risk, usually standard deviation, that give an investor the same utility, or satisfaction. Each curve comes from the investor's utility function, commonly U = E(r) - 0.5 x A x variance, where A measures risk aversion. For a risk-averse investor the curves slope upward, since extra risk must be paid for with extra return, and they are steeper for more risk-averse investors. Higher curves mean greater satisfaction. The investor's optimal portfolio is the point where the highest reachable indifference curve just touches the efficient frontier or the capital allocation line, which is why two investors facing the same choices can rationally pick different portfolios. The common confusion is to think the curves describe what markets offer; they describe an investor's preferences, while the efficient frontier describes what is available.",
+  "example": "Take an investor with risk aversion A = 4. A portfolio with 10% expected return and 20% standard deviation gives U = 0.10 - 0.5 x 4 x 0.04 = 0.02, while one with 6% expected return and 10% standard deviation gives U = 0.06 - 0.5 x 4 x 0.01 = 0.04. This investor prefers the safer portfolio, which sits on a higher indifference curve.",
+  "formula": "U = E(r) - 0.5 x A x σ^2, where A = coefficient of risk aversion and σ^2 = variance of returns",
+  "related": [
+   "Efficient frontier",
+   "Modern portfolio theory",
+   "Risk aversion",
+   "Capital allocation line",
+   "Utility"
+  ]
+ }
+]

@@ -1,0 +1,811 @@
+[
+  {
+    "id": "fiscal-policy",
+    "term": "Fiscal policy",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "fiscal policies"
+    ],
+    "hl": [
+      "fiscal policy",
+      "fiscal policies",
+      "fiscal stance"
+    ],
+    "abbr": [],
+    "short": "The government's use of its spending, taxes and borrowing to influence the economy's growth, jobs and inflation.",
+    "kid": "A family decides how much to spend on food and toys and how much to save. The people who run a country make the same kind of choice for everyone.",
+    "detail": "Fiscal policy is how a government uses its budget, meaning public spending, taxation and the borrowing that fills any gap, to shape economic activity. Raising spending or cutting taxes adds demand and usually widens the deficit; doing the opposite cools demand and narrows it. It works alongside monetary policy, which the central bank runs through interest rates and liquidity. In India, the Centre sets fiscal policy mainly through the Union Budget, usually presented each February, while each state runs its own budget. Markets watch it closely: bigger deficits mean more government bond supply, which can push up yields, and spending choices shift earnings for sectors such as infrastructure, defence and consumer goods. A common confusion is to credit the RBI with fiscal decisions; taxes and spending are set by governments and legislatures, not by the central bank.",
+    "example": "Suppose a hypothetical government plans to spend ₹50 lakh crore and expects ₹40 lakh crore from taxes and other non-debt receipts, so it must borrow ₹10 lakh crore. If it adds ₹2 lakh crore of road spending without raising receipts, its borrowing need rises to ₹12 lakh crore.",
+    "formula": "",
+    "related": [
+      "Monetary policy",
+      "Fiscal deficit",
+      "Union Budget",
+      "Expansionary fiscal policy",
+      "Contractionary fiscal policy",
+      "Fiscal multiplier"
+    ]
+  },
+  {
+    "id": "fiscal-deficit",
+    "term": "Fiscal deficit",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "budget deficit",
+      "fiscal gap",
+      "GFD",
+      "gross fiscal deficit"
+    ],
+    "hl": [
+      "fiscal deficit",
+      "fiscal deficits",
+      "budget deficit",
+      "budget deficits",
+      "gross fiscal deficit",
+      "fiscal deficit target",
+      "fiscal deficit targets"
+    ],
+    "abbr": [
+      "GFD"
+    ],
+    "short": "The amount by which a government's total spending exceeds its income other than borrowing, so it equals what the government must borrow that year.",
+    "kid": "If the toys you want cost more than the coins in your piggy bank, you have to borrow the rest from a friend. That missing amount is the gap.",
+    "detail": "The fiscal deficit is total government expenditure minus total receipts excluding borrowing. In India's budget, those receipts are revenue receipts (taxes and non-tax income) plus non-debt capital receipts such as loan recoveries and disinvestment proceeds. It is usually quoted as a percentage of GDP so it can be compared across years and countries. It is the headline number of any budget because it shows how much new debt the government will take on, which drives bond supply and yields, influences inflation and shapes credit-rating views. As of the Union Budget 2025-26, the Centre targeted a fiscal deficit of 4.4% of GDP for that year, down from about 9.2% in the pandemic year 2020-21. Do not confuse it with the revenue deficit, which covers only day-to-day spending, or with public debt, which is the accumulated stock rather than one year's gap.",
+    "example": "Say a hypothetical government's total expenditure is ₹50 lakh crore, its revenue receipts are ₹34 lakh crore and its non-debt capital receipts are ₹1 lakh crore. Its fiscal deficit is 50 - (34 + 1) = ₹15 lakh crore. If GDP is ₹350 lakh crore, that is about 4.3% of GDP.",
+    "formula": "Fiscal deficit = Total expenditure - (Revenue receipts + Non-debt capital receipts)",
+    "related": [
+      "Revenue deficit",
+      "Primary deficit",
+      "Public debt",
+      "Fiscal Responsibility and Budget Management Act",
+      "Market borrowing",
+      "Union Budget"
+    ]
+  },
+  {
+    "id": "revenue-deficit",
+    "term": "Revenue deficit",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "revenue deficit",
+      "revenue deficits"
+    ],
+    "abbr": [],
+    "short": "The amount by which a government's day-to-day spending, like salaries, interest and subsidies, exceeds its regular income from taxes and fees.",
+    "kid": "If your pocket money is not enough to pay for your everyday snacks, you have to borrow just to eat. That is a worrying kind of borrowing.",
+    "detail": "The revenue deficit is revenue expenditure minus revenue receipts. Revenue expenditure covers spending that creates no asset for the government, such as salaries, pensions, interest, subsidies and grants; revenue receipts are tax and non-tax income such as dividends and fees. A revenue deficit means the government is borrowing to fund current consumption rather than investment, which adds debt without adding assets that could generate future income or growth. That is why analysts and rating agencies treat it as a quality check on the fiscal deficit: two budgets with the same fiscal deficit are very different if one spends the borrowing on roads and the other on running costs. India's Centre has run a revenue deficit for decades. A common confusion is to read 'revenue' here as total income; it refers only to the revenue account, as opposed to the capital account.",
+    "example": "Say a hypothetical government's revenue receipts are ₹30 lakh crore and its revenue expenditure is ₹37 lakh crore. Its revenue deficit is 37 - 30 = ₹7 lakh crore, meaning ₹7 lakh crore of borrowing pays for day-to-day costs rather than for building assets.",
+    "formula": "Revenue deficit = Revenue expenditure - Revenue receipts",
+    "related": [
+      "Fiscal deficit",
+      "Effective revenue deficit",
+      "Revenue expenditure",
+      "Capital expenditure",
+      "Primary deficit"
+    ]
+  },
+  {
+    "id": "effective-revenue-deficit",
+    "term": "Effective revenue deficit",
+    "cat": "fiscal",
+    "level": "a",
+    "aliases": [
+      "ERD"
+    ],
+    "hl": [
+      "effective revenue deficit",
+      "effective revenue deficits"
+    ],
+    "abbr": [
+      "ERD"
+    ],
+    "short": "The revenue deficit after removing grants a government gives to others, such as states, for building roads, schools and other assets.",
+    "kid": "Suppose you borrow some coins, but part of them helps your friend build a lemonade stand. Only the coins you spent on snacks count as the worrying part.",
+    "detail": "Effective revenue deficit is an Indian fiscal measure introduced in the Union Budget 2011-12. It subtracts grants for the creation of capital assets from the revenue deficit. Such grants, for example central money given to states or local bodies to build rural roads or housing, are booked as revenue spending in the Centre's accounts because the Centre does not own the asset, yet they still add productive capacity to the economy. ERD therefore gives a truer picture of how much borrowing funds pure consumption. The FRBM Act was amended in 2012 to add an ERD target, and the 2018 amendment dropped it, leaving the fiscal deficit and debt as the main anchors. A common confusion is to treat ERD as the same as the revenue deficit; it is smaller whenever capital-asset grants are positive.",
+    "example": "Say a hypothetical government has a revenue deficit of ₹7 lakh crore, and ₹3 lakh crore of its revenue spending is grants to states for building capital assets. Its effective revenue deficit is 7 - 3 = ₹4 lakh crore.",
+    "formula": "Effective revenue deficit = Revenue deficit - Grants for creation of capital assets",
+    "related": [
+      "Revenue deficit",
+      "Fiscal deficit",
+      "Capital expenditure",
+      "Fiscal Responsibility and Budget Management Act",
+      "Primary deficit"
+    ]
+  },
+  {
+    "id": "primary-deficit",
+    "term": "Primary deficit",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "primary balance",
+      "primary surplus"
+    ],
+    "hl": [
+      "primary deficit",
+      "primary deficits",
+      "primary balance",
+      "primary surplus",
+      "primary surpluses"
+    ],
+    "abbr": [],
+    "short": "A government's fiscal deficit minus its interest payments, showing whether current policies, rather than old debt, are adding to borrowing.",
+    "kid": "Leave out the extra coins you pay back for old borrowing. What is left shows whether you are spending more today than you get today.",
+    "detail": "The primary deficit strips interest payments out of the fiscal deficit. Interest is the cost of past borrowing, so removing it isolates the effect of the current year's choices on taxes and spending. If the figure is negative, the government has a primary surplus: its non-interest spending is covered by its receipts, and it borrows only to pay some or all of its interest. The primary balance is central to debt sustainability: when interest rates exceed nominal GDP growth, a country usually needs primary surpluses to stop its debt-to-GDP ratio rising. India's Centre has typically run primary deficits, while countries under debt stress, such as Greece after 2010, were required to target primary surpluses. A common confusion is to read a primary surplus as an overall surplus; the government can still have a fiscal deficit once interest is added back.",
+    "example": "Say a hypothetical government has a fiscal deficit of ₹15 lakh crore and pays ₹11 lakh crore in interest. Its primary deficit is 15 - 11 = ₹4 lakh crore. If interest had been ₹16 lakh crore, it would have a primary surplus of ₹1 lakh crore.",
+    "formula": "Primary deficit = Fiscal deficit - Interest payments",
+    "related": [
+      "Fiscal deficit",
+      "Debt servicing",
+      "Debt sustainability",
+      "Debt-to-GDP ratio",
+      "Revenue deficit"
+    ]
+  },
+  {
+    "id": "budget-surplus",
+    "term": "Budget surplus",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "fiscal surplus",
+      "surplus budget"
+    ],
+    "hl": [
+      "budget surplus",
+      "budget surpluses",
+      "fiscal surplus",
+      "fiscal surpluses",
+      "surplus budget"
+    ],
+    "abbr": [],
+    "short": "When a government collects more in taxes and other income than it spends in a year, leaving money to repay debt or save.",
+    "kid": "If you get more pocket money than you spend on sweets, some coins are left in your piggy bank. Those leftover coins are a surplus.",
+    "detail": "A budget surplus is the opposite of a fiscal deficit: total receipts, excluding borrowing, exceed total expenditure. The government can use the surplus to repay debt, build up a reserve or sovereign wealth fund, or cut taxes later. Surpluses are rare among large economies; the United States last ran federal surpluses from 1998 to 2001, while oil-rich Norway regularly runs overall surpluses thanks to petroleum revenue. For markets, a surplus means less government bond supply and can push yields down. But running a surplus during a slump can deepen the downturn by draining demand from the economy. A common confusion is to treat a surplus as always good: whether it is wise depends on the state of the economy, on how much debt the government already carries and on whether needed investment is being postponed to achieve it.",
+    "example": "Say a hypothetical country collects $520 billion and spends $500 billion in a year. Its budget surplus is $520 billion - $500 billion = $20 billion, which it could use to repay maturing government bonds.",
+    "formula": "Budget surplus = Total receipts excluding borrowing - Total expenditure",
+    "related": [
+      "Fiscal deficit",
+      "Balanced budget",
+      "Public debt",
+      "Fiscal policy",
+      "Sovereign wealth fund"
+    ]
+  },
+  {
+    "id": "balanced-budget",
+    "term": "Balanced budget",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "balanced budget rule",
+      "balanced budget amendment"
+    ],
+    "hl": [
+      "balanced budget",
+      "balanced budgets",
+      "balanced-budget",
+      "balanced budget rule",
+      "balanced budget amendment"
+    ],
+    "abbr": [],
+    "short": "A budget in which a government's planned spending equals its income from taxes and other non-borrowed sources, so no new borrowing is needed.",
+    "kid": "If you spend exactly the coins you get, no more and no less, your piggy bank stays the same. Nothing borrowed and nothing left over.",
+    "detail": "A balanced budget means total expenditure equals total receipts excluding borrowing, so the deficit is zero. Some governments adopt it as a rule: most US states must balance their operating budgets each year, and a balanced budget amendment to the US Constitution has been proposed many times but never passed. Germany's debt brake is a looser version: under the rules as of 2025, it caps the federal structural deficit at 0.35% of GDP, with exemptions such as some defence spending. Supporters say such rules stop debt from piling up; critics say a strict annual rule forces cuts in recessions, when tax receipts fall, and so worsens downturns. Many economists therefore prefer balancing over the whole business cycle, which is what cyclically adjusted targets try to do. A common confusion is to assume a balanced budget means zero debt; old debt remains and still has to be serviced and refinanced.",
+    "example": "Say a hypothetical city council expects ₹1,200 crore of tax and fee income for the year. Under a balanced budget rule it may plan spending of at most ₹1,200 crore, so its deficit is ₹1,200 crore - ₹1,200 crore = zero.",
+    "formula": "Balanced budget: Total expenditure = Total receipts excluding borrowing",
+    "related": [
+      "Budget surplus",
+      "Fiscal deficit",
+      "Cyclically adjusted deficit",
+      "Counter-cyclical policy",
+      "Austerity"
+    ]
+  },
+  {
+    "id": "cyclically-adjusted-deficit",
+    "term": "Cyclically adjusted deficit",
+    "cat": "fiscal",
+    "level": "a",
+    "aliases": [
+      "structural deficit",
+      "cyclically adjusted budget balance",
+      "structural balance"
+    ],
+    "hl": [
+      "cyclically adjusted deficit",
+      "cyclically adjusted budget balance",
+      "cyclically adjusted balance",
+      "cyclically adjusted primary balance",
+      "structural deficit",
+      "structural deficits",
+      "structural balance"
+    ],
+    "abbr": [],
+    "short": "The budget deficit a government would run if the economy were at its normal, full-capacity level, removing the effect of booms and slumps.",
+    "kid": "In a rainy week, fewer people buy from the lemonade stand, so less money comes in. This asks how far short the stand would be in an ordinary sunny week.",
+    "detail": "The cyclically adjusted deficit removes the part of the budget balance caused by the business cycle. In a slump, tax receipts fall and spending on items such as unemployment benefits rises automatically, so the actual deficit widens even if policy is unchanged; in a boom the reverse happens. Analysts estimate the output gap, the difference between actual and potential GDP, and multiply it by how sensitive the budget is to activity to find the cyclical component. What remains shows the government's underlying policy stance. The IMF and the OECD rely heavily on it, and EU fiscal rules have long used it. 'Structural deficit' is often used interchangeably, though strictly it also strips out one-off items such as asset sales. The common confusion is to treat these estimates as precise: potential GDP cannot be observed, so different agencies can produce quite different numbers for the same year.",
+    "example": "Say a hypothetical country's actual deficit is 5% of GDP during a recession, and estimates show that weaker taxes and higher jobless benefits account for 2 percentage points of it. Its cyclically adjusted deficit is 5 - 2 = 3% of GDP, the gap that would remain even after the economy recovers.",
+    "formula": "Cyclically adjusted deficit = Actual deficit - Cyclical component of the deficit",
+    "related": [
+      "Fiscal deficit",
+      "Output gap",
+      "Automatic stabilisers",
+      "Potential GDP",
+      "Counter-cyclical policy"
+    ]
+  },
+  {
+    "id": "twin-deficits",
+    "term": "Twin deficits",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "twin deficit"
+    ],
+    "hl": [
+      "twin deficit",
+      "twin deficits"
+    ],
+    "abbr": [],
+    "short": "When a country runs a government budget deficit and a current account deficit with the rest of the world at the same time.",
+    "kid": "Imagine your family spends more than it earns at home, and also buys more from the neighbours than it sells to them. Those two gaps together are the twins.",
+    "detail": "Twin deficits describes a country with both a fiscal deficit and a current account deficit. The link comes from national accounting: the current account balance equals private saving minus private investment, plus the government's budget balance. If private saving and investment stay the same, a wider government deficit must be matched by more borrowing from abroad, so the current account deficit widens too. In practice the link is loose, because households and companies often change their own saving in response. Twin deficits worry investors because the country depends on foreign capital, leaving its currency and bond market exposed to sudden outflows. India's 1991 balance-of-payments crisis followed years of large twin deficits, and the term became popular for the United States in the 1980s. A common confusion is to equate the current account deficit with the trade deficit; the current account also includes services, income and remittances.",
+    "example": "Say a hypothetical country runs a fiscal deficit of 6% of GDP, while its private sector saves 4% of GDP more than it invests. Its current account balance is 4 + (-6) = -2% of GDP, a current account deficit of 2% of GDP.",
+    "formula": "Current account balance = (Private saving - Private investment) + (Government revenue - Government spending)",
+    "related": [
+      "Fiscal deficit",
+      "Current account deficit",
+      "Balance of payments",
+      "Trade deficit",
+      "Exchange rate"
+    ]
+  },
+  {
+    "id": "fiscal-consolidation",
+    "term": "Fiscal consolidation",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "fiscal glide path",
+      "glide path",
+      "deficit reduction"
+    ],
+    "hl": [
+      "fiscal consolidation",
+      "fiscal consolidation path",
+      "fiscal consolidation roadmap",
+      "fiscal glide path"
+    ],
+    "abbr": [],
+    "short": "A planned, step-by-step cut in a government's deficit and debt relative to the size of the economy, usually along a pre-announced path.",
+    "kid": "If you owe your friends lots of sweets, you promise to borrow a little less each week until everything is back on track.",
+    "detail": "Fiscal consolidation means reducing the fiscal deficit, and over time the debt-to-GDP ratio, through higher revenue, lower or better-targeted spending, or faster growth. Governments usually announce a glide path, a year-by-year schedule of deficit targets, to anchor expectations. In India, after the pandemic pushed the Centre's fiscal deficit to about 9.2% of GDP in 2020-21, the 2021 budget set a path to below 4.5% by 2025-26, and the 2025-26 budget targeted 4.4%. As of that budget, the Centre said that from 2026-27 it would aim to bring its debt down to about 50% of GDP by March 2031. Credible consolidation tends to lower bond yields and support sovereign ratings. A common confusion is to equate consolidation with spending cuts; a deficit ratio can also fall because nominal GDP grows faster than the deficit, and the quality of the adjustment, such as protecting capital spending, matters as much as its speed.",
+    "example": "Say a hypothetical government's deficit is ₹16 lakh crore on GDP of ₹320 lakh crore, or 5% of GDP. Next year the deficit edges up to ₹16.2 lakh crore, but GDP grows to ₹360 lakh crore, so the ratio falls to 16.2 / 360 = 4.5%, which still counts as consolidation.",
+    "formula": "",
+    "related": [
+      "Fiscal deficit",
+      "Fiscal Responsibility and Budget Management Act",
+      "Debt-to-GDP ratio",
+      "Austerity",
+      "Contractionary fiscal policy"
+    ]
+  },
+  {
+    "id": "fiscal-responsibility-and-budget-management-act",
+    "term": "Fiscal Responsibility and Budget Management Act",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "FRBM",
+      "FRBM Act"
+    ],
+    "hl": [
+      "frbm",
+      "frbm act",
+      "fiscal responsibility and budget management",
+      "frbm target",
+      "frbm targets"
+    ],
+    "abbr": [
+      "FRBM"
+    ],
+    "short": "India's 2003 law that sets limits and reporting rules for the central government's deficit and debt, to keep public finances disciplined.",
+    "kid": "It is like a family rule that says you cannot borrow too many sweets each week, and you must tell everyone how many you borrowed.",
+    "detail": "The Fiscal Responsibility and Budget Management Act, passed in 2003 and in force from July 2004, commits India's central government to fiscal discipline and transparency. It originally aimed for a fiscal deficit of 3% of GDP and the elimination of the revenue deficit. Targets have been reset several times; the 2018 amendment, based on the N.K. Singh committee's review, made debt the main anchor, with central government debt at 40% and general government debt at 60% of GDP by 2024-25, and the fiscal deficit the operating target. An escape clause allows a deviation of up to 0.5 percentage points of GDP in events such as war, national calamity or a sharp fall in growth. The Act also bars the RBI from buying government securities at primary auctions except in those circumstances. A common confusion is to treat FRBM targets as fixed; governments have repeatedly amended or deferred them.",
+    "example": "Say GDP is ₹300 lakh crore. A target of 3% of GDP caps the fiscal deficit at ₹9 lakh crore; invoking the full 0.5 percentage point escape clause lifts the cap to 3.5% of GDP, or ₹10.5 lakh crore.",
+    "formula": "",
+    "related": [
+      "Fiscal deficit",
+      "Fiscal consolidation",
+      "Revenue deficit",
+      "Public debt",
+      "Union Budget",
+      "Ways and Means Advances"
+    ]
+  },
+  {
+    "id": "public-debt",
+    "term": "Public debt",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "government debt",
+      "sovereign debt",
+      "national debt",
+      "general government debt"
+    ],
+    "hl": [
+      "public debt",
+      "government debt",
+      "sovereign debt",
+      "national debt",
+      "general government debt",
+      "sovereign debt crisis"
+    ],
+    "abbr": [],
+    "short": "The total amount a government owes to lenders at home and abroad, built up from all its past borrowing and not yet repaid.",
+    "kid": "Every time the people running the country borrow, they write it in a notebook. Everything written there and not yet paid back is the big total.",
+    "detail": "Public debt is the outstanding stock of a government's borrowing at a point in time. For India's Centre it includes dated government securities and treasury bills, external loans, and other liabilities such as small savings and provident fund balances. General government debt adds the states and nets out what governments owe each other. Debt is a stock built up from yearly deficits, which are flows: each year's fiscal deficit adds roughly that amount to the debt. Investors compare it with GDP rather than in absolute terms, and watch who holds it: debt held at home in local currency, as most of India's is, is far less risky than foreign-currency debt held abroad. As of 2025, IMF estimates put India's general government debt at roughly 80% of GDP. A common confusion is to equate public debt with a country's external debt, which also includes private companies' foreign borrowing.",
+    "example": "Say a hypothetical government starts the year owing ₹180 lakh crore and runs a fiscal deficit of ₹15 lakh crore. Ignoring smaller adjustments, it ends the year owing about 180 + 15 = ₹195 lakh crore.",
+    "formula": "Debt at end of year ≈ Debt at start of year + Fiscal deficit for the year",
+    "related": [
+      "Debt-to-GDP ratio",
+      "Fiscal deficit",
+      "Government securities",
+      "Debt sustainability",
+      "Debt servicing",
+      "External debt"
+    ]
+  },
+  {
+    "id": "debt-to-gdp-ratio",
+    "term": "Debt-to-GDP ratio",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "debt to GDP",
+      "public debt to GDP",
+      "debt-GDP ratio"
+    ],
+    "hl": [
+      "debt-to-gdp",
+      "debt to gdp",
+      "debt-to-gdp ratio",
+      "debt to gdp ratio",
+      "debt-gdp ratio",
+      "public debt to gdp"
+    ],
+    "abbr": [],
+    "short": "A government's total debt divided by the country's yearly economic output, showing how heavy the debt is relative to the economy.",
+    "kid": "Owing ten sweets is easy if you get a hundred every week, but hard if you get only five. This compares what you owe with what you get.",
+    "detail": "The debt-to-GDP ratio divides government debt at a point in time by nominal GDP for the year. Because GDP is roughly the tax base, the ratio gauges a country's ability to carry its debt, and it is the yardstick rating agencies, the IMF and bond investors use most. Primary deficits and interest costs push it up, while nominal GDP growth pulls it down. That is why inflation can shrink the ratio even when debt rises in rupees. There is no universal safe level: Japan's ratio has stayed above 200% for years with low yields because most of its debt is held at home, while some emerging markets have hit crises at far lower levels. As of the 2025-26 budget, India's Centre aims to bring its own debt to about 50% of GDP by March 2031. Always check whether a figure covers central or general government debt.",
+    "example": "If a hypothetical government owes ₹195 lakh crore and nominal GDP is ₹325 lakh crore, its debt-to-GDP ratio is 195 / 325 = 60%.",
+    "formula": "Debt-to-GDP ratio = Government debt / Nominal GDP x 100",
+    "related": [
+      "Public debt",
+      "Gross domestic product",
+      "Debt sustainability",
+      "Fiscal deficit",
+      "Sovereign credit rating"
+    ]
+  },
+  {
+    "id": "debt-sustainability",
+    "term": "Debt sustainability",
+    "cat": "fiscal",
+    "level": "a",
+    "aliases": [
+      "debt sustainability analysis",
+      "sustainable debt"
+    ],
+    "hl": [
+      "debt sustainability",
+      "debt sustainability analysis",
+      "debt sustainability framework"
+    ],
+    "abbr": [],
+    "short": "Whether a government can keep paying its debts without default, painful cuts or runaway inflation, given its likely growth, interest costs and budgets.",
+    "kid": "If you can always pay your friends back from your weekly pocket money without going hungry, your borrowing is safe to keep.",
+    "detail": "Debt is sustainable when a government can service it indefinitely without an unrealistic budget squeeze, default or high inflation. Analysts focus on the debt-to-GDP ratio and its dynamics, summarised by 'r minus g': r is the average nominal interest rate on the debt and g is nominal GDP growth. When r is below g, the ratio tends to fall on its own unless primary deficits are large; when r exceeds g, the government needs primary surpluses just to hold the ratio steady. The IMF and World Bank run formal debt sustainability analyses that stress-test these paths for shocks to growth, rates and the currency, and they feed into bailout decisions and credit ratings. A common confusion is to judge sustainability by the debt level alone; the interest rate, growth, maturity, currency and holders of the debt matter just as much.",
+    "example": "Say a hypothetical government's debt is 80% of GDP, it pays an average 7% interest and nominal GDP grows 10%. Then (r - g) x debt = (7% - 10%) x 80% = -2.4 percentage points, so, using this simple approximation, it can run a primary deficit of up to about 2.4% of GDP and still keep its debt ratio roughly stable.",
+    "formula": "Change in debt-to-GDP ≈ (r - g) x Debt-to-GDP - Primary surplus as % of GDP (r = average interest rate on debt, g = nominal GDP growth)",
+    "related": [
+      "Debt-to-GDP ratio",
+      "Primary deficit",
+      "Public debt",
+      "Debt servicing",
+      "Fiscal space",
+      "Sovereign default"
+    ]
+  },
+  {
+    "id": "debt-servicing",
+    "term": "Debt servicing",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "debt service",
+      "interest payments",
+      "interest burden"
+    ],
+    "hl": [
+      "debt servicing",
+      "debt-servicing",
+      "debt service burden",
+      "debt service costs",
+      "debt servicing costs",
+      "interest burden",
+      "interest outgo"
+    ],
+    "abbr": [],
+    "short": "The money a borrower, such as a government, must pay each period on its debt: interest plus any principal falling due.",
+    "kid": "When you borrow sweets, you give some back each week, plus one extra as a thank-you. Those weekly give-backs are the servicing.",
+    "detail": "Debt servicing is the cash needed to keep debt current: interest payments plus repayments of principal as loans and bonds mature. Governments usually refinance maturing principal by issuing new bonds, so the main fiscal pressure is interest, a committed cost that cannot be cut without default. In the Union Budget 2025-26, interest was budgeted at roughly a quarter of the Centre's total expenditure. Analysts track the ratio of interest to revenue receipts: the higher it is, the less room is left for schools, roads or tax cuts, and rating agencies treat a high ratio as a key weakness. Rising bond yields raise future debt-service costs as old debt is refinanced at higher rates. A common confusion is to equate debt service with interest alone; for countries with heavy foreign-currency debt, principal repayments can trigger a crisis if lenders refuse to roll them over.",
+    "example": "Say a hypothetical government owes ₹100 lakh crore at an average interest rate of 7.2%, so its yearly interest is ₹7.2 lakh crore. If ₹5 lakh crore of its bonds also mature that year, its total debt service is 7.2 + 5 = ₹12.2 lakh crore, most of which it refinances by issuing new bonds.",
+    "formula": "Debt service = Interest payments + Principal repayments",
+    "related": [
+      "Public debt",
+      "Primary deficit",
+      "Debt sustainability",
+      "Market borrowing",
+      "Debt service coverage ratio"
+    ]
+  },
+  {
+    "id": "market-borrowing",
+    "term": "Market borrowing",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "gross market borrowing",
+      "net market borrowing",
+      "government borrowing",
+      "GMB"
+    ],
+    "hl": [
+      "market borrowing",
+      "market borrowings",
+      "gross market borrowing",
+      "net market borrowing",
+      "government borrowing",
+      "government borrowings"
+    ],
+    "abbr": [],
+    "short": "Money a government raises by selling bonds and bills to investors in the financial market to fund its deficit and repay old debt.",
+    "kid": "When the people running the country need more coins, they ask lots of people to lend some, and give each lender a paper promise to pay back.",
+    "detail": "Market borrowing is the part of government borrowing raised by issuing tradable securities to investors such as banks, insurers, mutual funds and foreign funds. In India, the Centre borrows mainly through dated government securities auctioned by the RBI as its debt manager, plus short-term treasury bills; states borrow through state development loans. Gross market borrowing is the total issued in a year; net market borrowing subtracts repayments of maturing securities. The planned amount is announced in the budget and is the biggest source of financing for the fiscal deficit, alongside small savings and other sources. Bond traders watch it closely, because a larger-than-expected programme means more supply and usually higher yields, while a smaller one can spark a rally. A common confusion is to equate gross borrowing with the deficit; much of the gross figure simply refinances old debt.",
+    "example": "Say a hypothetical government plans gross market borrowing of ₹15 lakh crore while ₹4 lakh crore of its older bonds mature during the year. Its net market borrowing is 15 - 4 = ₹11 lakh crore, the fresh debt it adds through the market.",
+    "formula": "Net market borrowing = Gross market borrowing - Repayments of maturing securities",
+    "related": [
+      "Government securities",
+      "Government borrowing calendar",
+      "Fiscal deficit",
+      "State development loan",
+      "Treasury bills",
+      "Crowding out"
+    ]
+  },
+  {
+    "id": "government-borrowing-calendar",
+    "term": "Government borrowing calendar",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "borrowing calendar",
+      "borrowing programme",
+      "issuance calendar"
+    ],
+    "hl": [
+      "borrowing calendar",
+      "borrowing calendars",
+      "government borrowing calendar",
+      "issuance calendar",
+      "borrowing programme",
+      "borrowing program"
+    ],
+    "abbr": [],
+    "short": "A published schedule showing when a government will sell its bonds, how much at each auction and in which maturities, over a coming period.",
+    "kid": "It is like a chart on the fridge showing which days you will ask friends to lend you coins, and how many, so nobody is surprised.",
+    "detail": "A government borrowing calendar sets out the planned dates, amounts and maturities of upcoming bond auctions. In India, the Centre, in consultation with the RBI, releases the calendar for dated securities in two halves: the April-September schedule around end-March and the October-March schedule around end-September. Each usually lists weekly auction amounts split across maturities such as 5, 10, 30 or 40 years. Treasury bill and state development loan calendars are issued separately, generally each quarter. The calendar matters because it tells investors how much supply is coming and at which part of the yield curve, so a heavier long-end or front-loaded schedule can lift long-term yields. Pension funds and insurers use it to plan their buying. A common confusion is to treat the calendar as fixed; the government can add, cut or reshuffle auctions as its cash needs change, and such changes often move the bond market.",
+    "example": "Say a hypothetical half-year calendar plans ₹7.5 lakh crore of bond sales over 25 weekly auctions. That averages ₹7,50,000 crore / 25 = ₹30,000 crore per auction, so traders know roughly how much supply to expect each week.",
+    "formula": "",
+    "related": [
+      "Market borrowing",
+      "Government securities",
+      "Treasury bills",
+      "State development loan",
+      "Yield curve"
+    ]
+  },
+  {
+    "id": "ways-and-means-advances",
+    "term": "Ways and Means Advances",
+    "cat": "fiscal",
+    "level": "a",
+    "aliases": [
+      "WMA",
+      "ways and means"
+    ],
+    "hl": [
+      "ways and means advances",
+      "ways and means advance",
+      "ways and means limit",
+      "wma limit",
+      "wma limits"
+    ],
+    "abbr": [],
+    "short": "Short-term loans from India's central bank to the central and state governments to cover brief gaps between receiving money and paying bills.",
+    "kid": "Your pocket money comes on Sunday, but the ice-cream van comes on Friday. A kind grown-up lends you a little until Sunday, and you give it straight back.",
+    "detail": "Ways and Means Advances are a temporary, overdraft-like facility that the RBI, as banker to the government, extends to the Centre and the states to smooth mismatches between receipts and payments. They replaced the ad hoc treasury bills that had automatically monetised the Centre's deficits, with the WMA scheme starting in April 1997. The RBI fixes a WMA limit for the Centre for each half-year in consultation with it, and sets separate limits for states. Under the rules as of 2025, WMA is charged at the repo rate, and drawing beyond the limit becomes an overdraft at a higher rate. Heavy or prolonged use signals cash stress, and the funds add liquidity to the banking system when spent. A common confusion is to see WMA as deficit financing; it must be repaid within a short period and is not meant to fund the deficit permanently.",
+    "example": "Say a hypothetical government must pay ₹40,000 crore of salaries on the 1st but expects tax inflows on the 15th. If it draws ₹40,000 crore as WMA for 14 days at an assumed 6% rate, the interest is ₹40,000 crore x 6% x 14/365, or about ₹92 crore.",
+    "formula": "",
+    "related": [
+      "Reserve Bank of India",
+      "Deficit financing",
+      "Repo rate",
+      "Treasury bills",
+      "Liquidity adjustment facility"
+    ]
+  },
+  {
+    "id": "deficit-financing",
+    "term": "Deficit financing",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "monetisation of deficit",
+      "debt monetisation",
+      "monetization of debt",
+      "printing money to fund deficit"
+    ],
+    "hl": [
+      "deficit financing",
+      "deficit monetisation",
+      "deficit monetization",
+      "monetisation of deficit",
+      "monetisation of the deficit",
+      "debt monetisation",
+      "debt monetization",
+      "monetising the deficit",
+      "monetizing the deficit"
+    ],
+    "abbr": [],
+    "short": "Paying for a government's budget gap by borrowing, and especially, in Indian usage, by having the central bank create new money to cover it.",
+    "kid": "If the country runs short of coins, its leaders could ask the coin-maker to simply make more. But when there are too many new coins, each one buys fewer sweets.",
+    "detail": "In broad terms, deficit financing means any way of paying for a fiscal deficit, mainly market borrowing. In Indian economic writing, though, it traditionally means monetisation: the central bank financing the government directly by buying its debt at issue or lending to it, which creates new money. India did this automatically through ad hoc treasury bills until 1997, and the FRBM Act now bars the RBI from buying government securities at primary auctions except in specified emergencies. Monetisation avoids pushing up market interest rates, but if used heavily it fuels inflation and weakens the currency, as in Weimar Germany in the 1920s and Zimbabwe in the 2000s. A common confusion is to equate quantitative easing or the RBI's open market purchases with monetisation: those buy bonds in the secondary market for monetary policy goals and can be reversed, though the line blurs when they are large and lasting.",
+    "example": "Say a hypothetical government has a ₹10 lakh crore deficit, raises ₹8 lakh crore by selling bonds to investors and has its central bank create new money for the remaining 10 - 8 = ₹2 lakh crore. That ₹2 lakh crore is the monetised part of the deficit and adds directly to the money supply.",
+    "formula": "",
+    "related": [
+      "Fiscal deficit",
+      "Ways and Means Advances",
+      "Quantitative easing",
+      "Open market operations",
+      "Inflation",
+      "Market borrowing"
+    ]
+  },
+  {
+    "id": "crowding-out",
+    "term": "Crowding out",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "crowding-out effect",
+      "crowd out"
+    ],
+    "hl": [
+      "crowding out",
+      "crowding-out",
+      "crowding out effect",
+      "crowding-out effect",
+      "crowd out private investment",
+      "crowding out private investment"
+    ],
+    "abbr": [],
+    "short": "When heavy government borrowing pushes up interest rates or soaks up savings, leaving less money and higher costs for private businesses to borrow and invest.",
+    "kid": "If one big kid takes most of the swings in the playground, the other children have fewer swings left to play on.",
+    "detail": "Crowding out is the idea that government borrowing can displace private spending. When a government runs large deficits, it competes with companies and households for a limited pool of savings; bond yields rise, borrowing becomes costlier, and some private investment that would have happened no longer does. The effect is strongest when the economy is near full capacity and capital cannot flow in freely from abroad. It is weak in a deep slump, when savings sit idle and interest rates are near zero, and public spending on roads or power can even crowd in private investment. In India, analysts often note that Centre and state borrowing absorb a large share of household financial savings, and they watch bond yields and corporate borrowing costs for signs of crowding out. A common confusion is to treat it as automatic; its size depends on the cycle, monetary policy and foreign capital flows.",
+    "example": "Suppose savers in a hypothetical economy have ₹100 crore to lend and the government's borrowing jumps from ₹30 crore to ₹45 crore. Only 100 - 45 = ₹55 crore is now left for companies instead of ₹70 crore, and the competition for funds pushes up interest rates for everyone.",
+    "formula": "",
+    "related": [
+      "Fiscal deficit",
+      "Market borrowing",
+      "Bond yield",
+      "Expansionary fiscal policy",
+      "Interest rate"
+    ]
+  },
+  {
+    "id": "fiscal-space",
+    "term": "Fiscal space",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "fiscal headroom",
+      "fiscal room"
+    ],
+    "hl": [
+      "fiscal space",
+      "fiscal headroom",
+      "fiscal room",
+      "fiscal leeway"
+    ],
+    "abbr": [],
+    "short": "How much more a government can spend or cut taxes without putting its debt on a dangerous path or breaking its own budget rules.",
+    "kid": "If your piggy bank still has spare coins after this week's sweets, you have room for one more treat without getting into trouble.",
+    "detail": "Fiscal space is the room a government has to raise spending or cut taxes without endangering its market access, debt sustainability or fiscal rules. It depends on the current deficit and debt, borrowing costs, growth prospects, the depth of the domestic bond market and the credibility of past policy. Countries with low debt, cheap funding and strong institutions can respond aggressively to a recession; those with high debt or heavy foreign-currency borrowing may face rising yields or rating downgrades if they try. In India the term appears every budget season as analysts estimate how much room the Centre has for tax relief or capital spending within its deficit target. A common confusion is to equate fiscal space with having cash in hand; it is about borrowing capacity and credibility, and it can shrink quickly if markets lose confidence.",
+    "example": "Say a hypothetical country with GDP of ₹300 lakh crore follows a rule capping its deficit at 3% of GDP, or ₹9 lakh crore. If its planned deficit is ₹7.5 lakh crore, it has 9 - 7.5 = ₹1.5 lakh crore, or 0.5% of GDP, of fiscal space under the rule.",
+    "formula": "",
+    "related": [
+      "Fiscal deficit",
+      "Debt sustainability",
+      "Fiscal stimulus",
+      "Fiscal consolidation",
+      "Debt-to-GDP ratio"
+    ]
+  },
+  {
+    "id": "fiscal-stimulus",
+    "term": "Fiscal stimulus",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "stimulus package",
+      "relief package"
+    ],
+    "hl": [
+      "fiscal stimulus",
+      "fiscal stimulus package",
+      "stimulus package",
+      "stimulus packages"
+    ],
+    "abbr": [],
+    "short": "Extra government spending, tax cuts or cash handouts used to lift demand and jobs when the economy is weak.",
+    "kid": "When nobody is buying lemonade, a grown-up gives the neighbours a few coins so they come and buy lemonade again.",
+    "detail": "A fiscal stimulus is a deliberate, usually temporary, boost to demand through higher public spending, tax cuts or direct transfers to households and firms. It is used in recessions or crises, when private spending falls. Its effect depends on the fiscal multiplier, the rise in GDP for each rupee or dollar of stimulus: infrastructure spending and transfers to poorer households tend to have larger multipliers than tax cuts for people who mostly save. Well-known examples include the US CARES Act of March 2020, worth about $2.2 trillion, and China's 4 trillion yuan package of 2008. It supports earnings in the short run but raises deficits, bond supply and sometimes inflation. A common confusion is to take headline sizes at face value: India's 2020 Aatmanirbhar Bharat package was announced at about ₹20 lakh crore, but much of it was credit guarantees and RBI liquidity measures rather than direct budget spending.",
+    "example": "Say a hypothetical government spends an extra $100 billion on roads and the fiscal multiplier is 1.5. GDP would rise by about 1.5 x $100 billion = $150 billion, while the deficit widens by up to $100 billion before any extra tax revenue comes in.",
+    "formula": "Change in GDP = Fiscal multiplier x Change in government spending",
+    "related": [
+      "Expansionary fiscal policy",
+      "Fiscal multiplier",
+      "Fiscal deficit",
+      "Counter-cyclical policy",
+      "Fiscal space",
+      "Quantitative easing"
+    ]
+  },
+  {
+    "id": "expansionary-fiscal-policy",
+    "term": "Expansionary fiscal policy",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "fiscal expansion",
+      "loose fiscal policy"
+    ],
+    "hl": [
+      "expansionary fiscal policy",
+      "fiscal expansion",
+      "loose fiscal policy",
+      "fiscal loosening",
+      "expansionary budget"
+    ],
+    "abbr": [],
+    "short": "When a government raises spending or cuts taxes to boost demand, usually accepting a bigger budget deficit in return.",
+    "kid": "The people running the town spend more on parks and let families keep more of their coins, so everyone has more to spend on toys and treats.",
+    "detail": "Expansionary fiscal policy increases total demand by raising government spending, cutting taxes or increasing transfers, which widens the deficit or narrows a surplus. It is the standard response to recessions and high unemployment, often alongside lower interest rates from the central bank. Higher spending adds to output directly, while tax cuts work by leaving households and firms with more to spend. For markets, it usually lifts earnings in consumer and infrastructure sectors but increases bond supply, which can push yields up, and if the economy is already near capacity it can stoke inflation. A common confusion is to judge the stance by the size of the deficit alone; economists look at the change in the cyclically adjusted or primary deficit, because a deficit can widen simply because a recession has cut tax receipts. Fiscal stimulus is a specific, often one-off, form of expansionary policy.",
+    "example": "Say a hypothetical government raises spending by ₹2 lakh crore and cuts taxes by ₹1 lakh crore during a slowdown. Before any feedback from faster growth, its deficit widens by 2 + 1 = ₹3 lakh crore.",
+    "formula": "",
+    "related": [
+      "Contractionary fiscal policy",
+      "Fiscal stimulus",
+      "Fiscal policy",
+      "Fiscal multiplier",
+      "Crowding out",
+      "Counter-cyclical policy"
+    ]
+  },
+  {
+    "id": "contractionary-fiscal-policy",
+    "term": "Contractionary fiscal policy",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "fiscal tightening",
+      "fiscal contraction",
+      "tight fiscal policy"
+    ],
+    "hl": [
+      "contractionary fiscal policy",
+      "fiscal tightening",
+      "fiscal contraction",
+      "tight fiscal policy"
+    ],
+    "abbr": [],
+    "short": "When a government cuts spending or raises taxes to cool demand and inflation or to shrink its budget deficit.",
+    "kid": "The people running the town spend a bit less and ask families for a few more coins, so everyone buys fewer toys for a while.",
+    "detail": "Contractionary fiscal policy reduces total demand by cutting government spending, raising taxes or trimming transfers, which narrows the deficit or enlarges a surplus. It is used to cool an overheating economy, to help the central bank fight inflation, or to repair public finances after a period of heavy borrowing. Because it takes money out of the economy, it can slow growth and company earnings in the short run, especially in sectors that depend on government orders, while lower bond supply tends to support bond prices. Its cost is smaller when the economy is strong and when the central bank can cut interest rates to offset it. A common confusion is to treat it as the same as austerity: contractionary policy is a cyclical tool aimed at demand, whereas austerity usually refers to prolonged cuts forced by debt stress, often in a weak economy.",
+    "example": "Say a hypothetical government cuts spending by ₹1.5 lakh crore and raises taxes by ₹50,000 crore to cool inflation. Before any feedback from slower growth, its deficit narrows by ₹1.5 lakh crore + ₹0.5 lakh crore = ₹2 lakh crore.",
+    "formula": "",
+    "related": [
+      "Expansionary fiscal policy",
+      "Austerity",
+      "Fiscal consolidation",
+      "Fiscal policy",
+      "Monetary policy"
+    ]
+  },
+  {
+    "id": "austerity",
+    "term": "Austerity",
+    "cat": "fiscal",
+    "level": "b",
+    "aliases": [
+      "austerity measures",
+      "spending cuts",
+      "belt-tightening"
+    ],
+    "hl": [
+      "austerity",
+      "austerity measures",
+      "austerity drive",
+      "austerity budget",
+      "austerity programme",
+      "government spending cuts",
+      "public spending cuts"
+    ],
+    "abbr": [],
+    "short": "A deliberate programme of government spending cuts and tax rises meant to shrink large deficits and debt, often under pressure from markets or lenders.",
+    "kid": "When a family has borrowed too much, it stops buying treats and saves every spare coin until it can pay its friends back.",
+    "detail": "Austerity is a sustained policy of cutting public spending, raising taxes, or both, to reduce a large deficit and stabilise debt. It is usually adopted when markets lose confidence, borrowing costs spike, or lenders such as the IMF and European institutions demand it as a condition of a bailout. Greece's programmes from 2010 to 2018 and the UK's spending cuts in the 2010s are the best-known modern cases. Supporters argue it restores credibility and lowers borrowing costs; critics point to evidence that cuts during a downturn shrink GDP, so the debt ratio can fall slowly or even rise. Markets often respond with lower sovereign yields but weaker growth and corporate earnings. A common confusion is to treat every deficit cut as austerity: gradual fiscal consolidation during a recovery is usually far less painful and is not what the term typically describes.",
+    "example": "Say a hypothetical country spending $400 billion a year cuts spending by 5%, or $20 billion, and raises taxes by $10 billion. Its deficit shrinks by $20 billion + $10 billion = $30 billion, before allowing for the slower growth the cuts may cause.",
+    "formula": "",
+    "related": [
+      "Contractionary fiscal policy",
+      "Fiscal consolidation",
+      "Public debt",
+      "Debt sustainability",
+      "Sovereign default"
+    ]
+  },
+  {
+    "id": "counter-cyclical-policy",
+    "term": "Counter-cyclical policy",
+    "cat": "fiscal",
+    "level": "i",
+    "aliases": [
+      "countercyclical policy",
+      "pro-cyclical policy",
+      "procyclical"
+    ],
+    "hl": [
+      "counter-cyclical policy",
+      "countercyclical policy",
+      "counter-cyclical fiscal policy",
+      "countercyclical fiscal policy",
+      "pro-cyclical policy",
+      "procyclical policy",
+      "pro-cyclical fiscal policy",
+      "procyclical fiscal policy"
+    ],
+    "abbr": [],
+    "short": "Government or central bank actions that lean against the economic cycle, supporting demand in downturns and restraining it in booms.",
+    "kid": "When it is cold, you put on a jumper; when it is hot, you take it off. You do the opposite of the weather to stay just right.",
+    "detail": "Counter-cyclical policy moves against the business cycle: more spending, tax relief or lower interest rates in a downturn, and tighter budgets or higher rates in a boom. The aim is to smooth swings in output, jobs and inflation. Part of it happens on its own through automatic stabilisers, such as falling tax receipts and rising welfare payments in a recession, while the rest requires deliberate decisions. The opposite, pro-cyclical policy, amplifies the cycle, for example cutting spending in a slump because revenues fell, or splurging in a boom. Many emerging economies have historically been pro-cyclical because they lose access to borrowing just when they need it. Regulators apply the same idea to banks through counter-cyclical capital buffers. A common confusion is that counter-cyclical policy means always running deficits; it also requires saving in good times, which governments often find politically hard.",
+    "example": "Say a recession cuts a hypothetical country's tax revenue from $1,000 billion to $920 billion while it had planned to spend $1,100 billion. A counter-cyclical government keeps spending at $1,100 billion and lets the deficit widen from $100 billion to $180 billion; a pro-cyclical one cuts spending to $1,020 billion to hold the deficit at $100 billion, deepening the slump.",
+    "formula": "",
+    "related": [
+      "Fiscal policy",
+      "Automatic stabilisers",
+      "Expansionary fiscal policy",
+      "Contractionary fiscal policy",
+      "Cyclically adjusted deficit",
+      "Monetary policy"
+    ]
+  }
+]

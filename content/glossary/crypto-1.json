@@ -1,0 +1,914 @@
+[
+  {
+    "id": "cryptocurrency",
+    "term": "Cryptocurrency",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "crypto",
+      "cryptocurrencies",
+      "virtual digital asset",
+      "VDA",
+      "crypto asset"
+    ],
+    "hl": [
+      "cryptocurrency",
+      "cryptocurrencies",
+      "crypto",
+      "crypto asset",
+      "crypto assets",
+      "virtual digital asset",
+      "virtual digital assets"
+    ],
+    "abbr": [
+      "VDA",
+      "VDAs"
+    ],
+    "short": "Digital money that exists only as entries on a shared computer record, moved directly between users without a bank in the middle.",
+    "kid": "Imagine everyone in class writes down who has how many stickers in one shared notebook. Nobody holds real stickers; the notebook itself shows what you own, and everyone checks it together.",
+    "detail": "A cryptocurrency is a digital asset whose ownership is recorded on a blockchain, a ledger copied across many computers, and moved using secret cryptographic keys rather than through a bank. No central bank issues it; software rules create new units. Bitcoin, launched in 2009, was the first of thousands. Prices swing sharply because there are no cash flows to anchor value: price rests on demand, scarcity and belief in the network. In India, crypto is not legal tender. The law calls it a virtual digital asset (VDA), and under the rules as of 2025 gains are taxed at a flat 30% plus cess, losses cannot be set off against any income, even other crypto gains, and 1% TDS applies on transfers above a threshold. A common confusion: a central bank digital currency, such as the RBI's e-rupee, is not a cryptocurrency; it is state-issued money.",
+    "example": "Say Riya buys a token for ₹1 lakh and sells it for ₹1.5 lakh. Under the rules as of 2025, her ₹50,000 gain is taxed at 30%, or ₹15,000, plus 4% cess of ₹600, so ₹15,600 in all. The exchange also deducts 1% TDS of ₹1,500 on the sale, which she can claim against that tax bill.",
+    "formula": "",
+    "related": [
+      "Blockchain",
+      "Bitcoin",
+      "Stablecoin",
+      "Central bank digital currency",
+      "Crypto wallet",
+      "Centralised exchange"
+    ]
+  },
+  {
+    "id": "blockchain",
+    "term": "Blockchain",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "distributed ledger technology",
+      "DLT",
+      "distributed ledger"
+    ],
+    "hl": [
+      "blockchain",
+      "blockchains",
+      "blockchain technology",
+      "distributed ledger",
+      "distributed ledgers",
+      "distributed ledger technology"
+    ],
+    "abbr": [
+      "DLT"
+    ],
+    "short": "A shared digital record book, copied across many computers, where new entries are added in linked batches and old ones are very hard to change.",
+    "kid": "Picture a paper chain where each ring has a note on it, and every friend keeps a copy of the whole chain. If someone secretly changes one note, their chain no longer matches everyone else's, so everyone can tell.",
+    "detail": "A blockchain is a type of distributed ledger: a database shared across many computers, called nodes, with no single owner. Transactions are grouped into blocks, and each block carries a cryptographic fingerprint, or hash, of the one before it, forming a chain. Changing an old entry would change its hash and break every later link, so tampering is easy to spot and costly to carry out. Nodes agree on which new block is valid through a consensus mechanism such as proof of work or proof of stake. Public blockchains such as Bitcoin and Ethereum let anyone join; permissioned ledgers, which banks in India and abroad have tested for trade finance, payments and securities settlement, admit only approved members. A common confusion: blockchain is the record-keeping technology, not the coin. Bitcoin runs on a blockchain, but many blockchain projects have no tradable coin at all.",
+    "example": "Bitcoin's blockchain adds a new block roughly every 10 minutes, which is about 6 an hour, 144 a day and 52,560 a year. To rewrite a payment buried 6 blocks deep, an attacker would have to redo those 6 blocks and then outpace the honest network in building new ones.",
+    "formula": "",
+    "related": [
+      "Cryptocurrency",
+      "Consensus mechanism",
+      "Proof of work",
+      "Smart contract",
+      "Bitcoin",
+      "Blockchain oracle"
+    ]
+  },
+  {
+    "id": "bitcoin",
+    "term": "Bitcoin",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "BTC",
+      "XBT"
+    ],
+    "hl": [
+      "bitcoin",
+      "bitcoins",
+      "bitcoin halving",
+      "bitcoin halvings"
+    ],
+    "abbr": [
+      "BTC",
+      "XBT"
+    ],
+    "short": "The first cryptocurrency, a digital money launched in 2009 that runs without any bank or government and has a fixed limit of 21 million coins.",
+    "kid": "Bitcoin is like a set of special game coins where only a fixed number can ever exist, and nobody is allowed to make extra. Everyone keeps the same list of who owns which coin, so nobody can cheat.",
+    "detail": "Bitcoin was described in a 2008 white paper by the pseudonymous Satoshi Nakamoto and went live in January 2009. It runs on a public blockchain secured by proof of work: miners compete to add a block about every 10 minutes and earn newly created bitcoin plus fees. That reward halves every 210,000 blocks, roughly every four years, so new supply slows towards a hard cap of 21 million coins. One bitcoin divides into 100 million satoshis, so you can buy a small fraction. Supporters call it digital gold, a scarce store of value outside the banking system; critics point to its volatility, energy use and lack of cash flows. US regulators approved spot bitcoin ETFs in January 2024, widening access for institutions. In India it is a virtual digital asset, taxable but not legal tender. A common confusion: bitcoin is not anonymous; every transaction is publicly visible on its blockchain.",
+    "example": "On 22 May 2010, programmer Laszlo Hanyecz paid 10,000 BTC for two pizzas, the first well-known purchase of real goods with bitcoin. The mining reward began at 50 BTC per block and, after four halvings, fell to 3.125 BTC in April 2024, because 50 / 2^4 = 50 / 16 = 3.125.",
+    "formula": "Block reward = 50 BTC / 2^(number of halvings so far)",
+    "related": [
+      "Cryptocurrency",
+      "Blockchain",
+      "Proof of work",
+      "Altcoin",
+      "Crypto wallet",
+      "Exchange-traded fund"
+    ]
+  },
+  {
+    "id": "ethereum",
+    "term": "Ethereum",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "Ether",
+      "ETH"
+    ],
+    "hl": [
+      "ethereum",
+      "ethereum blockchain",
+      "ethereum network",
+      "spot ether etf",
+      "spot ether etfs"
+    ],
+    "abbr": [
+      "ETH"
+    ],
+    "short": "A shared digital ledger that can run small programs as well as payments; its own coin, ether, pays the fees for using it.",
+    "kid": "Ethereum is like a big shared toy box that follows rules all by itself, such as 'give the ball to whoever finishes the puzzle first'. To use it, you pay with its own play coins, called ether.",
+    "detail": "Ethereum is a public blockchain, proposed by Vitalik Buterin in 2013 and launched in July 2015, that can run smart contracts: programs that execute automatically when set conditions are met. Ether (ETH), its native currency, pays transaction fees, called gas, and has long been the second-largest cryptocurrency by market value after bitcoin. Most DeFi applications, stablecoins and NFTs were first built on Ethereum, and many tokens follow its ERC-20 standard. In September 2022 an upgrade known as the Merge switched Ethereum from proof of work to proof of stake, cutting its energy use by about 99.95%. Validators now lock up at least 32 ETH each to help secure the network and earn rewards. US spot ether ETFs began trading in July 2024. A common confusion: Ethereum is the network and ether is the coin, though news reports often use the two names interchangeably.",
+    "example": "A simple ether transfer uses 21,000 units of gas. If the gas price is 20 gwei (a gwei is one-billionth of an ether), the fee is 21,000 × 20 = 420,000 gwei, or 0.00042 ETH. If congestion pushes the price to 100 gwei, the same transfer costs 0.0021 ETH.",
+    "formula": "Transaction fee = Gas used × (Base fee + Priority fee)",
+    "related": [
+      "Smart contract",
+      "Proof of stake",
+      "Decentralised finance",
+      "Token",
+      "Bitcoin",
+      "Staking"
+    ]
+  },
+  {
+    "id": "altcoin",
+    "term": "Altcoin",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "altcoins",
+      "alts"
+    ],
+    "hl": [
+      "altcoin",
+      "altcoins",
+      "altcoin season",
+      "alt season"
+    ],
+    "abbr": [],
+    "short": "Any cryptocurrency other than bitcoin, from large ones like ether to thousands of small, little-known coins.",
+    "kid": "If bitcoin is the very first and most famous sticker in an album, altcoins are all the other stickers that came after it. Some are popular and some are almost forgotten.",
+    "detail": "Altcoin, short for alternative coin, means any cryptocurrency other than bitcoin. The group is huge and mixed: ether and other large networks with real usage, stablecoins pegged to the dollar, exchange tokens, and thousands of tiny projects and memecoins. Many altcoins aim to improve on bitcoin's speed, fees or programmability; others are near-copies with little to set them apart. As a group they are usually more volatile than bitcoin, tending to rise faster in crypto booms and fall harder in busts, which is why traders watch bitcoin dominance, bitcoin's share of total crypto market value. A falling dominance during a rally is often called altcoin season. Liquidity is a real risk: small altcoins can trade thinly on a few exchanges, and many from the 2017 and 2021 booms are now nearly worthless. A common confusion: some writers exclude ether and stablecoins from the term, so check how it is used.",
+    "example": "Say the whole crypto market is worth $2 trillion and bitcoin accounts for $1.2 trillion. Bitcoin dominance is $1.2 trillion / $2 trillion = 60%, and altcoins together make up the remaining $800 billion, or 40%.",
+    "formula": "Bitcoin dominance = Bitcoin market value / Total crypto market value",
+    "related": [
+      "Bitcoin",
+      "Ethereum",
+      "Memecoin",
+      "Stablecoin",
+      "Token",
+      "Volatility"
+    ]
+  },
+  {
+    "id": "stablecoin",
+    "term": "Stablecoin",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "stablecoins",
+      "USDT",
+      "USDC",
+      "Tether"
+    ],
+    "hl": [
+      "stablecoin",
+      "stablecoins",
+      "stable coin",
+      "stable coins",
+      "dollar stablecoin",
+      "dollar stablecoins"
+    ],
+    "abbr": [
+      "USDT",
+      "USDC"
+    ],
+    "short": "A cryptocurrency designed to hold a steady price, usually one US dollar, mostly by keeping cash and short-term government bonds in reserve.",
+    "kid": "A stablecoin is like a fun-fair token that is always worth exactly one ride ticket. The fair keeps a real ticket in a box for every token, so you can swap back whenever you like.",
+    "detail": "A stablecoin is a crypto token built to keep a fixed value, most often $1. Fiat-backed stablecoins such as Tether's USDT and Circle's USDC hold reserves of cash, bank deposits and short-term US Treasury bills, and let approved customers redeem tokens one-for-one. Crypto-collateralised designs such as DAI lock up more crypto than the tokens they issue, while algorithmic designs try to hold the peg through code and incentives, an approach discredited by the collapse of TerraUSD in 2022. Stablecoins are the working cash of crypto markets, used for trading, DeFi and cross-border transfers. Regulators are catching up: the EU's MiCA rules and the US GENIUS Act of 2025 set reserve and disclosure standards, and the RBI has warned about their risks to monetary control. A common confusion: a stablecoin is not a bank deposit; it has no deposit insurance, and its safety depends on the issuer's reserves.",
+    "example": "Say an issuer has 10 billion tokens in circulation, each meant to be worth $1. To be fully backed it needs at least $10 billion of reserves, and if a third of holders redeem at once it must pay out about $3.33 billion quickly, which is why reserves are kept in cash and short-dated Treasury bills.",
+    "formula": "Reserve ratio = Value of reserves / Tokens in circulation",
+    "related": [
+      "Stablecoin depeg",
+      "Cryptocurrency",
+      "Decentralised finance",
+      "US Treasury securities",
+      "Central bank digital currency",
+      "Bank run"
+    ]
+  },
+  {
+    "id": "stablecoin-depeg",
+    "term": "Stablecoin depeg",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "depeg",
+      "depegging",
+      "loss of peg"
+    ],
+    "hl": [
+      "stablecoin depeg",
+      "stablecoin depegs",
+      "stablecoin depegged",
+      "stablecoin depegging",
+      "stablecoin loses peg",
+      "stablecoin loses its peg"
+    ],
+    "abbr": [],
+    "short": "When a crypto token meant to stay at a fixed value, usually $1, trades noticeably away from it, such as at 95 cents.",
+    "kid": "Imagine a token that should always swap for one ride ticket. If people start to worry there are not enough tickets in the box, they will only swap it for part of a ticket, and that wobble is a depeg.",
+    "detail": "A depeg happens when a stablecoin trades meaningfully below, or occasionally above, its target, usually $1. The trigger is normally doubt about the backing: reserves that are frozen, risky or too small, or, for algorithmic coins, a broken stabilising mechanism. Doubt sparks redemptions and selling, which can snowball into a digital bank run. In March 2023, USDC fell to about 88 cents after Circle disclosed $3.3 billion of reserves stuck at the failed Silicon Valley Bank; it recovered within days once US authorities protected that bank's depositors. TerraUSD, an algorithmic stablecoin, never recovered after breaking its peg in May 2022, and its collapse with sister token LUNA wiped out roughly $40 billion of market value. Arbitrage normally pulls prices back, as traders buy below $1 and redeem at $1. A common confusion: tiny moves of a fraction of a cent are normal trading noise, not a depeg.",
+    "example": "Say a stablecoin that should be worth $1 trades at $0.97. A holder of 10,000 tokens sees their value fall from $10,000 to $9,700, a $300 or 3% loss. An arbitrageur who can redeem with the issuer buys 10,000 tokens for $9,700 and redeems them for $10,000, making $300 and pushing the price back towards $1.",
+    "formula": "Depeg (%) = (Peg value - Market price) / Peg value × 100",
+    "related": [
+      "Stablecoin",
+      "Bank run",
+      "Arbitrage",
+      "Fixed exchange rate",
+      "Counterparty risk"
+    ]
+  },
+  {
+    "id": "memecoin",
+    "term": "Memecoin",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "meme coin",
+      "meme token",
+      "Dogecoin"
+    ],
+    "hl": [
+      "memecoin",
+      "memecoins",
+      "meme coin",
+      "meme coins",
+      "meme token",
+      "meme tokens",
+      "dogecoin"
+    ],
+    "abbr": [],
+    "short": "A cryptocurrency built around an internet joke, mascot or celebrity, with little or no real use, whose price runs mostly on hype.",
+    "kid": "A memecoin is like a silly sticker everyone suddenly wants because it is funny and popular. It is only worth as much as friends want it today, so tomorrow it might be worth nothing.",
+    "detail": "A memecoin is a crypto token whose appeal comes from internet culture, a joke, an animal mascot or a celebrity, rather than from any product or cash flow. Dogecoin, created in 2013 as a parody built on the Shiba Inu dog meme, is the best-known example; later waves included Shiba Inu, Pepe and thousands of tokens launched in minutes on low-cost platforms. Prices are driven by social media, community enthusiasm and celebrity posts, so memecoins can multiply many times in days and collapse just as fast. Supply often runs into billions or trillions of tokens, so a price of a fraction of a cent can still mean a large total value. Risks include rug pulls, where creators dump their holdings, and insiders holding most of the supply. A common confusion: a low price per token does not make a coin cheap; what matters is price multiplied by supply.",
+    "example": "Say a memecoin trades at $0.001 with 500 billion tokens in circulation. Its total market value is 500 billion × $0.001 = $500 million. For it to reach $1 a token, that total would have to hit $500 billion, which is why 'it only needs to reach $1' claims are usually unrealistic.",
+    "formula": "Market value = Price per token × Circulating supply",
+    "related": [
+      "Altcoin",
+      "Tokenomics",
+      "Asset bubble",
+      "Greater fool theory",
+      "Herding",
+      "Speculation"
+    ]
+  },
+  {
+    "id": "token",
+    "term": "Token",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "crypto token",
+      "utility token",
+      "governance token"
+    ],
+    "hl": [
+      "crypto token",
+      "crypto tokens",
+      "utility token",
+      "utility tokens",
+      "governance token",
+      "governance tokens"
+    ],
+    "abbr": [],
+    "short": "A digital asset a project issues on an existing blockchain, standing for things like service access, voting rights or a claim on assets.",
+    "kid": "A token is like a ticket from a fair. One ticket gets you a ride, another lets you vote for the next game, and you can swap them with friends.",
+    "detail": "In crypto, a token is a digital asset created by a smart contract on an existing blockchain, as opposed to a coin, which is the native currency of its own chain, such as bitcoin on Bitcoin or ether on Ethereum. Most tokens follow shared standards such as Ethereum's ERC-20, so wallets and exchanges can handle them. Utility tokens give access to a product, such as paying fees on a platform; governance tokens give holders votes on a protocol's rules; stablecoins and tokenised assets represent claims on dollars, bonds or funds; NFTs are one-of-a-kind tokens. Whether a token counts as a security matters: US regulators have argued that many tokens sold to raise money needed registration. In India, tokens are taxed as virtual digital assets under the rules as of 2025. A common confusion: card tokenisation by Indian payment networks is unrelated; it replaces a card number with a code.",
+    "example": "Say a hypothetical lending protocol, ABC Finance, issues 100 million governance tokens. A holder of 2 million tokens controls 2% of the votes, enough to sway a close decision on lending rates, but has no legal claim on the protocol's earnings unless its rules provide one.",
+    "formula": "",
+    "related": [
+      "Tokenomics",
+      "Non-fungible token",
+      "Stablecoin",
+      "Smart contract",
+      "Initial coin offering",
+      "Decentralised autonomous organisation"
+    ]
+  },
+  {
+    "id": "tokenomics",
+    "term": "Tokenomics",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "token economics",
+      "token supply schedule"
+    ],
+    "hl": [
+      "tokenomics",
+      "token economics",
+      "token unlock",
+      "token unlocks",
+      "token supply schedule"
+    ],
+    "abbr": [],
+    "short": "The rules for a crypto token's supply: how many exist, who got them, how fast new ones are released and whether any are destroyed.",
+    "kid": "Tokenomics is the rulebook for a jar of sweets: how many sweets there are, who gets some first, and how many more get added each week. If lots of new sweets keep coming, each one feels less special.",
+    "detail": "Tokenomics, short for token economics, describes how a crypto token's supply and incentives are designed. The key questions: is there a maximum supply; how much is circulating today; how were tokens split between founders, investors, a treasury and the public; and on what vesting schedule do insiders' locked tokens unlock? It also covers emissions, new tokens paid out as rewards, and burns, tokens permanently destroyed to reduce supply. These choices matter because a large unlock or heavy emissions can flood the market and push the price down, much like equity dilution in a company. Analysts compare market capitalisation, based on circulating supply, with fully diluted valuation, based on maximum supply. A common confusion: a low price or a big headline supply says little on its own; you need both numbers, plus the release schedule, to judge a token's value.",
+    "example": "Say a token trades at $2, with 100 million in circulation and a maximum supply of 1 billion. Its market capitalisation is $200 million, but its fully diluted valuation is $2 billion, ten times higher. If 50 million more tokens unlock next month, circulating supply rises by 50%.",
+    "formula": "Market capitalisation = Price × Circulating supply; Fully diluted valuation = Price × Maximum supply",
+    "related": [
+      "Token",
+      "Vesting schedule",
+      "Equity dilution",
+      "Market capitalisation",
+      "Staking",
+      "Airdrop"
+    ]
+  },
+  {
+    "id": "non-fungible-token",
+    "term": "Non-fungible token",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "NFT",
+      "NFTs"
+    ],
+    "hl": [
+      "non-fungible token",
+      "non-fungible tokens",
+      "nft marketplace",
+      "nft marketplaces",
+      "nft collection",
+      "nft collections"
+    ],
+    "abbr": [
+      "NFT",
+      "NFTs"
+    ],
+    "short": "A one-of-a-kind digital token that records who owns a specific item, such as a piece of digital art, a collectible or a ticket.",
+    "kid": "Two ordinary coins are the same, so swapping them is fair. An NFT is more like a one-of-a-kind signed trading card: there is only one, and everyone can see that it is yours.",
+    "detail": "Fungible means interchangeable: one rupee or one bitcoin is as good as another. A non-fungible token is unique: each has its own ID on a blockchain, usually under Ethereum's ERC-721 standard, linking to a particular item and recording its owner and trading history. NFTs are used for digital art, collectibles, gaming items, event tickets and memberships, and creators can earn royalties on resales where marketplaces enforce them. The market boomed in 2021, when a digital artwork by Beeple sold at Christie's for about $69 million, then slumped, leaving many collections worth a small fraction of their peak. A common confusion: buying an NFT usually gives you the token, not the copyright, and the artwork file itself is often stored off the blockchain, so if that link breaks the token may point to nothing.",
+    "example": "Say an artist mints an NFT and sells it for $5,000, with a 10% creator royalty on resales. If the buyer later resells it for $8,000 on a marketplace that honours royalties, the artist receives $800 and the seller gets $7,200 before platform fees.",
+    "formula": "",
+    "related": [
+      "Token",
+      "Blockchain",
+      "Ethereum",
+      "Smart contract",
+      "Asset bubble"
+    ]
+  },
+  {
+    "id": "initial-coin-offering",
+    "term": "Initial coin offering",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "ICO",
+      "token sale"
+    ],
+    "hl": [
+      "initial coin offering",
+      "initial coin offerings",
+      "token sale",
+      "token sales"
+    ],
+    "abbr": [
+      "ICOs"
+    ],
+    "short": "A way for a crypto project to raise money by selling newly created tokens directly to the public, often before its product exists.",
+    "kid": "Imagine a friend selling tickets for a lemonade stand they have not built yet. You pay now, hoping the tickets will be worth more once the stand opens, but it might never open.",
+    "detail": "An initial coin offering is a crowdfunding sale in which a project issues new tokens in exchange for cryptocurrencies such as ether, or for cash, to fund development. Ethereum itself was financed this way in 2014. ICOs exploded in 2017 and 2018, raising billions of dollars, often on the strength of a white paper alone, with no audited accounts, prospectus or investor protections. Many projects failed or turned out to be scams. Regulators responded: China banned ICOs in 2017, and the US SEC said many tokens sold this way were securities and brought enforcement cases. In India, ICOs are not regulated as securities offerings, so buyers get none of the protections SEBI gives in an IPO. A common confusion: an ICO is not like an IPO; buyers get tokens, not shares, and usually no legal claim on profits or assets.",
+    "example": "Say a hypothetical project, XYZ Network, sells 200 million tokens at $0.10 each, raising $20 million. If the tokens list on exchanges at $0.30, an early buyer who paid $1,000 for 10,000 tokens holds $3,000; if the project fails and the price drops to $0.01, the same holding is worth $100.",
+    "formula": "",
+    "related": [
+      "Initial public offering",
+      "Token",
+      "Tokenomics",
+      "Airdrop",
+      "Venture capital",
+      "SEBI"
+    ]
+  },
+  {
+    "id": "airdrop",
+    "term": "Airdrop",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "token airdrop"
+    ],
+    "hl": [
+      "token airdrop",
+      "token airdrops",
+      "crypto airdrop",
+      "crypto airdrops",
+      "airdropped tokens"
+    ],
+    "abbr": [],
+    "short": "A free distribution of crypto tokens to many wallet holders, usually to reward early users or spread ownership of a new project.",
+    "kid": "An airdrop is like a new sweet shop handing out free sweets to children who visited early. The shop hopes you will come back and tell your friends.",
+    "detail": "An airdrop is when a crypto project sends free tokens to many wallet addresses, typically those that used its product, held a related token or completed set tasks. Projects use airdrops to reward early users, spread ownership and voting power, and attract attention. A famous example is Uniswap, which in September 2020 gave 400 UNI tokens to every address that had used the exchange. Airdrops have side effects: recipients often sell at once, pushing the price down, and so-called farmers create many wallets to collect extra tokens. Scammers also use fake airdrops to lure victims to wallet-draining websites. In India, under the rules as of 2025, free tokens can be taxable as income, and later sales fall under the virtual digital asset rules. A common confusion: an airdrop is not free money; the tokens' value can collapse quickly, and unknown tokens in your wallet are best left alone.",
+    "example": "Say a project airdrops 500 tokens to each of 100,000 wallets, giving away 50 million tokens. If the token lists at $2, each wallet receives $1,000 worth; if heavy selling drives the price to $0.50 within a week, the same 500 tokens are worth $250.",
+    "formula": "",
+    "related": [
+      "Token",
+      "Tokenomics",
+      "Crypto wallet",
+      "Initial coin offering",
+      "Decentralised finance"
+    ]
+  },
+  {
+    "id": "smart-contract",
+    "term": "Smart contract",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "smart contracts"
+    ],
+    "hl": [
+      "smart contract",
+      "smart contracts",
+      "smart-contract"
+    ],
+    "abbr": [],
+    "short": "A computer program stored on a blockchain that automatically carries out an agreement, such as releasing payment, once preset conditions are met.",
+    "kid": "A smart contract is like a vending machine. Put in the right coins, press the button, and the snack drops out by itself, with no shopkeeper needed.",
+    "detail": "A smart contract is code deployed on a blockchain such as Ethereum that runs exactly as written when triggered, and no party can stop or change it unless the code allows. The idea was described by Nick Szabo in the 1990s, and Ethereum made it practical from 2015. Smart contracts power decentralised exchanges, lending protocols, stablecoins, NFTs and DAOs: a loan contract, for example, can automatically sell a borrower's collateral if its value falls too far. Because they hold real money and their code is public, bugs are costly: the 2016 hack of The DAO drained about 3.6 million ether through a coding flaw, and DeFi hacks have since cost billions, which is why audits matter. A common confusion: a smart contract is neither smart nor necessarily a legal contract; it is simply a program that executes automatically, and courts may not treat it as a binding agreement.",
+    "example": "Say a lending smart contract lets you borrow up to 75% of your collateral's value. You deposit ether worth $10,000 and borrow $6,000 of stablecoins. If ether falls 25%, your collateral is worth $7,500 and your limit drops to $5,625, below your $6,000 loan, so the contract can automatically sell part of your ether to repay it.",
+    "formula": "",
+    "related": [
+      "Ethereum",
+      "Decentralised finance",
+      "Blockchain oracle",
+      "Decentralised autonomous organisation",
+      "Token",
+      "Collateral"
+    ]
+  },
+  {
+    "id": "decentralised-finance",
+    "term": "Decentralised finance",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "DeFi",
+      "decentralized finance"
+    ],
+    "hl": [
+      "decentralised finance",
+      "decentralized finance",
+      "defi protocol",
+      "defi protocols",
+      "defi lending"
+    ],
+    "abbr": [
+      "DeFi"
+    ],
+    "short": "Financial services such as lending, borrowing and trading run by code on a blockchain, without banks or brokers in the middle.",
+    "kid": "Imagine a toy-lending box in the playground that runs by itself. You put in a toy to borrow a ball, and the box follows the same rules for everyone, with no teacher in charge.",
+    "detail": "Decentralised finance, or DeFi, is a set of financial applications built from smart contracts on public blockchains, mainly Ethereum and its rivals. Instead of a bank or exchange, code handles lending, borrowing, trading, derivatives and savings products, and anyone with a crypto wallet can use them without an account or KYC check. Users keep custody of their assets until they deposit them into a protocol. Key building blocks are decentralised exchanges, liquidity pools, lending markets that demand more collateral than they lend, and stablecoins. Size is usually measured by total value locked, the crypto deposited in protocols. Benefits include openness, transparency and round-the-clock settlement; risks include code bugs, hacks, oracle manipulation and cascading liquidations when prices fall. A common confusion: decentralised does not mean leaderless or safe; many protocols are steered by small teams or large token holders, and there is no deposit insurance or regulator to turn to.",
+    "example": "Say you deposit ether worth $15,000 into a DeFi lending protocol that requires 150% collateral. You can borrow up to $10,000 of stablecoins, since $15,000 / 150% = $10,000. If you borrow the full $10,000 and the ether falls 10% to $13,500, your collateral covers only 135% of the loan and the protocol may liquidate part of it.",
+    "formula": "Total value locked = Sum of all assets deposited in a protocol, at market prices",
+    "related": [
+      "Smart contract",
+      "Decentralised exchange",
+      "Liquidity pool",
+      "Yield farming",
+      "Stablecoin",
+      "Blockchain oracle"
+    ]
+  },
+  {
+    "id": "decentralised-autonomous-organisation",
+    "term": "Decentralised autonomous organisation",
+    "cat": "crypto",
+    "level": "a",
+    "aliases": [
+      "DAO",
+      "decentralized autonomous organization"
+    ],
+    "hl": [
+      "decentralised autonomous organisation",
+      "decentralised autonomous organisations",
+      "decentralized autonomous organization",
+      "decentralized autonomous organizations"
+    ],
+    "abbr": [
+      "DAO",
+      "DAOs"
+    ],
+    "short": "An online group that runs a shared pot of crypto through rules written in code, with members voting on decisions using tokens.",
+    "kid": "A DAO is like a class piggy bank with a rule sheet everyone agreed on. To spend the money the class votes, and the piggy bank only opens if enough hands go up.",
+    "detail": "A decentralised autonomous organisation is a group governed through smart contracts rather than a board and managers. Members hold governance tokens and vote on proposals, such as spending from the treasury or changing a protocol's fees, and the result is often carried out on the blockchain automatically. Many DeFi protocols, including Uniswap and Aave, are governed this way, and some DAOs pool money to invest or buy assets. The first high-profile example, The DAO, raised about $150 million of ether in 2016 before a code flaw let an attacker drain about a third of it, leading Ethereum to reverse the theft through a hard fork. Weaknesses include low voter turnout, concentration of tokens among founders and funds, and unclear legal status, which can leave members personally liable. A common confusion: one token, one vote is not one person, one vote; large holders can dominate.",
+    "example": "Say a DAO has 10 million governance tokens and needs a 4% quorum, 400,000 votes, plus a simple majority to pass a proposal. A single fund holding 300,000 tokens could pass a proposal on its own if other holders cast only 100,000 votes, even if every one of them voted against.",
+    "formula": "",
+    "related": [
+      "Smart contract",
+      "Token",
+      "Decentralised finance",
+      "Ethereum",
+      "Shareholder"
+    ]
+  },
+  {
+    "id": "web3",
+    "term": "Web3",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "Web 3.0"
+    ],
+    "hl": [
+      "web3",
+      "web 3.0"
+    ],
+    "abbr": [],
+    "short": "The idea of an internet where users own their data and digital assets through blockchains and tokens, rather than relying on big platforms.",
+    "kid": "Today, most online games keep your toys in their own cupboard. Web3 is the idea that you keep your toys in your own bag and can carry them to any game you like.",
+    "detail": "Web3 is a broad label for a vision of the internet built on blockchains; the term was coined by Ethereum co-founder Gavin Wood in 2014. Web1 was mostly read-only pages, and Web2 brought social media and platforms where users create content but companies own the data and the profits. Web3 promises that users hold their own assets, identities and data in crypto wallets, interact through smart contracts, and share in a platform's success by holding its tokens. Examples include DeFi, NFTs, DAOs and blockchain games. Supporters see a shift of ownership from platforms to users; critics say it remains slow, hard to use, driven by speculation and often controlled by founders and venture investors. India has a large community of Web3 developers and start-ups. A common confusion: Web 3.0 also names an older idea, Tim Berners-Lee's semantic web of machine-readable data, which has nothing to do with crypto.",
+    "example": "Say a game sells a sword as an NFT for $50. In a Web2 game the sword lives on the company's server and vanishes if your account is closed; in a Web3 game it sits in your wallet, and you could sell it to another player for, say, $70, with a 5% fee of $3.50 going to the game's creators.",
+    "formula": "",
+    "related": [
+      "Blockchain",
+      "Decentralised finance",
+      "Non-fungible token",
+      "Decentralised autonomous organisation",
+      "Crypto wallet",
+      "Token"
+    ]
+  },
+  {
+    "id": "crypto-wallet",
+    "term": "Crypto wallet",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "crypto wallets",
+      "hot wallet",
+      "cold wallet",
+      "hardware wallet",
+      "self-custody wallet"
+    ],
+    "hl": [
+      "crypto wallet",
+      "crypto wallets",
+      "hot wallet",
+      "hot wallets",
+      "cold wallet",
+      "cold wallets",
+      "hardware wallet",
+      "hardware wallets",
+      "self-custody wallet",
+      "self-custody wallets"
+    ],
+    "abbr": [],
+    "short": "An app or device that stores the secret keys needed to access and send your cryptocurrency; the coins themselves stay on the blockchain.",
+    "kid": "A crypto wallet is like the key to your treasure chest rather than the chest itself. Whoever holds the key can open the chest, so you must keep it safe.",
+    "detail": "A crypto wallet does not hold coins; it holds the private keys that prove you own an address on a blockchain and let you sign transactions. Hot wallets, such as phone apps and browser extensions, are connected to the internet: convenient for frequent use but more exposed to hacking. Cold wallets, such as hardware devices or keys kept fully offline, are safer for long-term holdings. With a self-custody wallet you control the keys yourself; with a custodial wallet, such as an exchange account, the company holds them for you. The collapses of Mt. Gox in 2014 and FTX in 2022 showed the danger of custodial holdings, popularising the saying 'not your keys, not your coins'. A common confusion: lose both your keys and your recovery phrase in a self-custody wallet and nobody, not even the wallet maker, can restore the funds. Crypto wallets also differ from RBI-regulated prepaid payment wallets.",
+    "example": "Say you keep $5,000 of bitcoin: $500 in a phone app for spending and $4,500 on a hardware wallet in a drawer. If your phone is hacked, the most you can lose is the $500, or 10% of your holdings, while the other 90% stays offline.",
+    "formula": "",
+    "related": [
+      "Private key",
+      "Centralised exchange",
+      "Cryptocurrency",
+      "Counterparty risk",
+      "Blockchain"
+    ]
+  },
+  {
+    "id": "private-key",
+    "term": "Private key",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "seed phrase",
+      "recovery phrase",
+      "mnemonic phrase"
+    ],
+    "hl": [
+      "private key",
+      "private keys",
+      "seed phrase",
+      "seed phrases",
+      "recovery phrase",
+      "recovery phrases"
+    ],
+    "abbr": [],
+    "short": "A secret code that proves you own a crypto address and lets you spend from it; anyone who learns it can take the funds.",
+    "kid": "Your private key is like the secret password to your toy box, and your public key is like the label on the box that everyone can see. Friends can drop toys in using the label, but only the secret password opens it.",
+    "detail": "Crypto ownership rests on a pair of cryptographic keys. The private key is a very large secret number that lets you sign transactions; from it, software derives a public key and the wallet address others use to send you funds. Sharing your address is safe, but anyone who has your private key controls the assets. Most wallets generate keys from a seed phrase, or recovery phrase, of 12 or 24 ordinary words, which can rebuild all of a wallet's keys on a new device. That makes the phrase as valuable as the funds: it should be written down offline and never typed into a website, emailed or photographed. Fake websites and support staff asking for seed phrases are a common scam. A common confusion: a private key is not a password you can reset; there is no bank or helpline to recover it, and lost keys mean permanently inaccessible coins.",
+    "example": "A 12-word seed phrase encodes 128 bits of randomness, so there are 2^128, or about 3.4 × 10^38, possible phrases, which is why guessing one is practically impossible. Losing it is the real danger: if you hold, say, 0.5 BTC and lose both the device and the phrase, the whole 0.5 BTC is gone for good.",
+    "formula": "",
+    "related": [
+      "Crypto wallet",
+      "Blockchain",
+      "Centralised exchange",
+      "Cryptocurrency",
+      "Bitcoin"
+    ]
+  },
+  {
+    "id": "centralised-exchange",
+    "term": "Centralised exchange",
+    "cat": "crypto",
+    "level": "b",
+    "aliases": [
+      "CEX",
+      "crypto exchange",
+      "centralized exchange"
+    ],
+    "hl": [
+      "crypto exchange",
+      "crypto exchanges",
+      "cryptocurrency exchange",
+      "cryptocurrency exchanges",
+      "centralised exchange",
+      "centralised exchanges",
+      "centralized exchange",
+      "centralized exchanges"
+    ],
+    "abbr": [
+      "CEX",
+      "CEXs"
+    ],
+    "short": "A company-run platform where people buy and sell cryptocurrencies, which holds customers' money and coins and matches their orders, like a broker and exchange combined.",
+    "kid": "A crypto exchange is like a big swap shop run by one shopkeeper. You hand over your pocket money, the shopkeeper keeps it in the back room, and helps you swap it for the toys you want.",
+    "detail": "A centralised exchange, or CEX, is a company that runs an online marketplace for crypto. Users sign up, complete KYC checks, deposit rupees or dollars, and trade through an order book the exchange operates; the exchange holds their coins in its own wallets until they withdraw. Global examples include Binance and Coinbase; Indian ones include CoinDCX and WazirX. CEXs offer liquidity, easy conversion between crypto and ordinary money, and simple apps, but they concentrate risk: the operator can be hacked, misuse funds or freeze withdrawals, as in FTX's collapse in November 2022 and the July 2024 hack that cost WazirX about $230 million of user funds. Under the rules as of 2025, exchanges serving Indians must register with the Financial Intelligence Unit for anti-money-laundering purposes, but investors get no SEBI-style protection. A common confusion: unlike a stock exchange, a CEX usually acts as exchange, broker and custodian at once.",
+    "example": "Say an Indian exchange charges a 0.2% trading fee. Buying ₹1 lakh of bitcoin costs ₹200 in fees, and selling it later for ₹1.2 lakh costs another ₹240, so before GST and tax the round trip earns ₹20,000 - ₹200 - ₹240 = ₹19,560.",
+    "formula": "",
+    "related": [
+      "Decentralised exchange",
+      "Crypto wallet",
+      "Order book",
+      "Know your customer",
+      "Counterparty risk",
+      "Stock exchange"
+    ]
+  },
+  {
+    "id": "decentralised-exchange",
+    "term": "Decentralised exchange",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "DEX",
+      "decentralized exchange"
+    ],
+    "hl": [
+      "decentralised exchange",
+      "decentralised exchanges",
+      "decentralized exchange",
+      "decentralized exchanges"
+    ],
+    "abbr": [
+      "DEX",
+      "DEXs",
+      "DEXes"
+    ],
+    "short": "A crypto trading venue run by code on a blockchain, where users swap tokens straight from their own wallets with no company holding their funds.",
+    "kid": "A decentralised exchange is like a swap machine in the park that anyone can use. You put one toy in, take a different toy out, and no shopkeeper ever holds your things.",
+    "detail": "A decentralised exchange, or DEX, lets users trade crypto tokens directly from their own wallets through smart contracts, with no company taking custody of their funds. Most DEXs, such as Uniswap, launched in 2018, use automated market makers: instead of matching buyers and sellers in an order book, traders swap against liquidity pools of tokens, and a formula sets the price. Anyone can list a token, and trading needs no account or KYC. Users pay a trading fee to liquidity providers plus a blockchain network fee. Advantages include self-custody, transparency and round-the-clock access; drawbacks include slippage on large trades, front-running bots, scam tokens and smart-contract bugs. A common confusion: having no custodian does not mean having no risk; a fake token or a malicious approval can drain your wallet, and there is no customer support to reverse a mistaken trade.",
+    "example": "Say you swap $10,000 of USDC for ether on a DEX pool with a 0.3% fee. You pay $30 to the pool's liquidity providers plus, say, $5 in network fees, so the trade costs $35, or 0.35%, before any slippage.",
+    "formula": "",
+    "related": [
+      "Centralised exchange",
+      "Liquidity pool",
+      "Decentralised finance",
+      "Smart contract",
+      "Slippage",
+      "Market maker"
+    ]
+  },
+  {
+    "id": "liquidity-pool",
+    "term": "Liquidity pool",
+    "cat": "crypto",
+    "level": "a",
+    "aliases": [
+      "automated market maker",
+      "AMM",
+      "LP tokens"
+    ],
+    "hl": [
+      "liquidity pool",
+      "liquidity pools",
+      "automated market maker",
+      "automated market makers",
+      "lp token",
+      "lp tokens"
+    ],
+    "abbr": [
+      "AMM",
+      "AMMs"
+    ],
+    "short": "A shared pot of two or more crypto tokens, locked in a smart contract, that traders swap against at prices set automatically by a formula.",
+    "kid": "Imagine a big jar with apples on one side and oranges on the other. You can put in apples and take out oranges, and the fewer oranges are left, the more apples each one costs.",
+    "detail": "A liquidity pool is a smart contract holding reserves of tokens, such as ether and a dollar stablecoin, that traders on a decentralised exchange swap against. The pool's pricing rule is called an automated market maker (AMM). The best-known version, popularised by Uniswap, keeps the product of the two reserves constant, so as traders take one token out, its price rises. Liquidity providers deposit both tokens in equal value, receive LP tokens representing their share of the pool, and earn a cut of trading fees. They face impermanent loss: when prices move, the pool's automatic rebalancing leaves them worse off than simply holding the two tokens. Deeper pools mean less slippage for traders. A common confusion: an AMM is not a person or firm quoting prices; it is a formula, and its price tracks outside markets only because arbitrageurs trade against it.",
+    "example": "Say a pool holds 10 ETH and 20,000 USDC, so k = 10 × 20,000 = 200,000 and ETH is priced at $2,000. A trader adds 5,000 USDC, making 25,000; to keep k fixed, the pool's ETH must fall to 200,000 / 25,000 = 8. The trader receives 2 ETH for $5,000, an average of $2,500 each, ignoring fees.",
+    "formula": "x × y = k (reserve of token A × reserve of token B = constant)",
+    "related": [
+      "Decentralised exchange",
+      "Yield farming",
+      "Market maker",
+      "Slippage",
+      "Decentralised finance",
+      "Arbitrage"
+    ]
+  },
+  {
+    "id": "yield-farming",
+    "term": "Yield farming",
+    "cat": "crypto",
+    "level": "a",
+    "aliases": [
+      "liquidity mining"
+    ],
+    "hl": [
+      "yield farming",
+      "yield farmer",
+      "yield farmers",
+      "liquidity mining"
+    ],
+    "abbr": [],
+    "short": "Lending or depositing crypto in blockchain-based apps to earn fees and bonus tokens, often moving funds around to chase the highest returns.",
+    "kid": "Yield farming is like lending your toys to different friends who each promise you sweets in return. You keep moving your toys to whoever offers the most sweets, but some friends may not give them back.",
+    "detail": "Yield farming means putting crypto to work in DeFi protocols, for example by depositing tokens into liquidity pools or lending markets, to earn a return. Liquidity mining is the version in which protocols pay extra governance tokens on top of normal fees or interest to attract deposits. The craze took off in mid-2020 after the lending protocol Compound began handing out its COMP token, a period nicknamed DeFi summer. Headline yields can look enormous, but much of the return is paid in new tokens whose price often falls as farmers sell them. Risks stack up: smart-contract hacks, impermanent loss, liquidation if positions use borrowed money, and rug pulls by anonymous teams. Returns are usually quoted as APY, which assumes compounding. A common confusion: a high advertised yield is not like a bank deposit rate; it is variable, often unsustainable and carries no guarantee or insurance.",
+    "example": "Say you deposit $10,000 in a pool paying 8% a year in trading fees and 12% in reward tokens, a headline 20%, or $2,000. If the reward token's price halves over the year, those rewards are worth $600 rather than $1,200, so you earn $800 + $600 = $1,400, or 14%, before any impermanent loss.",
+    "formula": "APY = (1 + APR / n)^n - 1, where n is the number of compounding periods in a year",
+    "related": [
+      "Liquidity pool",
+      "Decentralised finance",
+      "Staking",
+      "Annual percentage rate",
+      "Compounding",
+      "Tokenomics"
+    ]
+  },
+  {
+    "id": "staking",
+    "term": "Staking",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "crypto staking",
+      "staking rewards",
+      "liquid staking"
+    ],
+    "hl": [
+      "crypto staking",
+      "staking rewards",
+      "staking reward",
+      "liquid staking",
+      "staked ether",
+      "ether staking",
+      "eth staking",
+      "staking yield",
+      "staking yields"
+    ],
+    "abbr": [],
+    "short": "Locking up crypto to help secure and run a blockchain network, earning regular rewards paid in the same crypto.",
+    "kid": "Staking is like giving your marbles to the playground helper to hold while they keep the games fair. For helping, you get a few extra marbles back, but if the helper cheats, some marbles are taken away.",
+    "detail": "Staking is the process of locking up tokens on a proof-of-stake blockchain so they can be used to validate transactions. Validators, chosen partly by how much they have staked, propose and confirm blocks and earn rewards from new issuance and fees; if they cheat or go offline, part of their stake can be slashed. On Ethereum, running a validator needs at least 32 ETH, so most people stake through exchanges or pools. Liquid staking services such as Lido issue a receipt token, like stETH, that can be traded or used in DeFi while the original ether stays staked. Rewards are variable and paid in the token itself, so a falling price can wipe them out. Other risks include withdrawal delays and failure of the platform holding your stake. A common confusion: staking is not a fixed deposit; neither the reward rate nor the rupee value of your holding is guaranteed.",
+    "example": "Say you stake 10 ETH at a reward rate of 3% a year, earning 10 × 3% = 0.3 ETH, so you hold 10.3 ETH after a year. If ether starts at $2,000, your 10 ETH is worth $20,000; if it falls 20% to $1,600, your 10.3 ETH is worth $16,480, a loss of $3,520 despite the rewards.",
+    "formula": "Staking reward = Amount staked × Annual reward rate × Years staked",
+    "related": [
+      "Proof of stake",
+      "Ethereum",
+      "Yield farming",
+      "Consensus mechanism",
+      "Crypto wallet",
+      "Lock-in period"
+    ]
+  },
+  {
+    "id": "blockchain-oracle",
+    "term": "Blockchain oracle",
+    "cat": "crypto",
+    "level": "a",
+    "aliases": [
+      "price oracle",
+      "oracle network",
+      "decentralised oracle network"
+    ],
+    "hl": [
+      "blockchain oracle",
+      "blockchain oracles",
+      "price oracle",
+      "price oracles",
+      "oracle manipulation"
+    ],
+    "abbr": [],
+    "short": "A service that feeds outside information, such as prices, weather or sports scores, into a blockchain so smart contracts can act on it.",
+    "kid": "A blockchain cannot look out of the window by itself. An oracle is like a friend who checks the weather and tells it, so it knows whether to hand out umbrellas.",
+    "detail": "Blockchains cannot fetch data from the outside world on their own; they only know what is recorded on-chain. An oracle bridges that gap by bringing in external data, most often asset prices, and publishing it for smart contracts to use. DeFi depends on oracles: a lending protocol needs the price of ether to decide when to liquidate a loan, and a stablecoin needs prices to check the value of its collateral. That creates the oracle problem: a contract is only as reliable as its data. If an attacker can push a price feed off, for example by trading heavily in a thin market, a protocol may lend too much or liquidate wrongly. Decentralised oracle networks such as Chainlink combine many independent sources to reduce the damage from a single bad feed. A common confusion: blockchain oracles have nothing to do with Oracle, the software company.",
+    "example": "Say a lending protocol reads a token's price from a single thinly traded exchange where it normally trades at $1. An attacker buys heavily and lifts it to $3, so 1 million tokens pledged as collateral appear to be worth $3 million instead of $1 million; at a 50% loan limit, the attacker can borrow $1.5 million against collateral really worth $1 million.",
+    "formula": "",
+    "related": [
+      "Smart contract",
+      "Decentralised finance",
+      "Blockchain",
+      "Liquidity pool",
+      "Stablecoin"
+    ]
+  },
+  {
+    "id": "consensus-mechanism",
+    "term": "Consensus mechanism",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "consensus algorithm",
+      "consensus protocol"
+    ],
+    "hl": [
+      "consensus mechanism",
+      "consensus mechanisms",
+      "consensus algorithm",
+      "consensus algorithms",
+      "consensus protocol",
+      "consensus protocols"
+    ],
+    "abbr": [],
+    "short": "The set of rules a blockchain's computers follow to agree on which transactions are valid and in what order, without a central authority.",
+    "kid": "When lots of friends keep the same scorebook, they need a fair way to agree on what to write next. A consensus mechanism is the game rule that decides who writes the next line and how everyone checks it.",
+    "detail": "In a blockchain with no central operator, thousands of computers must agree on one shared history, even though some may be faulty or dishonest. A consensus mechanism is the method that achieves this: it decides who may add the next block, how others verify it, and how competing versions are settled. The two main families are proof of work, used by Bitcoin, where miners spend computing power, and proof of stake, used by Ethereum since 2022, where validators put up their own coins as collateral. Both are designed to make cheating more expensive than playing fair. Permissioned ledgers run by banks often use faster voting-based methods, known as Byzantine fault tolerant protocols, among known participants. The choice shapes a network's security, speed, energy use and how decentralised it is. A common confusion: consensus estimates, the average of analysts' forecasts in market news, are an unrelated idea.",
+    "example": "In Bitcoin's proof of work, a miner with 1% of the network's computing power expects to win about 1% of blocks: 144 blocks a day × 1% = 1.44 blocks a day. To rewrite history, an attacker would generally need more than 50% of total computing power, which is where the term 51% attack comes from.",
+    "formula": "",
+    "related": [
+      "Proof of work",
+      "Proof of stake",
+      "Blockchain",
+      "Staking",
+      "Bitcoin",
+      "Ethereum"
+    ]
+  },
+  {
+    "id": "proof-of-work",
+    "term": "Proof of work",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "PoW"
+    ],
+    "hl": [
+      "proof of work",
+      "proof-of-work"
+    ],
+    "abbr": [
+      "PoW"
+    ],
+    "short": "A way of securing a blockchain where computers race to solve a costly puzzle; the winner adds the next block and earns new coins.",
+    "kid": "Proof of work is like a big puzzle race. Everyone tries to finish the puzzle first, and the winner gets to write the next page in the class diary and earns a sticker.",
+    "detail": "Proof of work is the consensus mechanism that secures Bitcoin and some other blockchains. Miners repeatedly run a hash function on a candidate block, changing a number each time, until the output falls below a target; finding it takes enormous trial and error, but anyone can check the answer instantly. The winner adds the block and collects the block reward plus fees. Bitcoin adjusts the difficulty every 2,016 blocks, about two weeks, to keep blocks arriving roughly every 10 minutes as total computing power changes. Security comes from cost: rewriting history would require out-computing the rest of the network, a so-called 51% attack. The main drawback is energy use: Bitcoin's is comparable to that of a mid-sized country, and mining gravitates to wherever electricity is cheapest. A common confusion: miners are not solving useful maths problems; the work is deliberately wasteful, and that cost is what makes cheating expensive.",
+    "example": "Say a mining firm controls 2% of Bitcoin's total computing power. With about 144 blocks a day, it expects to win 144 × 2% = 2.88 blocks a day, which at the 3.125 BTC block reward set by the April 2024 halving comes to 9 BTC a day, before fees and electricity costs.",
+    "formula": "Expected share of blocks = Miner's hash rate / Total network hash rate",
+    "related": [
+      "Proof of stake",
+      "Consensus mechanism",
+      "Bitcoin",
+      "Blockchain",
+      "Cryptocurrency"
+    ]
+  },
+  {
+    "id": "proof-of-stake",
+    "term": "Proof of stake",
+    "cat": "crypto",
+    "level": "i",
+    "aliases": [
+      "PoS"
+    ],
+    "hl": [
+      "proof of stake",
+      "proof-of-stake"
+    ],
+    "abbr": [],
+    "short": "A method of securing a blockchain in which holders lock up coins as a deposit to add blocks; cheaters lose part of it.",
+    "kid": "Proof of stake is like letting children take turns as the game's referee, but each one first puts some marbles in a jar. Play fair and you get extra marbles; cheat and you lose some of yours.",
+    "detail": "Proof of stake is a consensus mechanism in which validators, rather than miners, secure the blockchain. Each validator locks up, or stakes, the network's own coins as collateral; the protocol picks validators to propose and confirm blocks, with chances broadly in proportion to stake, and pays them rewards. Validators who sign conflicting blocks or otherwise break the rules can be slashed, losing part of their stake, so honesty is enforced by financial penalties rather than electricity bills. Ethereum moved from proof of work to proof of stake in the Merge of September 2022, cutting its energy use by about 99.95%; Solana, Cardano and many newer chains also use it. Critics argue it favours those who already hold the most coins and that large staking providers concentrate power. A common confusion: simply holding coins in a wallet is not staking; they must be actively locked with a validator to earn rewards.",
+    "example": "Ethereum has a block slot every 12 seconds, or 7,200 a day. Say a staking provider controls 5% of all staked ether; it can expect to propose about 7,200 × 5% = 360 blocks a day. If one of its validators holding 32 ETH were slashed 1 ETH, that would be a 3.125% penalty on that validator's stake.",
+    "formula": "Chance of being chosen ≈ Validator's stake / Total amount staked",
+    "related": [
+      "Proof of work",
+      "Staking",
+      "Consensus mechanism",
+      "Ethereum",
+      "Blockchain"
+    ]
+  }
+]

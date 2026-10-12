@@ -1,0 +1,1294 @@
+[
+ {
+  "id": "exchange-rate",
+  "term": "Exchange rate",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "forex rate",
+   "FX rate",
+   "currency rate"
+  ],
+  "hl": [
+   "exchange rate",
+   "exchange rates",
+   "forex rate",
+   "forex rates",
+   "fx rate",
+   "fx rates",
+   "currency rate",
+   "currency rates"
+  ],
+  "abbr": [],
+  "short": "The price of one country's money in terms of another's, such as how many rupees it takes to buy one US dollar.",
+  "kid": "If you swap your marbles for a friend's stickers, you both need to agree how many marbles one sticker is worth. Countries do the same with their money.",
+  "detail": "An exchange rate is the price of one currency expressed in another. India quotes it directly, as rupees per unit of foreign currency (say ₹80 per dollar), while some markets quote it indirectly (dollars per rupee). Rates are set by supply and demand in the foreign exchange market, shaped by interest rates, inflation, trade flows, capital flows and central bank action. They matter everywhere: a weaker rupee raises the cost of imported oil, electronics and foreign education but helps exporters such as IT services firms, and it changes the dollar returns of foreign investors in Indian shares and bonds. The common confusion is direction: when USD/INR rises from 80 to 82, the number went up but the rupee got weaker, because each dollar now costs more rupees. Always check which currency sits in the denominator.",
+  "example": "At ₹80 per dollar, $1 costs ₹80 and ₹1 is worth $0.0125 (1 / 80). A $500 laptop therefore costs ₹40,000 before taxes and shipping. If the rate moves to ₹82, the same laptop costs ₹41,000.",
+  "formula": "Value of ₹1 in dollars = 1 / Rupees per dollar",
+  "related": [
+   "Foreign exchange market",
+   "Spot exchange rate",
+   "Currency depreciation",
+   "Currency appreciation",
+   "Real effective exchange rate",
+   "Purchasing power parity"
+  ]
+ },
+ {
+  "id": "foreign-exchange-market",
+  "term": "Foreign exchange market",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "forex",
+   "FX",
+   "forex market",
+   "currency market"
+  ],
+  "hl": [
+   "foreign exchange market",
+   "foreign exchange markets",
+   "forex market",
+   "forex markets",
+   "fx market",
+   "fx markets",
+   "currency market",
+   "currency markets"
+  ],
+  "abbr": [],
+  "short": "The worldwide market where banks, companies, investors and central banks buy and sell currencies, open around the clock on weekdays.",
+  "kid": "Imagine a giant swap table where people from every country trade their coins for other countries' coins. It never really sleeps, because some country is always awake.",
+  "detail": "The foreign exchange market is a decentralised, mostly over-the-counter network where currencies are traded, with no single exchange or closing bell. It runs 24 hours a day on weekdays as trading moves from Sydney and Tokyo to London and New York. It is the largest financial market in the world: the BIS Triennial Survey put average turnover at about $9.6 trillion a day in April 2025, with the US dollar on one side of roughly 89% of trades. Participants include banks, exporters and importers, fund managers, hedge funds and central banks. In India the market is regulated by the RBI under FEMA; most trading is interbank, alongside exchange-traded currency futures and options on NSE and BSE. Common confusion: under FEMA rules as of 2025, Indian residents may trade currencies only through authorised dealers or recognised Indian exchanges, and the RBI keeps an alert list of unauthorised forex trading platforms.",
+  "example": "Say a hypothetical exporter, ABC Software Ltd, converts $2 million of export earnings when its bank quotes ₹79.95 to buy and ₹80.05 to sell dollars. The bank buys at its lower price, so the company receives ₹15.99 crore (2,000,000 × 79.95). The 10-paise gap between the two prices is the bank's spread.",
+  "formula": "",
+  "related": [
+   "Exchange rate",
+   "Spot exchange rate",
+   "Forward exchange rate",
+   "Currency pair",
+   "FEMA",
+   "FX intervention"
+  ]
+ },
+ {
+  "id": "spot-exchange-rate",
+  "term": "Spot exchange rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "spot FX",
+   "spot FX rate",
+   "FX spot"
+  ],
+  "hl": [
+   "spot exchange rate",
+   "spot exchange rates",
+   "spot fx",
+   "fx spot",
+   "spot forex",
+   "spot rupee"
+  ],
+  "abbr": [],
+  "short": "The exchange rate for buying or selling a currency now, with delivery normally two working days after the deal.",
+  "kid": "It is the swap price for right now. You shake hands today, and the coins change hands a day or two later.",
+  "detail": "The spot exchange rate is the price agreed today for an immediate currency exchange. By market convention, spot deals settle two business days after the trade date (T+2) for most currency pairs, though a few, such as USD/CAD, settle T+1. In India, dollar-rupee deals can also be done for value 'cash' (same day) or 'tom' (next day), at rates slightly different from spot. The spot rate is what screens and newspapers mean by 'the rupee closed at', and FBIL publishes a daily reference rate used to value many contracts. Spot reflects current supply and demand, while forward rates add the interest-rate gap between the two currencies. Common confusion: the spot exchange rate is not the 'spot rate' of bond maths, which means a zero-coupon interest rate for a given maturity.",
+  "example": "Say an importer buys $50,000 spot at ₹80.00 per dollar on a Monday. It pays ₹40 lakh (50,000 × 80) and receives the dollars on Wednesday, two business days later, even if the market rate has moved by then.",
+  "formula": "",
+  "related": [
+   "Exchange rate",
+   "Forward exchange rate",
+   "Foreign exchange market",
+   "Currency pair",
+   "Spot rate",
+   "Reference rate"
+  ]
+ },
+ {
+  "id": "forward-exchange-rate",
+  "term": "Forward exchange rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "FX forward",
+   "currency forward",
+   "forward cover"
+  ],
+  "hl": [
+   "forward exchange rate",
+   "forward exchange rates",
+   "fx forward",
+   "fx forwards",
+   "forward exchange contract",
+   "forward exchange contracts"
+  ],
+  "abbr": [],
+  "short": "An exchange rate fixed today for swapping currencies on a future date, used by companies to lock in costs or receipts.",
+  "kid": "You and a friend agree today that next month you will swap five marbles for one sticker, whatever happens. No surprises later.",
+  "detail": "A forward exchange rate is the rate agreed today in a contract to exchange currencies on a set future date. Its level is not a forecast: it comes from the spot rate adjusted for the interest-rate difference between the two currencies, a link called covered interest parity. Because Indian interest rates are usually higher than US rates, the dollar trades at a premium in the rupee forward market, so the forward rate sits above spot. Exporters sell dollars forward to lock in rupee receipts and importers buy forward to fix costs; in India this is often called forward cover, and under RBI rules as of 2025 most such bank hedges must be linked to a genuine underlying exposure. Offshore, rupee forwards also trade as non-deliverable forwards settled in dollars. Common confusion: a forward removes uncertainty; it does not guarantee a better rate than spot on the maturity date.",
+  "example": "Say spot is ₹80.00 per dollar and a hypothetical exporter, XYZ Textiles Ltd, sells $100,000 six months forward at ₹81.20. In six months it receives exactly ₹81.2 lakh (100,000 × 81.20). If spot is then ₹78, it is ₹3.2 lakh better off than if it had not hedged; if spot is ₹83, it gives up ₹1.8 lakh.",
+  "formula": "Forward rate = Spot rate × (1 + Domestic interest rate × t) / (1 + Foreign interest rate × t), where t is time in years",
+  "related": [
+   "Spot exchange rate",
+   "Forward premium",
+   "Hedging",
+   "Non-deliverable forward",
+   "Interest rate parity",
+   "RBI forward book"
+  ]
+ },
+ {
+  "id": "forward-premium",
+  "term": "Forward premium",
+  "cat": "fx-trade",
+  "level": "a",
+  "aliases": [
+   "forward discount",
+   "forward points",
+   "forward premia"
+  ],
+  "hl": [
+   "forward premium",
+   "forward premiums",
+   "forward premia",
+   "forward discount",
+   "forward points",
+   "dollar-rupee forward premia",
+   "rupee forward premia",
+   "annualised forward premium"
+  ],
+  "abbr": [],
+  "short": "How far a currency's forward rate sits above (a premium) or below (a discount) its spot rate, often shown as an annual percentage.",
+  "kid": "Swapping later can cost a little more than swapping now. That little extra is the gap between the price for today and the price for later.",
+  "detail": "The forward premium is the gap between the forward and spot exchange rates. If a currency's forward rate is higher than spot, it trades at a forward premium; if lower, at a discount. Dealers quote the gap in forward points (in the rupee market, often in paise), and analysts annualise it as a percentage. Under covered interest parity the annualised premium roughly equals the interest-rate difference between the two currencies, which is why the dollar usually trades at a premium against the higher-yielding rupee. Indian headlines track dollar-rupee forward premia because they show the hedging cost for importers, the extra return exporters earn by selling forward, and the effect of the RBI's own forward and swap operations. Common confusion: a premium on the dollar does not mean the market expects the rupee to fall by that much; it mostly reflects interest rates.",
+  "example": "Say spot USD/INR is ₹80.00 and the six-month forward is ₹81.20. The premium is ₹1.20, or 1.5% for six months (1.20 / 80), which annualises to 3.0%. That is close to a 3-percentage-point gap between rupee and dollar interest rates.",
+  "formula": "Annualised forward premium (%) = (Forward rate − Spot rate) / Spot rate × (12 / Months to maturity) × 100",
+  "related": [
+   "Forward exchange rate",
+   "Spot exchange rate",
+   "Interest rate parity",
+   "Carry trade",
+   "Hedging",
+   "RBI forward book"
+  ]
+ },
+ {
+  "id": "currency-pair",
+  "term": "Currency pair",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "FX pair",
+   "base currency",
+   "quote currency",
+   "major pairs"
+  ],
+  "hl": [
+   "currency pair",
+   "currency pairs",
+   "fx pair",
+   "fx pairs",
+   "major currency pairs",
+   "base currency",
+   "quote currency"
+  ],
+  "abbr": [],
+  "short": "Two currencies quoted against each other, such as EUR/USD, showing how much of the second buys one unit of the first.",
+  "kid": "It is like saying one apple costs three sweets. You always name two things, and say how many of the second you need for one of the first.",
+  "detail": "Every exchange rate involves a currency pair written as BASE/QUOTE. The number tells you how many units of the quote currency buy one unit of the base currency: EUR/USD at 1.10 means €1 costs $1.10, and USD/INR at 80 means $1 costs ₹80. If the number rises, the base currency has strengthened. The most traded majors all include the US dollar: EUR/USD, USD/JPY, GBP/USD, USD/CHF, AUD/USD, USD/CAD and NZD/USD. Pairs without the dollar, such as EUR/INR or EUR/JPY, are crosses. Under the rules as of 2025, Indian residents can use exchange-traded currency derivatives only in rupee pairs and a few permitted crosses such as EUR/USD, and broadly need a genuine underlying exposure. Common confusion: order matters. USD/INR and INR/USD describe the same market, but one is the reciprocal of the other, so a rise in one is a fall in the other.",
+  "example": "At EUR/USD 1.10, buying €10,000 costs $11,000 (10,000 × 1.10). If the pair rises to 1.12, the euro has strengthened and the same €10,000 now costs $11,200, or $200 more.",
+  "formula": "Quote currency amount = Base currency amount × Exchange rate",
+  "related": [
+   "Exchange rate",
+   "Cross rate",
+   "Pip",
+   "Bid-ask spread",
+   "Foreign exchange market"
+  ]
+ },
+ {
+  "id": "pip",
+  "term": "Pip",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "pips",
+   "percentage in point"
+  ],
+  "hl": [
+   "percentage in point",
+   "price interest point"
+  ],
+  "abbr": [],
+  "short": "The smallest standard price step in a currency quote: 0.0001 for most pairs and 0.01 for pairs involving the Japanese yen.",
+  "kid": "A pip is the tiniest step a swap price usually takes, like one crumb off a big cookie. Lots of crumbs together make a real bite.",
+  "detail": "A pip, short for percentage in point or price interest point, is the standard unit for measuring moves in an exchange rate. For most pairs quoted to four decimal places, such as EUR/USD, one pip is 0.0001; for yen pairs, such as USD/JPY, it is 0.01. Many platforms now show an extra decimal, called a pipette or fractional pip. Traders measure gains, losses, spreads and stop-losses in pips, and the money value of a pip depends on trade size: on a standard lot of 100,000 units of the base currency, one pip in EUR/USD is worth $10. In the rupee market, moves are usually described in paise instead (₹0.01 is one paisa). Common confusion: a pip is neither a fixed amount of money nor a percentage; it is a price step whose value scales with the size of the position.",
+  "example": "If EUR/USD rises from 1.1000 to 1.1050, it has moved 50 pips. On a standard lot of €100,000, each pip is worth $10 (100,000 × 0.0001), so the move is worth $500 to a buyer.",
+  "formula": "Pip value = Trade size × Pip size (0.0001, or 0.01 for yen pairs), in the quote currency",
+  "related": [
+   "Currency pair",
+   "Tick size",
+   "Bid-ask spread",
+   "Foreign exchange market",
+   "Stop-loss order"
+  ]
+ },
+ {
+  "id": "cross-rate",
+  "term": "Cross rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "cross currency rate",
+   "crosses"
+  ],
+  "hl": [
+   "cross rate",
+   "cross rates",
+   "cross-currency rate",
+   "cross-currency rates",
+   "cross currency rate",
+   "cross currency rates"
+  ],
+  "abbr": [],
+  "short": "An exchange rate between two currencies worked out through a third, usually the US dollar, such as euro-rupee from euro-dollar and dollar-rupee.",
+  "kid": "If one apple swaps for two oranges and one orange swaps for three sweets, then one apple swaps for six sweets. A cross rate does that sum.",
+  "detail": "A cross rate is the exchange rate between two currencies calculated from their separate rates against a common third currency, almost always the US dollar. Because the dollar market is the deepest, banks often price EUR/INR or GBP/INR by combining EUR/USD or GBP/USD with USD/INR. Traders also use crosses to mean any pair that excludes the dollar, such as EUR/JPY. Cross rates must stay consistent: if a quoted EUR/INR drifts away from EUR/USD × USD/INR, arbitrageurs buy through the cheap route and sell through the dear one until the gap closes, leaving only transaction costs. For Indian companies with euro, pound or yen exposures, a move in a cross rate can come from either leg. Common confusion: the rupee can weaken against the euro on a day it strengthens against the dollar, if the euro rises faster against the dollar.",
+  "example": "If USD/INR is 80.00 and EUR/USD is 1.10, the EUR/INR cross rate is 88.00 (80 × 1.10). A hypothetical Indian importer, say ABC Ltd, paying a €50,000 bill therefore needs ₹44 lakh (50,000 × 88).",
+  "formula": "EUR/INR = EUR/USD × USD/INR",
+  "related": [
+   "Currency pair",
+   "Exchange rate",
+   "Arbitrage",
+   "Foreign exchange market",
+   "Spot exchange rate"
+  ]
+ },
+ {
+  "id": "rupee-dollar-exchange-rate",
+  "term": "Rupee-dollar exchange rate",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "USD/INR",
+   "USDINR",
+   "INR/USD",
+   "rupee vs dollar"
+  ],
+  "hl": [
+   "rupee-dollar exchange rate",
+   "rupee-dollar",
+   "dollar-rupee",
+   "rupee vs dollar",
+   "rupee versus dollar",
+   "rupee vs us dollar",
+   "rupee against dollar",
+   "rupee against the dollar",
+   "rupee against the us dollar",
+   "usd/inr",
+   "usdinr",
+   "inr/usd"
+  ],
+  "abbr": [],
+  "short": "How many Indian rupees it takes to buy one US dollar, the most watched exchange rate in India, quoted as USD/INR.",
+  "kid": "It tells you how many of India's coins you need to get one of America's coins. If you need more coins than before, our coins have become a bit weaker.",
+  "detail": "The rupee-dollar rate, quoted as USD/INR, states how many rupees buy one US dollar. It matters most because the dollar dominates India's trade invoicing, external debt and foreign investment flows. The rate is market-determined, with the RBI intervening to smooth volatility rather than to defend a fixed level, and FBIL publishes a daily reference rate. Key drivers include crude oil prices, the trade and current account balances, foreign portfolio flows, the dollar's global strength and the interest-rate gap between India and the US. Historically the rupee was pegged, was devalued in 1966 and 1991, and moved to a market-based rate in 1993. Never quote today's level from memory; check the live rates board. Common confusion: a higher USD/INR number means a weaker rupee, and a 5% rise in the dollar is not the same as a 5% fall in the rupee.",
+  "example": "If USD/INR moves from 80 to 84, the dollar has risen 5% (4 / 80), but the rupee's value in dollars has fallen 4.76% (1 − 80/84). A hypothetical importer's $10,000 bill rises from ₹8 lakh to ₹8.4 lakh.",
+  "formula": "Rupee's value in dollars = 1 / USD/INR rate",
+  "related": [
+   "Exchange rate",
+   "Currency depreciation",
+   "Currency appreciation",
+   "Reserve Bank of India",
+   "FX intervention",
+   "US Dollar Index"
+  ]
+ },
+ {
+  "id": "currency-appreciation",
+  "term": "Currency appreciation",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "currency strengthening",
+   "rupee appreciation"
+  ],
+  "hl": [
+   "currency appreciation",
+   "rupee appreciation",
+   "rupee appreciates",
+   "rupee strengthens",
+   "rupee gains",
+   "stronger rupee",
+   "appreciation of the rupee",
+   "currency strengthening"
+  ],
+  "abbr": [],
+  "short": "A rise in a currency's value against another, so each unit buys more foreign currency, goods and services than before.",
+  "kid": "Your pocket money suddenly buys more toys from a shop in another country. Your coins have become stronger.",
+  "detail": "Currency appreciation is a market-driven rise in a currency's value relative to another. For the rupee, it shows up as USD/INR falling, say from 84 to 80, because each dollar now costs fewer rupees. Causes include strong foreign investment inflows, a narrowing current account deficit, higher domestic interest rates relative to abroad, or a broadly weaker US dollar. Appreciation makes imports, foreign travel and overseas education cheaper and helps cool imported inflation, but it squeezes exporters, whose foreign earnings convert into fewer rupees; that is why IT services and pharma stocks can lag when the rupee strengthens. Central banks, including the RBI, sometimes buy dollars to slow sharp gains, which also builds reserves. Common confusion: appreciation is a market move; an official increase in a fixed exchange rate is called revaluation.",
+  "example": "If USD/INR falls from 84 to 80, the rupee has appreciated 5% (84/80 − 1). A student's $20,000 tuition then costs ₹16 lakh instead of ₹16.8 lakh, while an exporter earning $20,000 receives ₹80,000 less.",
+  "formula": "% appreciation of home currency = (Old rate / New rate − 1) × 100, with rates in home currency per unit of foreign currency",
+  "related": [
+   "Currency depreciation",
+   "Revaluation",
+   "Exchange rate",
+   "Rupee-dollar exchange rate",
+   "FX intervention",
+   "Real effective exchange rate"
+  ]
+ },
+ {
+  "id": "currency-depreciation",
+  "term": "Currency depreciation",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "currency weakening",
+   "rupee depreciation",
+   "rupee fall"
+  ],
+  "hl": [
+   "currency depreciation",
+   "rupee depreciation",
+   "rupee depreciates",
+   "rupee weakens",
+   "weaker rupee",
+   "weak rupee",
+   "rupee falls",
+   "rupee fall",
+   "rupee slides",
+   "rupee slips",
+   "rupee hits record low",
+   "rupee hits all-time low",
+   "rupee at record low",
+   "depreciation of the rupee",
+   "currency weakening"
+  ],
+  "abbr": [],
+  "short": "A fall in a currency's value against another, so each unit buys less foreign currency, goods and services than before.",
+  "kid": "Your pocket money buys fewer toys from a shop in another country than it did last month. Your coins have become a bit weaker.",
+  "detail": "Currency depreciation is a market-driven fall in a currency's value against another. For the rupee it shows up as USD/INR rising, say from 80 to 88. Common causes are a wider current account deficit, foreign investors pulling money out, a stronger US dollar globally, higher inflation at home than abroad, or a jump in crude oil prices for an importer like India. Depreciation raises the rupee cost of imports, fuel and foreign debt repayments and can feed inflation, but it helps exporters and makes Indian assets cheaper for foreigners. The RBI may sell dollars from its reserves to slow a disorderly fall, but it does not target a level. Common confusion: depreciation is a market move, while an official cut in a fixed rate is devaluation; and it has nothing to do with accounting depreciation of machines and buildings.",
+  "example": "If USD/INR rises from 80 to 88, the rupee has depreciated 9.09% (1 − 80/88), while the dollar has gained 10%. A hypothetical company importing a $1 million machine now pays ₹8.8 crore instead of ₹8 crore.",
+  "formula": "% depreciation of home currency = (1 − Old rate / New rate) × 100, with rates in home currency per unit of foreign currency",
+  "related": [
+   "Currency appreciation",
+   "Devaluation",
+   "Rupee-dollar exchange rate",
+   "Imported inflation",
+   "FX intervention",
+   "Current account deficit"
+  ]
+ },
+ {
+  "id": "devaluation",
+  "term": "Devaluation",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "currency devaluation",
+   "competitive devaluation"
+  ],
+  "hl": [
+   "devaluation",
+   "devaluations",
+   "currency devaluation",
+   "competitive devaluation",
+   "competitive devaluations",
+   "rupee devaluation",
+   "yuan devaluation",
+   "devalues currency",
+   "devalued currency"
+  ],
+  "abbr": [],
+  "short": "A deliberate government or central bank decision to lower its currency's official value under a fixed or pegged exchange rate.",
+  "kid": "The grown-ups in charge decide that from today, our coins will swap for fewer of the other country's coins. It is a new rule, not something that just happens.",
+  "detail": "Devaluation is an official, deliberate reduction in a currency's fixed or pegged value. It applies when a government or central bank sets the exchange rate; in a floating market the equivalent fall is called depreciation. Countries devalue to restore export competitiveness, correct a large trade deficit, or stop a drain on reserves when a peg has become impossible to defend. India devalued the rupee in 1966 and again in July 1991, in two steps, as part of its response to the balance of payments crisis. China's surprise 1.9% cut to the yuan's daily fixing in August 2015 rattled global markets. Competitive devaluation means countries weakening their currencies to grab export market share, which can trigger retaliation. Common confusion: devaluation also makes imports dearer and can fuel inflation, so its export gains may fade if domestic prices rise quickly.",
+  "example": "In November 1967 Britain devalued the pound from $2.80 to $2.40, a cut of 14.3% (0.40 / 2.80). A British car priced at £1,000 fell from $2,800 to $2,400 for American buyers.",
+  "formula": "Devaluation (%) = (Old official value − New official value) / Old official value × 100, with value in foreign currency per unit of home currency",
+  "related": [
+   "Revaluation",
+   "Currency depreciation",
+   "Fixed exchange rate",
+   "Balance of payments",
+   "Trade war",
+   "Bretton Woods system"
+  ]
+ },
+ {
+  "id": "revaluation",
+  "term": "Revaluation",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "currency revaluation"
+  ],
+  "hl": [
+   "currency revaluation",
+   "yuan revaluation",
+   "revaluation of the yuan",
+   "revalues currency",
+   "revalued currency"
+  ],
+  "abbr": [],
+  "short": "A deliberate official decision to raise a currency's fixed or pegged value, so it buys more foreign currency than before.",
+  "kid": "The grown-ups in charge decide that our coins will now swap for more of the other country's coins. A new rule makes our coins a bit stronger.",
+  "detail": "Revaluation is an official increase in the value of a currency under a fixed or pegged regime, the opposite of devaluation. In a floating market, the same kind of rise is called appreciation. Countries revalue when large trade surpluses and inflows pile up reserves, stoke inflation or draw political pressure from trading partners. West Germany revalued the Deutsche Mark in 1961 and 1969, and in July 2005 China revalued the yuan by about 2.1%, to 8.11 per dollar, while moving to a managed float against a basket of currencies. Revaluation makes imports cheaper and helps contain inflation, but it hurts exporters' competitiveness. Common confusion: in accounting, revaluation also means restating assets such as land at fair value, which has nothing to do with currencies, so always check the context.",
+  "example": "Say a country pegged at 10 units per dollar revalues to 8 units per dollar. Each unit is now worth $0.125 instead of $0.10, a 25% revaluation. A $1,000 import now costs 8,000 units instead of 10,000.",
+  "formula": "Revaluation (%) = (New official value − Old official value) / Old official value × 100, with value in foreign currency per unit of home currency",
+  "related": [
+   "Devaluation",
+   "Currency appreciation",
+   "Fixed exchange rate",
+   "Trade surplus",
+   "Managed float"
+  ]
+ },
+ {
+  "id": "fixed-exchange-rate",
+  "term": "Fixed exchange rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "currency peg",
+   "pegged exchange rate",
+   "peg",
+   "hard peg"
+  ],
+  "hl": [
+   "fixed exchange rate",
+   "fixed exchange rates",
+   "currency peg",
+   "currency pegs",
+   "pegged exchange rate",
+   "pegged currency",
+   "dollar peg",
+   "hard peg",
+   "peg to the dollar",
+   "pegged to the dollar"
+  ],
+  "abbr": [],
+  "short": "A system in which a country ties its currency to another currency, a basket or gold at a set rate, and defends that rate.",
+  "kid": "Two friends promise that one of my stickers will always swap for two of yours, every single day. To keep the promise, someone keeps spare stickers ready.",
+  "detail": "Under a fixed exchange rate, or peg, a country's central bank commits to keep its currency at a set value against an anchor such as the US dollar, the euro or a basket. It holds foreign exchange reserves and buys or sells its own currency to defend the rate, and it must broadly follow the anchor country's interest rates. Saudi Arabia, for example, has pegged the riyal at 3.75 per dollar since 1986. Pegs give traders and investors certainty and can import monetary credibility, but the country gives up independent monetary policy and risks a crisis if reserves run low, as several Asian economies found in 1997. A hard peg, such as a currency board, is harder to abandon. Common confusion: a peg does not mean the rate can never change; it can be devalued or revalued by official decision.",
+  "example": "With the riyal pegged at 3.75 per dollar, a $200 import always costs SAR 750 (200 × 3.75). If demand for dollars surges, the Saudi central bank sells dollars from its reserves to hold the rate.",
+  "formula": "",
+  "related": [
+   "Floating exchange rate",
+   "Managed float",
+   "Currency board",
+   "Devaluation",
+   "Foreign exchange reserves",
+   "Impossible trinity"
+  ]
+ },
+ {
+  "id": "floating-exchange-rate",
+  "term": "Floating exchange rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "free-floating currency",
+   "flexible exchange rate",
+   "float"
+  ],
+  "hl": [
+   "floating exchange rate",
+   "floating exchange rates",
+   "free-floating currency",
+   "free-floating exchange rate",
+   "flexible exchange rate",
+   "flexible exchange rates"
+  ],
+  "abbr": [],
+  "short": "A system where a currency's value is set mainly by supply and demand in the market, without a target level from the government.",
+  "kid": "Nobody fixes how many of your marbles swap for a friend's stickers. If lots of children want stickers, stickers cost more marbles; if fewer want them, they cost fewer.",
+  "detail": "Under a floating exchange rate, a currency's value is determined by buyers and sellers in the foreign exchange market, without the government committing to a target level. The US dollar, euro, Japanese yen, British pound and Australian dollar are major floating currencies. A float lets the central bank set interest rates for domestic goals such as inflation, and the exchange rate acts as a shock absorber: if exports slump, the currency can weaken and restore competitiveness. The trade-off is volatility, which raises hedging needs for companies with foreign costs or revenues. The world moved broadly to floating rates after the Bretton Woods system broke down in 1971-73. Common confusion: few currencies float completely freely; many, including the rupee, float with occasional central bank intervention, which economists call a managed float.",
+  "example": "Say global investors pull $10 billion out of a floating-currency economy in a month. With no official target, its currency might slide from 80 to 82 per dollar, a 2.5% rise in the dollar's price (2 / 80), until buyers and sellers balance again.",
+  "formula": "",
+  "related": [
+   "Fixed exchange rate",
+   "Managed float",
+   "Exchange rate",
+   "Monetary policy",
+   "Bretton Woods system",
+   "Impossible trinity"
+  ]
+ },
+ {
+  "id": "managed-float",
+  "term": "Managed float",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "dirty float",
+   "managed floating"
+  ],
+  "hl": [
+   "managed float",
+   "managed floating",
+   "dirty float",
+   "managed floating exchange rate",
+   "managed floating regime"
+  ],
+  "abbr": [],
+  "short": "An exchange-rate system where the market mainly sets the currency's value, but the central bank steps in to limit sharp swings.",
+  "kid": "Children swap marbles and stickers freely, but a teacher steps in if the swapping gets wild. The teacher calms things down without fixing the swap.",
+  "detail": "A managed float sits between a fixed peg and a pure float. Supply and demand set the exchange rate day to day, but the central bank buys or sells foreign currency, uses forwards and swaps, or adjusts liquidity to smooth excessive volatility. India describes its regime this way: the RBI says it intervenes to curb disorderly moves, not to defend a particular level. Many emerging markets follow a similar approach because their currencies can swing sharply with global risk appetite and capital flows. Intervention has side effects: selling dollars drains rupee liquidity from banks, which the RBI may offset through sterilisation. The IMF classifies countries by what they actually do, and has at times labelled India's de facto regime as more tightly managed than a float. Common confusion: a managed float has no announced target rate, unlike a peg or a crawling band.",
+  "example": "Say the rupee is sliding fast and the RBI sells $5 billion from its reserves in a week to slow the fall. At ₹80 per dollar, that sale absorbs ₹40,000 crore of rupee liquidity from the banking system (5 billion × 80).",
+  "formula": "",
+  "related": [
+   "Floating exchange rate",
+   "Fixed exchange rate",
+   "FX intervention",
+   "Sterilisation",
+   "Foreign exchange reserves",
+   "Reserve Bank of India"
+  ]
+ },
+ {
+  "id": "currency-board",
+  "term": "Currency board",
+  "cat": "fx-trade",
+  "level": "a",
+  "aliases": [],
+  "hl": [
+   "currency board",
+   "currency boards",
+   "currency board system",
+   "currency board arrangement"
+  ],
+  "abbr": [],
+  "short": "A strict fixed-rate system where every unit of local currency issued must be backed by foreign reserves at a fixed exchange rate.",
+  "kid": "For every paper ticket you hand out at the school fair, you lock one real coin in a box. Then anyone can swap a ticket back for a coin.",
+  "detail": "A currency board is the strictest form of fixed exchange rate short of adopting another country's currency. Law or long-standing rules require the monetary authority to back the local monetary base fully, often more than fully, with foreign reserves, and to exchange local currency for the anchor currency on demand at the fixed rate. The board cannot freely print money to fund the government or rescue banks, so local interest rates track the anchor country's. Hong Kong has run a currency board since 1983, linked to the US dollar around HK$7.80 and, since 2005, within a band of 7.75 to 7.85. Argentina's board fixed one peso to one dollar from 1991 until its collapse in 2002. Boards build credibility fast but leave little room to fight recessions. Common confusion: a currency board is a hard peg, far stricter than an ordinary central bank peg.",
+  "example": "Under Hong Kong's system, a note-issuing bank that wants to issue HK$78 billion of banknotes must first hand the government's Exchange Fund US$10 billion (78 / 7.80). That backing is why Hong Kong notes can, in principle, be swapped back for dollars at the fixed rate.",
+  "formula": "Local monetary base ≤ Foreign reserves × Fixed exchange rate",
+  "related": [
+   "Fixed exchange rate",
+   "Foreign exchange reserves",
+   "Devaluation",
+   "Reserve currency",
+   "Monetary policy"
+  ]
+ },
+ {
+  "id": "real-effective-exchange-rate",
+  "term": "Real effective exchange rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "REER",
+   "40-currency REER"
+  ],
+  "hl": [
+   "real effective exchange rate",
+   "real effective exchange rates",
+   "40-currency reer",
+   "6-currency reer"
+  ],
+  "abbr": [
+   "REER"
+  ],
+  "short": "A trade-weighted index of a currency's value against many partners, adjusted for differences in inflation, used to judge competitiveness.",
+  "kid": "It checks whether our toys are getting cheaper or dearer than toys in all our friends' towns, counting both the swap price and how fast prices are rising everywhere.",
+  "detail": "The real effective exchange rate takes the nominal effective exchange rate, a trade-weighted average of a currency against its partners, and adjusts it for relative inflation. It answers whether a country's goods have become cheaper or dearer than its partners' goods overall. The RBI publishes 6-currency and 40-currency REER indices, defined so that a rise means the rupee has appreciated in real terms. A reading well above 100 is often taken as a sign that the rupee is overvalued relative to the base year, hurting export competitiveness, while a reading below 100 suggests undervaluation. Analysts watch it alongside RBI intervention, since the RBI may let the nominal rate weaken to stop the REER climbing too far. Common confusion: the rupee can depreciate against the dollar and still appreciate in real terms if Indian inflation runs higher than partners' inflation.",
+  "example": "Say the rupee's nominal effective rate falls 2% in a year, while Indian inflation runs 4 percentage points above the trade-weighted average of its partners. The REER then rises about 1.9% (0.98 × 1.04 = 1.0192), so Indian goods actually became slightly less competitive.",
+  "formula": "REER = NEER × (Domestic price index / Trade-weighted foreign price index)",
+  "related": [
+   "Nominal effective exchange rate",
+   "Exchange rate",
+   "Purchasing power parity",
+   "Inflation",
+   "Terms of trade"
+  ]
+ },
+ {
+  "id": "nominal-effective-exchange-rate",
+  "term": "Nominal effective exchange rate",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "NEER",
+   "trade-weighted exchange rate"
+  ],
+  "hl": [
+   "nominal effective exchange rate",
+   "nominal effective exchange rates",
+   "trade-weighted exchange rate",
+   "trade-weighted exchange rates",
+   "trade-weighted rupee"
+  ],
+  "abbr": [
+   "NEER"
+  ],
+  "short": "A single index of a currency's average value against a basket of trading partners' currencies, weighted by how much trade happens with each.",
+  "kid": "Instead of checking how our coins swap with just one friend's coins, we check all our friends, and listen most to the friends we swap with most.",
+  "detail": "The nominal effective exchange rate is a weighted average of a currency's exchange rates against several partner currencies, with weights based on trade shares. It gives a broader picture than any single bilateral rate such as USD/INR: the rupee may fall against the dollar but rise against the euro and yen, leaving its overall value nearly flat. The RBI computes 6-currency and 40-currency NEER indices as geometric weighted averages, defined so that a rise signals rupee appreciation. Central banks and the IMF use NEER to gauge the overall exchange-rate effect on trade and inflation. Unlike the REER, the NEER ignores differences in inflation between countries. Common confusion: a weaker rupee against the dollar alone does not mean the rupee has weakened overall; check the NEER before concluding that.",
+  "example": "Say the US carries 60% and the euro area 40% of a country's trade weights. If its currency falls 5% against the dollar but rises 2% against the euro, a simple weighted average puts the NEER change at about −2.2% (0.6 × −5 + 0.4 × 2).",
+  "formula": "NEER = Weighted geometric average of bilateral exchange rate indices, using trade weights",
+  "related": [
+   "Real effective exchange rate",
+   "Exchange rate",
+   "US Dollar Index",
+   "Cross rate",
+   "Terms of trade"
+  ]
+ },
+ {
+  "id": "us-dollar-index",
+  "term": "US Dollar Index",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "DXY",
+   "dollar index",
+   "USDX"
+  ],
+  "hl": [
+   "us dollar index",
+   "u.s. dollar index",
+   "dollar index",
+   "ice dollar index",
+   "dollar index futures"
+  ],
+  "abbr": [
+   "DXY",
+   "USDX"
+  ],
+  "short": "An index that tracks the US dollar's value against six major currencies, led by the euro, as a quick gauge of dollar strength.",
+  "kid": "It is a scoreboard showing how strong America's coins are compared with the coins of six big friends. When the score goes up, America's coins are stronger.",
+  "detail": "The US Dollar Index, run by ICE and known by its ticker DXY, measures the dollar against a fixed basket of six currencies: the euro (57.6% weight), Japanese yen (13.6%), British pound (11.9%), Canadian dollar (9.1%), Swedish krona (4.2%) and Swiss franc (3.6%). Its base value of 100 is set at March 1973, just after the Bretton Woods system ended. A rising DXY means a stronger dollar, which tends to pressure emerging-market currencies including the rupee, tighten global financial conditions and weigh on commodity prices quoted in dollars. Indian dealers watch it as a quick read of global dollar moves before the rupee opens. Common confusion: the DXY is not a full trade-weighted dollar index; its weights date from 1999, are dominated by Europe and exclude China and Mexico. The Federal Reserve's broad dollar index is better for trade analysis.",
+  "example": "If the euro falls 5% against the dollar and the other five currencies do not move, the DXY rises about 3.0%, because (1 / 0.95) raised to the power 0.576 is about 1.030. A move from 100 to 103 would therefore be read as broad dollar strength led by the euro.",
+  "formula": "USDX = 50.14348112 × EURUSD^(−0.576) × USDJPY^(0.136) × GBPUSD^(−0.119) × USDCAD^(0.091) × USDSEK^(0.042) × USDCHF^(0.036)",
+  "related": [
+   "Reserve currency",
+   "Nominal effective exchange rate",
+   "Federal Reserve",
+   "Exchange rate",
+   "De-dollarisation"
+  ]
+ },
+ {
+  "id": "reserve-currency",
+  "term": "Reserve currency",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "global reserve currency",
+   "world reserve currency"
+  ],
+  "hl": [
+   "reserve currency",
+   "reserve currencies",
+   "global reserve currency",
+   "world reserve currency",
+   "reserve currency status",
+   "exorbitant privilege"
+  ],
+  "abbr": [],
+  "short": "A currency that central banks worldwide hold as savings and that is widely used for trade and borrowing; the US dollar leads.",
+  "kid": "When friends from many towns save up, they all like to keep the same kind of coin, because everyone everywhere happily accepts it.",
+  "detail": "A reserve currency is held in significant amounts by central banks as part of their foreign exchange reserves and is widely used to invoice trade, issue debt and price commodities. The US dollar has been the dominant reserve currency since the Second World War; IMF data as of 2025 put it at well over half of disclosed reserves, with the euro a distant second and the yen, pound, Chinese renminbi, Canadian and Australian dollars far smaller. Being the reserve issuer brings an exorbitant privilege: steady global demand for its government bonds, cheaper borrowing and the power to impose financial sanctions. Status rests on deep, open capital markets, rule of law and trust. Common confusion: reserve status is not the same as having the largest economy or trade; it shifts slowly over decades, as when the dollar overtook sterling.",
+  "example": "Say a central bank holds $500 billion of foreign reserves, with 58% in dollar assets. It then owns about $290 billion of dollar assets (500 × 0.58), mostly US Treasury securities, one reason demand for Treasuries stays deep.",
+  "formula": "",
+  "related": [
+   "De-dollarisation",
+   "US Dollar Index",
+   "Foreign exchange reserves",
+   "US Treasury securities",
+   "Special Drawing Rights",
+   "Bretton Woods system"
+  ]
+ },
+ {
+  "id": "de-dollarisation",
+  "term": "De-dollarisation",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "de-dollarization",
+   "dedollarisation"
+  ],
+  "hl": [
+   "de-dollarisation",
+   "de-dollarization",
+   "dedollarisation",
+   "dedollarization",
+   "de-dollarise",
+   "de-dollarize"
+  ],
+  "abbr": [],
+  "short": "Efforts by countries to rely less on the US dollar for trade, borrowing and reserves, using their own currencies, other currencies or gold instead.",
+  "kid": "Lots of children have always swapped using one favourite kind of coin. Now some of them are trying to use their own coins more often instead.",
+  "detail": "De-dollarisation describes moves by countries, central banks and companies to reduce their dependence on the US dollar. It takes several forms: settling trade in local currencies, holding more gold or non-dollar assets in reserves, building payment systems outside dollar channels, and borrowing in other currencies. Motives include limiting exposure to US sanctions and to swings in US interest rates and the dollar. Examples include Russia-China trade shifting largely to yuan and roubles, heavy central bank gold buying since 2022, BRICS discussions on local-currency settlement, and India's framework for settling trade in rupees. The dollar's share of global reserves has drifted down slowly over two decades. Common confusion: the dollar still sits on one side of close to 90% of global currency trades, so de-dollarisation is gradual and partial, not a sudden replacement.",
+  "example": "Say a central bank with $400 billion of reserves cuts the dollar's share from 70% to 60%. Its dollar holdings fall from $280 billion to $240 billion, and $40 billion (400 × 0.10) moves into gold, euros or other currencies.",
+  "formula": "",
+  "related": [
+   "Reserve currency",
+   "Rupee internationalisation",
+   "US Dollar Index",
+   "Foreign exchange reserves",
+   "Nostro account"
+  ]
+ },
+ {
+  "id": "rupee-internationalisation",
+  "term": "Rupee internationalisation",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "internationalisation of the rupee",
+   "rupee trade settlement",
+   "INR invoicing"
+  ],
+  "hl": [
+   "rupee internationalisation",
+   "rupee internationalization",
+   "internationalisation of the rupee",
+   "internationalization of the rupee",
+   "internationalising the rupee",
+   "rupee trade settlement",
+   "trade settlement in rupees",
+   "trade settlement in rupee",
+   "inr invoicing",
+   "invoicing in rupees",
+   "rupee invoicing"
+  ],
+  "abbr": [],
+  "short": "Efforts to make the Indian rupee widely used outside India for trade and investment, and as a currency other countries are willing to hold.",
+  "kid": "We want children in other towns to happily accept our coins, so we can swap with them directly without first changing into someone else's coins.",
+  "detail": "Rupee internationalisation means expanding use of the rupee in cross-border trade, investment and reserves, so that Indian firms and the government rely less on the dollar. The RBI's July 2022 framework lets exporters and importers invoice and settle trade in rupees through Special Rupee Vostro Accounts that foreign banks open with Indian banks, and, under the rules as of 2025, surplus balances can be invested in Indian government securities. India has also signed local-currency settlement arrangements with partners such as the UAE, and an RBI working group laid out a longer roadmap in 2023. Benefits include lower currency risk for Indian traders and less pressure on reserves. Common confusion: internationalisation does not need full capital account convertibility overnight, but wider foreign holding of rupees does need deep, open rupee markets, so it is a decades-long process.",
+  "example": "Say a hypothetical exporter, ABC Engineering Ltd, invoices a buyer in the UAE ₹5 crore for machinery. The buyer's bank pays through its rupee vostro account with an Indian bank, so ABC receives exactly ₹5 crore whatever happens to the dollar, and the currency risk sits with the buyer.",
+  "formula": "",
+  "related": [
+   "Nostro account",
+   "De-dollarisation",
+   "Capital account convertibility",
+   "Reserve currency",
+   "Masala bond",
+   "FEMA"
+  ]
+ },
+ {
+  "id": "nostro-account",
+  "term": "Nostro account",
+  "cat": "fx-trade",
+  "level": "a",
+  "aliases": [
+   "nostro",
+   "vostro account",
+   "vostro",
+   "Special Rupee Vostro Account",
+   "SRVA"
+  ],
+  "hl": [
+   "nostro account",
+   "nostro accounts",
+   "vostro account",
+   "vostro accounts",
+   "special rupee vostro account",
+   "special rupee vostro accounts",
+   "rupee vostro account",
+   "rupee vostro accounts",
+   "nostro",
+   "vostro"
+  ],
+  "abbr": [
+   "SRVA",
+   "SRVAs"
+  ],
+  "short": "An account a bank holds with a foreign bank, in that country's currency, to settle international payments; the foreign bank calls it a vostro.",
+  "kid": "Your family keeps a small purse at your cousin's house in another town, filled with that town's coins, so you can pay for things there quickly.",
+  "detail": "Nostro (Latin for ours) and vostro (yours) describe the same correspondent banking account from two sides. An Indian bank's dollar account with a bank in New York is a nostro for the Indian bank, because it is our money held there, and a vostro for the New York bank, because it holds your money here. Banks use these accounts to settle cross-border payments, trade finance and forex deals without moving cash, with payment messages carried over networks such as SWIFT. Since 2022 the RBI has allowed foreign banks to open Special Rupee Vostro Accounts with Indian banks, so trade can be settled in rupees, used notably for trade with Russia. Treasury teams reconcile nostro balances daily, because a shortfall can delay payments. Common confusion: these are accounts between banks, not personal foreign currency accounts for individuals.",
+  "example": "Say an Indian bank keeps a dollar nostro account with a bank in New York. When a client pays a $50,000 import bill, the Indian bank debits the client ₹40 lakh at ₹80 per dollar (50,000 × 80) and instructs its New York correspondent to pay the supplier from the nostro.",
+  "formula": "",
+  "related": [
+   "Rupee internationalisation",
+   "Foreign exchange market",
+   "SWIFT",
+   "Correspondent banking",
+   "De-dollarisation"
+  ]
+ },
+ {
+  "id": "carry-trade",
+  "term": "Carry trade",
+  "cat": "fx-trade",
+  "level": "a",
+  "aliases": [
+   "currency carry trade",
+   "yen carry trade",
+   "carry"
+  ],
+  "hl": [
+   "carry trade",
+   "carry trades",
+   "carry-trade",
+   "currency carry trade",
+   "yen carry trade",
+   "yen carry trades",
+   "carry trade unwind",
+   "carry trade unwinding",
+   "unwinding of carry trades"
+  ],
+  "abbr": [],
+  "short": "Borrowing in a currency with low interest rates to invest in one with higher rates, profiting from the gap if exchange rates stay stable.",
+  "kid": "You borrow sweets from a friend who wants only one extra back, and lend them to someone who gives you five extra. You keep the difference, unless things suddenly change.",
+  "detail": "In a carry trade, an investor borrows or sells a currency with low interest rates, the funding currency, and buys assets in a currency with higher rates, earning the interest gap, or carry. The Japanese yen and Swiss franc have long been popular funding currencies; targets have included the US dollar, Mexican peso, Brazilian real and, at times, the Indian rupee. The trade profits as long as the target currency does not fall by more than the rate gap. The risk is a sharp reversal: when volatility jumps, investors rush to repay the funding currency, pushing it up and target currencies down. In August 2024, after a Bank of Japan rate hike and weak US jobs data, a yen carry trade unwind helped drive Japan's Nikkei 225 down 12.4% in a single day. Common confusion: carry looks like steady income but hides crash risk.",
+  "example": "Say a trader borrows ¥15 million at 0.5% and converts it at 150 yen per dollar into $100,000, invested at 5%. After a year the $105,000 is worth ¥15.75 million at 150, leaving ¥675,000 profit after repaying ¥15.075 million. If the yen strengthens to 140 per dollar, the $105,000 fetches only ¥14.7 million, a loss of ¥375,000.",
+  "formula": "Carry trade return ≈ Interest rate earned − Interest rate paid on funding currency + % change in target currency against funding currency",
+  "related": [
+   "Forward premium",
+   "Interest rate parity",
+   "Bank of Japan",
+   "Exchange rate",
+   "Deleveraging"
+  ]
+ },
+ {
+  "id": "current-account",
+  "term": "Current account",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "current account balance"
+  ],
+  "hl": [
+   "current account surplus",
+   "current account surpluses",
+   "current account data"
+  ],
+  "abbr": [],
+  "short": "The part of a country's balance of payments that records its trade in goods and services, income earned abroad and transfers like remittances.",
+  "kid": "It is a country's notebook of what it sells to and buys from other countries, plus gifts sent home by family living far away.",
+  "detail": "The current account records a country's current, non-investment transactions with the rest of the world: exports and imports of goods, trade in services such as software and tourism, primary income such as interest, dividends and wages earned across borders, and secondary income, mainly remittances and grants. A surplus means the country earns more from abroad than it spends; a deficit means it spends more and must borrow from or sell assets to foreigners. In macro terms, the balance equals national saving minus investment. India usually runs a modest deficit, because a large goods trade gap is only partly offset by strong services exports and remittances; the RBI publishes the data quarterly. Common confusion: this has nothing to do with a business bank current account, the CA in CASA; it is a national accounting measure.",
+  "example": "Say a country has a goods trade deficit of $250 billion, net services earnings of $170 billion, net primary income of −$45 billion and net transfers of $110 billion. Its current account balance is −$15 billion (−250 + 170 − 45 + 110), which on GDP of $3,750 billion is a deficit of 0.4% of GDP.",
+  "formula": "Current account balance = Goods balance + Services balance + Net primary income + Net secondary income",
+  "related": [
+   "Current account deficit",
+   "Balance of payments",
+   "Capital account",
+   "Invisibles",
+   "Trade deficit",
+   "Net exports"
+  ]
+ },
+ {
+  "id": "current-account-deficit",
+  "term": "Current account deficit",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "CAD"
+  ],
+  "hl": [
+   "current account deficit",
+   "current account deficits",
+   "current-account deficit",
+   "current account gap"
+  ],
+  "abbr": [],
+  "short": "When a country spends more abroad on goods, services, income payments and transfers than it earns from abroad, usually shown as a share of GDP.",
+  "kid": "If your family buys more from other towns than it sells to them, it has to borrow or use its savings to pay the difference.",
+  "detail": "A current account deficit, or CAD, arises when a country's payments to the rest of the world for goods, services, income and transfers exceed its receipts. It means the country invests more than it saves and must fund the gap with foreign capital, such as FDI, portfolio flows and loans, or by running down reserves. Analysts track it as a percentage of GDP. A moderate deficit financed by stable FDI is normal for a fast-growing economy, and a level of around 2.5% of GDP is often cited as sustainable for India. Large deficits funded by short-term hot money are risky: India's CAD reached a record 4.8% of GDP in 2012-13, leaving the rupee exposed during the 2013 taper tantrum. Higher oil and gold imports usually widen India's CAD. Common confusion: the CAD is broader than the trade deficit, which covers only goods.",
+  "example": "Say an economy with GDP of $3,000 billion runs a current account deficit of $45 billion. That is 1.5% of GDP (45 / 3,000). If net FDI brings in only $30 billion, the remaining $15 billion must come from portfolio flows, loans or reserves.",
+  "formula": "CAD as % of GDP = Current account deficit / GDP × 100",
+  "related": [
+   "Current account",
+   "Balance of payments",
+   "Trade deficit",
+   "Capital account",
+   "Foreign exchange reserves",
+   "Currency depreciation"
+  ]
+ },
+ {
+  "id": "capital-account",
+  "term": "Capital account",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "financial account",
+   "capital flows"
+  ],
+  "hl": [
+   "capital account",
+   "capital account surplus",
+   "capital account deficit",
+   "capital flows",
+   "capital inflows",
+   "capital outflows",
+   "net capital inflows",
+   "net capital flows"
+  ],
+  "abbr": [],
+  "short": "The balance-of-payments record of investment and borrowing flows into and out of a country, such as foreign direct investment, share and bond purchases, and loans.",
+  "kid": "It is a notebook of who brought money into our town to build shops or lend, and who took money out, rather than what we sold.",
+  "detail": "The capital account records cross-border flows of investment and borrowing. In the RBI's presentation for India it includes foreign direct investment, foreign portfolio investment in shares and bonds, external commercial borrowings, NRI deposits, banking capital and short-term trade credit. Under the IMF's newer BPM6 manual, most of these sit in the financial account, while the capital account is a small line for capital transfers, so check which convention a report uses. A capital account surplus means net money is flowing in, which can finance a current account deficit and add to forex reserves. Flows can reverse fast: portfolio money is the most volatile, FDI the most stable. India has had full current account convertibility since 1994 but only partial capital account convertibility. Common confusion: capital inflows are not income; most must eventually be repaid or earn returns for their foreign owners.",
+  "example": "Say a country runs a current account deficit of $25 billion, while FDI brings in $30 billion, portfolio investors $15 billion and net loan repayments take out $5 billion. The capital account surplus is $40 billion, and with errors and omissions of −$2 billion, reserves rise by $13 billion (−25 + 40 − 2).",
+  "formula": "Capital account balance = Net FDI + Net portfolio investment + Net loans + Net banking capital + Other capital flows",
+  "related": [
+   "Balance of payments",
+   "Current account",
+   "Foreign direct investment",
+   "Foreign portfolio investor",
+   "Capital account convertibility",
+   "Foreign exchange reserves"
+  ]
+ },
+ {
+  "id": "balance-of-payments",
+  "term": "Balance of payments",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "BoP",
+   "BOP"
+  ],
+  "hl": [
+   "balance of payments",
+   "balance-of-payments",
+   "bop surplus",
+   "bop deficit",
+   "bop crisis",
+   "balance of payments crisis",
+   "balance of payments surplus",
+   "balance of payments deficit"
+  ],
+  "abbr": [
+   "BoP",
+   "BOP"
+  ],
+  "short": "A country's complete record of money flowing in and out with the rest of the world over a period, covering trade, income, investment and loans.",
+  "kid": "It is a big notebook showing every coin that came into our town from outside and every coin that went out, so we can see how we did.",
+  "detail": "The balance of payments summarises all economic transactions between a country's residents and the rest of the world over a period. Its main parts are the current account, covering goods, services, income and transfers, and the capital or financial account, covering investment and borrowing, plus a line for errors and omissions. Under double-entry accounting the whole statement always balances; when people talk of a BoP surplus or deficit, they mean the overall balance before changes in official reserves, which the central bank absorbs by adding to or drawing down reserves. The RBI publishes India's BoP data quarterly. A BoP crisis happens when a country cannot finance its external payments, as in India in 1991, when reserves fell to just a few weeks of imports and gold had to be pledged to raise loans. Common confusion: a BoP deficit is not a fiscal deficit.",
+  "example": "Say in a quarter a country's current account deficit is $10 billion, net capital inflows are $16 billion and errors and omissions are −$1 billion. The overall balance of payments surplus is $5 billion (−10 + 16 − 1), so forex reserves rise by about $5 billion before valuation changes.",
+  "formula": "Overall balance = Current account balance + Capital account balance + Errors and omissions = Change in foreign exchange reserves (excluding valuation effects)",
+  "related": [
+   "Current account",
+   "Capital account",
+   "Foreign exchange reserves",
+   "Current account deficit",
+   "Import cover",
+   "Fiscal deficit"
+  ]
+ },
+ {
+  "id": "trade-deficit",
+  "term": "Trade deficit",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "trade gap",
+   "merchandise trade deficit"
+  ],
+  "hl": [
+   "trade deficit",
+   "trade deficits",
+   "trade gap",
+   "merchandise trade deficit",
+   "merchandise trade gap",
+   "goods trade deficit"
+  ],
+  "abbr": [],
+  "short": "When the value of goods a country imports is higher than the value of goods it exports over a period.",
+  "kid": "If your family buys more toys from other towns than it sells to them, there is a gap that has to be paid for.",
+  "detail": "A trade deficit occurs when a country's imports exceed its exports over a month, quarter or year. In news it usually means merchandise, or goods, trade; the broader trade balance can include services. India runs a persistent goods trade deficit, driven by imports of crude oil, gold, electronics and coal, and it is especially large with China; the Commerce Ministry releases monthly figures around the middle of the following month. Services surpluses and remittances offset much of it, which is why the current account deficit is far smaller. A widening deficit can pressure the rupee because importers need more dollars. Common confusion: a trade deficit is not losing money like a business loss; it reflects national spending and saving patterns, and fast-growing economies that import machinery and energy often run deficits. A bilateral deficit with one partner says little on its own.",
+  "example": "Say a country exports goods worth $35 billion in a month and imports $60 billion. Its merchandise trade deficit is $25 billion (60 − 35). If net services bring in $16 billion, the combined goods and services gap shrinks to $9 billion.",
+  "formula": "Trade deficit = Merchandise imports − Merchandise exports",
+  "related": [
+   "Trade surplus",
+   "Current account deficit",
+   "Balance of payments",
+   "Net exports",
+   "Invisibles",
+   "Terms of trade"
+  ]
+ },
+ {
+  "id": "trade-surplus",
+  "term": "Trade surplus",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [],
+  "hl": [
+   "trade surplus",
+   "trade surpluses",
+   "merchandise trade surplus",
+   "goods trade surplus"
+  ],
+  "abbr": [],
+  "short": "When the value of goods a country exports is higher than the value of goods it imports over a period.",
+  "kid": "If your lemonade stand sells more cups to the next street than you buy from them, you end up with extra coins.",
+  "detail": "A trade surplus occurs when a country's exports exceed its imports over a period. China, Germany, the Netherlands and oil exporters such as Saudi Arabia often run large goods surpluses. A surplus adds to demand for the country's currency and to its foreign assets, and in national accounts it reflects saving more than it invests at home. Surpluses are not automatically a sign of strength: they can reflect weak domestic demand, an undervalued currency or imports collapsing in a slowdown. Persistent large surpluses can also trigger friction with trading partners, accusations of currency manipulation and tariffs, as in US-China tensions. India rarely runs an overall goods trade surplus but earns a large surplus in services trade. Common confusion: a bilateral surplus with one country does not mean the country's overall trade is in surplus.",
+  "example": "Say a country exports goods worth $300 billion in a year and imports $220 billion. Its trade surplus is $80 billion (300 − 220), which on GDP of $2,000 billion equals 4% of GDP.",
+  "formula": "Trade surplus = Exports − Imports",
+  "related": [
+   "Trade deficit",
+   "Current account",
+   "Net exports",
+   "Balance of payments",
+   "Trade war",
+   "Reciprocal tariffs"
+  ]
+ },
+ {
+  "id": "invisibles",
+  "term": "Invisibles",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "invisibles account",
+   "net invisibles"
+  ],
+  "hl": [
+   "invisibles",
+   "net invisibles",
+   "invisibles account",
+   "invisible receipts",
+   "invisibles receipts",
+   "invisibles surplus"
+  ],
+  "abbr": [],
+  "short": "The parts of the current account that are not physical goods: services, income earned across borders, and transfers such as remittances.",
+  "kid": "Some things we sell cannot be packed in a box, like teaching or fixing computers over the internet. Money earned that way is counted as invisible.",
+  "detail": "Invisibles are the non-merchandise items in the current account, so called because they do not cross borders as physical goods. They have three parts: services, such as software, business services, tourism, transport and finance; primary income, such as interest, dividends and wages paid across borders; and secondary income, mainly private transfers like remittances. India's net invisibles are strongly positive, powered by IT and business-services exports, the growth of global capability centres, and remittances from Indians abroad, while investment income usually shows a net outflow. This surplus offsets a large share of India's goods trade deficit, which is why the current account deficit is much smaller. Common confusion: services exports are one part of invisibles, not the whole; and invisibles cover only current transactions, not investment flows like FDI, which belong to the capital account.",
+  "example": "Say a country's quarterly goods trade deficit is $70 billion, with net services of $45 billion, net transfers of $30 billion and net primary income of −$12 billion. Net invisibles are $63 billion (45 + 30 − 12), so the current account deficit is only $7 billion (70 − 63).",
+  "formula": "Net invisibles = Net services + Net primary income + Net secondary income",
+  "related": [
+   "Current account",
+   "Remittances",
+   "Trade deficit",
+   "Current account deficit",
+   "Global capability centres",
+   "Balance of payments"
+  ]
+ },
+ {
+  "id": "remittances",
+  "term": "Remittances",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "inward remittances",
+   "workers' remittances",
+   "private transfers"
+  ],
+  "hl": [
+   "inward remittances",
+   "inward remittance",
+   "workers' remittances",
+   "remittance inflows",
+   "migrant remittances",
+   "personal remittances",
+   "remittances to india",
+   "nri remittances"
+  ],
+  "abbr": [],
+  "short": "Money that people working abroad send back to their families in their home country, a major source of foreign currency for India.",
+  "kid": "When a family member works in a faraway place, they send some of the money they make back home to help the family buy food and books.",
+  "detail": "Remittances are transfers of money by migrants and workers abroad to households in their home country. In the balance of payments they sit in the current account, under secondary income as private transfers, and they never have to be repaid. India has been the world's largest recipient for years and, according to World Bank estimates, was the first country to receive more than $100 billion in a single year, in 2022. Major sources include the US, the Gulf countries, the UK and Singapore, with Maharashtra and Kerala among the largest recipient states. Remittances support household consumption and cushion the current account deficit. Common confusion: money NRIs park in Indian bank deposits is not a remittance in this sense; NRI deposits are capital account flows that can be withdrawn. Outward remittances by residents under the Liberalised Remittance Scheme are a separate flow.",
+  "example": "Say a nurse working in Dubai sends home $1,000 a month. At ₹80 per dollar her family receives ₹80,000 a month, or ₹9.6 lakh a year (80,000 × 12), all counted as inward remittances in India's current account.",
+  "formula": "",
+  "related": [
+   "Invisibles",
+   "Current account",
+   "Balance of payments",
+   "Liberalised Remittance Scheme",
+   "Foreign exchange reserves",
+   "Current account deficit"
+  ]
+ },
+ {
+  "id": "foreign-exchange-reserves",
+  "term": "Foreign exchange reserves",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "forex reserves",
+   "FX reserves",
+   "forex kitty"
+  ],
+  "hl": [
+   "foreign exchange reserves",
+   "foreign exchange reserve",
+   "forex reserves",
+   "forex reserve",
+   "fx reserves",
+   "forex kitty",
+   "foreign currency reserves",
+   "foreign currency assets"
+  ],
+  "abbr": [],
+  "short": "Foreign currencies, gold and other external assets held by a central bank to pay for imports, repay foreign debt and steady its currency.",
+  "kid": "It is a country's emergency piggy bank full of other countries' coins and some gold, kept safe for a rainy day.",
+  "detail": "Foreign exchange reserves are external assets held by a country's monetary authority. India's reserves, managed by the RBI, have four parts: foreign currency assets, mostly in dollars, euros and other major currencies and invested largely in safe government securities; gold; Special Drawing Rights from the IMF; and the reserve tranche position at the IMF. Reserves act as insurance: they let the RBI sell dollars to calm a disorderly fall in the rupee, reassure investors and rating agencies, and cover imports and external debt in a crisis. The RBI publishes the level weekly, usually on Fridays; check the live data rather than any remembered figure. Common confusion: a weekly change is not all intervention. Reserves also move with the price of gold and with the dollar's moves against euros, yen and other holdings, known as valuation changes.",
+  "example": "Say a country's reserves rise by $5 billion in a week. If the central bank bought $2 billion in the market, the other $3 billion came from valuation gains, such as a jump in the gold price or a weaker dollar lifting the dollar value of its euro and yen holdings.",
+  "formula": "Foreign exchange reserves = Foreign currency assets + Gold + Special Drawing Rights + Reserve tranche position in the IMF",
+  "related": [
+   "Import cover",
+   "FX intervention",
+   "Balance of payments",
+   "Special Drawing Rights",
+   "Reserve currency",
+   "Reserve Bank of India"
+  ]
+ },
+ {
+  "id": "import-cover",
+  "term": "Import cover",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "months of import cover",
+   "import cover of reserves"
+  ],
+  "hl": [
+   "import cover",
+   "months of import cover",
+   "months of imports",
+   "import cover of reserves"
+  ],
+  "abbr": [],
+  "short": "How many months of a country's imports its foreign exchange reserves could pay for if no other foreign money came in.",
+  "kid": "If no new pocket money came in, how many weeks could you keep buying lunch from the jar you have saved? That is the idea.",
+  "detail": "Import cover measures reserve adequacy by dividing foreign exchange reserves by average monthly imports. It shows how long a country could keep paying for imports if export earnings and capital inflows suddenly stopped. A traditional rule of thumb is at least three months; India's cover has been far higher since the mid-2000s, but during the 1991 crisis it fell to a few weeks. The RBI usually reports cover in terms of merchandise imports, so check whether services imports are included. Because India imports oil, gold and electronics heavily, a spike in import bills can shrink cover even if reserves hold steady. Common confusion: import cover is only one test. Analysts also compare reserves with short-term external debt (the Greenspan-Guidotti rule), with broad money and with potential capital outflows, using measures such as the IMF's reserve adequacy metric.",
+  "example": "Say a country holds $480 billion of reserves and imports goods worth $720 billion a year. Monthly imports average $60 billion (720 / 12), so import cover is 8 months (480 / 60).",
+  "formula": "Import cover (months) = Foreign exchange reserves / Average monthly imports",
+  "related": [
+   "Foreign exchange reserves",
+   "Balance of payments",
+   "Current account deficit",
+   "External debt",
+   "Trade deficit"
+  ]
+ },
+ {
+  "id": "terms-of-trade",
+  "term": "Terms of trade",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "ToT"
+  ],
+  "hl": [
+   "terms of trade",
+   "terms-of-trade",
+   "terms of trade shock",
+   "terms-of-trade shock"
+  ],
+  "abbr": [],
+  "short": "The ratio of a country's export prices to its import prices, showing how many imports one unit of exports can buy.",
+  "kid": "If one jar of your homemade jam used to swap for three comics but now swaps for only two, your swapping deal has got worse.",
+  "detail": "The terms of trade compare the average price of a country's exports with the average price of its imports, usually as an index: the export price index divided by the import price index, times 100. A rise means each unit of exports buys more imports, an improvement that lifts national income; a fall is a deterioration. Commodity prices drive big swings: oil exporters gain when crude rises, while India, a large net oil importer, sees its terms of trade worsen, widening the trade deficit and adding pressure on the rupee and inflation. Falling oil prices give India a terms-of-trade gain. Economists use terms-of-trade shocks to explain booms and busts in commodity economies such as Australia, Brazil and the Gulf states. Common confusion: better terms of trade do not mean a country sells more; volumes can fall even as prices move in its favour.",
+  "example": "Say a country's export prices rise 5% in a year while its import prices rise 10%. Its terms of trade index falls from 100 to about 95.45 (105 / 110 × 100), a deterioration of about 4.5%.",
+  "formula": "Terms of trade = (Export price index / Import price index) × 100",
+  "related": [
+   "Trade deficit",
+   "Current account",
+   "Real effective exchange rate",
+   "Imported inflation",
+   "Exchange rate",
+   "Supply shock"
+  ]
+ },
+ {
+  "id": "tariff",
+  "term": "Tariff",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "tariffs",
+   "import duty",
+   "customs duty"
+  ],
+  "hl": [
+   "import duty",
+   "import duties",
+   "customs duty",
+   "customs duties",
+   "basic customs duty",
+   "import tariff",
+   "import tariffs",
+   "tariffs on imports",
+   "tariff on imports",
+   "trade tariffs"
+  ],
+  "abbr": [],
+  "short": "A tax a government charges on goods imported from other countries, which makes those foreign goods dearer for buyers at home.",
+  "kid": "Imagine your town asks for an extra coin for every toy brought in from another town. That makes outside toys cost more than toys made at home.",
+  "detail": "A tariff is a tax on imported goods, collected by customs when goods enter a country. It can be ad valorem, a percentage of the goods' value, or specific, a fixed amount per unit such as per kilogram. Governments use tariffs to raise revenue, protect domestic industries, counter unfair trade or gain bargaining power. In India, customs duty is set under the Customs Tariff Act and changed mainly through the Union Budget, with basic customs duty plus cesses and surcharges; rates change often, so check the schedule in force rather than a remembered number. Tariffs raise prices for consumers and for firms using imported inputs, can invite retaliation and shift where supply chains locate. Common confusion: the foreign country does not pay the tariff directly; the importer does, and the cost is shared between foreign sellers, importers and domestic buyers. Telecom or electricity tariffs simply mean price lists.",
+  "example": "Say a hypothetical company, ABC Ltd, imports a machine valued at ₹10 lakh and pays a 20% customs duty. It pays ₹2 lakh in duty (₹10 lakh × 0.20), so the machine lands at ₹12 lakh before other taxes and charges.",
+  "formula": "Ad valorem tariff = Assessable value of imports × Tariff rate",
+  "related": [
+   "Reciprocal tariffs",
+   "Trade war",
+   "Protectionism",
+   "Import substitution",
+   "World Trade Organization",
+   "Free trade agreement"
+  ]
+ },
+ {
+  "id": "reciprocal-tariffs",
+  "term": "Reciprocal tariffs",
+  "cat": "fx-trade",
+  "level": "i",
+  "aliases": [
+   "retaliatory tariffs",
+   "reciprocal tariff"
+  ],
+  "hl": [
+   "reciprocal tariff",
+   "reciprocal tariffs",
+   "retaliatory tariff",
+   "retaliatory tariffs",
+   "counter-tariffs",
+   "retaliatory duties"
+  ],
+  "abbr": [],
+  "short": "Import taxes a country sets to match or answer the tariffs and other trade barriers a trading partner places on its goods.",
+  "kid": "If your friend asks for two extra sweets every time you swap with them, you start asking them for two extra sweets as well.",
+  "detail": "Reciprocal tariffs are import duties set to mirror a partner's barriers: if you tax our goods at a certain level, we tax yours similarly. Retaliatory tariffs are the closely related idea of tariffs imposed in response to another country's new tariffs. The term became prominent in April 2025, when the United States announced reciprocal tariffs on most trading partners: a 10% baseline plus higher country-specific rates, derived largely from each country's goods trade surplus with the US rather than from its actual tariff levels. Rates were then paused, changed and challenged in US courts repeatedly, so check the latest status before citing any rate. For Indian exporters of textiles, gems, chemicals and engineering goods, such tariffs affect price competitiveness against rivals in Vietnam, Bangladesh and elsewhere. Common confusion: reciprocal sounds like equal treatment, but the rates need not match the partner's actual tariffs.",
+  "example": "Under the method the US published in April 2025, a country's rate was roughly half of the US goods trade deficit with it divided by US imports from it, with a 10% floor. Say the US imports $100 billion from Country X and exports $40 billion to it: the deficit of $60 billion is 60% of imports, so the rate would be 30% (60% / 2).",
+  "formula": "April 2025 US method: Tariff rate = max(10%, ½ × US goods trade deficit with country / US goods imports from country)",
+  "related": [
+   "Tariff",
+   "Trade war",
+   "Trade deficit",
+   "Protectionism",
+   "World Trade Organization",
+   "Free trade agreement"
+  ]
+ },
+ {
+  "id": "trade-war",
+  "term": "Trade war",
+  "cat": "fx-trade",
+  "level": "b",
+  "aliases": [
+   "tariff war"
+  ],
+  "hl": [
+   "trade war",
+   "trade wars",
+   "trade-war",
+   "tariff war",
+   "tariff wars"
+  ],
+  "abbr": [],
+  "short": "A conflict in which countries repeatedly raise tariffs or other trade barriers against each other's goods, each side responding to the other.",
+  "kid": "Two lemonade stands keep making things harder for each other, each time the other one does. In the end both sell less lemonade.",
+  "detail": "A trade war is an escalating cycle of tariffs, quotas, export controls or other barriers between countries, where each side's restrictions trigger counter-measures. Classic examples include the US Smoot-Hawley tariffs of 1930, which drew retaliation and deepened the collapse in world trade during the Great Depression, and the US-China conflict from 2018, when both sides put tariffs on hundreds of billions of dollars of goods. In April 2025 the US-China fight escalated sharply, with US tariffs on many Chinese goods reaching 145% and China's on US goods 125%, before a truce in May cut them steeply. Trade wars raise costs for importers and consumers, disrupt supply chains, hit export-heavy sectors and add volatility to stocks and currencies. Some third countries, including India, can win orders as supply chains shift. Common confusion: clear winners are rare; both sides usually lose some income.",
+  "example": "Say Country A imposes a 25% tariff on $200 billion of imports from Country B, implying $50 billion a year in duties if trade held steady (200 × 0.25). B retaliates with a 25% tariff on $100 billion of A's goods, worth $25 billion a year. In practice trade volumes fall, so actual collections end up lower.",
+  "formula": "",
+  "related": [
+   "Tariff",
+   "Reciprocal tariffs",
+   "Protectionism",
+   "Trade deficit",
+   "Geopolitical risk",
+   "World Trade Organization"
+  ]
+ }
+]

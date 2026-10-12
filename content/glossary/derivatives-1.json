@@ -1,0 +1,807 @@
+[
+  {
+    "id": "derivative",
+    "term": "Derivative",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "derivatives",
+      "derivative contract"
+    ],
+    "hl": [
+      "derivative contract",
+      "derivative contracts",
+      "derivatives market",
+      "derivatives markets",
+      "derivatives trading",
+      "derivative instruments",
+      "derivatives exposure",
+      "derivatives segment",
+      "equity derivatives",
+      "otc derivatives"
+    ],
+    "abbr": [],
+    "short": "A financial contract whose value comes from the price of something else, such as a share, index, currency, interest rate or commodity.",
+    "kid": "You and a friend agree today to swap sweets next week. That promise only matters because of the sweets it is about.",
+    "detail": "A derivative is a contract between two parties whose value is derived from an underlying asset or reference rate: a share, an index such as the Nifty 50, a currency pair, a bond, an interest rate or a commodity. The main families are forwards, futures, options and swaps. Derivatives are used to hedge risk (an exporter locking in a dollar rate), to speculate with leverage (a small margin controls a large exposure) and to arbitrage price gaps between markets. Some trade on exchanges, where a clearing corporation guarantees settlement; others are private over-the-counter (OTC) deals. From 2019 through 2024, India's NSE ranked as the world's largest derivatives exchange by number of contracts traded, mostly index options. The common confusion: a derivative is not ownership of the asset. Holding a stock future gives you no voting rights or dividends, only gains or losses as the price moves.",
+    "example": "Say ABC Ltd shares trade at ₹1,000 and you buy one futures lot of 500 shares at ₹1,010. If the price at expiry is ₹1,060, you gain (1,060 − 1,010) × 500 = ₹25,000 without ever owning a share; if it is ₹980, you lose (1,010 − 980) × 500 = ₹15,000.",
+    "formula": "",
+    "related": [
+      "Underlying asset",
+      "Futures contract",
+      "Forward contract",
+      "Option",
+      "Swap",
+      "Hedging"
+    ]
+  },
+  {
+    "id": "underlying-asset",
+    "term": "Underlying asset",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "underlying"
+    ],
+    "hl": [
+      "underlying asset",
+      "underlying assets",
+      "underlying security",
+      "underlying securities",
+      "underlying index"
+    ],
+    "abbr": [],
+    "short": "The asset, index or rate whose price a derivative tracks, and from which the contract gets its value.",
+    "kid": "You and a friend make a deal about how tall your sunflower will grow. The sunflower is the thing everything depends on.",
+    "detail": "The underlying asset, or simply the underlying, is the reference item whose price decides a derivative's payoff. It can be a single stock, an index like the Nifty 50 or the S&P 500, a currency pair such as USD/INR, a government bond, an interest rate like SOFR, or a commodity such as crude oil or gold. The contract specifications name the underlying exactly, along with the lot size, expiry date and settlement method. Moves in the underlying's price drive almost all of the derivative's value, which is why traders watch the spot market and the derivatives market side by side. Some underlyings cannot be delivered at all, such as an index or an interest rate, so contracts on them must be cash-settled. The common confusion is thinking a derivative holder owns the underlying; they do not, unless physical settlement actually delivers it at expiry.",
+    "example": "Say a stock future on ABC Ltd has a lot size of 600 shares and ABC trades at ₹500. One lot gives exposure to 600 × ₹500 = ₹3 lakh of the underlying, even though the trader posts only a fraction of that as margin.",
+    "formula": "",
+    "related": [
+      "Derivative",
+      "Spot price",
+      "Lot size",
+      "Cash settlement",
+      "Physical settlement",
+      "Futures contract"
+    ]
+  },
+  {
+    "id": "futures-contract",
+    "term": "Futures contract",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "futures",
+      "future"
+    ],
+    "hl": [
+      "futures contract",
+      "futures contracts",
+      "futures trading",
+      "futures market",
+      "futures markets",
+      "index futures",
+      "stock futures",
+      "single-stock futures",
+      "futures exchange"
+    ],
+    "abbr": [],
+    "short": "A standardised, exchange-traded agreement to buy or sell an asset at a set price on a future date, with gains and losses settled daily.",
+    "kid": "You and a friend agree today that next Saturday you will buy her toy car for ten coins. A grown-up holds a few coins from each of you so nobody backs out.",
+    "detail": "A futures contract obliges the buyer (the long) to buy, and the seller (the short) to sell, a fixed quantity of an underlying at a price agreed today, on a set expiry date. Unlike a forward, it is standardised (lot size, expiry, tick size) and traded on an exchange, and a clearing corporation becomes the counterparty to both sides. Each side posts initial margin, and gains and losses are settled every day through mark-to-market, which keeps default risk low. Futures are used to hedge, to speculate with leverage and to arbitrage between the cash and futures markets. In India, NSE and BSE list index and single-stock futures, while MCX and NCDEX list commodity futures. The common confusion is thinking you pay the full contract value up front: you post only margin, so both gains and losses are magnified relative to the cash you put in.",
+    "example": "Say you buy one lot of ABC Ltd futures (lot size 500) at ₹2,000, a contract value of ₹10 lakh, and post margin of 20%, or ₹2 lakh. If the futures price rises to ₹2,100, you gain ₹100 × 500 = ₹50,000: a 25% return on your ₹2 lakh margin from a 5% move in the price.",
+    "formula": "Profit on a long futures position = (Exit price − Entry price) × Lot size × Number of lots",
+    "related": [
+      "Forward contract",
+      "Initial margin",
+      "Mark-to-market",
+      "Expiry",
+      "Lot size",
+      "Open interest"
+    ]
+  },
+  {
+    "id": "forward-contract",
+    "term": "Forward contract",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "forward",
+      "forwards"
+    ],
+    "hl": [
+      "forward contract",
+      "forward contracts",
+      "currency forward",
+      "currency forwards",
+      "forward cover"
+    ],
+    "abbr": [],
+    "short": "A private, customised agreement between two parties to buy or sell an asset at a fixed price on a future date.",
+    "kid": "You tell the baker today that you will buy a cake on your birthday for five coins, and she agrees. When the day comes, you both keep the promise, whatever cakes cost then.",
+    "detail": "A forward is an over-the-counter contract in which two parties agree today on the price, quantity and date of a future purchase or sale. Because it is negotiated privately, it can be tailored to any amount and date, but it does not trade on an exchange, usually has no daily margining and is settled only at maturity. That creates counterparty risk: if one side defaults, the other may lose the gain it was owed. In India, the most common use is currency forwards, which exporters and importers book with banks to lock in a rupee-dollar rate for future payments, often called forward cover. The common confusion is with futures. Both fix a price today, but futures are standardised, exchange-traded and marked to market every day, while forwards are custom, bilateral and settled only at the end.",
+    "example": "Say an Indian exporter expects $100,000 in three months and books a forward to sell those dollars to her bank at ₹84 each. She will receive $100,000 × ₹84 = ₹84 lakh whatever happens; if the spot rate that day is ₹82, the forward earned her ₹2 lakh more, and if it is ₹86, she gave up ₹2 lakh.",
+    "formula": "Payoff to the buyer at maturity = (Spot price at maturity − Forward price) × Quantity; payoff to the seller is the negative of this",
+    "related": [
+      "Futures contract",
+      "Counterparty risk",
+      "Over-the-counter market",
+      "Forward rate agreement",
+      "Hedging",
+      "Derivative"
+    ]
+  },
+  {
+    "id": "short-position",
+    "term": "Short position",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "short",
+      "going short"
+    ],
+    "hl": [
+      "short position",
+      "short positions",
+      "short build-up",
+      "short buildup",
+      "net short position",
+      "net short positions"
+    ],
+    "abbr": [],
+    "short": "A position that makes money when the price of an asset falls, created by selling a futures contract or selling borrowed shares.",
+    "kid": "You promise to give your friend a toy next week for ten coins, though you do not have it yet. If the toy gets cheaper before then, you buy it for less and keep the extra coins.",
+    "detail": "A short position is any exposure that gains when the underlying falls. In derivatives, you go short simply by selling a futures or forward contract: nothing needs to be borrowed, because you are agreeing to deliver later at today's agreed price. In the cash market, short selling beyond the same trading day requires borrowing the shares. The short's maximum gain is reached if the price falls to zero, but the possible loss is in theory unlimited, because a price can keep rising. Hedgers go short to protect what they own, such as a farmer selling wheat futures before harvest. Indian F&O commentary reads price and open interest together: falling prices with rising open interest suggests short build-up, while rising prices with falling open interest suggests short covering. Do not confuse being short with simply having sold your holdings, which leaves you with no position at all.",
+    "example": "Say you sell one lot of ABC Ltd futures (lot size 400) at ₹1,500. If the price falls to ₹1,440, you gain ₹60 × 400 = ₹24,000; if it rises to ₹1,560 instead, you lose the same ₹24,000.",
+    "formula": "Profit on a short futures position = (Entry price − Exit price) × Lot size × Number of lots",
+    "related": [
+      "Long position",
+      "Short selling",
+      "Short covering",
+      "Futures contract",
+      "Open interest",
+      "Hedging"
+    ]
+  },
+  {
+    "id": "initial-margin",
+    "term": "Initial margin",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "IM",
+      "upfront margin"
+    ],
+    "hl": [
+      "initial margin",
+      "initial margins",
+      "upfront margin",
+      "upfront margins",
+      "initial margin requirement",
+      "initial margin requirements"
+    ],
+    "abbr": [],
+    "short": "The deposit a trader must place with the broker and clearing house before opening a futures or other derivatives position.",
+    "kid": "Before you borrow a friend's bike for the week, you leave your favourite toy with her. When the bike comes back safe, you get your toy back.",
+    "detail": "Initial margin is the collateral required up front to open a derivatives position. The clearing corporation sets it to cover the loss a position could plausibly suffer over one or two days of bad moves, so more volatile underlyings need higher margins. It is a good-faith deposit, not a down payment or a fee: it stays in your account, absorbs daily losses and is released when you close the position. In India, equity F&O initial margin is SPAN margin plus an exposure margin, and under the rules as of 2025 it must be collected before the trade, not at the end of the day. Regulators also require initial margin on large uncleared OTC derivatives between banks. The common confusion is treating the exchange's figure as all you need; brokers can ask for more, and margins rise when markets turn volatile.",
+    "example": "Say one lot of ABC Ltd futures covers 1,000 shares at ₹800, a contract value of ₹8 lakh. If the margin is set at 15%, you deposit ₹1.2 lakh before buying; you do not borrow the other ₹6.8 lakh, because you only ever pay or receive the changes in value.",
+    "formula": "Initial margin = Contract value × Margin percentage (in Indian equity F&O: SPAN margin + Exposure margin)",
+    "related": [
+      "Maintenance margin",
+      "Variation margin",
+      "SPAN margin",
+      "Peak margin",
+      "Margin call",
+      "Mark-to-market"
+    ]
+  },
+  {
+    "id": "maintenance-margin",
+    "term": "Maintenance margin",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "minimum margin"
+    ],
+    "hl": [
+      "maintenance margin",
+      "maintenance margins",
+      "maintenance margin requirement",
+      "maintenance margin requirements"
+    ],
+    "abbr": [],
+    "short": "The minimum balance a futures margin account must keep; falling below it triggers a margin call to top the account back up.",
+    "kid": "Your friend says the toys you left with her must never drop below three. If one goes missing, you must bring more right away.",
+    "detail": "Maintenance margin is the floor below which the balance in a futures margin account must not fall. It is set below the initial margin, often around three-quarters of it in textbook US examples. As daily mark-to-market losses are debited, the balance shrinks; once it drops under the maintenance level, the broker issues a margin call, and the trader must deposit enough to bring the account back up to the initial margin, not just to the maintenance level. If the call is not met, the broker can close the position. Indian equity F&O works a little differently: the clearing corporation collects mark-to-market losses in cash every day and expects the full upfront margin to stay in place, so the separate, lower maintenance level is mainly a feature of US-style futures. The common mistake is topping up only to the maintenance level and getting another call the next day.",
+    "example": "Say a futures contract needs $6,000 of initial margin and $4,500 of maintenance margin. After losses of $2,000, the account holds $4,000, below $4,500, so the trader must deposit $2,000 to get back to $6,000. A loss of $1,200 instead would leave $4,800 and trigger no call.",
+    "formula": "Margin call amount = Initial margin − Current balance, triggered when Current balance < Maintenance margin",
+    "related": [
+      "Initial margin",
+      "Variation margin",
+      "Margin call",
+      "Mark-to-market",
+      "Futures contract"
+    ]
+  },
+  {
+    "id": "variation-margin",
+    "term": "Variation margin",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "VM",
+      "MTM margin"
+    ],
+    "hl": [
+      "variation margin",
+      "variation margins",
+      "mtm margin",
+      "mtm margins",
+      "variation margin calls"
+    ],
+    "abbr": [],
+    "short": "The cash paid or received each day to settle the change in value of a derivatives position since the previous day.",
+    "kid": "Every evening you and your friend check who is ahead in your game and hand over a few coins. That way nobody owes a big pile at the end.",
+    "detail": "Variation margin is the daily cash flow that settles gains and losses on a derivatives position. At the end of each trading day the clearing corporation revalues every open futures position at the settlement price; the side that lost pays the change in value, and the side that gained receives it. This stops losses from piling up unpaid and is the main reason exchange-traded futures carry so little counterparty risk. In India it is usually called MTM margin or MTM settlement, and losses must be paid in cash. After the 2008 crisis, global rules also began requiring variation margin on large uncleared OTC derivatives, such as swaps between banks. The common confusion: variation margin is not a security deposit like initial margin, but a real transfer of money, and paying it can strain cash even when the position is a sound hedge.",
+    "example": "Say you are short 2 lots of ABC Ltd futures, each of 250 shares, entered at ₹1,200. If the day's settlement price is ₹1,208, you pay variation margin of ₹8 × 500 = ₹4,000, which goes to the long side. If it settles at ₹1,203 the next day, you receive ₹5 × 500 = ₹2,500 back.",
+    "formula": "Variation margin = (Today's settlement price − Previous settlement price, or the entry price on the first day) × Lot size × Number of lots, paid by the side that lost",
+    "related": [
+      "Mark-to-market",
+      "Initial margin",
+      "Maintenance margin",
+      "Clearing corporation",
+      "Counterparty risk"
+    ]
+  },
+  {
+    "id": "mark-to-market",
+    "term": "Mark-to-market",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "MTM",
+      "M2M",
+      "marking to market"
+    ],
+    "hl": [
+      "mark-to-market",
+      "mark to market",
+      "marked to market",
+      "marked-to-market",
+      "marking to market",
+      "mtm loss",
+      "mtm losses",
+      "mtm gains"
+    ],
+    "abbr": [
+      "MTM"
+    ],
+    "short": "Valuing a position at today's market price rather than its cost; in futures, settling each day's gain or loss in cash.",
+    "kid": "Each night you look at your sticker collection and write down what each sticker could be swapped for today, not what you paid. Some days it is more, some days less.",
+    "detail": "Mark-to-market (MTM) means revaluing holdings at current market prices instead of their original cost. In futures, it is a daily process: the exchange takes each day's settlement price, works out every position's gain or loss since the previous day and moves that cash between accounts as variation margin. In effect the contract is rewritten at the new price every day, so no large unpaid loss can build up. In accounting, banks, insurers and funds also mark investments to market; Indian banks, for example, report MTM losses on their bond holdings when yields rise. MTM matters because it makes losses visible quickly, and in a falling market it can force selling or margin calls. The common confusion: an MTM loss on a futures position is real cash leaving your account that day, even though the contract has not yet expired.",
+    "example": "Say you buy one lot of ABC Ltd futures (lot size 500) at ₹1,000. Settlement prices over the next three days are ₹1,012, ₹1,004 and ₹1,020, so your daily MTM is +₹6,000, −₹4,000 and +₹8,000: a net gain of ₹10,000, which equals (₹1,020 − ₹1,000) × 500.",
+    "formula": "Daily MTM = (Today's settlement price − Previous settlement price) × Quantity held (sign reversed for a short)",
+    "related": [
+      "Variation margin",
+      "Initial margin",
+      "Fair value",
+      "Margin call",
+      "Clearing corporation"
+    ]
+  },
+  {
+    "id": "open-interest",
+    "term": "Open interest",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "OI",
+      "change in OI",
+      "OI buildup"
+    ],
+    "hl": [
+      "open interest",
+      "change in oi",
+      "oi data",
+      "oi buildup",
+      "oi build-up",
+      "futures open interest",
+      "options open interest"
+    ],
+    "abbr": [
+      "OI"
+    ],
+    "short": "The total number of derivatives contracts still open, meaning not yet closed out or settled, at a given moment.",
+    "kid": "Count how many swap promises among your friends have not happened yet. New promises make the number go up, and finished ones make it go down.",
+    "detail": "Open interest (OI) counts outstanding contracts; each has one buyer and one seller but is counted once. It rises when a new buyer and a new seller both open positions, falls when both sides close, and stays the same when an existing holder simply passes a position to a new trader. Volume measures how much trading happened in a day; OI measures how many positions are still alive. Indian market commentary reads OI with price: price up with OI up suggests long build-up, price down with OI up suggests short build-up, price up with OI down suggests short covering, and price down with OI down suggests long unwinding. Traders also watch OI at each strike in the option chain for possible support and resistance. The common confusion is reading high OI as bullish or bearish by itself; it shows how many positions exist, not which side is right.",
+    "example": "Day 1: trader A buys 10 contracts from B, both opening positions, so OI is 10. Day 2: A sells 4 of them to C, a new buyer, so OI stays at 10. Day 3: B buys back 6 contracts from A, both closing, so OI falls to 4.",
+    "formula": "Change in OI = Contracts newly opened − Contracts closed (each contract counted once, not once per side)",
+    "related": [
+      "Futures contract",
+      "Trading volume",
+      "Long position",
+      "Short position",
+      "Short covering",
+      "Rollover"
+    ]
+  },
+  {
+    "id": "rollover",
+    "term": "Rollover",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "futures rollover",
+      "roll",
+      "rollover percentage"
+    ],
+    "hl": [
+      "futures rollover",
+      "futures rollovers",
+      "f&o rollover",
+      "f&o rollovers",
+      "nifty rollover",
+      "nifty rollovers",
+      "rollover percentage",
+      "market-wide rollover",
+      "market-wide rollovers"
+    ],
+    "abbr": [],
+    "short": "Closing a futures position in the expiring contract and reopening it in a later-dated contract to keep the exposure going.",
+    "kid": "Your library book is due back, but you have not finished it. You return it and borrow it again for two more weeks.",
+    "detail": "A rollover moves a futures position from the near-month contract, which is about to expire, to the next-month or a later contract. A trader who is long sells the expiring contract and buys the next one; a short does the reverse. The cost of rolling is the price gap between the two contracts, so in contango a long pays to roll, and in backwardation a long gains. In India, analysts track the rollover percentage in the days before monthly expiry: the share of open interest carried into the next and far months. Rollovers above the three-month average suggest traders are keeping positions, and read with price moves and the cost of carry, they hint at whether longs or shorts are being carried forward. The common confusion: a rollover is two trades, an exit and a new entry, not an automatic extension of the old contract.",
+    "example": "Say in the last days before expiry, ABC Ltd futures have open interest of 15 lakh shares in the near month, 80 lakh in the next month and 5 lakh in the far month. The rollover percentage is (80 + 5) / (15 + 80 + 5) = 85 / 100 = 85%.",
+    "formula": "Rollover percentage = (Next-month OI + Far-month OI) / (Near-month OI + Next-month OI + Far-month OI) × 100",
+    "related": [
+      "Expiry",
+      "Open interest",
+      "Roll yield",
+      "Cost of carry",
+      "Futures curve",
+      "Contango"
+    ]
+  },
+  {
+    "id": "basis",
+    "term": "Basis",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "futures basis",
+      "spot-futures spread"
+    ],
+    "hl": [
+      "futures basis",
+      "spot-futures spread",
+      "cash-futures basis",
+      "futures premium",
+      "futures discount",
+      "basis trade",
+      "basis trades",
+      "treasury basis trade"
+    ],
+    "abbr": [],
+    "short": "The gap between the spot price of an asset and the price of its futures contract at the same moment.",
+    "kid": "A cup of lemonade costs three coins today, but a cup promised for next week costs four. The one-coin gap between now and later is what we watch.",
+    "detail": "Basis is the difference between the spot (cash) price of an asset and its futures price. The textbook convention is basis = spot − futures, so it is negative when futures trade above spot, as equity index futures usually do. Many Indian traders quote it the other way round, as futures minus spot, the futures premium, so always check the sign. Basis reflects the cost of carry: interest, storage and insurance push futures up, while dividends and convenience yield pull them down. It shrinks towards zero as expiry approaches, because the two prices must converge. Arbitrageurs trade it: when futures look rich, they buy spot and sell futures, the cash-and-carry trade that Indian arbitrage funds run. The US Treasury basis trade, run by hedge funds with heavy borrowing, is a large version of the same idea. Do not confuse basis with basis points, an unrelated unit.",
+    "example": "Say ABC Ltd trades at ₹2,000 in the cash market and its near-month future at ₹2,014. The basis is ₹2,000 − ₹2,014 = −₹14, a ₹14 futures premium; if a week later spot is ₹2,050 and the future ₹2,058, the basis has narrowed to −₹8.",
+    "formula": "Basis = Spot price − Futures price (often quoted in India as Futures price − Spot price, the futures premium)",
+    "related": [
+      "Basis risk",
+      "Convergence",
+      "Cost of carry",
+      "Spot price",
+      "Cash-and-carry arbitrage",
+      "Fair value of futures"
+    ]
+  },
+  {
+    "id": "basis-risk",
+    "term": "Basis risk",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "basis risk",
+      "basis risks"
+    ],
+    "abbr": [],
+    "short": "The risk that a hedge does not work fully because the futures price and the price being hedged do not move exactly together.",
+    "kid": "Your own jacket is lost, so you borrow one that is nearly your size. It keeps you warm, but not perfectly.",
+    "detail": "Basis risk is the uncertainty left after hedging with futures, because the basis (spot minus futures) on the day the hedge is lifted cannot be known in advance. If the hedge is closed before expiry, or the futures contract is on a slightly different asset, grade, location or date than the exposure, the two prices can move by different amounts. A perfect hedge would fix the hedger's result exactly; with basis risk, the effective price achieved equals the futures price locked in plus the basis at closing, which can turn out better or worse than planned. Basis risk is unavoidable in cross hedges, such as an airline hedging jet fuel with crude oil futures, or a fund hedging a portfolio of midcap shares with Nifty 50 futures. The common confusion: hedging does not remove all risk; it swaps large price risk for smaller basis risk.",
+    "example": "Say in March a refiner plans to buy crude in May and buys June futures at $70 a barrel. In May it buys the crude and lifts the hedge, with spot at $76 and June futures at $75: it pays $76 for crude but gains $5 on futures, an effective price of $71, which is $70 plus the closing basis of $76 − $75 = $1.",
+    "formula": "Effective price with a hedge = Futures price at the start + Basis when the hedge is closed (Basis = Spot − Futures)",
+    "related": [
+      "Basis",
+      "Hedging",
+      "Cross hedge",
+      "Hedge ratio",
+      "Convergence"
+    ]
+  },
+  {
+    "id": "convergence",
+    "term": "Convergence",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "spot-futures convergence"
+    ],
+    "hl": [
+      "spot-futures convergence",
+      "futures convergence"
+    ],
+    "abbr": [],
+    "short": "The way a futures price moves towards the spot price of its underlying as expiry nears, meeting it on the final day.",
+    "kid": "Two friends walk towards the same tree from opposite sides. The nearer it gets to snack time, the closer they get, until they stand together.",
+    "detail": "Convergence is the tendency of a futures price and the spot price of its underlying to come together as expiry approaches, so the basis shrinks to roughly zero on the last day. Arbitrage forces it: if futures were still above spot at expiry, traders could buy the asset, sell the futures and deliver for a riskless profit, and they would do the reverse if futures were below spot. Cash-settled contracts are settled against the underlying's final settlement price, which makes the match automatic. Convergence is why a hedge held to expiry locks in the futures price, and why a futures premium shrinks as time passes. The common confusion is assuming the path is smooth. The gap can widen before it closes, and convergence can fail when delivery systems are strained, as happened in US wheat futures in the late 2000s.",
+    "example": "Say ABC Ltd spot is ₹1,000 and its one-month future ₹1,008 thirty days before expiry. With 10 days left, spot is ₹1,050 and the future ₹1,053; on expiry both settle at ₹1,040. The basis has gone from −₹8 to −₹3 to zero.",
+    "formula": "At expiry: Futures price = Spot price, so Basis = 0",
+    "related": [
+      "Basis",
+      "Expiry",
+      "Arbitrage",
+      "Cash settlement",
+      "Fair value of futures"
+    ]
+  },
+  {
+    "id": "contango",
+    "term": "Contango",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "contango",
+      "super contango",
+      "in contango",
+      "steep contango"
+    ],
+    "abbr": [],
+    "short": "A market in which futures prices are above the spot price, with later-dated contracts costing more than nearer ones.",
+    "kid": "A bag of apples costs two coins today. If you want one kept for you until next month, it costs a bit more, because someone has to keep it cool and safe.",
+    "detail": "Contango describes an upward-sloping futures curve: each later contract trades above the one before it and above the spot price. It is the normal state for assets that cost money to store or finance, such as gold, or crude oil when supply is plentiful, because a futures price must cover interest, storage and insurance until delivery. Equity index futures usually trade in contango too, since the interest cost exceeds the dividend yield. For investors who keep rolling long futures, as many commodity funds do, contango is a drag: each roll sells a cheaper expiring contract and buys a dearer one, creating negative roll yield. Very steep contango, called super contango, signals a glut, as in crude oil in spring 2020. The common confusion is reading contango as a forecast that prices will rise; mostly it reflects the cost of carrying the asset.",
+    "example": "Say crude spot is $60 a barrel and the one-month future is $61. A fund that buys that future and holds it to expiry loses $1, about 1.6% of $61, if spot is still $60 then, because the future converges down to spot.",
+    "formula": "Contango: Futures price > Spot price, and Far-month price > Near-month price",
+    "related": [
+      "Backwardation",
+      "Futures curve",
+      "Roll yield",
+      "Cost of carry",
+      "Convergence"
+    ]
+  },
+  {
+    "id": "backwardation",
+    "term": "Backwardation",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "backwardation",
+      "in backwardation",
+      "steep backwardation",
+      "normal backwardation"
+    ],
+    "abbr": [],
+    "short": "A market in which futures prices are below the spot price, with later-dated contracts costing less than nearer ones.",
+    "kid": "On a hot day everyone wants ice cream right now. So a scoop today costs more than a scoop promised for next week.",
+    "detail": "Backwardation describes a downward-sloping futures curve: spot is above the near future, and the near future is above later ones. It usually appears in commodities when supply is tight and people value having the physical good now, a benefit economists call convenience yield; crude oil after a supply shock is the classic case. Single-stock futures can also trade below spot, for example ahead of a large dividend. For a long investor who keeps rolling futures, backwardation helps: each roll sells a dearer expiring contract and buys a cheaper one, creating positive roll yield. Strictly, normal backwardation means something narrower: Keynes's idea that futures trade below the expected future spot price because hedgers pay speculators to carry their risk. The common confusion is treating backwardation as a forecast of falling prices; it mainly reflects scarcity today.",
+    "example": "Say crude spot is $80 a barrel and the three-month future is $76. A producer can lock in only $76 for oil it will pump in three months, while a fund that buys the future gains $4 if spot is still $80 at expiry, because the future rises to meet spot.",
+    "formula": "Backwardation: Futures price < Spot price, and Far-month price < Near-month price",
+    "related": [
+      "Contango",
+      "Futures curve",
+      "Roll yield",
+      "Convenience yield",
+      "Cost of carry"
+    ]
+  },
+  {
+    "id": "cost-of-carry",
+    "term": "Cost of carry",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "carry cost",
+      "CoC"
+    ],
+    "hl": [
+      "cost of carry",
+      "cost-of-carry",
+      "cost of carry model"
+    ],
+    "abbr": [],
+    "short": "The net cost of holding an asset until a future date: financing and storage costs minus any income the asset pays.",
+    "kid": "If you keep a hen until next month, you must buy her food. But she lays eggs you can eat, so keeping her costs you a little less.",
+    "detail": "Cost of carry is the net cost of buying an asset today and holding it until a later date. It includes interest on the money tied up (or interest given up), plus storage, insurance and transport for physical goods, minus income such as dividends, coupons or convenience yield. It links spot and futures prices: with no arbitrage, the futures price equals spot plus carry, so positive carry puts futures above spot (contango) and negative carry puts them below (backwardation). In Indian F&O, cost of carry is usually quoted as the annualised percentage premium of futures over spot. A rising cost of carry with rising open interest is read as fresh longs, and a falling or negative one as fresh shorts. The common confusion: cost of carry is not a fee the exchange charges; it is implied by the gap between two market prices.",
+    "example": "Say ABC Ltd trades at ₹1,000 and its future expiring in 30 days at ₹1,005. The futures premium is 0.5%, so the annualised cost of carry is 0.5% × 365 / 30 ≈ 6.08%.",
+    "formula": "Futures price = Spot price + Cost of carry; Annualised cost of carry (%) = (Futures price / Spot price − 1) × 365 / Days to expiry × 100",
+    "related": [
+      "Fair value of futures",
+      "Basis",
+      "Contango",
+      "Backwardation",
+      "Convenience yield",
+      "Cash-and-carry arbitrage"
+    ]
+  },
+  {
+    "id": "fair-value-of-futures",
+    "term": "Fair value of futures",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "futures fair value",
+      "theoretical futures price"
+    ],
+    "hl": [
+      "futures fair value",
+      "fair value of futures",
+      "theoretical futures price",
+      "fair value of the futures"
+    ],
+    "abbr": [],
+    "short": "The theoretical futures price at which nobody can make a riskless profit by buying the asset and selling futures, or the reverse.",
+    "kid": "If keeping a toy safe until next week costs one coin, then a toy promised for next week should cost today's amount plus that one coin. Anything else would be unfair to someone.",
+    "detail": "The fair value of a futures contract is the price implied by the cost-of-carry model: the spot price grown at the financing rate until expiry, minus the value of any income the asset pays before then. For an equity index, that income is dividends; for a commodity, storage costs are added and convenience yield subtracted. If futures trade above fair value, arbitrageurs buy the underlying and sell futures (cash-and-carry); if below, they do the reverse, which keeps market prices close to fair value. In India, arbitrage mutual funds earn this gap, and in the US, pre-market news compares S&P 500 futures with fair value to gauge the likely open. Fair value matters to anyone judging whether a futures premium is rich or cheap. The common confusion: fair value is not a forecast of where the spot price will be at expiry.",
+    "example": "Say ABC Ltd trades at ₹1,000, the interest rate is 8% a year, the future expires in three months and no dividend is due. Fair value is ₹1,000 × (1 + 0.08 × 3/12) = ₹1,020; if the future trades at ₹1,030, an arbitrageur can buy the share, sell the future and lock in about ₹10 a share before costs.",
+    "formula": "F = S × e^((r − q) × T), where S = spot price, r = risk-free rate, q = income yield, T = years to expiry; simple version: F ≈ S × (1 + r × T) − Future value of expected dividends before expiry",
+    "related": [
+      "Cost of carry",
+      "Basis",
+      "Cash-and-carry arbitrage",
+      "Arbitrage fund",
+      "Convergence",
+      "Futures contract"
+    ]
+  },
+  {
+    "id": "futures-curve",
+    "term": "Futures curve",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "forward curve",
+      "futures term structure"
+    ],
+    "hl": [
+      "futures curve",
+      "futures curves",
+      "forward curve",
+      "forward curves",
+      "futures term structure",
+      "oil futures curve"
+    ],
+    "abbr": [],
+    "short": "A line showing futures prices for the same asset across different expiry dates, from the nearest contract to the furthest.",
+    "kid": "Imagine a row of jars marked this week, next week and the week after, each with a sticker saying what people agree to pay for sweets then. Lining them up shows whether the stickers go up or down.",
+    "detail": "The futures curve, also called the forward curve or futures term structure, plots the prices of contracts on one underlying against their expiry dates. An upward slope is contango and a downward slope is backwardation; some curves mix the two, for example backwardated at the front and in contango further out. The shape reflects financing and storage costs, scarcity and expectations, and it drives roll yield for anyone who holds futures continuously. Commodity traders study the curves for crude oil, natural gas and metals every day, and in rates, the curve of SOFR or fed funds futures shows where the market expects policy rates to go. Under the rules as of 2025, Indian stock and index futures list just three monthly contracts, so the equity curve is short. The common confusion: an upward curve is not simply a price forecast, because carrying costs shape it too.",
+    "example": "Say a metal's futures trade at $100 for March, $101 for June and $102 for September delivery. Each three-month step adds about $1, roughly 1%, so the curve slopes upward (contango), consistent with carrying costs of about 4% a year.",
+    "formula": "",
+    "related": [
+      "Contango",
+      "Backwardation",
+      "Roll yield",
+      "Yield curve",
+      "Cost of carry",
+      "Fed funds futures"
+    ]
+  },
+  {
+    "id": "roll-yield",
+    "term": "Roll yield",
+    "cat": "derivatives",
+    "level": "a",
+    "aliases": [
+      "roll return"
+    ],
+    "hl": [
+      "roll yield",
+      "roll yields",
+      "roll return",
+      "roll returns",
+      "negative roll yield",
+      "positive roll yield"
+    ],
+    "abbr": [],
+    "short": "The gain or loss a futures holder makes as the contract's price drifts towards spot, separate from any change in the spot price.",
+    "kid": "You swap your old toy for a new one each week. Some weeks the new one costs a little less and you keep a coin; other weeks it costs more and you give up a coin.",
+    "detail": "Roll yield is the part of a futures investment's return that comes from the shape of the futures curve, not from changes in the spot price. When an investor holds futures and rolls them before each expiry, every contract's price tends to drift towards spot. In backwardation, futures sit below spot and drift up, giving long holders a positive roll yield; in contango, they sit above spot and drift down, giving a negative one. The total return on a fully collateralised commodity futures position is roughly spot return plus roll yield plus the interest earned on the collateral. Roll yield explains why commodity funds that hold futures can lag the spot price badly, as oil funds did during the 2020 super contango. The common confusion: roll yield is not a payment made on the roll date; it builds up as the price converges over the holding period.",
+    "example": "Say spot crude is $50 a barrel and the next-month future is $52. If spot is still $50 when that future expires, the future falls to $50, a roll yield of −$2, or about −3.8% (2 / 52), even though spot did not move.",
+    "formula": "Roll yield per roll ≈ (Expiring contract price − Next contract price) / Next contract price; Total return ≈ Spot return + Roll yield + Collateral return",
+    "related": [
+      "Contango",
+      "Backwardation",
+      "Rollover",
+      "Futures curve",
+      "Convergence"
+    ]
+  },
+  {
+    "id": "expiry",
+    "term": "Expiry",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "expiration",
+      "expiry date",
+      "contract expiry"
+    ],
+    "hl": [
+      "expiry day",
+      "expiry-day",
+      "f&o expiry",
+      "monthly expiry",
+      "weekly expiry",
+      "expiry week"
+    ],
+    "abbr": [],
+    "short": "The last day a futures or options contract exists, when open positions are settled and the contract stops trading.",
+    "kid": "A ticket for a free ice cream only works until a certain day. After that day, it is just a piece of paper.",
+    "detail": "Expiry, or expiration, is the date on which a futures or options contract ends. Positions still open are settled that day, either in cash against the final settlement price or by delivery of the underlying, and the contract then stops trading. Expiry dates follow a fixed exchange calendar. In India, under the rules as of 2025, equity F&O contracts expire monthly, with weekly expiries for one benchmark index option per exchange, and the expiry weekday has changed more than once, so check the current exchange calendar. Expiry days can bring heavy volumes and sharp moves near the close as traders roll or square off positions and arbitrageurs unwind. Traders who want to keep a position must roll it before expiry. The common confusion: expiry is not the day the money moves; in India, final settlement is paid out on the next working day under the 2025 rules.",
+    "example": "Say you hold one lot (lot size 50) of a hypothetical index future bought at 10,000, and the final settlement price on expiry day is 10,120. The position closes automatically, and your total gain, paid through daily MTM and the final settlement, is 120 × 50 = ₹6,000 before costs.",
+    "formula": "",
+    "related": [
+      "Rollover",
+      "Cash settlement",
+      "Physical settlement",
+      "Convergence",
+      "Futures contract",
+      "Square off"
+    ]
+  },
+  {
+    "id": "cash-settlement",
+    "term": "Cash settlement",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "cash-settled"
+    ],
+    "hl": [
+      "cash-settled",
+      "cash-settled futures",
+      "cash-settled contracts",
+      "cash-settled derivatives"
+    ],
+    "abbr": [],
+    "short": "Settling a derivatives contract by paying the difference in value in cash, instead of delivering the underlying asset.",
+    "kid": "You and a friend agree to swap marbles, but instead of handing marbles over, whoever comes out behind gives the other a few coins to even it up.",
+    "detail": "In cash settlement, a derivative ends with a cash payment equal to the gain or loss, worked out against a final settlement price, and no asset changes hands. It is the only choice when the underlying cannot be delivered, such as a stock index, an interest rate or a volatility index, and it avoids the cost and bother of storage, transport and delivery. Under the rules as of 2025, Indian index futures and options are cash-settled, while stock F&O, once cash-settled too, moved to physical settlement in phases between 2018 and 2019. The final settlement price is usually the underlying's closing price on expiry day, which keeps futures and spot aligned. The common confusion: cash settlement does not make a trade small or safe; the cash owed is the full gain or loss on the whole contract value, not on the margin.",
+    "example": "Say you sold one lot (lot size 100) of a hypothetical cash-settled index future at 15,000, and the final settlement price is 14,850. You receive (15,000 − 14,850) × 100 = ₹15,000 in cash over the contract's life, and no shares change hands.",
+    "formula": "Cash settlement amount for a long = (Final settlement price − Contract price) × Lot size × Number of lots (negative means the long pays)",
+    "related": [
+      "Physical settlement",
+      "Expiry",
+      "Convergence",
+      "Mark-to-market",
+      "Futures contract",
+      "Underlying asset"
+    ]
+  },
+  {
+    "id": "physical-settlement",
+    "term": "Physical settlement",
+    "cat": "derivatives",
+    "level": "i",
+    "aliases": [
+      "physical delivery",
+      "delivery settlement"
+    ],
+    "hl": [
+      "physical settlement",
+      "physically settled",
+      "physically-settled",
+      "physical delivery settlement",
+      "delivery-based settlement"
+    ],
+    "abbr": [],
+    "short": "Settling a derivatives contract by actually delivering the underlying asset in exchange for the agreed price.",
+    "kid": "You promised to swap your toy car for your friend's ball on Saturday. When Saturday comes, you really hand over the car and get the ball.",
+    "detail": "In physical settlement, a contract held to expiry ends with the seller delivering the underlying and the buyer paying the full agreed price. Many commodity futures work this way, with rules on grade, quantity and delivery location. In India, SEBI moved all single-stock futures and options to physical settlement by 2019, so under the rules as of 2025 a trader still long on expiry must pay for and take delivery of the shares. Physical settlement ties futures to the real market and helps convergence, but it is demanding: the cash or securities must be ready, and commodities need storage and transport. Most speculators close or roll before expiry to avoid it. The common confusion is forgetting that delivery involves the whole contract value, not just the margin. In April 2020, longs in expiring WTI crude futures who could not store oil dumped contracts, sending the price to −$37.63 a barrel.",
+    "example": "Say you are long one lot of ABC Ltd futures (lot size 250) bought at ₹2,000 and do not square off before expiry, when the final settlement price is ₹2,100. You must pay ₹2,100 × 250 = ₹5.25 lakh and receive 250 shares; your ₹25,000 gain has already come through daily MTM, so your net cost is ₹5 lakh, or ₹2,000 a share.",
+    "formula": "",
+    "related": [
+      "Cash settlement",
+      "Expiry",
+      "Futures contract",
+      "Convergence",
+      "Demat account",
+      "Rollover"
+    ]
+  },
+  {
+    "id": "hedging",
+    "term": "Hedging",
+    "cat": "derivatives",
+    "level": "b",
+    "aliases": [
+      "hedge",
+      "hedger"
+    ],
+    "hl": [
+      "hedging costs",
+      "hedging cost",
+      "hedging programme",
+      "hedging program",
+      "currency hedging",
+      "fx hedging",
+      "hedging instruments",
+      "hedging tools"
+    ],
+    "abbr": [],
+    "short": "Taking an offsetting position, often with derivatives, to reduce the risk of loss from price moves in something you own or owe.",
+    "kid": "You carry a big ice cream on a windy day and hold a napkin under it, just in case. You hope you will not need it, but it saves your shirt if it drips.",
+    "detail": "Hedging means reducing a risk you already face by taking a position that should gain when your existing exposure loses. A hedger might be a farmer with a crop to sell, an importer with dollars to pay or a fund holding shares. Common tools are futures, forwards, options and swaps. A short hedge, selling futures, protects someone who owns an asset; a long hedge, buying futures, protects someone who must buy later. Indian companies hedge foreign-currency loans and import bills with forwards, and airlines hedge fuel costs. Hedging trades upside for certainty: if prices move in your favour, the hedge loses money and offsets the gain. It also has costs, such as option premiums, margin and basis risk. The common confusion is judging a hedge by whether it made money; a good hedge is one that made the overall result steadier.",
+    "example": "Say a jeweller holds gold worth ₹1 crore and sells gold futures of the same value. If gold falls 5%, the gold holding loses ₹5 lakh while the short futures gain about ₹5 lakh; if gold rises 5%, the gold holding gains ₹5 lakh and the futures lose about the same.",
+    "formula": "",
+    "related": [
+      "Hedge ratio",
+      "Basis risk",
+      "Cross hedge",
+      "Futures contract",
+      "Forward contract",
+      "Short position"
+    ]
+  },
+  {
+    "id": "hedge-ratio",
+    "term": "Hedge ratio",
+    "cat": "derivatives",
+    "level": "a",
+    "aliases": [
+      "optimal hedge ratio",
+      "minimum variance hedge ratio"
+    ],
+    "hl": [
+      "hedge ratio",
+      "hedge ratios",
+      "optimal hedge ratio",
+      "minimum variance hedge ratio",
+      "hedging ratio"
+    ],
+    "abbr": [],
+    "short": "The size of a hedging position compared with the exposure it protects, usually chosen to make the combined result as steady as possible.",
+    "kid": "You have three cups of lemonade that might spill, so you count how many napkins to bring. Too few leaves a mess, and too many wastes napkins.",
+    "detail": "The hedge ratio is the number of units of the hedging instrument held per unit of exposure. A ratio of 1 is a simple one-for-one hedge, but when the futures price and the exposure do not move one-for-one, a different ratio works better. The minimum variance hedge ratio equals the correlation between changes in the spot and futures prices times the ratio of their standard deviations; it is the slope of a regression of spot changes on futures changes. For an equity portfolio hedged with index futures, the ratio is the portfolio's beta, so the number of contracts is beta times portfolio value divided by the value of one contract. Getting the ratio right matters most in cross hedges. The common confusion: the optimal ratio is estimated from past data, so it can drift and needs regular review.",
+    "example": "Say a fund holds a ₹10 crore portfolio with a beta of 1.2, and one index futures contract is worth ₹20 lakh. It needs 1.2 × ₹10 crore / ₹20 lakh = 60 contracts to hedge. Separately, if spot and futures changes have a correlation of 0.9 and standard deviations of 4% and 3%, the minimum variance hedge ratio is 0.9 × 4 / 3 = 1.2.",
+    "formula": "h* = ρ × (σS / σF); Number of contracts = h* × Exposure / Size of one futures contract; for equity portfolios, Number of contracts = β × Portfolio value / Value of one futures contract",
+    "related": [
+      "Hedging",
+      "Cross hedge",
+      "Basis risk",
+      "Beta",
+      "Correlation"
+    ]
+  },
+  {
+    "id": "cross-hedge",
+    "term": "Cross hedge",
+    "cat": "derivatives",
+    "level": "a",
+    "aliases": [
+      "cross-hedging"
+    ],
+    "hl": [
+      "cross hedge",
+      "cross-hedge",
+      "cross hedges",
+      "cross hedging",
+      "cross-hedging"
+    ],
+    "abbr": [],
+    "short": "Hedging a risk with a derivative on a different but related asset, because no suitable contract exists on the exact asset.",
+    "kid": "You need a blue crayon but only have a purple one. It is not quite the same colour, but it is close enough to help with your drawing.",
+    "detail": "A cross hedge uses a futures contract or other derivative on one asset to hedge price risk in a different asset whose price tends to move with it. It is used when there is no liquid contract on the exact exposure: airlines hedge jet fuel with crude oil or heating oil futures, a portfolio of Indian midcap shares may be hedged with Nifty 50 futures, and a firm may hedge a thinly traded currency with a closely linked major one. Because the two prices never move perfectly together, cross hedges carry significant basis risk, and the hedge ratio has to be estimated, usually from the past correlation and volatility of the two prices, rather than set at one-for-one. The common confusion is assuming that a high correlation in the past guarantees protection in a crisis; correlations can break down just when the hedge is needed most.",
+    "example": "Say an airline will need 10 lakh litres of jet fuel and estimates a minimum variance hedge ratio of 0.8 against a related fuel futures contract of, say, 50,000 litres per lot. It buys 0.8 × 10,00,000 / 50,000 = 16 lots rather than 20, accepting that any gap between the two fuel prices is unhedged basis risk.",
+    "formula": "Number of contracts = Hedge ratio × Quantity exposed / Quantity per futures contract",
+    "related": [
+      "Hedging",
+      "Hedge ratio",
+      "Basis risk",
+      "Correlation",
+      "Futures contract"
+    ]
+  }
+]

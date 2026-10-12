@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns="http://purl.org/rss/1.0/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <channel rdf:about="https://asia.nikkei.com/rss/feed/nar" xml:lang="en-GB">
+    <title>Nikkei Asia</title>
+    <link>https://asia.nikkei.com/</link>
+    <description/>
+    <items>
+      <rdf:Seq>
+        <rdf:li resource="https://asia.nikkei.com/business/media-entertainment/bandai-s-tamagotchi-gains-ground-in-asia-as-licensing-business-expands"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/inflation-ai-and-climate-imf-kicks-off-key-meeting-in-bangkok"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/my-personal-history/amex-stephen-schwarzman-12"/>
+        <rdf:li resource="https://asia.nikkei.com/business/markets/trading-asia/investors-bet-on-japan-australia-rental-housing-as-rates-home-prices-rise"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/supply-chain/former-iphone-display-plant-in-japan-to-start-new-life-in-chip-supply-chain"/>
+        <rdf:li resource="https://asia.nikkei.com/business/materials/the-pentagon-and-toyota-backed-startup-trying-to-cut-us-reliance-on-china-iron"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/pakistan-suspends-imran-khan-followers-provincial-government"/>
+        <rdf:li resource="https://asia.nikkei.com/business/energy/record-price-for-physical-brent-shows-how-badly-the-world-wants-oil-now"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/electric-vehicles/solid-state-battery-maker-prologium-looks-beyond-evs-to-ai-and-the-skies"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/belt-and-road/afghanistan-opens-potential-china-trade-route-to-persian-gulf"/>
+        <rdf:li resource="https://asia.nikkei.com/business/media-entertainment/vietnam-opens-landmark-piracy-prosecution-protecting-japanese-ip"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/artificial-intelligence/robot-baristas-and-k-pop-dancers-lead-south-korea-s-physical-ai-boom"/>
+        <rdf:li resource="https://asia.nikkei.com/business/media-entertainment/first-naruto-anime-series-in-9-years-announced-at-new-york-comic-con"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/my-personal-history/internecine-strife-and-a-bad-ending-stephen-schwarzman-11"/>
+        <rdf:li resource="https://asia.nikkei.com/business/aerospace-defense-industries/french-defense-contractor-thales-to-open-japan-maintenance-base"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/toyota-offers-low-cost-financing-in-thailand-to-ward-off-cheap-chinese-evs"/>
+        <rdf:li resource="https://asia.nikkei.com/opinion/classrooms-should-ban-digital-textbooks-and-ai"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/japan-pm-takaichi-works-to-shed-reflationist-label-on-market-us-pressure"/>
+        <rdf:li resource="https://asia.nikkei.com/business/aerospace-defense-industries/uk-japan-italy-fighter-plans-japan-design-center-with-1-000-staff"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/dutch-greenhouse-firms-in-china-pivot-to-selling-software"/>
+        <rdf:li resource="https://asia.nikkei.com/editor-s-picks/interview/trump-sanctions-will-not-break-the-icc-court-s-special-adviser-declares"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/ukraine-war/russia-s-attacks-on-kyiv-test-civilian-resilience-as-winter-looms"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/taiwan-s-kmt-shows-signs-of-power-struggle-tracked-by-us-and-china"/>
+        <rdf:li resource="https://asia.nikkei.com/business/business-trends/japan-turns-academic-success-into-an-export-industry"/>
+        <rdf:li resource="https://asia.nikkei.com/life-arts/life/destinations/on-lombok-island-a-volcano-climb-worth-every-step"/>
+        <rdf:li resource="https://asia.nikkei.com/business/travel-leisure/japan-s-nakatsugawa-aims-to-attract-more-visitors-to-samurai-road"/>
+        <rdf:li resource="https://asia.nikkei.com/life-arts/life/cambodian-rice-farmers-help-to-conserve-threatened-cranes"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/japan-food-tax-cut-gets-cabinet-approval-with-key-questions-unanswered"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/my-personal-history/tropicana-stephen-schwarzman-10"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/honda-to-sell-thai-built-mitsubishi-pickup-under-own-brand-in-southeast-asia"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/japan-immigration/japan-pm-faces-calls-for-immigration-cap-as-she-weighs-policy-on-foreigners"/>
+        <rdf:li resource="https://asia.nikkei.com/spotlight/big-in-asia/beijing-wields-pop-culture-to-court-malaysian-chinese"/>
+        <rdf:li resource="https://asia.nikkei.com/business/food-beverage/once-china-s-most-valuable-stock-liquor-maker-kweichow-moutai-down-43-from-peak"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/international-relations/bessent-to-skip-imf-world-bank-meetings-in-bangkok"/>
+        <rdf:li resource="https://asia.nikkei.com/business/companies/japan-s-kobe-steel-eyes-india-m-a-to-lift-compressor-production-executive"/>
+        <rdf:li resource="https://asia.nikkei.com/business/markets/equities/japan-firms-unwind-56bn-in-cross-shareholdings-2nd-most-on-record"/>
+        <rdf:li resource="https://asia.nikkei.com/business/business-trends/japan-machine-tool-order-backlog-hits-all-time-high-on-ai-demand"/>
+        <rdf:li resource="https://asia.nikkei.com/editor-s-picks/interview/nobel-laureate-pillay-calls-us-sanctions-on-icc-judges-shocking"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/artificial-intelligence/trump-s-super-intelligence-ai-rebrand-triggers-rush-on-.si-domain-names"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/trade-war/trump-tariffs/tariffs-targeting-china-s-temu-shein-shrink-us-small-parcel-deliveries"/>
+        <rdf:li resource="https://asia.nikkei.com/business/technology/fujitsu-to-set-up-us-quantum-computing-research-center-in-new-mexico"/>
+        <rdf:li resource="https://asia.nikkei.com/politics/japan-s-doge-to-step-up-spending-review-eyeing-ev-subsidies-health-checks"/>
+        <rdf:li resource="https://asia.nikkei.com/business/business-deals/tdk-weighs-sale-of-hard-drive-head-unit-but-regulatory-ok-uncertain"/>
+        <rdf:li resource="https://asia.nikkei.com/business/companies/mitsubishi-corp.-ex-employee-faces-fine-for-insider-trading"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/china-s-geely-announces-entry-into-canadian-auto-market"/>
+        <rdf:li resource="https://asia.nikkei.com/business/automobiles/tokyo-police-to-set-up-autonomous-driving-unit-to-handle-permits-accidents"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/malaysia-cuts-income-tax-and-raises-wage-floors-as-election-approaches"/>
+        <rdf:li resource="https://asia.nikkei.com/economy/trade/china-eu-trade-talks-yield-prospect-of-chinese-hybrid-exports-halving"/>
+        <rdf:li resource="https://asia.nikkei.com/business/retail/7-eleven-owner-eyes-european-expansion-after-india-exit"/>
+        <rdf:li resource="https://asia.nikkei.com/opinion/nepal-prone-to-disaster-needs-insurance-to-price-risk-of-catastrophes"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="https://asia.nikkei.com/business/media-entertainment/bandai-s-tamagotchi-gains-ground-in-asia-as-licensing-business-expands">
+    <title><![CDATA[Bandai's Tamagotchi gains ground in Asia as licensing business expands]]></title>
+    <link>https://asia.nikkei.com/business/media-entertainment/bandai-s-tamagotchi-gains-ground-in-asia-as-licensing-business-expands</link>
+  </item>
+<item rdf:about="https://asia.nikkei.com/economy/inflation-ai-and-climate-imf-kicks-off-key-meeting-in-bangkok">
+    <title><![CDATA[Inflation, AI and climate: IMF kicks off key meeting in Bangkok]]></title>
+    <link>https://asia.nikkei.com/economy/inflation-ai-and-climate-imf-kicks-off-key-meeting-in-bangkok</link>
+  </item>
+<item rdf:about="https://asia.nikkei.com/spotlight/my-personal-history/amex-stephen-schwarzman-12">
+    <title><![CDATA[Amex: Stephen Schwarzman (12)]]></title>
+    <link>https://asia.nikkei.com/spotlight/my-personal-history/amex-stephen-schwarzman-12</link>
+  </item>
+</rdf:RDF>

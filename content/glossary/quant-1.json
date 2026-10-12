@@ -1,0 +1,856 @@
+[
+  {
+    "id": "mean",
+    "term": "Mean",
+    "cat": "quant",
+    "level": "b",
+    "aliases": [
+      "average",
+      "arithmetic mean",
+      "arithmetic average"
+    ],
+    "hl": [
+      "arithmetic mean",
+      "arithmetic average"
+    ],
+    "abbr": [],
+    "short": "The ordinary average: add up all the numbers in a set and divide by how many numbers there are.",
+    "kid": "You have 2 sweets, your friend has 4 and your sister has 6. If you put them all in one bowl and share them out fairly, each of you gets 4. That fair share is the mean.",
+    "detail": "The arithmetic mean is the sum of a set of observations divided by how many there are. In finance it is used for average returns, average daily traded volumes, consensus analyst estimates and countless economic series, and it is the starting point for variance and standard deviation. Two cautions matter. First, the mean is pulled by outliers: one huge number drags it up, so for skewed data such as incomes, CEO pay or startup valuations the median is often a better 'typical' figure. Second, the arithmetic mean of yearly returns overstates what an investor actually earned over several years when returns swing; the geometric mean gives the true compound rate. Use the arithmetic mean to estimate a single future period's expected return, and the geometric mean to describe multi-year past performance.",
+    "example": "Say a fund returns 10%, -5%, 15% and 8% over four years. Its arithmetic mean return is (10 - 5 + 15 + 8) / 4 = 28 / 4 = 7% a year.",
+    "formula": "Mean = (x1 + x2 + ... + xn) / n",
+    "related": [
+      "Median",
+      "Geometric mean",
+      "Expected value",
+      "Variance",
+      "Standard deviation"
+    ]
+  },
+  {
+    "id": "median",
+    "term": "Median",
+    "cat": "quant",
+    "level": "b",
+    "aliases": [
+      "middle value"
+    ],
+    "hl": [
+      "median",
+      "median estimate",
+      "median forecast"
+    ],
+    "abbr": [],
+    "short": "The middle number when a set of values is lined up from smallest to largest; half the values lie above it and half below.",
+    "kid": "Five friends line up from shortest to tallest. The friend standing right in the middle is the median, and it does not matter how tall the tallest one is.",
+    "detail": "To find the median, sort the data from smallest to largest; with an odd number of values take the middle one, and with an even number average the two middle ones. Unlike the mean, the median ignores how extreme the outliers are, so it is the better 'typical' figure for skewed data such as household incomes, house prices or startup valuations. Polls of economists ahead of an RBI policy decision or a GDP release usually report the median forecast, so that one wild guess does not distort the consensus. In fund analysis, the peer-group median return shows where a typical fund landed. The common confusion is treating mean and median as interchangeable: when a few very large values exist, the mean can sit far above the median, and that gap itself tells you the data are skewed.",
+    "example": "Say five startups in a portfolio are valued at ₹2 crore, ₹3 crore, ₹4 crore, ₹5 crore and ₹86 crore. The median is ₹4 crore, but the mean is ₹100 crore / 5 = ₹20 crore, pulled up by the one big winner.",
+    "formula": "Median = middle value of the sorted data; for an even count n, the average of the (n/2)th and (n/2 + 1)th values",
+    "related": [
+      "Mean",
+      "Skewness",
+      "Probability distribution",
+      "Percentile"
+    ]
+  },
+  {
+    "id": "geometric-mean",
+    "term": "Geometric mean",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "geometric average",
+      "geometric mean return"
+    ],
+    "hl": [
+      "geometric mean",
+      "geometric average",
+      "geometric mean return",
+      "geometric mean returns"
+    ],
+    "abbr": [],
+    "short": "The steady yearly growth rate that would turn the starting amount into the ending amount; the true average of returns over time.",
+    "kid": "Your plant grows a lot one week and only a little the next. The geometric mean asks how fast it would have grown if it had grown at the same steady pace every week and still ended up just as tall.",
+    "detail": "The geometric mean of n returns is the nth root of the product of (1 + each return), minus 1. It is the constant per-period rate that compounds the starting value into the ending value, which makes it the honest measure of past multi-period performance; CAGR is simply the geometric mean return over the period. It is always less than or equal to the arithmetic mean, and the gap widens as returns become more volatile, by roughly half the variance. This 'volatility drag' is why a 50% fall followed by a 50% rise leaves you down 25%, not back where you started. Indian mutual fund factsheets quote returns for periods over one year as CAGR for this reason. The common mistake is presenting the arithmetic average of yearly returns as what an investor earned; it overstates the result whenever returns swing.",
+    "example": "Say ₹1 lakh rises 50% in year one to ₹1.5 lakh and falls 20% in year two to ₹1.2 lakh. The arithmetic mean return is (50 - 20) / 2 = 15%, but the geometric mean is √(1.5 × 0.8) - 1 = √1.2 - 1 ≈ 9.54% a year, and ₹1 lakh × 1.0954² ≈ ₹1.2 lakh confirms it.",
+    "formula": "Geometric mean return = [(1 + r1) × (1 + r2) × ... × (1 + rn)]^(1/n) - 1",
+    "related": [
+      "Mean",
+      "Compound annual growth rate",
+      "Volatility drag",
+      "Variance"
+    ]
+  },
+  {
+    "id": "variance",
+    "term": "Variance",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "σ²"
+    ],
+    "hl": [
+      "variance of returns",
+      "return variance",
+      "portfolio variance"
+    ],
+    "abbr": [],
+    "short": "A measure of how spread out numbers are around their average: the average of the squared distances from the mean.",
+    "kid": "Two friends throw balls at a target. One friend's balls all land close to the middle, while the other's land all over the garden. Variance is a number that says how scattered the throws are.",
+    "detail": "Variance is the average of the squared deviations of each observation from the mean. Squaring makes every deviation positive and penalises big misses more than small ones. In finance, the variance of returns is the basic measure of risk in Markowitz portfolio theory: a portfolio's variance depends not only on each asset's variance but on how the assets move together (covariance), which is why diversification works. Because variance is in squared units, analysts usually quote its square root, the standard deviation, which is back in ordinary per cent and is what 'volatility' means. When estimating it from a sample rather than the whole population, divide by n - 1 instead of n to avoid underestimating it. A common confusion: variance treats upside and downside surprises alike, so a stock that jumps sharply upward counts as 'risky' too.",
+    "example": "Say a stock returns 4%, 8% and 12% over three years. The mean is 8%, the squared deviations are 16, 0 and 16, so the sample variance is 32 / (3 - 1) = 16 (in %²) and the standard deviation is √16 = 4%.",
+    "formula": "Sample variance s² = Σ(xi - mean)² / (n - 1); population variance σ² = Σ(xi - μ)² / N",
+    "related": [
+      "Standard deviation",
+      "Covariance",
+      "Mean",
+      "Modern portfolio theory",
+      "Kurtosis"
+    ]
+  },
+  {
+    "id": "probability-distribution",
+    "term": "Probability distribution",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "return distribution"
+    ],
+    "hl": [
+      "probability distribution",
+      "probability distributions",
+      "return distribution",
+      "return distributions",
+      "distribution of returns"
+    ],
+    "abbr": [],
+    "short": "A list or curve showing every possible outcome of something uncertain and how likely each outcome is.",
+    "kid": "When you roll a dice, each number from 1 to 6 is just as likely to come up. A probability distribution is a picture of everything that could happen and how likely each thing is.",
+    "detail": "A probability distribution assigns a likelihood to every possible outcome of a random variable. Discrete distributions, such as a dice roll or the number of defaults in a loan pool, list probabilities for separate outcomes that add up to 1. Continuous distributions, such as a stock's return, use a probability density curve, where the area under the curve between two points is the probability of landing in that range. A distribution is summarised by its moments: mean (centre), variance (spread), skewness (lopsidedness) and kurtosis (tail weight). Nearly all of quantitative finance, from option pricing to value at risk and credit models, starts by assuming a distribution for returns or losses. The key mistake is assuming the wrong one: real market returns have fatter tails than the normal distribution, so extreme days happen far more often than a bell curve predicts.",
+    "example": "Say ABC Ltd's stock can return -10% next year with probability 0.2, 5% with probability 0.5 or 20% with probability 0.3. The probabilities add up to 1, and the expected return is (0.2 × -10) + (0.5 × 5) + (0.3 × 20) = -2 + 2.5 + 6 = 6.5%.",
+    "formula": "Discrete: Σ P(xi) = 1; continuous: P(a ≤ X ≤ b) = area under the density f(x) between a and b",
+    "related": [
+      "Normal distribution",
+      "Lognormal distribution",
+      "Expected value",
+      "Skewness",
+      "Kurtosis",
+      "Fat tails"
+    ]
+  },
+  {
+    "id": "normal-distribution",
+    "term": "Normal distribution",
+    "cat": "quant",
+    "level": "b",
+    "aliases": [
+      "bell curve",
+      "Gaussian distribution",
+      "standard normal distribution"
+    ],
+    "hl": [
+      "normal distribution",
+      "bell curve",
+      "gaussian distribution",
+      "standard normal distribution",
+      "normally distributed"
+    ],
+    "abbr": [],
+    "short": "A symmetric, bell-shaped pattern where most values cluster near the average and extreme values become rarer and rarer on both sides.",
+    "kid": "If you measure the height of every child in a school, most are about the same middle height and only a few are very short or very tall. Drawn as a picture, it looks like a bell.",
+    "detail": "The normal distribution is a continuous, symmetric distribution fully described by its mean and standard deviation. About 68% of outcomes fall within one standard deviation of the mean, about 95% within two and about 99.7% within three. The standard normal has a mean of 0 and a standard deviation of 1, and any normal variable can be converted to it with a z-score. The central limit theorem explains why it appears so often: averages of many independent effects tend to be normal. Finance leans on it heavily, in Markowitz portfolio theory, parametric value at risk and the Black-Scholes model, which assumes log returns are normal. The crucial caution is that real asset returns are not exactly normal: they show fat tails and often negative skew, so 'six-sigma' crashes that the bell curve treats as near-impossible happen far more often in practice.",
+    "example": "Say a stock's daily returns are roughly normal with a mean of 0.05% and a standard deviation of 1.2%. About 95% of days should then fall between 0.05 - 2 × 1.2 = -2.35% and 0.05 + 2 × 1.2 = 2.45%.",
+    "formula": "f(x) = [1 / (σ√(2π))] × e^(-(x - μ)² / (2σ²))",
+    "related": [
+      "Standard deviation",
+      "Z-score",
+      "Central limit theorem",
+      "Fat tails",
+      "Lognormal distribution",
+      "Value at risk"
+    ]
+  },
+  {
+    "id": "lognormal-distribution",
+    "term": "Lognormal distribution",
+    "cat": "quant",
+    "level": "a",
+    "aliases": [
+      "log-normal distribution",
+      "lognormal"
+    ],
+    "hl": [
+      "lognormal distribution",
+      "log-normal distribution",
+      "lognormally distributed",
+      "log-normally distributed"
+    ],
+    "abbr": [],
+    "short": "A lopsided pattern for things that grow by percentages, like stock prices: values can never fall below zero but can stretch very high.",
+    "kid": "A sunflower can never be shorter than nothing, but a lucky one can grow many times taller than the rest. So the picture of possible heights is squashed near the ground and stretches far up at the top.",
+    "detail": "A variable is lognormal if its natural logarithm is normally distributed. This fits prices well: if continuously compounded returns are normal, the price itself is lognormal, bounded below by zero, skewed to the right and with a mean above its median. That is why the Black-Scholes model and most Monte Carlo stock simulations model prices as lognormal rather than normal; a normal price model would wrongly allow negative prices. The lognormal also describes many quantities that grow multiplicatively, such as company sizes and incomes. A practical consequence is that a stock's most likely long-run outcome sits below its average outcome, because a few big winners pull the mean up. The usual confusion is mixing up the two layers: log returns are normal, prices are lognormal, and both still understate the fat tails of real markets.",
+    "example": "Say one-year log returns on a ₹100 stock are normal with a mean of 0 and a standard deviation of 30%. The median price after a year is ₹100 × e^0 = ₹100, but the mean price is ₹100 × e^(0.3²/2) = ₹100 × e^0.045 ≈ ₹104.60.",
+    "formula": "If ln(X) ~ Normal(μ, σ²), then X is lognormal with median e^μ and mean e^(μ + σ²/2)",
+    "related": [
+      "Normal distribution",
+      "Black-Scholes model",
+      "Monte Carlo simulation",
+      "Skewness",
+      "Continuously compounded return"
+    ]
+  },
+  {
+    "id": "central-limit-theorem",
+    "term": "Central limit theorem",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "CLT"
+    ],
+    "hl": [
+      "central limit theorem"
+    ],
+    "abbr": [],
+    "short": "The rule that averages of many independent random amounts tend to form a bell-shaped normal distribution, whatever the shape of each one.",
+    "kid": "If you roll lots of dice and find their average, then do it again and again, most of your averages land near the middle. Only a very few land far away.",
+    "detail": "The central limit theorem (CLT) says that the mean of a large number of independent, identically distributed random variables with finite variance is approximately normally distributed, even if each variable is not. The spread of that average shrinks as the sample grows: its standard deviation, called the standard error, equals σ / √n. This is the foundation for confidence intervals, t-tests and most hypothesis testing on averages, such as checking whether a fund's average monthly excess return is genuinely above zero. It also helps explain why returns over longer horizons look closer to normal than daily returns. The common confusion is overreach: the CLT needs independence and finite variance, and convergence can be slow. Fat-tailed, correlated market data, especially during crises, can break these conditions, so averaging does not make tail risk disappear.",
+    "example": "Say a fund's monthly returns have a standard deviation of 6%. The average of 36 monthly returns has a standard error of 6% / √36 = 1%, and the CLT lets you treat that sample average as roughly normal with a 1% spread.",
+    "formula": "Sample mean ≈ Normal(μ, σ²/n) for large n; standard error = σ / √n",
+    "related": [
+      "Normal distribution",
+      "Confidence interval",
+      "Hypothesis testing",
+      "Mean",
+      "Standard error"
+    ]
+  },
+  {
+    "id": "fat-tails",
+    "term": "Fat tails",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "fat-tailed distribution",
+      "heavy tails",
+      "leptokurtic",
+      "fat tail risk"
+    ],
+    "hl": [
+      "fat tails",
+      "fat tail",
+      "fat-tailed",
+      "fat-tail risk",
+      "fat tail risk",
+      "heavy tails",
+      "heavy-tailed",
+      "leptokurtic"
+    ],
+    "abbr": [],
+    "short": "A pattern in which extreme outcomes, such as crashes or huge jumps, happen far more often than a normal bell curve would predict.",
+    "kid": "You are told a giant storm comes only once in a whole lifetime, but then one turns up every few years. Fat tails means the really big surprises happen more often than people expect.",
+    "detail": "A distribution has fat, or heavy, tails when more probability sits in its extremes than in a normal distribution with the same mean and variance; statistically this shows up as positive excess kurtosis, also called leptokurtosis. Daily stock, currency and commodity returns are clearly fat-tailed. On 19 October 1987 the Dow Jones Industrial Average fell about 22.6% in one day, a move a normal model treats as essentially impossible. Fat tails matter because many risk tools, including parametric value at risk and the Black-Scholes model, assume normality and so understate the chance of large losses; options markets price this in through the volatility smile. Investors respond with stress tests, expected shortfall, tail hedges and position limits. A common confusion is equating fat tails with high volatility: a low-volatility asset can still be fat-tailed, calm most days and then gapping violently.",
+    "example": "Under a normal distribution, a daily move of 4 standard deviations or more in either direction should happen about once every 15,800 trading days, roughly once in 63 years. Say an index with an average daily move near zero and a 1% standard deviation moves 4% or more on 8 days in a single decade: that is far more often than the bell curve allows, the signature of fat tails.",
+    "formula": "Excess kurtosis > 0, i.e. kurtosis above 3, the value for a normal distribution",
+    "related": [
+      "Kurtosis",
+      "Normal distribution",
+      "Black swan",
+      "Value at risk",
+      "Expected shortfall",
+      "Tail risk"
+    ]
+  },
+  {
+    "id": "skewness",
+    "term": "Skewness",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "skew",
+      "negative skew",
+      "positive skew",
+      "left-skewed",
+      "right-skewed"
+    ],
+    "hl": [
+      "skewness",
+      "negative skewness",
+      "positive skewness",
+      "negatively skewed",
+      "positively skewed",
+      "left-skewed",
+      "right-skewed"
+    ],
+    "abbr": [],
+    "short": "A measure of how lopsided a distribution is: whether the big surprises tend to come on the upside or the downside.",
+    "kid": "Most days you get one or two sweets, but on your birthday you get a giant pile. Because the big surprise only ever happens on one side, the picture leans over, and that lean is called skew.",
+    "detail": "Skewness is the third standardised moment of a distribution: the average cubed deviation from the mean divided by the standard deviation cubed. A symmetric distribution, like the normal, has zero skew. Positive (right) skew means a long right tail: many small losses or modest outcomes and occasional big wins, as with lottery tickets, startup investing or buying far out-of-the-money options. Negative (left) skew means frequent small gains and rare large losses, typical of equity indices, option selling and carry trades. Skew matters because the mean and standard deviation alone hide it, and many investors dislike negative skew more than variance suggests. A common confusion is direction: skew is named after the long tail, not the peak, so a left-skewed distribution has most outcomes on the right. It is also distinct from volatility skew in options, which compares implied volatility across strike prices.",
+    "example": "Say a strategy earns 1% in each of 9 months and loses 6% in the tenth. Its mean monthly return is (9 × 1 - 6) / 10 = 0.3%, which looks fine, but the rare large loss gives it strong negative skew.",
+    "formula": "Skewness = Σ(xi - mean)³ / (n × s³)",
+    "related": [
+      "Kurtosis",
+      "Fat tails",
+      "Probability distribution",
+      "Median",
+      "Volatility smile"
+    ]
+  },
+  {
+    "id": "kurtosis",
+    "term": "Kurtosis",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "excess kurtosis",
+      "peakedness"
+    ],
+    "hl": [
+      "kurtosis",
+      "excess kurtosis"
+    ],
+    "abbr": [],
+    "short": "A measure of how much of a distribution's spread comes from rare extreme outcomes in its tails, compared with a normal bell curve.",
+    "kid": "In one game, everyone wins about the same each turn. In another, most turns are ordinary, but once in a while someone wins a giant pile or loses everything. Kurtosis is how often those wild turns show up.",
+    "detail": "Kurtosis is the fourth standardised moment: the average of deviations raised to the fourth power, divided by the standard deviation to the fourth. A normal distribution has a kurtosis of 3, so analysts usually report excess kurtosis, which is kurtosis minus 3. Positive excess kurtosis (leptokurtic) means fatter tails and, typically, a taller, narrower centre: most days are quiet, but extreme days are more common than the bell curve predicts. Daily equity returns commonly show excess kurtosis well above zero. Kurtosis matters for risk management, because two portfolios with the same standard deviation can carry very different crash risk, and for option pricing, where it helps explain why far out-of-the-money options trade at higher implied volatility. The common confusion is calling kurtosis 'peakedness': it is mainly about tail weight. Also check whether software reports raw or excess kurtosis.",
+    "example": "Say two funds both have a 15% annual standard deviation, but Fund A's monthly returns show excess kurtosis of 0 and Fund B's show 5. Fund B's raw kurtosis is 5 + 3 = 8, so despite equal volatility it is far more prone to sudden extreme months.",
+    "formula": "Kurtosis = Σ(xi - mean)⁴ / (n × s⁴); excess kurtosis = kurtosis - 3",
+    "related": [
+      "Fat tails",
+      "Skewness",
+      "Normal distribution",
+      "Variance",
+      "Value at risk"
+    ]
+  },
+  {
+    "id": "z-score",
+    "term": "Z-score",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "standard score",
+      "z score",
+      "standardised score"
+    ],
+    "hl": [
+      "z-score",
+      "z-scores",
+      "standard score",
+      "standardised score",
+      "standardized score"
+    ],
+    "abbr": [],
+    "short": "How far a number sits from the average, measured in standard deviations (the typical distance from the average), so different scales can be compared.",
+    "kid": "Most children in your class jump about the same distance, but you jump much farther. A z-score is a number that says how unusual your jump is compared with everyone else's.",
+    "detail": "A z-score standardises a value by subtracting the mean and dividing by the standard deviation. A z of 0 is exactly average, +2 is two standard deviations above it and -1.5 is one and a half below. If the data are roughly normal, z-scores map directly to probabilities: only about 2.3% of observations lie above +2. Finance uses them widely: comparing a valuation multiple with its own history, flagging unusual price or volume moves, generating pairs-trading signals when a price gap drifts far from its average, and standardising factors in quant models so that, say, value and momentum scores can be combined. Do not confuse it with the Altman Z-score, a separate bankruptcy-prediction formula built from accounting ratios. Also remember that z-score probabilities assume normality; with fat-tailed data a z of 4 is far less rare than the bell curve suggests.",
+    "example": "Say an index's P/E ratio has averaged 20 over ten years with a standard deviation of 3, and it stands at 26 today. Its z-score is (26 - 20) / 3 = 2, so valuations are two standard deviations above their own history.",
+    "formula": "z = (x - mean) / standard deviation",
+    "related": [
+      "Standard deviation",
+      "Normal distribution",
+      "Mean",
+      "Mean reversion",
+      "Altman Z-score"
+    ]
+  },
+  {
+    "id": "expected-value",
+    "term": "Expected value",
+    "cat": "quant",
+    "level": "b",
+    "aliases": [
+      "expectation",
+      "probability-weighted average",
+      "mathematical expectation"
+    ],
+    "hl": [
+      "expected value",
+      "probability-weighted average",
+      "mathematical expectation"
+    ],
+    "abbr": [],
+    "short": "The average result you would get if an uncertain situation were repeated many times: each outcome times its chance, all added up.",
+    "kid": "You play a game where you usually win one sticker but sometimes win five. If you played it lots and lots of times, the number of stickers you would get on an ordinary go, on average, is the expected value.",
+    "detail": "Expected value is the probability-weighted average of all possible outcomes of an uncertain quantity. It is the long-run average if the situation could be repeated many times, not necessarily a value that can actually occur. It underpins much of finance: an asset's expected return, a lender's expected loss (probability of default × loss given default × exposure at default), the fair price of an option or an insurance policy, and scenario-weighted valuations in project appraisal and M&A. A bet with a positive expected value is attractive only if you can survive the bad outcomes along the way, which is why position sizing and risk matter as much as the average. The usual confusion is treating the expected value as the most likely outcome; for a lopsided bet, such as a biotech drug trial, it may sit far from anything that actually happens.",
+    "example": "Say a project at ABC Ltd earns ₹10 crore with probability 0.3, ₹2 crore with probability 0.5 and loses ₹6 crore with probability 0.2. Its expected value is (0.3 × 10) + (0.5 × 2) + (0.2 × -6) = 3 + 1 - 1.2 = ₹2.8 crore.",
+    "formula": "E(X) = Σ [P(xi) × xi]",
+    "related": [
+      "Probability distribution",
+      "Mean",
+      "Expected loss",
+      "Expected return",
+      "Variance"
+    ]
+  },
+  {
+    "id": "bayes-theorem",
+    "term": "Bayes' theorem",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "Bayes theorem",
+      "Bayes' rule",
+      "Bayesian updating"
+    ],
+    "hl": [
+      "bayes' theorem",
+      "bayes theorem",
+      "bayes' rule",
+      "bayes rule",
+      "bayesian updating"
+    ],
+    "abbr": [],
+    "short": "A rule for updating how likely something is once new evidence arrives, combining what you believed before with how well the evidence fits.",
+    "kid": "You think your friend is probably at the park. Then you see her bicycle outside the library, so you change your guess. Bayes' theorem is a careful way of changing your mind when you learn something new.",
+    "detail": "Bayes' theorem gives the probability of A given B using the reverse conditional: P(A|B) = P(B|A) × P(A) / P(B). P(A) is the prior belief, P(B|A) is how likely the evidence is if A is true, and P(A|B) is the updated, or posterior, belief. In finance it formalises learning: revising the chance of a recession after the yield curve inverts, of a default after a missed payment, or of a fund manager's skill after a strong year. It also underpins Bayesian portfolio methods such as the Black-Litterman model, which blends market-implied returns with an investor's own views. The classic mistake, base-rate neglect, is confusing P(A|B) with P(B|A): a warning signal that catches 90% of defaulters can still be wrong most of the times it flashes if defaults are rare.",
+    "example": "Say 2% of borrowers default, and a warning signal flags 90% of future defaulters but also 10% of good borrowers. P(flag) = 0.9 × 0.02 + 0.1 × 0.98 = 0.018 + 0.098 = 0.116, so P(default given a flag) = 0.018 / 0.116 ≈ 15.5%, meaning most flagged borrowers will still repay.",
+    "formula": "P(A|B) = P(B|A) × P(A) / P(B)",
+    "related": [
+      "Expected value",
+      "Probability of default",
+      "Type I and Type II errors",
+      "Hypothesis testing",
+      "Black-Litterman model"
+    ]
+  },
+  {
+    "id": "regression-analysis",
+    "term": "Regression analysis",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "regression",
+      "linear regression",
+      "OLS",
+      "ordinary least squares",
+      "multiple regression"
+    ],
+    "hl": [
+      "regression analysis",
+      "linear regression",
+      "linear regressions",
+      "ordinary least squares",
+      "multiple regression",
+      "regression model",
+      "regression models"
+    ],
+    "abbr": [
+      "OLS"
+    ],
+    "short": "A statistical method that fits a line through data to estimate how much one variable changes when others change.",
+    "kid": "On hotter days you sell more cups of lemonade. Regression draws the best straight line through all your days, so you can guess how many cups you will sell tomorrow if it is very hot.",
+    "detail": "Regression analysis estimates the relationship between a dependent variable (y) and one or more explanatory variables (x). Ordinary least squares (OLS), the most common method, picks the line that minimises the sum of squared differences between actual and fitted values. Each slope coefficient shows the expected change in y for a one-unit change in that x, holding the other variables constant. Finance uses regression everywhere: a stock's beta is the slope from regressing its returns on the market's, factor models such as Fama-French explain fund returns, and economists relate inflation to the rupee or crude oil prices. Output is judged with R-squared, t-statistics and p-values. Common pitfalls are reading coefficients as causal, leaving out important variables, letting outliers dominate, and regressing one trending series on another, which can produce impressive but meaningless 'spurious regressions'.",
+    "example": "Say regressing ABC Ltd's monthly returns on a market index's gives y = 0.2% + 1.3x. A 2% rise in the index then predicts 0.2% + 1.3 × 2% = 2.8% for the stock, and 1.3 is the stock's beta.",
+    "formula": "y = α + β1x1 + β2x2 + ... + ε; OLS chooses α and the β values to minimise Σ(actual y - fitted y)²",
+    "related": [
+      "R-squared",
+      "t-statistic",
+      "Beta",
+      "Correlation",
+      "Correlation vs causation",
+      "Capital asset pricing model"
+    ]
+  },
+  {
+    "id": "r-squared",
+    "term": "R-squared",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "R²",
+      "R2",
+      "coefficient of determination"
+    ],
+    "hl": [
+      "r-squared",
+      "coefficient of determination"
+    ],
+    "abbr": [],
+    "short": "A score from 0 to 1 (or 0% to 100%) showing how much of one variable's movement a statistical model built on other variables explains.",
+    "kid": "You try to guess how many cups of lemonade you will sell by looking at how hot it is. If your guesses are almost always right, your score is close to one; if the weather hardly helps, it is close to zero.",
+    "detail": "R-squared measures the proportion of the variation in the dependent variable that a regression explains: 1 minus the ratio of unexplained (residual) variation to total variation. In a simple one-variable regression it equals the square of the correlation coefficient. Investors meet it in fund analytics, where R-squared against a benchmark shows how much of a fund's movement the index explains: an index fund should be close to 1, while a genuinely active fund will be lower. It also tells you how much to trust a fund's beta or alpha estimate. Common confusions: a high R-squared does not mean the model is correct or causal; a low one does not make a relationship useless, since daily returns are noisy; and adding variables never lowers R-squared, which is why adjusted R-squared penalises extra variables.",
+    "example": "Say a fund's returns regressed on its benchmark give an R-squared of 0.81. Then 81% of the variation in the fund's returns is explained by the benchmark, and the correlation between the two is √0.81 = 0.9.",
+    "formula": "R² = 1 - (Sum of squared residuals / Total sum of squares)",
+    "related": [
+      "Regression analysis",
+      "Correlation",
+      "Adjusted R-squared",
+      "Beta",
+      "Tracking error"
+    ]
+  },
+  {
+    "id": "correlation-vs-causation",
+    "term": "Correlation vs causation",
+    "cat": "quant",
+    "level": "b",
+    "aliases": [
+      "correlation is not causation",
+      "correlation does not imply causation",
+      "spurious correlation"
+    ],
+    "hl": [
+      "correlation is not causation",
+      "correlation does not imply causation",
+      "correlation vs causation",
+      "correlation versus causation",
+      "spurious correlation",
+      "spurious correlations"
+    ],
+    "abbr": [],
+    "short": "The principle that two things moving together does not prove that one causes the other.",
+    "kid": "Ice-cream sales and swimming trips both go up in summer. Ice cream does not make people swim; the hot sun causes both.",
+    "detail": "Two variables are correlated when they tend to move together; one causes the other only if changing it actually changes the other. Correlation can arise without causation through a hidden common driver (a confounder), reverse causality, or pure chance. Finance is full of traps: folk indicators such as the 'Super Bowl indicator' and the hemline index have lined up with stock returns by coincidence, and when thousands of variables are tested, some will look predictive purely by luck, a problem called data mining. Reverse causality is common too: do rising share prices lift consumer confidence, or does confidence lift prices? Establishing causation needs a plausible mechanism, timing that runs the right way, controls for other factors and, ideally, a natural experiment. The practical lesson is to distrust backtests and charts that show two lines moving together without a convincing reason why.",
+    "example": "Say a study of 100 Indian cities finds a correlation of 0.9 between the number of ATMs and the number of new cars sold. Opening more ATMs will not sell more cars; both are driven by a third factor, the size and income of each city's population.",
+    "formula": "",
+    "related": [
+      "Correlation",
+      "Regression analysis",
+      "Data mining",
+      "Survivorship bias",
+      "Hypothesis testing"
+    ]
+  },
+  {
+    "id": "hypothesis-testing",
+    "term": "Hypothesis testing",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "hypothesis test",
+      "null hypothesis",
+      "alternative hypothesis"
+    ],
+    "hl": [
+      "hypothesis testing",
+      "hypothesis test",
+      "hypothesis tests",
+      "null hypothesis",
+      "alternative hypothesis"
+    ],
+    "abbr": [],
+    "short": "A formal way of using data to decide whether an apparent effect is real or could easily have happened by chance.",
+    "kid": "Your friend says a coin is magic and always lands on heads. You flip it lots of times to check, and if it lands on heads only about half the time, you decide it is just an ordinary coin.",
+    "detail": "Hypothesis testing starts with a null hypothesis (H0), usually 'no effect', such as 'this fund's true alpha is zero', and an alternative (H1), such as 'alpha is not zero'. You compute a test statistic from the sample, for example a t-statistic, and find how likely a result at least that extreme would be if H0 were true: the p-value. If that probability falls below a significance level chosen in advance, commonly 5%, you reject H0. Finance uses it to test whether a trading strategy, a factor or a manager's outperformance is genuine, whether two assets' returns differ, and whether regression coefficients matter. Key cautions: failing to reject H0 does not prove it true, statistical significance is not economic importance, and testing hundreds of strategies guarantees some false discoveries unless you adjust for multiple testing.",
+    "example": "Say a fund's average monthly alpha over 36 months is 0.5% with a standard deviation of 1.5%. The t-statistic is 0.5 / (1.5 / √36) = 0.5 / 0.25 = 2.0, just short of the roughly 2.03 needed to reject 'alpha is zero' in a two-sided test at the 5% level, so the manager's skill is not yet proven.",
+    "formula": "Test statistic = (Sample estimate - Value under H0) / Standard error; reject H0 if the p-value is below the significance level",
+    "related": [
+      "P-value",
+      "t-statistic",
+      "Type I and Type II errors",
+      "Confidence interval",
+      "Backtesting"
+    ]
+  },
+  {
+    "id": "p-value",
+    "term": "P-value",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "p value",
+      "probability value",
+      "statistical significance",
+      "statistically significant"
+    ],
+    "hl": [
+      "p-value",
+      "p-values",
+      "p value",
+      "p values",
+      "statistically significant",
+      "statistical significance"
+    ],
+    "abbr": [],
+    "short": "The probability of seeing a result at least as extreme as the one observed if there were really no effect at all.",
+    "kid": "Your friend wins at marbles ten times in a row. If it were only luck, that would be very surprising, so you start to think your friend is really good. The p-value measures how surprising it would be.",
+    "detail": "The p-value is calculated assuming the null hypothesis is true. A small p-value, conventionally below 0.05, means the observed data would be unusual under the null, so the result is called 'statistically significant' and the null is rejected. In finance it appears in regression output, factor research and backtests. It is one of the most misread numbers in statistics. A p-value of 0.03 does not mean a 3% chance that the null is true, or a 97% chance that the strategy works, and it says nothing about the size or practical value of an effect; with huge samples, tiny, useless effects become 'significant'. The 0.05 cut-off is a convention, not a law. Because researchers test many ideas and report the winners, Campbell Harvey and co-authors have argued that new return factors should clear a t-statistic of about 3, not 2.",
+    "example": "Say a backtest gives a strategy's average return a p-value of 0.04. If the strategy truly had no edge, results at least this strong would turn up about 4% of the time, roughly 1 in 25 tests, by luck alone; try 25 useless strategies and expect about 25 × 0.04 = 1 to look 'significant'.",
+    "formula": "p-value = P(test statistic at least as extreme as observed, given that the null hypothesis is true)",
+    "related": [
+      "Hypothesis testing",
+      "t-statistic",
+      "Type I and Type II errors",
+      "Confidence interval",
+      "Data mining"
+    ]
+  },
+  {
+    "id": "confidence-interval",
+    "term": "Confidence interval",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "CI",
+      "margin of error"
+    ],
+    "hl": [
+      "confidence interval",
+      "confidence intervals"
+    ],
+    "abbr": [],
+    "short": "A range of values, built from sample data, that is likely to contain the true figure, together with how confident you can be.",
+    "kid": "You guess how many sweets are in a jar. Instead of saying one number, you say 'somewhere between 40 and 60', because you are much more likely to be right with a range.",
+    "detail": "A confidence interval gives a range around a sample estimate, such as a mean return or a regression coefficient, built so that if the sampling were repeated many times, a stated share of such intervals (the confidence level, often 95%) would contain the true value. For a mean, a 95% interval is roughly the estimate plus or minus two standard errors. Wider intervals signal more uncertainty, from few observations or noisy data. In finance, intervals reveal how imprecise estimates of expected returns, betas and alphas really are: a fund alpha of 2% with an interval from -1% to 5% is weak evidence of skill. Surveys and opinion polls quote a margin of error, which is half the interval's width. The common misreading is 'there is a 95% chance the true value lies in this particular interval'; strictly, the 95% describes the method, not one interval.",
+    "example": "Say a fund's average annual return over 25 years is 12% with a standard deviation of 20%. The standard error is 20% / √25 = 4%, so an approximate 95% confidence interval is 12% ± 1.96 × 4%, or 4.16% to 19.84%.",
+    "formula": "CI = Estimate ± (Critical value × Standard error); for a 95% normal-based interval on a mean, Mean ± 1.96 × (s / √n)",
+    "related": [
+      "Standard error",
+      "Hypothesis testing",
+      "P-value",
+      "Central limit theorem",
+      "Normal distribution"
+    ]
+  },
+  {
+    "id": "type-i-and-type-ii-errors",
+    "term": "Type I and Type II errors",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "Type I error",
+      "Type II error",
+      "Type 1 error",
+      "Type 2 error",
+      "false positive",
+      "false negative"
+    ],
+    "hl": [
+      "type i error",
+      "type i errors",
+      "type ii error",
+      "type ii errors",
+      "type 1 error",
+      "type 2 error"
+    ],
+    "abbr": [],
+    "short": "The two ways a statistical test can go wrong: raising a false alarm (Type I) or missing something real (Type II).",
+    "kid": "A smoke alarm can make two kinds of mistake. It can ring when there is only burnt toast, or it can stay quiet when there is a real fire.",
+    "detail": "In hypothesis testing, a Type I error is rejecting a null hypothesis that is actually true: a false positive, such as concluding a trading strategy works when its backtest was luck. Its probability is the significance level, alpha, often set at 5%. A Type II error is failing to reject a null that is false: a false negative, such as dismissing a genuinely skilled fund manager because the track record is too short. Its probability is beta, and 1 minus beta is the test's power. For a given sample, cutting one error raises the other; only more or better data reduces both. The trade-off is everywhere in finance: a credit model can approve borrowers who later default or reject ones who would have repaid, and a UPI fraud filter can block genuine payments or let fraud through. Do not confuse this alpha and beta with investment alpha and beta.",
+    "example": "Say 100 strategies with no real edge are each tested at the 5% significance level. On average 100 × 0.05 = 5 will look 'significant' by luck, and each is a Type I error. If a test of a genuinely skilled manager has 60% power, it misses that skill 40% of the time, a Type II error.",
+    "formula": "P(Type I error) = α, the significance level; P(Type II error) = β; Power = 1 - β",
+    "related": [
+      "Hypothesis testing",
+      "P-value",
+      "Confidence interval",
+      "Bayes' theorem",
+      "Backtesting"
+    ]
+  },
+  {
+    "id": "t-statistic",
+    "term": "t-statistic",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "t-stat",
+      "t-test",
+      "t statistic"
+    ],
+    "hl": [
+      "t-statistic",
+      "t-statistics",
+      "t-stat",
+      "t-stats",
+      "t-test",
+      "t-tests"
+    ],
+    "abbr": [],
+    "short": "A number comparing an estimated effect with how uncertain that estimate is; the bigger it is, the less likely the effect is pure luck.",
+    "kid": "If your friend is a whole head taller than you, it is easy to tell. If she is only a hair taller and you are both wriggling, you cannot be sure. The t-statistic compares the size of a difference with how wobbly the measuring is.",
+    "detail": "The t-statistic divides an estimate's distance from the null-hypothesis value, usually zero, by its standard error. In a regression, each coefficient's t-stat tests whether that variable truly matters; in performance analysis, it tests whether a mean return or alpha is really above zero. The result is compared with Student's t-distribution, which has fatter tails than the normal to reflect the extra uncertainty of small samples and approaches the normal as the sample grows. As a rule of thumb, an absolute t-stat above about 2 is significant at the 5% level in large samples. Sample size matters: for a mean, t = mean / (s / √n), so the same average return becomes more convincing over a longer track record. After years of factor mining, many researchers now demand t-stats above 3. A high t-stat shows an effect is precisely measured, not that it is large or profitable.",
+    "example": "Say a regression of a fund's returns gives a beta of 1.2 with a standard error of 0.3. The t-statistic for testing beta = 0 is 1.2 / 0.3 = 4, clearly significant, but for testing beta = 1 it is (1.2 - 1) / 0.3 ≈ 0.67, so the data cannot show that the beta really differs from 1.",
+    "formula": "t = (Estimate - Hypothesised value) / Standard error; for a sample mean, t = (mean - μ0) / (s / √n)",
+    "related": [
+      "Hypothesis testing",
+      "P-value",
+      "Regression analysis",
+      "Confidence interval",
+      "Standard error"
+    ]
+  },
+  {
+    "id": "monte-carlo-simulation",
+    "term": "Monte Carlo simulation",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "Monte Carlo",
+      "Monte Carlo method"
+    ],
+    "hl": [
+      "monte carlo simulation",
+      "monte carlo simulations",
+      "monte carlo method",
+      "monte carlo methods",
+      "monte carlo analysis"
+    ],
+    "abbr": [],
+    "short": "A method that runs thousands of random 'what if' scenarios on a computer to see the full range of possible outcomes and their odds.",
+    "kid": "You want to know how a game of snakes and ladders usually turns out. Instead of guessing, you play it ten thousand times very fast and count what happens.",
+    "detail": "Monte Carlo simulation models an uncertain quantity by drawing random values for its inputs from assumed probability distributions, computing the result, and repeating the process thousands or millions of times. The pile of results approximates the full distribution of outcomes, giving averages, percentiles and the probability of extreme events. Finance uses it to price complex derivatives whose payoffs depend on the path of prices, to estimate value at risk, to stress-test bank and insurer balance sheets, to value projects with many uncertain inputs, and in retirement planning to estimate the chance that a corpus lasts 30 years. Its strength is flexibility; its weakness is that the output is only as good as the assumed distributions and correlations. A common mistake is assuming normal returns and stable correlations, which understates crash risk. Use enough runs too: accuracy improves only with the square root of the number of trials.",
+    "example": "Say you simulate a ₹1 crore retirement corpus 10,000 times with random yearly returns and fixed withdrawals, and in 1,200 runs the money runs out before 30 years. The estimated success rate is (10,000 - 1,200) / 10,000 = 88%.",
+    "formula": "Estimate = (1 / N) × Σ (outcome of run i) over N random runs; the error shrinks in proportion to 1 / √N",
+    "related": [
+      "Probability distribution",
+      "Value at risk",
+      "Lognormal distribution",
+      "Scenario analysis",
+      "Stress testing"
+    ]
+  },
+  {
+    "id": "time-series",
+    "term": "Time series",
+    "cat": "quant",
+    "level": "i",
+    "aliases": [
+      "time-series data",
+      "time series analysis"
+    ],
+    "hl": [
+      "time series",
+      "time-series data",
+      "time series data",
+      "time series analysis",
+      "time-series analysis"
+    ],
+    "abbr": [],
+    "short": "A set of observations of the same thing recorded at regular points in time, such as daily share prices or monthly inflation.",
+    "kid": "Every morning you write down how tall your bean plant is. Your list of heights, one for each day and kept in order, is a time series.",
+    "detail": "A time series is data indexed by time: daily Nifty 50 closing levels, monthly CPI inflation, quarterly GDP or a company's annual earnings. It contrasts with cross-sectional data, which compares many units, such as 500 companies, at a single moment; combining the two gives panel data. Time series analysis separates trend, seasonality (for example, festive-season sales around Diwali), cycles and random noise, and models how today's value depends on past values and past shocks. Tools range from growth rates and moving averages to ARIMA models for forecasting and GARCH models for volatility. The special challenge is that observations are not independent: today's value is linked to yesterday's, so standard statistics can mislead. Key checks are stationarity and autocorrelation, because regressing one trending series on another can show a strong but spurious relationship.",
+    "example": "Say ABC Ltd's quarterly sales are ₹100 crore, ₹110 crore, ₹121 crore and ₹133.1 crore. As a time series each quarter is 10% above the one before, so a simple growth model forecasts ₹133.1 crore × 1.1 = ₹146.41 crore for the next quarter.",
+    "formula": "",
+    "related": [
+      "Stationarity",
+      "Autocorrelation",
+      "Moving average",
+      "GARCH model",
+      "Regression analysis",
+      "Seasonality"
+    ]
+  },
+  {
+    "id": "stationarity",
+    "term": "Stationarity",
+    "cat": "quant",
+    "level": "a",
+    "aliases": [
+      "stationary series",
+      "non-stationary",
+      "unit root"
+    ],
+    "hl": [
+      "stationarity",
+      "non-stationarity",
+      "non-stationary",
+      "stationary series",
+      "unit root",
+      "unit roots",
+      "unit root test"
+    ],
+    "abbr": [],
+    "short": "The property of a data series whose average, spread and patterns stay stable over time instead of drifting away.",
+    "kid": "A swing goes back and forth around the same middle spot, again and again. A balloon that floats away never comes back. The swing is stationary; the balloon is not.",
+    "detail": "A time series is (weakly) stationary when its mean, variance and autocorrelation pattern do not change over time, so its past is a reliable guide to its future behaviour. Asset prices and GDP levels are typically non-stationary: they wander with no fixed mean and are often described as having a unit root or following a random walk. Returns and growth rates, by contrast, are usually close to stationary, which is why analysts model returns rather than prices. Stationarity matters because most statistical tools assume it; regressing one non-stationary series on another can produce a high R-squared and big t-statistics with no real relationship, a spurious regression. The usual fixes are differencing, such as turning prices into returns, or removing the trend. Tests such as the Augmented Dickey-Fuller check for a unit root. Two non-stationary series that keep a stable long-run link are cointegrated, the basis of pairs trading.",
+    "example": "Say a stock's price goes ₹100, ₹105, ₹103 and ₹110 over four days: the level drifts and is non-stationary. Its daily changes, +₹5, -₹2 and +₹7, bounce around a stable average and are much closer to stationary, so they are what a model should use.",
+    "formula": "Weak stationarity: E(Xt) = μ and Var(Xt) = σ² for all t, and Cov(Xt, Xt-k) depends only on the lag k",
+    "related": [
+      "Time series",
+      "Autocorrelation",
+      "Random walk",
+      "Cointegration",
+      "Pairs trading",
+      "Regression analysis"
+    ]
+  },
+  {
+    "id": "autocorrelation",
+    "term": "Autocorrelation",
+    "cat": "quant",
+    "level": "a",
+    "aliases": [
+      "serial correlation",
+      "auto-correlation"
+    ],
+    "hl": [
+      "autocorrelation",
+      "auto-correlation",
+      "serial correlation"
+    ],
+    "abbr": [],
+    "short": "How much a series of numbers echoes its own earlier values, such as whether a good day tends to follow a good day.",
+    "kid": "If it is sunny today, tomorrow is often sunny too. When each day looks a lot like the day before, the days are linked, and that link is autocorrelation.",
+    "detail": "Autocorrelation is the correlation between a time series and a lagged copy of itself: lag 1 compares each value with the one before, and lag 12 compares monthly data with the same month a year earlier. Positive autocorrelation means values persist, as in momentum or slow-moving trends; negative autocorrelation means they tend to reverse, as in mean reversion. Daily returns on liquid stocks and indices show little autocorrelation, consistent with fairly efficient markets, while private equity and real estate valuations show strong positive autocorrelation because appraisals smooth prices, making reported risk look artificially low. In regression, autocorrelated residuals make standard errors and t-statistics misleading, so analysts apply Newey-West corrections. The crucial nuance: returns can show almost no autocorrelation while their size, measured by absolute or squared returns, is strongly autocorrelated. That is volatility clustering.",
+    "example": "Say a fund's monthly returns have a lag-1 autocorrelation of 0.4. A month that is 2% above average then tends to be followed by one about 0.4 × 2% = 0.8% above average, often a sign that the fund's reported values are being smoothed.",
+    "formula": "Autocorrelation at lag k: ρk = Cov(Xt, Xt-k) / Var(Xt)",
+    "related": [
+      "Time series",
+      "Stationarity",
+      "Volatility clustering",
+      "Mean reversion",
+      "Momentum investing"
+    ]
+  },
+  {
+    "id": "volatility-clustering",
+    "term": "Volatility clustering",
+    "cat": "quant",
+    "level": "a",
+    "aliases": [],
+    "hl": [
+      "volatility clustering",
+      "volatility clusters",
+      "clustered volatility"
+    ],
+    "abbr": [],
+    "short": "The tendency of big price swings to be followed by more big swings, and calm periods to be followed by more calm.",
+    "kid": "When the sea gets rough, big waves keep coming for a while, and when it is calm, it stays calm for a while. Wild days and quiet days come in bunches.",
+    "detail": "Volatility clustering, noted by Benoit Mandelbrot in the 1960s, is the observed fact that large returns of either sign tend to follow large returns, and small ones follow small ones. The direction of tomorrow's move is hard to predict, but its likely size is not: squared and absolute returns are strongly autocorrelated even when returns themselves are not. Markets therefore alternate between calm regimes and turbulent ones, as in late 2008 and March 2020. Clustering is the reason GARCH models exist, why volatility indices such as India VIX tend to stay high for a while after a shock, and why risk systems based on long-run average volatility underestimate risk early in a crisis. It also accounts for part of the fat tails seen in returns over long samples. The usual confusion is with price predictability: clustering forecasts how much prices may move, not which way.",
+    "example": "Say a risk model updates variance as 0.94 × yesterday's estimate + 0.06 × today's squared return, and yesterday's estimate was 1 (in %², meaning 1% daily volatility). If the market falls 5% today, the new estimate is 0.94 × 1 + 0.06 × 5² = 0.94 + 1.5 = 2.44, so forecast volatility jumps to about 1.56%, well above the calm-period 1%.",
+    "formula": "Corr(r²t, r²t-k) > 0 even when Corr(rt, rt-k) ≈ 0",
+    "related": [
+      "GARCH model",
+      "Autocorrelation",
+      "Fat tails",
+      "Historical volatility",
+      "Implied volatility",
+      "India VIX"
+    ]
+  },
+  {
+    "id": "garch-model",
+    "term": "GARCH model",
+    "cat": "quant",
+    "level": "a",
+    "aliases": [
+      "GARCH",
+      "ARCH model",
+      "conditional heteroskedasticity"
+    ],
+    "hl": [
+      "garch model",
+      "garch models",
+      "arch model",
+      "arch models",
+      "conditional heteroskedasticity",
+      "conditional heteroscedasticity"
+    ],
+    "abbr": [
+      "GARCH"
+    ],
+    "short": "A statistical model that forecasts how much prices are likely to swing, letting recent big moves raise the forecast before it fades back.",
+    "kid": "After you hear a loud bang, you stay jumpy for a while and then slowly calm down. GARCH is a way of guessing how jumpy things will be tomorrow, based on how jumpy they were lately.",
+    "detail": "GARCH (generalised autoregressive conditional heteroskedasticity) models the variance of returns as changing over time. In the standard GARCH(1,1), tomorrow's variance is a weighted mix of a long-run average, today's squared surprise (the ARCH term) and today's variance forecast (the GARCH term). Robert Engle introduced ARCH in 1982, work recognised with the 2003 Nobel prize in economics, and Tim Bollerslev generalised it in 1986. The model captures volatility clustering and mean reversion in volatility: after a shock, forecast volatility jumps and then decays towards its long-run level at a speed set by alpha + beta. Banks use it for value at risk, and traders compare its forecasts with option implied volatility. A key limitation is that standard GARCH treats up and down shocks alike, while equity volatility rises more after falls, so variants such as EGARCH and GJR-GARCH add this leverage effect.",
+    "example": "Say a GARCH(1,1) has ω = 0.000002, α = 0.08 and β = 0.90, so long-run daily variance is 0.000002 / (1 - 0.98) = 0.0001, or 1% volatility. If today's variance forecast is 0.0001 and the stock falls 3%, tomorrow's variance is 0.000002 + 0.08 × 0.0009 + 0.90 × 0.0001 = 0.000164, so forecast volatility rises to about 1.28% before decaying back towards 1%.",
+    "formula": "GARCH(1,1): σ²(t+1) = ω + α × ε²(t) + β × σ²(t); long-run variance = ω / (1 - α - β)",
+    "related": [
+      "Volatility clustering",
+      "Historical volatility",
+      "Implied volatility",
+      "Value at risk",
+      "Autocorrelation",
+      "Time series"
+    ]
+  }
+]

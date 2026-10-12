@@ -1,0 +1,503 @@
+<!doctype html><html><body>
+<!-- excerpt of the live page, rbi -->
+<div class="clearfix"></div>
+        </div>
+
+</div>
+
+
+<script >
+
+     function SetLink() {
+        
+        var txt="This will lead you to Hindi (हिन्दी) language website. Are you sure you want to switch to this language?"
+        if(window.confirm(txt)==true){
+            //document.cookie = 'preferLang' + '=;secure; expires=Thu, 01-Jan-70 00:00:01 GMT;path=/;';
+            window.location.replace("https://www.rbi.org.in/hindi/");
+        }
+        else 
+        {
+            event.preventDefault();
+            return false;
+        }
+        
+    }
+
+    
+
+    $(document).ready(function () {        
+       
+    });
+    function changemarquee() {
+        document.getElementById("marquee").innerHTML = "<marquee scrollamount=\"5\" onmouseover=\"stop();\"  onmouseout=\"start();\" style=\"color:white\">&nbsp;&nbsp;<a target=\"_blank\" href=\"https://youtube.com/live/PAa-wdH__8k?feature=share\">Live telecast of Monetary Policy statement by RBI Governor at 10:00 AM on October 01, 2025</a></marquee>";
+    }
+
+
+
+	const allMenuItems = document.querySelectorAll("nav ul li");
+	
+	allMenuItems.forEach(item => {
+		item.addEventListener("focusin", (event) => {	
+			const MenuText =event.target.textContent;
+			const allMenuItems1 = document.querySelectorAll(".hasSubmenu");
+			allMenuItems1.forEach(item1 => {
+				if (MenuText === 'Press Releases')
+				{	
+					
+					item1.classList.remove('focused');
+					rollback(item1)
+					item1.classList.remove('open');
+				}
+			});
+			
+		});
+	});
+
+
+const menuItems = document.querySelectorAll(".hasSubmenu");
+menuItems.forEach(item => {
+	item.addEventListener("mouseenter", (event) => {
+		item.className="hasSubmenu open focused"
+		expandThis(item);
+	});
+	item.addEventListener("mouseleave", (event) => {		
+		rollback(item)
+		item.className="hasSubmenu"
+	});
+	item.addEventListener("focusin", (event) => {		
+		const allMenuItems = document.querySelectorAll("nav ul li");
+		allMenuItems.forEach(item1 => {
+			item1.classList.remove('focused');
+			if(item!==item1)
+			rollback(item1)
+			item1.classList.remove('open');	
+		});							
+		item.classList.add('focused');
+	});
+	item.addEventListener("focusout", (event) => {
+		
+		if(!item.className.includes('focused')){
+		
+		rollback(item)
+		item.className="hasSubmenu"
+		}
+		item.classList.remove('focused');
+		item.classList.remove('open');
+	});
+
+    item.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+		if(item.className.includes("hasSubmenu open")){
+			rollback(item)
+			item.className="hasSubmenu"
+		}
+		else{
+          	item.className="hasSubmenu open focused"
+		var ele=item.querySelectorAll("a")[0];
+		
+		expandThis(item);	
+		}
+				
+        }
+	
+    });
+	
+});
+function expandThis(menu){
+ var $targetul = $(menu).children("ul:eq(0)")
+				    if ($targetul.queue().length <= 1) 
+				        if (this.istopheader)
+					$targetul.css({ left: $(this).children('a').eq(0).position().left, top: $mainmenu.position().top + this._dimensions.h - 2 })
+				            
+				    if (document.all && !window.XMLHttpRequest) 
+				        $mainmenu.find('ul').css({ overflow: (this.istopheader) ? 'hidden' : 'visible' })
+					
+					
+				    $targetul.dequeue().stop(true, true).slideDown(droplinemenu.animateduration.over)
+}
+const menuItemsf = document.querySelectorAll("nav .midmenu ul li");
+
+menuItemsf.forEach(item => {
+    item.addEventListener("keydown", (event) => {
+	
+	if(item.className.includes("last") ){
+		 if (pressedKeys['shift'] && event.key === "Tab"){}else{
+		var lastItem = document.getElementsByClassName('hasSubmenu open');
+		rollback(lastItem[0])
+		lastItem[0].className="hasSubmenu";
+		}
+	}
+	
+	});
+	
+	});
+	
+
+function rollback(menu){
+ var $targetul = $(menu).children("ul:eq(0)")
+$targetul.dequeue().stop(true, true).slideUp(droplinemenu.animateduration.out);
+
+}
+
+
+
+function setLetterSpace(val) {
+    
+	
+    if (false) {
+                    document.body.setAttribute("style", "letter-spacing:1px; line-height:20px; word-spacing:2px;");
+       
+    }
+    else {
+                    document.body.removeAttribute("style");
+    }
+    return false;
+
+    
+    }
+   
+
+ //image slider 
+ let slides01 = document.querySelector(".slides01");
+    let total = document.querySelectorAll(".slides01 div").length;
+    let index = 0;
+    let interval = null;
+
+    function showSlide() {
+        slides01.style.transform = `translateX(-${index * 250}px)`;
+        index = (index + 1) % total;
+
+    }
+
+    function playSlider() {
+        if (!interval) {
+            interval = setInterval(showSlide, 2000);
+        }
+    }
+
+    function pauseSlider() {
+        clearInterval(interval);
+        interval = null;
+    }
+
+    // Auto play on load
+    playSlider();
+
+
+// Toggle submenu
+    document.querySelectorAll('.menu li > a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const submenu = this.nextElementSibling;
+
+            if (submenu && submenu.classList.contains('submenu1')) {linkMessage();
+                e.preventDefault();
+                e.stopPropagation();
+
+                const parentLi = this.parentElement;
+
+                // Close sibling menus ONLY (not entire menu)
+                closeSiblings(parentLi);   
+ 
+
+                
+ 
+                const isExpanded=link.getAttribute('aria-expanded') ==='true';
+                link.setAttribute('aria-expanded',!isExpanded);
+                submenu.hidden=isExpanded;
+                
+                submenu.setAttribute('aria-hidden', isExpanded);
+                setTimeout(()=>{
+                    // Toggle current submenu
+                    submenu.classList.toggle('show', !isExpanded);
+            },50);
+
+        }
+        });
+    });
+
+    //  Close only sibling menus (important fix)
+    function closeSiblings(currentLi) {
+        const siblings = currentLi.parentElement.children;
+
+        Array.from(siblings).forEach(li => {
+            if (li !== currentLi) {
+            const submenus = li.querySelectorAll('.submenu1');
+        submenus.forEach(menu => menu.classList.remove('show'));
+    }
+    });
+    }
+
+    //  Click outside → close all
+    document.addEventListener('click', function () {
+		
+        document.querySelectorAll('.menu li > a').forEach(menu => {
+		if(menu.hasAttribute('aria-expanded')){
+            menu.setAttribute('aria-expanded','false');
+		}
+	
+    });
+
+    document.querySelectorAll('.submenu1').forEach(menu => {
+        menu.setAttribute('aria-hidden','true');
+    menu.classList.remove('show');
+	
+
+    });
+    });
+
+    //  Prevent closing when clicking inside menu
+    document.querySelector('.menu').addEventListener('click', function (e) {linkMessage();
+        e.stopPropagation();
+    });
+
+
+    //  Keyboard support
+    document.querySelectorAll('.menu li > a').forEach(link => {
+        link.addEventListener('keydown', function (e) {
+            const submenu = this.nextElementSibling;
+
+            if ((e.key === 'Enter' || e.key === ' ') && submenu) {
+                e.preventDefault();
+
+                const parentLi = this.parentElement;
+                closeSiblings(parentLi);
+
+
+                const isExpanded=link.getAttribute('aria-expanded') ==='true';
+                link.setAttribute('aria-expanded',!isExpanded);
+                submenu.hidden=isExpanded;
+                submenu.setAttribute('aria-hidden', isExpanded);
+                setTimeout(()=>{
+                    // Toggle current submenu
+                    submenu.classList.toggle('show', !isExpanded);
+            },50);
+
+
+            
+        }
+
+          if (e.key === 'Escape') {
+        document.querySelectorAll('.submenu').forEach(menu => {
+            menu.classList.remove('show');
+    });
+    this.blur();
+    }
+    });
+    });
+    // When focusing main menu items → close other submenus
+    document.querySelectorAll('.menu > li > a').forEach(item => {
+        item.addEventListener('focus', function() {
+
+            document.querySelectorAll('.submenu1').forEach(menu => {
+                // keep only the submenu that belongs to this item (if any)
+                if (menu !== this.nextElementSibling) {
+                
+
+            document.querySelectorAll('.menu li > a').forEach(menu => {
+                if(menu.hasAttribute('aria-expanded'))
+                menu.setAttribute('aria-expanded','false');
+		
+            document.querySelectorAll('.submenu1').forEach(menu => {
+                menu.setAttribute('aria-hidden','true');
+            
+            // Toggle current submenu
+            menu.classList.remove('show');
+           
+
+
+        });
+
+	
+    });
+
+    }
+    });
+
+    });
+    });
+
+    //  Close submenu when focus leaves it (TAB navigation)
+    document.querySelectorAll('.menu li').forEach(li => {
+        li.addEventListener('focusout', function (e) {
+            // Check if focus is still inside this <li>
+            if (!li.contains(e.relatedTarget)) {
+                const submenu = li.querySelector('.submenu1');
+                if (submenu) {
+                    submenu.classList.remove('show');
+                    if(li.querySelector('a').hasAttribute('aria-expanded'))
+                        li.querySelector('a').setAttribute('aria-expanded','false');
+	
+
+                    submenu.setAttribute('aria-hidden','true');
+                }
+            }
+        });
+    });
+   
+
+</script>
+
+        <div class="container_12">
+            <div>
+            <!--  CURRENT RATES START-->
+           
+                <a id="mainsection" href="#"></a>
+                <div class="grid_3">
+   
+
+		<h2 style="text-transform: none;">1. <span class="blue">Current</span> Rates</h2>
+           
+                <div id="wrapper">
+    <h3 class="accordionButton">
+        <a href="javascript:void(0);" aria-expanded="false" role="button">Policy&nbsp; Rates</a>
+    </h3>
+    <div class="accordionContent">
+        <table style="border-collapse:collapse; border:0;">
+            <tr>
+                <th>
+                    Policy Repo Rate
+                </th>
+                <td>
+                    :
+                    5.50%
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Standing Deposit Facility Rate
+                </th>
+                <td>
+                    :
+                    5.25%
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Marginal Standing Facility Rate
+                </th>
+                <td>
+                    :
+                    5.75%
+                </td>
+            </tr>
+            <tr>
+                <th style="width:50%">
+                    Bank Rate
+                </th>
+                <td style="width:50%">
+                    :
+                    5.75%
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Fixed Reverse Repo Rate
+                </th>
+                <td>
+                    :
+                    3.35%
+                </td>
+            </tr>
+           
+
+
+        </table>
+    </div>
+    <h3 class="accordionButton">
+        <a href="javascript:void(0);" aria-expanded="false" role="button">Reserve &nbsp;Ratios</a>
+    </h3>
+    <div class="accordionContent">
+        <table style="border-collapse:collapse; border:0; width:100%;">
+            <tr>
+                <th style="width:50%">
+                    CRR
+                </th>
+                <td style="width:50%">
+                    :
+                    3.00%
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    SLR
+                </th>
+                <td>
+                    :
+                    18.00%
+                </td>
+            </tr>
+        </table>
+    </div>
+    <h3 class="accordionButton">
+        <a href="javascript:void(0);" aria-expanded="false" role="button">Exchange &nbsp;Rates</a>
+    </h3>
+    <div class="accordionContent">
+        <table style="border-collapse:collapse; border:0; width:100%;">
+
+            <tr>
+                <th style="width:65%">
+                    INR / 1 USD
+                </th>
+                <td>
+                    :
+                    96.6149
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    INR / 1 GBP
+                </th>
+                <td>
+                    :
+                    127.8859
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    INR / 1 EUR
+                </th>
+                <td>
+                    :
+                    108.4728
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    INR / 100 JPY
+                </th>
+                <td>
+                    :
+                    61.0800
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    INR / 1 AED
+                </th>
+                <td>
+                    :
+                    26.3049
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    INR / 10000 IDR
+                </th>
+                <td>
+                    :
+                    54.0120
+                </td>
+            </tr>
+
+        </table>
+        <div>
+            <div style="border-bottom:1px dotted #333;">
+                <span class="subText"> (As at 1.00pm of October 09, 2026) </span>
+            </div>
+</body></html>

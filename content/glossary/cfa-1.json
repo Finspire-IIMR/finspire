@@ -1,0 +1,1086 @@
+[
+  {
+    "id": "cfa-program",
+    "term": "CFA Program",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CFA",
+      "Chartered Financial Analyst",
+      "CFA exam",
+      "CFA course",
+      "CFA Programme"
+    ],
+    "hl": [
+      "cfa program",
+      "cfa programme",
+      "cfa exam",
+      "cfa exams",
+      "chartered financial analyst",
+      "chartered financial analysts",
+      "cfa course",
+      "cfa candidates"
+    ],
+    "abbr": [],
+    "short": "A three-level, self-study exam programme run by CFA Institute that tests investment analysis, ethics and portfolio management, and leads to the CFA charter.",
+    "kid": "It is like a very hard game with three levels. You must beat level one, then two, then three, and only then do you get the special badge.",
+    "detail": "The CFA Program is a self-study qualification run by CFA Institute that tests investment knowledge through three exams: Level I, Level II and Level III. The curriculum covers ethics, quantitative methods, economics, financial statement analysis, corporate issuers, equity, fixed income, derivatives, alternative investments and portfolio management, moving from concepts at Level I to valuation at Level II and portfolio decisions at Level III. CFA Institute suggests around 300 hours of study per level, and historically fewer than half of Level I candidates have passed. Exams are computer-based and held in several windows a year, including at test centres across India. Eligibility rules change from time to time, so check CFA Institute's current rules before registering. The common confusion: passing all three levels does not by itself make you a charterholder; you also need qualifying work experience and CFA Institute membership.",
+    "example": "If you plan 300 hours of study per level and can manage 15 hours a week, each level takes 300 / 15 = 20 weeks. All three levels need 900 hours, or about 60 weeks of study at that pace.",
+    "formula": "",
+    "related": [
+      "CFA Level I",
+      "CFA charterholder",
+      "CFA Institute",
+      "Code of Ethics and Standards of Professional Conduct",
+      "Financial Risk Manager",
+      "Learning Outcome Statements"
+    ]
+  },
+  {
+    "id": "cfa-level-i",
+    "term": "CFA Level I",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CFA Level 1",
+      "CFA L1",
+      "Level I"
+    ],
+    "hl": [
+      "cfa level 1",
+      "cfa level i exam",
+      "cfa level i results",
+      "cfa level one"
+    ],
+    "abbr": [],
+    "short": "The first of the three CFA exams, testing broad basic knowledge of investment tools, ethics and financial analysis through multiple-choice questions.",
+    "kid": "This is the first level of the big game. It checks that you know lots of small facts, like learning all your letters before you read stories.",
+    "detail": "Level I is the first of the three CFA Program exams. It tests knowledge and basic application across ten topic areas, from ethics, quantitative methods and economics to financial statement analysis, equity, fixed income, derivatives, alternatives and portfolio management. Under the format as of 2025, it has 180 standalone multiple-choice questions split across two sessions of 2 hours 15 minutes, with no negative marking for wrong answers, and candidates must also complete a short practical skills module before receiving results. Ethics carries the largest single topic weight. It is the natural starting point for students: under the eligibility rules as of 2025, anyone within 23 months of finishing a bachelor's degree can sit Level I, but must graduate before moving on to Level II. The common confusion: Level I is wide rather than deep, and many candidates underestimate how much time financial statement analysis and fixed income demand.",
+    "example": "Level I has 180 questions in two sessions of 135 minutes each, so 270 minutes in total, or 270 x 60 / 180 = 90 seconds per question. A candidate planning 300 hours of study at 20 hours a week needs 15 weeks of preparation.",
+    "formula": "",
+    "related": [
+      "CFA Program",
+      "CFA Level II",
+      "Learning Outcome Statements",
+      "Code of Ethics and Standards of Professional Conduct"
+    ]
+  },
+  {
+    "id": "cfa-level-ii",
+    "term": "CFA Level II",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "CFA Level 2",
+      "CFA L2",
+      "Level II"
+    ],
+    "hl": [
+      "cfa level 2",
+      "cfa level ii exam",
+      "cfa level ii results",
+      "cfa level two"
+    ],
+    "abbr": [],
+    "short": "The second CFA exam, focused on applying concepts, especially company valuation and financial statement analysis, through case-based sets of questions.",
+    "kid": "Now you know your letters, so you read whole stories and answer questions about them. Each story has a few questions, and you must think carefully.",
+    "detail": "Level II is the second CFA Program exam and focuses on applying concepts, especially valuation and the analysis of financial statements. Instead of standalone questions, it uses item sets: a vignette of a page or two describing a company, client or market situation, followed by four multiple-choice questions about it. Under the format as of 2025, the exam has 22 item sets, or 88 questions, across two sessions of 2 hours 12 minutes. The biggest topics include financial statement analysis, equity valuation with discounted cash flow and residual income models, fixed income and portfolio management, with ethics tested again. Many candidates find it the hardest level because of the volume and depth of material. The common confusion: vignettes contain irrelevant details and traps, so careful reading and judgement matter as much as memorised formulas.",
+    "example": "Two sessions of 132 minutes give 264 minutes for 88 questions, which is 264 / 88 = 3 minutes per question, or 12 minutes for each item set of four questions, including the time to read the vignette.",
+    "formula": "",
+    "related": [
+      "CFA Level I",
+      "CFA Level III",
+      "CFA Program",
+      "Learning Outcome Statements"
+    ]
+  },
+  {
+    "id": "cfa-level-iii",
+    "term": "CFA Level III",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "CFA Level 3",
+      "CFA L3",
+      "Level III"
+    ],
+    "hl": [
+      "cfa level 3",
+      "cfa level iii",
+      "cfa level three"
+    ],
+    "abbr": [],
+    "short": "The final CFA exam, focused on building and managing portfolios for real clients, with case questions and written answers.",
+    "kid": "This is the last level. Now you plan for a real person, like choosing the right snacks and clothes for a long trip so everyone stays happy.",
+    "detail": "Level III is the final CFA Program exam and centres on portfolio management and wealth planning: writing investment policy statements, asset allocation, managing equity, fixed income and alternatives inside portfolios, risk management, performance evaluation and ethics. It mixes item sets with constructed-response questions, in which candidates write their own answers and show their workings, graded by charterholders. Starting with the 2025 exams, candidates also choose one of three pathways, Portfolio Management, Private Wealth or Private Markets, on top of a shared core curriculum; the charter earned is the same whichever pathway is taken. The common confusion: Level III is less about long calculations and more about justifying a recommendation for a specific client, so answers must be precise and tied to that client's needs rather than generic.",
+    "example": "Say a retired client needs ₹6 lakh a year from a ₹1.5 crore portfolio and expects 5% inflation. The required real return is 6,00,000 / 1,50,00,000 = 4%, and the nominal return needed is 1.04 x 1.05 - 1 = 9.2%, a typical Level III calculation.",
+    "formula": "",
+    "related": [
+      "CFA Level II",
+      "CFA charterholder",
+      "Investment policy statement",
+      "Asset allocation",
+      "CFA Program"
+    ]
+  },
+  {
+    "id": "cfa-institute",
+    "term": "CFA Institute",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [],
+    "hl": [
+      "cfa institute"
+    ],
+    "abbr": [],
+    "short": "The global, not-for-profit association that runs the CFA Program, awards the CFA charter and sets ethical and performance standards for investment professionals.",
+    "kid": "This is the club that makes the big three-level game, writes its rules and hands out the special badge. It also reminds badge-holders to behave well.",
+    "detail": "CFA Institute is a global, not-for-profit association of investment professionals, headquartered in Charlottesville, Virginia, in the United States. It designs and runs the CFA Program, awards the CFA charter, sets the Code of Ethics and Standards of Professional Conduct and disciplines members and candidates who breach them, and maintains the Global Investment Performance Standards (GIPS). It also offers shorter certificates such as the Sustainable Investing Certificate (formerly the Certificate in ESG Investing), publishes the Financial Analysts Journal and runs the CFA Institute Research Challenge, an equity research competition for university students. It works through a worldwide network of local member societies, including CFA Society India. The common confusion: CFA Institute is not a government regulator. It cannot license anyone to sell investments or give advice; in India, that is SEBI's job.",
+    "example": "The first CFA charters were awarded in 1963. The organisation took the name CFA Institute in 2004, 41 years later, having earlier been known as the Association for Investment Management and Research.",
+    "formula": "",
+    "related": [
+      "CFA Program",
+      "CFA charterholder",
+      "Global Investment Performance Standards",
+      "Code of Ethics and Standards of Professional Conduct",
+      "Sustainable Investing Certificate"
+    ]
+  },
+  {
+    "id": "cfa-charterholder",
+    "term": "CFA charterholder",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "charterholder",
+      "CFA charter",
+      "CFA designation"
+    ],
+    "hl": [
+      "cfa charterholder",
+      "cfa charterholders",
+      "cfa charter holder",
+      "cfa charter holders",
+      "cfa charter"
+    ],
+    "abbr": [],
+    "short": "Someone who has passed all three CFA levels, met the work-experience rules and joined CFA Institute, earning the right to use the CFA designation.",
+    "kid": "Someone who beat all three levels, helped grown-ups with real work for a few years and promised to play fair. Now they can wear the special badge.",
+    "detail": "A CFA charterholder is a person who has earned the right to use the CFA designation. Under the requirements as of 2025, that means passing all three levels of the CFA Program, completing 4,000 hours of relevant work experience over at least 36 months, providing professional references, becoming a member of CFA Institute, and renewing a commitment to the Code of Ethics and Standards of Professional Conduct every year. Charterholders may write CFA after their name, as in 'Asha Rao, CFA'. The designation is widely respected in research, asset management, wealth management and investment banking. The common confusion: CFA is not a noun, so a person is a 'CFA charterholder', not 'a CFA'. There is also no partial designation: passing Level II does not make anyone 'CFA Level II qualified'.",
+    "example": "Say a candidate passes Level III having logged 2,800 hours of qualifying work. She needs 4,000 - 2,800 = 1,200 more hours, which at 40 hours a week takes 30 weeks, and her experience must also span at least 36 months before she can apply for the charter.",
+    "formula": "",
+    "related": [
+      "CFA Program",
+      "CFA Level III",
+      "CFA Institute",
+      "Code of Ethics and Standards of Professional Conduct"
+    ]
+  },
+  {
+    "id": "code-of-ethics-and-standards-of-professional-conduct",
+    "term": "Code of Ethics and Standards of Professional Conduct",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "CFA Code and Standards",
+      "CFA ethics",
+      "Code of Ethics",
+      "Standards of Professional Conduct",
+      "ethical and professional standards"
+    ],
+    "hl": [
+      "cfa code of ethics",
+      "cfa institute code of ethics"
+    ],
+    "abbr": [],
+    "short": "The ethical rulebook that all CFA Institute members and candidates must follow, covering honesty, fairness, duties to clients, conflicts and market integrity.",
+    "kid": "These are the class rules: tell the truth, be fair and look after your friends first. Everyone with the badge promises to follow them, every year.",
+    "detail": "The Code of Ethics and Standards of Professional Conduct are the ethical rules every CFA Institute member and CFA Program candidate must follow. The Code sets six broad principles, such as acting with integrity and placing clients' interests above one's own. The Standards turn these into specific duties grouped under seven headings: professionalism, integrity of capital markets, duties to clients, duties to employers, investment analysis and recommendations, conflicts of interest, and responsibilities as a CFA Institute member or candidate. Breaches can lead to sanctions up to revoking a charter or barring a candidate. Ethics is tested at every exam level. The common confusion: the Standards are not law. Where local law is stricter, you follow the law; where the Standards are stricter, you follow the Standards.",
+    "example": "Under the topic weights as of 2025, ethics carries 15-20% of the Level I exam, so on its 180 questions that is between 180 x 0.15 = 27 and 180 x 0.20 = 36 questions. At Levels II and III the weight is 10-15%.",
+    "formula": "",
+    "related": [
+      "CFA Institute",
+      "Knowledge of the law",
+      "Material non-public information",
+      "Duty of loyalty",
+      "Disclosure of conflicts",
+      "Duty to employers"
+    ]
+  },
+  {
+    "id": "gips",
+    "term": "Global Investment Performance Standards",
+    "cat": "cfa",
+    "level": "a",
+    "aliases": [
+      "GIPS",
+      "GIPS standards"
+    ],
+    "hl": [
+      "global investment performance standards",
+      "gips compliance",
+      "gips-compliant",
+      "gips compliant"
+    ],
+    "abbr": [
+      "GIPS"
+    ],
+    "short": "Voluntary global rules, set by CFA Institute, for how investment firms calculate and present their track records so investors can compare them fairly.",
+    "kid": "When you show your drawings, you must show all of them, not just your best three. These rules make everyone show their drawings the same way, so we can compare fairly.",
+    "detail": "The Global Investment Performance Standards (GIPS) are voluntary, worldwide ethical standards, created and maintained by CFA Institute, for how investment firms calculate and present past returns to prospective clients. The core ideas are fair representation and full disclosure. A firm claiming compliance must do so for the whole firm, put every actual fee-paying discretionary portfolio into a composite of portfolios with the same strategy, use standard methods such as time-weighted returns, and disclose fees, benchmarks and the number of portfolios. Firms may hire an independent verifier to test their policies. The current edition took effect in 2020. GIPS matters because it stops cherry-picking and lets investors compare managers like for like. The common confusion: compliance shows the numbers are presented honestly, not that performance is good, and it is not a SEBI requirement in India.",
+    "example": "Say a hypothetical manager, ABC Asset Managers, runs 10 equal-sized large-cap portfolios: 8 returned 12% and 2 returned 4%. Showing only the best 8 would advertise 12%, but a GIPS composite must include all 10, giving (8 x 12% + 2 x 4%) / 10 = 10.4%.",
+    "formula": "",
+    "related": [
+      "Performance presentation",
+      "Time-weighted return",
+      "Benchmark",
+      "CFA Institute",
+      "Survivorship bias"
+    ]
+  },
+  {
+    "id": "knowledge-of-the-law",
+    "term": "Knowledge of the law",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard I(A)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard I(A): understand and obey every law and rule that applies to your work, follow the stricter one, and never help anyone break them.",
+    "kid": "Know the rules of every game you play. If home rules and school rules are different, follow the stricter one, and never help anyone cheat.",
+    "detail": "Knowledge of the law is Standard I(A) of the CFA Institute Standards of Professional Conduct. It requires members and candidates to understand and comply with all laws, rules and regulations that govern their professional work, including the Code and Standards themselves. Where these conflict, they must follow the stricter one. They must not knowingly take part in or help anyone else break these rules, and if they learn of a violation they should dissociate from it, for example by reporting it to a supervisor or the compliance team, refusing to keep working on it and, if needed, resigning. The common confusion: the Standards do not require reporting a violation to regulators, although local law may and it is often wise, but staying silent while continuing to work on the problem is itself a breach.",
+    "example": "Say Country X requires analysts to disclose a holding only if it exceeds 5% of a company, while the Standards require disclosing any holding that could affect objectivity. An analyst there who owns 2% of a company she covers must still disclose it, because the Standards are stricter than the local rule.",
+    "formula": "",
+    "related": [
+      "Code of Ethics and Standards of Professional Conduct",
+      "Independence and objectivity",
+      "Misrepresentation",
+      "Responsibilities of supervisors"
+    ]
+  },
+  {
+    "id": "independence-and-objectivity",
+    "term": "Independence and objectivity",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard I(B)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard I(B): keep your investment judgement free from pressure, gifts or favours that could bias your research or recommendations.",
+    "kid": "If someone gives you a big bag of sweets to say their drawing is the best, you say no. You judge drawings by how good they are, not by the sweets.",
+    "detail": "Independence and objectivity is Standard I(B) of the CFA Institute Standards of Professional Conduct. Members and candidates must use reasonable care and judgement to stay independent and objective, and must not offer, ask for or accept any gift, benefit or payment that could reasonably be expected to compromise their own or someone else's independence. Pressure can come from companies that want positive research, investment banking colleagues chasing deals, large clients or the analyst's own holdings. Modest gifts and ordinary business meals are acceptable; lavish trips are not. Research paid for by the company being covered is allowed only for a flat fee unrelated to the conclusions, with clear disclosure. The common confusion: refusing gifts is only part of it; the bigger risk is quietly softening a sell call to keep a company or colleague happy.",
+    "example": "Say hypothetical ABC Ltd invites an analyst to visit its plant and offers 3 nights at a luxury resort worth ₹50,000 a night, or ₹1.5 lakh in all. To protect her independence, she should decline the resort and her firm should pay for an ordinary commercial flight and hotel itself.",
+    "formula": "",
+    "related": [
+      "Disclosure of conflicts",
+      "Additional compensation arrangements",
+      "Equity research",
+      "Conflict of interest",
+      "Knowledge of the law"
+    ]
+  },
+  {
+    "id": "misrepresentation",
+    "term": "Misrepresentation",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard I(C)",
+      "plagiarism"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard I(C): never knowingly make false or misleading statements about investments, performance or your qualifications, or pass off others' work as yours.",
+    "kid": "Don't say you built the sandcastle if your friend built it. And don't promise it will never fall down when a big wave might come.",
+    "detail": "Misrepresentation is Standard I(C) of the CFA Institute Standards of Professional Conduct. Members and candidates must not knowingly make any false or misleading statement about investment analysis, recommendations, actions or their other professional activities. This covers misstating facts, leaving out facts so that a statement misleads, overstating one's qualifications or the firm's services, guaranteeing returns on investments that are actually risky, and plagiarism, which means presenting someone else's research, charts or words as one's own without credit. In India, SEBI's rules similarly bar investment advisers and research analysts from promising assured returns. The common confusion: you may state what an instrument contractually pays, such as the interest on a bank deposit, but you must never promise the return on shares, equity funds or other market-linked investments.",
+    "example": "Telling a client that a hypothetical small-cap fund will 'surely give 18% a year' is misrepresentation, because equity returns cannot be promised. Saying a 5-year bank fixed deposit pays the 7% printed on its receipt is fine, because the bank is contractually bound to pay it.",
+    "formula": "",
+    "related": [
+      "Performance presentation",
+      "Knowledge of the law",
+      "Mis-selling",
+      "Code of Ethics and Standards of Professional Conduct"
+    ]
+  },
+  {
+    "id": "mnpi",
+    "term": "Material non-public information",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "MNPI",
+      "inside information",
+      "unpublished price sensitive information",
+      "Standard II(A)"
+    ],
+    "hl": [
+      "material non-public information",
+      "material nonpublic information",
+      "material, non-public information"
+    ],
+    "abbr": [
+      "MNPI"
+    ],
+    "short": "Important information that would likely move a security's price but has not yet been released to the public; trading on it is banned.",
+    "kid": "You peeked at the secret answer sheet. Even if it fell on the floor by accident, you must not use it or tell your friends.",
+    "detail": "Material non-public information (MNPI) is information that a reasonable investor would consider important, or that would likely move a security's price, and that has not yet been made available to the market at large. Standard II(A) of the CFA Institute Standards of Professional Conduct says members and candidates who possess MNPI must not trade on it or cause anyone else to trade on it, for example by tipping a friend. Typical MNPI includes unannounced results, mergers, large orders won or lost, and top management changes. India's equivalent is unpublished price sensitive information (UPSI) under SEBI's insider trading regulations, which bar both trading on it and passing it on. Firms manage the risk with information barriers and restricted lists. The common confusion: you need not be a company employee to be bound; anyone who knowingly holds MNPI is.",
+    "example": "Say an analyst hears from a friend at hypothetical ABC Ltd that a ₹500 crore order has been cancelled, before the company announces it. If the stock is ₹200 and falls to ₹170 on the news, selling 10,000 shares beforehand avoids a loss of (200 - 170) x 10,000 = ₹3 lakh, which is illegal insider trading and a breach of Standard II(A).",
+    "formula": "",
+    "related": [
+      "Mosaic theory",
+      "Insider trading",
+      "Unpublished price sensitive information",
+      "PIT regulations",
+      "Chinese wall",
+      "Front running"
+    ]
+  },
+  {
+    "id": "mosaic-theory",
+    "term": "Mosaic theory",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "mosaic approach"
+    ],
+    "hl": [
+      "mosaic theory"
+    ],
+    "abbr": [],
+    "short": "The idea that an analyst may legally combine public facts and minor non-public details to reach an important conclusion, and act on it.",
+    "kid": "You see muddy shoes, an open door and a missing cookie, and you work out who took it. Putting small clues together yourself is allowed; peeking at a secret note is not.",
+    "detail": "Mosaic theory is the principle that an analyst may combine public information with non-material non-public information to reach a conclusion, and act on it, even if that conclusion would count as material inside information had it come straight from the company. Like tiles forming a picture, small legitimate clues add up: dealer checks, factory visits, conversations with suppliers, satellite images or web traffic data. It is recognised in the guidance to Standard II(A) of the CFA Institute Standards of Professional Conduct, and it explains why good research is not insider trading. Analysts should keep records showing how they built the mosaic, as Standard V(C) on record retention expects. The common confusion: the defence fails if even one tile is material non-public information, such as a hint from a company insider about unannounced results.",
+    "example": "Say an analyst counts trucks leaving hypothetical ABC Motors' plant and finds they fell from 500 a day to 300 a day over two weeks, a 40% drop, while dealers she visits report rising unsold stock. Combining these with a public industry sales report, she cuts her rating, which is legitimate because no single piece was material non-public information.",
+    "formula": "",
+    "related": [
+      "Material non-public information",
+      "Equity research",
+      "Insider trading",
+      "Record retention",
+      "Diligence and reasonable basis"
+    ]
+  },
+  {
+    "id": "duty-of-loyalty",
+    "term": "Duty of loyalty",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "loyalty, prudence and care",
+      "prudence and care",
+      "Standard III(A)"
+    ],
+    "hl": [
+      "loyalty, prudence and care"
+    ],
+    "abbr": [],
+    "short": "CFA Standard III(A): act in clients' best interests with care and prudence, putting them ahead of your employer and yourself.",
+    "kid": "When you look after your little brother's toys, you treat them as more important than your own. His toys first, yours later.",
+    "detail": "Duty of loyalty refers to Standard III(A) of the CFA Institute Standards of Professional Conduct, titled Loyalty, Prudence and Care. Members and candidates owe clients a duty of loyalty and must act with reasonable care and prudent judgement, placing clients' interests ahead of their employer's and their own. That means identifying who the client really is (for a pension fund, the members rather than the sponsoring company), following the client's mandate, seeking the best execution for trades, treating brokerage commissions as the client's property and voting proxies in the client's interest. It closely mirrors the legal idea of fiduciary duty. The common confusion: loyalty to clients is different from loyalty to an employer under Standard IV(A); when the two clash, clients come first.",
+    "example": "Say a fund manager can route a client's ₹1 crore trade through a broker charging 0.05%, or ₹50,000, or through her firm's own broking arm charging 0.10%, or ₹1 lakh, for the same execution quality. Loyalty to the client means choosing the cheaper broker and saving the client ₹50,000.",
+    "formula": "",
+    "related": [
+      "Fiduciary duty",
+      "Fair dealing",
+      "Suitability",
+      "Soft dollars",
+      "Duty to employers"
+    ]
+  },
+  {
+    "id": "fair-dealing",
+    "term": "Fair dealing",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard III(B)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard III(B): treat all clients fairly when sharing recommendations or allocating trades, without favouring big clients or yourself.",
+    "kid": "When you share a cake, everyone gets a fair piece. You don't give your best friend the first and biggest slice just because they are your best friend.",
+    "detail": "Fair dealing is Standard III(B) of the CFA Institute Standards of Professional Conduct. Members and candidates must deal fairly and objectively with all clients when sharing analysis, making recommendations or taking investment action. In practice, a new recommendation, or a change to one, should reach all relevant clients at about the same time rather than the biggest clients first, and scarce opportunities such as oversubscribed IPO shares or block trades should be shared out by a fair, written method such as pro rata. Personal and family accounts must never get better treatment than clients. The common confusion: fair does not mean identical. A firm can offer premium service levels for higher fees, as long as they are disclosed, available to every client willing to pay, and do not disadvantage other clients.",
+    "example": "Say a manager receives 10,000 shares in an oversubscribed IPO for three clients who ordered 20,000, 15,000 and 5,000 shares, 40,000 in all. Pro rata, each gets 10,000 / 40,000 = 25% of the order: 5,000, 3,750 and 1,250 shares, rather than the biggest client being filled first.",
+    "formula": "",
+    "related": [
+      "Duty of loyalty",
+      "Priority of transactions",
+      "Suitability",
+      "Front running"
+    ]
+  },
+  {
+    "id": "suitability",
+    "term": "Suitability",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "suitability standard",
+      "Standard III(C)"
+    ],
+    "hl": [
+      "suitability norms",
+      "suitability rules",
+      "suitability assessment",
+      "suitability obligations"
+    ],
+    "abbr": [],
+    "short": "CFA Standard III(C): understand a client's goals, risk tolerance and limits before advising, and recommend only what fits them.",
+    "kid": "You wouldn't give a baby a big crunchy apple, even if it is a lovely apple. You pick the snack that fits the person who will eat it.",
+    "detail": "Suitability is Standard III(C) of the CFA Institute Standards of Professional Conduct. In an advisory relationship, members and candidates must first ask about the client's investment experience, return objectives, risk tolerance and constraints such as time horizon, cash needs, taxes and legal limits, record these, usually in an investment policy statement, and review them at least once a year. Each recommendation must then suit the client's whole portfolio, not just look attractive on its own. When managing a fund to a stated mandate, the manager must stick to that mandate. In India, SEBI's rules for investment advisers similarly require risk profiling and suitable advice. The common confusion: 'know your client' here means understanding goals and risk, not the identity and address checks of anti-money-laundering KYC.",
+    "example": "Say a retired client has ₹60 lakh of savings and lives on ₹30,000 a month from it. Putting 80%, or ₹48 lakh, into small-cap stocks would fail a suitability test even if the stocks are good, because a 30% fall would wipe out ₹14.4 lakh of money she depends on.",
+    "formula": "",
+    "related": [
+      "Investment policy statement",
+      "Duty of loyalty",
+      "Mis-selling",
+      "Know your customer",
+      "SEBI registered investment adviser"
+    ]
+  },
+  {
+    "id": "performance-presentation",
+    "term": "Performance presentation",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard III(D)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard III(D): show past investment results fairly, accurately and completely, without cherry-picking good periods or accounts.",
+    "kid": "If you scored three goals in one game and none in the next four, you shouldn't say 'I score three goals a game'. Tell the whole story.",
+    "detail": "Performance presentation is Standard III(D) of the CFA Institute Standards of Professional Conduct. When members and candidates communicate investment performance, they must make reasonable efforts to ensure it is fair, accurate and complete. That rules out showing only the best accounts or best years, presenting simulated or back-tested results as if they were real, choosing a conveniently weak benchmark, or claiming a team's or a past employer's track record as one's own without saying so. A brief presentation is acceptable if fuller details are available on request. Following the Global Investment Performance Standards (GIPS) is one way to meet this standard, but it is not required. The common confusion: true numbers can still mislead; selective periods and missing context breach the standard even when every figure shown is accurate.",
+    "example": "Say a strategy returned 25%, -10%, 8%, 30% and -5% over five years. Advertising '27.5% a year in our best two years' misleads; a fair presentation shows all five years, whose simple average is (25 - 10 + 8 + 30 - 5) / 5 = 9.6%.",
+    "formula": "",
+    "related": [
+      "Global Investment Performance Standards",
+      "Misrepresentation",
+      "Benchmark",
+      "Survivorship bias",
+      "Time-weighted return"
+    ]
+  },
+  {
+    "id": "preservation-of-confidentiality",
+    "term": "Preservation of confidentiality",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "confidentiality",
+      "Standard III(E)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard III(E): keep client information private, unless it concerns illegal activity, the law requires disclosure, or the client agrees.",
+    "kid": "When a friend tells you a secret, you keep it, even after you stop playing together. You only tell a grown-up if someone might get hurt.",
+    "detail": "Preservation of confidentiality is Standard III(E) of the CFA Institute Standards of Professional Conduct. Members and candidates must keep information about current, former and prospective clients confidential. There are three exceptions: the information concerns illegal activity by the client, disclosure is required by law, or the client permits it. The duty continues after the relationship ends, and cooperating with an investigation by CFA Institute's Professional Conduct Program is not a breach. It matters because clients share sensitive details about their wealth, health, family and business plans that could harm them if leaked. The common confusion: confidentiality does not protect wrongdoing. If a client appears to be laundering money, the adviser should follow the law and firm procedures, which may require reporting it, for example to India's Financial Intelligence Unit.",
+    "example": "Say a wealth manager handles ₹25 crore for a business family and mentions at a dinner party that they 'just moved ₹5 crore, a fifth of their money, into gold'. Even without naming them publicly, that breaches Standard III(E); answering a tax authority's legal notice about the same account would not.",
+    "formula": "",
+    "related": [
+      "Duty of loyalty",
+      "Know your customer",
+      "Code of Ethics and Standards of Professional Conduct",
+      "Record retention"
+    ]
+  },
+  {
+    "id": "diligence-and-reasonable-basis",
+    "term": "Diligence and reasonable basis",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "reasonable basis",
+      "Standard V(A)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard V(A): do thorough, independent research and have solid evidence before making any investment recommendation or decision.",
+    "kid": "Before saying 'this slide is safe', you check it carefully yourself. You don't just guess and hope.",
+    "detail": "Diligence and reasonable basis is Standard V(A) of the CFA Institute Standards of Professional Conduct. Members and candidates must be diligent, independent and thorough in analysing investments, and must have a reasonable and adequate basis, backed by appropriate research, for every recommendation or action. The depth of work should match the stakes: a large position deserves more digging than a small one. Before relying on someone else's research, a quantitative model or an external fund manager, they must check its assumptions, methods and track record. An analyst can put her name to a team report she partly disagrees with, provided the work has a reasonable basis. The common confusion: diligence is about process, not outcome. A carefully researched call that loses money does not breach the standard, while a lucky guess that makes money does.",
+    "example": "Say an analyst's model has hypothetical ABC Ltd's ₹100 crore of sales growing 25% a year for 10 years, to about ₹931 crore, while the industry has grown 8% a year, which would give about ₹216 crore. Unless her research explains why ABC can end up more than four times larger than the industry pace implies, her buy call lacks a reasonable basis.",
+    "formula": "",
+    "related": [
+      "Mosaic theory",
+      "Record retention",
+      "Due diligence",
+      "Equity research",
+      "Target price"
+    ]
+  },
+  {
+    "id": "disclosure-of-conflicts",
+    "term": "Disclosure of conflicts",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard VI(A)",
+      "conflict disclosure"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard VI(A): clearly tell clients and your employer about anything, such as personal holdings, that could bias your judgement.",
+    "kid": "If you are judging a drawing contest and your sister has entered, you tell everyone she is your sister. Then they can decide if your judging is fair.",
+    "detail": "Disclosure of conflicts is Standard VI(A) of the CFA Institute Standards of Professional Conduct. Members and candidates must make full and fair disclosure of anything that could reasonably be expected to impair their independence and objectivity or interfere with their duties to clients, prospective clients and employer. Disclosures must be prominent, written in plain language and actually understood. Typical items include owning shares in a company being recommended, the firm's investment banking or market-making ties to that company, board seats, and pay arrangements that reward particular outcomes. In India, SEBI's research analyst rules require similar disclosures in research reports. The common confusion: disclosure is the minimum, not a cure for everything. Some conflicts are serious enough that the right course is to avoid them, for example by not covering the stock at all.",
+    "example": "Say an analyst at hypothetical ABC Securities owns 2,000 shares, worth 2,000 x ₹500 = ₹10 lakh, of a company she covers, and her firm is lead manager for that company's upcoming ₹1,000 crore share sale. Both facts must appear clearly in her research report, not buried in fine print.",
+    "formula": "",
+    "related": [
+      "Conflict of interest",
+      "Independence and objectivity",
+      "Priority of transactions",
+      "SEBI registered research analyst",
+      "Additional compensation arrangements"
+    ]
+  },
+  {
+    "id": "priority-of-transactions",
+    "term": "Priority of transactions",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard VI(B)",
+      "personal trading"
+    ],
+    "hl": [
+      "personal trading rules",
+      "personal trading policy",
+      "personal trading policies"
+    ],
+    "abbr": [],
+    "short": "CFA Standard VI(B): client and employer trades must come before your own, so you never profit at clients' expense.",
+    "kid": "When the ice cream van comes, the children you are looking after get their ice cream first. You buy yours afterwards, not before.",
+    "detail": "Priority of transactions is Standard VI(B) of the CFA Institute Standards of Professional Conduct. Trades for clients and employers must take priority over trades in which a member or candidate has a beneficial interest, such as their own or their family's accounts. The aim is to stop staff profiting at clients' expense, for example by front-running, which means trading personally ahead of a large client order or a soon-to-be-published recommendation. Firms enforce it with pre-clearance of personal trades, blackout periods around client trades and research, regular reporting of holdings, and limits on buying IPOs and private placements. The common confusion: the standard does not ban personal investing, and family members who are genuine fee-paying clients must not be disadvantaged either; they should be treated like any other client.",
+    "example": "Say a manager plans to buy 5 lakh shares of hypothetical ABC Ltd for her fund, which will likely push the price from ₹200 to ₹210. If she first buys 1,000 shares for herself at ₹200 and sells them after the fund's buying, she pockets 1,000 x ₹10 = ₹10,000 at clients' expense, a clear breach of Standard VI(B).",
+    "formula": "",
+    "related": [
+      "Front running",
+      "Fair dealing",
+      "Disclosure of conflicts",
+      "Material non-public information"
+    ]
+  },
+  {
+    "id": "soft-dollars",
+    "term": "Soft dollars",
+    "cat": "cfa",
+    "level": "a",
+    "aliases": [
+      "soft commissions",
+      "soft dollar arrangements",
+      "client brokerage"
+    ],
+    "hl": [
+      "soft dollars",
+      "soft dollar",
+      "soft-dollar",
+      "soft commissions",
+      "soft commission"
+    ],
+    "abbr": [],
+    "short": "Research or services a fund manager receives from a broker in return for sending client trades there, paid for through the clients' trading commissions.",
+    "kid": "You buy milk for the whole class with the class piggy bank, and the shop gives you free comics for shopping there. The comics should be shared with the class, not kept for yourself.",
+    "detail": "Soft dollars are arrangements in which an investment manager sends client trades to a broker and, in return for the commissions those trades generate, receives research or other services instead of paying for them directly. Because commissions come out of client assets, CFA Institute treats brokerage as the client's property: soft dollars may only buy research that genuinely helps the manager make investment decisions for those clients, never office rent, travel or entertainment. The US allows soft dollars under a legal safe harbour, while the EU's MiFID II rules from 2018 pushed managers to pay for research separately, a practice called unbundling. In India, under the rules as of 2025, SEBI caps the brokerage and transaction costs that mutual funds can charge to their schemes. The common confusion: soft dollars are not free; clients pay for them through higher commissions.",
+    "example": "Say a fund pays a broker 0.10% on ₹500 crore of trades a year, or ₹50 lakh, when bare execution would cost 0.04%, or ₹20 lakh. The extra ₹30 lakh is effectively soft dollars buying research, acceptable only if that research genuinely benefits the fund's investors.",
+    "formula": "",
+    "related": [
+      "Duty of loyalty",
+      "Stockbroker",
+      "Equity research",
+      "Disclosure of conflicts"
+    ]
+  },
+  {
+    "id": "learning-outcome-statements",
+    "term": "Learning Outcome Statements",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "LOS",
+      "learning outcomes"
+    ],
+    "hl": [
+      "learning outcome statements",
+      "learning outcome statement"
+    ],
+    "abbr": [],
+    "short": "Statements in the CFA curriculum that spell out exactly what a candidate should be able to do, such as calculate or explain, after each reading.",
+    "kid": "Before a lesson, the teacher writes on the board what you will be able to do by the end, like 'count to twenty'. That list tells you exactly what to practise.",
+    "detail": "Learning Outcome Statements (LOS) are the short statements at the start of each reading in the CFA curriculum that say exactly what a candidate should be able to do after studying it, such as 'calculate and interpret a holding period return'. Exam questions are written to test these outcomes, so the LOS act as the most detailed version of the official syllabus. The verb in each LOS signals the depth needed: 'describe' or 'explain' calls for understanding, while 'calculate', 'evaluate' or 'recommend' calls for working problems or making judgements. Recent curriculum editions organise content into learning modules with learning outcomes, but candidates still call them LOS. The FRM and CAIA programmes use similar learning objectives. The common confusion: reading every page is not the goal; being able to perform every LOS is.",
+    "example": "An LOS saying 'calculate and interpret holding period return' means you must be able to show that a share bought at ₹100, which paid a ₹5 dividend and was sold at ₹110, earned (110 - 100 + 5) / 100 = 15%. An LOS that only says 'describe' would not need the number.",
+    "formula": "",
+    "related": [
+      "CFA Program",
+      "CFA Level I",
+      "Financial Risk Manager",
+      "Chartered Alternative Investment Analyst"
+    ]
+  },
+  {
+    "id": "frm",
+    "term": "Financial Risk Manager",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "FRM",
+      "FRM certification",
+      "FRM exam"
+    ],
+    "hl": [
+      "financial risk manager",
+      "frm certification",
+      "frm exam",
+      "frm part i",
+      "frm part 1",
+      "frm part ii",
+      "frm part 2"
+    ],
+    "abbr": [],
+    "short": "A two-part professional certification in financial risk management, awarded by the Global Association of Risk Professionals (GARP).",
+    "kid": "This is a special badge for people who are good at spotting what could go wrong, like checking a tree branch is strong before you climb it.",
+    "detail": "The Financial Risk Manager (FRM) is a professional certification in risk management awarded by GARP, the Global Association of Risk Professionals. It has two exams. Part I covers foundations of risk management, quantitative analysis, financial markets and products, and valuation and risk models. Part II covers market, credit, operational and liquidity risk, risk in investment management, and current issues. Under the rules as of 2025, candidates must pass Part II within four years of passing Part I and then show two years of relevant full-time work experience to be certified. It is valued in bank risk and treasury teams, rating agencies, consulting firms and regulators. The common confusion: FRM is not part of the CFA Program and is narrower in scope; many people take both, since they overlap in quantitative methods, fixed income and derivatives.",
+    "example": "Under the format as of 2025, Part I has 100 multiple-choice questions in 4 hours, so 240 / 100 = 2.4 minutes per question. Part II has 80 questions in the same 4 hours, or 240 / 80 = 3 minutes each.",
+    "formula": "",
+    "related": [
+      "CFA Program",
+      "Value at risk",
+      "Conditional value at risk",
+      "Chartered Alternative Investment Analyst"
+    ]
+  },
+  {
+    "id": "caia",
+    "term": "Chartered Alternative Investment Analyst",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "CAIA",
+      "CAIA charter"
+    ],
+    "hl": [
+      "chartered alternative investment analyst",
+      "caia charter",
+      "caia association"
+    ],
+    "abbr": [
+      "CAIA"
+    ],
+    "short": "A two-level professional charter in alternative investments such as hedge funds, private equity, real assets and commodities.",
+    "kid": "Most people collect ordinary toys. This badge is for people who learn about unusual ones, like rare stickers and old coins, and how to look after them.",
+    "detail": "The Chartered Alternative Investment Analyst (CAIA) charter is a qualification in alternative investments, awarded by the CAIA Association, which was founded in 2002. Its two exam levels cover hedge funds, private equity, real estate and other real assets, commodities, structured products and digital assets, along with due diligence, risk management and portfolio construction across these assets. Level I builds core knowledge through multiple-choice questions; Level II adds written answers and focuses on using alternatives within whole portfolios. Charterholders must also meet a work-experience requirement and join the Association. It suits people heading to hedge funds, private equity, funds of funds, family offices or wealth management, including India's growing alternative investment fund industry. The common confusion: CAIA goes deeper on alternatives than the CFA Program but does not replace its broad coverage; many take it after or alongside CFA.",
+    "example": "A typical CAIA-style question: a hedge fund charging '2 and 20' manages ₹100 crore and earns ₹15 crore before fees. With no hurdle, the manager takes ₹2 crore (2%) plus 20% of the gross ₹15 crore gain, ₹3 crore, so ₹5 crore in all, leaving investors ₹10 crore, a 10% net return.",
+    "formula": "",
+    "related": [
+      "Alternative investments",
+      "Hedge fund",
+      "Private equity",
+      "Alternative investment fund",
+      "CFA Program"
+    ]
+  },
+  {
+    "id": "cmt",
+    "term": "Chartered Market Technician",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "CMT"
+    ],
+    "hl": [
+      "chartered market technician",
+      "chartered market technicians",
+      "cmt association"
+    ],
+    "abbr": [],
+    "short": "A three-level professional charter in technical analysis, the study of price charts and trading patterns, awarded by the CMT Association.",
+    "kid": "Some people guess tomorrow's weather by looking at the clouds over many days. This badge is for people who study patterns like that, but in lines on a chart.",
+    "detail": "The Chartered Market Technician (CMT) is a qualification in technical analysis, awarded by the CMT Association, formerly the Market Technicians Association. Technical analysis studies the history of prices and trading volumes, using charts, trends, moving averages, momentum indicators and market breadth, to judge supply and demand and time trades. The programme has three exam levels, moving from concepts to application and then to analysis and risk management, and charterholders also need relevant work experience and Association membership. It is valued on trading desks, in brokerage research and in risk management. In India, under SEBI rules as of 2025, giving buy or sell calls to the public, technical or not, requires SEBI registration as a research analyst or investment adviser; a CMT alone is not enough. The common confusion: technical analysis complements fundamental analysis rather than replacing it.",
+    "example": "A 5-day simple moving average of closing prices of ₹100, ₹102, ₹104, ₹106 and ₹108 is (100 + 102 + 104 + 106 + 108) / 5 = ₹104. A technician watches whether the price stays above such averages as a sign of trend strength.",
+    "formula": "",
+    "related": [
+      "Technical analysis",
+      "SEBI registered research analyst",
+      "Equity research",
+      "CFA Program"
+    ]
+  },
+  {
+    "id": "cfp",
+    "term": "Certified Financial Planner",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CFP"
+    ],
+    "hl": [
+      "certified financial planner",
+      "certified financial planners",
+      "cfp certification",
+      "cfp board"
+    ],
+    "abbr": [],
+    "short": "A professional certification for financial planners who advise individuals and families on saving, insurance, investing, tax and retirement.",
+    "kid": "A helper who sits with a family and plans for everything at once: a new bike, a holiday and grandpa's birthday, so nothing gets forgotten.",
+    "detail": "Certified Financial Planner (CFP) is a professional certification for people who give all-round personal financial advice: budgeting, insurance, investments, tax, retirement and estate planning. It is governed worldwide by the Financial Planning Standards Board (FPSB), and in the United States by the CFP Board. To earn it, candidates meet the 'four Es': education in financial planning, a comprehensive exam, relevant work experience, and a commitment to ethics. In India, CFP professionals typically work as financial planners, wealth managers and private bankers. The common confusion: CFP is about planning for individuals and families, while the CFA Program is about investment analysis and portfolio management. Also, under SEBI rules as of 2025, a CFP alone does not let anyone charge fees for investment advice in India; that requires SEBI registration as an investment adviser.",
+    "example": "Say a family spends ₹50,000 a month. A CFP-style plan might first set aside 6 months of expenses, ₹3 lakh, as an emergency fund, and insure the main earner for 10 times her annual income of ₹12 lakh, a ₹1.2 crore cover, before investing for long-term goals.",
+    "formula": "",
+    "related": [
+      "SEBI registered investment adviser",
+      "Asset allocation",
+      "Mutual fund distributor",
+      "NISM certification",
+      "CFA Program"
+    ]
+  },
+  {
+    "id": "chartered-accountant",
+    "term": "Chartered Accountant",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CA",
+      "ICAI",
+      "Institute of Chartered Accountants of India"
+    ],
+    "hl": [
+      "chartered accountant",
+      "chartered accountants",
+      "ca exam",
+      "ca exams",
+      "ca final",
+      "ca intermediate",
+      "ca foundation exam",
+      "ca results"
+    ],
+    "abbr": [
+      "ICAI"
+    ],
+    "short": "In India, a qualified accountant and member of ICAI, licensed to audit company accounts and advise on tax and financial reporting.",
+    "kid": "A person who checks that a shop's notebook of everything bought and sold is correct, so everyone can trust it. They pass hard tests and train for years first.",
+    "detail": "A Chartered Accountant (CA) in India is a member of the Institute of Chartered Accountants of India (ICAI), the statutory body set up under the Chartered Accountants Act, 1949. Under the scheme of education as of 2025, students pass three exam stages, Foundation, Intermediate and Final, and complete practical training, called articleship, with a practising CA. Only practising CAs can be appointed statutory auditors of Indian companies, and CAs also handle tax audits, taxation, financial reporting and advisory work; many move into corporate finance and investment banking. The UK, Australia, New Zealand and several other countries use the same title for their own accountancy bodies. The common confusion: CA and CFA are different. CA is an accounting, audit and tax qualification with a legal licence to audit; CFA is an investment analysis qualification, and the two often complement each other.",
+    "example": "Say a CA firm auditing hypothetical ABC Ltd finds ₹2 crore of next year's sales booked this year, on reported revenue of ₹40 crore. That is 2 / 40 = 5% of revenue, likely material, so the auditor would ask for a correction or qualify its audit opinion.",
+    "formula": "",
+    "related": [
+      "Audit",
+      "Statutory auditor",
+      "Ind AS",
+      "Company Secretary",
+      "Cost and Management Accountant",
+      "Certified Public Accountant"
+    ]
+  },
+  {
+    "id": "cost-and-management-accountant",
+    "term": "Cost and Management Accountant",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CMA India",
+      "ICMAI",
+      "CMA",
+      "Institute of Cost Accountants of India"
+    ],
+    "hl": [
+      "cost and management accountant",
+      "cost and management accountants",
+      "cost accountant",
+      "cost accountants",
+      "institute of cost accountants of india",
+      "cma inter",
+      "cma final"
+    ],
+    "abbr": [
+      "ICMAI"
+    ],
+    "short": "In India, a qualified professional and member of ICMAI who specialises in cost accounting, cost audit and management accounting.",
+    "kid": "Someone who works out exactly what it takes to make one cookie: the flour, the sugar and the oven time. Then the bakery knows if it is making too many or too few.",
+    "detail": "A Cost and Management Accountant (CMA) in India is a member of the Institute of Cost Accountants of India (ICMAI), formerly the Institute of Cost and Works Accountants of India (ICWAI), a statutory body under the Cost and Works Accountants Act, 1959. Students pass Foundation, Intermediate and Final exams and complete practical training. CMAs specialise in cost accounting, budgeting, pricing, performance management and cost audit. Under the Companies Act, 2013, companies in certain industries above set size limits must keep cost records and have them audited by a practising cost accountant. Many CMAs work in manufacturing, utilities and corporate finance roles. The common confusion: CMA India is a different qualification from the US Certified Management Accountant, even though both use the letters CMA.",
+    "example": "Say a plant makes 10,000 units using ₹8 lakh of materials, ₹4 lakh of labour and ₹3 lakh of overheads. Total cost is ₹15 lakh, so the cost per unit is 15,00,000 / 10,000 = ₹150, the starting point for pricing and profit analysis.",
+    "formula": "Cost per unit = Total cost of production / Number of units produced",
+    "related": [
+      "Certified Management Accountant",
+      "Chartered Accountant",
+      "Company Secretary",
+      "Audit"
+    ]
+  },
+  {
+    "id": "certified-management-accountant",
+    "term": "Certified Management Accountant",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CMA USA",
+      "US CMA"
+    ],
+    "hl": [
+      "certified management accountant",
+      "certified management accountants",
+      "us cma",
+      "institute of management accountants"
+    ],
+    "abbr": [],
+    "short": "A US-based global certification from the Institute of Management Accountants in management accounting, budgeting, performance analysis and corporate finance.",
+    "kid": "A helper inside a company who uses numbers to help the bosses decide what to make next, like planning a class party with only the pocket money you have.",
+    "detail": "The Certified Management Accountant (CMA), often called the US CMA, is a global certification awarded by the Institute of Management Accountants (IMA), based in the United States. It focuses on management accounting and corporate finance: planning, budgeting and forecasting, performance management, cost management, internal controls, financial statement analysis, corporate finance, risk and decision analysis, and professional ethics. Under the rules as of 2025, candidates must pass two exam parts, hold a bachelor's degree and complete two years of relevant work experience. It is popular in India among people aiming for FP&A, controllership and shared-services finance roles at multinational companies. The common confusion: the US CMA is not the same as India's statutory Cost and Management Accountant qualification from ICMAI, and it gives no right to sign audits.",
+    "example": "A typical CMA calculation: a product sells for ₹500 with ₹300 of variable cost per unit and fixed costs of ₹20 lakh a year. Each unit contributes ₹200, so break-even volume is 20,00,000 / 200 = 10,000 units a year.",
+    "formula": "Break-even units = Fixed costs / (Price per unit - Variable cost per unit)",
+    "related": [
+      "Cost and Management Accountant",
+      "Certified Public Accountant",
+      "Financial planning and analysis",
+      "Chartered Accountant"
+    ]
+  },
+  {
+    "id": "cpa",
+    "term": "Certified Public Accountant",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CPA",
+      "US CPA"
+    ],
+    "hl": [
+      "certified public accountant",
+      "certified public accountants",
+      "us cpa",
+      "cpa exam",
+      "cpa firm",
+      "cpa firms"
+    ],
+    "abbr": [
+      "CPAs"
+    ],
+    "short": "A licensed accountant in the United States, qualified to audit companies' financial statements after passing the Uniform CPA Examination.",
+    "kid": "An American number-checker. They look at a big shop's notebook of everything bought and sold and tell everyone whether its numbers are honest.",
+    "detail": "A Certified Public Accountant (CPA) is a licensed accountant in the United States. The licence is issued by individual state boards of accountancy after a candidate passes the Uniform CPA Examination, developed by the AICPA, and meets education and experience requirements that vary by state. Since 2024, the exam has three core sections, auditing, financial accounting and reporting, and taxation and regulation, plus one discipline section the candidate chooses. Only licensed CPAs can sign audit opinions on US companies' financial statements. Many people in India take the US CPA to work on US GAAP reporting and audit support at Big Four and multinational offices. The common confusion: Australia also uses 'CPA' for its own accountancy body, and a US CPA does not allow anyone to sign statutory audits in India, which requires ICAI membership.",
+    "example": "Under the exam model in place since 2024, a candidate passes 4 sections, 3 core plus 1 discipline, each lasting 4 hours, so 4 x 4 = 16 hours of exams in total.",
+    "formula": "",
+    "related": [
+      "US GAAP",
+      "Chartered Accountant",
+      "Association of Chartered Certified Accountants",
+      "Audit",
+      "Sarbanes-Oxley Act"
+    ]
+  },
+  {
+    "id": "acca",
+    "term": "Association of Chartered Certified Accountants",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "ACCA"
+    ],
+    "hl": [
+      "association of chartered certified accountants",
+      "acca qualification",
+      "acca exams"
+    ],
+    "abbr": [
+      "ACCA"
+    ],
+    "short": "A UK-based global accountancy body whose qualification, built on international accounting standards, is recognised in many countries.",
+    "kid": "A badge for number-checkers that many countries accept, like a swimming badge you can show at pools all over the world.",
+    "detail": "The Association of Chartered Certified Accountants (ACCA) is a UK-based global accountancy body, founded in 1904, whose qualification is recognised in many countries. Students pass up to 13 exams across three stages, Applied Knowledge, Applied Skills and Strategic Professional, complete an ethics and professional skills module, and gain three years of relevant work experience. The syllabus is built on international standards such as IFRS, which suits global finance, audit and shared-services roles, including at the many global capability centres in India. Students with relevant degrees or qualifications can get exemptions from some early papers. The common confusion: ACCA membership is not a licence to sign statutory audits of Indian companies; that right belongs to chartered accountants who are members of ICAI.",
+    "example": "ACCA has 3 Applied Knowledge, 6 Applied Skills and 4 Strategic Professional exams, so 3 + 6 + 4 = 13 in all. A student exempted from, say, 3 early papers would sit the remaining 10.",
+    "formula": "",
+    "related": [
+      "IFRS",
+      "Chartered Accountant",
+      "Certified Public Accountant",
+      "Audit"
+    ]
+  },
+  {
+    "id": "nism-certification",
+    "term": "NISM certification",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "NISM",
+      "NISM exam",
+      "National Institute of Securities Markets",
+      "NISM Series VIII"
+    ],
+    "hl": [
+      "nism certification",
+      "nism certifications",
+      "nism exam",
+      "nism series",
+      "national institute of securities markets"
+    ],
+    "abbr": [
+      "NISM"
+    ],
+    "short": "Role-specific exams from NISM, SEBI's training institute, that people in Indian market jobs such as broking, fund distribution and research must pass.",
+    "kid": "Before you can help at the school shop, you pass a little test about its rules. Each job at the shop has its own little test.",
+    "detail": "NISM certifications are exams conducted by the National Institute of Securities Markets, an institute set up by SEBI in 2006. Under the rules as of 2025, SEBI requires people in certain market jobs to hold the relevant certificate: for example, mutual fund distributors need NISM Series V-A, staff of brokers dealing in equity derivatives need Series VIII, investment advisers need Series X-A and X-B, and research analysts need Series XV. Each series is a computer-based exam on the products, rules and good practice for that role, and certificates must be renewed periodically. They are short and practical, which makes them a useful first credential for students interested in broking, distribution or research. The common confusion: passing a NISM exam is not the same as being registered with SEBI; registration is a separate process.",
+    "example": "Under the rules as of 2025, NISM certificates are valid for 3 years. A student who passes NISM Series VIII in June 2026 would need to renew it by June 2029 to keep working in an equity derivatives role.",
+    "formula": "",
+    "related": [
+      "SEBI",
+      "Mutual fund distributor",
+      "SEBI registered research analyst",
+      "SEBI registered investment adviser",
+      "F&O segment"
+    ]
+  },
+  {
+    "id": "sustainable-investing-certificate",
+    "term": "Sustainable Investing Certificate",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Certificate in ESG Investing",
+      "CFA ESG certificate",
+      "CFA Institute Sustainable Investing Certificate"
+    ],
+    "hl": [
+      "sustainable investing certificate",
+      "certificate in esg investing",
+      "esg investing certificate",
+      "cfa esg certificate"
+    ],
+    "abbr": [],
+    "short": "A single-exam CFA Institute qualification, formerly the Certificate in ESG Investing, on how environmental, social and governance factors are used in investing.",
+    "kid": "A short course that teaches how to check if a big factory is kind to nature and people, like checking that a playground is clean and everyone plays fair.",
+    "detail": "The Sustainable Investing Certificate, called the Certificate in ESG Investing until CFA Institute renamed it in April 2025, teaches how environmental, social and governance factors are analysed and used in investment decisions. It was first developed by CFA Society of the UK and is now run by CFA Institute; the curriculum did not change with the new name. Topics include ESG markets and frameworks, climate change, social and governance analysis, engagement and stewardship, ESG integration in valuation, and portfolio construction and reporting. It is a single computer-based multiple-choice exam with no formal prerequisites, so students can take it alongside their studies. It suits analysts, wealth managers and anyone moving into sustainability research or reporting, such as BRSR work in India. The common confusion: it is a standalone certificate, not a step towards the CFA charter, and does not let anyone use the CFA designation.",
+    "example": "A typical skill tested is weighted average carbon intensity. A portfolio with 60% in a company emitting 100 tonnes of CO2 per ₹1 crore of revenue and 40% in one emitting 50 tonnes has an intensity of 0.6 x 100 + 0.4 x 50 = 80 tonnes per ₹1 crore.",
+    "formula": "",
+    "related": [
+      "ESG",
+      "CFA Institute",
+      "ESG rating",
+      "Greenwashing",
+      "Climate risk"
+    ]
+  },
+  {
+    "id": "duty-to-employers",
+    "term": "Duty to employers",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard IV",
+      "loyalty to employer",
+      "duties to employers"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard IV: act loyally for your employer, protect its information and clients, and never secretly compete with it.",
+    "kid": "When you are on a team, you play for your team. You don't secretly take the team's ball home or help the other side win.",
+    "detail": "Duty to employers refers to Standard IV of the CFA Institute Standards of Professional Conduct. Standard IV(A), Loyalty, requires members and candidates to act for the benefit of their employer, not deprive it of their skills, not disclose its confidential information and not otherwise harm it. Standard IV(B) covers additional compensation arrangements and IV(C) the responsibilities of supervisors. Someone planning to leave may make preparations, such as registering a new firm, but must not solicit the employer's clients, take client lists or files, or start competing before leaving. Independent work that competes with the employer needs its written consent. The common confusion: loyalty to an employer has limits. It never requires breaking the law or harming clients, and reporting genuine wrongdoing to protect clients or markets, known as whistleblowing, is not disloyal.",
+    "example": "Say a portfolio manager plans to leave hypothetical ABC Capital to start her own firm. She may register the new company and rent an office while still employed, but copying ABC's list of 150 client contacts, or asking even 1 of those clients to move before she has resigned, would breach Standard IV(A).",
+    "formula": "",
+    "related": [
+      "Additional compensation arrangements",
+      "Responsibilities of supervisors",
+      "Duty of loyalty",
+      "Preservation of confidentiality"
+    ]
+  },
+  {
+    "id": "record-retention",
+    "term": "Record retention",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard V(C)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard V(C): keep records that back up your research, recommendations and client communications, ideally for at least seven years.",
+    "kid": "Keep your homework notebook, not just the answers. Then if someone asks how you got an answer, you can show your working.",
+    "detail": "Record retention is Standard V(C) of the CFA Institute Standards of Professional Conduct. Members and candidates must develop and keep appropriate records that support their investment analysis, recommendations, actions and communications with clients. That includes research notes, models, meeting notes, emails and chat messages. If no law or regulation sets a period, CFA Institute recommends keeping records for at least seven years; in India, SEBI's rules for intermediaries such as research analysts and investment advisers set their own minimum periods. The stakes are real: in 2022, US regulators fined major Wall Street firms about $1.8 billion because staff used WhatsApp and personal texts for business that were not preserved. The common confusion: records belong to the employer, not the analyst, so they cannot be taken along when changing jobs.",
+    "example": "Say an analyst issues a buy call in 2026 based on interviews with 12 dealers. If no law sets a retention period, she should keep her interview notes and model until at least 2026 + 7 = 2033.",
+    "formula": "",
+    "related": [
+      "Diligence and reasonable basis",
+      "Mosaic theory",
+      "Duty to employers",
+      "Code of Ethics and Standards of Professional Conduct"
+    ]
+  },
+  {
+    "id": "responsibilities-of-supervisors",
+    "term": "Responsibilities of supervisors",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard IV(C)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard IV(C): managers must make reasonable efforts to ensure the people they supervise follow laws, rules and ethical standards.",
+    "kid": "If you are the class monitor, you make sure the others follow the rules too. If someone breaks one, you don't just say 'promise not to do it again' and walk away.",
+    "detail": "Responsibilities of supervisors is Standard IV(C) of the CFA Institute Standards of Professional Conduct. Members and candidates must make reasonable efforts to ensure that everyone under their supervision or authority complies with applicable laws, rules, regulations and the Code and Standards, whether or not those people are CFA charterholders. That requires adequate compliance procedures, training and monitoring. If the firm's procedures are inadequate, the supervisor should push for better ones and decline supervisory responsibility in writing until they are in place. When a violation is suspected, the supervisor must investigate promptly and take steps to stop it recurring. The common confusion: delegating a task does not remove responsibility. A supervisor cannot rely on an employee's promise alone, and regulators such as the US SEC bring 'failure to supervise' cases against firms and managers.",
+    "example": "Say a head of research supervises 8 analysts and finds that 1 of them traded ahead of his own reports. Accepting his promise not to repeat it is not enough; she should investigate, restrict and monitor his personal trading, and check that the other 7 analysts' trades are being pre-cleared.",
+    "formula": "",
+    "related": [
+      "Duty to employers",
+      "Knowledge of the law",
+      "Priority of transactions",
+      "Code of Ethics and Standards of Professional Conduct"
+    ]
+  },
+  {
+    "id": "additional-compensation-arrangements",
+    "term": "Additional compensation arrangements",
+    "cat": "cfa",
+    "level": "i",
+    "aliases": [
+      "Standard IV(B)"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "CFA Standard IV(B): get written consent from your employer before accepting outside pay or benefits that could conflict with your job.",
+    "kid": "If a neighbour offers you extra sweets to take special care of their puppy while you help at the pet shop, you first ask the shop owner if that is okay.",
+    "detail": "Additional compensation arrangements is Standard IV(B) of the CFA Institute Standards of Professional Conduct. Members and candidates must not accept gifts, benefits, pay or other consideration that competes with, or might reasonably be expected to create a conflict with, their employer's interest unless they obtain written consent from all parties involved. A typical case is a client offering a personal bonus if their portfolio beats a target, which could tempt the manager to favour that account over others. The written report to the employer should describe the nature, amount and duration of the arrangement. The common confusion: this is different from Standard I(B), which covers gifts that threaten independence, and from Standard VI(C), Referral fees, which requires disclosing to employers and clients any payment received for referring business.",
+    "example": "Say a client promises a manager a personal bonus of ₹2 lakh if his ₹10 crore portfolio returns more than 12% this year, or more than ₹1.2 crore. Before accepting, she must report the offer to her employer in writing and get its written consent.",
+    "formula": "",
+    "related": [
+      "Duty to employers",
+      "Independence and objectivity",
+      "Disclosure of conflicts",
+      "Conflict of interest"
+    ]
+  },
+  {
+    "id": "company-secretary",
+    "term": "Company Secretary",
+    "cat": "cfa",
+    "level": "b",
+    "aliases": [
+      "CS",
+      "ICSI",
+      "Institute of Company Secretaries of India"
+    ],
+    "hl": [
+      "company secretary",
+      "company secretaries",
+      "whole-time company secretary",
+      "cs executive",
+      "cs professional exam"
+    ],
+    "abbr": [
+      "ICSI"
+    ],
+    "short": "In India, a qualified governance and corporate-law professional, a member of ICSI, who makes sure a company follows company and securities laws.",
+    "kid": "In a big club, someone keeps the meeting notes, checks that every rule is followed and tells everyone what was decided. That is this person's job.",
+    "detail": "A Company Secretary (CS) in India is a member of the Institute of Company Secretaries of India (ICSI), the statutory body under the Company Secretaries Act, 1980. Students clear an entrance test (CSEET), then the Executive and Professional exams, plus practical training. A company secretary is the company's governance and compliance officer: organising board and shareholder meetings, keeping statutory registers and minutes, filing with the Registrar of Companies and advising directors on corporate law. Under the Companies Act, 2013, listed companies and companies above set capital thresholds must appoint a whole-time company secretary as key managerial personnel, and SEBI's listing rules require a listed company's compliance officer to be a qualified company secretary. Practising company secretaries also conduct secretarial audits. The common confusion: the role is about governance and law, not office administration or accounting.",
+    "example": "Say hypothetical ABC Pvt Ltd raises its paid-up share capital from ₹6 crore to ₹12 crore. Under the Companies Act rules as of 2025, it now crosses the ₹10 crore threshold and must appoint a whole-time company secretary.",
+    "formula": "",
+    "related": [
+      "Key managerial personnel",
+      "Corporate governance",
+      "LODR regulations",
+      "Board of directors",
+      "Chartered Accountant"
+    ]
+  }
+]

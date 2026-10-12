@@ -1,0 +1,946 @@
+[
+  {
+    "id": "hyperinflation",
+    "term": "Hyperinflation",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "runaway inflation"
+    ],
+    "hl": [
+      "hyperinflation",
+      "hyperinflationary",
+      "runaway inflation"
+    ],
+    "abbr": [],
+    "short": "Extremely fast, out-of-control price rises, commonly defined as prices rising more than 50% in a single month, which destroy a currency's value.",
+    "kid": "Imagine a sweet costs one coin today, two coins tomorrow and lots more the day after. Soon all the coins in your piggy bank cannot buy even one sweet.",
+    "detail": "Hyperinflation is inflation so rapid that money stops working as a store of value. Economist Phillip Cagan's classic threshold is prices rising more than 50% in a month, which compounds to roughly 13,000% a year. It almost always starts when a government pays for large deficits by printing money, often after a war, a collapse in output or a loss of confidence. People then rush to spend cash before it loses value, which pushes prices up even faster. Famous cases include Weimar Germany in 1923, Zimbabwe in 2007-08 and Venezuela in the late 2010s. Savings and local-currency bonds are wiped out, while real assets and foreign currency hold value better. Do not confuse it with merely high inflation: India's double-digit inflation in the 1970s and around 2010-13 was painful, but nowhere near hyperinflation.",
+    "example": "At 50% inflation a month, a basket costing ₹100 today costs ₹150 after one month and ₹100 x 1.5^12, about ₹12,975, after a year. That is annual inflation of roughly 12,875%.",
+    "formula": "Annual inflation = (1 + Monthly inflation)^12 - 1",
+    "related": [
+      "Inflation",
+      "Purchasing power",
+      "Money supply",
+      "Fiscal deficit",
+      "Stagflation",
+      "Currency depreciation"
+    ]
+  },
+  {
+    "id": "shrinkflation",
+    "term": "Shrinkflation",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "grammage reduction",
+      "grammage cut"
+    ],
+    "hl": [
+      "shrinkflation",
+      "grammage reduction",
+      "grammage cuts"
+    ],
+    "abbr": [],
+    "short": "When a company quietly cuts the quantity in a pack while keeping the price the same, so the price per unit rises.",
+    "kid": "Your favourite biscuit packet still costs the same, but now it has fewer biscuits inside. You pay the same and get less.",
+    "detail": "Shrinkflation is a hidden price increase: the pack price stays the same, but the grams, millilitres or pieces inside fall. Companies use it when input costs rise, because shoppers notice a higher sticker price far more than a smaller pack. In India, FMCG firms selling ₹5 and ₹10 packs do this routinely, since shoppers expect those price points to stay fixed; managements call it grammage reduction. Well-built price indices compare price per unit of quantity, so a smaller pack at the same price should still register as inflation. For investors, grammage cuts can protect gross margins when costs rise, but they make reported volume growth harder to read, because fewer grams may be sold even when the number of packs holds up. Do not confuse it with skimpflation, where quality or service falls instead of quantity.",
+    "example": "Say a ₹10 pack of chips from ABC Snacks shrinks from 50 g to 45 g. The price per gram rises from ₹0.20 to about ₹0.222, a hidden price increase of about 11.1% (50 / 45 - 1).",
+    "formula": "Effective price increase = (Old quantity / New quantity) - 1, when the pack price is unchanged",
+    "related": [
+      "Inflation",
+      "Consumer Price Index",
+      "Purchasing power",
+      "Cost of living",
+      "Gross margin",
+      "Pricing power"
+    ]
+  },
+  {
+    "id": "base-effect",
+    "term": "Base effect",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "base effects",
+      "favourable base",
+      "low base",
+      "high base"
+    ],
+    "hl": [
+      "base effect",
+      "base effects",
+      "favourable base",
+      "favourable base effect",
+      "unfavourable base",
+      "unfavourable base effect",
+      "adverse base effect",
+      "statistical base effect"
+    ],
+    "abbr": [],
+    "short": "The distortion in a year-on-year growth rate caused by an unusually high or low figure in the same period last year.",
+    "kid": "If you got only one sweet last week and three this week, it looks like a huge jump. But that is mostly because last week was so small.",
+    "detail": "Year-on-year (YoY) growth compares a period with the same period a year earlier, so the result depends as much on last year's number, the base, as on this year's. A low or favourable base means last year's figure was unusually weak, which makes this year's growth look strong even if activity is ordinary; a high or unfavourable base does the reverse. India's GDP grew over 20% YoY in April-June 2021 largely because the lockdown-hit quarter a year earlier had shrunk by nearly a quarter. Inflation works the same way: a vegetable price spike last year can make this year's inflation print look low even while prices rise month after month. That is why analysts check sequential, month-on-month or quarter-on-quarter momentum alongside YoY figures. The common mistake is reading a base-effect jump as a genuine boom, or a base-effect dip as a genuine slump.",
+    "example": "Say a factory made 100 units in April 2024, a strike month, against a normal 120. If it makes a normal 120 units in April 2025, YoY growth is 120 / 100 - 1 = 20%, even though output has only returned to normal; against a normal base of 120 it would be 0%.",
+    "formula": "YoY growth = (Current period value / Same period last year value) - 1",
+    "related": [
+      "Year-on-year growth",
+      "Quarter-on-quarter growth",
+      "Inflation",
+      "Gross domestic product",
+      "Consumer Price Index",
+      "Index of Industrial Production"
+    ]
+  },
+  {
+    "id": "wage-price-spiral",
+    "term": "Wage-price spiral",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "wage price spiral"
+    ],
+    "hl": [
+      "wage-price spiral",
+      "wage price spiral",
+      "wage-price spirals",
+      "wage price spirals"
+    ],
+    "abbr": [],
+    "short": "A loop in which rising prices push workers to demand higher pay, and higher pay pushes firms to raise prices again.",
+    "kid": "Sweets cost more, so the lemonade helper asks for more coins. To give him more, the stand asks more coins for each cup. Then everything costs more again, and round and round it goes.",
+    "detail": "In a wage-price spiral, inflation feeds on itself through the job market. Workers who expect prices to keep rising bargain for bigger pay rises; employers pass the higher wage bill into selling prices; the higher prices then justify the next round of wage demands. It is most likely when unemployment is low, when unions or indexation clauses tie pay to past inflation, and when inflation expectations have drifted up, as in the US and UK in the 1970s. Central banks fear it because once expectations come unanchored, inflation is hard to bring down without a recession. In 2022 economists debated whether one was forming; most concluded wages were catching up with past inflation rather than driving it. Do not confuse rising pay with a spiral: wages growing in line with productivity plus the inflation target are not inflationary.",
+    "example": "Say inflation is 8% and workers at ABC Ltd win 8% pay rises. If wages are 40% of ABC's costs and it passes them on fully, its prices rise 0.40 x 8% = 3.2% from wages alone; if workers then demand more to cover that, the loop continues.",
+    "formula": "",
+    "related": [
+      "Inflation",
+      "Inflation expectations",
+      "Real wages",
+      "Cost-push inflation",
+      "Phillips curve",
+      "Average hourly earnings"
+    ]
+  },
+  {
+    "id": "real-wages",
+    "term": "Real wages",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "real wage growth",
+      "real income"
+    ],
+    "hl": [
+      "real wages",
+      "real wage",
+      "real wage growth",
+      "real income",
+      "real incomes",
+      "real earnings"
+    ],
+    "abbr": [],
+    "short": "Pay adjusted for inflation, showing how many goods and services your wages can actually buy rather than the money amount.",
+    "kid": "Your pocket money goes up by one coin, but sweets also cost one coin more, so you still buy the same number of sweets. What counts is the sweets you can buy, not the coins you hold.",
+    "detail": "Nominal wages are the money amount on a payslip; real wages remove the effect of inflation to measure what that pay can buy. Real wage growth is roughly nominal wage growth minus inflation, and it can be negative even when pay is rising, as happened across much of the world in 2022 when inflation outran pay rises. It matters because real income drives consumer spending, the largest part of GDP in both India and the US. Falling real wages usually mean weaker demand for discretionary goods such as cars, appliances and eating out, which companies feel in their volumes. Central banks also watch real wages for signs of wage-led inflation. A common mistake is using the wrong inflation measure: deflate pay by consumer inflation (CPI), not wholesale inflation, because workers buy at retail prices.",
+    "example": "Say your salary rises from ₹50,000 to ₹54,000 a month, an 8% raise, while CPI inflation is 6%. Real wage growth is 1.08 / 1.06 - 1 = about 1.9%, close to the shortcut 8% - 6% = 2%.",
+    "formula": "Real wage growth = (1 + Nominal wage growth) / (1 + Inflation rate) - 1, approximately Nominal wage growth - Inflation rate",
+    "related": [
+      "Purchasing power",
+      "Inflation",
+      "Consumer Price Index",
+      "Cost of living",
+      "Average hourly earnings",
+      "Wage-price spiral"
+    ]
+  },
+  {
+    "id": "cost-of-living",
+    "term": "Cost of living",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "cost-of-living crisis",
+      "living costs"
+    ],
+    "hl": [
+      "cost of living",
+      "cost-of-living",
+      "cost-of-living crisis",
+      "cost of living crisis",
+      "living costs",
+      "cost-of-living allowance"
+    ],
+    "abbr": [],
+    "short": "The amount of money needed to pay for everyday essentials such as food, housing, transport and healthcare in a given place and time.",
+    "kid": "It is how many coins a family needs each week for food, a home and getting around. When things cost more, the family needs more coins.",
+    "detail": "Cost of living is the money needed to keep a given standard of living, covering food, rent, utilities, transport, education and healthcare. It differs between places, which is why salaries and allowances differ between Mumbai and a smaller town, and it changes over time with inflation. A cost-of-living crisis is a period when essential prices rise faster than incomes, so real incomes fall, as in the UK in 2022 when energy and food bills surged. In India, central government dearness allowance is revised using the Consumer Price Index for Industrial Workers to protect pay from rising living costs. For markets, a squeeze on living costs hits discretionary spending first, while staples hold up better. Do not treat it as identical to headline CPI: a household's own cost of living depends on what it actually buys, especially rent, school fees and medical bills.",
+    "example": "Say a family's monthly basket is rent ₹20,000, food ₹12,000 and transport ₹3,000, a total of ₹35,000. If rent rises 10% and food 8% while transport is unchanged, the new total is ₹22,000 + ₹12,960 + ₹3,000 = ₹37,960, a rise of about 8.5% in its cost of living.",
+    "formula": "",
+    "related": [
+      "Inflation",
+      "Consumer Price Index",
+      "Real wages",
+      "Purchasing power",
+      "Dearness allowance",
+      "Shrinkflation"
+    ]
+  },
+  {
+    "id": "purchasing-power",
+    "term": "Purchasing power",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "real purchasing power",
+      "value of money"
+    ],
+    "hl": [
+      "purchasing power",
+      "real purchasing power",
+      "loss of purchasing power"
+    ],
+    "abbr": [],
+    "short": "How much a unit of money can buy; when prices rise, each rupee or dollar buys less and purchasing power falls.",
+    "kid": "Today one coin buys you three sweets. If sweets cost more later and the same coin buys only two, your coin has become weaker.",
+    "detail": "Purchasing power is the quantity of goods and services one unit of currency can buy. Inflation erodes it: at 6% annual inflation, money loses about half its purchasing power in roughly 12 years. That is why the real return on an investment, its return after inflation, matters more than the headline number: a fixed deposit paying 7% when inflation is 6% grows real wealth by only about 1% a year, before tax. Over long horizons, cash and fixed-income savings tend to lose purchasing power unless interest beats inflation, which is one reason investors hold equities and other real assets. The idea also underlies purchasing power parity (PPP), used to compare living standards and currencies across countries. Do not confuse purchasing power with income: a higher salary can still buy less if prices rose faster.",
+    "example": "At 6% annual inflation, ₹1,00,000 kept as cash will, after five years, buy only what ₹1,00,000 / 1.06^5 = about ₹74,726 buys today. Its purchasing power has fallen by roughly 25%.",
+    "formula": "Future purchasing power in today's money = Amount / (1 + Inflation rate)^Years",
+    "related": [
+      "Inflation",
+      "Real wages",
+      "Purchasing power parity",
+      "Real interest rate",
+      "Cost of living",
+      "Hyperinflation"
+    ]
+  },
+  {
+    "id": "business-cycle",
+    "term": "Business cycle",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "economic cycle",
+      "trade cycle",
+      "boom and bust"
+    ],
+    "hl": [
+      "business cycle",
+      "business cycles",
+      "economic cycle",
+      "economic cycles",
+      "trade cycle",
+      "boom-bust cycle",
+      "boom-and-bust cycle",
+      "boom-and-bust cycles"
+    ],
+    "abbr": [],
+    "short": "The recurring pattern of an economy expanding, peaking, contracting and recovering over several years.",
+    "kid": "A swing goes up high, comes back down, then goes up again. A country's shops and factories are busy, then quieter, then busy again, just like a swing.",
+    "detail": "The business cycle is the alternation between expansion, when output, jobs and profits grow, and contraction, when they shrink. A full cycle runs from a trough through expansion to a peak, then through contraction (a recession) to a new trough. Cycles are irregular, lasting anywhere from a couple of years to more than a decade. Drivers include credit conditions, interest rates, swings in business investment, commodity prices and shocks such as pandemics. In the US, the NBER's Business Cycle Dating Committee officially dates peaks and troughs; India has no equivalent official body. Investors use the cycle for sector rotation: cyclical sectors such as autos, metals and banks tend to lead early in a recovery, while defensives such as FMCG and pharma hold up better in downturns. Do not confuse the cycle with the long-term growth trend: an economy growing 6% a year can still be in a cyclical slowdown.",
+    "example": "Say an economy's output index reads 100, 104, 107, 106, 103, 105 and 109 over seven years. The peak is 107 in year 3, the contraction runs through years 4 and 5 to a trough of 103, a fall of about 3.7% (103 / 107 - 1), and expansion resumes from year 6.",
+    "formula": "",
+    "related": [
+      "Recession",
+      "Economic slowdown",
+      "Overheating",
+      "Leading indicator",
+      "Sector rotation",
+      "Cyclical stock"
+    ]
+  },
+  {
+    "id": "recession",
+    "term": "Recession",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "technical recession",
+      "economic downturn",
+      "downturn"
+    ],
+    "hl": [
+      "recession",
+      "recessions",
+      "recessionary",
+      "technical recession",
+      "economic downturn",
+      "recession fears",
+      "recession risk",
+      "recession risks"
+    ],
+    "abbr": [],
+    "short": "A significant, broad decline in economic activity lasting more than a few months, seen in output, jobs, incomes and spending.",
+    "kid": "Sometimes shops sell less, factories make fewer toys and some grown-ups lose their jobs for a while. Everyone spends a little less until things get better.",
+    "detail": "A recession is a broad-based fall in economic activity. The popular rule of thumb, two consecutive quarters of falling real GDP, is called a technical recession. In the US the official judge is the NBER, which looks at monthly data on jobs, real income, spending and industrial production; that is why no US recession was declared in 2022, even though early estimates showed two straight quarters of falling GDP. Recessions usually bring rising unemployment, falling corporate earnings, central bank rate cuts and lower bond yields. Stock markets typically fall before a recession starts and recover before it ends. India's GDP contracted in FY2020-21 during the pandemic, its first annual fall since 1979-80. Do not confuse a recession with a slowdown: growth dropping from 7% to 5% is a slowdown, not a recession, because output is still rising.",
+    "example": "Say real GDP is $1,000 billion in Q1, $990 billion in Q2 and $985 billion in Q3. Two straight quarterly declines, of 1.0% and about 0.5% (985 / 990 - 1), meet the technical-recession rule of thumb, though bodies like the NBER would also check jobs and income data.",
+    "formula": "",
+    "related": [
+      "Business cycle",
+      "Depression",
+      "Economic slowdown",
+      "Gross domestic product",
+      "Sahm rule",
+      "Hard landing"
+    ]
+  },
+  {
+    "id": "depression",
+    "term": "Depression",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "economic depression"
+    ],
+    "hl": [
+      "economic depression",
+      "economic depressions",
+      "great depression"
+    ],
+    "abbr": [],
+    "short": "A severe, long-lasting recession, with output falling sharply for years and unemployment reaching very high levels.",
+    "kid": "A very long, very hard time when lots of shops close and many grown-ups cannot find work. It is much bigger and longer than a small bad patch.",
+    "detail": "There is no official threshold, but a depression is generally understood as an unusually deep and prolonged contraction. One rough guide is a fall in real GDP of more than 10%, or a downturn lasting more than about two years. The Great Depression is the defining case: from 1929 to 1933, US real GDP fell by roughly a quarter, unemployment reached about 25% and thousands of banks failed. Depressions typically involve a collapse of credit, falling prices (deflation) and policy mistakes such as tight money or trade protectionism. Greece lost about a quarter of its output after 2008 and is often described as having suffered a depression. For investors, depressions bring long bear markets, widespread defaults and very low interest rates. Do not use the word loosely: even the US downturn of 2008-09 was a severe recession, nicknamed the Great Recession, not a depression.",
+    "example": "Say an economy's real GDP falls from ₹100 lakh crore to ₹88 lakh crore over two years. That 12% fall (88 / 100 - 1) crosses the rough 10% depression guide, whereas a typical recession might see output fall by 1% to 3%.",
+    "formula": "",
+    "related": [
+      "Recession",
+      "Deflation",
+      "Business cycle",
+      "Hard landing",
+      "Unemployment rate",
+      "Bank run"
+    ]
+  },
+  {
+    "id": "economic-slowdown",
+    "term": "Economic slowdown",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "slowdown",
+      "growth slowdown",
+      "deceleration"
+    ],
+    "hl": [
+      "economic slowdown",
+      "economic slowdowns",
+      "growth slowdown",
+      "slowdown in growth",
+      "growth deceleration",
+      "slowing economy"
+    ],
+    "abbr": [],
+    "short": "A period when an economy keeps growing but at a noticeably slower pace than before, short of an outright contraction.",
+    "kid": "Your bicycle is still moving forward, but you are pedalling slower than before. You have not stopped, you are just going less fast.",
+    "detail": "A slowdown means GDP growth decelerates, say from 8% to 5%, while output still rises. That separates it from a recession, in which output actually falls. Slowdowns show up first in timely data: weaker PMIs, softer credit growth, falling auto and housing sales and cautious corporate commentary. India saw one in FY2019-20, when growth slipped to about 4% after a credit squeeze on shadow banks. For investors, a slowdown usually means cuts to earnings forecasts and pressure on cyclical sectors, and it often prompts rate cuts or fiscal support. Context matters: for a fast-growing emerging market, a drop well below its potential growth rate can feel like a recession, with job creation stalling, even though GDP is still positive. The common mistake is calling every slowdown a recession.",
+    "example": "Say GDP grows 8.0% in one year and 5.5% the next. Output is still rising, so this is a slowdown, not a recession; growth has decelerated by 2.5 percentage points.",
+    "formula": "",
+    "related": [
+      "Recession",
+      "Business cycle",
+      "Gross domestic product",
+      "Potential output",
+      "Soft landing",
+      "Leading indicator"
+    ]
+  },
+  {
+    "id": "overheating",
+    "term": "Overheating",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "overheating economy",
+      "overheated economy"
+    ],
+    "hl": [
+      "overheating economy",
+      "overheated economy",
+      "economy overheating",
+      "economic overheating",
+      "signs of overheating",
+      "risk of overheating"
+    ],
+    "abbr": [],
+    "short": "When demand grows faster than an economy can sustainably produce, pushing up inflation, wages and asset prices.",
+    "kid": "If everyone wants lemonade at once and the stand cannot make it fast enough, each cup starts to cost more coins. The little stand is working too hard, like a car engine getting too hot.",
+    "detail": "An economy overheats when total demand runs ahead of its capacity to produce, so output rises above its potential level, a positive output gap. Factories run near full capacity, unemployment drops below its natural rate, and firms compete for scarce workers and inputs. The symptoms are rising inflation, fast wage growth, rapid credit growth, a widening current account deficit and frothy asset prices. Central banks respond by raising policy rates or draining liquidity, so signs of overheating tend to hurt bond prices and richly valued stocks. In India, a widening current account deficit and sticky core inflation are typical warning lights. The danger is that cooling an overheated economy tips it into recession, a hard landing. Do not confuse fast growth with overheating: growth driven by rising productivity or new capacity need not overheat.",
+    "example": "Say an economy's potential output is ₹200 lakh crore but actual output is ₹206 lakh crore. The output gap is (206 - 200) / 200 = +3%, a sign of overheating that typically pushes inflation up.",
+    "formula": "Output gap = (Actual GDP - Potential GDP) / Potential GDP",
+    "related": [
+      "Output gap",
+      "Inflation",
+      "Business cycle",
+      "Soft landing",
+      "Hard landing",
+      "Monetary policy"
+    ]
+  },
+  {
+    "id": "soft-landing",
+    "term": "Soft landing",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "soft landing",
+      "soft-landing",
+      "soft landings"
+    ],
+    "abbr": [],
+    "short": "When a central bank slows an overheating economy enough to bring inflation down without causing a recession.",
+    "kid": "When a plane lands gently, nobody spills their juice. A soft landing is when grown-ups calm down a too-busy country without anyone getting hurt.",
+    "detail": "The phrase borrows from flying: the economy descends from too-hot growth and high inflation to a sustainable pace without crashing into recession. The usual tool is monetary tightening, raising interest rates just enough to cool demand while unemployment stays low. Soft landings are hard to achieve because policy works with long and variable lags, so central banks often overshoot. The Federal Reserve's 1994-95 tightening, which doubled the federal funds rate from 3% to 6% without a recession, is the textbook success, and the US disinflation of 2022-24, when inflation fell sharply while unemployment stayed close to 4%, is widely described as near one. Markets care because a soft landing protects corporate earnings and lets rate cuts come from a position of strength. Do not read it as no slowdown at all: growth does slow, it just stays positive.",
+    "example": "Say inflation is 6% against a 4% target and GDP is growing 7%. If rate rises bring inflation to 4% over two years while growth slows to 5.5% but stays positive every quarter, that is a soft landing; had GDP fallen for two quarters, it would be a hard landing.",
+    "formula": "",
+    "related": [
+      "Hard landing",
+      "Recession",
+      "Overheating",
+      "Monetary policy",
+      "Disinflation",
+      "Federal Reserve"
+    ]
+  },
+  {
+    "id": "hard-landing",
+    "term": "Hard landing",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "hard landing",
+      "hard-landing",
+      "hard landings"
+    ],
+    "abbr": [],
+    "short": "When efforts to cool an overheated economy, usually by raising interest rates, tip it into a recession.",
+    "kid": "If a plane comes down too fast, it lands with a big bump. A hard landing is when calming a too-busy country goes too far and things get bumpy.",
+    "detail": "A hard landing is the bad ending of a tightening cycle: higher interest rates or tighter credit slow demand so much that output contracts and unemployment jumps. The classic example is the Volcker-era Federal Reserve, which pushed the federal funds rate to about 20% in 1980-81 to break double-digit inflation and triggered back-to-back US recessions. The term is also used about China whenever its credit-fuelled growth threatens to slow abruptly. Hard landings tend to hit cyclical stocks, weaker borrowers and emerging-market currencies hardest, while government bonds usually rally as investors price in rate cuts. The risk exists because policy acts with long lags: by the time inflation is clearly falling, the economy may already be weakening fast. Do not call every slowdown a hard landing; the term implies an outright recession.",
+    "example": "Say a central bank lifts its policy rate from 4% to 9%, and over the next year GDP falls from $2,000 billion to $1,960 billion while unemployment climbs from 4% to 7%. The 2% fall in output ($40 billion / $2,000 billion) marks a hard landing rather than a soft one.",
+    "formula": "",
+    "related": [
+      "Soft landing",
+      "Recession",
+      "Overheating",
+      "Monetary policy",
+      "Business cycle",
+      "Rate hike"
+    ]
+  },
+  {
+    "id": "v-shaped-recovery",
+    "term": "V-shaped recovery",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "V-shaped",
+      "U-shaped recovery",
+      "W-shaped recovery",
+      "L-shaped recovery"
+    ],
+    "hl": [
+      "v-shaped recovery",
+      "v-shaped rebound",
+      "u-shaped recovery",
+      "w-shaped recovery",
+      "l-shaped recovery"
+    ],
+    "abbr": [],
+    "short": "A recovery in which the economy falls sharply and then rebounds just as quickly to its previous level, tracing a V on a chart.",
+    "kid": "You trip, fall down and jump straight back up again. That quick down and quick up looks like the letter V.",
+    "detail": "Economists describe recoveries by the letter their chart resembles. A V-shaped recovery is a sharp fall followed by an equally sharp rebound to the earlier peak, usually after a sudden shock rather than a deep financial crisis; the US rebound from its 2020 pandemic recession came close to a V. A U-shaped recovery bottoms out and stays weak for a while before climbing. A W-shaped recovery is a double dip: a rebound fails and a second fall comes before the real recovery. An L-shaped recovery is a fall followed by years of stagnation, as in Japan after 1990. For investors the shape matters: a V rewards buying cyclicals early, while a U or L rewards patience and quality. Note that regaining the previous level is not the same as regaining the previous trend; output lost along the way may never be made up.",
+    "example": "Say GDP is 100 before a shock and falls to 90. If it is back at 100 within a year, that is a V; if it sits near 91 for two years before climbing, a U; if it settles around 93 for years, an L. Getting from 90 back to 100 needs growth of about 11.1% (100 / 90 - 1), not 10%.",
+    "formula": "",
+    "related": [
+      "K-shaped recovery",
+      "Recession",
+      "Business cycle",
+      "Depression",
+      "Economic slowdown"
+    ]
+  },
+  {
+    "id": "k-shaped-recovery",
+    "term": "K-shaped recovery",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "K-shaped",
+      "K-shaped economy"
+    ],
+    "hl": [
+      "k-shaped recovery",
+      "k-shaped economy",
+      "k-shaped",
+      "k-shaped consumption",
+      "k-shaped demand"
+    ],
+    "abbr": [],
+    "short": "A recovery in which some groups, sectors or companies bounce back strongly while others keep declining, so the paths split like the letter K.",
+    "kid": "After a storm, some children's sandcastles get rebuilt bigger than before, while others stay broken. One group goes up and the other goes down, like the two arms of a K.",
+    "detail": "In a K-shaped recovery, totals such as GDP can look healthy while the gains are shared very unevenly. The term caught on after 2020: higher-income households with secure jobs and investments recovered quickly, helped by rising asset prices, while lower-income and informal workers lost jobs and income for longer. In India the pattern showed up in consumption, with strong demand for premium cars, homes and luxury goods alongside weak sales of entry-level two-wheelers and mass-market packaged goods, and in the gap between large listed companies and small informal businesses. For investors, a K-shape favours premium brands and market leaders over mass-market and smaller players, and makes headline growth a poor guide to demand in any single segment. Do not assume a strong GDP print means a broad recovery; check how different income groups and firm sizes are doing.",
+    "example": "Say ABC Motors' premium SUV sales rise from 40,000 to 52,000 units (+30%) while its entry-level hatchback sales fall from 60,000 to 51,000 (-15%). Total volume rises only from 1,00,000 to 1,03,000 (+3%), hiding a sharp split between the two groups of buyers.",
+    "formula": "",
+    "related": [
+      "V-shaped recovery",
+      "Business cycle",
+      "Premiumisation",
+      "Real wages",
+      "Informal sector",
+      "Consumer confidence"
+    ]
+  },
+  {
+    "id": "unemployment-rate",
+    "term": "Unemployment rate",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "jobless rate",
+      "unemployment"
+    ],
+    "hl": [
+      "unemployment rate",
+      "unemployment rates",
+      "jobless rate",
+      "jobless rates"
+    ],
+    "abbr": [],
+    "short": "The share of people in the labour force, meaning those working or actively looking for work, who have no job.",
+    "kid": "Ten friends all want a turn helping at the lemonade stand, but only nine get one. The friend still waiting is like a grown-up without a job.",
+    "detail": "The unemployment rate counts people who are without work, available for work and actively seeking it, as a percentage of the labour force, which is the employed plus the unemployed. People not looking for work, such as full-time students, homemakers or discouraged workers, sit outside the labour force and are not counted. In the US it comes from the monthly household survey released with the jobs report. In India the Periodic Labour Force Survey (PLFS) produces it, with monthly estimates on the current weekly status basis since 2025. It is a lagging indicator that often keeps rising after a recession ends. For markets, a rising rate signals slack and tends to bring rate cuts, while a very low rate can point to wage pressure. A falling rate is not always good news: it may mean people stopped searching, so check the participation rate too.",
+    "example": "Say 47.5 crore people are employed and 2.5 crore are jobless but actively seeking work. The labour force is 50 crore, so the unemployment rate is 2.5 / 50 = 5%.",
+    "formula": "Unemployment rate = Unemployed persons / Labour force x 100, where Labour force = Employed + Unemployed",
+    "related": [
+      "Labour force participation rate",
+      "Natural rate of unemployment",
+      "Non-farm payrolls",
+      "Periodic Labour Force Survey",
+      "Sahm rule",
+      "Okun's law"
+    ]
+  },
+  {
+    "id": "natural-rate-of-unemployment",
+    "term": "Natural rate of unemployment",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "NAIRU",
+      "non-accelerating inflation rate of unemployment",
+      "full employment",
+      "frictional unemployment",
+      "structural unemployment"
+    ],
+    "hl": [
+      "natural rate of unemployment",
+      "nairu",
+      "non-accelerating inflation rate of unemployment",
+      "full employment",
+      "frictional unemployment",
+      "structural unemployment"
+    ],
+    "abbr": [
+      "NAIRU"
+    ],
+    "short": "The lowest unemployment rate an economy can sustain without inflation starting to speed up, reflecting normal job-switching and skill mismatches.",
+    "kid": "Even on a good day at the playground, a few children are walking between swings or learning a new game. A little waiting is normal, even when there are plenty of swings.",
+    "detail": "Even a healthy economy has some unemployment. Frictional unemployment comes from people moving between jobs or entering the workforce; structural unemployment comes from mismatches between workers' skills or locations and the jobs on offer. Together they make up the natural rate, the level consistent with full employment. NAIRU, a closely related idea, is the rate below which a tight job market pushes wage growth and inflation steadily higher. Neither can be observed directly: both are estimated, both shift over time with demographics, technology and labour laws, and estimates carry wide error bands, with recent US estimates commonly around 4% to 4.5%. Central banks compare actual unemployment with these estimates to judge how much slack exists. Do not confuse full employment with zero unemployment, and do not treat any estimate as a precise line.",
+    "example": "Say the natural rate is estimated at 4.5% and actual unemployment is 3.5%. The unemployment gap is 3.5 - 4.5 = -1 percentage point, signalling a tight job market where wage and price pressure tends to build.",
+    "formula": "Unemployment gap = Actual unemployment rate - Natural rate of unemployment",
+    "related": [
+      "Unemployment rate",
+      "Phillips curve",
+      "Okun's law",
+      "Output gap",
+      "Potential output",
+      "Wage-price spiral"
+    ]
+  },
+  {
+    "id": "labour-force-participation-rate",
+    "term": "Labour force participation rate",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "LFPR",
+      "labor force participation rate",
+      "participation rate"
+    ],
+    "hl": [
+      "labour force participation rate",
+      "labor force participation rate",
+      "labour force participation",
+      "labor force participation",
+      "female labour force participation"
+    ],
+    "abbr": [
+      "LFPR"
+    ],
+    "short": "The share of the working-age population that is either employed or actively looking for work.",
+    "kid": "Out of all the big children who could play the game, some are playing or waiting for a turn. The rest have chosen not to play today.",
+    "detail": "The labour force participation rate (LFPR) measures how much of the working-age population is in the job market at all, either working or unemployed and searching. Those outside it include students, retirees, homemakers and discouraged workers. It complements the unemployment rate, which can fall simply because people stop looking; that shows up as lower participation. India's LFPR, measured by the Periodic Labour Force Survey, is low by global standards mainly because of low female participation, though female LFPR has risen sharply since 2017-18. In the US, an ageing population has pulled participation down over the long term. Rising participation expands labour supply and potential growth and can ease wage pressure. Watch the definitions: India's PLFS often reports LFPR for ages 15 and above, the US for 16 and above, and international comparisons often use 15 to 64.",
+    "example": "Say a city has 10 lakh people of working age: 5.7 lakh are employed and 0.3 lakh are jobless but searching. The labour force is 6 lakh, so the LFPR is 6 / 10 = 60% and the unemployment rate is 0.3 / 6 = 5%.",
+    "formula": "LFPR = (Employed + Unemployed) / Working-age population x 100",
+    "related": [
+      "Unemployment rate",
+      "Periodic Labour Force Survey",
+      "Natural rate of unemployment",
+      "Non-farm payrolls",
+      "Demographic dividend"
+    ]
+  },
+  {
+    "id": "non-farm-payrolls",
+    "term": "Non-farm payrolls",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "NFP",
+      "nonfarm payrolls",
+      "payrolls",
+      "jobs report",
+      "US jobs data"
+    ],
+    "hl": [
+      "non-farm payrolls",
+      "nonfarm payrolls",
+      "non-farm payroll",
+      "nonfarm payroll",
+      "us jobs report",
+      "us jobs data",
+      "payrolls report"
+    ],
+    "abbr": [
+      "NFP"
+    ],
+    "short": "The monthly US count of jobs added or lost outside farming, and one of the most market-moving economic releases in the world.",
+    "kid": "Once a month, someone counts how many new grown-ups got jobs in a big faraway country. If lots did, people cheer; if few did, people worry.",
+    "detail": "Non-farm payrolls (NFP) is the headline number in the US Bureau of Labor Statistics' monthly Employment Situation report, usually released on the first Friday of the month at 8:30 am Eastern time, which is evening in India. It comes from a survey of businesses and government agencies and measures the change in paid jobs, excluding farm workers, private household staff and the self-employed. The same report carries the unemployment rate, from a separate household survey, and average hourly earnings. Because the Federal Reserve weighs it heavily, a big surprise moves Treasury yields, the dollar, gold and global stocks, including Indian markets the next morning. Compare the figure with the consensus forecast, and watch revisions to the previous two months, which can be large. Do not confuse it with weekly jobless claims, a separate and noisier series.",
+    "example": "Say forecasters expect 150,000 new jobs and the report shows 275,000, a beat of 125,000. If the previous two months are revised down by a combined 60,000, the net surprise is only 125,000 - 60,000 = 65,000 jobs.",
+    "formula": "",
+    "related": [
+      "Unemployment rate",
+      "Average hourly earnings",
+      "Jobless claims",
+      "JOLTS",
+      "Federal Reserve",
+      "Sahm rule"
+    ]
+  },
+  {
+    "id": "jobless-claims",
+    "term": "Jobless claims",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "initial jobless claims",
+      "initial claims",
+      "weekly jobless claims",
+      "continuing claims"
+    ],
+    "hl": [
+      "jobless claims",
+      "initial jobless claims",
+      "weekly jobless claims",
+      "continuing jobless claims",
+      "unemployment claims",
+      "unemployment benefit claims"
+    ],
+    "abbr": [],
+    "short": "The weekly count of people in the US filing for unemployment benefits, a fast, early signal of layoffs.",
+    "kid": "Every week, someone counts how many grown-ups asked for help because they lost their jobs. If the number keeps growing, harder times may be coming.",
+    "detail": "The US Department of Labor publishes jobless claims every Thursday at 8:30 am Eastern time. Initial claims count people filing a new claim for state unemployment insurance in the previous week, so they track fresh layoffs almost in real time; continuing claims count people still receiving benefits, showing how hard it is to find a new job. Weekly data are noisy, so analysts use the four-week moving average and watch for holiday and seasonal distortions. Claims are among the most useful early signals of a turn in the job market: a sustained rise usually comes before a rise in the unemployment rate, and can raise expectations of Fed rate cuts. Do not confuse claims with unemployment: many jobless people are not eligible for benefits or never apply. India has no equivalent weekly series.",
+    "example": "Say initial claims over four weeks are 210,000, 225,000, 240,000 and 245,000. The four-week average is 920,000 / 4 = 230,000; if it was 215,000 a month earlier, layoffs appear to be picking up.",
+    "formula": "Four-week moving average = Sum of the last four weekly initial claims / 4",
+    "related": [
+      "Non-farm payrolls",
+      "Unemployment rate",
+      "Leading indicator",
+      "JOLTS",
+      "Sahm rule"
+    ]
+  },
+  {
+    "id": "jolts",
+    "term": "JOLTS",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "Job Openings and Labor Turnover Survey",
+      "JOLTS report"
+    ],
+    "hl": [
+      "jolts report",
+      "jolts data",
+      "jolts survey",
+      "job openings and labor turnover survey",
+      "quits rate"
+    ],
+    "abbr": [],
+    "short": "A monthly US survey of job openings, hires, quits and layoffs, showing how strong the demand for workers is and how freely people change jobs.",
+    "kid": "Think of a notice board at school showing how many helper jobs are free, how many children started helping and how many stopped. It tells you whether helpers are wanted a lot or a little.",
+    "detail": "The Job Openings and Labor Turnover Survey (JOLTS) from the US Bureau of Labor Statistics measures the demand side of the job market. Its key numbers are job openings, meaning unfilled positions employers are actively recruiting for on the last business day of the month, plus hires, quits and layoffs. It is released about a month behind the payrolls data, so it is older but adds depth. Two ratios get the most attention. Openings per unemployed person reached about 2 in 2022, a sign of an extremely tight market. The quits rate matters because workers quit more when they are confident of finding better pay, so it tends to lead wage growth. The Federal Reserve watches JOLTS when judging labour-market tightness. Do not read openings as guaranteed hiring: posted vacancies can linger, and survey response rates have fallen.",
+    "example": "Say there are 8.0 million job openings and 6.4 million unemployed people, so openings per unemployed person are 8.0 / 6.4 = 1.25. If 3.2 million workers quit in a month out of 160 million employed, the quits rate is 3.2 / 160 = 2.0%.",
+    "formula": "Openings per unemployed person = Job openings / Unemployed persons; Quits rate = Quits / Total employment x 100",
+    "related": [
+      "Non-farm payrolls",
+      "Unemployment rate",
+      "Jobless claims",
+      "Average hourly earnings",
+      "Beveridge curve"
+    ]
+  },
+  {
+    "id": "average-hourly-earnings",
+    "term": "Average hourly earnings",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "AHE",
+      "hourly earnings"
+    ],
+    "hl": [
+      "average hourly earnings",
+      "hourly earnings"
+    ],
+    "abbr": [
+      "AHE"
+    ],
+    "short": "The average pay per hour of US private-sector workers, reported monthly with the jobs report and watched as a gauge of wage inflation.",
+    "kid": "It is how many coins, on average, a grown-up gets for each hour of work. If that number grows very fast, things in shops may start to cost more too.",
+    "detail": "Average hourly earnings (AHE) is published by the US Bureau of Labor Statistics in the monthly Employment Situation report, alongside non-farm payrolls. It is total pay divided by total hours for private non-farm employees, and markets focus on its month-on-month and year-on-year changes. Fast wage growth can feed services inflation, so a hot AHE reading can push Treasury yields up and trim hopes of rate cuts. A rough benchmark is that wage growth of about 3% to 3.5% fits 2% inflation if productivity grows around 1% to 1.5% a year. The big trap is composition: in April 2020, AHE jumped about 8% year on year because millions of low-paid workers lost their jobs, raising the average without anyone getting a raise. For a cleaner read, analysts also check the Employment Cost Index.",
+    "example": "Say AHE is $35.00 an hour this month against $33.80 a year ago. Year-on-year wage growth is 35.00 / 33.80 - 1 = about 3.6%; with inflation at 2.5%, real hourly earnings grew about 1.0% (1.0355 / 1.025 - 1).",
+    "formula": "Average hourly earnings = Total payroll of private non-farm employees / Total hours they worked",
+    "related": [
+      "Non-farm payrolls",
+      "Real wages",
+      "Wage-price spiral",
+      "Employment Cost Index",
+      "Unemployment rate"
+    ]
+  },
+  {
+    "id": "sahm-rule",
+    "term": "Sahm rule",
+    "cat": "macro",
+    "level": "a",
+    "aliases": [
+      "Sahm recession indicator"
+    ],
+    "hl": [
+      "sahm rule",
+      "sahm recession indicator",
+      "sahm indicator"
+    ],
+    "abbr": [],
+    "short": "A recession signal that triggers when the US unemployment rate's three-month average rises 0.5 percentage points or more above its low of the past year.",
+    "kid": "If a few more children than usual start sitting out of the game, and it keeps happening for a while, the teacher knows playtime is going badly. It is a simple early warning.",
+    "detail": "Devised by economist Claudia Sahm in 2019 as a trigger for automatic stimulus payments, the rule compares the three-month moving average of the US unemployment rate with its lowest three-month average over the previous 12 months. A rise of 0.50 percentage points or more has historically signalled that a recession had already begun, usually within its first few months, and it had a strong track record from 1970 onwards. In August 2024 a weak jobs report triggered it, feeding a global market sell-off, yet no recession had followed as of 2025. Sahm herself said the rule was likely overstating the risk because unemployment was rising partly from a jump in labour supply, including immigration, rather than from layoffs. Investors treat it as a simple real-time warning, not a law. Remember that it detects a recession that is starting; it does not forecast one far ahead.",
+    "example": "Say the lowest three-month average of US unemployment in the past year was 3.6% and the latest three-month average is 4.2%. The Sahm indicator is 4.2 - 3.6 = 0.6 percentage points, above the 0.5 threshold, so the rule is triggered.",
+    "formula": "Sahm indicator = 3-month average unemployment rate - Lowest 3-month average in the prior 12 months; signal if 0.50 percentage points or more",
+    "related": [
+      "Unemployment rate",
+      "Recession",
+      "Non-farm payrolls",
+      "Leading indicator",
+      "Yield curve inversion"
+    ]
+  },
+  {
+    "id": "phillips-curve",
+    "term": "Phillips curve",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "phillips curve",
+      "phillips curves"
+    ],
+    "abbr": [],
+    "short": "The observed trade-off between unemployment and inflation: when unemployment is low, wage and price inflation tend to be higher, and vice versa.",
+    "kid": "When lots of grown-ups have jobs, shops get busy and start asking more for their things. When fewer grown-ups have jobs, prices stay calmer.",
+    "detail": "In 1958 A. W. Phillips found that UK wage growth was higher in years of low unemployment. Economists extended this to price inflation, and in the 1960s policymakers treated it as a menu: accept a little more inflation in exchange for lower unemployment. The 1970s broke that idea, as stagflation brought high inflation and high unemployment together. Milton Friedman and Edmund Phelps explained why: once people expect higher inflation, the curve shifts, so in the long run there is no trade-off and the curve is vertical at the natural rate of unemployment. Modern versions link inflation to expected inflation plus the gap between unemployment and its natural rate. The curve looked very flat in the 2010s, then steepened in 2021-22. Central banks, including the RBI, use output-gap versions in their forecasting models. Do not treat it as a stable trade-off policymakers can exploit.",
+    "example": "With a slope of 0.5, expected inflation of 4% and a natural rate of 5%, if unemployment falls to 4% the curve predicts inflation of 4% - 0.5 x (4% - 5%) = 4.5%.",
+    "formula": "Inflation = Expected inflation - b x (Unemployment rate - Natural rate of unemployment)",
+    "related": [
+      "Natural rate of unemployment",
+      "Inflation",
+      "Inflation expectations",
+      "Stagflation",
+      "Okun's law",
+      "Output gap"
+    ]
+  },
+  {
+    "id": "okuns-law",
+    "term": "Okun's law",
+    "cat": "macro",
+    "level": "a",
+    "aliases": [
+      "Okun's rule"
+    ],
+    "hl": [
+      "okun's law",
+      "okun's rule",
+      "okuns law"
+    ],
+    "abbr": [],
+    "short": "A rule of thumb linking output and jobs: when GDP grows faster than its potential, unemployment tends to fall, and vice versa.",
+    "kid": "When the lemonade stand sells a lot more, it needs more helpers. When it sells less, some helpers are not needed.",
+    "detail": "Arthur Okun observed in 1962 that US unemployment moved predictably with output. In its gap form, modern US estimates suggest that each 1 percentage point by which actual GDP falls below potential goes with unemployment roughly 0.5 percentage points above its natural rate. In its difference form, unemployment falls when growth beats the economy's potential growth rate and rises when growth falls short. The coefficient is an average, not a constant: it varies across countries and decades, depending on labour laws and whether firms adjust hours rather than headcount. It fits poorly in economies with large informal sectors such as India, where weak output often shows up as underemployment or lower earnings rather than higher measured unemployment. Investors and central banks use it to turn GDP forecasts into job-market expectations. Despite the name, it is a statistical relationship, not a law of nature.",
+    "example": "With a coefficient of 0.5, if GDP is 2% below potential (an output gap of -2%) and the natural rate is 4.5%, predicted unemployment is 4.5% - 0.5 x (-2%) = 5.5%.",
+    "formula": "Unemployment rate - Natural rate of unemployment = -k x Output gap, with k about 0.5 in modern US estimates",
+    "related": [
+      "Unemployment rate",
+      "Output gap",
+      "Potential output",
+      "Natural rate of unemployment",
+      "Phillips curve",
+      "Gross domestic product"
+    ]
+  },
+  {
+    "id": "purchasing-managers-index",
+    "term": "Purchasing Managers' Index",
+    "cat": "macro",
+    "level": "i",
+    "aliases": [
+      "PMI",
+      "manufacturing PMI",
+      "services PMI",
+      "composite PMI",
+      "ISM index",
+      "ISM manufacturing"
+    ],
+    "hl": [
+      "purchasing managers' index",
+      "purchasing managers index",
+      "manufacturing pmi",
+      "services pmi",
+      "composite pmi",
+      "flash pmi",
+      "ism manufacturing",
+      "ism services",
+      "ism index",
+      "ism manufacturing index"
+    ],
+    "abbr": [
+      "PMI",
+      "PMIs"
+    ],
+    "short": "A monthly survey-based index of business conditions; a reading above 50 means activity expanded from the previous month, below 50 means it shrank.",
+    "kid": "Each month, shop and factory bosses are asked whether things are better, worse or the same. If more say better than worse, the number goes above the middle line.",
+    "detail": "A PMI is built from monthly surveys of purchasing managers, who report whether new orders, output, employment, supplier delivery times and stocks of purchases rose, fell or stayed the same compared with the previous month. The answers form a diffusion index: 50 means no change, above 50 means expansion and below 50 contraction, while the distance from 50 shows how broad the change is. Separate manufacturing and services PMIs are combined into a composite. In India, the HSBC India PMIs, compiled by S&P Global under the arrangement as of 2025, come out early each month, with flash estimates late in the survey month itself; in the US, the ISM indices and S&P Global PMIs are the main versions. PMIs move markets because they arrive weeks before official output data. Do not read a fall from 58 to 55 as contraction: activity is still expanding, only less broadly.",
+    "example": "Say 300 purchasing managers respond: 120 report higher output, 150 no change and 30 lower. The output index is 40% + 0.5 x 50% = 65, well above 50, signalling broad expansion.",
+    "formula": "PMI component = % reporting an increase + 0.5 x % reporting no change",
+    "related": [
+      "Leading indicator",
+      "Index of Industrial Production",
+      "Gross domestic product",
+      "Business cycle",
+      "Consumer confidence"
+    ]
+  },
+  {
+    "id": "retail-sales",
+    "term": "Retail sales",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "US retail sales",
+      "advance retail sales"
+    ],
+    "hl": [
+      "us retail sales",
+      "u.s. retail sales",
+      "us retail sales data",
+      "advance retail sales"
+    ],
+    "abbr": [],
+    "short": "A monthly measure of the total value of goods sold by shops and online retailers, used as a quick read on consumer spending.",
+    "kid": "Each month, someone adds up how much all the shops sold, from toys to bread. If the total is big, people are happily buying.",
+    "detail": "In the US, the Census Bureau's advance monthly retail sales report, released around the middle of each month, estimates sales at stores, car dealers, petrol stations, restaurants and online sellers. Because consumer spending is about two-thirds of US GDP, it is one of the most closely watched releases. Analysts focus on the control group, which leaves out autos, petrol, building materials and food services and feeds directly into GDP estimates. The figures are in money terms, so a rise can partly reflect higher prices rather than more goods bought, and they are seasonally adjusted and often revised. India has no single official retail sales series, so investors piece together demand from vehicle registrations, GST collections, card spending and company results. Do not confuse retail sales with total consumption: most services, such as rent, healthcare and education, are not included.",
+    "example": "Say retail sales rise from $700 billion to $707 billion in a month, a 1.0% gain, while goods prices rose 0.6%. Real retail sales grew only about 0.4% (1.010 / 1.006 - 1), so most of the headline gain came from higher prices.",
+    "formula": "",
+    "related": [
+      "Consumer confidence",
+      "Gross domestic product",
+      "Consumer Price Index",
+      "Private final consumption expenditure",
+      "Leading indicator"
+    ]
+  },
+  {
+    "id": "consumer-confidence",
+    "term": "Consumer confidence",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "consumer sentiment",
+      "consumer confidence index",
+      "University of Michigan sentiment"
+    ],
+    "hl": [
+      "consumer confidence",
+      "consumer confidence index",
+      "consumer sentiment",
+      "consumer sentiment index",
+      "university of michigan sentiment",
+      "michigan sentiment",
+      "michigan consumer sentiment"
+    ],
+    "abbr": [],
+    "short": "A survey-based measure of how optimistic households feel about the economy, their finances and jobs, used to gauge future spending.",
+    "kid": "If families feel happy and safe about money, they buy treats and toys. If they feel worried, they keep their coins in the piggy bank instead.",
+    "detail": "Consumer confidence surveys ask households how they see current conditions and what they expect for business conditions, jobs, incomes and prices in the coming months. In the US, the two main gauges are the Conference Board's Consumer Confidence Index, which leans towards the job market, and the University of Michigan's Index of Consumer Sentiment, which leans towards personal finances and also publishes widely watched inflation-expectation figures. In India, the RBI runs a bi-monthly Consumer Confidence Survey in major cities (as of 2025), reporting a current situation index and a future expectations index, with 100 as the neutral mark. Confidence matters because it can foreshadow spending on cars, homes and other big purchases. The caveat is that mood and spending often diverge: in 2022, US sentiment hit a record low while spending stayed robust. Treat it as one input alongside retail sales and real income data.",
+    "example": "Say a survey finds 45% of households expect better conditions, 30% the same and 25% worse. The net response is 45 - 25 = +20, so an index built as 100 plus the net response reads 120, above the neutral 100 mark.",
+    "formula": "Net response = % optimistic - % pessimistic; Index = 100 + Net response (the method used in the RBI survey)",
+    "related": [
+      "Retail sales",
+      "Leading indicator",
+      "Purchasing Managers' Index",
+      "Inflation expectations",
+      "Business cycle"
+    ]
+  },
+  {
+    "id": "leading-indicator",
+    "term": "Leading indicator",
+    "cat": "macro",
+    "level": "b",
+    "aliases": [
+      "leading indicators",
+      "lagging indicator",
+      "coincident indicator",
+      "high-frequency indicators"
+    ],
+    "hl": [
+      "leading indicator",
+      "leading indicators",
+      "lagging indicator",
+      "lagging indicators",
+      "coincident indicator",
+      "coincident indicators",
+      "high-frequency indicators",
+      "high frequency indicators",
+      "leading economic index"
+    ],
+    "abbr": [],
+    "short": "An economic statistic that tends to change direction before the overall economy does, helping forecast turning points in the business cycle.",
+    "kid": "Dark clouds come before the rain, so you grab your umbrella early. Some numbers are like those clouds, showing what may happen next.",
+    "detail": "Economic indicators are grouped by timing. Leading indicators move ahead of the economy: PMI new orders, building permits, jobless claims, the yield curve, stock prices and consumer expectations. Coincident indicators move with it, such as industrial production, employment and real income. Lagging indicators confirm a trend after it has happened, such as the unemployment rate, core inflation and loan defaults. The Conference Board publishes a composite Leading Economic Index for the US. High-frequency indicators are timely data, often weekly or daily, used to track the economy in near real time; in India these include GST e-way bills, power demand, fuel sales, UPI volumes, vehicle registrations and the eight core industries index. Investors use leading indicators because markets themselves look ahead. The caveat: single signals give false alarms, so analysts look for broad, sustained agreement across several.",
+    "example": "Say a composite leading index falls from 104.0 to 101.4 over six months. That is a 2.5% decline (101.4 / 104.0 - 1), the kind of steady drop forecasters treat as an early warning of slower growth a few quarters ahead.",
+    "formula": "",
+    "related": [
+      "Business cycle",
+      "Purchasing Managers' Index",
+      "Jobless claims",
+      "Yield curve",
+      "Consumer confidence",
+      "Eight core industries"
+    ]
+  }
+]

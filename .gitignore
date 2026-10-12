@@ -1,0 +1,7 @@
+dist/
+.dev/
+data/live/
+node_modules/
+.DS_Store
+tests/out/
+__pycache__/

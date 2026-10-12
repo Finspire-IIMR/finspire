@@ -1,0 +1,153 @@
+/* Finspire shared widgets (loaded on every page, home included): account control + menu, glossary terms + tooltip,
+   toasts, modal dialogs, sign-in dialog. Every class is prefixed fs- or gl- so it never collides with page CSS.
+   Widgets that float above the page (tooltip, toast, modal) use their own fixed dark palette so they read the same
+   on dark pages and on light bands. */
+
+/* ---------- Account control ---------- */
+.fs-acct{position:relative;display:inline-flex;align-items:center}
+.fs-acct-in{display:inline-flex;align-items:center;gap:9px;height:40px;padding:0 16px 0 12px;border-radius:999px;border:1px solid var(--line2,rgba(255,255,255,.15));background:transparent;color:var(--ink,#F4F4F6);font-size:14.5px;font-weight:500;white-space:nowrap;transition:background .2s,border-color .2s}
+.fs-acct-in:hover{background:var(--line,rgba(255,255,255,.08));border-color:var(--ink2,#BDBDC6)}
+.fs-acct-in .fs-g{width:18px;height:18px;flex:none;display:block}
+.fs-acct-btn{display:inline-flex;align-items:center;gap:9px;height:40px;padding:0 10px 0 4px;border-radius:999px;color:var(--ink,#F4F4F6);font-size:14.5px;font-weight:500;white-space:nowrap;transition:background .2s}
+.fs-acct-btn:hover,.fs-acct-btn[aria-expanded="true"]{background:var(--line,rgba(255,255,255,.08))}
+.fs-acct-btn .fs-chev{width:12px;height:12px;color:var(--muted,#85858F);transition:transform .25s}
+.fs-acct-btn[aria-expanded="true"] .fs-chev{transform:rotate(180deg)}
+.fs-acct-name{max-width:120px;overflow:hidden;text-overflow:ellipsis}
+.fs-av{position:relative;width:32px;height:32px;border-radius:50%;flex:none;display:grid;place-items:center;overflow:hidden;background:linear-gradient(135deg,#FF6B71,#DB2930 70%);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.02em;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+.fs-av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.fs-av.lg{width:40px;height:40px;font-size:14px}
+.fs-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:160;width:min(288px,calc(100vw - 32px));padding:6px;border-radius:16px;background:#1C1C22;color:#F4F4F6;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 70px -24px rgba(0,0,0,.75);color-scheme:dark;transform-origin:top right;animation:fsPop .18s cubic-bezier(.2,.7,.2,1)}
+.fs-menu-who-txt{min-width:0}
+.fs-menu-who{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:center;padding:10px 10px 12px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:6px}
+.fs-menu-who-txt b{display:block;font-weight:600;font-size:15px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fs-menu-who-txt span{display:block;font-size:12.5px;color:#9B9BA6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.fs-menu a,.fs-menu button{display:flex;align-items:center;gap:12px;width:100%;min-height:42px;padding:0 10px;border-radius:10px;font-size:14.5px;font-weight:500;color:#DCDCE2;text-align:left;transition:background .15s,color .15s}
+.fs-menu a:hover,.fs-menu button:hover,.fs-menu a:focus-visible,.fs-menu button:focus-visible{background:rgba(255,255,255,.07);color:#fff;outline:none}
+.fs-menu svg{width:16px;height:16px;flex:none;color:#9B9BA6}
+.fs-menu hr{border:0;border-top:1px solid rgba(255,255,255,.08);margin:6px 0}
+.fs-menu .fs-out{color:#FF8A8F}
+.fs-menu .fs-out svg{color:currentColor}
+@keyframes fsPop{from{opacity:0;transform:translateY(-4px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:720px){
+  .fs-acct-name,.fs-acct-btn .fs-chev{display:none}
+  .fs-acct-btn{padding:0 4px;width:44px;height:44px;justify-content:center}
+  .fs-acct-in{height:40px;padding:0 13px 0 11px;font-size:14px;gap:8px}
+}
+
+/* ---------- Google sign-in button (dialogs) ---------- */
+.fs-gbtn{display:inline-flex;align-items:center;justify-content:center;gap:12px;height:46px;padding:0 22px;border-radius:999px;background:#fff;color:#1F1F1F;font-size:15px;font-weight:500;border:1px solid #DADCE0;white-space:nowrap;transition:background .2s,box-shadow .2s}
+.fs-gbtn:hover{background:#F8F9FA;box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.fs-gbtn .fs-g{width:18px;height:18px}
+
+/* ---------- Glossary terms in text ---------- */
+.gl-term{cursor:help;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-thickness:1.5px;text-underline-offset:.22em;text-decoration-color:color-mix(in srgb,var(--accent-ink,#FF6B71) 75%,transparent);border-radius:3px;transition:background-color .15s,text-decoration-color .15s;-webkit-tap-highlight-color:transparent}
+.gl-term:hover,.gl-term.gl-on{background-color:var(--accent-soft,rgba(219,41,48,.18));text-decoration-color:var(--accent-ink,#FF6B71)}
+.gl-term:focus-visible{outline:2px solid var(--accent,#DB2930);outline-offset:1px}
+[data-term]:not(.gl-term){cursor:help}
+
+/* ---------- Glossary tooltip (desktop popover / phone bottom sheet) ---------- */
+.gl-tip{position:fixed;left:0;top:0;z-index:180;width:min(340px,calc(100vw - 24px));color:#F4F4F6;color-scheme:dark;font-family:var(--sans,"IBM Plex Sans","Helvetica Neue",Arial,sans-serif);font-size:14px;line-height:1.45;letter-spacing:0;text-transform:none;font-weight:400;white-space:normal;text-align:left;opacity:0;visibility:hidden;transform:translateY(4px);transition:opacity .16s ease,transform .22s cubic-bezier(.2,.7,.2,1),visibility 0s linear .22s;pointer-events:none;outline:none}
+.gl-tip[data-side="bottom"]{transform:translateY(-4px)}
+.gl-tip.gl-show{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition-delay:0s}
+.gl-tip-in{position:relative;display:grid;gap:8px;padding:14px 16px 13px;border-radius:14px;background:#1E1E24;border:1px solid rgba(255,255,255,.13);box-shadow:0 24px 60px -18px rgba(0,0,0,.75),0 2px 8px -2px rgba(0,0,0,.4)}
+.gl-tip-arrow{position:absolute;left:var(--ax,50%);width:12px;height:12px;margin-left:-6px;background:#1E1E24;border:1px solid rgba(255,255,255,.13);transform:rotate(45deg);pointer-events:none}
+.gl-tip[data-side="top"] .gl-tip-arrow{bottom:-6px;border-top:0;border-left:0}
+.gl-tip[data-side="bottom"] .gl-tip-arrow{top:-6px;border-bottom:0;border-right:0}
+.gl-tip-top{display:flex;align-items:center;justify-content:space-between;gap:10px;min-width:0}
+.gl-tip-cat{font-family:var(--mono,"IBM Plex Mono",Menlo,monospace);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#8E8E9A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gl-tip-x{display:none;width:40px;height:40px;margin:-8px -10px -8px 0;border-radius:50%;place-items:center;color:#BDBDC6;flex:none}
+.gl-tip-x:hover{background:rgba(255,255,255,.08);color:#fff}
+.gl-tip-x svg{width:18px;height:18px}
+.gl-tip-head{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.gl-tip-term{font-size:16px;font-weight:600;letter-spacing:-.01em;line-height:1.25;color:#fff}
+.gl-tip-def{font-size:14px;line-height:1.5;color:#CFCFD8}
+.gl-tip-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:2px;padding-top:10px;border-top:1px solid rgba(255,255,255,.08)}
+.gl-tip-open{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;color:#FF8A8F;min-height:28px;border-radius:6px}
+.gl-tip-open:hover{color:#FFB3B6}
+.gl-tip-save{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px 0 10px;border-radius:999px;font-size:13px;font-weight:500;color:#DCDCE2;background:rgba(255,255,255,.07);transition:background .15s,color .15s}
+.gl-tip-save:hover{background:rgba(255,255,255,.13);color:#fff}
+.gl-tip-save svg{width:15px;height:15px;transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.gl-tip-save[aria-pressed="true"]{color:#FFD27A;background:rgba(255,210,122,.12)}
+.gl-tip-save[aria-pressed="true"] svg{fill:currentColor;transform:scale(1.08)}
+.gl-tip-def.gl-tip-load{height:12px;width:70%;border-radius:6px;background:rgba(255,255,255,.08)}
+/* level pills (also used by the Dictionary) */
+.gl-lvl{display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:999px;font-family:var(--mono,"IBM Plex Mono",Menlo,monospace);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:500;white-space:nowrap;flex:none}
+.gl-lvl.b{background:rgba(61,190,134,.16);color:#5ED3A0}
+.gl-lvl.i{background:rgba(120,150,255,.15);color:#A9BAFF}
+.gl-lvl.a{background:rgba(219,41,48,.2);color:#FF9AA0}
+.light .gl-lvl.b{background:#DDF3E8;color:#14764D}
+.light .gl-lvl.i{background:#E6EBFF;color:#3949A8}
+.light .gl-lvl.a{background:#FDE8E9;color:#B8202A}
+.gl-tip .gl-lvl.b{background:rgba(61,190,134,.16);color:#5ED3A0}
+.gl-tip .gl-lvl.i{background:rgba(120,150,255,.15);color:#A9BAFF}
+.gl-tip .gl-lvl.a{background:rgba(219,41,48,.2);color:#FF9AA0}
+/* light band: same dark card, a touch more shadow so it lifts off the white */
+.gl-tip.gl-on-light .gl-tip-in{box-shadow:0 24px 60px -16px rgba(20,20,22,.45),0 2px 10px -2px rgba(20,20,22,.25)}
+
+/* phone / touch: bottom sheet */
+.gl-scrim{position:fixed;inset:0;z-index:179;background:rgba(8,8,10,.42);opacity:0;transition:opacity .2s;-webkit-tap-highlight-color:transparent}
+.gl-scrim.gl-show{opacity:1}
+.gl-tip.gl-sheet{left:0;right:0;top:auto;bottom:0;width:auto;transform:translateY(24px)}
+.gl-tip.gl-sheet.gl-show{transform:none}
+.gl-tip.gl-sheet .gl-tip-in{border-radius:20px 20px 0 0;border-bottom:0;padding:10px 20px calc(18px + env(safe-area-inset-bottom,0px));gap:10px;max-width:640px;margin:0 auto;box-shadow:0 -20px 60px -20px rgba(0,0,0,.7)}
+.gl-tip.gl-sheet .gl-tip-in::before{content:"";justify-self:center;width:36px;height:4px;border-radius:2px;background:rgba(255,255,255,.2);margin-bottom:4px}
+.gl-tip.gl-sheet .gl-tip-arrow{display:none}
+.gl-tip.gl-sheet .gl-tip-x{display:grid}
+.gl-tip.gl-sheet .gl-tip-term{font-size:20px}
+.gl-tip.gl-sheet .gl-tip-def{font-size:16px;line-height:1.55}
+.gl-tip.gl-sheet .gl-tip-foot{padding-top:14px;gap:10px}
+.gl-tip.gl-sheet .gl-tip-open{height:44px;padding:0 18px;border-radius:999px;background:#DB2930;color:#fff;flex:1;justify-content:center;font-size:15px}
+.gl-tip.gl-sheet .gl-tip-save{height:44px;padding:0 16px;font-size:14.5px}
+
+/* ---------- Toast ---------- */
+.fs-toasts{position:fixed;left:16px;right:16px;bottom:calc(28px + env(safe-area-inset-bottom,0px));z-index:200;display:grid;justify-items:center;pointer-events:none}
+.fs-toast{display:inline-flex;align-items:center;gap:10px;max-width:min(560px,100%);padding:12px 18px;border-radius:999px;background:#F4F4F6;color:#141416;font-family:var(--sans,"IBM Plex Sans",Arial,sans-serif);font-size:14.5px;font-weight:500;line-height:1.35;box-shadow:0 14px 40px -12px rgba(0,0,0,.6);pointer-events:auto;opacity:0;transform:translateY(10px);transition:opacity .22s,transform .3s cubic-bezier(.2,.7,.2,1)}
+.fs-toast.fs-show{opacity:1;transform:none}
+.fs-toast i{width:8px;height:8px;border-radius:50%;background:#85858F;flex:none}
+.fs-toast.ok i{background:#14764D}
+.fs-toast.error i{background:#DB2930}
+@media(max-width:720px){.fs-toast{border-radius:16px;font-size:14px}}
+
+/* ---------- Modal base (Finspire.ui.modal) ---------- */
+html.fs-lock,html.fs-lock body{overflow:hidden}
+.fs-modal{position:fixed;inset:0;z-index:190;display:grid;place-items:center;padding:16px;background:rgba(8,8,10,.6);color-scheme:dark;opacity:0;transition:opacity .2s;overscroll-behavior:contain}
+.fs-modal.fs-show{opacity:1}
+.fs-modal-card{position:relative;width:min(460px,100%);max-height:min(88vh,760px);overflow:auto;display:grid;gap:14px;align-content:start;padding:28px 28px 24px;border-radius:20px;background:#18181D;color:#F4F4F6;border:1px solid rgba(255,255,255,.12);box-shadow:0 40px 100px -30px rgba(0,0,0,.9);font-family:var(--sans,"IBM Plex Sans",Arial,sans-serif);transform:translateY(10px) scale(.985);transition:transform .3s cubic-bezier(.2,.7,.2,1);outline:none}
+.fs-modal.fs-show .fs-modal-card{transform:none}
+.fs-modal-card.md{width:min(620px,100%)}
+.fs-modal-card.lg{width:min(920px,100%)}
+.fs-modal-x{position:absolute;right:12px;top:12px;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:#BDBDC6;transition:background .15s,color .15s}
+.fs-modal-x:hover{background:rgba(255,255,255,.08);color:#fff}
+.fs-modal-x svg{width:18px;height:18px}
+.fs-modal-title{font-size:22px;font-weight:600;letter-spacing:-.02em;line-height:1.25;padding-right:36px}
+.fs-modal-body{display:grid;gap:12px;font-size:15px;line-height:1.55;color:#C9C9D2}
+.fs-modal-body p{margin:0}
+.fs-modal-body b,.fs-modal-body strong{color:#F4F4F6;font-weight:600}
+.fs-modal-body code{font-family:var(--mono,"IBM Plex Mono",Menlo,monospace);font-size:13px;padding:1px 6px;border-radius:6px;background:rgba(255,255,255,.08);color:#F4F4F6}
+.fs-modal-acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.fs-modal-acts .fs-mbtn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;padding:0 20px;border-radius:999px;font-size:15px;font-weight:500;white-space:nowrap;background:rgba(255,255,255,.08);color:#F4F4F6;transition:background .2s}
+.fs-modal-acts .fs-mbtn:hover{background:rgba(255,255,255,.14)}
+.fs-modal-acts .fs-mbtn.primary{background:#DB2930;color:#fff}
+.fs-modal-acts .fs-mbtn.primary:hover{background:#EA3A42}
+.fs-modal-acts .fs-mbtn.ghost{background:transparent;border:1px solid rgba(255,255,255,.18)}
+.fs-modal-acts .fs-mbtn.ghost:hover{background:rgba(255,255,255,.06)}
+/* sign-in dialog */
+.fs-si-mark{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:#0F0F12;border:1px solid rgba(255,255,255,.1)}
+.fs-si-mark img{width:30px;height:auto}
+.fs-si-list{display:grid;gap:10px;margin:2px 0 0;padding:0;list-style:none}
+.fs-si-list li{display:grid;grid-template-columns:20px 1fr;gap:10px;font-size:14.5px;color:#C9C9D2}
+.fs-si-list li::before{content:"";width:16px;height:16px;margin-top:3px;border-radius:50%;background:rgba(61,190,134,.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235ED3A0' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center/10px no-repeat}
+.fs-si-note{font-size:13px;color:#8E8E9A}
+.fs-si-note b{color:#BDBDC6;font-weight:500}
+@media(max-width:720px){
+  .fs-modal{place-items:end stretch;padding:0}
+  .fs-modal-card,.fs-modal-card.md,.fs-modal-card.lg{width:100%;max-height:92vh;max-height:92svh;border-radius:20px 20px 0 0;border-bottom:0;padding:24px 20px calc(20px + env(safe-area-inset-bottom,0px));transform:translateY(28px)}
+  .fs-modal-title{font-size:20px}
+  .fs-modal-acts{flex-direction:column-reverse}
+  .fs-modal-acts .fs-mbtn,.fs-modal-acts .fs-gbtn{width:100%;height:48px}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .gl-tip,.gl-scrim,.fs-toast,.fs-modal,.fs-modal-card,.fs-menu{transition:none!important;animation:none!important}
+  .gl-tip.gl-sheet,.fs-modal-card{transform:none!important}
+}

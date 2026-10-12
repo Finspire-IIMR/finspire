@@ -1,0 +1,1026 @@
+[
+ {
+  "id": "acqui-hire",
+  "term": "Acqui-hire",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "acquihire",
+   "talent acquisition deal"
+  ],
+  "hl": [
+   "acqui-hire",
+   "acqui-hires",
+   "acquihire",
+   "acquihires",
+   "acqui-hiring",
+   "acqui-hired"
+  ],
+  "abbr": [],
+  "short": "Buying a small company mainly to hire its people, rather than for its product or sales, which are often shut down afterwards.",
+  "kid": "Sometimes a big team wants the clever kids from a small team. So it buys the small team's lemonade stand just to bring those kids over, and then closes the stand.",
+  "detail": "An acqui-hire is an acquisition where the buyer's real goal is the target's team, usually engineers, designers or researchers, not its revenue or customers. The startup's product is often wound down, and the price is judged per head rather than on earnings or cash flows. Big tech companies use acqui-hires to add scarce skills faster than normal recruiting allows; in AI, some recent deals have paired hiring a startup's founders with a licence to its technology instead of a full purchase. For founders and their VC investors, an acqui-hire is often a soft landing: investors may get back only part of their money, and much of the value can go to employees as joining and retention bonuses rather than to shareholders. The common confusion is calling every purchase of a small startup an acqui-hire; if the buyer keeps and grows the product, it is an ordinary acquisition.",
+  "example": "Say BigSoft Ltd pays ₹60 crore for XYZ Labs, a startup with 20 engineers and almost no revenue, and shuts down XYZ's app. The price works out to ₹3 crore per engineer, and if ₹20 crore of it is paid as retention bonuses to the team, only ₹40 crore reaches XYZ's shareholders.",
+  "formula": "",
+  "related": [
+   "Mergers and acquisitions",
+   "Venture capital",
+   "Exit",
+   "Trade sale",
+   "Startup"
+  ]
+ },
+ {
+  "id": "corporate-venture-capital",
+  "term": "Corporate venture capital",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "CVC",
+   "corporate VC"
+  ],
+  "hl": [
+   "corporate venture capital",
+   "corporate venture arm",
+   "corporate venture arms",
+   "corporate vc",
+   "corporate venture fund",
+   "corporate venture funds",
+   "corporate venturing"
+  ],
+  "abbr": [],
+  "short": "Startup investing done by an established company's own investment arm, using its own money, for strategic as well as financial gains.",
+  "kid": "A big toy shop gives some of its coins to a kid who is inventing a new toy. If the toy is a hit, the shop shares in it and may sell it too.",
+  "detail": "Corporate venture capital (CVC) is minority investing in startups by a non-financial company, usually through a dedicated venture arm. Unlike a classic VC fund, it typically invests the parent's own balance-sheet money rather than money raised from outside limited partners, and it has strategic aims: an early look at new technology, new customers or suppliers, and possible future acquisitions. Well-known global examples include Intel Capital, GV (from Alphabet) and Salesforce Ventures, and many Indian conglomerates and technology firms now run venture arms too. For a startup, a CVC can bring distribution, partnerships and credibility, but it may also put off rival buyers or the parent's competitors as customers. CVC units also tend to cut back when the parent's profits fall. Do not confuse the abbreviation with CVC Capital Partners, which is a large independent private equity firm, not a corporate venture arm.",
+  "example": "Say ABC Motors' venture arm invests ₹25 crore for a 10% stake in a battery startup, valuing the startup at ₹250 crore after the investment. Alongside the cheque, ABC signs a pilot to test the startup's batteries in its scooters, which is the strategic part of the deal.",
+  "formula": "",
+  "related": [
+   "Venture capital",
+   "Strategic investor",
+   "Limited partner",
+   "Acqui-hire",
+   "Minority stake"
+  ]
+ },
+ {
+  "id": "limited-partner",
+  "term": "Limited partner",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "LP",
+   "LPs",
+   "fund investor"
+  ],
+  "hl": [
+   "limited partner",
+   "limited partners"
+  ],
+  "abbr": [
+   "LPs"
+  ],
+  "short": "An investor, such as a pension fund, that puts money into a private equity or venture capital fund but does not run it.",
+  "kid": "Some grown-ups give their coins to a trusted friend who is good at picking lemonade stands to help. Then they wait and share whatever those stands earn.",
+  "detail": "A limited partner (LP) is an investor in a private fund set up as a limited partnership. Typical LPs are pension funds, insurers, university endowments, sovereign wealth funds, funds of funds, family offices and wealthy individuals. LPs commit a sum up front, pay cash in when the general partner issues capital calls, and receive distributions when investments are sold. Their liability is limited to what they committed, and in return they stay passive: they do not choose deals. They negotiate fees, carry and governance in the limited partnership agreement and often sit on an advisory committee. In India most PE and VC funds are SEBI-registered alternative investment funds, often set up as trusts, where investors are often called contributors, though the industry still says LPs; SIDBI's Fund of Funds for Startups is a major domestic LP. Do not confuse an LP with a shareholder in the fund management firm itself.",
+  "example": "Say a pension fund commits $50 million to a $500 million buyout fund. It is an LP holding 10% of the fund's commitments, and the most it can lose is the $50 million it promised.",
+  "formula": "",
+  "related": [
+   "General partner",
+   "Committed capital",
+   "Capital call",
+   "Alternative investment fund",
+   "Fund of funds",
+   "Limited partnership agreement"
+  ]
+ },
+ {
+  "id": "general-partner",
+  "term": "General partner",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "GP",
+   "GPs",
+   "fund manager"
+  ],
+  "hl": [
+   "general partner",
+   "general partners",
+   "gp commitment",
+   "gp commit"
+  ],
+  "abbr": [],
+  "short": "The firm or team that raises, runs and makes the investment decisions for a private equity or venture capital fund.",
+  "kid": "The general partner is the friend who collects everyone's coins and picks which lemonade stands to help. If the stands do well, that friend gets a small extra reward.",
+  "detail": "The general partner (GP) manages a private fund: it raises money from limited partners, picks and negotiates deals, sits on portfolio company boards and decides when to exit. In the classic limited partnership the GP has unlimited liability, usually ring-fenced through a separate company. GPs earn a management fee to cover running costs and carried interest, a share of profits, and usually invest some of their own money in the fund, often around 1% to 2% of its size, so their interests line up with LPs. In news, GP often means the whole firm, such as a named PE house. In India's AIF framework the matching roles are the sponsor and the investment manager, and under SEBI rules as of 2025 the sponsor or manager must keep some of its own money in the fund. Do not confuse a GP with a mutual fund manager.",
+  "example": "Say XYZ Partners raises a $300 million fund and commits 2% of it, $6 million, from its own partners. As GP it earns a 2% management fee of $6 million a year, plus 20% of the fund's profits once LPs have their money back and any hurdle is met.",
+  "formula": "",
+  "related": [
+   "Limited partner",
+   "Management fee",
+   "Carried interest",
+   "Two and twenty",
+   "Private equity",
+   "Alternative investment fund"
+  ]
+ },
+ {
+  "id": "committed-capital",
+  "term": "Committed capital",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "capital commitment",
+   "fund size"
+  ],
+  "hl": [
+   "committed capital",
+   "unfunded commitment",
+   "unfunded commitments"
+  ],
+  "abbr": [],
+  "short": "The total money investors have legally promised to a private fund, which the manager collects in instalments as it finds investments.",
+  "kid": "Your friends each promise ten coins for a treehouse. They don't hand them all over today; they give some each time the builder needs more wood.",
+  "detail": "Committed capital is the sum of all limited partners' binding pledges to a private equity or venture capital fund, and it is the fund size quoted in news, as in a $1 billion fund. The money is not paid on day one. The GP draws it down through capital calls over the investment period, typically the first three to six years, as deals, fees and expenses come due. The part not yet called is each LP's unfunded commitment, which LPs must keep ready. Committed capital matters because management fees are often charged on it during the investment period, and because it caps how much the fund can invest. Indian AIFs report commitments raised separately from amounts actually invested. The common confusion is to treat committed capital as money already invested or sitting in the fund's bank account; paid-in capital and dry powder show those separately.",
+  "example": "Say a ₹500 crore fund has called ₹300 crore by its third year, leaving ₹200 crore uncalled. An LP that committed ₹20 crore (4% of the fund) has paid in ₹12 crore so far and still owes up to ₹8 crore when called.",
+  "formula": "Unfunded commitment = Committed capital - Capital called to date",
+  "related": [
+   "Capital call",
+   "Limited partner",
+   "Dry powder",
+   "Management fee",
+   "Paid-in capital"
+  ]
+ },
+ {
+  "id": "capital-call",
+  "term": "Capital call",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "capital drawdown",
+   "drawdown notice"
+  ],
+  "hl": [
+   "capital call",
+   "capital calls",
+   "drawdown notice",
+   "drawdown notices",
+   "capital drawdown",
+   "capital drawdowns"
+  ],
+  "abbr": [],
+  "short": "A formal notice from a private fund's manager asking its investors to pay in part of the money they promised, by a set date.",
+  "kid": "Friends promised coins for a treehouse. When the builder needs more wood, he knocks on each door and asks for the next few coins.",
+  "detail": "A capital call, or drawdown notice, is how a GP collects committed capital from limited partners. When the fund needs cash for a new investment, fees or expenses, it sends each LP a notice stating the amount, its purpose and a deadline, often around ten business days. Each LP pays its proportionate share. Missing a call is serious: the limited partnership agreement can impose penalties, including forfeiting part of the LP's stake. Calls let LPs keep money working elsewhere until it is needed, but they must hold enough liquidity to meet them, which can strain LPs when calls come quickly and distributions are slow. Many funds use short-term subscription credit lines to delay calls, which can flatter reported IRR. A common confusion is to think a capital call asks investors for new money beyond their commitment; it only collects money already promised.",
+  "example": "Say an LP committed ₹10 crore to a fund and has not yet been called. The GP calls 15% to fund a new deal, so the LP must pay ₹1.5 crore by the deadline, and its remaining unfunded commitment falls to ₹8.5 crore.",
+  "formula": "Amount due from an LP = Call percentage x LP's committed capital",
+  "related": [
+   "Committed capital",
+   "Limited partner",
+   "General partner",
+   "Dry powder",
+   "Internal rate of return"
+  ]
+ },
+ {
+  "id": "management-fee",
+  "term": "Management fee",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "management fees"
+  ],
+  "hl": [
+   "management fee",
+   "management fees"
+  ],
+  "abbr": [],
+  "short": "The yearly fee investors pay a fund's manager to cover salaries, deal research and running costs, charged whether or not the fund makes money.",
+  "kid": "You give a friend a few sweets every year for looking after your toy box. You pay for the looking after, even before any new toys arrive.",
+  "detail": "In private equity and venture capital, the management fee is an annual charge paid by limited partners to the GP, typically around 1.5% to 2% a year. During the investment period it is usually charged on committed capital; afterwards it often steps down or switches to invested capital, so it shrinks as companies are sold. The fee pays for the team, offices, due diligence and portfolio monitoring, and is meant to cover costs rather than reward performance, which is the job of carried interest. Very large funds can earn big fee income simply from their size, which is why LPs push for discounts and offsets, such as crediting deal or monitoring fees that portfolio companies pay the GP. Indian AIFs use similar structures. Do not confuse it with a mutual fund's expense ratio, which is charged on the fund's daily net assets rather than on promised capital.",
+  "example": "Say a $400 million fund charges 2% on committed capital during its five-year investment period: $8 million a year, or $40 million in total. If the fee then steps down to 1.5% of the $300 million still invested, the next year's fee is $4.5 million.",
+  "formula": "Annual management fee = Fee rate x Fee base (committed capital in the investment period, often invested capital afterwards)",
+  "related": [
+   "Carried interest",
+   "Two and twenty",
+   "General partner",
+   "Committed capital",
+   "Expense ratio"
+  ]
+ },
+ {
+  "id": "carried-interest",
+  "term": "Carried interest",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "carry"
+  ],
+  "hl": [
+   "carried interest",
+   "carried interest tax",
+   "carried interest loophole"
+  ],
+  "abbr": [],
+  "short": "The share of a fund's profits, usually 20%, that the fund's managers keep as their performance reward once investors get their money back.",
+  "kid": "If the friend who picks lemonade stands helps everyone get extra coins, she keeps a small part of the extra as a thank-you. If there is no extra, she gets none.",
+  "detail": "Carried interest, or carry, is the GP's share of a private fund's profits, traditionally 20%. It is paid only after LPs have received back their contributed capital and usually a preferred return (the hurdle), following the order set out in the distribution waterfall. Because it depends on gains, carry ties the manager's pay to performance, unlike the management fee. In a successful fund, carry can be worth far more than salaries. Funds often include a clawback, so if early payouts later prove too large, the GP must return the excess. Tax treatment is contested: in the US carry has generally been taxed at capital-gains rates, which critics call a loophole, and in India the tax treatment of carry for AIF managers has also been debated. The name is often traced to ship captains who took a share of the profit on cargo they carried.",
+  "example": "Say a fund invests $100 million of LP money and eventually returns $250 million, a profit of $150 million. With 20% carry, the GP receives $30 million and the LPs receive $220 million.",
+  "formula": "Carried interest = Carry rate x Profits eligible under the waterfall (with a full catch-up, 20% x (Total distributions - Paid-in capital))",
+  "related": [
+   "Two and twenty",
+   "Hurdle rate",
+   "Distribution waterfall",
+   "Management fee",
+   "General partner",
+   "Clawback"
+  ]
+ },
+ {
+  "id": "two-and-twenty",
+  "term": "Two and twenty",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "2 and 20",
+   "2/20",
+   "two-and-twenty"
+  ],
+  "hl": [
+   "two and twenty",
+   "two-and-twenty",
+   "2 and 20",
+   "2-and-20"
+  ],
+  "abbr": [],
+  "short": "The classic fee deal for private equity and hedge funds: a 2% yearly management fee plus 20% of the profits.",
+  "kid": "The helper gets two sweets every year for looking after the jar. If the jar grows extra sweets, the helper also gets one out of every five extra ones.",
+  "detail": "Two and twenty is shorthand for the standard pay of alternative fund managers: a management fee of about 2% a year, and carried interest (in hedge funds, a performance fee) of 20% of profits. The 2% is earned whatever the results, while the 20% depends on gains, usually above a hurdle in private equity or above a high-water mark in hedge funds. Critics argue that, at scale, the fixed fee alone can make managers rich. Today it is a reference point rather than a rule: very large buyout funds often charge 1.5% or less, some top venture capital firms charge 25% to 30% carry, and many hedge funds have cut fees. Indian AIFs use variants of the same structure. The common confusion is to think investors pay 22% in total; the 2% is charged on capital and the 20% on profits, two different bases.",
+  "example": "Say a $200 million fund on two and twenty earns a $4 million management fee each year. If over its life it makes $100 million of profit, the GP also takes $20 million of carry.",
+  "formula": "Manager pay = 2% x Fee base each year + 20% x Profits (after any hurdle)",
+  "related": [
+   "Management fee",
+   "Carried interest",
+   "Hurdle rate",
+   "High-water mark",
+   "Hedge fund",
+   "General partner"
+  ]
+ },
+ {
+  "id": "hurdle-rate",
+  "term": "Hurdle rate",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "preferred return",
+   "pref"
+  ],
+  "hl": [
+   "hurdle rate",
+   "hurdle rates",
+   "preferred return",
+   "preferred returns"
+  ],
+  "abbr": [],
+  "short": "The minimum return an investment must earn to be worthwhile; in private equity, the yearly return investors get before managers earn any profit share.",
+  "kid": "Before the helper gets any extra sweets, everyone else must first get their own sweets back plus a few more. Only then does the helper share the rest.",
+  "detail": "In private equity and venture capital, the hurdle rate, or preferred return, is the minimum annual return, commonly 8% compounded in US-dollar funds, that LPs must receive on paid-in capital before the GP earns carried interest. With a soft hurdle and a catch-up, once the hurdle is cleared the GP takes a larger share until it has caught up to its full 20% of all profits; with a hard hurdle, carry is earned only on profits above the hurdle. Rupee-denominated Indian AIFs often set a higher hurdle, reflecting higher rupee interest rates. In corporate finance the phrase means something related: the minimum return a project must earn, usually the cost of capital plus a cushion, before it is approved. The common confusion is to treat a hurdle as a promised return; it only sets the order of payouts, and LPs get nothing extra if the fund fails to earn it.",
+  "example": "Say LPs pay in $100 million to a fund with an 8% compounding hurdle and no distributions for five years. Before the GP takes any carry, LPs must receive $100 million x 1.08^5, about $146.9 million.",
+  "formula": "Hurdle amount = Paid-in capital x (1 + Hurdle rate)^Years (ignoring interim distributions)",
+  "related": [
+   "Carried interest",
+   "Distribution waterfall",
+   "Required rate of return",
+   "Cost of capital",
+   "Internal rate of return",
+   "Two and twenty"
+  ]
+ },
+ {
+  "id": "distribution-waterfall",
+  "term": "Distribution waterfall",
+  "cat": "pe-vc",
+  "level": "a",
+  "aliases": [
+   "waterfall",
+   "European waterfall",
+   "American waterfall",
+   "catch-up"
+  ],
+  "hl": [
+   "distribution waterfall",
+   "distribution waterfalls",
+   "european waterfall",
+   "american waterfall",
+   "gp catch-up",
+   "deal-by-deal waterfall",
+   "whole-of-fund waterfall"
+  ],
+  "abbr": [],
+  "short": "The agreed order in which a private fund's cash from sold investments is split between its investors and its managers.",
+  "kid": "When the jar of sweets is opened, the friends who put sweets in get theirs back first. Then they get a few extra, and only after that does the helper share the rest.",
+  "detail": "A distribution waterfall, set out in the limited partnership agreement, decides who gets each rupee a fund pays out. A typical version has four tiers: return of LPs' contributed capital; the preferred return (hurdle); a GP catch-up, where most or all cash goes to the GP until it holds its agreed share of profits; and then a split, usually 80/20, between LPs and GP. In a European, or whole-of-fund, waterfall the GP earns carry only after LPs have got back all their capital and pref across the entire fund, which favours LPs. In an American, or deal-by-deal, waterfall carry is paid as each investment is sold, so the GP is paid earlier but needs a clawback in case later deals lose money. Institutional LPs generally prefer the European model. The common confusion is assuming the GP simply takes 20% of every payout; early payouts go almost entirely to LPs.",
+  "example": "Say LPs paid in $100 million, the fund returns $200 million and the 8% pref is worth $20 million over its life. Under a European waterfall, LPs first get $100 million back and then the $20 million pref; the GP takes a 100% catch-up of $5 million, and the last $75 million splits 80/20, $60 million to LPs and $15 million to the GP. The GP ends with $20 million, exactly 20% of the $100 million profit, and LPs get $180 million.",
+  "formula": "",
+  "related": [
+   "Carried interest",
+   "Hurdle rate",
+   "Clawback",
+   "Limited partner",
+   "General partner",
+   "Two and twenty"
+  ]
+ },
+ {
+  "id": "vintage-year",
+  "term": "Vintage year",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "vintage",
+   "fund vintage"
+  ],
+  "hl": [
+   "vintage year",
+   "vintage years",
+   "fund vintage"
+  ],
+  "abbr": [],
+  "short": "The year a private equity or venture capital fund starts investing, used to compare it fairly with funds that began at the same time.",
+  "kid": "If you plant a seed this spring, you compare its height with other plants from this spring, not ones planted years ago. That planting year is its vintage.",
+  "detail": "A fund's vintage year is usually the year it makes its first investment or first capital call, though some databases use the year of its first close. Because PE and VC funds invest over several years and returns depend heavily on the prices paid and the exit climate, funds are benchmarked against peers of the same vintage rather than against funds of every age. Funds that invested near a market peak, when valuations were high, often show weaker returns than funds that bought during downturns. Young funds also sit low on the J-curve, so comparing a recent fund with an eight-year-old fund on TVPI or IRR is unfair. LPs build vintage-year diversification by committing steadily every year instead of trying to time the market. The term borrows from wine, where the vintage is the year the grapes were harvested. Do not confuse it with a fund's final close.",
+  "example": "Say Fund A (2017 vintage) has a TVPI of 2.0x and Fund B (2021 vintage) has 1.3x. If the median 2021-vintage fund in the LP's benchmark is at 1.1x, Fund B is beating its peers by 0.2x even though it trails the older Fund A.",
+  "formula": "",
+  "related": [
+   "J-curve",
+   "Total value to paid-in capital",
+   "Internal rate of return",
+   "Committed capital",
+   "Capital call"
+  ]
+ },
+ {
+  "id": "dry-powder",
+  "term": "Dry powder",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "uninvested capital"
+  ],
+  "hl": [
+   "dry powder",
+   "uninvested capital"
+  ],
+  "abbr": [],
+  "short": "Money that private equity and venture capital funds have raised from investors but not yet invested, ready for future deals.",
+  "kid": "It's like coins you have already saved in your piggy bank but haven't spent yet. They're ready whenever you find the perfect toy.",
+  "detail": "Dry powder is committed capital in private funds that has not yet been called and put into investments. The phrase comes from soldiers keeping gunpowder dry so it is ready when needed. Industry trackers publish dry powder totals for buyout, venture, private credit and infrastructure funds, and the numbers shape expectations: plenty of dry powder means many buyers chasing deals, which can push up valuations, and it supports take-privates and bolt-on deals when public prices fall. It also creates pressure, because funds usually must invest within a set investment period and charge fees on committed capital, so idle money drags on returns. Indian news often cites unspent PE and VC money as a sign that a funding winter may ease. The common confusion is to treat dry powder as cash already sitting in the fund; most of it stays with LPs until a capital call.",
+  "example": "Say a ₹800 crore fund has invested ₹500 crore so far. Its dry powder is ₹800 crore - ₹500 crore = ₹300 crore, most of which its LPs still hold until the GP calls it for new deals.",
+  "formula": "Dry powder = Committed capital - Capital already invested",
+  "related": [
+   "Committed capital",
+   "Capital call",
+   "Funding winter",
+   "Limited partner",
+   "Private equity"
+  ]
+ },
+ {
+  "id": "j-curve",
+  "term": "J-curve",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "J curve effect"
+  ],
+  "hl": [
+   "private equity j-curve",
+   "pe j-curve",
+   "fund j-curve"
+  ],
+  "abbr": [],
+  "short": "The typical pattern where a private fund shows losses in its early years, then rising returns later as its investments grow and are sold.",
+  "kid": "When you plant a seed, you first spend on soil and water and see nothing. Later the plant grows big and gives you more than you put in.",
+  "detail": "In private equity and venture capital, the J-curve describes how a fund's returns, and an LP's cumulative cash flows, dip below zero early and then climb. In the first years the fund calls capital for fees, costs and new deals while investments are held at or near cost, and early failures are written down quickly, so interim IRR is negative. As portfolio companies grow, are revalued upward and are finally sold, distributions arrive and the line turns sharply up, tracing a J. The depth and length of the dip matter to LPs planning their cash, and tools such as subscription credit lines can make the curve look shallower without changing the underlying economics. Judging a fund in its first two or three years can therefore mislead. Do not confuse this with the J-curve in trade economics, where a currency fall first worsens and then improves a country's trade balance.",
+  "example": "Say an LP commits ₹100 crore and pays in ₹25 crore a year for four years with no distributions, so its cumulative cash flow sits at -₹100 crore. If it then receives ₹45 crore a year in years five to eight, the cumulative figure moves to -₹55 crore, -₹10 crore, +₹35 crore and +₹80 crore.",
+  "formula": "",
+  "related": [
+   "Vintage year",
+   "Capital call",
+   "Internal rate of return",
+   "Distributions to paid-in capital",
+   "Limited partner"
+  ]
+ },
+ {
+  "id": "distributions-to-paid-in-capital",
+  "term": "Distributions to paid-in capital",
+  "cat": "pe-vc",
+  "level": "a",
+  "aliases": [
+   "DPI",
+   "realisation multiple"
+  ],
+  "hl": [
+   "distributions to paid-in capital",
+   "distributions to paid-in",
+   "distributed to paid-in capital"
+  ],
+  "abbr": [],
+  "short": "A fund's actual cash returned to investors so far, divided by the money they have paid in; it shows realised, not paper, returns.",
+  "kid": "You lent your friend ten marbles. If she has given you back five so far, you have half of them home in your hand.",
+  "detail": "DPI, or the realisation multiple, measures how much cash a private fund has actually handed back to its LPs relative to what they have paid in, after fees and carry. A DPI of 0.5x means LPs have received half their money back; 1.0x means they have broken even in cash terms; anything above that is realised profit. DPI starts at zero and rises only when investments are sold or pay out, so it is low for young funds even when they are doing well. It became a headline metric after 2022, when slower IPOs and M&A left many funds with strong paper gains but little cash returned, summed up in the industry line that DPI is the new IRR. Indian VC funds face the same scrutiny. The common confusion is mixing DPI with TVPI: TVPI adds the estimated value of unsold holdings, while DPI counts only cash received.",
+  "example": "Say an LP has paid ₹50 crore into a fund and has so far received ₹35 crore in distributions. Its DPI is 35 / 50 = 0.7x, so it needs another ₹15 crore back just to break even in cash.",
+  "formula": "DPI = Cumulative distributions / Paid-in capital",
+  "related": [
+   "Total value to paid-in capital",
+   "Multiple on invested capital",
+   "Internal rate of return",
+   "J-curve",
+   "Residual value to paid-in capital"
+  ]
+ },
+ {
+  "id": "total-value-to-paid-in-capital",
+  "term": "Total value to paid-in capital",
+  "cat": "pe-vc",
+  "level": "a",
+  "aliases": [
+   "TVPI",
+   "investment multiple"
+  ],
+  "hl": [
+   "total value to paid-in capital",
+   "total value to paid-in"
+  ],
+  "abbr": [
+   "TVPI"
+  ],
+  "short": "A private fund's cash already returned plus the estimated value of what it still holds, divided by the money investors paid in.",
+  "kid": "You gave your friend ten marbles. She has given back four and is still keeping eight that are yours, so altogether you now have twelve.",
+  "detail": "TVPI, also called the investment multiple, is the main snapshot of how a private fund is doing for its LPs. It adds cumulative distributions to the fund's residual value, the current net asset value of unsold investments, and divides by paid-in capital. It is usually reported net of fees and carry, so it reflects what LPs actually earn. TVPI splits into DPI, the realised part, and RVPI (residual value to paid-in), the unrealised part. A TVPI of 1.8x means each rupee or dollar paid in is now worth 1.8, but if most of that is RVPI, the figure rests on the GP's own valuations, which may not hold at exit. TVPI also ignores time, so funds are judged alongside IRR and against peers of the same vintage. The common confusion is equating TVPI with MOIC, which is usually measured per deal and before fees.",
+  "example": "Say an LP has paid in ₹50 crore, received ₹35 crore back, and its share of the fund's unsold holdings is valued at ₹55 crore. TVPI is (35 + 55) / 50 = 1.8x, made up of DPI of 0.7x and RVPI of 1.1x.",
+  "formula": "TVPI = (Cumulative distributions + Residual value) / Paid-in capital = DPI + RVPI",
+  "related": [
+   "Distributions to paid-in capital",
+   "Multiple on invested capital",
+   "Net asset value",
+   "Internal rate of return",
+   "Vintage year"
+  ]
+ },
+ {
+  "id": "multiple-on-invested-capital",
+  "term": "Multiple on invested capital",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "MOIC",
+   "money multiple",
+   "cash-on-cash multiple"
+  ],
+  "hl": [
+   "multiple on invested capital",
+   "multiple of invested capital",
+   "money multiple",
+   "cash-on-cash multiple"
+  ],
+  "abbr": [
+   "MOIC"
+  ],
+  "short": "How many times an investment's money has grown: the total value returned or still held, divided by the amount originally invested.",
+  "kid": "If you put in two marbles and later get six back, you got three times what you started with.",
+  "detail": "MOIC, the multiple on invested capital, is the simplest return measure in private equity and venture capital. It divides the total value of an investment, realised proceeds plus the current value of anything still held, by the capital invested. A 3.0x MOIC means every rupee became three. It is usually calculated gross, for a single deal or a portfolio, before the fund's fees and carry, which makes it different from TVPI, the LP's net fund-level multiple. MOIC's big weakness is that it ignores time: 3.0x in five years is excellent, while 3.0x in ten years is ordinary. That is why PE firms quote MOIC together with IRR, and why some managers sell early to lock in a high IRR while others hold longer to grow MOIC. In LBO models, a target of around 2.5x to 3.0x over about five years is a common rule of thumb.",
+  "example": "Say a PE fund invests $40 million in a company and sells it for $120 million after five years. Its MOIC is 120 / 40 = 3.0x, an IRR of about 24.6% a year, but the same 3.0x over ten years would be an IRR of only about 11.6%.",
+  "formula": "MOIC = (Realised value + Unrealised value) / Invested capital",
+  "related": [
+   "Internal rate of return",
+   "Total value to paid-in capital",
+   "Distributions to paid-in capital",
+   "Leveraged buyout",
+   "LBO model"
+  ]
+ },
+ {
+  "id": "portfolio-company",
+  "term": "Portfolio company",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "portco",
+   "investee company"
+  ],
+  "hl": [
+   "portfolio company",
+   "portfolio companies",
+   "portco",
+   "portcos",
+   "investee company",
+   "investee companies"
+  ],
+  "abbr": [],
+  "short": "A company that a private equity or venture capital fund has invested in and holds as one of its investments.",
+  "kid": "If you use your coins to help ten friends start lemonade stands, each of those stands is one of your stands.",
+  "detail": "A portfolio company, or portco, is any business in which a PE or VC fund holds a stake. A fund's returns are simply the sum of what happens to its portfolio companies, so GPs spend much of their time on them: taking board seats, hiring executives, setting budgets, arranging follow-on funding, pursuing bolt-on acquisitions and eventually planning an exit. Buyout funds usually own a few large portfolio companies with control, while venture funds hold minority stakes in many startups, expecting most of their returns from a handful of winners. Portfolio companies report regularly to the fund, which values them each quarter for its LPs. Indian AIF regulations use the phrase investee company for the same idea. The common confusion is to think a portfolio company manages investments; it is an ordinary operating business that happens to be owned, in part or in full, by a fund.",
+  "example": "Say XYZ Ventures has ₹400 crore to invest and backs 25 startups with an average cheque of ₹16 crore. Each of the 25 is a portfolio company, and if three of them later return ₹1,200 crore between them, those three alone give the fund three times the ₹400 crore it invested.",
+  "formula": "",
+  "related": [
+   "Private equity",
+   "Venture capital",
+   "General partner",
+   "Bolt-on acquisition",
+   "Exit"
+  ]
+ },
+ {
+  "id": "co-investment",
+  "term": "Co-investment",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "co-invest",
+   "co-investor"
+  ],
+  "hl": [
+   "co-investment",
+   "co-investments",
+   "co-investor",
+   "co-investors",
+   "co-invest",
+   "co-invests",
+   "co-investing"
+  ],
+  "abbr": [],
+  "short": "When a fund's investors put extra money directly into a specific deal alongside the fund, usually paying lower or no fees on it.",
+  "kid": "Your friend is buying a big box of toys for the group. You add a few of your own coins straight into that one box, so you get more toys from it.",
+  "detail": "A co-investment is a minority stake taken directly in a particular company by an LP or another investor, side by side with a PE fund that leads the deal. GPs offer co-investments when a deal is too large for the fund alone, often because the limited partnership agreement caps how much of the fund can go into one company. For LPs, the attraction is extra exposure to a chosen deal with little or no management fee or carry, which lowers their average cost of private equity. The trade-offs are that co-investors must decide quickly, may be offered weaker deals and take on concentrated risk. Sovereign wealth and pension funds are among the most active co-investors, including in Indian deals. In startup news, co-investor is often used loosely for any fellow investor in the same round; strictly, a co-investment sits alongside a lead fund whose GP usually runs the deal.",
+  "example": "Say a buyout fund wants to buy ABC Ltd with $500 million of equity but can put in at most $300 million. Its LPs co-invest the other $200 million with no fees or carry, saving the $4 million a year that a 2% fee on that sum would have cost.",
+  "formula": "",
+  "related": [
+   "Limited partner",
+   "General partner",
+   "Management fee",
+   "Carried interest",
+   "Buyout"
+  ]
+ },
+ {
+  "id": "buyout",
+  "term": "Buyout",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "buyout fund",
+   "buyout deal"
+  ],
+  "hl": [
+   "buyout fund",
+   "buyout funds",
+   "buyout firm",
+   "buyout firms",
+   "buyout group",
+   "buyout groups",
+   "buyout deal",
+   "buyout deals"
+  ],
+  "abbr": [],
+  "short": "A deal in which an investor, usually a private equity fund, buys a controlling stake in a company, often all of it.",
+  "kid": "Someone buys the whole lemonade stand, not just a cup of lemonade, so now they decide how it is run.",
+  "detail": "In private equity, a buyout is the purchase of control of a mature business, typically more than 50% and often 100%, by a buyout fund. With control, the fund can change management, strategy, costs and capital structure, aiming to sell at a higher value within about three to seven years. Most buyouts use a large amount of borrowed money, making them leveraged buyouts; other forms include management buyouts, take-privates of listed companies and secondary buyouts, where one PE fund buys from another. In India, PE investing was long dominated by minority growth deals, but control buyouts have become a much bigger share of activity. The common confusion is with venture capital: VC takes minority stakes in young startups, while buyouts take control of established, cash-generating companies. In general news, buyout can also mean a payment offered to employees to leave, which is unrelated.",
+  "example": "Say a buyout fund buys 75% of ABC Ltd for ₹750 crore, valuing the whole company at ₹1,000 crore. With control, it appoints a new CEO and four of the seven board members, and plans to sell its stake in about five years.",
+  "formula": "",
+  "related": [
+   "Leveraged buyout",
+   "Management buyout",
+   "Take-private",
+   "Private equity",
+   "Growth equity",
+   "Exit"
+  ]
+ },
+ {
+  "id": "leveraged-buyout",
+  "term": "Leveraged buyout",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "LBO",
+   "leveraged buy-out"
+  ],
+  "hl": [
+   "leveraged buyout",
+   "leveraged buyouts",
+   "leveraged buy-out",
+   "leveraged buy-outs"
+  ],
+  "abbr": [
+   "LBO",
+   "LBOs"
+  ],
+  "short": "Buying a company mainly with borrowed money, where the debt is later repaid from the bought company's own cash flows.",
+  "kid": "You want a bigger lemonade stand, so you borrow most of the coins. The stand's own sales slowly pay the coins back, and in the end the stand is mostly yours.",
+  "detail": "A leveraged buyout (LBO) is an acquisition, usually by a PE fund, financed with a large proportion of debt, often 50% to 70% of the price, and a smaller slice of equity. The debt sits on the acquired company and is repaid from its cash flows, so steady cash generation matters. Returns come from growing earnings, selling at a higher multiple, and paying down debt, which lifts the owners' equity even if the company's value stays flat. Leverage magnifies gains and losses and raises default risk if earnings fall. KKR's takeover of RJR Nabisco, agreed in 1988, is the best-known LBO. Indian banks long faced tight RBI limits on funding share purchases, eased only for some corporate acquisitions from late 2025, so Indian buyouts often use NBFC, private-credit or offshore debt. The common confusion is to think the PE firm itself owes the debt; usually the acquired company does.",
+  "example": "Say a fund buys ABC Ltd for ₹1,000 crore using ₹400 crore of equity and ₹600 crore of debt. If ABC's cash flows, after interest, repay ₹300 crore of debt over five years and the company is sold for the same ₹1,000 crore, the equity is worth ₹1,000 crore - ₹300 crore = ₹700 crore, a 1.75x MOIC from debt paydown alone.",
+  "formula": "Equity value at exit = Exit enterprise value - Net debt at exit; MOIC = Equity value at exit / Equity invested",
+  "related": [
+   "Buyout",
+   "LBO model",
+   "Multiple on invested capital",
+   "Dividend recapitalisation",
+   "Private equity",
+   "Enterprise value"
+  ]
+ },
+ {
+  "id": "management-buyout",
+  "term": "Management buyout",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "MBO"
+  ],
+  "hl": [
+   "management buyout",
+   "management buyouts",
+   "management buy-out",
+   "management buy-outs"
+  ],
+  "abbr": [
+   "MBO",
+   "MBOs"
+  ],
+  "short": "A deal where a company's existing managers buy the business, or a large part of it, usually with help from lenders and private equity.",
+  "kid": "The kids who already run the lemonade stand save up and borrow coins so they can buy it from its owner and make it their own.",
+  "detail": "In a management buyout (MBO), the people already running a company or division buy control of it from its owners, such as a parent group selling a non-core unit or a founder without a successor. Managers rarely have enough money, so they team up with a private equity fund and lenders, usually taking a meaningful slice of the equity to keep them committed. The appeal is continuity: the buyers already know the business, its customers and its staff. The risk is a conflict of interest, because managers know more about the company than the seller, so boards usually seek independent valuations and competing bids. A management buy-in (MBI) is the mirror image, where an outside team buys in and takes over. Michael Dell's 2013 deal with Silver Lake to take Dell private is often cited as a large MBO. In India, MBOs appear mainly in carve-outs and family-business succession.",
+  "example": "Say ABC Group sells its packaging division to the division's managers for ₹200 crore. The managers put in ₹20 crore, a PE fund adds ₹80 crore and lenders provide ₹100 crore of debt, so the managers own 20% of the ₹100 crore of equity and the fund owns 80%.",
+  "formula": "",
+  "related": [
+   "Leveraged buyout",
+   "Buyout",
+   "Private equity",
+   "Carve-out",
+   "Take-private"
+  ]
+ },
+ {
+  "id": "take-private",
+  "term": "Take-private",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "take private",
+   "public-to-private deal",
+   "go-private deal"
+  ],
+  "hl": [
+   "take-private",
+   "take-private deal",
+   "take-private deals",
+   "take-private offer",
+   "go-private",
+   "go-private deal",
+   "public-to-private"
+  ],
+  "abbr": [],
+  "short": "A deal in which a buyer, often a private equity fund, buys all of a listed company's shares so it leaves the stock exchange.",
+  "kid": "Lots of children each own a tiny piece of a big toy shop. One buyer collects everyone's pieces, so the shop now belongs to just that buyer.",
+  "detail": "A take-private, or public-to-private deal, is the purchase of a listed company's publicly held shares, after which the company delists. Buyers are usually PE firms, sometimes with founders or managers, or promoters buying out minority holders. They pay a premium over the market price, betting that the company is undervalued or can be improved away from quarterly scrutiny, disclosure costs and short-term share price pressure. Many take-privates are leveraged buyouts. Elon Musk's 2022 purchase of Twitter is a well-known example outside private equity. In India, going private means following SEBI's delisting regulations, which, under the rules as of 2025, require the acquirer's holding to reach at least 90% of the shares, via reverse book building or a fixed-price offer, so Indian take-privates are harder than in the US or UK. Do not confuse it with a share buyback, which reduces the number of shares but keeps the company listed.",
+  "example": "Say ABC Ltd has 10 crore shares trading at ₹200, a market value of ₹2,000 crore. A buyout fund offers ₹250 a share, a 25% premium, valuing the equity at ₹2,500 crore; once it owns enough shares, ABC is delisted.",
+  "formula": "",
+  "related": [
+   "Leveraged buyout",
+   "Buyout",
+   "Delisting",
+   "Control premium",
+   "Management buyout"
+  ]
+ },
+ {
+  "id": "growth-equity",
+  "term": "Growth equity",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "growth capital",
+   "growth stage investing"
+  ],
+  "hl": [
+   "growth equity",
+   "growth capital",
+   "growth equity fund",
+   "growth equity funds",
+   "growth equity firm",
+   "growth-stage investing"
+  ],
+  "abbr": [],
+  "short": "Minority investments in established, fast-growing companies that need money to expand, sitting between venture capital and buyouts.",
+  "kid": "A lemonade stand already sells lots of cups and wants a second stand. A friend gives coins to help it grow, in return for a small part of both stands.",
+  "detail": "Growth equity, or growth capital, is private investment in companies that already have a proven product, meaningful revenue and often profits, but want capital to enter new markets, build capacity, make acquisitions or let early holders sell some shares. Investors usually take significant minority stakes, use little or no debt, and protect themselves through the shareholders' agreement with board seats, vetoes and exit clauses. Risk is lower than in early-stage venture capital because the business model works, and control is lower than in a buyout because founders stay in charge. Growth deals have historically been a large slice of PE activity in India, where many promoter-led companies want capital without giving up control. Crossover funds often invest at this stage shortly before an IPO. The common confusion is with growth stocks in public markets; growth equity means private investing in a company's expansion phase, not buying listed shares.",
+  "example": "Say a growth fund invests ₹150 crore for a 15% stake in ABC Foods, valuing it at ₹1,000 crore after the deal. ABC already earns ₹300 crore in revenue and uses the money to build two new plants, while its founders keep control.",
+  "formula": "",
+  "related": [
+   "Venture capital",
+   "Buyout",
+   "Private equity",
+   "Shareholders' agreement",
+   "Minority stake",
+   "Pre-IPO round"
+  ]
+ },
+ {
+  "id": "bolt-on-acquisition",
+  "term": "Bolt-on acquisition",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "add-on acquisition",
+   "buy-and-build"
+  ],
+  "hl": [
+   "bolt-on acquisition",
+   "bolt-on acquisitions",
+   "bolt-on deal",
+   "bolt-on deals",
+   "add-on acquisition",
+   "add-on acquisitions",
+   "buy-and-build"
+  ],
+  "abbr": [],
+  "short": "A smaller company bought and merged into a larger company that a private equity fund already owns, to grow it faster.",
+  "kid": "You already have a big toy train. Each time you add a small new carriage, the whole train gets longer and more fun.",
+  "detail": "A bolt-on, or add-on, acquisition is a smaller purchase made by a company a PE fund already owns, known as the platform company. Repeating this many times is called a buy-and-build strategy. The logic is partly operational, adding products, regions, customers or skills and cutting combined costs, and partly multiple arbitrage: small companies often sell at lower valuation multiples than larger, more diversified ones, so folding them into the platform can create value even before synergies. Bolt-ons make up a large share of buyout deal counts globally, and the approach is now common in India too, for example in healthcare chains. The risks are overpaying, failed integration and rising debt if the purchases are funded with borrowing. The common confusion is to treat every acquisition as a bolt-on; the term specifically means a smaller target added to an existing PE-backed platform.",
+  "example": "Say a fund buys a platform company with ₹50 crore of EBITDA at 10x, paying ₹500 crore, then adds three bolt-ons with ₹10 crore of EBITDA each at 6x, paying ₹180 crore. The combined business earns ₹80 crore of EBITDA, and if valued at 10x it is worth ₹800 crore against ₹680 crore paid, before any synergies.",
+  "formula": "",
+  "related": [
+   "Buyout",
+   "Portfolio company",
+   "Mergers and acquisitions",
+   "Synergies",
+   "EV/EBITDA",
+   "Leveraged buyout"
+  ]
+ },
+ {
+  "id": "dividend-recapitalisation",
+  "term": "Dividend recapitalisation",
+  "cat": "pe-vc",
+  "level": "a",
+  "aliases": [
+   "dividend recap",
+   "dividend recapitalization"
+  ],
+  "hl": [
+   "dividend recap",
+   "dividend recaps",
+   "dividend recapitalisation",
+   "dividend recapitalization",
+   "dividend recapitalisations",
+   "dividend recapitalizations"
+  ],
+  "abbr": [],
+  "short": "When a company borrows new debt and uses it to pay a large special dividend to its owners, often a private equity fund.",
+  "kid": "The lemonade stand borrows a bag of coins and hands them straight to its owner. The stand must then pay the coins back from future sales.",
+  "detail": "In a dividend recap, a company, typically one owned by a PE fund, raises new debt or refinances existing debt and pays out the proceeds to shareholders as a special dividend. It lets the fund return cash to its LPs, lifting DPI and IRR, without selling the business. Recaps are popular when credit is cheap and plentiful and exits through IPOs or sales are slow. The cost falls on the company: more debt and interest leave less room for investment and raise the risk of distress, which rating agencies watch closely. In India, the Companies Act allows dividends to be paid only out of profits, so recap-style payouts are limited by a company's distributable reserves. The common confusion is to read a dividend recap as a sign of strong profits; the dividend is funded by borrowing, not by the year's earnings.",
+  "example": "Say ABC Ltd earns $100 million of EBITDA and has $200 million of debt, or 2x EBITDA. It borrows another $300 million, taking debt to $500 million (5x), and pays the $300 million to its PE owner, which originally invested $400 million, so the owner gets back 0.75x of its money without selling a share.",
+  "formula": "",
+  "related": [
+   "Leveraged buyout",
+   "Special dividend",
+   "Distributions to paid-in capital",
+   "Exit",
+   "Debt-to-EBITDA"
+  ]
+ },
+ {
+  "id": "exit",
+  "term": "Exit",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "exit strategy",
+   "exit route",
+   "liquidity event"
+  ],
+  "hl": [
+   "pe exit",
+   "pe exits",
+   "vc exit",
+   "vc exits",
+   "liquidity event",
+   "liquidity events",
+   "partial exit",
+   "investor exit",
+   "investor exits"
+  ],
+  "abbr": [],
+  "short": "The way a private equity or venture capital investor sells its stake in a company to turn the investment back into cash.",
+  "kid": "After helping a lemonade stand grow, you sell your part of it to someone else and take your coins home.",
+  "detail": "In private markets, an exit is the sale or listing that turns a fund's holding in a portfolio company into cash or tradable shares. The main routes are an IPO, followed by gradual sales on the stock market; a trade sale to a strategic buyer; a secondary sale to another PE fund or investor; a buyback by promoters; and continuation funds. Because PE and VC returns are realised only at exit, GPs plan exit routes before investing, and a weak exit climate leaves LPs waiting for cash. India's busy IPO market has made listings a major exit route in recent years. The common confusion is with an exit load on mutual funds, a fee for redeeming units early, or with a trader exiting a position; in PE, exit means realising a long-held private stake.",
+  "example": "Say a VC fund invested ₹10 crore for 10% of ABC Tech in 2018 and sells that stake in ABC's IPO in 2024 for ₹60 crore. The exit returns 6.0x its money, a ₹50 crore gain, and the cash flows back to the fund's LPs as distributions.",
+  "formula": "",
+  "related": [
+   "Initial public offering",
+   "Trade sale",
+   "Secondary sale",
+   "Continuation fund",
+   "Offer for sale",
+   "Distributions to paid-in capital"
+  ]
+ },
+ {
+  "id": "secondary-sale",
+  "term": "Secondary sale",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "secondaries",
+   "secondary transaction",
+   "LP-led secondary"
+  ],
+  "hl": [
+   "secondary transaction",
+   "secondary transactions",
+   "secondaries",
+   "secondaries market",
+   "secondaries fund",
+   "secondaries funds",
+   "secondary share sale",
+   "secondary share sales",
+   "lp-led secondary",
+   "lp-led secondaries"
+  ],
+  "abbr": [],
+  "short": "A sale of existing shares or fund stakes from one investor to another, where the money goes to the seller, not the company.",
+  "kid": "If you sell your toy car to a friend, you get the coins, not the toy shop that made the car.",
+  "detail": "A secondary sale transfers an existing holding to a new owner. In venture capital, early investors, founders or employees sell some shares to a new investor, often alongside a funding round; the company issues no new shares and receives nothing, unlike a primary investment. In an IPO, the offer for sale portion is a secondary sale by existing holders. In private equity, the secondaries market covers LP-led deals, where an LP sells its stake in a fund, often at a discount to NAV, to free up cash, and GP-led deals such as continuation funds. Secondaries give liquidity in illiquid assets, and their prices signal how investors value private holdings. In India, large secondary portions in startup rounds and IPOs are common. The common confusion is with the secondary market, everyday trading of listed shares on an exchange; a private secondary sale is a negotiated transfer of an unlisted stake.",
+  "example": "Say ABC Tech raises a ₹500 crore round in which ₹350 crore is primary, new shares whose cash goes to ABC, and ₹150 crore is secondary, an angel investor and a seed fund selling existing shares to the new investor. ABC's bank balance rises by ₹350 crore, while the ₹150 crore goes to the sellers.",
+  "formula": "",
+  "related": [
+   "Continuation fund",
+   "Offer for sale",
+   "Exit",
+   "Net asset value",
+   "Secondary market",
+   "Initial public offering"
+  ]
+ },
+ {
+  "id": "reverse-flipping",
+  "term": "Reverse flipping",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "reverse flip",
+   "redomiciling to India"
+  ],
+  "hl": [
+   "reverse flipping",
+   "reverse flip",
+   "reverse flips",
+   "reverse-flip"
+  ],
+  "abbr": [],
+  "short": "When an Indian startup whose parent company was set up abroad moves that parent back to India, usually before listing on Indian exchanges.",
+  "kid": "A family put their lemonade stand's sign at a friend's house far away. Now they bring the sign back home, where the stand really is.",
+  "detail": "Many Indian startups flipped in the 2010s: they made a company in Singapore, the US or elsewhere the parent, with the Indian business as a subsidiary, to suit foreign VC investors. Reverse flipping, or redomiciling, undoes this by merging the foreign parent into the Indian company or swapping shares, so investors end up holding Indian shares. The main drivers are listing on Indian exchanges, where demand for new-age technology IPOs has grown, access to domestic investors and simpler regulation. It can be costly: shareholders may face tax on the transfer, and the process needs foreign-exchange and tribunal or court approvals, though the government eased inbound cross-border mergers in 2024. PhonePe and Groww are among those that have moved their domicile to India. The common confusion is that reverse flipping changes who owns the company; ownership proportions stay broadly the same, and only the parent's home country changes.",
+  "example": "Say ABC Pte in Singapore owns 100% of ABC India, and an investor holds 5% of ABC Pte. After a reverse flip, ABC Pte merges into ABC India and the investor holds 5% of ABC India directly; if it paid ₹10 crore for its stake and the stake is now worth ₹50 crore, the ₹40 crore gain may be taxed at the time of the flip.",
+  "formula": "",
+  "related": [
+   "Initial public offering",
+   "Foreign direct investment",
+   "Venture capital",
+   "Startup",
+   "Valuation"
+  ]
+ },
+ {
+  "id": "funding-winter",
+  "term": "Funding winter",
+  "cat": "pe-vc",
+  "level": "b",
+  "aliases": [
+   "funding drought",
+   "VC slowdown"
+  ],
+  "hl": [
+   "funding winter",
+   "funding winters",
+   "startup funding winter",
+   "vc slowdown",
+   "vc funding slowdown"
+  ],
+  "abbr": [],
+  "short": "A long period when investors put far less money into startups, making fundraising slow and hard and forcing companies to cut costs.",
+  "kid": "In a cold winter, fewer people buy lemonade and friends stop lending coins. The stand has to spend less and wait for warmer days.",
+  "detail": "A funding winter is a sharp, prolonged drop in venture capital flowing to startups. Rounds become fewer and smaller, valuations fall, down rounds and flat rounds become common, and investors demand a clear path to profit instead of growth at any cost. Startups respond by cutting burn, laying off staff or seeking a buyer. Winters usually follow higher interest rates, falling technology share prices or a shut IPO market, all of which make risky long-term bets less attractive. The 2022-2023 downturn, after rapid interest rate rises in the US and elsewhere, is the best-known recent example; by most trackers' counts, Indian startup funding fell to a fraction of its 2021 peak. Late-stage companies are often hit hardest. The common confusion is to read a funding winter as a lack of money in the system; VC funds may still hold plenty of dry powder but choose to invest it slowly.",
+  "example": "Say a startup has ₹60 crore in the bank and spends ₹5 crore a month more than it earns, giving it 12 months of runway. In a funding winter it cuts that burn to ₹3 crore a month, stretching its runway to 20 months while it waits for investors to return.",
+  "formula": "",
+  "related": [
+   "Venture capital",
+   "Down round",
+   "Burn rate",
+   "Runway",
+   "Dry powder",
+   "Valuation"
+  ]
+ },
+ {
+  "id": "continuation-fund",
+  "term": "Continuation fund",
+  "cat": "pe-vc",
+  "level": "a",
+  "aliases": [
+   "GP-led secondary",
+   "continuation vehicle"
+  ],
+  "hl": [
+   "continuation fund",
+   "continuation funds",
+   "continuation vehicle",
+   "continuation vehicles",
+   "gp-led secondary",
+   "gp-led secondaries",
+   "gp-led deal",
+   "gp-led deals"
+  ],
+  "abbr": [],
+  "short": "A new fund a private equity manager sets up to buy prized companies from its own older fund, letting investors cash out or stay in.",
+  "kid": "A play group is ending, but its best tower is not finished. A new group takes over the tower: some children leave with a reward, and others stay to finish building it.",
+  "detail": "A continuation fund is the main form of GP-led secondary. When an older fund nears the end of its life but the GP thinks some portfolio companies still have room to grow, it sets up a new vehicle to buy them from the old fund. Existing LPs can take cash or roll their stake into the new vehicle, while secondary investors fund those who leave. The GP keeps managing the assets, often with new fees and a reset carry. These deals have grown fast since about 2020, as IPO and M&A exits slowed. Because the GP sits on both sides and influences the price, these deals usually need an independent fairness opinion and LP advisory committee consent. The common confusion is to treat a continuation fund as a true exit; the company has not been sold to a new owner.",
+  "example": "Say an old fund's best holding, ABC Ltd, is valued at $300 million. The GP sets up a continuation fund that buys ABC for $300 million; LPs owning 60% choose to cash out and receive $180 million, paid by new secondary investors, while LPs owning 40% roll their $120 million into the new vehicle.",
+  "formula": "",
+  "related": [
+   "Secondary sale",
+   "Exit",
+   "General partner",
+   "Limited partner",
+   "Net asset value",
+   "Carried interest"
+  ]
+ },
+ {
+  "id": "trade-sale",
+  "term": "Trade sale",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "strategic sale",
+   "sale to strategic buyer"
+  ],
+  "hl": [
+   "trade sale",
+   "trade sales",
+   "sale to a strategic buyer",
+   "trade sale exit"
+  ],
+  "abbr": [],
+  "short": "Selling a company to another business in the same or a related industry, rather than listing it or selling it to a financial investor.",
+  "kid": "Instead of selling your lemonade stand to a stranger, you sell it to the bigger juice stand next door, which wants your customers.",
+  "detail": "A trade sale is an exit in which a PE or VC fund, or a founder, sells a company to a strategic buyer, an operating company that wants its products, customers, technology or market share. Strategic buyers can often pay more than financial buyers because they expect synergies such as cost savings or cross-selling, and they usually buy the whole company for cash, giving sellers a clean, immediate exit. The downsides are few suitable buyers and possible competition-law review. Walmart's 2018 purchase of about 77% of Flipkart for roughly $16 billion was a landmark Indian trade sale that gave several early investors a large exit. IPOs may value a company higher in strong markets but usually let investors sell only gradually. In Indian news, strategic sale usually refers to the government selling control of a public sector company, a related idea used in disinvestment.",
+  "example": "Say a PE fund owns 60% of ABC Ltd, and a larger rival buys 100% of ABC for ₹1,500 crore in cash. The fund receives 60% of that, ₹900 crore, in a single payment, and the other shareholders receive the remaining ₹600 crore.",
+  "formula": "",
+  "related": [
+   "Exit",
+   "Strategic buyer",
+   "Mergers and acquisitions",
+   "Synergies",
+   "Initial public offering",
+   "Disinvestment"
+  ]
+ },
+ {
+  "id": "shareholders-agreement",
+  "term": "Shareholders' agreement",
+  "cat": "pe-vc",
+  "level": "i",
+  "aliases": [
+   "SHA",
+   "investors' agreement"
+  ],
+  "hl": [
+   "shareholders' agreement",
+   "shareholders’ agreement",
+   "shareholders agreement",
+   "shareholder agreement",
+   "shareholders' agreements",
+   "shareholder agreements",
+   "investors' agreement"
+  ],
+  "abbr": [],
+  "short": "A private contract among a company's shareholders, and usually the company, setting out their rights, duties and how decisions and exits work.",
+  "kid": "Friends who share a lemonade stand write down rules together: who decides what, how the cups are shared, and what happens if someone wants to leave.",
+  "detail": "A shareholders' agreement (SHA) is the binding contract governing relations between a company's owners, especially founders or promoters and investors such as PE and VC funds. Typical clauses cover board seats, information rights, reserved matters that need investor consent, pre-emptive rights on new shares, anti-dilution protection, transfer limits such as a right of first refusal, tag-along and drag-along rights, lock-ins and exit commitments. In India, courts have held that share-transfer restrictions in an SHA bind the company only if they are also written into its articles of association, so investors insist on amending the articles. When a company lists, many special investor rights must lapse or be approved by public shareholders under SEBI's rules as of 2025. The common confusion is with a term sheet: the term sheet is a mostly non-binding summary of agreed terms, while the SHA and the share subscription agreement are the binding documents.",
+  "example": "Say a fund invests ₹40 crore for 20% of ABC Ltd. The SHA gives it one of five board seats, a veto over any new borrowing above ₹10 crore, and a tag-along right so that if the founders sell control, the fund can sell its 20% on the same terms.",
+  "formula": "",
+  "related": [
+   "Term sheet",
+   "Articles of Association",
+   "Drag-along rights",
+   "Tag-along rights",
+   "Anti-dilution provision",
+   "Right of first refusal"
+  ]
+ }
+]

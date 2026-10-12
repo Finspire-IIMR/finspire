@@ -1,0 +1,921 @@
+[
+  {
+    "id": "ratio-analysis",
+    "term": "Ratio analysis",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "financial ratio analysis",
+      "financial ratios"
+    ],
+    "hl": [
+      "ratio analysis",
+      "financial ratio analysis",
+      "financial ratios"
+    ],
+    "abbr": [],
+    "short": "Comparing pairs of numbers from a company's financial statements, such as profit and sales, to judge its health, efficiency and value.",
+    "kid": "You sell 10 cups of lemonade and keep 5 coins, and your friend sells 20 cups and keeps 6. Who did better with each cup? Comparing two numbers like this tells you more than either number alone.",
+    "detail": "Ratio analysis divides one financial-statement figure by another to turn raw numbers into comparable measures. Ratios are usually grouped into five families: profitability (margins, ROE), liquidity (current and quick ratios), solvency or leverage (debt-to-equity, interest coverage), efficiency (asset and inventory turnover) and valuation (P/E, EV/EBITDA). Because ratios remove the effect of size, they let you compare a small company with a large one, a company with its own past, or a firm with its industry average. Lenders, credit rating agencies and equity investors all rely on them. The common mistake is reading a ratio in isolation: a current ratio of 1.2 may be fine for a supermarket chain and weak for a capital-goods maker. Compare against peers and trends, and check how each number is defined, since companies and data providers calculate ratios differently.",
+    "example": "Say ABC Ltd earns a net profit of ₹12 crore on revenue of ₹150 crore, while XYZ Ltd earns ₹30 crore on ₹500 crore. ABC's net margin is 8% (12 / 150) and XYZ's is 6% (30 / 500), so the smaller company keeps more profit from each rupee of sales.",
+    "formula": "",
+    "related": [
+      "Profitability ratios",
+      "Liquidity ratios",
+      "Solvency ratios",
+      "Efficiency ratios",
+      "DuPont analysis"
+    ]
+  },
+  {
+    "id": "profitability-ratios",
+    "term": "Profitability ratios",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "margin ratios"
+    ],
+    "hl": [
+      "profitability ratios",
+      "profitability ratio",
+      "margin ratios"
+    ],
+    "abbr": [],
+    "short": "Ratios that show how much profit a company makes from its sales, from its assets or from its shareholders' money.",
+    "kid": "You sell a cup of lemonade for 10 coins, and the lemons and sugar cost 6. Checking how many coins you keep from what you sell tells you if your stand is doing well.",
+    "detail": "Profitability ratios measure how well a business turns revenue and capital into profit. They come in two groups. Margin ratios compare profit with revenue at different lines of the income statement: gross margin, EBITDA margin, operating (EBIT) margin and net profit margin. Return ratios compare profit with the capital used to earn it: return on assets (ROA), return on equity (ROE), return on capital employed (ROCE) and return on invested capital (ROIC). Margins reveal pricing power and cost control; returns show whether the business earns more than its cost of capital and so creates value. A common confusion is treating a high margin as proof of a great business. A discount retailer may run thin margins yet earn a high ROE by turning its stock quickly, while a capital-heavy power utility can show fat EBITDA margins and still earn modest returns.",
+    "example": "Say ABC Ltd has revenue of ₹200 crore, gross profit of ₹80 crore and net profit of ₹20 crore, with average shareholders' equity of ₹100 crore. Its gross margin is 40%, its net margin is 10% and its ROE is 20%.",
+    "formula": "",
+    "related": [
+      "Gross margin",
+      "Net profit margin",
+      "Return on equity",
+      "Return on capital employed",
+      "Ratio analysis"
+    ]
+  },
+  {
+    "id": "liquidity-ratios",
+    "term": "Liquidity ratios",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "short-term solvency ratios"
+    ],
+    "hl": [
+      "liquidity ratios",
+      "short-term solvency ratios"
+    ],
+    "abbr": [],
+    "short": "Ratios that test whether a company has enough cash and easily sold assets to pay the bills due within the next year.",
+    "kid": "You promised to give your friend 5 coins by Friday, so you peek into your piggy bank to see if there are enough. Grown-ups take the same kind of peek for big shops.",
+    "detail": "Liquidity ratios compare a company's short-term assets with its short-term obligations to check whether it can meet payments due within roughly 12 months. The three standard measures run from loosest to strictest: the current ratio (all current assets), the quick or acid-test ratio (excluding inventory and prepaid expenses) and the cash ratio (cash and marketable securities only). Lenders and suppliers watch them closely because a profitable firm can still default if its cash is tied up in stock or unpaid customer bills. Indian banks look at them when setting working capital limits. Do not confuse liquidity with solvency: liquidity is about paying the next few months' bills, solvency about carrying long-term debt. Very high liquidity is not automatically good either; it can mean idle cash or slow-moving inventory.",
+    "example": "Say ABC Ltd has current assets of ₹60 crore, including ₹20 crore of inventory, ₹10 crore of cash and no prepaid expenses, against current liabilities of ₹40 crore. Its current ratio is 1.5, its quick ratio is 1.0 and its cash ratio is 0.25.",
+    "formula": "",
+    "related": [
+      "Current ratio",
+      "Quick ratio",
+      "Cash ratio",
+      "Working capital",
+      "Solvency ratios"
+    ]
+  },
+  {
+    "id": "solvency-ratios",
+    "term": "Solvency ratios",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "leverage ratios",
+      "long-term solvency ratios",
+      "gearing ratios"
+    ],
+    "hl": [
+      "long-term solvency ratios",
+      "gearing ratios",
+      "gearing ratio"
+    ],
+    "abbr": [],
+    "short": "Ratios that show how much a company relies on borrowed money and whether it can keep up with its long-term debts.",
+    "kid": "If you borrow toys from friends to run a toy shop, you must give them back one day. These checks ask how many of the toys are borrowed, and whether you can give them all back.",
+    "detail": "Solvency ratios, also called leverage or gearing ratios, measure a company's long-term financial strength: how much of the business is funded by debt rather than owners' money, and whether earnings comfortably cover the cost of that debt. Balance-sheet measures include debt-to-equity, debt-to-capital and debt-to-assets; earnings-based measures include interest coverage, debt service coverage and net debt to EBITDA. Rating agencies such as CRISIL, ICRA and CARE in India, and S&P and Moody's globally, rely on them heavily, and loan agreements often cap them as covenants. Some debt is healthy because it can lift shareholder returns, so a lower ratio is not automatically better. Note that the solvency ratio reported by insurance companies is a separate regulatory capital measure, not this family of corporate ratios.",
+    "example": "Say ABC Ltd has total debt of ₹300 crore and shareholders' equity of ₹200 crore, and earns EBIT of ₹90 crore against interest of ₹30 crore. Its debt-to-equity ratio is 1.5 and its interest coverage is 3 times.",
+    "formula": "",
+    "related": [
+      "Debt-to-equity ratio",
+      "Interest coverage ratio",
+      "Debt-to-capital ratio",
+      "Net debt to EBITDA",
+      "Liquidity ratios",
+      "Financial leverage"
+    ]
+  },
+  {
+    "id": "efficiency-ratios",
+    "term": "Efficiency ratios",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "activity ratios",
+      "turnover ratios"
+    ],
+    "hl": [
+      "activity ratios"
+    ],
+    "abbr": [],
+    "short": "Ratios that show how well a company uses its assets, such as stock, machines and money owed by customers, to generate sales.",
+    "kid": "Two kids each have one lemonade jug. One fills it and sells it all five times a day, the other only once. The first kid is getting much more out of the same jug.",
+    "detail": "Efficiency ratios, also called activity or turnover ratios, measure how quickly and productively a company uses its resources. Common ones are asset turnover (revenue / total assets), fixed asset turnover, inventory turnover (cost of goods sold / average inventory), receivables turnover (revenue / average receivables) and payables turnover. Each turnover can be flipped into days, giving inventory days, debtor days and creditor days, which together make up the cash conversion cycle. These ratios explain why two firms with similar margins can earn very different returns, and asset turnover is the middle link in DuPont analysis. Compare only within an industry, since a retailer naturally turns its assets far faster than a steel plant. Beware too that in banking, 'efficiency ratio' usually means costs divided by income, a different measure where lower is better.",
+    "example": "Say ABC Ltd has annual revenue of ₹500 crore, total assets of ₹250 crore, cost of goods sold of ₹365 crore and average inventory of ₹73 crore. Its asset turnover is 2 times, its inventory turns over 5 times a year, and its inventory days are 73 (365 / 5).",
+    "formula": "",
+    "related": [
+      "Asset turnover ratio",
+      "Inventory turnover ratio",
+      "Receivables turnover ratio",
+      "Cash conversion cycle",
+      "DuPont analysis"
+    ]
+  },
+  {
+    "id": "gross-margin",
+    "term": "Gross margin",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "gross profit margin",
+      "GPM"
+    ],
+    "hl": [
+      "gross margin",
+      "gross margins",
+      "gross profit margin",
+      "gross profit margins"
+    ],
+    "abbr": [],
+    "short": "The share of revenue left after paying the direct cost of making or buying the goods sold, before any other expenses.",
+    "kid": "You sell a cup of lemonade for 10 coins, and the lemons and sugar inside it cost 6 coins. The 4 coins left over are what the cup itself earns before you pay for anything else.",
+    "detail": "Gross margin is gross profit (revenue minus cost of goods sold) expressed as a percentage of revenue. Cost of goods sold covers direct costs such as raw materials and purchased goods and, depending on the company, direct labour and factory overheads. The margin shows pricing power and production efficiency before selling, administrative, research, interest and tax costs. Software and branded consumer companies often have high gross margins; commodity processors and retailers usually have low ones. Investors watch changes closely: a falling gross margin may signal rising input costs, such as crude or palm oil for an Indian FMCG company, or tougher price competition. A practical catch in India: income statements prepared under Ind AS and Schedule III classify expenses by nature and show no gross profit line, so analysts compute it themselves and definitions vary.",
+    "example": "Say ABC Ltd sells goods worth ₹100 crore, and the materials and other direct costs of those goods total ₹62 crore. Its gross profit is ₹38 crore and its gross margin is 38%.",
+    "formula": "Gross margin = (Revenue - Cost of goods sold) / Revenue x 100",
+    "related": [
+      "Operating margin",
+      "Net profit margin",
+      "Cost of goods sold",
+      "Contribution margin",
+      "Margin expansion"
+    ]
+  },
+  {
+    "id": "operating-margin",
+    "term": "Operating margin",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "EBIT margin",
+      "operating profit margin",
+      "OPM"
+    ],
+    "hl": [
+      "operating margin",
+      "operating margins",
+      "operating profit margin",
+      "operating profit margins",
+      "ebit margin",
+      "ebit margins"
+    ],
+    "abbr": [],
+    "short": "The share of revenue left as profit after paying all the running costs of the business, but before interest and tax.",
+    "kid": "After paying for lemons, sugar, cups and the helper who squeezes them, the coins left from each cup show how well the stand itself is run.",
+    "detail": "Operating margin is operating profit divided by revenue. Operating profit, usually taken as EBIT (earnings before interest and tax), subtracts cost of goods sold and operating expenses such as salaries, rent, marketing and depreciation, but not interest or tax. Because it ignores how a company is financed, it lets you compare the core business of a debt-heavy firm with a debt-free rival. Rising operating margins often signal operating leverage, where fixed costs are spread over more sales. Watch the definitions: Indian results coverage and broker reports often use 'operating margin' or OPM to mean EBITDA margin, which is before depreciation, while global usage and textbooks usually mean EBIT margin. Also check whether other income and one-off items have been included, since they can flatter the number.",
+    "example": "Say ABC Ltd has revenue of ₹800 crore, cost of goods sold of ₹480 crore, other operating expenses of ₹160 crore and depreciation of ₹40 crore. Its EBIT is ₹120 crore, so its operating (EBIT) margin is 15%.",
+    "formula": "Operating margin = Operating profit (EBIT) / Revenue x 100",
+    "related": [
+      "EBITDA margin",
+      "Gross margin",
+      "Net profit margin",
+      "EBIT",
+      "Operating leverage"
+    ]
+  },
+  {
+    "id": "ebitda-margin",
+    "term": "EBITDA margin",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "ebitda margin",
+      "ebitda margins"
+    ],
+    "abbr": [],
+    "short": "The share of revenue left as profit before interest, tax and the yearly write-down of equipment and other long-term assets.",
+    "kid": "Count the coins left after paying for lemons, sugar and the helper, but before putting some aside for a new jug when the old one wears out. That shows how much the stand earns from selling.",
+    "detail": "EBITDA margin is EBITDA (earnings before interest, tax, depreciation and amortisation) divided by revenue. Adding back depreciation and amortisation means the margin shows profitability before the cost of wearing out assets, before interest and before tax. It is the most quoted margin in Indian quarterly results coverage, where it is often loosely called operating margin, and it is popular for comparing capital-heavy sectors such as telecom, cement, steel and power, where depreciation is large and depends on accounting choices. The catch is that depreciation reflects real money already spent on plant and equipment, so a high EBITDA margin can hide heavy capital needs. EBITDA is not defined under Ind AS or IFRS, so companies calculate it differently, for example on whether other income is included. Check the definition before comparing.",
+    "example": "Say ABC Ltd reports revenue of ₹1,000 crore, EBIT of ₹150 crore and depreciation and amortisation of ₹70 crore. Its EBITDA is ₹220 crore, so its EBITDA margin is 22% while its EBIT margin is 15%.",
+    "formula": "EBITDA margin = EBITDA / Revenue x 100",
+    "related": [
+      "EBITDA",
+      "Operating margin",
+      "Net debt to EBITDA",
+      "Net profit margin",
+      "Depreciation"
+    ]
+  },
+  {
+    "id": "net-profit-margin",
+    "term": "Net profit margin",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "net margin",
+      "PAT margin",
+      "profit margin",
+      "NPM"
+    ],
+    "hl": [
+      "net profit margin",
+      "net profit margins",
+      "net margin",
+      "net margins",
+      "pat margin",
+      "pat margins"
+    ],
+    "abbr": [],
+    "short": "The share of revenue a company keeps as final profit after paying every expense, including interest and tax.",
+    "kid": "After paying for lemons, cups, the helper and everything else, the coins finally left in your pocket from each cup are what you really keep.",
+    "detail": "Net profit margin is net profit, also called profit after tax (PAT) or net income, divided by revenue. It is the bottom-line margin: what remains for shareholders from each rupee of sales after operating costs, depreciation, interest and tax. Through DuPont analysis it feeds directly into return on equity. Because it is affected by financing choices, tax rates and one-off gains or losses, it is a less clean way than operating margin to compare businesses. In Indian results, check whether PAT includes exceptional items or the share of profit from associates, and whether the margin is calculated on revenue from operations or on total income including other income. Note also that 'profit margin' on its own is ambiguous in news reports and can refer to gross, operating or net margin.",
+    "example": "Say ABC Ltd earns revenue from operations of ₹2,500 crore and reports a profit after tax of ₹200 crore. Its net profit margin is 8%, meaning it keeps ₹8 of final profit from every ₹100 of sales.",
+    "formula": "Net profit margin = Net profit (PAT) / Revenue x 100",
+    "related": [
+      "Operating margin",
+      "Gross margin",
+      "Profit after tax",
+      "Return on equity",
+      "DuPont analysis"
+    ]
+  },
+  {
+    "id": "contribution-margin",
+    "term": "Contribution margin",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "contribution",
+      "contribution per unit",
+      "contribution margin ratio"
+    ],
+    "hl": [
+      "contribution margin",
+      "contribution margins",
+      "contribution margin ratio",
+      "contribution per unit"
+    ],
+    "abbr": [],
+    "short": "What each sale leaves over after its variable costs, the costs that rise with every unit sold, to cover fixed costs and then profit.",
+    "kid": "Each cup of lemonade sells for 10 coins, and its lemons and cup cost 4. The 6 coins left from every cup first help pay for the stall you rented, and after that they are yours to keep.",
+    "detail": "Contribution margin is selling price minus variable cost, measured per unit, in total, or as a ratio to sales. Variable costs rise with each unit sold, such as raw materials, packaging, sales commissions and delivery; fixed costs such as rent and salaries do not. Contribution covers fixed costs first, and anything beyond that is profit. It is the basis of break-even analysis (fixed costs / contribution per unit) and of decisions on pricing, product mix and whether to accept a special order. Indian quick-commerce and food-delivery platforms often report contribution per order to show their unit economics. Do not confuse it with gross margin: gross margin deducts cost of goods sold, which can include fixed factory overheads, whereas contribution deducts only variable costs, including variable selling and delivery costs.",
+    "example": "Say ABC Ltd sells a gadget for ₹500 with variable costs of ₹300, so contribution is ₹200 per unit and the contribution margin ratio is 40%. With fixed costs of ₹10 lakh a month, it must sell 5,000 units a month to break even.",
+    "formula": "Contribution margin = Selling price - Variable cost per unit; Contribution margin ratio = Contribution / Sales",
+    "related": [
+      "Break-even point",
+      "Gross margin",
+      "Operating leverage",
+      "Variable cost",
+      "Fixed cost",
+      "Unit economics"
+    ]
+  },
+  {
+    "id": "margin-expansion",
+    "term": "Margin expansion",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "margin contraction",
+      "margin compression"
+    ],
+    "hl": [
+      "margin expansion",
+      "margin contraction",
+      "margin compression",
+      "margins expand",
+      "margins expanded",
+      "margins contract",
+      "margins contracted"
+    ],
+    "abbr": [],
+    "short": "An increase in a company's profit margin compared with an earlier period; a fall is called margin contraction or compression.",
+    "kid": "Last summer you kept 3 coins from each cup of lemonade, and this summer you keep 4. You are keeping more from every cup you sell.",
+    "detail": "Margin expansion means a profit margin, usually gross, EBITDA or operating margin, has risen compared with an earlier period, often the same quarter last year. It happens when prices rise faster than costs, input costs fall, the product mix shifts towards higher-margin items, or fixed costs are spread over higher sales (operating leverage). Margin contraction, or compression, is the reverse. Indian results coverage usually quotes the change in basis points, where 100 basis points equal one percentage point. Investors care because profits grow faster than revenue when margins expand, and markets often reward the trend more than the level. The common confusion is mixing percentage points with percent: a margin moving from 20% to 22% is a 200 basis point expansion, which is a 10% relative increase, not a 2% one.",
+    "example": "Say ABC Ltd's EBITDA margin rose from 18.0% in the first quarter of last year to 19.5% in the same quarter this year. That is a margin expansion of 150 basis points. On quarterly revenue of ₹400 crore, the extra 1.5 percentage points add ₹6 crore of EBITDA.",
+    "formula": "Margin change (basis points) = (Current margin % - Earlier margin %) x 100",
+    "related": [
+      "Gross margin",
+      "EBITDA margin",
+      "Operating margin",
+      "Operating leverage",
+      "Basis point"
+    ]
+  },
+  {
+    "id": "return-on-equity",
+    "term": "Return on equity",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "ROE",
+      "return on net worth",
+      "RoNW"
+    ],
+    "hl": [
+      "return on equity",
+      "return on net worth",
+      "return on average equity"
+    ],
+    "abbr": [
+      "ROE",
+      "RoNW"
+    ],
+    "short": "Net profit as a percentage of shareholders' equity, showing how much profit a company earns on the money its owners have invested.",
+    "kid": "You and your friends put 10 coins together to start a lemonade stand. If the stand earns 2 more coins by the end of summer, that shows how hard your coins worked.",
+    "detail": "Return on equity measures how much net profit a company generates for each rupee of shareholders' equity, which is share capital plus accumulated reserves. It is the headline measure of how well management uses owners' money and a key input when valuing banks and consumer companies; Indian companies often report it as return on net worth (RoNW). A company earning an ROE above its cost of equity is creating value. DuPont analysis splits ROE into net margin, asset turnover and the equity multiplier, showing whether a high ROE comes from strong operations or simply from heavy borrowing. That is the main trap: funding with more debt and less equity inflates ROE, and so do large buybacks or past losses that shrink equity. A tiny or negative equity base makes ROE meaningless. Use average equity for the period where possible.",
+    "example": "Say ABC Ltd earns a net profit of ₹150 crore. Its shareholders' equity was ₹900 crore at the start of the year and ₹1,100 crore at the end, so average equity is ₹1,000 crore and its ROE is 15%.",
+    "formula": "ROE = Net profit / Average shareholders' equity x 100",
+    "related": [
+      "Return on assets",
+      "DuPont analysis",
+      "Return on capital employed",
+      "Equity multiplier",
+      "Cost of equity",
+      "Book value"
+    ]
+  },
+  {
+    "id": "return-on-assets",
+    "term": "Return on assets",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "ROA",
+      "return on total assets"
+    ],
+    "hl": [
+      "return on assets",
+      "return on total assets",
+      "return on average assets"
+    ],
+    "abbr": [
+      "ROA"
+    ],
+    "short": "Net profit as a percentage of total assets, showing how much profit a company earns from everything it owns.",
+    "kid": "Your lemonade stand has a jug, a table and some cups. Counting how many coins all those things help you earn shows how hard they are working for you.",
+    "detail": "Return on assets measures net profit relative to the total assets a company uses, whether funded by debt or equity. It shows how efficiently management turns the whole balance sheet into profit, and it equals net profit margin multiplied by asset turnover. ROA is especially important for banks and NBFCs, whose assets are mostly loans; for an Indian bank, an ROA of around 1% or more is generally seen as healthy, while manufacturing and software companies usually show much higher figures. Because the numerator is profit after interest while the denominator includes assets funded by lenders, some analysts prefer a variant that adds back after-tax interest. Compare ROA only within an industry, and note that old, heavily depreciated assets can make it look better than it really is.",
+    "example": "Say ABC Bank earns a net profit of ₹1,200 crore on average total assets of ₹1,00,000 crore. Its ROA is 1.2%.",
+    "formula": "ROA = Net profit / Average total assets x 100",
+    "related": [
+      "Return on equity",
+      "Asset turnover ratio",
+      "DuPont analysis",
+      "Net profit margin",
+      "Return on capital employed"
+    ]
+  },
+  {
+    "id": "return-on-capital-employed",
+    "term": "Return on capital employed",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "ROCE",
+      "RoCE"
+    ],
+    "hl": [
+      "return on capital employed"
+    ],
+    "abbr": [
+      "ROCE",
+      "RoCE"
+    ],
+    "short": "Operating profit before interest and tax as a percentage of capital employed, the long-term money provided by both shareholders and lenders.",
+    "kid": "You and a grown-up both put coins into your lemonade stand. Counting what the stand earns for all those coins together shows whether it is worth running.",
+    "detail": "Return on capital employed measures how much operating profit a company generates from all the long-term capital it uses, whether from shareholders or lenders. The numerator is EBIT, before interest and tax, so that it matches a denominator that includes debt. Capital employed is usually total assets minus current liabilities, which equals equity plus non-current liabilities such as long-term borrowings. ROCE is widely used by Indian investors to judge business quality and should be compared with the company's cost of capital, bearing in mind that ROCE is pre-tax while the cost of capital is usually after tax: a 20% ROCE is roughly 15% after a 25% tax, above an 11% cost of capital. Unlike ROE, it is not inflated by borrowing, which makes it better for comparing companies with different debt levels. Watch for large idle cash balances, which drag ROCE down, and for definitions that differ between data providers.",
+    "example": "Say ABC Ltd has EBIT of ₹180 crore, total assets of ₹1,500 crore and current liabilities of ₹300 crore. Its capital employed is ₹1,200 crore, so its ROCE is 15%.",
+    "formula": "ROCE = EBIT / Capital employed x 100, where Capital employed = Total assets - Current liabilities",
+    "related": [
+      "Capital employed",
+      "Return on equity",
+      "Return on invested capital",
+      "EBIT",
+      "Cost of capital"
+    ]
+  },
+  {
+    "id": "return-on-invested-capital",
+    "term": "Return on invested capital",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "ROIC"
+    ],
+    "hl": [
+      "return on invested capital"
+    ],
+    "abbr": [
+      "ROIC"
+    ],
+    "short": "After-tax operating profit as a percentage of the money actually tied up in running the business, from shareholders and lenders.",
+    "kid": "Count only the coins you really spent to run your lemonade stand, not the ones still sitting in your piggy bank. Then see how many new coins the stand earns from those spent coins.",
+    "detail": "Return on invested capital measures the after-tax operating profit (NOPAT) a company earns on the capital invested in its operations, typically operating working capital plus net fixed assets, or equivalently debt plus equity minus surplus cash. It is a favourite measure of business quality among long-term investors and in valuation work, because a company creates value only when ROIC exceeds its weighted average cost of capital (WACC). Compared with ROCE, ROIC uses after-tax profit and usually strips out excess cash and non-operating investments, giving a cleaner view of the core business. There is no single standard definition, so the treatment of goodwill, leases and cash varies between analysts. A consistently high ROIC over many years often signals a durable competitive advantage, sometimes called a moat.",
+    "example": "Say ABC Ltd has EBIT of ₹200 crore and a 25% tax rate, so its NOPAT is ₹150 crore. If its invested capital is ₹1,000 crore, its ROIC is 15%; with a WACC of 11%, it earns 4 percentage points more than its capital costs.",
+    "formula": "ROIC = NOPAT / Invested capital x 100",
+    "related": [
+      "Net operating profit after tax",
+      "Invested capital",
+      "Weighted average cost of capital",
+      "Return on capital employed",
+      "Economic value added"
+    ]
+  },
+  {
+    "id": "return-on-investment",
+    "term": "Return on investment",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "ROI"
+    ],
+    "hl": [
+      "return on investment",
+      "return on investments"
+    ],
+    "abbr": [
+      "ROI"
+    ],
+    "short": "The gain or loss from an investment as a percentage of the amount originally put in.",
+    "kid": "You spend 10 coins on lemons and sugar and sell your lemonade for 15 coins. You got your 10 coins back plus 5 more, so your spending paid off.",
+    "detail": "Return on investment compares the net gain from an investment with its cost. It is the simplest and most flexible return measure, used for a stock, a machine, a marketing campaign or an entire project. Its flexibility is also its weakness: there is no fixed definition of gain or cost, so two people can calculate different ROIs for the same project. Basic ROI also ignores time. A 50% ROI earned in one year is far better than 50% earned over ten years, so for multi-year investments analysts annualise it as a CAGR, or use IRR and NPV, which account for the time value of money. ROI ignores risk as well. Companies use it in capital budgeting and marketing, while equity analysts prefer ROE, ROCE and ROIC for judging a whole business.",
+    "example": "Say you buy shares of ABC Ltd for ₹50,000 and sell them two years later for ₹60,500, receiving no dividends. Your ROI is 21% (₹10,500 / ₹50,000), which works out to 10% a year compounded, since 1.1 x 1.1 = 1.21.",
+    "formula": "ROI = (Final value - Initial cost) / Initial cost x 100",
+    "related": [
+      "Compound annual growth rate",
+      "Internal rate of return",
+      "Net present value",
+      "Return on capital employed",
+      "Payback period"
+    ]
+  },
+  {
+    "id": "capital-employed",
+    "term": "Capital employed",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "capital employed"
+    ],
+    "abbr": [],
+    "short": "The total long-term money used to run a business, from shareholders and lenders, usually measured as total assets minus current liabilities.",
+    "kid": "Add up all the coins used to set up and keep your lemonade stand going, whether they came from you or from a helpful grown-up. That total is what the stand runs on.",
+    "detail": "Capital employed is the long-term funding tied up in a business. It can be measured from the assets side, as total assets minus current liabilities, or from the funding side, as shareholders' equity plus non-current liabilities such as long-term borrowings; both give the same figure. It is the denominator of return on capital employed (ROCE) and tells you how much money a company needs to generate its operating profit. Asset-light businesses such as software or consulting need little capital per rupee of profit, while steel, cement and power need a lot. Variations exist: some analysts deduct surplus cash, use average rather than year-end figures, or include short-term borrowings. Do not confuse capital employed with share capital, which is only the face value of shares issued and is usually a small part of the total.",
+    "example": "Say ABC Ltd has total assets of ₹2,000 crore and current liabilities of ₹500 crore, so its capital employed is ₹1,500 crore. Checking from the funding side, equity of ₹1,100 crore plus non-current liabilities of ₹400 crore also gives ₹1,500 crore.",
+    "formula": "Capital employed = Total assets - Current liabilities (= Shareholders' equity + Non-current liabilities)",
+    "related": [
+      "Return on capital employed",
+      "Invested capital",
+      "Shareholders' equity",
+      "Working capital",
+      "Total assets"
+    ]
+  },
+  {
+    "id": "invested-capital",
+    "term": "Invested capital",
+    "cat": "ratios",
+    "level": "a",
+    "aliases": [],
+    "hl": [],
+    "abbr": [],
+    "short": "The money tied up in a company's core operations, such as factories, equipment and inventory, funded by shareholders and lenders.",
+    "kid": "Add up the coins stuck inside your lemonade stand: the jug, the table and the lemons waiting to be squeezed. That is how much the stand is holding on to.",
+    "detail": "Invested capital is the amount of capital tied up in a company's operating business. From the operating side it equals net operating working capital (excluding cash and short-term debt) plus net fixed assets and other operating assets such as goodwill. From the financing side it equals total debt, including lease liabilities, plus shareholders' equity, minus excess cash and non-operating investments. It is the denominator of ROIC and a key input in economic value added and discounted cash flow models, where growth requires additional investment. It differs from capital employed mainly by stripping out surplus cash and non-operating assets, so it focuses on what the core business needs. Analysts make judgement calls, such as whether to include acquisition goodwill, so check the definition. In private equity, 'invested capital' can also simply mean the money a fund has put into deals.",
+    "example": "Say ABC Ltd has net fixed assets of ₹700 crore and operating working capital of ₹200 crore, so its invested capital is ₹900 crore. On the financing side, debt of ₹400 crore plus equity of ₹600 crore minus excess cash of ₹100 crore also gives ₹900 crore.",
+    "formula": "Invested capital = Net operating working capital + Net fixed assets (= Total debt + Equity - Excess cash)",
+    "related": [
+      "Return on invested capital",
+      "Net operating profit after tax",
+      "Capital employed",
+      "Economic value added",
+      "Free cash flow"
+    ]
+  },
+  {
+    "id": "nopat",
+    "term": "Net operating profit after tax",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "NOPAT"
+    ],
+    "hl": [
+      "net operating profit after tax",
+      "net operating profit after taxes"
+    ],
+    "abbr": [
+      "NOPAT"
+    ],
+    "short": "The profit a company's operations earn after tax, calculated as if it had no debt, so it belongs to both lenders and shareholders.",
+    "kid": "Count the coins your lemonade stand earns from selling, then take out the share you must hand to the grown-ups who look after the town. What is left is what the stand truly earns from its work.",
+    "detail": "NOPAT is operating profit (EBIT) minus the tax that would be payable on it, ignoring the tax saved by deducting interest. Because it excludes interest and this debt tax shield, it represents the after-tax profit generated by operations and available to both lenders and shareholders, regardless of how the company is financed. It is the numerator of ROIC, the starting point for free cash flow to the firm in DCF valuation (NOPAT plus depreciation, minus capital expenditure and the increase in working capital), and the profit figure used in economic value added. Do not confuse it with net profit or PAT, which is after interest: a heavily indebted company can have a healthy NOPAT and a small net profit. Analysts usually apply the effective or marginal tax rate and exclude one-off items.",
+    "example": "Say ABC Ltd has EBIT of ₹400 crore, interest of ₹100 crore and a tax rate of 25%. Its NOPAT is ₹300 crore (400 x 0.75), while its net profit is only ₹225 crore ((400 - 100) x 0.75).",
+    "formula": "NOPAT = EBIT x (1 - Tax rate)",
+    "related": [
+      "Return on invested capital",
+      "Free cash flow",
+      "EBIT",
+      "Economic value added",
+      "Invested capital"
+    ]
+  },
+  {
+    "id": "dupont-analysis",
+    "term": "DuPont analysis",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "DuPont identity",
+      "DuPont model",
+      "three-step DuPont",
+      "five-step DuPont"
+    ],
+    "hl": [
+      "dupont analysis",
+      "dupont identity",
+      "dupont model",
+      "dupont framework"
+    ],
+    "abbr": [],
+    "short": "A method that breaks return on equity into profit margin, asset turnover and borrowing to show what is really driving it.",
+    "kid": "Your lemonade stand is doing well. Is it because each cup earns a lot, because you sell lots of cups, or because you used a friend's coins? This trick shows which one.",
+    "detail": "DuPont analysis, named after the DuPont company, where it was developed in the early twentieth century, splits ROE into three multiplied parts: net profit margin (profitability), asset turnover (efficiency) and the equity multiplier (financial leverage). Two companies with the same ROE can get there very differently: a luxury brand through high margins, a supermarket through fast asset turnover, a bank through high leverage. The five-step version further breaks net margin into a tax burden (net profit / pre-tax profit), an interest burden (pre-tax profit / EBIT) and an operating margin (EBIT / revenue). Analysts use it to judge the quality and sustainability of ROE, since returns driven mainly by debt are riskier than those driven by margins or turnover. For the identity to hold exactly, use the same average asset and equity figures throughout.",
+    "example": "Say ABC Ltd has a net margin of 10%, asset turnover of 1.2 times and an equity multiplier of 1.5. Its ROE is 10% x 1.2 x 1.5 = 18%. If it borrowed enough to double its equity multiplier to 3 and margin and turnover stayed the same, ROE would be 36%, with no improvement in the business; in practice the extra interest would trim the net margin.",
+    "formula": "ROE = (Net profit / Revenue) x (Revenue / Average total assets) x (Average total assets / Average shareholders' equity)",
+    "related": [
+      "Return on equity",
+      "Equity multiplier",
+      "Asset turnover ratio",
+      "Net profit margin",
+      "Return on assets"
+    ]
+  },
+  {
+    "id": "equity-multiplier",
+    "term": "Equity multiplier",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "assets-to-equity ratio"
+    ],
+    "hl": [
+      "equity multiplier",
+      "assets-to-equity ratio",
+      "assets to equity ratio"
+    ],
+    "abbr": [],
+    "short": "Total assets divided by shareholders' equity, showing how many rupees of assets each rupee of owners' money supports.",
+    "kid": "You put 2 of your own coins into a toy shop and borrow 8 from friends, so the shop holds 10 coins of toys. Your own coins are holding up a shop five times bigger.",
+    "detail": "The equity multiplier measures financial leverage as total assets divided by shareholders' equity. Since every asset is funded either by equity or by liabilities, a multiplier of 1 means no liabilities at all, and higher numbers mean more of the balance sheet is funded by borrowings and other obligations. It is the third component of the DuPont identity and links ROA to ROE: ROE = ROA x equity multiplier. Banks typically have multipliers of 10 or more because deposits fund most of their assets, while debt-light companies, common among Indian IT services firms, often sit below 2. A higher multiplier magnifies ROE in good years and losses in bad ones. Note that it counts all liabilities, including trade payables, not just interest-bearing debt, so it is not the same as debt-to-equity.",
+    "example": "Say ABC Ltd has total assets of ₹600 crore and shareholders' equity of ₹240 crore, so its equity multiplier is 2.5. If its ROA is 6%, its ROE is 6% x 2.5 = 15%.",
+    "formula": "Equity multiplier = Total assets / Shareholders' equity",
+    "related": [
+      "DuPont analysis",
+      "Return on equity",
+      "Return on assets",
+      "Debt-to-equity ratio",
+      "Financial leverage"
+    ]
+  },
+  {
+    "id": "current-ratio",
+    "term": "Current ratio",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "working capital ratio"
+    ],
+    "hl": [
+      "current ratio",
+      "working capital ratio"
+    ],
+    "abbr": [],
+    "short": "Current assets divided by current liabilities, showing whether a company's short-term assets cover the bills it must pay within a year.",
+    "kid": "You have 6 coins in your piggy bank and you owe your friends 4 coins this week. You have more than enough to pay them back.",
+    "detail": "The current ratio compares current assets (cash, receivables, inventory and other items expected to turn into cash within 12 months) with current liabilities (payables, short-term borrowings and other obligations due within 12 months). A ratio above 1 means short-term assets exceed short-term obligations. Indian banks have traditionally looked for a current ratio of around 1.33 when assessing working capital loans, a benchmark that traces back to the Tandon Committee of the 1970s. The right level depends on the business: supermarkets and restaurants collect cash quickly and pay suppliers later, so they can run safely below 1, while manufacturers usually need more. A very high ratio can signal idle cash, slow collections or piled-up stock. Because inventory may be hard to sell quickly, the quick ratio offers a stricter test.",
+    "example": "Say ABC Ltd has current assets of ₹90 crore and current liabilities of ₹60 crore. Its current ratio is 1.5, meaning it has ₹1.50 of short-term assets for every ₹1 it must pay within a year.",
+    "formula": "Current ratio = Current assets / Current liabilities",
+    "related": [
+      "Quick ratio",
+      "Cash ratio",
+      "Working capital",
+      "Liquidity ratios",
+      "Current assets"
+    ]
+  },
+  {
+    "id": "quick-ratio",
+    "term": "Quick ratio",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "acid-test ratio",
+      "liquid ratio"
+    ],
+    "hl": [
+      "quick ratio",
+      "acid-test ratio",
+      "acid test ratio",
+      "liquid ratio"
+    ],
+    "abbr": [],
+    "short": "A stricter version of the current ratio that leaves out inventory, comparing cash, investments and money owed by customers with bills due soon.",
+    "kid": "Count only the coins in your piggy bank and the coins your friends will give you tomorrow, not the toys you might sell someday. Is that enough to pay what you owe this week?",
+    "detail": "The quick ratio, or acid-test ratio, measures whether a company can meet its short-term obligations without relying on selling inventory. It takes current assets and removes inventory and prepaid expenses, which cannot quickly be turned into cash to pay bills, leaving cash, marketable securities and receivables, known as quick or liquid assets. A ratio of 1 or more is a common rule of thumb, meaning liquid assets fully cover current liabilities. It is most useful for businesses with large or slow-moving stock, such as jewellery, real estate or capital goods, where the current ratio can look comfortable while cash is tight. Indian textbooks often call it the liquid ratio, and some versions also deduct bank overdrafts from current liabilities, so check the formula being used.",
+    "example": "Say ABC Ltd has current assets of ₹120 crore, including inventory of ₹50 crore and prepaid expenses of ₹5 crore, and current liabilities of ₹65 crore. Its quick ratio is 1.0 ((120 - 50 - 5) / 65), even though its current ratio is about 1.85.",
+    "formula": "Quick ratio = (Current assets - Inventory - Prepaid expenses) / Current liabilities",
+    "related": [
+      "Current ratio",
+      "Cash ratio",
+      "Liquidity ratios",
+      "Working capital",
+      "Inventory"
+    ]
+  },
+  {
+    "id": "cash-ratio",
+    "term": "Cash ratio",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "cash ratio"
+    ],
+    "abbr": [],
+    "short": "The strictest short-term safety test: cash and easily sold investments divided by the bills a company must pay within a year.",
+    "kid": "Count only the coins already in your piggy bank, nothing else. Could those coins alone pay back everyone you owe this week?",
+    "detail": "The cash ratio measures whether a company could pay all its current liabilities using only cash, cash equivalents and readily marketable securities, without collecting receivables or selling inventory. It is the most conservative of the three liquidity ratios, after the current and quick ratios. Lenders look at it most closely when a company is under stress or when customers may pay late. Most healthy businesses run a cash ratio well below 1, because idle cash earns little and is usually better used in operations; a low figure is not alarming by itself if receivables are reliable. Read it alongside cash flow from operations, since steady cash generation matters more than a single balance-sheet snapshot. For Indian companies, check whether liquid mutual fund holdings are classified as current investments and included.",
+    "example": "Say ABC Ltd holds cash of ₹15 crore and liquid mutual fund investments of ₹9 crore, against current liabilities of ₹80 crore. Its cash ratio is 0.3 ((15 + 9) / 80).",
+    "formula": "Cash ratio = (Cash and cash equivalents + Marketable securities) / Current liabilities",
+    "related": [
+      "Quick ratio",
+      "Current ratio",
+      "Liquidity ratios",
+      "Cash and cash equivalents",
+      "Operating cash flow"
+    ]
+  },
+  {
+    "id": "debt-to-equity-ratio",
+    "term": "Debt-to-equity ratio",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "D/E",
+      "D/E ratio",
+      "debt-equity ratio",
+      "gearing"
+    ],
+    "hl": [
+      "debt-to-equity ratio",
+      "debt to equity ratio",
+      "debt-equity ratio",
+      "debt equity ratio",
+      "d/e ratio",
+      "net debt-to-equity",
+      "net debt to equity"
+    ],
+    "abbr": [],
+    "short": "Total debt divided by shareholders' equity, showing how many rupees a company has borrowed for every rupee its owners have put in.",
+    "kid": "You built a toy shop with 5 of your own coins and 10 coins borrowed from friends. You have borrowed twice as much as you put in yourself.",
+    "detail": "The debt-to-equity ratio compares a company's borrowings with its shareholders' equity (share capital plus reserves) and is the most widely quoted leverage measure. A ratio of 1 means debt and equity are equal. Analysts often use net debt, subtracting cash and liquid investments, for a truer picture. Higher leverage can boost ROE when the business earns more than its interest cost, but it adds fixed interest obligations and raises the risk of distress in a downturn. Acceptable levels vary by sector: infrastructure, power and real estate typically carry more debt than IT or FMCG companies, and banks are judged on capital adequacy instead. A common confusion is whether 'debt' means only interest-bearing borrowings (the usual definition, sometimes including lease liabilities) or all liabilities, which gives a much higher figure.",
+    "example": "Say ABC Ltd has borrowings of ₹450 crore, cash of ₹50 crore and shareholders' equity of ₹500 crore. Its debt-to-equity ratio is 0.9 (450 / 500), and its net debt-to-equity is 0.8 ((450 - 50) / 500).",
+    "formula": "Debt-to-equity ratio = Total debt / Shareholders' equity",
+    "related": [
+      "Debt-to-capital ratio",
+      "Equity multiplier",
+      "Solvency ratios",
+      "Net debt",
+      "Financial leverage",
+      "Interest coverage ratio"
+    ]
+  },
+  {
+    "id": "debt-to-capital-ratio",
+    "term": "Debt-to-capital ratio",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "debt to capitalisation"
+    ],
+    "hl": [
+      "debt-to-capital ratio",
+      "debt to capital ratio",
+      "debt-to-capitalisation ratio",
+      "debt-to-capitalization ratio",
+      "debt to capitalisation",
+      "debt to capitalization"
+    ],
+    "abbr": [],
+    "short": "Total debt divided by debt plus shareholders' equity, showing what share of a company's long-term funding is borrowed.",
+    "kid": "Your toy shop was built with 10 coins: 4 borrowed from friends and 6 of your own. So 4 out of every 10 coins were borrowed.",
+    "detail": "The debt-to-capital ratio measures what fraction of a company's total capital, defined as interest-bearing debt plus shareholders' equity, comes from borrowing. Unlike debt-to-equity, which can run to any number, it stays between 0 and 1 for a company with positive equity, which makes it easy to read and compare. The two are directly linked: debt-to-capital = D/E / (1 + D/E), so a debt-to-equity of 1 equals a debt-to-capital of 50%. Credit rating agencies and bond investors use it often, and it resembles the debt weight used in calculating WACC, although WACC ideally uses market values rather than book values. The common confusion is with debt-to-assets, which uses total assets in the denominator, including assets funded by non-debt liabilities such as trade payables.",
+    "example": "Say ABC Ltd has debt of ₹300 crore and shareholders' equity of ₹700 crore. Its total capital is ₹1,000 crore, so its debt-to-capital ratio is 30%, equivalent to a debt-to-equity ratio of about 0.43.",
+    "formula": "Debt-to-capital ratio = Total debt / (Total debt + Shareholders' equity)",
+    "related": [
+      "Debt-to-equity ratio",
+      "Debt-to-assets ratio",
+      "Capital structure",
+      "Weighted average cost of capital",
+      "Solvency ratios"
+    ]
+  },
+  {
+    "id": "debt-to-assets-ratio",
+    "term": "Debt-to-assets ratio",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "debt ratio"
+    ],
+    "hl": [
+      "debt-to-assets ratio",
+      "debt to assets ratio",
+      "debt-to-asset ratio",
+      "debt to asset ratio"
+    ],
+    "abbr": [],
+    "short": "Total debt divided by total assets, showing what share of everything a company owns has been paid for with borrowed money.",
+    "kid": "Your toy shop has 10 toys, and 3 of them were bought with coins borrowed from friends. So 3 out of every 10 toys were paid for by borrowing.",
+    "detail": "The debt-to-assets ratio shows what proportion of a company's assets is financed by debt. Most analysts put interest-bearing debt, both short and long term, in the numerator, but some textbooks define the debt ratio as total liabilities divided by total assets, which includes payables and provisions and gives a higher number, so check which version is used. A ratio of 0.4 means 40% of assets are debt-funded. It is a simple balance-sheet check of financial risk, used by lenders alongside debt-to-equity and coverage ratios. Asset-heavy sectors such as utilities, telecom and real estate usually carry higher ratios than software or services firms. Remember that the book value of assets may differ sharply from what they would fetch if sold, so a moderate ratio does not guarantee lenders would be fully repaid.",
+    "example": "Say ABC Ltd has total assets of ₹1,250 crore, borrowings of ₹500 crore and other liabilities of ₹250 crore. Its debt-to-assets ratio is 0.4 (500 / 1,250), while its total liabilities to assets is 0.6 (750 / 1,250).",
+    "formula": "Debt-to-assets ratio = Total debt / Total assets",
+    "related": [
+      "Debt-to-equity ratio",
+      "Debt-to-capital ratio",
+      "Equity multiplier",
+      "Solvency ratios",
+      "Total assets"
+    ]
+  },
+  {
+    "id": "net-debt-to-ebitda",
+    "term": "Net debt to EBITDA",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "net debt/EBITDA",
+      "debt to EBITDA",
+      "leverage multiple"
+    ],
+    "hl": [
+      "net debt to ebitda",
+      "net debt-to-ebitda",
+      "net debt/ebitda",
+      "debt to ebitda",
+      "debt-to-ebitda",
+      "debt/ebitda"
+    ],
+    "abbr": [],
+    "short": "A company's borrowings minus its cash, divided by its yearly operating earnings (EBITDA): roughly how many years of earnings would repay the debt.",
+    "kid": "You owe your friends 30 coins, and your lemonade stand earns 10 coins a week. It would take about 3 weeks of selling to pay everyone back.",
+    "detail": "Net debt to EBITDA divides net debt (total borrowings minus cash and liquid investments) by annual EBITDA. It estimates how many years of operating earnings, before interest, tax and capital spending, would repay the debt. It is the most common leverage measure for lenders, rating agencies and leveraged buyout investors, and loan agreements frequently cap it as a covenant. Rough rules of thumb treat below 1x as conservative, 2-3x as moderate and above 4-5x as high, but acceptable levels depend on the sector and the stability of cash flows. A negative figure means the company holds more cash than debt (net cash). The ratio flatters companies with big capital spending or tax bills, because EBITDA ignores both, and it can jump suddenly when EBITDA falls in a downturn. Gross debt to EBITDA is a more conservative version.",
+    "example": "Say ABC Ltd has borrowings of ₹2,400 crore, cash of ₹400 crore and EBITDA of ₹800 crore. Its net debt is ₹2,000 crore, so net debt to EBITDA is 2.5x, while gross debt to EBITDA is 3.0x.",
+    "formula": "Net debt to EBITDA = (Total debt - Cash and liquid investments) / EBITDA",
+    "related": [
+      "EBITDA",
+      "Net debt",
+      "Interest coverage ratio",
+      "Debt covenant",
+      "Leveraged buyout",
+      "Debt-to-equity ratio"
+    ]
+  },
+  {
+    "id": "interest-coverage-ratio",
+    "term": "Interest coverage ratio",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "ICR",
+      "times interest earned",
+      "TIE ratio"
+    ],
+    "hl": [
+      "interest coverage ratio",
+      "interest coverage ratios",
+      "interest coverage",
+      "times interest earned",
+      "interest cover"
+    ],
+    "abbr": [
+      "ICR"
+    ],
+    "short": "Operating profit divided by interest expense, showing how many times over a company's earnings can pay the interest on its debt.",
+    "kid": "Your lemonade stand earns 12 coins a week, and you must give your friend 3 coins a week as a thank-you for lending you the jug. You could pay that 4 times over, so you are safe.",
+    "detail": "The interest coverage ratio measures how comfortably a company's operating earnings cover its interest bill. The standard version uses EBIT; some lenders use EBITDA, which gives a higher figure. A ratio below 1 means operating profit does not even cover interest, so the company must borrow more or draw on cash to pay it. Lenders and rating agencies usually want to see well above 2 to 3 times for an industrial company, and many loan agreements set minimum coverage covenants. The Reserve Bank of India's Financial Stability Reports track the share of Indian companies with coverage below 1 as a sign of corporate stress. Remember that interest coverage ignores principal repayments, which the debt service coverage ratio captures, and that it can look strong in one good year and collapse quickly when earnings fall.",
+    "example": "Say ABC Ltd reports EBIT of ₹240 crore and interest expense of ₹60 crore. Its interest coverage ratio is 4 times. If EBIT fell by half to ₹120 crore, coverage would drop to 2 times.",
+    "formula": "Interest coverage ratio = EBIT / Interest expense",
+    "related": [
+      "Debt service coverage ratio",
+      "Fixed charge coverage ratio",
+      "Solvency ratios",
+      "Net debt to EBITDA",
+      "Debt covenant"
+    ]
+  },
+  {
+    "id": "debt-service-coverage-ratio",
+    "term": "Debt service coverage ratio",
+    "cat": "ratios",
+    "level": "i",
+    "aliases": [
+      "DSCR"
+    ],
+    "hl": [
+      "debt service coverage ratio",
+      "debt-service coverage ratio",
+      "debt service coverage"
+    ],
+    "abbr": [
+      "DSCR"
+    ],
+    "short": "The cash a business generates divided by the interest and loan repayments due in the same period, showing whether it can meet them.",
+    "kid": "Every week you must give your friend back 2 borrowed coins plus 1 extra coin as a thank-you. If your stand earns 6 coins a week, you can pay that twice over.",
+    "detail": "The debt service coverage ratio compares the cash a business or project generates with its total debt service, meaning interest plus scheduled principal repayments, for the same period. Unlike interest coverage, it captures the full repayment burden. It is the central metric in project finance, infrastructure lending and commercial real estate, and Indian banks commonly use it when appraising term loans. Lenders usually want an average DSCR comfortably above 1, often around 1.2 to 1.5 over the life of the loan, though thresholds vary by lender and sector. A DSCR below 1 means cash flow cannot meet repayments without fresh funding or dipping into reserves. Definitions vary: corporate lenders often use EBITDA, or profit after tax plus depreciation and interest, as the numerator, while property lenders use net operating income.",
+    "example": "Say ABC Ltd's project generates ₹90 crore of cash available for debt service in a year, while interest due is ₹35 crore and principal repayments are ₹40 crore. Its DSCR is 1.2 (90 / 75).",
+    "formula": "DSCR = Cash available for debt service / (Interest + Principal repayments due)",
+    "related": [
+      "Interest coverage ratio",
+      "Fixed charge coverage ratio",
+      "Project finance",
+      "Debt covenant",
+      "Solvency ratios"
+    ]
+  },
+  {
+    "id": "fixed-charge-coverage-ratio",
+    "term": "Fixed charge coverage ratio",
+    "cat": "ratios",
+    "level": "a",
+    "aliases": [
+      "FCCR"
+    ],
+    "hl": [
+      "fixed charge coverage ratio",
+      "fixed-charge coverage ratio",
+      "fixed charge coverage",
+      "fixed-charge coverage"
+    ],
+    "abbr": [
+      "FCCR"
+    ],
+    "short": "A ratio showing how many times a company's earnings cover its fixed payments, such as interest and rent on leased assets.",
+    "kid": "Each week you must pay rent for your lemonade stall and give your friend a coin for the jug you borrowed. This check asks whether the coins you earn cover all those must-pay costs together.",
+    "detail": "The fixed charge coverage ratio extends interest coverage by adding other unavoidable fixed payments, most commonly lease or rent payments, to both the numerator and the denominator. The classic formula is (EBIT + fixed charges before tax) / (fixed charges before tax + interest), and some versions also include preferred dividends or scheduled principal repayments. It matters most for businesses that rent rather than own their assets, such as retailers, restaurants and airlines, whose interest coverage can look comfortable while large lease obligations go unseen. Leveraged loan agreements often set a minimum FCCR covenant, sometimes defined using EBITDA minus capital expenditure. Since Ind AS 116 and IFRS 16 brought most leases onto the balance sheet, lease costs now appear partly as interest and depreciation, so check how the version you are reading treats them.",
+    "example": "Say ABC Retail Ltd has EBIT of ₹100 crore, interest expense of ₹20 crore and annual lease payments of ₹30 crore. Its fixed charge coverage ratio is (100 + 30) / (30 + 20) = 2.6 times, compared with an interest coverage of 5 times.",
+    "formula": "FCCR = (EBIT + Fixed charges before tax) / (Fixed charges before tax + Interest expense)",
+    "related": [
+      "Interest coverage ratio",
+      "Debt service coverage ratio",
+      "Lease liability",
+      "Debt covenant",
+      "Solvency ratios"
+    ]
+  },
+  {
+    "id": "asset-turnover-ratio",
+    "term": "Asset turnover ratio",
+    "cat": "ratios",
+    "level": "b",
+    "aliases": [
+      "asset turnover",
+      "total asset turnover"
+    ],
+    "hl": [
+      "asset turnover ratio",
+      "asset turnover",
+      "total asset turnover"
+    ],
+    "abbr": [],
+    "short": "Revenue divided by total assets, showing how many rupees of sales a company generates for each rupee of assets it owns.",
+    "kid": "You have one lemonade jug. If you fill it and sell it all three times a day, your jug is working hard. If you fill it only once, it is mostly sitting around.",
+    "detail": "The asset turnover ratio measures how efficiently a company uses its assets to produce sales. A ratio of 2 means it generates ₹2 of revenue for every ₹1 of assets. It is the middle term in DuPont analysis, linking net margin to return on assets: ROA = net margin x asset turnover. Low-margin, high-volume businesses such as supermarkets and distributors typically have high asset turnover, often above 2, while capital-heavy sectors such as power, telecom and infrastructure may be well below 1. So compare it only within an industry or against the company's own history. A rising ratio usually signals better use of capacity, but it can also reflect ageing, heavily depreciated assets rather than real improvement. Use average assets for the period, and look at fixed asset turnover to focus on plant and machinery.",
+    "example": "Say ABC Ltd generates revenue of ₹1,800 crore, with total assets of ₹1,100 crore at the start of the year and ₹1,300 crore at the end. Its average assets are ₹1,200 crore, so its asset turnover is 1.5 times.",
+    "formula": "Asset turnover ratio = Revenue / Average total assets",
+    "related": [
+      "Efficiency ratios",
+      "DuPont analysis",
+      "Return on assets",
+      "Fixed asset turnover ratio",
+      "Inventory turnover ratio"
+    ]
+  }
+]

@@ -1,0 +1,1055 @@
+[
+  {
+    "id": "portfolio",
+    "term": "Portfolio",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "investment portfolio",
+      "portfolios",
+      "holdings"
+    ],
+    "hl": [
+      "investment portfolio",
+      "investment portfolios",
+      "equity portfolio",
+      "equity portfolios",
+      "stock portfolio",
+      "stock portfolios"
+    ],
+    "abbr": [],
+    "short": "The full collection of investments a person or fund owns, such as shares, bonds, gold, fixed deposits and cash, viewed together as one whole.",
+    "kid": "Your toy box holds cars, blocks, crayons and a ball. Everything in it together is your collection. Looking at the whole box, not just one toy, tells you what you really have.",
+    "detail": "A portfolio is the complete set of financial assets held by an investor, whether an individual, a mutual fund, a pension fund or an insurer. It can include equities, bonds, cash, gold, real estate and other assets, and its performance is judged as a whole rather than holding by holding. The key insight of portfolio thinking is that the risk of the combination depends on how the pieces move together, not just on how risky each one is alone. That is why fund managers talk about portfolio construction, rebalancing and benchmarks. In India, a typical household might hold equity mutual funds through SIPs, fixed deposits, PPF or EPF balances, and gold. A common confusion is judging a portfolio by its single best or worst holding: one stock falling 30% matters little if it is only 2% of the portfolio.",
+    "example": "Say you hold ₹6 lakh in equity mutual funds, ₹3 lakh in fixed deposits and ₹1 lakh in gold, a portfolio of ₹10 lakh. If equities rise 10%, the FDs earn 7% and gold falls 5%, the portfolio gains ₹60,000 + ₹21,000 - ₹5,000 = ₹76,000, a return of 7.6%.",
+    "formula": "Portfolio return = Sum of (weight of each asset x return of that asset)",
+    "related": [
+      "Diversification",
+      "Asset allocation",
+      "Rebalancing",
+      "Mutual fund",
+      "Portfolio management service"
+    ]
+  },
+  {
+    "id": "diversification",
+    "term": "Diversification",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "diversify",
+      "diversified portfolio",
+      "don't put all your eggs in one basket"
+    ],
+    "hl": [
+      "portfolio diversification",
+      "diversified portfolio",
+      "diversified portfolios",
+      "diversification benefits",
+      "diversification benefit",
+      "diversify portfolio",
+      "diversify portfolios"
+    ],
+    "abbr": [],
+    "short": "Spreading money across many different investments so that a loss in one is cushioned by others, lowering overall risk without necessarily lowering returns.",
+    "kid": "If you carry all your eggs in one basket and drop it, every egg breaks. Put them in a few baskets, and one fall only breaks a few.",
+    "detail": "Diversification means holding assets whose prices do not all move together, so that losses in some are offset by gains or smaller losses in others. Its power comes from imperfect correlation: combining assets that are less than perfectly correlated produces a portfolio whose volatility is lower than the weighted average of their individual volatilities. You can diversify across stocks, sectors, asset classes such as equity, debt and gold, geographies and time. Diversification removes unsystematic, company-specific risk, but it cannot remove systematic risk, the market-wide risk that hits almost everything at once, as in March 2020 when most Indian stocks fell together. A common confusion is equating many holdings with diversification: owning ten private bank stocks, or five large-cap funds with overlapping holdings, is concentration in disguise. The opposite mistake is over-diversifying until a portfolio simply tracks the index at a higher cost.",
+    "example": "Say ABC Ltd, an umbrella maker, gains 20% in a rainy year and loses 10% in a dry one, while XYZ Ltd, a sunscreen maker, does the opposite. Owning only ABC swings between +20% and -10%, but splitting ₹1 lakh equally between the two earns 5% (₹5,000) in either kind of year.",
+    "formula": "",
+    "related": [
+      "Portfolio",
+      "Correlation",
+      "Unsystematic risk",
+      "Systematic risk",
+      "Asset allocation",
+      "Modern portfolio theory"
+    ]
+  },
+  {
+    "id": "asset-allocation",
+    "term": "Asset allocation",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "asset mix",
+      "allocation"
+    ],
+    "hl": [
+      "asset allocation",
+      "asset allocations",
+      "asset mix"
+    ],
+    "abbr": [],
+    "short": "How an investor divides money between broad asset classes such as equity, debt, gold and cash, based on goals, time horizon and risk tolerance.",
+    "kid": "You fill a lunch plate with some rice, some vegetables and a little dessert. Deciding how much of each goes on the plate matters more than finding the perfect carrot.",
+    "detail": "Asset allocation is the decision of what share of a portfolio goes into each broad asset class, typically equity, fixed income, gold or commodities, real estate and cash. Because asset classes respond differently to growth, inflation and interest rates, the mix largely determines a portfolio's long-run return and its ups and downs; a well-known 1986 study of US pension funds by Brinson, Hood and Beebower found that allocation policy explained most of the variation in their returns over time. The right mix depends on goals, time horizon, income stability and temperament. In India, balanced advantage and multi-asset funds automate part of this choice, and planners often shift towards debt as a goal approaches. A common confusion is mixing up asset allocation with fund or stock selection: picking the best equity fund matters less than deciding how much equity to own at all.",
+    "example": "Say Priya, 25, invests ₹1 lakh as 70% equity, 20% debt and 10% gold, that is ₹70,000, ₹20,000 and ₹10,000. If equity returns 12%, debt 7% and gold 8% in a year, she earns ₹8,400 + ₹1,400 + ₹800 = ₹10,600, or 10.6%.",
+    "formula": "",
+    "related": [
+      "Strategic asset allocation",
+      "Tactical asset allocation",
+      "Rebalancing",
+      "Diversification",
+      "Risk tolerance"
+    ]
+  },
+  {
+    "id": "strategic-asset-allocation",
+    "term": "Strategic asset allocation",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "SAA",
+      "long-term asset allocation"
+    ],
+    "hl": [
+      "strategic asset allocation",
+      "long-term asset allocation"
+    ],
+    "abbr": [],
+    "short": "A long-term target mix of asset classes, say 60% equity and 40% debt, chosen from an investor's goals and kept steady for years.",
+    "kid": "Mum decides every lunchbox will be half fruit and half sandwich, all year long. If one day there is extra fruit, she fixes it back to half and half.",
+    "detail": "Strategic asset allocation (SAA) is the policy mix of asset classes an investor commits to for the long run, derived from return objectives, risk tolerance, time horizon, liquidity needs and constraints. It is usually written into an investment policy statement, for example 60% equity, 30% debt and 10% gold, often with tolerance bands such as plus or minus 5 percentage points. As markets move, the actual mix drifts, and the investor rebalances by trimming what has risen and topping up what has fallen, which enforces a disciplined buy-low, sell-high habit. Pension funds, endowments and insurers anchor their investing on an SAA, and many Indian financial planners set one for each goal, such as a child's education. The common confusion is with tactical asset allocation: SAA is the long-term anchor set on fundamentals, while tactical shifts are short-term bets made around it.",
+    "example": "Say an investor's SAA is 60% equity and 40% debt on ₹10 lakh. After a strong year, equity grows to ₹7.2 lakh and debt to ₹4.2 lakh, so the ₹11.4 lakh portfolio is about 63% equity. Rebalancing means moving ₹36,000 from equity to debt, leaving ₹6.84 lakh (60%) in equity and ₹4.56 lakh (40%) in debt.",
+    "formula": "",
+    "related": [
+      "Asset allocation",
+      "Tactical asset allocation",
+      "Rebalancing",
+      "Investment policy statement",
+      "Risk tolerance"
+    ]
+  },
+  {
+    "id": "tactical-asset-allocation",
+    "term": "Tactical asset allocation",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "TAA",
+      "tactical allocation"
+    ],
+    "hl": [
+      "tactical asset allocation",
+      "tactical allocation",
+      "tactical allocations"
+    ],
+    "abbr": [],
+    "short": "Temporarily moving a portfolio away from its long-term target mix to profit from short-term views on markets, then returning to the target later.",
+    "kid": "Lunch is usually half fruit and half sandwich. On a hot day you pack a bit more fruit because it is cool and juicy, then go back to half and half tomorrow.",
+    "detail": "Tactical asset allocation (TAA) is an active strategy that deliberately deviates from the strategic asset allocation for weeks or months, overweighting asset classes, sectors or regions expected to do better and underweighting those expected to lag. Signals can include valuation, such as the Nifty 50's price-to-earnings ratio relative to its history, momentum, the stage of the economic cycle or interest-rate expectations. Deviations are usually kept within preset bands so that the portfolio's overall risk stays recognisable. In India, balanced advantage or dynamic asset allocation funds apply a rules-based version, cutting net equity when valuations look stretched and adding it after falls. TAA adds value only if the views are right often enough to beat trading costs and taxes, and many studies find most tactical calls fail to beat a disciplined strategic mix. Do not confuse TAA with all-in, all-out market timing: TAA tilts the mix, it does not abandon it.",
+    "example": "Say the strategic mix is 60% equity and 40% debt on ₹50 lakh. Expecting a rate cut to lift bond prices, the manager shifts to 55% equity and 45% debt for six months, moving ₹2.5 lakh from equity to debt, and then returns to 60:40.",
+    "formula": "",
+    "related": [
+      "Strategic asset allocation",
+      "Asset allocation",
+      "Active management",
+      "Market timing",
+      "Rebalancing"
+    ]
+  },
+  {
+    "id": "expected-return",
+    "term": "Expected return",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "expected rate of return",
+      "E(R)"
+    ],
+    "hl": [
+      "expected rate of return",
+      "expected rates of return"
+    ],
+    "abbr": [],
+    "short": "The average return an investment is predicted to earn, found by weighting each possible outcome by how likely it is.",
+    "kid": "You guess how many apples your tree will give this year. Some years it gives more and some years less. Your best middle guess is what you expect.",
+    "detail": "Expected return is the probability-weighted average of all the returns an investment could earn over a period. For a portfolio, it is simply the weighted average of the expected returns of its holdings. Analysts estimate it from historical averages, from models such as CAPM (the risk-free rate plus beta times the equity risk premium), or from building blocks such as dividend yield plus expected earnings growth. Expected return is the reward side of every risk-return decision and the starting input for portfolio optimisation and for discount rates in valuation. The common confusion is reading it as a promise or as the most likely outcome: an investment with a 12% expected return might deliver -20% one year and +40% the next, and may never earn exactly 12% in any single year. Expected returns are also estimates, so small changes in assumptions can swing the results considerably.",
+    "example": "Say ABC Ltd's stock has a 30% chance of returning 25%, a 50% chance of returning 10% and a 20% chance of losing 15%. Its expected return is (0.30 x 25%) + (0.50 x 10%) + (0.20 x -15%) = 7.5% + 5% - 3% = 9.5%.",
+    "formula": "E(R) = Sum of (probability of each outcome x return in that outcome); for a portfolio, E(Rp) = Sum of (wi x E(Ri))",
+    "related": [
+      "Risk-free rate",
+      "Capital asset pricing model",
+      "Standard deviation",
+      "Required rate of return",
+      "Equity risk premium"
+    ]
+  },
+  {
+    "id": "volatility",
+    "term": "Volatility",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "vol",
+      "market volatility",
+      "price volatility",
+      "realised volatility"
+    ],
+    "hl": [
+      "volatility",
+      "market volatility",
+      "price volatility",
+      "stock market volatility",
+      "share price volatility"
+    ],
+    "abbr": [],
+    "short": "How sharply an investment's price swings up and down over time, usually measured by how far its returns typically stray from their average.",
+    "kid": "A calm pond barely moves, but a stormy sea throws big waves up and down. Some things stay calm like the pond, and some jump around like the sea.",
+    "detail": "Volatility measures the size of price fluctuations. Statistically it is the standard deviation of returns, usually annualised by multiplying daily volatility by the square root of about 252 trading days. Realised or historical volatility looks back at actual price moves, while implied volatility is the market's forward-looking estimate extracted from option prices, which India VIX summarises for the Nifty 50. Volatility is the most common proxy for risk in portfolio theory and feeds into the Sharpe ratio, position sizing and option pricing. Small-cap stocks and cryptocurrencies are typically far more volatile than large-cap stocks or government bonds. The common confusion is equating volatility with the chance of permanent loss: a volatile stock can recover, while a steady-looking bond can still default. Volatility also counts upside swings as risk, which is why some investors prefer downside measures such as drawdown or downside deviation.",
+    "example": "Say ABC Ltd's daily returns have a standard deviation of 1.5%. Its annualised volatility is about 1.5% x √252 ≈ 1.5% x 15.87 ≈ 23.8%.",
+    "formula": "Annualised volatility = Standard deviation of daily returns x √252",
+    "related": [
+      "Standard deviation",
+      "Historical volatility",
+      "Implied volatility",
+      "India VIX",
+      "Downside risk",
+      "Beta"
+    ]
+  },
+  {
+    "id": "standard-deviation",
+    "term": "Standard deviation",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "SD",
+      "std dev",
+      "sigma",
+      "σ"
+    ],
+    "hl": [
+      "standard deviation",
+      "standard deviations"
+    ],
+    "abbr": [],
+    "short": "A statistical measure of how spread out numbers are around their average; in finance, the usual yardstick for an investment's risk.",
+    "kid": "Five friends are almost the same height, so they stand close together in a line. Five others are very short and very tall, so they are spread far apart. This tells you how spread out things are.",
+    "detail": "Standard deviation is the square root of variance, the average squared distance of each observation from the mean. Applied to returns, it shows how much results typically differ from the average, which is why it is the standard definition of total risk in modern portfolio theory and the denominator of the Sharpe ratio. If returns were normally distributed, about two-thirds of outcomes would fall within one standard deviation of the mean and about 95% within two. Indian mutual fund factsheets report it alongside beta and the Sharpe ratio, usually annualised from monthly or daily data. Two cautions matter. Real market returns have fatter tails than the normal curve, so extreme crashes happen more often than standard deviation suggests. And it treats upside surprises as risk just as much as losses. Note also that the sample standard deviation divides by n - 1, not n.",
+    "example": "Say a fund returned 10%, 20% and 0% in three years. The mean is 10%, the squared deviations are 0, 100 and 100, and the sample variance is 200 / 2 = 100, so the standard deviation is √100 = 10 percentage points.",
+    "formula": "σ = √[Sum of (Ri - Mean return)² / (n - 1)]",
+    "related": [
+      "Volatility",
+      "Variance",
+      "Covariance",
+      "Sharpe ratio",
+      "Normal distribution"
+    ]
+  },
+  {
+    "id": "covariance",
+    "term": "Covariance",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "cov"
+    ],
+    "hl": [
+      "covariance"
+    ],
+    "abbr": [],
+    "short": "A measure of whether two investments' returns tend to rise and fall together or move in opposite directions.",
+    "kid": "On sunny days, more ice cream and more sunglasses get sold, so they go up together. Umbrellas do the opposite. This shows which things go up and down together.",
+    "detail": "Covariance measures the joint variability of two assets' returns. Positive covariance means they tend to be above their averages at the same time; negative covariance means one tends to be above its average when the other is below. It is calculated as the average product of the two assets' deviations from their means. Covariance is the building block of portfolio risk: the variance of a two-asset portfolio depends on each asset's variance plus twice the weighted covariance between them, which is why combining assets with low or negative covariance reduces risk. Beta is also defined using covariance, as a stock's covariance with the market divided by the market's variance. The common confusion is reading its size as the strength of the relationship. Covariance is in squared return units and grows with each asset's volatility, so it cannot be compared across pairs; correlation rescales it to between -1 and +1.",
+    "example": "Say stock A returned 10% and then 20% over two years, while stock B returned 4% and then 8%. Their means are 15% and 6%, the paired deviations are (-5, -2) and (+5, +2), and the products are 10 and 10, so the sample covariance is (10 + 10) / (2 - 1) = 20, in percent squared.",
+    "formula": "Cov(A,B) = Sum of [(RA - Mean of RA) x (RB - Mean of RB)] / (n - 1)",
+    "related": [
+      "Correlation",
+      "Standard deviation",
+      "Beta",
+      "Diversification",
+      "Modern portfolio theory"
+    ]
+  },
+  {
+    "id": "correlation",
+    "term": "Correlation",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "correlation coefficient",
+      "Pearson correlation",
+      "negative correlation",
+      "positive correlation"
+    ],
+    "hl": [
+      "correlation",
+      "correlations",
+      "correlation coefficient",
+      "negative correlation",
+      "positive correlation",
+      "negatively correlated",
+      "positively correlated"
+    ],
+    "abbr": [],
+    "short": "A number from -1 to +1 showing how closely two investments move together: +1 in lockstep, -1 exactly opposite, 0 no clear link.",
+    "kid": "Your shadow always moves exactly when you move. A friend on a seesaw goes down when you go up. This tells you which kind of partner two things are.",
+    "detail": "Correlation, usually the Pearson correlation coefficient, is covariance divided by the product of the two assets' standard deviations, which scales it to a range from -1 to +1. A value near +1 means returns move together closely, near -1 means they move in opposite directions, and near 0 means no linear relationship. It is the key input for diversification: the lower the correlation between holdings, the more risk falls when you combine them, and any correlation below +1 brings some benefit. Indian equities and gold, for instance, have often shown low correlation, one reason many advisers hold some gold. Three cautions apply. Correlations change over time and tend to jump towards +1 in crises, exactly when diversification is needed most. Correlation captures only linear co-movement. And correlation is not causation. It also says nothing about the size of moves, only their direction and consistency.",
+    "example": "Say the covariance between two stocks' returns is 0.018 and their standard deviations are 20% (0.20) and 30% (0.30). Their correlation is 0.018 / (0.20 x 0.30) = 0.018 / 0.06 = 0.3, a mild positive link.",
+    "formula": "Correlation (ρ) = Cov(A,B) / (σA x σB)",
+    "related": [
+      "Covariance",
+      "Diversification",
+      "Standard deviation",
+      "Beta",
+      "Modern portfolio theory"
+    ]
+  },
+  {
+    "id": "beta",
+    "term": "Beta",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "β",
+      "market beta",
+      "stock beta",
+      "high-beta",
+      "low-beta"
+    ],
+    "hl": [
+      "high-beta",
+      "high beta",
+      "low-beta",
+      "low beta",
+      "market beta",
+      "stock beta"
+    ],
+    "abbr": [],
+    "short": "How much a stock tends to move when the whole market moves; beta 1.5 means about 1.5 times the market's swings.",
+    "kid": "When a big boat rocks, a tiny boat tied to it rocks even more, and a heavy raft rocks less. This shows how much each little boat moves when the big one does.",
+    "detail": "Beta measures a security's sensitivity to movements in the overall market, usually proxied by an index such as the Nifty 50 or S&P 500. It is calculated as the covariance of the stock's returns with the market's returns divided by the variance of market returns, which equals the slope of a regression of the stock's returns on the market's. A beta of 1 moves in line with the market, above 1 amplifies it (often banks, metals and real estate), below 1 dampens it (often FMCG and pharma), and a negative beta moves against it. Beta captures only systematic risk, which is why CAPM uses it to set the cost of equity. Common confusions: a low beta does not mean low total risk, since a stock can be volatile for company-specific reasons yet barely track the index; and beta varies with the period, data frequency and index used.",
+    "example": "Say ABC Ltd has a beta of 1.4. If the Nifty 50 rises 5%, ABC would be expected to rise about 1.4 x 5% = 7%, and if the index falls 10%, to fall about 14%, ignoring company-specific news.",
+    "formula": "β = Cov(Ri, Rm) / Var(Rm)",
+    "related": [
+      "Systematic risk",
+      "Capital asset pricing model",
+      "Alpha",
+      "Unlevered beta",
+      "Covariance",
+      "Treynor ratio"
+    ]
+  },
+  {
+    "id": "alpha",
+    "term": "Alpha",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "Jensen's alpha",
+      "generating alpha",
+      "α"
+    ],
+    "hl": [
+      "jensen's alpha",
+      "generating alpha",
+      "generate alpha",
+      "generated alpha",
+      "alpha generation",
+      "positive alpha",
+      "negative alpha"
+    ],
+    "abbr": [],
+    "short": "The return an investment earns above what its market risk alone would predict; a common measure of a fund manager's skill.",
+    "kid": "Everyone in class grows taller each year. If you grew more than kids your age usually grow, that extra bit is all yours.",
+    "detail": "Alpha is the portion of a return not explained by exposure to the market. Jensen's alpha, the textbook version, is the actual return minus the return CAPM predicts for that beta: the risk-free rate plus beta times the market's excess return. Positive alpha suggests the manager added value through stock selection or timing; negative alpha means the investor would have done better in a cheaper index fund carrying the same market risk. In practice, people also use alpha loosely to mean simply beating a benchmark, and Indian fund factsheets report it against the scheme's benchmark index. Common confusions: a fund that beat the Nifty in a rally may have done so only by taking more risk through a higher beta, which is not true alpha; and alpha reflects fees only if it is computed on net returns. Persistent positive alpha is rare.",
+    "example": "Say a fund returned 15% in a year when the market returned 12% and the risk-free rate was 6%. With a beta of 1.2, CAPM predicts 6% + 1.2 x (12% - 6%) = 13.2%, so the fund's Jensen's alpha is 15% - 13.2% = 1.8%.",
+    "formula": "Jensen's alpha = Rp - [Rf + β x (Rm - Rf)]",
+    "related": [
+      "Beta",
+      "Capital asset pricing model",
+      "Active return",
+      "Information ratio",
+      "Benchmark"
+    ]
+  },
+  {
+    "id": "risk-adjusted-return",
+    "term": "Risk-adjusted return",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "risk adjusted returns",
+      "return per unit of risk"
+    ],
+    "hl": [
+      "risk-adjusted return",
+      "risk-adjusted returns",
+      "risk adjusted return",
+      "risk adjusted returns"
+    ],
+    "abbr": [],
+    "short": "A return judged against the risk taken to earn it, so investments of different riskiness can be compared fairly.",
+    "kid": "Two kids each win 10 marbles. One played carefully, and the other nearly dropped all of them on the way. The careful winner did the smarter job.",
+    "detail": "A risk-adjusted return expresses performance relative to the risk borne rather than in raw percentage terms. The most common measures are the Sharpe ratio (excess return per unit of total volatility), the Sortino ratio (per unit of downside volatility), the Treynor ratio (per unit of beta), Jensen's alpha and the information ratio. The idea matters because higher returns can almost always be bought by taking more risk through leverage, concentration or riskier assets, so raw returns flatter aggressive strategies. Fund research firms such as Morningstar and Value Research build risk adjustments into their star ratings, and Indian mutual fund factsheets publish Sharpe ratios. The common confusion is assuming one measure fits all: the right choice depends on whether the portfolio is your whole wealth, where total risk matters, or one slice of a diversified holding, where beta matters more.",
+    "example": "Say Fund A returned 18% with 20% volatility and Fund B returned 14% with 10% volatility, with a 6% risk-free rate. Fund A earns (18 - 6) / 20 = 0.6 units of excess return per unit of risk, while Fund B earns (14 - 6) / 10 = 0.8, so B did better on a risk-adjusted basis despite its lower return.",
+    "formula": "",
+    "related": [
+      "Sharpe ratio",
+      "Sortino ratio",
+      "Treynor ratio",
+      "Information ratio",
+      "Alpha"
+    ]
+  },
+  {
+    "id": "sharpe-ratio",
+    "term": "Sharpe ratio",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "Sharpe",
+      "reward-to-variability ratio"
+    ],
+    "hl": [
+      "sharpe ratio",
+      "sharpe ratios"
+    ],
+    "abbr": [],
+    "short": "A portfolio's return above a safe government rate, divided by how much its returns swing; higher means more reward per unit of risk.",
+    "kid": "Two kids pick apples from a tree. One gets a few more but wobbles and nearly falls each time. This picks the kid who gets the most apples for the least wobbling.",
+    "detail": "The Sharpe ratio, developed by William F. Sharpe in 1966, measures excess return per unit of total risk: the portfolio's return minus the risk-free rate, divided by the standard deviation of its returns. It asks whether a return came from skill or simply from taking more risk. It is the most widely quoted risk-adjusted measure, appears on Indian mutual fund factsheets, usually with an overnight MIBOR or Treasury bill rate as the risk-free rate, and is used to compare funds, strategies and asset classes. In portfolio theory, the tangency portfolio on the efficient frontier is the one with the highest Sharpe ratio. Cautions: it assumes returns are roughly normal, so it can flatter strategies with rare large losses, such as selling options; it penalises upside volatility; and ratios are comparable only when computed over the same period, data frequency and risk-free rate.",
+    "example": "Say a fund returned 14% a year with 16% volatility while the risk-free rate was 6%. Its Sharpe ratio is (14% - 6%) / 16% = 0.5. A rival returning 12% with 10% volatility scores (12% - 6%) / 10% = 0.6, which is better on a risk-adjusted basis.",
+    "formula": "Sharpe ratio = (Rp - Rf) / σp",
+    "related": [
+      "Risk-adjusted return",
+      "Sortino ratio",
+      "Treynor ratio",
+      "Information ratio",
+      "Standard deviation",
+      "Risk-free rate"
+    ]
+  },
+  {
+    "id": "sortino-ratio",
+    "term": "Sortino ratio",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "Sortino"
+    ],
+    "hl": [
+      "sortino ratio",
+      "sortino ratios"
+    ],
+    "abbr": [],
+    "short": "Return earned above a minimum target, divided by how badly returns fall below that target; upside jumps are not counted as risk.",
+    "kid": "Bumping your head hurts, but jumping for joy does not. This counts only the bumps, not the happy jumps, when deciding how rough a ride was.",
+    "detail": "The Sortino ratio, named after Frank Sortino, refines the Sharpe ratio by replacing total standard deviation with downside deviation, which measures only returns falling below a minimum acceptable return (MAR) such as zero or the risk-free rate. The numerator is the portfolio's return minus that MAR. Because investors usually fear losses rather than pleasant surprises, the Sortino ratio better rewards strategies with lumpy upside and limited downside, and it is popular for evaluating hedge funds, portfolio management services and options-based strategies. A fund with a high Sortino ratio but an ordinary Sharpe ratio has volatility skewed to the upside. Cautions: the result depends heavily on the MAR chosen and on having enough losing periods to estimate downside deviation reliably, so with few bad months in the sample the ratio can look misleadingly high. Compare Sortino ratios only when they use the same target and period.",
+    "example": "Say a portfolio returned 13% a year, the minimum acceptable return is 6% and the downside deviation is 7%. Its Sortino ratio is (13% - 6%) / 7% = 1.0. If its total volatility were 14%, its Sharpe ratio on the same 6% would be only 0.5, showing that much of its swinging was on the upside.",
+    "formula": "Sortino ratio = (Rp - MAR) / Downside deviation",
+    "related": [
+      "Sharpe ratio",
+      "Downside risk",
+      "Risk-adjusted return",
+      "Standard deviation",
+      "Drawdown"
+    ]
+  },
+  {
+    "id": "treynor-ratio",
+    "term": "Treynor ratio",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "Treynor measure",
+      "reward-to-volatility ratio"
+    ],
+    "hl": [
+      "treynor ratio",
+      "treynor measure"
+    ],
+    "abbr": [],
+    "short": "A portfolio's return above a safe government rate, divided by how strongly it moves with the market; reward per unit of market risk.",
+    "kid": "When the wind blows, every kite flies higher. This checks how high your kite flew compared with how much the wind pushed it.",
+    "detail": "The Treynor ratio, introduced by Jack Treynor in 1965, measures excess return per unit of systematic risk: the portfolio's return minus the risk-free rate, divided by its beta. Unlike the Sharpe ratio, which uses total volatility, it ignores company-specific risk on the logic that a well-diversified investor can diversify that away and is paid only for bearing market risk. It is therefore best suited to judging a portfolio that forms one part of a larger diversified holding, such as one equity fund among several. Cautions: it is meaningful only when beta describes the portfolio's risk well, so it misleads for concentrated portfolios whose risk is largely stock-specific; it breaks down for negative or near-zero betas; and beta estimates vary with the index and period used. Ranking funds on Treynor and Sharpe together is useful: a fund that ranks far better on Treynor than on Sharpe is poorly diversified.",
+    "example": "Say Fund A returned 16% with a beta of 1.25 and Fund B returned 13% with a beta of 0.7, while the risk-free rate was 6%. Fund A's Treynor ratio is (16% - 6%) / 1.25 = 8%, and Fund B's is (13% - 6%) / 0.7 = 10%, so B earned more per unit of market risk.",
+    "formula": "Treynor ratio = (Rp - Rf) / βp",
+    "related": [
+      "Sharpe ratio",
+      "Beta",
+      "Systematic risk",
+      "Risk-adjusted return",
+      "Capital asset pricing model"
+    ]
+  },
+  {
+    "id": "information-ratio",
+    "term": "Information ratio",
+    "cat": "portfolio",
+    "level": "a",
+    "aliases": [
+      "IR"
+    ],
+    "hl": [
+      "information ratio",
+      "information ratios"
+    ],
+    "abbr": [],
+    "short": "How much a fund beats its comparison index on average, divided by how unevenly it does so; a gauge of consistent manager skill.",
+    "kid": "Two kids race a friend every day. One wins by a little every single time, and the other sometimes wins big and sometimes loses. The steady winner is the one you can count on.",
+    "detail": "The information ratio (IR) divides a portfolio's active return, its return minus the benchmark's, by its tracking error, the standard deviation of that active return. It measures how much outperformance a manager delivers per unit of active risk taken by deviating from the index. Over long periods, an IR of about 0.5 is generally regarded as good and above 1.0 as exceptional. Institutional investors use it to select and monitor active managers, and it links to the fundamental law of active management, which says IR depends on skill and on the number of independent bets. Unlike the Sharpe ratio, which compares with a risk-free asset, the IR compares with a benchmark, so the benchmark choice is critical: measuring a mid-cap fund against the Nifty 50 can produce a flattering IR that reflects style rather than skill. Do not confuse it with investor relations, which shares the abbreviation.",
+    "example": "Say a large-cap fund returned 14% while its benchmark returned 11%, so its active return was 3%. If its tracking error was 4%, its information ratio is 3% / 4% = 0.75.",
+    "formula": "Information ratio = (Rp - Rb) / Tracking error",
+    "related": [
+      "Active return",
+      "Tracking error",
+      "Alpha",
+      "Sharpe ratio",
+      "Benchmark",
+      "Active management"
+    ]
+  },
+  {
+    "id": "active-return",
+    "term": "Active return",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "excess return over benchmark",
+      "outperformance",
+      "underperformance"
+    ],
+    "hl": [
+      "active return",
+      "active returns",
+      "excess return over benchmark",
+      "excess returns over benchmark"
+    ],
+    "abbr": [],
+    "short": "A portfolio's return minus the return of the index it is measured against; positive means it beat the index, negative means it lagged.",
+    "kid": "Your friend runs to the gate in ten seconds, and you take eight. You were two seconds quicker, and that gap is how much better you did.",
+    "detail": "Active return is the portfolio return minus the benchmark return over the same period, the simplest measure of whether active management added value. It arises from active decisions: overweighting or underweighting sectors and stocks relative to the index, holding cash or timing the market. Its standard deviation is the tracking error, and active return divided by tracking error gives the information ratio. In India, SEBI has required mutual funds since 2018 to compare performance with a total return index (TRI) benchmark, which includes dividends and so makes comparisons fairer than a price index. Common confusions: active return is not the same as alpha, because a fund can beat its index simply by carrying a higher beta in a rising market; and the benchmark should match the fund's style, since a small-cap fund compared with the Nifty 50 is not a fair test. Always compare returns after expenses.",
+    "example": "Say a flexi-cap fund returned 15.5% after expenses while its benchmark TRI returned 13%. Its active return is 15.5% - 13% = 2.5 percentage points. Had the benchmark returned 17% instead, the active return would be -1.5 points, which is underperformance.",
+    "formula": "Active return = Portfolio return - Benchmark return",
+    "related": [
+      "Information ratio",
+      "Tracking error",
+      "Alpha",
+      "Benchmark",
+      "Total return index",
+      "Active management"
+    ]
+  },
+  {
+    "id": "capture-ratio",
+    "term": "Capture ratio",
+    "cat": "portfolio",
+    "level": "a",
+    "aliases": [
+      "upside capture ratio",
+      "downside capture ratio",
+      "up-market capture",
+      "down-market capture"
+    ],
+    "hl": [
+      "upside capture ratio",
+      "downside capture ratio",
+      "upside capture",
+      "downside capture",
+      "capture ratio",
+      "capture ratios"
+    ],
+    "abbr": [],
+    "short": "How much of an index's gains a fund catches in rising markets, and how much of its losses it suffers in falling ones.",
+    "kid": "When it rains sweets, a good bucket catches lots of them. When it rains mud, a good bucket catches very little. This checks how your bucket does in both kinds of rain.",
+    "detail": "Capture ratios compare a fund's returns with its benchmark's separately for rising and falling periods. The upside capture ratio is the fund's return in periods when the benchmark rose, divided by the benchmark's return in those periods, times 100; the downside capture ratio does the same for periods when the benchmark fell. An upside capture of 110 means the fund gained 10% more than the index in rising months, and a downside capture of 80 means it lost only 80% as much in falling months. The ideal is high upside and low downside capture, and dividing upside by downside gives an overall capture ratio, where above 1 is favourable. Cautions: results depend heavily on the period and on monthly versus daily data, and low downside capture may come from holding cash rather than skill. A negative downside capture means the fund actually rose while the market fell.",
+    "example": "Say that in rising months the benchmark gained a cumulative 20% and the fund 22%, while in falling months the benchmark lost 10% and the fund 7%. Upside capture is 22 / 20 x 100 = 110, downside capture is 7 / 10 x 100 = 70, and the overall capture ratio is 110 / 70 ≈ 1.57.",
+    "formula": "Upside capture = (Fund return in up-market periods / Benchmark return in up-market periods) x 100; downside capture uses down-market periods",
+    "related": [
+      "Active return",
+      "Downside risk",
+      "Beta",
+      "Benchmark",
+      "Information ratio"
+    ]
+  },
+  {
+    "id": "capital-asset-pricing-model",
+    "term": "Capital asset pricing model",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "CAPM"
+    ],
+    "hl": [
+      "capital asset pricing model"
+    ],
+    "abbr": [
+      "CAPM"
+    ],
+    "short": "A model that sets an investment's fair expected return as a safe government rate plus extra reward for how much market risk it carries.",
+    "kid": "If you agree to go on a scary ride, you want a bigger treat for it. The scarier the ride, the bigger the treat should be.",
+    "detail": "The capital asset pricing model (CAPM), developed in the 1960s by William Sharpe, John Lintner and Jan Mossin building on Harry Markowitz's work, says the expected return on any asset equals the risk-free rate plus its beta times the market risk premium. Because diversification eliminates company-specific risk, only systematic risk, measured by beta, should earn a reward. CAPM is the most widely used way to estimate the cost of equity in DCF valuations and WACC calculations, including in Indian equity research, where analysts typically use the 10-year G-sec yield as the risk-free rate. It also supplies the benchmark for Jensen's alpha. Cautions: its assumptions, such as frictionless markets, unlimited borrowing at the risk-free rate and single-period investors, are unrealistic, and empirical tests find beta explains returns poorly, which led to multi-factor models such as Fama-French. Results also swing with the chosen risk premium and beta estimate.",
+    "example": "Say the risk-free rate is 7%, the expected market return is 13% and ABC Ltd's beta is 1.2. CAPM gives ABC's expected return, or cost of equity, as 7% + 1.2 x (13% - 7%) = 7% + 7.2% = 14.2%.",
+    "formula": "E(Ri) = Rf + βi x [E(Rm) - Rf]",
+    "related": [
+      "Beta",
+      "Security market line",
+      "Cost of equity",
+      "Equity risk premium",
+      "Risk-free rate",
+      "Systematic risk"
+    ]
+  },
+  {
+    "id": "security-market-line",
+    "term": "Security market line",
+    "cat": "portfolio",
+    "level": "a",
+    "aliases": [
+      "SML"
+    ],
+    "hl": [
+      "security market line"
+    ],
+    "abbr": [],
+    "short": "A graph line showing the return an investment should earn for each level of market risk; investments plotting above it look cheap.",
+    "kid": "Taller slides should be more fun. A tall but boring slide is a poor deal, and a small slide that is super fun is a great find.",
+    "detail": "The security market line (SML) is the graphical form of CAPM. It plots expected return on the vertical axis against beta on the horizontal axis, starting at the risk-free rate (a beta of zero) and passing through the market portfolio (a beta of one); its slope is the market risk premium. Every correctly priced asset should lie on the line. An asset plotting above the SML offers more return than its systematic risk requires, implying positive alpha and undervaluation; one below the line is overvalued. Shifts matter too: a rise in the risk-free rate moves the whole line up, while greater investor fear raises the risk premium and steepens it. The common confusion is with the capital market line: the CML uses total risk (standard deviation) and applies only to efficient portfolios, whereas the SML uses beta and applies to every individual security and portfolio.",
+    "example": "Say the risk-free rate is 6% and the market risk premium is 7%. For a stock with a beta of 1.5, the SML requires 6% + 1.5 x 7% = 16.5%. If analysts expect the stock to return 19%, it plots 2.5 percentage points above the line and looks undervalued.",
+    "formula": "Required return = Rf + β x (Rm - Rf)",
+    "related": [
+      "Capital asset pricing model",
+      "Capital market line",
+      "Beta",
+      "Alpha",
+      "Equity risk premium"
+    ]
+  },
+  {
+    "id": "capital-market-line",
+    "term": "Capital market line",
+    "cat": "portfolio",
+    "level": "a",
+    "aliases": [
+      "CML"
+    ],
+    "hl": [
+      "capital market line"
+    ],
+    "abbr": [],
+    "short": "A line showing the best possible return for each level of total risk, from mixing a safe asset with the overall market portfolio.",
+    "kid": "You can mix plain water with juice. More juice is tastier but stickier, and more water is plainer but safer. The best drinks come from getting the mix of just these two right.",
+    "detail": "The capital market line (CML) shows the risk-return combinations available by mixing the risk-free asset with the market portfolio, the tangency portfolio of risky assets on the efficient frontier. With standard deviation on the horizontal axis, it starts at the risk-free rate and its slope is the market portfolio's Sharpe ratio. Points between the two ends mean lending at the risk-free rate, for example holding some Treasury bills; points beyond the market portfolio mean borrowing to invest more. The CML underpins the separation theorem: every investor should hold the same risky portfolio and express their risk tolerance only through how much they lend or borrow. Because it lies above the efficient frontier everywhere except at the tangency point, it dominates any all-risky portfolio. The common confusion is with the security market line, which uses beta and prices individual securities; the CML applies only to efficient portfolios.",
+    "example": "Say the risk-free rate is 6% and the market portfolio offers 14% with 20% volatility, so the CML's slope is (14% - 6%) / 20% = 0.4. A portfolio half in T-bills and half in the market has 10% volatility and should earn 6% + 0.4 x 10% = 10%.",
+    "formula": "E(Rp) = Rf + [(E(Rm) - Rf) / σm] x σp",
+    "related": [
+      "Security market line",
+      "Efficient frontier",
+      "Sharpe ratio",
+      "Modern portfolio theory",
+      "Risk-free rate"
+    ]
+  },
+  {
+    "id": "efficient-frontier",
+    "term": "Efficient frontier",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "Markowitz efficient frontier",
+      "efficient portfolios"
+    ],
+    "hl": [
+      "efficient frontier",
+      "efficient frontiers",
+      "markowitz efficient frontier"
+    ],
+    "abbr": [],
+    "short": "The curve of portfolios that give the highest expected return for each level of risk; anything below it is a worse deal.",
+    "kid": "At the fair, every ride has a fun score and a scary score. The best rides give the most fun for each bit of scary, and those are the ones worth picking.",
+    "detail": "The efficient frontier, introduced by Harry Markowitz in 1952, is the set of portfolios of risky assets that offer the maximum expected return for each level of risk, measured by standard deviation, or equivalently the minimum risk for each target return. Plotted with risk on the horizontal axis and return on the vertical, it forms the upper edge of a bullet-shaped region containing all possible portfolios, starting at the minimum variance portfolio. Portfolios below the frontier are inefficient because another mix offers more return for the same risk. Adding a risk-free asset turns the best choices into a straight line, the capital market line, touching the frontier at the tangency portfolio. Cautions: the frontier is only as good as its inputs. Expected returns, volatilities and correlations are estimated with error, and optimisers amplify those errors into extreme, unstable weights, so practitioners add constraints or use methods such as Black-Litterman.",
+    "example": "Say Portfolio X offers a 12% expected return with 15% volatility, and Portfolio Y offers 10% with the same 15% volatility. Y lies below the frontier because X gives 2 percentage points more return for identical risk, so no rational investor should choose Y.",
+    "formula": "",
+    "related": [
+      "Modern portfolio theory",
+      "Minimum variance portfolio",
+      "Capital market line",
+      "Diversification",
+      "Sharpe ratio"
+    ]
+  },
+  {
+    "id": "modern-portfolio-theory",
+    "term": "Modern portfolio theory",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "MPT",
+      "Markowitz portfolio theory",
+      "mean-variance optimisation",
+      "mean-variance analysis",
+      "portfolio optimisation"
+    ],
+    "hl": [
+      "modern portfolio theory",
+      "markowitz portfolio theory",
+      "mean-variance optimisation",
+      "mean-variance optimization",
+      "mean-variance analysis",
+      "portfolio optimisation",
+      "portfolio optimization"
+    ],
+    "abbr": [],
+    "short": "Harry Markowitz's framework for building portfolios that balance expected return against risk, using how assets move together to reduce overall risk.",
+    "kid": "If you pack only sunscreen, a rainy day is a disaster. Pack sunscreen and an umbrella, and you are fine whatever the weather. Choosing things that work well together is the big idea.",
+    "detail": "Modern portfolio theory (MPT), set out by Harry Markowitz in 1952 and recognised with a Nobel Prize in 1990, holds that an asset should be judged not on its own but by how it changes the risk and return of the whole portfolio. It assumes investors like return and dislike risk, measured as variance, and so prefer the portfolio with the highest expected return for a given risk. Portfolio risk depends on each asset's volatility and on the covariances between assets, so combining imperfectly correlated assets reduces risk without sacrificing expected return. Mean-variance optimisation turns these inputs into the efficient frontier. MPT laid the foundation for CAPM, index funds and modern asset allocation practice. Cautions: it treats upside and downside swings alike, assumes stable correlations and roughly normal returns, and is highly sensitive to estimated inputs. Even so, its central message, diversify intelligently, remains the core of portfolio management.",
+    "example": "Say two assets each have 20% volatility and a correlation of 0. A 50:50 mix has variance 0.5² x 0.20² + 0.5² x 0.20² = 0.01 + 0.01 = 0.02, so its volatility is √0.02 ≈ 14.1%, lower than either asset alone.",
+    "formula": "Two-asset portfolio variance = w1²σ1² + w2²σ2² + 2 x w1 x w2 x ρ12 x σ1 x σ2",
+    "related": [
+      "Efficient frontier",
+      "Diversification",
+      "Capital asset pricing model",
+      "Covariance",
+      "Minimum variance portfolio",
+      "Asset allocation"
+    ]
+  },
+  {
+    "id": "minimum-variance-portfolio",
+    "term": "Minimum variance portfolio",
+    "cat": "portfolio",
+    "level": "a",
+    "aliases": [
+      "global minimum variance portfolio",
+      "GMV portfolio",
+      "minimum volatility portfolio"
+    ],
+    "hl": [
+      "minimum variance portfolio",
+      "minimum variance portfolios",
+      "minimum-variance portfolio",
+      "global minimum variance portfolio",
+      "minimum volatility portfolio",
+      "minimum volatility portfolios"
+    ],
+    "abbr": [],
+    "short": "The combination of risky investments with the lowest possible overall swings in value, chosen without any view on which will earn most.",
+    "kid": "You stack blocks so the tower wobbles as little as possible. You do not care how tall it gets, only that it stays steady.",
+    "detail": "The global minimum variance (GMV) portfolio is the portfolio of risky assets with the lowest variance of all possible combinations. It sits at the leftmost point of the efficient frontier, where the curve turns back on itself. Its weights depend only on the variances and covariances of returns, not on expected returns, which makes it attractive in practice: expected returns are notoriously hard to forecast, while volatilities and correlations are more stable. MSCI's Minimum Volatility indices apply this optimisation, and simpler low-volatility indices such as the Nifty100 Low Volatility 30, which picks the least volatile stocks, follow a related idea. Low-volatility stocks have historically delivered competitive risk-adjusted returns. Cautions: without constraints, the GMV portfolio can require short positions and concentrate heavily in a few defensive sectors such as FMCG and utilities, and it is not the right choice for an investor who needs higher returns.",
+    "example": "Say asset A has 20% volatility, asset B has 10% and their correlation is 0. The minimum variance weight in A is 0.01 / (0.04 + 0.01) = 20%, so 80% goes in B. The mix's variance is 0.2² x 0.04 + 0.8² x 0.01 = 0.0016 + 0.0064 = 0.008, a volatility of about 8.9%, below even B's 10%.",
+    "formula": "Two-asset weight in A = (σB² - Cov(A,B)) / (σA² + σB² - 2 x Cov(A,B))",
+    "related": [
+      "Efficient frontier",
+      "Modern portfolio theory",
+      "Covariance",
+      "Volatility",
+      "Diversification"
+    ]
+  },
+  {
+    "id": "systematic-risk",
+    "term": "Systematic risk",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "market risk",
+      "non-diversifiable risk",
+      "undiversifiable risk"
+    ],
+    "hl": [
+      "systematic risk",
+      "systematic risks",
+      "non-diversifiable risk",
+      "undiversifiable risk"
+    ],
+    "abbr": [],
+    "short": "Risk that affects the whole market at once, such as recessions, interest-rate changes or wars, and cannot be removed by spreading investments.",
+    "kid": "When it rains on the whole town, everyone gets wet, no matter which street they walk on. Some troubles reach everybody at once.",
+    "detail": "Systematic risk is the portion of an asset's risk driven by economy-wide forces: changes in interest rates, inflation, economic growth and exchange rates, elections, pandemics or geopolitical shocks. Because these forces hit nearly all securities together, holding more stocks cannot diversify them away, which is why it is also called non-diversifiable or market risk. Finance theory says investors earn a risk premium only for bearing systematic risk, and CAPM measures a stock's exposure to it with beta. In the Covid crash of early 2020, the Nifty 50 fell nearly 40% from its January peak to its March low as almost every sector fell together. Investors manage systematic risk through asset allocation, hedging with index futures or options, or holding assets such as gold and government bonds that react differently. The common confusion is with systemic risk, the danger that one institution's failure cascades through the whole financial system.",
+    "example": "Say you hold 30 well-chosen stocks across sectors with a portfolio beta of 1.0. If an unexpected RBI rate hike knocks the market down 8%, your portfolio would be expected to fall about 8% too, because spreading money across stocks does not protect against a market-wide shock.",
+    "formula": "",
+    "related": [
+      "Unsystematic risk",
+      "Beta",
+      "Diversification",
+      "Capital asset pricing model",
+      "Systemic risk"
+    ]
+  },
+  {
+    "id": "unsystematic-risk",
+    "term": "Unsystematic risk",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "specific risk",
+      "idiosyncratic risk",
+      "diversifiable risk",
+      "company-specific risk"
+    ],
+    "hl": [
+      "unsystematic risk",
+      "idiosyncratic risk",
+      "idiosyncratic risks",
+      "diversifiable risk",
+      "company-specific risk",
+      "stock-specific risk"
+    ],
+    "abbr": [],
+    "short": "Risk unique to a single company or industry, such as a factory fire or a failed product, which can be reduced by spreading investments.",
+    "kid": "If only your kite string snaps, only your kite falls while your friends' kites keep flying. Flying many kites means one snapped string does not spoil the day.",
+    "detail": "Unsystematic risk is the part of an asset's volatility caused by events specific to that company or its industry: a management scandal, a product recall, a lost contract, a regulatory penalty or an accounting fraud. Because such events are largely independent across companies, their effects tend to cancel out in a well-diversified portfolio; studies suggest holding 20 to 30 stocks across sectors removes most of it. Since investors can eliminate this risk cheaply, theory says the market does not reward bearing it, so a concentrated portfolio carries extra risk without extra expected return. In variance terms, total risk equals systematic plus unsystematic risk. A stark Indian example is Satyam Computer Services, whose shares collapsed in January 2009 after its chairman confessed to accounting fraud, a shock specific to one company rather than to the IT sector. A common mistake is assuming a famous company carries no specific risk.",
+    "example": "Say you put ₹1 lakh into one stock that halves after a fraud is discovered: you lose ₹50,000. Spread equally across 20 unrelated stocks, the same event hits only the ₹5,000 in that stock, costing ₹2,500, or 2.5% of the portfolio.",
+    "formula": "Total risk (variance) = Systematic risk + Unsystematic risk",
+    "related": [
+      "Systematic risk",
+      "Diversification",
+      "Beta",
+      "Concentration risk",
+      "Portfolio"
+    ]
+  },
+  {
+    "id": "risk-aversion",
+    "term": "Risk aversion",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "risk averse",
+      "risk-averse investor",
+      "risk seeking",
+      "risk neutral"
+    ],
+    "hl": [
+      "risk aversion",
+      "risk-averse investors",
+      "risk-averse investor",
+      "risk averse investors"
+    ],
+    "abbr": [],
+    "short": "Disliking uncertainty: a risk-averse person prefers a sure ₹100 to a coin flip paying ₹200 or nothing, despite the same average.",
+    "kid": "Would you rather have one sweet for sure, or flip a coin to get two sweets or none? If you pick the sure sweet, you do not like taking chances.",
+    "detail": "Risk aversion is the tendency to prefer a certain outcome over a gamble with the same or even a slightly higher expected value. A risk-averse investor must be paid a risk premium to hold a volatile asset, which is why equities are expected to earn more than government bonds over the long run. A risk-neutral investor cares only about expected value, while a risk-seeking one prefers the gamble. Economists model risk aversion with a concave utility function, in which each extra rupee adds less satisfaction than the last; in mean-variance theory it is a coefficient setting how much return an investor needs per unit of variance. Market-wide risk aversion rises in crises, pushing money into gold, the US dollar and government bonds. The common confusion is with risk tolerance: aversion is a psychological preference, while tolerance also reflects the financial capacity to absorb losses.",
+    "example": "Offered a sure ₹50,000 or a coin flip paying ₹1,20,000 or nothing, which has an expected value of ₹60,000, a strongly risk-averse person may take the sure amount. The ₹10,000 of expected value given up is the price paid to avoid uncertainty.",
+    "formula": "Mean-variance utility: U = E(R) - 0.5 x A x σ², where A is the risk-aversion coefficient",
+    "related": [
+      "Risk tolerance",
+      "Risk premium",
+      "Expected return",
+      "Utility",
+      "Modern portfolio theory"
+    ]
+  },
+  {
+    "id": "risk-tolerance",
+    "term": "Risk tolerance",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "risk appetite",
+      "risk profile",
+      "risk capacity",
+      "willingness to take risk"
+    ],
+    "hl": [
+      "risk tolerance",
+      "risk capacity",
+      "investor risk profile",
+      "investor risk profiles"
+    ],
+    "abbr": [],
+    "short": "How much ups and downs, and possible loss, an investor can comfortably handle, based on both their temperament and their financial situation.",
+    "kid": "Some kids love the biggest swing in the park, and others like the gentle one. How high you are happy to go, and how tightly you can hold on, decides which swing suits you.",
+    "detail": "Risk tolerance is the degree of variability in returns, and the size of potential losses, that an investor is willing and able to bear. Advisers split it into two parts: willingness, a psychological trait shaped by personality and experience, and capacity, set by income stability, wealth, dependants, liabilities and time horizon. A 25-year-old with a steady salary and no loans usually has high capacity, while a retiree living off savings has low capacity even if keen on equities. When the two conflict, prudent advice follows the lower one. In India, under the rules as of 2025, SEBI-registered investment advisers must profile a client's risk before recommending products, and every mutual fund scheme carries a riskometer label to help match products to investors. Common confusions: stated tolerance often looks high in bull markets and collapses in crashes, and risk appetite in headlines usually means market-wide sentiment rather than one investor's profile.",
+    "example": "Say two investors each have ₹10 lakh. Anil, 28, with a stable job, can ride out a ₹3 lakh fall, so he holds 80% in equity: a 35% equity crash would cost him ₹2.8 lakh. Meena, 64 and living off her savings, can bear a loss of only about ₹1 lakh, so with 25% in equity the same crash costs her ₹87,500.",
+    "formula": "",
+    "related": [
+      "Risk aversion",
+      "Asset allocation",
+      "Strategic asset allocation",
+      "Riskometer",
+      "Investment horizon"
+    ]
+  },
+  {
+    "id": "value-at-risk",
+    "term": "Value at risk",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "VaR",
+      "value-at-risk"
+    ],
+    "hl": [
+      "value-at-risk"
+    ],
+    "abbr": [
+      "VaR"
+    ],
+    "short": "A loss amount that a portfolio should exceed only rarely over a set period, for example on just 5 days out of 100.",
+    "kid": "Most days, you spill only a little of your juice. This tells you the most you will spill on almost every day, but not how much on your very clumsiest days.",
+    "detail": "Value at risk (VaR) states the maximum loss a portfolio is expected to suffer over a given horizon at a chosen confidence level under normal market conditions. A one-day 99% VaR of ₹1 crore means that on 99 days out of 100 the loss should not exceed ₹1 crore. It is estimated in three main ways: the parametric (variance-covariance) method using volatilities and correlations, historical simulation that replays past returns, and Monte Carlo simulation. Banks use VaR for trading limits and regulatory capital, and under the rules as of 2025, Indian stock exchanges use VaR-based margins on cash-market positions. Its weakness is what it leaves out: VaR says nothing about how large losses are on the days beyond the threshold, it assumes the past is a guide, and it does not always add up sensibly across positions. That is why Basel rules moved bank market-risk capital towards expected shortfall.",
+    "example": "Say a ₹10 crore equity portfolio has daily volatility of 1.2%. Using the normal-distribution method, its one-day 95% VaR is 1.65 x 1.2% x ₹10 crore = ₹19.8 lakh, so losses should exceed that on only about 1 day in 20.",
+    "formula": "Parametric VaR = z x σ x Portfolio value (z ≈ 1.65 for 95%, 2.33 for 99%)",
+    "related": [
+      "Conditional value at risk",
+      "Stress testing",
+      "Volatility",
+      "Standard deviation",
+      "Drawdown"
+    ]
+  },
+  {
+    "id": "conditional-value-at-risk",
+    "term": "Conditional value at risk",
+    "cat": "portfolio",
+    "level": "a",
+    "aliases": [
+      "CVaR",
+      "expected shortfall",
+      "ES",
+      "tail VaR"
+    ],
+    "hl": [
+      "conditional value at risk",
+      "conditional value-at-risk",
+      "tail value at risk"
+    ],
+    "abbr": [
+      "CVaR"
+    ],
+    "short": "The average loss on a portfolio's very worst days, such as the worst 5 days in 100, showing how bad really bad days get.",
+    "kid": "On your clumsiest days, you spill a lot of juice. This looks only at those clumsiest days and asks how much you spill on them, on average.",
+    "detail": "Conditional value at risk (CVaR), also called expected shortfall (ES), is the expected loss given that the loss exceeds the VaR threshold. If a portfolio's one-day 95% VaR is ₹20 lakh, CVaR averages all losses on the worst 5% of days, so it is always at least as large as VaR. It answers the question VaR leaves open: when a bad day comes, how bad is it likely to be? CVaR is a coherent risk measure, meaning that combining positions never makes measured risk exceed the sum of their separate risks, and it is easier to optimise than VaR. The Basel Committee's Fundamental Review of the Trading Book replaced 99% VaR with 97.5% expected shortfall for bank market-risk capital. Cautions: CVaR depends on a few extreme observations, so it is harder to estimate and backtest reliably, and like VaR it relies on the history or model chosen.",
+    "example": "Say a portfolio's 20 worst days out of 400, the worst 5%, produced losses averaging ₹28 lakh, while the 95% VaR, the loss at the edge of that group, was ₹18 lakh. The 95% CVaR is ₹28 lakh, telling the risk manager that losses beyond VaR are, on average, ₹10 lakh deeper than the VaR figure.",
+    "formula": "CVaR = Average of losses greater than VaR = E[Loss | Loss > VaR]",
+    "related": [
+      "Value at risk",
+      "Stress testing",
+      "Downside risk",
+      "Drawdown",
+      "Tail risk"
+    ]
+  },
+  {
+    "id": "drawdown",
+    "term": "Drawdown",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "maximum drawdown",
+      "max drawdown",
+      "MDD",
+      "peak-to-trough decline"
+    ],
+    "hl": [
+      "maximum drawdown",
+      "max drawdown",
+      "portfolio drawdown"
+    ],
+    "abbr": [],
+    "short": "The fall in an investment's value from its highest point to a later low, usually stated as a percentage of that peak.",
+    "kid": "You build a sandcastle ten buckets tall, and a wave knocks it down to six. That drop from the tallest it ever was is what this measures.",
+    "detail": "A drawdown is the decline in the value of an investment, fund or trading account from a running peak to a later trough, before a new peak is reached. The maximum drawdown (MDD) is the largest such fall over a period and is a favourite risk measure because it captures the real pain of holding through a crash, which volatility alone does not. Recovery time, how long it takes to regain the old peak, matters just as much. Losses need larger gains to recover: a 50% drawdown requires a 100% gain to break even. During the global financial crisis, the Nifty 50 fell roughly 60% from its January 2008 peak to its October 2008 low. Many traders set drawdown limits that trigger cutting positions. Do not confuse it with a drawdown in private equity or lending, which means calling committed capital or drawing on a loan facility.",
+    "example": "Say a fund's NAV rises from ₹100 to a peak of ₹150, falls to ₹105 and then recovers to ₹160. Its maximum drawdown is (150 - 105) / 150 = 30%, and from the ₹105 low it needed a gain of about 42.9% just to get back to ₹150.",
+    "formula": "Drawdown = (Peak value - Trough value) / Peak value",
+    "related": [
+      "Volatility",
+      "Downside risk",
+      "Value at risk",
+      "Calmar ratio",
+      "Sortino ratio"
+    ]
+  },
+  {
+    "id": "downside-risk",
+    "term": "Downside risk",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "downside deviation",
+      "semi-deviation",
+      "downside volatility"
+    ],
+    "hl": [
+      "downside deviation",
+      "semi-deviation",
+      "semideviation",
+      "downside volatility"
+    ],
+    "abbr": [],
+    "short": "The chance and size of an investment losing value or missing a target, counting only bad outcomes rather than all ups and downs.",
+    "kid": "Nobody minds a surprise extra cookie, but losing one makes you sad. This counts only the times you lose cookies, not the times you get extra.",
+    "detail": "Downside risk refers to the potential for returns to fall below an expected level or a minimum acceptable return, and to measures capturing only that side. The main measure is downside deviation, or semi-deviation, the standard deviation calculated using only returns below a target such as zero or the risk-free rate. Other downside measures include value at risk, expected shortfall and maximum drawdown. The concept matters because investors feel losses more sharply than equal gains, and because many assets and strategies, such as equities and option selling, have returns skewed towards occasional large losses that total volatility understates. Downside deviation is the denominator of the Sortino ratio. In economic commentary, such as RBI policy statements, 'downside risks to growth' uses the same idea loosely, meaning outcomes could come in worse than forecast. Do not assume a low-volatility asset has low downside risk: some bonds look calm until a default.",
+    "example": "Say a fund's monthly returns over four months are +4%, -2%, +3% and -4%, against a target of 0%. Only the shortfalls count: squared, they are 4 and 16, and averaged over all four months they give 20 / 4 = 5, so the downside deviation is √5 ≈ 2.24% a month.",
+    "formula": "Downside deviation = √[Sum of (min(Ri - Target, 0))² / n]",
+    "related": [
+      "Sortino ratio",
+      "Drawdown",
+      "Value at risk",
+      "Conditional value at risk",
+      "Volatility",
+      "Standard deviation"
+    ]
+  },
+  {
+    "id": "stress-testing",
+    "term": "Stress testing",
+    "cat": "portfolio",
+    "level": "i",
+    "aliases": [
+      "stress test",
+      "portfolio stress test",
+      "scenario stress test"
+    ],
+    "hl": [
+      "bank stress test",
+      "bank stress tests",
+      "portfolio stress test",
+      "portfolio stress tests",
+      "mutual fund stress test",
+      "mutual fund stress tests",
+      "fed stress test",
+      "fed stress tests"
+    ],
+    "abbr": [],
+    "short": "Checking how a portfolio, bank or fund would cope with an extreme but plausible shock, such as a market crash or sudden rate jump.",
+    "kid": "Before a camping trip, you shake your tent hard to pretend there is a storm. If it still stands, you know it can handle bad weather.",
+    "detail": "Stress testing estimates the losses a portfolio or institution would suffer under severe but plausible scenarios. Scenarios can be historical, such as a replay of 2008 or the March 2020 Covid crash, or hypothetical, such as a 3 percentage point jump in interest rates, a sharp rupee fall or a 30% equity slump. Reverse stress tests work backwards to find the shock that would break the portfolio. Regulators rely on them heavily: the RBI's Financial Stability Report stress-tests banks' capital, the US Federal Reserve runs annual bank stress tests, and under the rules as of 2025, Indian mid-cap and small-cap mutual funds disclose stress tests estimating how many days they would need to sell a quarter or half of their portfolio. Stress testing complements VaR, which describes normal conditions. Its weakness is imagination: results are only as good as the scenarios chosen, and correlations behave differently in real crises.",
+    "example": "Say a ₹50 crore portfolio holds ₹30 crore in equity and ₹20 crore in bonds with a modified duration of 5. If equities fall 30% and bond yields rise by 1 percentage point, equity loses ₹9 crore and bonds roughly 5 x 1% = 5%, or ₹1 crore, a combined hit of about ₹10 crore, or 20%.",
+    "formula": "",
+    "related": [
+      "Value at risk",
+      "Conditional value at risk",
+      "Scenario analysis",
+      "Drawdown",
+      "Systematic risk"
+    ]
+  },
+  {
+    "id": "risk-free-rate",
+    "term": "Risk-free rate",
+    "cat": "portfolio",
+    "level": "b",
+    "aliases": [
+      "Rf",
+      "risk free rate",
+      "risk-free return",
+      "risk-free asset"
+    ],
+    "hl": [
+      "risk-free rate",
+      "risk free rate",
+      "risk-free asset",
+      "risk-free assets",
+      "risk-free return"
+    ],
+    "abbr": [],
+    "short": "The return on an investment with practically no chance of not being repaid, usually a government security such as a Treasury bill.",
+    "kid": "If Grandma promises to add one extra coin to your piggy bank every year, you know you will get it for sure. That sure little extra is what every riskier game has to beat.",
+    "detail": "The risk-free rate is the theoretical return on an asset with zero default risk. In practice, analysts use yields on government securities in their own currency, such as 91-day Treasury bills in India or US Treasury bills, because a government can repay debt in the currency it issues. For long-horizon valuation, many use the 10-year government bond yield instead, the 10-year G-sec in India. The risk-free rate is a foundation of finance: it is the starting point for CAPM and the cost of capital, the hurdle in the Sharpe ratio, and a key input for discounting cash flows and pricing options. When it rises, the required return on every other asset rises too, which tends to push valuations down. Common confusions: it is risk-free only in nominal terms, not after inflation, and its level changes constantly, so check current yields on the live rates board.",
+    "example": "Say the 91-day T-bill yields 6.5% and an equity fund is expected to return 12%. The fund's expected excess return, its reward for taking risk, is 12% - 6.5% = 5.5 percentage points. These rates are illustrative; check the live rates board for current yields.",
+    "formula": "",
+    "related": [
+      "Treasury bill",
+      "Capital asset pricing model",
+      "Sharpe ratio",
+      "Equity risk premium",
+      "10-year G-sec yield",
+      "Cost of equity"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "about": "Fake Google Drive for the Library in demo mode (?demo-user=1&demo-drive=1 on localhost, --demo builds only). Files mirror Drive API v3 file resources; 'src' / 'exportSrc' point at files under _demo/files/. 'links' fills folder links that are empty in data/site-data.json (matched by folder title); 'denied' folders answer 403.",
+  "latency": 300,
+  "links": {
+    "CFA resources": "https://drive.google.com/drive/folders/demoCfaResources01?usp=sharing",
+    "Notes": "https://drive.google.com/open?id=demoMembersNotes01",
+    "Cover letters & emails": "https://drive.google.com/drive/u/0/folders/demoCoverLetters01",
+    "Stock pitch decks": "https://drive.google.com/drive/folders/demoPitchDecks0001",
+    "Excel & valuation models": "https://drive.google.com/drive/folders/demoLockedModels01"
+  },
+  "inbox": "https://drive.google.com/drive/folders/demoClubInbox0001",
+  "denied": ["demoLockedModels01"],
+  "files": [
+    {"id": "demoCfaLevel1Fold", "name": "Level I", "mimeType": "application/vnd.google-apps.folder", "modifiedTime": "2026-09-28T10:12:00Z", "parents": ["demoCfaResources01"]},
+    {"id": "demoCfaLevel2Fold", "name": "Level II", "mimeType": "application/vnd.google-apps.folder", "modifiedTime": "2026-08-02T08:00:00Z", "parents": ["demoCfaResources01"]},
+    {"id": "demoReadingList01", "name": "Reading list.txt", "mimeType": "text/plain", "size": "165", "modifiedTime": "2026-07-14T09:30:00Z", "parents": ["demoCfaResources01"], "src": "reading-list.txt"},
+    {"id": "demoCfaNotesPdf01", "name": "Sample CFA notes.pdf", "mimeType": "application/pdf", "size": "2676", "modifiedTime": "2026-10-09T15:40:00Z", "parents": ["demoCfaLevel1Fold"], "src": "sample-cfa-notes.pdf"},
+    {"id": "demoDcfWalkPdf001", "name": "DCF walkthrough.pdf", "mimeType": "application/pdf", "size": "3361", "modifiedTime": "2026-09-30T11:05:00Z", "parents": ["demoCfaLevel1Fold"], "src": "dcf-walkthrough.pdf"},
+    {"id": "demoQuantChartPng", "name": "Revenue growth chart.png", "mimeType": "image/png", "size": "2507", "modifiedTime": "2026-09-21T07:45:00Z", "parents": ["demoCfaLevel1Fold"], "src": "revenue-chart.png", "thumbnailLink": "revenue-chart.png"},
+    {"id": "demoInterviewDoc1", "name": "Interview guide", "mimeType": "application/vnd.google-apps.document", "modifiedTime": "2026-10-02T12:00:00Z", "parents": ["17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk"], "exportSrc": "interview-guide-export.pdf"},
+    {"id": "demoBankingFold01", "name": "Banking", "mimeType": "application/vnd.google-apps.folder", "modifiedTime": "2026-09-12T12:00:00Z", "parents": ["17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk"]},
+    {"id": "demoBankingDcf001", "name": "DCF walkthrough (banking).pdf", "mimeType": "application/pdf", "size": "3361", "modifiedTime": "2026-09-12T12:30:00Z", "parents": ["demoBankingFold01"], "src": "dcf-walkthrough.pdf"},
+    {"id": "demoNotesChart001", "name": "Market wrap chart.png", "mimeType": "image/png", "size": "2507", "modifiedTime": "2026-10-11T18:20:00Z", "parents": ["demoMembersNotes01"], "src": "revenue-chart.png", "thumbnailLink": "revenue-chart.png"},
+    {"id": "demoNotesDcf00001", "name": "Valuation session notes.pdf", "mimeType": "application/pdf", "size": "3361", "modifiedTime": "2026-10-06T16:00:00Z", "parents": ["demoMembersNotes01"], "src": "dcf-walkthrough.pdf"},
+    {"id": "demoCoverDocx001", "name": "Cover letter sample.docx", "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "size": "939", "modifiedTime": "2026-08-18T10:10:00Z", "parents": ["demoCoverLetters01"], "src": "cover-letter-sample.docx"},
+    {"id": "demoPitchSlides01", "name": "Stock pitch format", "mimeType": "application/vnd.google-apps.presentation", "modifiedTime": "2026-09-05T09:00:00Z", "parents": ["demoPitchDecks0001"], "exportSrc": "pitch-deck-export.pdf"}
+  ]
+}

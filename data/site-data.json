@@ -1,0 +1,849 @@
+{
+ "settings": {
+  "headline": "Finance starts here",
+  "highlight": "here",
+  "subline": "The finance club of IPM, IIM Ranchi. One repository, four learning paths and real stock pitches in front of real judges. Free for every student.",
+  "linkedin": "https://www.linkedin.com/company/finspire-iimranchi/",
+  "email": "",
+  "announcement": "The Finspire Dictionary",
+  "roles": [
+   "Investment banking",
+   "Equity research",
+   "Asset management",
+   "Corporate finance",
+   "Private equity",
+   "Venture capital",
+   "FP&A",
+   "Treasury",
+   "Risk",
+   "Wealth management"
+  ],
+  "copy": {}
+ },
+ "tracks": {
+  "cfa": {
+   "name": "CFA & certifications",
+   "blurb": "The credentials that finance recognises. Start with the CFA overview, then pick one certification and finish it."
+  },
+  "val": {
+   "name": "Valuation & modeling",
+   "blurb": "How a company is actually valued. Damodaran for the thinking, Wall Street Prep and Macabacus for the spreadsheet."
+  },
+  "mkt": {
+   "name": "Markets & trading",
+   "blurb": "Indian and global markets from zero. Zerodha Varsity first, then the data sources analysts use every day."
+  },
+  "hard": {
+   "name": "Hard skills",
+   "blurb": "Excel, SQL, Python and Power BI. The tools that turn finance knowledge into work someone can use."
+  },
+  "soft": {
+   "name": "Soft skills & communication",
+   "blurb": "Structure, negotiation and speaking. How to say the analysis so a room believes it."
+  },
+  "read": {
+   "name": "Reading & listening",
+   "blurb": "Letters, memos, podcasts and the books everyone in finance has read. Slow learning that compounds."
+  }
+ },
+ "levels": {
+  "b": "Beginner",
+  "i": "Intermediate",
+  "a": "Advanced"
+ },
+ "resources": [
+  {
+   "t": "CFA Program overview",
+   "s": "CFA Institute",
+   "k": "cfa",
+   "l": "b",
+   "f": "Site",
+   "free": false,
+   "u": "https://www.cfainstitute.org/programs/cfa-program",
+   "d": "Start here: levels, topic weights, registration windows and the scholarship routes most students miss.",
+   "tags": "cfa charter ethics registration scholarship"
+  },
+  {
+   "t": "Mark Meldrum's CFA lectures",
+   "s": "YouTube",
+   "k": "cfa",
+   "l": "i",
+   "f": "Video",
+   "free": true,
+   "u": "https://www.youtube.com/@MarkMeldrum",
+   "d": "The most-recommended free lecture series for Level I and II. Watch the ethics and quant playlists first.",
+   "tags": "cfa level 1 level 2 lectures"
+  },
+  {
+   "t": "AnalystPrep study notes",
+   "s": "AnalystPrep",
+   "k": "cfa",
+   "l": "i",
+   "f": "Course",
+   "free": true,
+   "u": "https://analystprep.com/",
+   "d": "Free study notes and a sample question bank per learning outcome. Good for quick revision before mocks.",
+   "tags": "cfa notes qbank frm"
+  },
+  {
+   "t": "Kaplan Schweser resources",
+   "s": "Kaplan Schweser",
+   "k": "cfa",
+   "l": "i",
+   "f": "Course",
+   "free": false,
+   "u": "https://www.schweser.com/",
+   "d": "The standard prep provider. Free sample QBank and the SchweserNotes format most candidates end up using.",
+   "tags": "cfa schweser notes mock"
+  },
+  {
+   "t": "FRM certification",
+   "s": "GARP",
+   "k": "cfa",
+   "l": "a",
+   "f": "Site",
+   "free": false,
+   "u": "https://www.garp.org/frm",
+   "d": "The risk-management counterpart to the CFA. Worth it if you're headed to treasury, risk or trading desks.",
+   "tags": "frm risk garp var"
+  },
+  {
+   "t": "NISM certifications",
+   "s": "NISM (SEBI)",
+   "k": "cfa",
+   "l": "b",
+   "f": "Site",
+   "free": false,
+   "u": "https://www.nism.ac.in/",
+   "d": "India-specific, cheap and fast. Series VIII (Equity Derivatives) and XV (Research Analyst) are the useful ones for students.",
+   "tags": "nism sebi india research analyst derivatives"
+  },
+  {
+   "t": "Bloomberg Market Concepts",
+   "s": "Bloomberg for Education",
+   "k": "cfa",
+   "l": "b",
+   "f": "Course",
+   "free": false,
+   "u": "https://portal.bloombergforeducation.com/",
+   "d": "An eight-hour e-learning cert on economics, currencies, fixed income and equities. Often free through the institute's terminal access.",
+   "tags": "bmc bloomberg terminal certificate"
+  },
+  {
+   "t": "Damodaran Online",
+   "s": "NYU Stern",
+   "k": "val",
+   "l": "i",
+   "f": "Site",
+   "free": true,
+   "u": "https://pages.stern.nyu.edu/~adamodar/",
+   "d": "The single most useful page on the internet for valuation. Lecture notes, data sets, industry betas, country risk premiums.",
+   "tags": "damodaran valuation dcf beta erp data"
+  },
+  {
+   "t": "Damodaran's valuation spreadsheets",
+   "s": "NYU Stern",
+   "k": "val",
+   "l": "i",
+   "f": "Template",
+   "free": true,
+   "u": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/spreadsh.htm",
+   "d": "Ready-made DCF, FCFE, option pricing and synthetic-rating models. Open one, break it, rebuild it.",
+   "tags": "damodaran excel template dcf fcfe model"
+  },
+  {
+   "t": "Valuation and Corporate Finance classes",
+   "s": "Aswath Damodaran on YouTube",
+   "k": "val",
+   "l": "i",
+   "f": "Video",
+   "free": true,
+   "u": "https://www.youtube.com/@AswathDamodaran",
+   "d": "Full semester-length university courses recorded and posted free. Do the Valuation playlist over a summer.",
+   "tags": "damodaran youtube course corporate finance"
+  },
+  {
+   "t": "Wall Street Prep",
+   "s": "Wall Street Prep",
+   "k": "val",
+   "l": "i",
+   "f": "Course",
+   "free": false,
+   "u": "https://www.wallstreetprep.com/",
+   "d": "The modeling course banks train analysts on. Their free knowledge base articles on LBO, DCF and comps are excellent on their own.",
+   "tags": "wsp modeling lbo dcf comps excel"
+  },
+  {
+   "t": "Corporate Finance Institute",
+   "s": "CFI",
+   "k": "val",
+   "l": "b",
+   "f": "Course",
+   "free": true,
+   "u": "https://corporatefinanceinstitute.com/",
+   "d": "Free foundation courses on accounting, Excel and financial statements before you pay for anything.",
+   "tags": "cfi accounting excel fundamentals"
+  },
+  {
+   "t": "Macabacus modeling guides",
+   "s": "Macabacus",
+   "k": "val",
+   "l": "a",
+   "f": "Site",
+   "free": true,
+   "u": "https://macabacus.com/",
+   "d": "Best-practice guides for DCF, LBO, merger and accretion models, with the formatting conventions banks expect.",
+   "tags": "macabacus modeling lbo merger formatting"
+  },
+  {
+   "t": "Breaking Into Wall Street",
+   "s": "BIWS",
+   "k": "val",
+   "l": "i",
+   "f": "Course",
+   "free": false,
+   "u": "https://breakingintowallstreet.com/",
+   "d": "The modeling tutorials most aspiring bankers start with. The free YouTube tutorials cover a surprising amount.",
+   "tags": "biws modeling ib"
+  },
+  {
+   "t": "Screener.in",
+   "s": "Screener",
+   "k": "val",
+   "l": "b",
+   "f": "Tool",
+   "free": true,
+   "u": "https://www.screener.in/",
+   "d": "Ten years of financials for every listed Indian company, exportable to Excel. Your starting point for any Indian stock pitch.",
+   "tags": "screener india financials stock pitch export"
+  },
+  {
+   "t": "SEC EDGAR filings",
+   "s": "US SEC",
+   "k": "val",
+   "l": "i",
+   "f": "Tool",
+   "free": true,
+   "u": "https://www.sec.gov/edgar",
+   "d": "Read real 10-Ks and S-1s. Reading the MD&A of a company you like teaches more than most textbooks.",
+   "tags": "edgar 10-k filings annual report"
+  },
+  {
+   "t": "Valuation: Measuring and Managing the Value of Companies",
+   "s": "McKinsey & Company · Book",
+   "k": "val",
+   "l": "a",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Valuation%20Measuring%20and%20Managing%20the%20Value%20of%20Companies%20McKinsey",
+   "d": "The reference text. Dense, but the chapters on ROIC and value drivers change how you read a balance sheet.",
+   "tags": "mckinsey valuation book roic"
+  },
+  {
+   "t": "Investment Banking: Valuation, LBOs, M&A",
+   "s": "Rosenbaum & Pearl · Book",
+   "k": "val",
+   "l": "i",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Investment%20Banking%20Rosenbaum%20Pearl",
+   "d": "Step-by-step comps, precedent transactions, DCF and LBO exactly as done on a deal team.",
+   "tags": "rosenbaum pearl ib book lbo"
+  },
+  {
+   "t": "Zerodha Varsity",
+   "s": "Zerodha",
+   "k": "mkt",
+   "l": "b",
+   "f": "Course",
+   "free": true,
+   "u": "https://zerodha.com/varsity/",
+   "d": "The best free introduction to Indian markets. Modules on equities, technical analysis, options and personal finance.",
+   "tags": "varsity zerodha india options technical analysis"
+  },
+  {
+   "t": "Investopedia",
+   "s": "Investopedia",
+   "k": "mkt",
+   "l": "b",
+   "f": "Site",
+   "free": true,
+   "u": "https://www.investopedia.com/",
+   "d": "When a term in a lecture goes over your head. Every concept explained in two paragraphs with an example.",
+   "tags": "glossary terms definitions"
+  },
+  {
+   "t": "Finance and Capital Markets",
+   "s": "Khan Academy",
+   "k": "mkt",
+   "l": "b",
+   "f": "Video",
+   "free": true,
+   "u": "https://www.khanacademy.org/economics-finance-domain/core-finance",
+   "d": "Short, patient videos on interest, bonds, stocks, options and the 2008 crisis. Ideal if you're coming from a non-commerce background.",
+   "tags": "khan basics bonds stocks beginner"
+  },
+  {
+   "t": "NSE India",
+   "s": "National Stock Exchange",
+   "k": "mkt",
+   "l": "i",
+   "f": "Tool",
+   "free": true,
+   "u": "https://www.nseindia.com/",
+   "d": "Live indices, option chains, bulk deals and historical data. Learn to read the option chain here before any derivatives course.",
+   "tags": "nse nifty option chain data india"
+  },
+  {
+   "t": "FRED economic data",
+   "s": "Federal Reserve Bank of St. Louis",
+   "k": "mkt",
+   "l": "i",
+   "f": "Tool",
+   "free": true,
+   "u": "https://fred.stlouisfed.org/",
+   "d": "Every macro series you'll ever cite, charted and downloadable. Yield curves, CPI, unemployment, money supply.",
+   "tags": "fred macro data yield curve cpi"
+  },
+  {
+   "t": "Reserve Bank of India",
+   "s": "RBI",
+   "k": "mkt",
+   "l": "i",
+   "f": "Site",
+   "free": true,
+   "u": "https://www.rbi.org.in/",
+   "d": "Monetary policy statements, the Database on Indian Economy, and the annual report that explains where India's money actually goes.",
+   "tags": "rbi monetary policy india macro"
+  },
+  {
+   "t": "SEBI investor education",
+   "s": "SEBI",
+   "k": "mkt",
+   "l": "b",
+   "f": "Site",
+   "free": true,
+   "u": "https://investor.sebi.gov.in/",
+   "d": "How Indian markets are regulated, how IPOs work, and what the rules actually say about insider trading.",
+   "tags": "sebi regulation ipo india"
+  },
+  {
+   "t": "NPTEL finance courses",
+   "s": "IITs and IISc via SWAYAM",
+   "k": "mkt",
+   "l": "i",
+   "f": "Course",
+   "free": true,
+   "u": "https://nptel.ac.in/",
+   "d": "Semester-length courses on financial markets, derivatives and corporate finance taught by IIT faculty. Free to audit, with an optional proctored certificate.",
+   "tags": "nptel swayam iit course india certificate"
+  },
+  {
+   "t": "TradingView",
+   "s": "TradingView",
+   "k": "mkt",
+   "l": "i",
+   "f": "Tool",
+   "free": true,
+   "u": "https://www.tradingview.com/",
+   "d": "Charting for everything. The free tier is enough to learn indicators and to build the charts for a pitch deck.",
+   "tags": "charts technical analysis indicators"
+  },
+  {
+   "t": "Options, Futures and Other Derivatives",
+   "s": "John C. Hull · Book",
+   "k": "mkt",
+   "l": "a",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Options%20Futures%20and%20Other%20Derivatives%20Hull",
+   "d": "The derivatives textbook. Binomial trees, Black-Scholes, Greeks and the maths behind every structured product.",
+   "tags": "hull derivatives options black scholes greeks"
+  },
+  {
+   "t": "A Random Walk Down Wall Street",
+   "s": "Burton Malkiel · Book",
+   "k": "mkt",
+   "l": "b",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=A%20Random%20Walk%20Down%20Wall%20Street%20Malkiel",
+   "d": "The case for efficient markets, written for humans. Read it before you decide you can beat the index.",
+   "tags": "malkiel efficient markets index"
+  },
+  {
+   "t": "Exceljet",
+   "s": "Exceljet",
+   "k": "hard",
+   "l": "b",
+   "f": "Site",
+   "free": true,
+   "u": "https://exceljet.net/",
+   "d": "Every Excel function and shortcut with a worked example. Learn INDEX-MATCH, XLOOKUP and the keyboard-only workflow.",
+   "tags": "excel shortcuts functions xlookup index match"
+  },
+  {
+   "t": "Chandoo.org",
+   "s": "Chandoo",
+   "k": "hard",
+   "l": "i",
+   "f": "Site",
+   "free": true,
+   "u": "https://chandoo.org/",
+   "d": "Excel dashboards, Power Query and charts, taught by an Indian Excel expert who made it his career.",
+   "tags": "excel dashboard power query charts"
+  },
+  {
+   "t": "SQL tutorial",
+   "s": "Mode Analytics",
+   "k": "hard",
+   "l": "b",
+   "f": "Course",
+   "free": true,
+   "u": "https://mode.com/sql-tutorial/",
+   "d": "The friendliest SQL course, with a live editor. Enough for any analyst role that touches a database.",
+   "tags": "sql database query analyst"
+  },
+  {
+   "t": "QuantEcon",
+   "s": "QuantEcon",
+   "k": "hard",
+   "l": "a",
+   "f": "Course",
+   "free": true,
+   "u": "https://quantecon.org/",
+   "d": "Python for economics and finance, from numpy to dynamic programming. Rigorous and free.",
+   "tags": "python quant economics numpy"
+  },
+  {
+   "t": "Kaggle Learn",
+   "s": "Kaggle",
+   "k": "hard",
+   "l": "b",
+   "f": "Course",
+   "free": true,
+   "u": "https://www.kaggle.com/learn",
+   "d": "Four-hour micro-courses on Python, pandas and data visualisation. The fastest route from zero to a working notebook.",
+   "tags": "python pandas data kaggle notebook"
+  },
+  {
+   "t": "Power BI learning path",
+   "s": "Microsoft Learn",
+   "k": "hard",
+   "l": "i",
+   "f": "Course",
+   "free": true,
+   "u": "https://learn.microsoft.com/power-bi/",
+   "d": "Official, free and structured. Corporate finance and FP&A roles increasingly ask for it.",
+   "tags": "power bi dashboard fp&a microsoft"
+  },
+  {
+   "t": "Python for Finance",
+   "s": "Yves Hilpisch · Book",
+   "k": "hard",
+   "l": "a",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Python%20for%20Finance%20Hilpisch",
+   "d": "Financial data, time series, portfolio optimisation and derivatives pricing in Python. For after Kaggle Learn.",
+   "tags": "python finance hilpisch time series portfolio"
+  },
+  {
+   "t": "Mergers & Inquisitions",
+   "s": "M&I",
+   "k": "soft",
+   "l": "b",
+   "f": "Site",
+   "free": true,
+   "u": "https://mergersandinquisitions.com/",
+   "d": "What each finance role actually does, what it pays, and how people get in. Read the role guides first.",
+   "tags": "careers ib roles guides"
+  },
+  {
+   "t": "Case Interview Secrets",
+   "s": "Victor Cheng",
+   "k": "soft",
+   "l": "i",
+   "f": "Site",
+   "free": true,
+   "u": "https://www.caseinterview.com/",
+   "d": "Structured problem solving for consulting-style cases, which is also how you should structure a stock pitch.",
+   "tags": "case interview consulting structure"
+  },
+  {
+   "t": "The Pyramid Principle",
+   "s": "Barbara Minto · Book",
+   "k": "soft",
+   "l": "i",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=The%20Pyramid%20Principle%20Minto",
+   "d": "Answer first, then the reasons. The book behind every well-structured memo, deck and pitch.",
+   "tags": "minto communication writing structure"
+  },
+  {
+   "t": "Never Split the Difference",
+   "s": "Chris Voss · Book",
+   "k": "soft",
+   "l": "b",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Never%20Split%20the%20Difference%20Voss",
+   "d": "Negotiation from an FBI hostage negotiator. Useful for deals, for negotiations, and for running a club.",
+   "tags": "voss negotiation"
+  },
+  {
+   "t": "Harvard Business Review",
+   "s": "HBR",
+   "k": "soft",
+   "l": "b",
+   "f": "Site",
+   "free": false,
+   "u": "https://hbr.org/",
+   "d": "A few free articles a month. Read the ones on presenting numbers, managing up and running meetings.",
+   "tags": "hbr management presentations leadership"
+  },
+  {
+   "t": "Toastmasters",
+   "s": "Toastmasters International",
+   "k": "soft",
+   "l": "b",
+   "f": "Site",
+   "free": false,
+   "u": "https://www.toastmasters.org/",
+   "d": "If you freeze in front of a room, this is the cheapest fix that works. Find a campus or city chapter.",
+   "tags": "public speaking presentation confidence"
+  },
+  {
+   "t": "Berkshire Hathaway shareholder letters",
+   "s": "Warren Buffett",
+   "k": "read",
+   "l": "b",
+   "f": "Letters",
+   "free": true,
+   "u": "https://www.berkshirehathaway.com/letters/letters.html",
+   "d": "Sixty years of plain-English lessons on capital allocation, moats and management. Start with 1977 and read forward.",
+   "tags": "buffett berkshire letters value investing"
+  },
+  {
+   "t": "Musings on Markets",
+   "s": "Aswath Damodaran · Blog",
+   "k": "read",
+   "l": "i",
+   "f": "Newsletter",
+   "free": true,
+   "u": "https://aswathdamodaran.blogspot.com/",
+   "d": "Damodaran valuing whatever the market is arguing about this month, with the spreadsheet attached. Read one and you understand how a valuation argument is built.",
+   "tags": "damodaran blog valuation musings"
+  },
+  {
+   "t": "Howard Marks memos",
+   "s": "Oaktree Capital",
+   "k": "read",
+   "l": "i",
+   "f": "Letters",
+   "free": true,
+   "u": "https://www.oaktreecapital.com/insights",
+   "d": "Market cycles, risk and second-level thinking, in memos hedge fund managers actually read.",
+   "tags": "marks oaktree memos cycles risk"
+  },
+  {
+   "t": "Finshots",
+   "s": "Finshots",
+   "k": "read",
+   "l": "b",
+   "f": "Newsletter",
+   "free": true,
+   "u": "https://finshots.in/",
+   "d": "One Indian business or finance story a day, explained in three minutes. The easiest daily habit to build.",
+   "tags": "finshots newsletter india daily news"
+  },
+  {
+   "t": "Marcellus newsletters",
+   "s": "Marcellus Investment Managers",
+   "k": "read",
+   "l": "i",
+   "f": "Newsletter",
+   "free": true,
+   "u": "https://marcellus.in/",
+   "d": "Long-form Indian equity research and the Three Longs & Three Shorts reading list, every week.",
+   "tags": "marcellus india equities research newsletter"
+  },
+  {
+   "t": "Economic Survey of India",
+   "s": "Ministry of Finance",
+   "k": "read",
+   "l": "i",
+   "f": "Report",
+   "free": true,
+   "u": "https://www.indiabudget.gov.in/",
+   "d": "The pre-Budget document that explains the Indian economy in one place. Skim Volume 1 every January.",
+   "tags": "economic survey budget india macro"
+  },
+  {
+   "t": "Acquired",
+   "s": "Podcast",
+   "k": "read",
+   "l": "b",
+   "f": "Podcast",
+   "free": true,
+   "u": "https://www.acquired.fm/",
+   "d": "Three-hour histories of the great companies. Costco, Nvidia, LVMH. Case studies disguised as entertainment.",
+   "tags": "acquired podcast company history"
+  },
+  {
+   "t": "Invest Like the Best",
+   "s": "Colossus · Podcast",
+   "k": "read",
+   "l": "i",
+   "f": "Podcast",
+   "free": true,
+   "u": "https://www.joincolossus.com/",
+   "d": "Long interviews with investors and operators. Listen for how they reason, not for the picks.",
+   "tags": "colossus podcast investors interviews"
+  },
+  {
+   "t": "The Intelligent Investor",
+   "s": "Benjamin Graham · Book",
+   "k": "read",
+   "l": "b",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=The%20Intelligent%20Investor%20Graham",
+   "d": "Mr. Market and margin of safety. Chapters 8 and 20 are the two that matter.",
+   "tags": "graham value investing book"
+  },
+  {
+   "t": "Security Analysis",
+   "s": "Graham & Dodd · Book",
+   "k": "read",
+   "l": "a",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Security%20Analysis%20Graham%20Dodd",
+   "d": "The original text on reading financial statements as an investor. Slow going, permanently useful.",
+   "tags": "graham dodd security analysis"
+  },
+  {
+   "t": "The Psychology of Money",
+   "s": "Morgan Housel · Book",
+   "k": "read",
+   "l": "b",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=The%20Psychology%20of%20Money%20Housel",
+   "d": "Short essays on how people actually behave with money. The best first finance book to give anyone.",
+   "tags": "housel behavioural finance"
+  },
+  {
+   "t": "One Up on Wall Street",
+   "s": "Peter Lynch · Book",
+   "k": "read",
+   "l": "b",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=One%20Up%20on%20Wall%20Street%20Lynch",
+   "d": "How to find companies before the analysts do, from the manager who returned 29% a year for thirteen years.",
+   "tags": "lynch stock picking growth"
+  },
+  {
+   "t": "Liar's Poker",
+   "s": "Michael Lewis · Book",
+   "k": "read",
+   "l": "b",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Liar's%20Poker%20Michael%20Lewis",
+   "d": "Salomon Brothers in the 1980s. The funniest and most honest account of what a trading floor is.",
+   "tags": "lewis wall street trading floor"
+  },
+  {
+   "t": "When Genius Failed",
+   "s": "Roger Lowenstein · Book",
+   "k": "read",
+   "l": "i",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=When%20Genius%20Failed%20Lowenstein",
+   "d": "The rise and fall of Long-Term Capital Management. Leverage, models and what happens when both break.",
+   "tags": "ltcm leverage hedge fund risk"
+  },
+  {
+   "t": "Fooled by Randomness",
+   "s": "Nassim Taleb · Book",
+   "k": "read",
+   "l": "i",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Fooled%20by%20Randomness%20Taleb",
+   "d": "Why the trader with the best track record may just be lucky. Read before you trust any backtest.",
+   "tags": "taleb randomness probability risk"
+  },
+  {
+   "t": "Barbarians at the Gate",
+   "s": "Burrough & Helyar · Book",
+   "k": "read",
+   "l": "i",
+   "f": "Book",
+   "free": false,
+   "u": "https://openlibrary.org/search?q=Barbarians%20at%20the%20Gate",
+   "d": "The RJR Nabisco LBO, told like a thriller. The best way to understand what private equity actually does.",
+   "tags": "lbo private equity rjr nabisco"
+  }
+ ],
+ "paths": [
+  {
+   "n": "Zero to markets",
+   "dur": "4 weeks",
+   "d": "You've never bought a stock and the business news is noise. This gets you to fluent in a month.",
+   "steps": [
+    "Finance and Capital Markets",
+    "Zerodha Varsity",
+    "Investopedia",
+    "NSE India",
+    "Finshots"
+   ],
+   "who": "I've never studied finance",
+   "hint": "Science or arts in school, no commerce background, no idea where to begin."
+  },
+  {
+   "n": "Valuation in a summer",
+   "dur": "8 weeks",
+   "d": "Three statements to a defended DCF. What we'd want every member to finish over one summer break.",
+   "steps": [
+    "Corporate Finance Institute",
+    "Valuation and Corporate Finance classes",
+    "Damodaran's valuation spreadsheets",
+    "Screener.in",
+    "Wall Street Prep",
+    "Valuation: Measuring and Managing the Value of Companies"
+   ],
+   "who": "I know the basics",
+   "hint": "I follow the news and can read a balance sheet. I want to value a company."
+  },
+  {
+   "n": "CFA Level I runway",
+   "dur": "6 months",
+   "d": "The order that works around an IPM timetable. Ethics first, quant second, everything else in topic-weight order.",
+   "steps": [
+    "CFA Program overview",
+    "Mark Meldrum's CFA lectures",
+    "AnalystPrep study notes",
+    "Kaplan Schweser resources",
+    "Bloomberg Market Concepts"
+   ],
+   "who": "I want a certification",
+   "hint": "CFA Level I, planned around an IPM timetable."
+  },
+  {
+   "n": "Pitch-ready finance",
+   "dur": "10 weeks",
+   "d": "Know the roles, build the model, then learn to say it in the right order. The sequence behind a Bulls & Bears finalist.",
+   "steps": [
+    "Mergers & Inquisitions",
+    "Breaking Into Wall Street",
+    "Exceljet",
+    "The Pyramid Principle",
+    "Case Interview Secrets",
+    "Never Split the Difference"
+   ],
+   "who": "I want to compete",
+   "hint": "Bulls & Bears: build the model, then defend it in front of a panel."
+  }
+ ],
+ "events": [
+  {
+   "t": "Bulls & Bears",
+   "when": "Annual · Competition",
+   "d": "The flagship stock pitch. Long or short, one company, ten minutes, a panel that has heard every pitch before.",
+   "ill": "candles"
+  },
+  {
+   "t": "Valuation Bootcamp",
+   "when": "Term start · Workshop",
+   "d": "Three sessions from a three-statement model to a full DCF, built live in Excel on a real listed company.",
+   "ill": "sheet"
+  },
+  {
+   "t": "Market Wrap",
+   "when": "Weekly · Discussion",
+   "d": "Thirty minutes on what moved this week, why, and what the desk would have done about it.",
+   "ill": "line"
+  },
+  {
+   "t": "Alumni Konnect",
+   "when": "Every term · Talks",
+   "d": "Alumni across investment banking, research, asset management and corporate finance on what the first year actually looks like.",
+   "ill": "people"
+  }
+ ],
+ "drive": {
+  "root": "https://drive.google.com/drive/folders/17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk",
+  "inbox": "https://drive.google.com/drive/folders/17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk",
+  "folders": [
+   {
+    "t": "All Finspire files",
+    "d": "The club's shared Drive: every folder and file members have added.",
+    "tags": "Everything, Shared by members",
+    "u": "https://drive.google.com/drive/folders/17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk",
+    "icon": "folder"
+   },
+   {
+    "t": "CV templates",
+    "d": "One-page finance CV templates, with the formatting the club recommends.",
+    "tags": "Templates, Formatting guide, Examples",
+    "u": "",
+    "icon": "cv"
+   },
+   {
+    "t": "Interview questions",
+    "d": "Technical and fit questions, grouped by role: banking, research, markets and corporate finance.",
+    "tags": "Technical, Fit, By role",
+    "u": "https://drive.google.com/drive/folders/17UwJD6uBOuwLPXxiJAw3dnPPH6Wt85Bk",
+    "icon": "qa"
+   },
+   {
+    "t": "Cover letters & emails",
+    "d": "Sample cover letters and cold emails for finance roles.",
+    "tags": "Cover letters, Cold emails",
+    "u": "",
+    "icon": "mail"
+   },
+   {
+    "t": "CFA resources",
+    "d": "Level I notes and formula sheets written by members who sat the exam.",
+    "tags": "Notes, Formula sheets, Study plans",
+    "u": "",
+    "icon": "cfa"
+   },
+   {
+    "t": "Notes",
+    "d": "Members' notes from IPM finance courses, club sessions and bootcamps.",
+    "tags": "Course notes, Session notes",
+    "u": "",
+    "icon": "notes"
+   },
+   {
+    "t": "Excel & valuation models",
+    "d": "DCF, comps and three-statement models built in club bootcamps.",
+    "tags": "DCF, Comps, 3-statement",
+    "u": "",
+    "icon": "model"
+   },
+   {
+    "t": "Stock pitch decks",
+    "d": "Past Bulls & Bears decks and one-page models to learn the format from.",
+    "tags": "Decks, One-pagers",
+    "u": "",
+    "icon": "pitch"
+   },
+   {
+    "t": "Session slides & recordings",
+    "d": "Slides and recordings from Market Wrap, Alumni Konnect and workshops.",
+    "tags": "Slides, Recordings",
+    "u": "",
+    "icon": "play"
+   }
+  ]
+ }
+}

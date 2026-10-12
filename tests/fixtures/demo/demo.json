@@ -1,0 +1,1 @@
+{"demo": true, "note": "Marker file. Its presence under _demo/ (copied only by build_site.py --demo) allows ?demo-user=1 on localhost."}

@@ -1,0 +1,1020 @@
+[
+  {
+    "id": "financial-statements",
+    "term": "Financial statements",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "financials",
+      "final accounts",
+      "company accounts"
+    ],
+    "hl": [
+      "financial statements",
+      "financial statement",
+      "final accounts",
+      "annual accounts",
+      "audited accounts",
+      "audited financial statements"
+    ],
+    "abbr": [],
+    "short": "The formal reports a company publishes to show what it earned, what it owns and owes, and how cash moved during a period.",
+    "kid": "Imagine your lemonade stand keeps a little notebook. One page shows what you made, one shows what you have, and one shows where the coins went.",
+    "detail": "Financial statements are the standard set of reports a business prepares for each period: the income statement (profit and loss), the balance sheet, the cash flow statement and the statement of changes in equity, plus notes that explain the numbers. Together they show performance, financial position and cash generation. In India, listed and larger companies prepare them under Ind AS, many smaller ones under the earlier Indian GAAP standards, in the format set by Schedule III of the Companies Act, 2013. Annual statements must be audited, and listed companies also publish quarterly results under SEBI's listing rules. Investors, lenders and analysts use them to value companies and judge risk. The common mistake is reading one statement in isolation: profit can rise while cash falls, so read them together, notes included.",
+    "example": "Say ABC Ltd reports revenue of ₹500 crore, net profit of ₹40 crore, total assets of ₹800 crore and operating cash flow of ₹55 crore for FY26. The first two figures come from the income statement, the third from the balance sheet and the last from the cash flow statement.",
+    "formula": "",
+    "related": [
+      "Income statement",
+      "Balance sheet",
+      "Cash flow statement",
+      "Statement of changes in equity",
+      "Annual report",
+      "Auditor's report"
+    ]
+  },
+  {
+    "id": "income-statement",
+    "term": "Income statement",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "profit and loss statement",
+      "P&L",
+      "statement of profit and loss",
+      "statement of operations"
+    ],
+    "hl": [
+      "income statement",
+      "income statements",
+      "profit and loss statement",
+      "profit and loss account",
+      "statement of profit and loss",
+      "p&l statement"
+    ],
+    "abbr": [
+      "P&L"
+    ],
+    "short": "A report of what a company earned from sales, what it spent, and the profit or loss left, over a quarter or year.",
+    "kid": "At your lemonade stand, you count the coins people gave you and take away what you spent on lemons and cups. What is left is what you made this week.",
+    "detail": "The income statement, called the statement of profit and loss in Indian filings, records revenue and expenses for a period and arrives at net profit. It flows from revenue, through cost of goods sold, operating expenses, depreciation and finance costs, to profit before tax, then tax and finally net profit, with earnings per share at the bottom. Under Ind AS it also shows other comprehensive income, which captures items such as some fair value and pension remeasurement gains or losses that bypass profit. Analysts track its growth and margins quarter by quarter, and listed Indian companies publish it every quarter. The key confusion: it is built on accrual accounting, so profit is not cash. A company can report a profit while its bank balance shrinks, which is why it must be read with the cash flow statement.",
+    "example": "Say XYZ Ltd sells goods worth ₹100 crore, its cost of goods sold is ₹60 crore and other operating expenses are ₹20 crore, giving operating profit of ₹20 crore. After finance costs of ₹4 crore, profit before tax is ₹16 crore, and after tax of ₹4 crore its net profit is ₹12 crore.",
+    "formula": "Net profit = Revenue - Total expenses (cost of goods sold, operating expenses, depreciation, finance costs and tax)",
+    "related": [
+      "Revenue",
+      "Cost of goods sold",
+      "Gross profit",
+      "Operating profit",
+      "Net profit",
+      "Earnings per share"
+    ]
+  },
+  {
+    "id": "balance-sheet",
+    "term": "Balance sheet",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "statement of financial position",
+      "B/S"
+    ],
+    "hl": [
+      "balance sheet",
+      "balance sheets",
+      "statement of financial position"
+    ],
+    "abbr": [],
+    "short": "A snapshot of what a company owns, what it owes, and what belongs to its owners on one specific date.",
+    "kid": "It is like emptying your toy box on one day and listing everything inside, including toys you borrowed from a friend. Whatever is not borrowed is truly yours.",
+    "detail": "The balance sheet shows a company's financial position at a single point in time, usually the last day of a quarter or financial year. It lists assets (what the company controls, such as cash, receivables, inventory and plant), liabilities (what it owes, such as borrowings and payables) and shareholders' equity (the owners' residual claim). The two sides always balance because of the accounting equation: assets equal liabilities plus equity. Assets and liabilities are split into current (due or used within a year) and non-current. Investors use it to judge leverage, liquidity and how efficiently capital is used, for example through the debt-to-equity ratio. A common confusion is treating it as a record of a whole period; it is a snapshot, and the figures can change sharply the next day. Book values also often differ from market values.",
+    "example": "Say PQR Ltd has total assets of ₹1,000 crore on 31 March, funded by ₹600 crore of liabilities. Its shareholders' equity must then be ₹400 crore, because ₹600 crore + ₹400 crore = ₹1,000 crore.",
+    "formula": "Total assets = Total liabilities + Shareholders' equity",
+    "related": [
+      "Accounting equation",
+      "Asset",
+      "Liability",
+      "Shareholders' equity",
+      "Working capital",
+      "Debt-to-equity ratio"
+    ]
+  },
+  {
+    "id": "cash-flow-statement",
+    "term": "Cash flow statement",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "statement of cash flows",
+      "CFS"
+    ],
+    "hl": [
+      "cash flow statement",
+      "cash flow statements",
+      "statement of cash flows"
+    ],
+    "abbr": [],
+    "short": "A report showing where a company's cash came from and where it went during a period, split into operating, investing and financing activities.",
+    "kid": "It is a diary for your piggy bank. It writes down every coin that went in, every coin that came out, and why.",
+    "detail": "The cash flow statement tracks actual cash moving in and out of a business over a period, in three sections. Operating activities cover cash from the core business; investing activities cover buying or selling long-term assets such as plants, equipment or investments; financing activities cover borrowing, repaying loans, raising equity and paying dividends. In India it is prepared under Ind AS 7 (or AS 3 for non-Ind AS companies), and most companies use the indirect method, starting from profit and adjusting for non-cash items such as depreciation and for changes in working capital. Because cash is harder to manipulate than accounting profit, investors compare operating cash flow with net profit; a persistent gap can signal aggressive revenue recognition or stretched receivables. A common confusion is to treat any fall in total cash as bad news: it may simply reflect heavy investment in growth or early debt repayment.",
+    "example": "Say ABC Ltd generates ₹80 crore from operations, spends ₹50 crore on a new factory and repays ₹20 crore of loans. Its net cash flow for the year is ₹80 crore - ₹50 crore - ₹20 crore = ₹10 crore, so its cash balance rises by ₹10 crore.",
+    "formula": "Net change in cash = Cash from operating activities + Cash from investing activities + Cash from financing activities",
+    "related": [
+      "Operating cash flow",
+      "Free cash flow",
+      "Income statement",
+      "Balance sheet",
+      "Working capital",
+      "Capital expenditure"
+    ]
+  },
+  {
+    "id": "statement-of-changes-in-equity",
+    "term": "Statement of changes in equity",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "SOCE"
+    ],
+    "hl": [
+      "statement of changes in equity"
+    ],
+    "abbr": [],
+    "short": "A report showing how the owners' stake in a company changed during a period, through profits, dividends paid, new shares issued and other items.",
+    "kid": "Think of a jar that holds the part of your lemonade stand that is truly yours. This page explains why the jar got fuller or emptier this year.",
+    "detail": "The statement of changes in equity reconciles opening and closing shareholders' equity for each component, such as share capital, securities premium, retained earnings and other reserves. Typical movements are profit for the period, other comprehensive income, dividends paid, new shares issued, buybacks and transfers between reserves. It links the income statement to the balance sheet: profit that is not paid out as dividends is added to retained earnings, which sit within equity. Under Ind AS and IFRS it is a required primary statement, presented in the Schedule III format; companies on the older Indian GAAP standards need not prepare it. Investors use it to see whether equity is growing from earnings or from fresh capital, and to spot items that bypass profit. A common confusion is to equate equity growth with profitability; a share issue also raises equity without any profit being earned.",
+    "example": "Say ABC Ltd starts the year with equity of ₹500 crore, earns net profit of ₹60 crore, pays dividends of ₹20 crore and issues new shares worth ₹30 crore. Its closing equity is ₹500 crore + ₹60 crore - ₹20 crore + ₹30 crore = ₹570 crore.",
+    "formula": "Closing equity = Opening equity + Total comprehensive income - Dividends + New shares issued - Buybacks",
+    "related": [
+      "Shareholders' equity",
+      "Retained earnings",
+      "Other comprehensive income",
+      "Dividend",
+      "Balance sheet"
+    ]
+  },
+  {
+    "id": "financial-year",
+    "term": "Financial year",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "FY",
+      "fiscal year",
+      "fiscal",
+      "April-March year",
+      "FY26",
+      "FY27"
+    ],
+    "hl": [
+      "financial year",
+      "financial years",
+      "fiscal year",
+      "fiscal years",
+      "this fiscal",
+      "last fiscal",
+      "previous fiscal"
+    ],
+    "abbr": [
+      "FY",
+      "FY26",
+      "FY27"
+    ],
+    "short": "The 12-month period a company or government uses for its accounts and budgets; in India it runs from 1 April to 31 March.",
+    "kid": "A school year does not always start in January. People who run shops also pick their own year for counting everything they did.",
+    "detail": "A financial year, or fiscal year, is the 12-month accounting period for which a company prepares its annual financial statements and a government frames its budget. It need not match the calendar year. In India, the Companies Act, 2013 requires most companies to follow an April-to-March year, and the Union Budget and income tax use the same period. Years are named after the year in which they end, so FY26 runs from 1 April 2025 to 31 March 2026, and quarters are labelled within it, so Q1 FY27 means April to June 2026. Practice varies abroad: the US federal government runs October to September, and companies such as Apple end their year in late September. A common confusion is comparing calendar-year and fiscal-year figures across companies or countries without lining up the periods.",
+    "example": "India's FY25 ran from 1 April 2024 to 31 March 2025, so a company's Q3 FY25 results cover October to December 2024. Say a hypothetical US firm, XYZ Inc, ends its year on 30 September; its FY2025 ran from 1 October 2024 to 30 September 2025.",
+    "formula": "",
+    "related": [
+      "Financial statements",
+      "Quarterly results",
+      "Union Budget",
+      "Assessment year",
+      "Annual report"
+    ]
+  },
+  {
+    "id": "accounting-equation",
+    "term": "Accounting equation",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "balance sheet equation",
+      "assets equal liabilities plus equity"
+    ],
+    "hl": [
+      "accounting equation",
+      "balance sheet equation"
+    ],
+    "abbr": [],
+    "short": "The basic rule of accounting: everything a company owns equals what it owes to others plus what belongs to its owners.",
+    "kid": "If you have five toys and two of them are borrowed from a friend, then three toys are really yours. Borrowed toys plus your own always add up to all the toys.",
+    "detail": "The accounting equation states that assets equal liabilities plus shareholders' equity. Every resource a business controls has been financed either by creditors or by owners, so the two sides must always match. Every transaction keeps the equation in balance: taking a ₹10 lakh bank loan raises cash (an asset) and borrowings (a liability) by the same amount, while earning a profit raises assets and equity together. This is why double-entry bookkeeping records each transaction in at least two accounts, and why the balance sheet always balances. Rearranged, it shows equity as assets minus liabilities, the owners' residual claim, also called net worth or book value. A common confusion is to think a balanced balance sheet means a healthy company; it balances by construction, even for a firm drowning in debt.",
+    "example": "Say a new business, ABC Traders, starts with ₹10 lakh of owners' money and borrows ₹5 lakh from a bank. It now has ₹15 lakh of assets, which equals ₹5 lakh of liabilities + ₹10 lakh of equity. If it then spends ₹3 lakh of cash on equipment, assets stay at ₹15 lakh; only their mix changes.",
+    "formula": "Assets = Liabilities + Shareholders' equity",
+    "related": [
+      "Balance sheet",
+      "Double-entry bookkeeping",
+      "Asset",
+      "Liability",
+      "Shareholders' equity",
+      "Net worth"
+    ]
+  },
+  {
+    "id": "double-entry-bookkeeping",
+    "term": "Double-entry bookkeeping",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "double entry",
+      "debit and credit",
+      "bookkeeping"
+    ],
+    "hl": [
+      "double-entry bookkeeping",
+      "double entry bookkeeping",
+      "double-entry accounting",
+      "double entry accounting",
+      "double-entry system"
+    ],
+    "abbr": [],
+    "short": "The system of recording every transaction in at least two accounts with equal and opposite amounts, so the books always balance.",
+    "kid": "When you give your friend a sweet, you write two notes: one sweet less for you, one sweet more for your friend. Both notes together tell the whole story.",
+    "detail": "Double-entry bookkeeping records every transaction as at least one debit and one credit of equal total value. Debits increase assets and expenses and reduce liabilities, equity and income; credits do the reverse. Buying inventory for ₹1 lakh in cash, for example, debits inventory and credits cash. Because debits always equal credits, the accounting equation stays balanced, and many recording errors show up when a trial balance is drawn. The method was set out in print by the Italian mathematician Luca Pacioli in 1494, and it underpins all modern accounting software; the Companies Act, 2013 requires Indian companies to keep their books on this system. A common confusion comes from bank statements: when your bank 'credits' your account, it is increasing what it owes you in its own books, which is why credit means money in on your statement.",
+    "example": "Say ABC Ltd sells goods for ₹50,000 on credit. It debits trade receivables by ₹50,000 and credits revenue by ₹50,000. When the customer pays, it debits cash by ₹50,000 and credits trade receivables by ₹50,000, bringing receivables for this sale back to zero.",
+    "formula": "Total debits = Total credits",
+    "related": [
+      "Journal entry",
+      "General ledger",
+      "Trial balance",
+      "Accounting equation",
+      "Debit",
+      "Credit"
+    ]
+  },
+  {
+    "id": "journal-entry",
+    "term": "Journal entry",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "journal"
+    ],
+    "hl": [
+      "journal entry",
+      "journal entries"
+    ],
+    "abbr": [],
+    "short": "The first written record of a business transaction, listing its date, the accounts affected, the amounts and a short explanation.",
+    "kid": "Every time something happens at your lemonade stand, you write one line in your notebook saying what happened and when. That line is your first note.",
+    "detail": "A journal entry is the original record of a transaction in the books of account, made in date order in the journal, also called the book of original entry. Each entry names the accounts to be debited and credited, the amounts, the date and a narration explaining it, and total debits must equal total credits. Entries are then posted to the general ledger, where they are grouped by account. Besides routine entries for sales and purchases, accountants pass adjusting entries at period-end for accruals, depreciation and prepaid items, and correcting entries for errors. Auditors test journal entries closely, especially unusual manual ones posted near the year-end, because they are a classic route for manipulating results. A common confusion is between the journal, which lists transactions by date, and the ledger, which sorts the same information by account.",
+    "example": "Say ABC Ltd pays ₹2 lakh of rent for March in cash. The journal entry is: debit rent expense ₹2 lakh, credit cash ₹2 lakh, with the narration 'Rent paid for March'. Both sides total ₹2 lakh, so the entry balances.",
+    "formula": "",
+    "related": [
+      "Double-entry bookkeeping",
+      "General ledger",
+      "Trial balance",
+      "Accrual accounting",
+      "Audit"
+    ]
+  },
+  {
+    "id": "general-ledger",
+    "term": "General ledger",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "ledger",
+      "GL"
+    ],
+    "hl": [
+      "general ledger",
+      "general ledgers"
+    ],
+    "abbr": [],
+    "short": "The master set of accounts that sorts every recorded transaction by account, such as cash, sales or rent, showing each account's running total.",
+    "kid": "Imagine a box with one envelope for each kind of thing: one for coins, one for lemons, one for cups. Every time something happens, you drop a note into the right envelope.",
+    "detail": "The general ledger is the complete collection of a company's accounts, each showing every debit and credit posted to it and its running balance. Transactions are first recorded as journal entries and then posted to the relevant ledger accounts, organised by a chart of accounts covering assets, liabilities, equity, income and expenses. Subsidiary ledgers, such as those for individual customers or suppliers, roll up into control accounts in the general ledger. At period-end, the ledger balances are listed in a trial balance and then used to prepare the financial statements. Today the ledger lives inside accounting or ERP software, from Tally, popular with Indian small businesses, to SAP at large companies, rather than in bound books. A common confusion: the ledger records nothing new; it reorganises journal data by account so that balances are easy to find.",
+    "example": "Say ABC Ltd's cash account starts the month at ₹10 lakh. The ledger posts receipts of ₹6 lakh and payments of ₹4 lakh during the month, so the cash account closes at ₹10 lakh + ₹6 lakh - ₹4 lakh = ₹12 lakh.",
+    "formula": "Closing balance = Opening balance + Debits - Credits (for an asset or expense account)",
+    "related": [
+      "Journal entry",
+      "Trial balance",
+      "Double-entry bookkeeping",
+      "Chart of accounts",
+      "Financial statements"
+    ]
+  },
+  {
+    "id": "trial-balance",
+    "term": "Trial balance",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "trial balance"
+    ],
+    "abbr": [],
+    "short": "A list of every account's closing balance on a date, used to check the books add up before the final reports are prepared.",
+    "kid": "After a day of swapping toys with friends, you line up all your notes and check that every toy given matches a toy received. If they match, your notes are probably right.",
+    "detail": "A trial balance lists the closing balance of every general ledger account at a point in time, with debit balances in one column and credit balances in the other. Because double-entry bookkeeping records equal debits and credits, the two columns should match; if they do not, there is an arithmetic or posting error to trace. Accountants usually prepare an unadjusted trial balance, pass adjusting entries for accruals, depreciation and similar items, and then draw up an adjusted trial balance from which the financial statements are built. A common confusion is to treat a balanced trial balance as proof that the books are correct. It will not catch transactions left out entirely, amounts posted to the wrong account, or equal mistakes on both sides, which is why audits go well beyond it.",
+    "example": "Say ABC Ltd's ledger shows debit balances of cash ₹8 lakh, receivables ₹5 lakh and expenses ₹7 lakh, totalling ₹20 lakh, and credit balances of capital ₹12 lakh and sales ₹8 lakh, also totalling ₹20 lakh. Since both columns equal ₹20 lakh, the trial balance agrees.",
+    "formula": "Sum of debit balances = Sum of credit balances",
+    "related": [
+      "General ledger",
+      "Journal entry",
+      "Double-entry bookkeeping",
+      "Financial statements",
+      "Audit"
+    ]
+  },
+  {
+    "id": "accrual-accounting",
+    "term": "Accrual accounting",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "accrual basis",
+      "accruals",
+      "mercantile system"
+    ],
+    "hl": [
+      "accrual accounting",
+      "accrual basis",
+      "accrual-based accounting",
+      "accrual basis of accounting",
+      "mercantile system of accounting"
+    ],
+    "abbr": [],
+    "short": "Recording income when it is earned and expenses when they are incurred, regardless of when cash actually changes hands.",
+    "kid": "If your friend takes a cup of lemonade today and promises to pay tomorrow, you still count the sale today. You write it down when it happens, not when the coins arrive.",
+    "detail": "Accrual accounting records revenue when it is earned, usually when goods or services are delivered, and expenses when they are incurred, rather than when cash is received or paid. It creates balance sheet items such as trade receivables, unbilled revenue, prepaid expenses, payables and accrued liabilities to bridge the timing gap. Often called the mercantile system in India, it is required for companies under the Companies Act, 2013 and is the basis of Ind AS and IFRS, because it matches income with the costs of earning it and gives a truer picture of performance. Its drawback is that it relies on judgement and estimates, which leaves room for manipulation. A common confusion is to treat accrual profit as cash: a fast-growing firm selling on long credit terms can show strong profits while running short of cash.",
+    "example": "Say ABC Ltd delivers ₹10 lakh of software services in March, but the client pays in May. Under accrual accounting, the ₹10 lakh is revenue for the year ending 31 March, and a ₹10 lakh receivable sits on the balance sheet until the cash arrives in May.",
+    "formula": "",
+    "related": [
+      "Cash basis accounting",
+      "Matching principle",
+      "Revenue recognition",
+      "Deferred revenue",
+      "Unbilled revenue",
+      "Working capital"
+    ]
+  },
+  {
+    "id": "cash-basis-accounting",
+    "term": "Cash basis accounting",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "cash accounting"
+    ],
+    "hl": [
+      "cash basis accounting",
+      "cash-basis accounting",
+      "cash basis of accounting",
+      "cash accounting"
+    ],
+    "abbr": [],
+    "short": "Recording income only when cash is received and expenses only when cash is paid out, ignoring amounts still owed.",
+    "kid": "You only write something in your notebook when coins actually land in your hand or leave it. Promises do not count until the coins move.",
+    "detail": "Cash basis accounting recognises revenue when cash comes in and expenses when cash goes out, regardless of when the work was done or the goods delivered. It is simple and shows exactly how much cash a business has, which suits individuals, very small businesses and some professionals; Indian tax law lets many such taxpayers choose it. Its weakness is that it can distort performance: a large advance from a customer looks like profit, and an unpaid supplier bill looks like a saving. For this reason, Indian companies must use accrual accounting under the Companies Act, 2013, and Ind AS, IFRS and US GAAP are all built on accruals. Many governments, including India's, still keep budget accounts largely on a cash basis. A common confusion is between cash basis accounting and the cash flow statement, which accrual-based companies still publish separately.",
+    "example": "Say a freelance designer bills ₹1 lakh for work done in March but is paid on 10 April, and pays ₹20,000 of March rent on 2 April. On a cash basis, March shows no income and no rent, while April shows ₹1 lakh of income and ₹20,000 of rent, a profit of ₹80,000 that really belongs to March.",
+    "formula": "",
+    "related": [
+      "Accrual accounting",
+      "Matching principle",
+      "Cash flow statement",
+      "Revenue recognition"
+    ]
+  },
+  {
+    "id": "matching-principle",
+    "term": "Matching principle",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "matching concept"
+    ],
+    "hl": [
+      "matching principle",
+      "matching concept"
+    ],
+    "abbr": [],
+    "short": "The accounting rule that costs should be recorded in the same period as the income they helped to earn.",
+    "kid": "The lemons you squeezed for today's lemonade belong to today's sales. You count the lemons and the lemonade on the same day, side by side.",
+    "detail": "The matching principle says expenses should be recognised in the same period as the revenues they help generate, so each period's profit reflects the true cost of earning it. Cost of goods sold is matched to the sales it relates to; a machine's cost is spread over its useful life through depreciation; a salesperson's commission is expensed alongside the sale it relates to. Costs with no clear link to future revenue, such as most advertising, are expensed as incurred. The principle is a pillar of accrual accounting and explains items such as prepaid expenses and accrued liabilities. Ind AS and IFRS express it through their definitions of assets and liabilities rather than as a stand-alone rule, but the idea remains central. A common confusion is to think matching lets companies defer any cost they like; a cost can be carried forward only if it qualifies as an asset.",
+    "example": "Say ABC Ltd buys a machine for ₹10 lakh that will make products for 5 years and have no value left at the end. Instead of expensing ₹10 lakh in year one, it records depreciation of ₹2 lakh each year, matching the cost to the 5 years of sales the machine helps generate.",
+    "formula": "",
+    "related": [
+      "Accrual accounting",
+      "Revenue recognition",
+      "Depreciation",
+      "Cost of goods sold",
+      "Prepaid expenses"
+    ]
+  },
+  {
+    "id": "going-concern",
+    "term": "Going concern",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "going concern assumption",
+      "going concern doubt"
+    ],
+    "hl": [
+      "going concern",
+      "going-concern",
+      "going concern doubt",
+      "going concern doubts",
+      "going concern warning",
+      "going concern assumption"
+    ],
+    "abbr": [],
+    "short": "The assumption that a business will keep operating for the foreseeable future, rather than shutting down or being forced to sell off everything it owns.",
+    "kid": "When you set up a lemonade stand, you plan to open it again tomorrow and the day after. If it might close for good, you must tell everyone.",
+    "detail": "Going concern is the basic assumption behind financial statements: that the business will keep operating for at least the next twelve months from the reporting date and has neither the intention nor the need to shut down. It is why assets are carried at cost less depreciation rather than at fire-sale prices. Management must assess it each period, and auditors must evaluate that assessment. If there is a material uncertainty, for example from mounting losses, loan defaults or the loss of a key licence, the company must disclose it and the auditor highlights it in the audit report. In India, such a flag, often reported as a going concern doubt, alarms lenders and investors and can hit a stock hard. A common confusion is to read it as a prediction of collapse; it signals significant doubt, not certain failure.",
+    "example": "Say ABC Ltd has ₹500 crore of loans due in six months but only ₹50 crore of cash and no confirmed refinancing. Its auditor may report a material uncertainty related to going concern, warning readers that ₹450 crore of repayments has no clear source of funding yet.",
+    "formula": "",
+    "related": [
+      "Auditor's report",
+      "Insolvency",
+      "Liquidity",
+      "Materiality",
+      "Financial statements"
+    ]
+  },
+  {
+    "id": "materiality",
+    "term": "Materiality",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "materiality concept"
+    ],
+    "hl": [
+      "materiality",
+      "materiality threshold",
+      "materiality thresholds",
+      "materiality concept",
+      "materiality policy"
+    ],
+    "abbr": [],
+    "short": "The idea that information matters, and must be reported or corrected, if leaving it out or getting it wrong could change a reader's decisions.",
+    "kid": "If you lose one grain of sugar, nobody minds. If you lose the whole bag, you must tell your friends, because it changes what they will do.",
+    "detail": "Materiality is the principle that information is material if omitting, misstating or obscuring it could reasonably be expected to influence the decisions of people using the financial statements. Immaterial items can be simplified or grouped, but material ones must be accurately recognised and disclosed. It depends on both size and nature: a small amount can be material if it involves fraud or a related party, or if it turns a profit into a loss. Auditors set numerical benchmarks, often a small percentage of profit before tax, revenue or total assets, to plan their work. In India, SEBI's listing rules also use materiality thresholds to decide which events and related party transactions listed companies must disclose or put to shareholders. A common confusion is to treat materiality as a fixed number; it is a judgement that depends on context.",
+    "example": "Say ABC Ltd has profit before tax of ₹200 crore and its auditor sets materiality at 5% of that, or ₹10 crore. A ₹50 lakh misclassification may be left uncorrected as immaterial, but a ₹15 crore error, or even a small hidden payment to a director, would need fixing or disclosure.",
+    "formula": "",
+    "related": [
+      "Going concern",
+      "Auditor's report",
+      "Related party transaction",
+      "Financial statements",
+      "Disclosure"
+    ]
+  },
+  {
+    "id": "historical-cost",
+    "term": "Historical cost",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "historical cost principle",
+      "cost principle"
+    ],
+    "hl": [
+      "historical cost",
+      "historical cost principle",
+      "historical cost accounting",
+      "historical-cost accounting"
+    ],
+    "abbr": [],
+    "short": "Recording something a company owns at the price it originally paid, rather than what it would sell for today.",
+    "kid": "Grandma bought you a toy car years ago for a few coins. Even if it would fetch more today, your notebook still says what she paid.",
+    "detail": "Under the historical cost principle, assets are recorded at their original purchase cost, including the costs needed to get them ready for use, and are not revalued for later changes in market price. Plant and equipment is then carried at cost less accumulated depreciation and impairment, and land stays at cost. The approach is objective and verifiable, because the price is backed by an invoice, which is why it remains the default for many assets under Ind AS, IFRS and US GAAP. Its weakness is relevance: after years of inflation, or for long-held land, book values can be far below current worth, so the balance sheet understates what a company really has. Ind AS lets companies choose revaluation for property, plant and equipment, and requires fair value for many financial instruments. A common confusion is to treat book value as market value.",
+    "example": "Say ABC Ltd bought land in Pune for ₹2 crore in 2005, and the same plot would fetch ₹20 crore today. Under the historical cost model its balance sheet still shows the land at ₹2 crore, so ₹18 crore of potential gain is invisible in that number.",
+    "formula": "",
+    "related": [
+      "Fair value",
+      "Depreciation",
+      "Impairment",
+      "Book value",
+      "Asset"
+    ]
+  },
+  {
+    "id": "fair-value",
+    "term": "Fair value",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "fair value accounting",
+      "fair value measurement"
+    ],
+    "hl": [
+      "fair value accounting",
+      "fair value measurement",
+      "fair value gain",
+      "fair value gains",
+      "fair value loss",
+      "fair value losses"
+    ],
+    "abbr": [],
+    "short": "The price something would fetch if sold today in a normal deal between willing buyers and sellers, as used in company accounts.",
+    "kid": "If you swapped your toy car at the park today, what would a friend happily give you for it? That is what it is worth right now.",
+    "detail": "In accounting, fair value is the price that would be received to sell an asset, or paid to transfer a liability, in an orderly transaction between market participants on the measurement date. Ind AS 113, IFRS 13 and the US ASC 820 define it and rank the inputs in a three-level hierarchy: Level 1 uses quoted prices in active markets, Level 2 uses other observable data, and Level 3 relies on models and unobservable assumptions. Banks, insurers and investment firms carry many financial instruments at fair value, so market moves flow straight into their results. Fair value is more relevant than historical cost but can be volatile and, at Level 3, subjective. A common confusion is between accounting fair value, an exit price defined by the standards, and an analyst's 'fair value' for a stock, which is a personal estimate of intrinsic worth.",
+    "example": "Say ABC Ltd holds 10,000 shares of a listed company bought at ₹100 each. If the shares close at ₹130 on 31 March, their fair value is 10,000 x ₹130 = ₹13 lakh, and ABC reports a fair value gain of ₹3 lakh over the ₹10 lakh cost.",
+    "formula": "",
+    "related": [
+      "Historical cost",
+      "Mark-to-market",
+      "Impairment",
+      "Intrinsic value",
+      "Other comprehensive income"
+    ]
+  },
+  {
+    "id": "asset",
+    "term": "Asset",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "assets"
+    ],
+    "hl": [
+      "total assets"
+    ],
+    "abbr": [],
+    "short": "Anything a company owns or controls that should bring it future benefits, such as cash, goods for sale, machines or patents.",
+    "kid": "Your toys, your bicycle and the coins in your piggy bank are all things you have that are useful to you. Those are your treasures.",
+    "detail": "An asset is a resource controlled by a business as a result of past events, from which future economic benefits are expected to flow. On the balance sheet, current assets are expected to be turned into cash or used within a year (cash, trade receivables, inventory), while non-current assets are held for longer (property, plant and equipment, long-term investments, and intangibles such as software, brands and patents). Control matters more than legal ownership: under Ind AS 116 and IFRS 16, a company records a right-of-use asset for property it leases. For a bank, the loans it gives are assets, which is why news on bank asset quality is about bad loans. A common confusion is to assume every valuable thing is on the books; internally built brands and a skilled workforce usually are not, one reason market value often exceeds book value.",
+    "example": "Say ABC Ltd has cash of ₹20 crore, receivables of ₹30 crore, inventory of ₹50 crore and a factory carried at ₹100 crore. Its current assets are ₹20 crore + ₹30 crore + ₹50 crore = ₹100 crore, and its total assets are ₹200 crore.",
+    "formula": "Total assets = Current assets + Non-current assets",
+    "related": [
+      "Liability",
+      "Balance sheet",
+      "Current assets",
+      "Intangible assets",
+      "Depreciation",
+      "Accounting equation"
+    ]
+  },
+  {
+    "id": "liability",
+    "term": "Liability",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "liabilities"
+    ],
+    "hl": [
+      "total liabilities",
+      "outstanding liabilities"
+    ],
+    "abbr": [],
+    "short": "Something a company owes to others and must settle in the future, such as loans, unpaid supplier bills, taxes due or customer advances.",
+    "kid": "If you borrow your friend's ball, you have to give it back later. Anything you must give back or pay back is something you owe.",
+    "detail": "A liability is a present obligation of a business, arising from past events, that it expects to settle by giving up cash, goods or services. Current liabilities fall due within a year, such as trade payables, short-term borrowings, taxes and customer advances; non-current liabilities, such as long-term loans, bonds, lease liabilities and employee pension obligations, fall due later. Liabilities and equity together fund a company's assets, and investors judge solvency and liquidity with measures like the debt-to-equity and current ratios. Not every liability is borrowing: deferred revenue is settled by delivering a service, not by paying cash, and for a bank, customer deposits are its biggest liability. A provision is a liability of uncertain timing or amount, while a contingent liability, such as a disputed tax demand common in Indian annual reports, is only disclosed in the notes unless payment becomes probable.",
+    "example": "Say ABC Ltd owes suppliers ₹40 crore payable within 60 days, has a ₹100 crore bank loan due in five years and has received ₹10 crore of customer advances. Its current liabilities are ₹40 crore + ₹10 crore = ₹50 crore, and its total liabilities are ₹150 crore.",
+    "formula": "Liabilities = Assets - Shareholders' equity",
+    "related": [
+      "Asset",
+      "Balance sheet",
+      "Contingent liability",
+      "Provision",
+      "Debt-to-equity ratio",
+      "Current ratio"
+    ]
+  },
+  {
+    "id": "revenue",
+    "term": "Revenue",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "sales",
+      "top line",
+      "turnover",
+      "revenue from operations",
+      "net sales"
+    ],
+    "hl": [
+      "revenue from operations",
+      "revenue growth",
+      "topline growth",
+      "top-line growth",
+      "top line growth",
+      "net sales",
+      "quarterly revenue",
+      "annual revenue"
+    ],
+    "abbr": [],
+    "short": "The money a company earns from selling its goods or services during a period, before any costs are subtracted.",
+    "kid": "When friends buy cups of lemonade, all the coins they hand you add up to what your stand brought in. That is before you pay for the lemons.",
+    "detail": "Revenue is the income a business earns from its ordinary activities, mainly selling goods and services, measured at the amount it expects to receive after discounts, returns and rebates. It sits at the top of the income statement, which is why it is called the top line. Indian companies report 'revenue from operations' separately from 'other income' such as interest and dividends, and show it net of GST, which they collect on the government's behalf. Revenue growth is one of the first numbers investors check in quarterly results because it shows whether demand for the business is expanding. A common confusion is to treat revenue as profit or cash: it is recorded when earned, before costs are deducted, and may not yet be collected. Note too that 'turnover' means revenue in company accounts but the value of shares traded in stock market news.",
+    "example": "Say ABC Ltd sells 2 lakh units at ₹500 each and gives ₹50 lakh of discounts during the quarter. Its revenue is 2,00,000 x ₹500 - ₹50 lakh = ₹10 crore - ₹50 lakh = ₹9.5 crore.",
+    "formula": "Revenue = Units sold x Price per unit - Discounts, returns and rebates",
+    "related": [
+      "Revenue recognition",
+      "Income statement",
+      "Gross profit",
+      "Other income",
+      "Cost of goods sold",
+      "Deferred revenue"
+    ]
+  },
+  {
+    "id": "revenue-recognition",
+    "term": "Revenue recognition",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "Ind AS 115",
+      "IFRS 15",
+      "ASC 606"
+    ],
+    "hl": [
+      "revenue recognition",
+      "ind as 115",
+      "ifrs 15",
+      "asc 606"
+    ],
+    "abbr": [],
+    "short": "The accounting rules that decide when a sale counts as income and how much of it to record in each period.",
+    "kid": "A friend gives you seven coins today for one cup of lemonade every day this week. You count one coin as yours each day, when you hand over that day's cup.",
+    "detail": "Revenue recognition determines the timing and amount of revenue a company records. Ind AS 115, which is closely based on IFRS 15 and broadly similar to the US standard ASC 606, uses a five-step model: identify the contract, identify the separate performance obligations, determine the transaction price, allocate it to each obligation, and recognise revenue when or as each obligation is satisfied, meaning control passes to the customer. Revenue can be recognised at a point in time, as when a car is delivered, or over time, as with a construction contract or a software subscription. These rules matter because revenue is the starting point of most valuations, and early or aggressive recognition is one of the most common forms of accounting manipulation. A common confusion is to equate sending an invoice or receiving cash with recognition: cash may arrive before or after revenue is earned.",
+    "example": "Say ABC Ltd sells a ₹12 lakh one-year software subscription on 1 January and is paid upfront. It recognises ₹1 lakh of revenue each month, so by 31 March it has recognised ₹3 lakh, and the remaining ₹9 lakh sits as deferred revenue.",
+    "formula": "",
+    "related": [
+      "Revenue",
+      "Deferred revenue",
+      "Unbilled revenue",
+      "Accrual accounting",
+      "Matching principle"
+    ]
+  },
+  {
+    "id": "deferred-revenue",
+    "term": "Deferred revenue",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "unearned revenue",
+      "contract liabilities",
+      "advance from customers"
+    ],
+    "hl": [
+      "deferred revenue",
+      "deferred revenues",
+      "unearned revenue",
+      "contract liabilities",
+      "advance from customers",
+      "advances from customers",
+      "customer advances"
+    ],
+    "abbr": [],
+    "short": "Money a company has received from customers for goods or services it has not yet delivered, so it still owes the customer.",
+    "kid": "A friend gives you coins today for lemonade you will make next week. Until you hand it over, you still owe your friend a cup.",
+    "detail": "Deferred revenue arises when a customer pays before the company has delivered what it promised. Because the company still owes goods or services, the cash is recorded as a liability, called a contract liability under Ind AS 115 and IFRS 15, and is moved into revenue as the obligation is fulfilled. It is common in subscriptions, software licences, airline tickets and education fees, and in real estate, where Indian developers collect booking advances long before handing over flats. A rising deferred revenue balance can signal future revenue that customers have already paid for, and it boosts operating cash flow ahead of profit. A common confusion is to treat it like borrowing: it is normally settled by delivering the product, not by repaying cash, which is why investors often welcome it. The opposite case, earned but not yet billed, is unbilled revenue.",
+    "example": "Say an edtech firm, ABC Learning, collects ₹60,000 from a student on 1 January for a six-month course. It records a ₹60,000 liability and moves ₹10,000 to revenue each month, so by 31 March it has recognised ₹30,000 and ₹30,000 remains deferred.",
+    "formula": "Closing deferred revenue = Opening deferred revenue + Advances received - Revenue recognised",
+    "related": [
+      "Revenue recognition",
+      "Unbilled revenue",
+      "Liability",
+      "Accrual accounting",
+      "Operating cash flow"
+    ]
+  },
+  {
+    "id": "unbilled-revenue",
+    "term": "Unbilled revenue",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "accrued revenue",
+      "contract assets"
+    ],
+    "hl": [
+      "unbilled revenue",
+      "unbilled revenues",
+      "accrued revenue",
+      "contract assets"
+    ],
+    "abbr": [],
+    "short": "Income a company has already earned by doing the work but has not yet sent the customer a bill for.",
+    "kid": "You watered your neighbour's plants all week, and you will ask for the coins on Saturday. You already did the job, so those coins are already yours to count.",
+    "detail": "Unbilled revenue is revenue recognised under accrual accounting for goods delivered or work performed before the company has invoiced the customer. It sits on the balance sheet as an asset; under Ind AS 115 and IFRS 15 it is a contract asset when payment still depends on something other than the passage of time, such as reaching a project milestone. When the invoice is raised, it moves to trade receivables. It is common in IT services, engineering and construction, and large Indian IT firms routinely report sizeable unbilled revenue at quarter-end because of fixed-price and milestone contracts. Analysts watch it closely: a balance growing much faster than revenue may point to billing delays, disputed work or aggressive recognition. A common confusion is with deferred revenue, the opposite case, where the customer has paid before the work is done.",
+    "example": "Say ABC Infotech completes ₹5 crore of work on a fixed-price project by 31 March but can invoice only on reaching the next milestone in May. It records ₹5 crore of revenue and a ₹5 crore unbilled revenue asset; when it invoices in May, the ₹5 crore moves to trade receivables.",
+    "formula": "",
+    "related": [
+      "Deferred revenue",
+      "Revenue recognition",
+      "Trade receivables",
+      "Accrual accounting",
+      "Working capital"
+    ]
+  },
+  {
+    "id": "cost-of-goods-sold",
+    "term": "Cost of goods sold",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "COGS",
+      "cost of sales",
+      "cost of revenue"
+    ],
+    "hl": [
+      "cost of goods sold",
+      "cost of sales",
+      "cost of revenue"
+    ],
+    "abbr": [
+      "COGS"
+    ],
+    "short": "The direct cost of making or buying the goods a company actually sold in a period, such as raw materials and factory labour.",
+    "kid": "To sell a cup of lemonade, you first need lemons, sugar and a cup. What those cost you, for the cups you actually sold, is this number.",
+    "detail": "Cost of goods sold covers the direct costs of producing or buying the goods sold during a period: raw materials, goods bought for resale, direct labour and production overheads. It excludes selling, marketing and head-office costs, and interest. For a manufacturer or retailer it equals opening inventory plus purchases minus closing inventory, so the way inventory is valued affects it. Indian companies do not show a single COGS line; under Schedule III they report cost of materials consumed, purchases of stock-in-trade and changes in inventories separately, and analysts add them up. Service firms use the broader 'cost of revenue'. COGS drives gross margin, a key gauge of pricing power. A common confusion is to treat everything bought in a period as COGS; only the cost of goods actually sold counts, while the rest stays in inventory.",
+    "example": "Say ABC Ltd starts the year with inventory of ₹20 crore, buys goods worth ₹100 crore and ends with inventory of ₹30 crore. Its cost of goods sold is ₹20 crore + ₹100 crore - ₹30 crore = ₹90 crore.",
+    "formula": "COGS = Opening inventory + Purchases - Closing inventory",
+    "related": [
+      "Gross profit",
+      "Inventory",
+      "Revenue",
+      "Operating expenses",
+      "Gross margin"
+    ]
+  },
+  {
+    "id": "gross-profit",
+    "term": "Gross profit",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "gross income"
+    ],
+    "hl": [
+      "gross profit",
+      "gross profits"
+    ],
+    "abbr": [],
+    "short": "What a company has left from its sales after paying the direct cost of the goods it sold, before other expenses.",
+    "kid": "You sold lemonade and got ten coins. The lemons and sugar cost four coins, so six coins are left before you pay for anything else.",
+    "detail": "Gross profit is revenue minus cost of goods sold. It shows how much a company earns from its core products before paying for selling, administration, research, interest and tax. Dividing it by revenue gives gross margin, a key gauge of pricing power and production efficiency: software firms and luxury brands typically have high gross margins, while supermarkets and commodity processors have thin ones. A rising gross margin can reflect better pricing or cheaper inputs, which is why analysts of Indian consumer companies watch it closely when crude oil or palm oil prices swing. Schedule III income statements in India do not show a gross profit line, so analysts calculate it from the notes. A common confusion is with net profit, which is what remains after every expense; 'gross income' in personal tax is a different idea altogether.",
+    "example": "Say ABC Ltd has revenue of ₹200 crore and cost of goods sold of ₹120 crore. Its gross profit is ₹200 crore - ₹120 crore = ₹80 crore, and its gross margin is ₹80 crore / ₹200 crore = 40%.",
+    "formula": "Gross profit = Revenue - Cost of goods sold",
+    "related": [
+      "Cost of goods sold",
+      "Gross margin",
+      "Revenue",
+      "Operating profit",
+      "Net profit"
+    ]
+  },
+  {
+    "id": "operating-expenses",
+    "term": "Operating expenses",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "opex",
+      "operating costs"
+    ],
+    "hl": [
+      "operating expenses",
+      "operating expense",
+      "operating costs",
+      "operating cost",
+      "opex"
+    ],
+    "abbr": [],
+    "short": "The everyday costs of running a business, such as salaries, rent, marketing and power bills, rather than spending on long-lasting things like factories.",
+    "kid": "Running a lemonade stand means giving a helper a treat and painting a new sign each week. Those are the costs of keeping the stand open every day.",
+    "detail": "Operating expenses are the costs a company incurs in its normal day-to-day business. Usage varies: in the narrow sense common in US filings, opex means costs below gross profit, such as selling, general and administrative expenses, research and development, and depreciation; in a broader sense it also includes cost of goods sold. Indian income statements instead list expenses by nature, such as materials, employee benefit expense, depreciation and other expenses. Opex is charged to the income statement in the period incurred, unlike capital expenditure, which buys long-lived assets that are depreciated over years. Investors track opex as a share of revenue to judge cost discipline and operating leverage. A common confusion is with capex: wrongly shifting costs from opex to capex inflates profit, as the WorldCom fraud in the US showed, so the classification matters.",
+    "example": "Say ABC Ltd has revenue of ₹100 crore and gross profit of ₹45 crore, and spends ₹15 crore on salaries, ₹5 crore on rent and ₹10 crore on marketing. Its operating expenses total ₹30 crore, leaving operating profit of ₹45 crore - ₹30 crore = ₹15 crore.",
+    "formula": "Operating profit = Gross profit - Operating expenses (when opex excludes cost of goods sold)",
+    "related": [
+      "Capital expenditure",
+      "Selling, general and administrative expenses",
+      "Cost of goods sold",
+      "Operating profit",
+      "Operating leverage",
+      "Fixed costs"
+    ]
+  },
+  {
+    "id": "selling-general-and-administrative-expenses",
+    "term": "Selling, general and administrative expenses",
+    "cat": "accounting",
+    "level": "i",
+    "aliases": [
+      "SG&A",
+      "overheads"
+    ],
+    "hl": [
+      "selling, general and administrative expenses",
+      "selling, general and administrative",
+      "sg&a",
+      "sg&a expenses"
+    ],
+    "abbr": [
+      "SG&A"
+    ],
+    "short": "A company's costs of selling its products and running the business, such as advertising, sales staff, office rent and management salaries.",
+    "kid": "Besides lemons and cups, your stand needs a bright sign, a friend calling out to customers and a notebook to keep track. Those helping costs belong here.",
+    "detail": "SG&A groups the operating costs not directly tied to making a product: selling expenses, such as advertising, sales commissions, distribution and sales staff pay, and general and administrative expenses, such as head-office rent, management salaries, legal, audit and IT costs. It appears as a single line, below gross profit, in most US income statements. Indian companies classify expenses by nature under Schedule III, so these costs are spread across employee benefit expense and other expenses, and analysts rebuild an SG&A figure from the notes. SG&A as a percentage of revenue shows how lean a company runs; consumer goods firms spend heavily on advertising, so their ratio is high. Much of SG&A is fixed in the short run, which creates operating leverage. A common confusion is to think overheads are only office costs; selling expenses can be largely variable.",
+    "example": "Say ABC Ltd has revenue of ₹500 crore, advertising costs of ₹40 crore, sales staff costs of ₹25 crore and head-office costs of ₹35 crore. Its SG&A is ₹100 crore, or ₹100 crore / ₹500 crore = 20% of revenue.",
+    "formula": "SG&A = Selling expenses + General and administrative expenses",
+    "related": [
+      "Operating expenses",
+      "Gross profit",
+      "Operating profit",
+      "Employee benefit expense",
+      "Operating leverage"
+    ]
+  },
+  {
+    "id": "employee-benefit-expense",
+    "term": "Employee benefit expense",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "employee costs",
+      "staff costs",
+      "salary costs",
+      "wage bill"
+    ],
+    "hl": [
+      "employee benefit expense",
+      "employee benefits expense",
+      "employee costs",
+      "employee cost",
+      "staff costs",
+      "staff cost",
+      "salary costs"
+    ],
+    "abbr": [],
+    "short": "Everything a company spends on its people in a period, including salaries, bonuses, retirement savings, staff welfare and pay given as company shares.",
+    "kid": "If friends help at your lemonade stand, you thank them with coins or a free cup. Everything you give your helpers adds up here.",
+    "detail": "Employee benefit expense is the line in an Indian income statement, required by Schedule III, that captures the total cost of employees: salaries and wages, bonuses, the employer's contributions to provident fund and other funds, gratuity and leave provisions, staff welfare, and share-based payments such as ESOP costs. It is measured under Ind AS 19 for employee benefits and Ind AS 102 for share-based payments. For services businesses such as IT companies, banks and hospitals it is often the largest single cost, so wage hikes and hiring move margins directly, and analysts track it as a share of revenue every quarter. Some employee costs are capitalised into projects or inventory rather than expensed. A common confusion is to equate it with cash salaries; it includes non-cash items such as ESOP charges and provisions for future gratuity, which reduce profit before any cash is paid.",
+    "example": "Say ABC Services has revenue of ₹1,000 crore, salaries and bonuses of ₹480 crore, provident fund and gratuity costs of ₹40 crore and ESOP charges of ₹30 crore. Its employee benefit expense is ₹480 crore + ₹40 crore + ₹30 crore = ₹550 crore, or 55% of revenue.",
+    "formula": "",
+    "related": [
+      "Operating expenses",
+      "Selling, general and administrative expenses",
+      "Employee stock option plan",
+      "Gratuity",
+      "Operating margin"
+    ]
+  },
+  {
+    "id": "fixed-costs",
+    "term": "Fixed costs",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "fixed expenses"
+    ],
+    "hl": [
+      "fixed costs",
+      "fixed cost",
+      "fixed expenses"
+    ],
+    "abbr": [],
+    "short": "Costs that stay the same in a period no matter how much a business produces or sells, such as rent, salaries and insurance.",
+    "kid": "You give the park keeper the same few coins for your lemonade spot, whether you sell one cup or a hundred. That cost stays the same either way.",
+    "detail": "Fixed costs do not change with the volume of output or sales within a given range and period. Examples include rent, permanent staff salaries, insurance, depreciation on plant and many software subscriptions. They must be paid even if sales collapse, so a business with high fixed costs has high operating leverage: profits rise sharply when volumes grow and fall sharply when they drop. Airlines, telecom operators, steel makers and cement companies are classic examples, which is why their earnings swing so much with demand. Fixed costs set the break-even point, the sales level at which the margin earned on each unit after variable costs just covers them. A common confusion is to think fixed costs never change: they are fixed only in the short run and within a relevant range, and a new factory raises them. Fixed cost per unit also falls as volume rises.",
+    "example": "Say a hypothetical bakery pays ₹2 lakh a month in rent and salaries. If it bakes 10,000 cakes, the fixed cost per cake is ₹20; if it bakes 20,000, it falls to ₹10, even though the total of ₹2 lakh does not change.",
+    "formula": "Total cost = Fixed costs + (Variable cost per unit x Units produced)",
+    "related": [
+      "Variable costs",
+      "Break-even point",
+      "Operating leverage",
+      "Contribution margin",
+      "Operating expenses"
+    ]
+  },
+  {
+    "id": "variable-costs",
+    "term": "Variable costs",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "variable expenses"
+    ],
+    "hl": [
+      "variable costs",
+      "variable cost",
+      "variable expenses"
+    ],
+    "abbr": [],
+    "short": "Costs that rise and fall in step with how much a business produces or sells, such as raw materials, packaging and delivery charges.",
+    "kid": "Every cup of lemonade needs one lemon. Make more cups and you need more lemons; make none and you need none.",
+    "detail": "Variable costs change in direct proportion to the volume of output or sales. Raw materials, packaging, sales commissions, freight, payment-gateway fees and power used in production are typical examples. The variable cost per unit stays roughly constant, so the total rises as volume grows. Subtracting variable cost from the selling price gives the contribution margin per unit, which shows how much each sale adds towards covering fixed costs and then profit. Businesses with mostly variable costs, such as traders, have lower operating leverage: their profits are steadier but grow more slowly when demand surges. In India, consumer goods makers watch variable costs like palm oil and packaging closely, because swings in input prices hit margins quickly. A common confusion is to label every cost rigidly; many, like an electricity bill with a fixed monthly charge, are semi-variable, with both fixed and variable parts.",
+    "example": "Say ABC Ltd makes T-shirts with fabric and printing costing ₹150 per shirt. Making 1,000 shirts costs ₹1.5 lakh in variable costs, and making 2,000 costs ₹3 lakh. If each shirt sells for ₹400, the contribution per shirt is ₹400 - ₹150 = ₹250.",
+    "formula": "Total variable cost = Variable cost per unit x Number of units",
+    "related": [
+      "Fixed costs",
+      "Contribution margin",
+      "Break-even point",
+      "Operating leverage",
+      "Cost of goods sold"
+    ]
+  },
+  {
+    "id": "ebitda",
+    "term": "EBITDA",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "earnings before interest, taxes, depreciation and amortisation",
+      "earnings before interest, taxes, depreciation and amortization",
+      "operating EBITDA"
+    ],
+    "hl": [
+      "ebitda",
+      "operating ebitda"
+    ],
+    "abbr": [
+      "EBITDA"
+    ],
+    "short": "Profit from a company's core business before subtracting interest, tax, and the yearly wear-and-tear charges on its machines, buildings and other long-lasting items.",
+    "kid": "This is what your lemonade stand made after paying for lemons and helpers. It does not yet count what you owe a friend or how worn out your table is getting.",
+    "detail": "EBITDA is earnings before interest, taxes, depreciation and amortisation, usually calculated as revenue minus operating expenses excluding depreciation and amortisation. Because it ignores how a company is financed, its tax position and its non-cash charges for wear and tear, it is widely used to compare operating performance across firms, to value companies through the EV/EBITDA multiple and to set loan covenants such as net debt to EBITDA. Indian companies are not required to report EBITDA in their statements, but most highlight it in results presentations, often excluding other income. EBITDA margin, EBITDA divided by revenue, is closely tracked each quarter. A common confusion is to treat EBITDA as cash flow: it ignores capital expenditure, working capital needs, interest and tax. It is also a non-GAAP measure that companies can define generously, so always check how it is calculated.",
+    "example": "Say ABC Ltd has revenue of ₹1,000 crore and operating expenses of ₹750 crore excluding depreciation. Its EBITDA is ₹250 crore, a 25% EBITDA margin. After depreciation and amortisation of ₹50 crore, its operating profit (EBIT) is ₹200 crore.",
+    "formula": "EBITDA = Operating profit (EBIT) + Depreciation + Amortisation",
+    "related": [
+      "Operating profit",
+      "EBITDA margin",
+      "Depreciation",
+      "Amortisation",
+      "EV/EBITDA",
+      "Free cash flow"
+    ]
+  },
+  {
+    "id": "operating-profit",
+    "term": "Operating profit",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "EBIT",
+      "operating income",
+      "earnings before interest and taxes"
+    ],
+    "hl": [
+      "operating profit",
+      "operating profits",
+      "operating income",
+      "operating loss",
+      "operating losses",
+      "earnings before interest and taxes"
+    ],
+    "abbr": [
+      "EBIT"
+    ],
+    "short": "The profit a company makes from its core business after paying all operating costs, but before interest and tax.",
+    "kid": "After you pay for lemons, cups, helpers and your slowly wearing table, the coins left are what your stand truly earned from selling lemonade.",
+    "detail": "Operating profit, often treated as EBIT (earnings before interest and taxes), is revenue minus all operating expenses, including cost of goods sold, employee costs, other operating expenses, and depreciation and amortisation. It measures what the core business earns before the effects of financing and tax, making it useful for comparing companies with different debt levels. Operating margin, operating profit divided by revenue, reflects pricing power and cost control. Strictly, EBIT can include non-operating items such as other income and one-off gains, so the two can differ; Indian results often show EBIT including other income, and analysts strip it out to see the true operating number. Lenders use the interest coverage ratio, EBIT divided by finance costs, to test debt capacity. A common confusion is to equate operating profit with net profit, which also deducts interest, tax and exceptional items.",
+    "example": "Say ABC Ltd has revenue of ₹500 crore, cost of goods sold of ₹300 crore, other operating expenses of ₹100 crore and depreciation of ₹20 crore. Its operating profit is ₹500 crore - ₹300 crore - ₹100 crore - ₹20 crore = ₹80 crore, an operating margin of 16%.",
+    "formula": "Operating profit (EBIT) = Revenue - Cost of goods sold - Operating expenses - Depreciation and amortisation",
+    "related": [
+      "EBITDA",
+      "Operating margin",
+      "Gross profit",
+      "Net profit",
+      "Interest coverage ratio",
+      "Finance costs"
+    ]
+  },
+  {
+    "id": "finance-costs",
+    "term": "Finance costs",
+    "cat": "accounting",
+    "level": "b",
+    "aliases": [
+      "interest expense",
+      "interest cost",
+      "finance cost"
+    ],
+    "hl": [
+      "finance costs",
+      "finance cost",
+      "interest expense",
+      "interest expenses"
+    ],
+    "abbr": [],
+    "short": "What a company pays in a period for using borrowed money, mainly interest on loans and bonds, plus related charges like lease interest.",
+    "kid": "If you borrow coins from your big sister to buy lemons, she asks for a little extra back. That extra is what borrowing costs you.",
+    "detail": "Finance costs are the expenses a company incurs on its borrowings, shown as a separate line in the income statement under Ind AS and Schedule III. They include interest on bank loans, debentures and bonds, interest on lease liabilities under Ind AS 116, the spreading of loan processing fees over the loan's life, and certain exchange differences on foreign-currency borrowings. They are deducted after operating profit, so two companies with identical operations can report very different net profits depending on their debt. Interest on money borrowed to build a qualifying asset, such as a new plant, is capitalised into its cost until the asset is ready. Analysts watch the interest coverage ratio, operating profit divided by finance costs, to judge whether a firm can comfortably service its debt. A common confusion is to include finance costs in EBITDA, which by definition excludes them.",
+    "example": "Say ABC Ltd has borrowings of ₹200 crore at an average interest rate of 9% and lease interest of ₹2 crore. Its finance costs are ₹200 crore x 9% + ₹2 crore = ₹18 crore + ₹2 crore = ₹20 crore. With operating profit of ₹100 crore, its interest coverage ratio is ₹100 crore / ₹20 crore = 5 times.",
+    "formula": "Finance costs = Interest on borrowings + Interest on lease liabilities + Other borrowing costs",
+    "related": [
+      "Interest coverage ratio",
+      "Operating profit",
+      "EBITDA",
+      "Debt-to-equity ratio",
+      "Leverage"
+    ]
+  }
+]

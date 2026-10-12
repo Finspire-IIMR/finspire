@@ -1,0 +1,5 @@
+Sample reading list (test file for the Finspire Library)
+
+1. A textbook on corporate finance
+2. A textbook on valuation
+3. The annual report of a company you follow

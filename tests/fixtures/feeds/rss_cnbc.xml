@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:metadata="http://search.cnbc.com/rss/2.0/modules/siteContentMetadata" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <atom:link rel="self" type="application/rss+xml" href="https://www.cnbc.com/id/19832390/device/rss/rss.html"/>
+    <language>en-us</language>
+    <ttl>60</ttl>
+    <title>Asia News</title>
+    <feed_asset>
+      <id>19832390</id>
+      <type>franchise</type>
+      <subtype>section</subtype>
+      <seo>https://www.cnbc.com/asia-news/</seo>
+    </feed_asset>
+    <lastBuildDate>Mon, 12 Oct 2026 02:40 GMT</lastBuildDate>
+    <pubDate>Mon, 12 Oct 2026 02:40 GMT</pubDate>
+    <link>https://www.cnbc.com/asia-news/</link>
+    <description><![CDATA[Read the latest stock market news and analysis on Asia Pacific in regions from Japan, China, Singapore, Australia, to New Zealand. Find business; finance; economy, stocks, and global economy news on CNBC's Asia Pacific page.]]></description>
+    <item>
+      <link>https://www.cnbc.com/2026/10/12/china-gold-buying-interest-rate-.html</link>
+      <guid isPermaLink="false">108375011</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108375011</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Why China is importing a record amount of gold — and what it means for prices</title>
+      <description><![CDATA[Beijing’s push to diversify away from the dollar and Chinese households’ search for a safe place to put their savings has fueled China’s record gold buying.]]></description>
+      <pubDate>Mon, 12 Oct 2026 00:51:10 GMT</pubDate>
+    </item>
+<item>
+      <link>https://www.cnbc.com/2026/10/10/7-eleven-india-japan-reliance.html</link>
+      <guid isPermaLink="false">108380391</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108380391</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>Why Japan&apos;s 7-Eleven store closures in India don’t signal an exit</title>
+      <description><![CDATA[7-Eleven store closures point to a reset of its operations in India, not to an exit.]]></description>
+      <pubDate>Sat, 10 Oct 2026 11:21:05 GMT</pubDate>
+    </item>
+<item>
+      <link>https://www.cnbc.com/2026/10/09/china-europe-hybrid-vehicle-exports-deal.html</link>
+      <guid isPermaLink="false">108381929</guid>
+      <metadata:type>cnbcnewsstory</metadata:type>
+      <metadata:id>108381929</metadata:id>
+      <metadata:sponsored>false</metadata:sponsored>
+      <title>China and Europe agree to cut Chinese hybrid vehicle exports by half</title>
+      <description><![CDATA[Europe's trade chief Maroš Sefčovič cast the two days of talks with China's Commerce Minister Wang Wentao in Beijing as a positive first step.]]></description>
+      <pubDate>Fri, 09 Oct 2026 15:03:10 GMT</pubDate>
+    </item>
+</channel></rss>

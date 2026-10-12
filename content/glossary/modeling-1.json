@@ -1,0 +1,590 @@
+[
+  {
+    "id": "financial-model",
+    "term": "Financial model",
+    "cat": "modeling",
+    "level": "b",
+    "aliases": [
+      "financial modelling",
+      "financial modeling"
+    ],
+    "hl": [
+      "financial model",
+      "financial models",
+      "financial modelling",
+      "financial modeling"
+    ],
+    "abbr": [],
+    "short": "A spreadsheet that represents a business in numbers, linking assumptions to projected revenue, costs, cash and value so you can test decisions.",
+    "kid": "Imagine drawing a little map of your lemonade stand on paper: how many cups you might sell, what lemons cost, and how many coins you would have left. Then you can change one thing and see what happens.",
+    "detail": "A financial model is a structured spreadsheet, usually built in Excel, that turns assumptions about a business into projected financial statements and outputs such as cash flow, returns or valuation. Good models keep inputs (growth, prices, costs), calculations and outputs separate, so that changing one assumption flows through everything else. Analysts use them to value companies, size debt in LBOs and project finance, plan budgets and test what happens under different scenarios. In India, equity research, investment banking and corporate FP&A teams all work in models, and modelling tests are common in finance interviews. The usual confusion is to treat a model as a prediction machine: its output is only as good as its assumptions, so its real value lies in making those assumptions explicit and showing how sensitive the answer is to them.",
+    "example": "Say ABC Ltd's model assumes ₹100 crore of revenue next year, growing 10% a year, and a 20% operating margin. The model then shows operating profit of ₹20 crore in year 1 and ₹22 crore in year 2 (₹110 crore × 20%). Changing the margin input to 18% instantly cuts year 2 operating profit to ₹19.8 crore.",
+    "formula": "",
+    "related": [
+      "Three-statement model",
+      "Financial forecasting",
+      "Discounted cash flow",
+      "Sensitivity analysis",
+      "Scenario analysis",
+      "Model integrity checks"
+    ]
+  },
+  {
+    "id": "three-statement-model",
+    "term": "Three-statement model",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "3-statement model",
+      "integrated financial model"
+    ],
+    "hl": [
+      "three-statement model",
+      "three statement model",
+      "3-statement model",
+      "integrated financial model"
+    ],
+    "abbr": [],
+    "short": "A financial model that links the income statement, balance sheet and cash flow statement so every change flows correctly through all three.",
+    "kid": "Think of three notebooks about your piggy bank: one for what you earned, one for what you own, and one for coins going in and out. They are tied together, so writing in one notebook updates the other two.",
+    "detail": "A three-statement model projects the income statement, balance sheet and cash flow statement together, with formulas linking them. Net income from the income statement starts the cash flow statement and adds to retained earnings on the balance sheet. Non-cash items such as depreciation are added back, changes in working capital and capex come from supporting schedules, and closing cash from the cash flow statement becomes the cash line on the balance sheet. If the links are right, total assets equal liabilities plus equity in every period. This integrated core underpins DCF valuations, LBO models and credit analysis, because it shows profit, cash and funding needs consistently. A common confusion is building three separate forecasts and forcing the balance sheet to balance with an unexplained hard-coded number; a true three-statement model balances because of its links.",
+    "example": "Say XYZ Ltd forecasts net income of ₹50 crore, depreciation of ₹10 crore, a ₹15 crore increase in working capital, capex of ₹25 crore and no financing flows. Cash rises by 50 + 10 - 15 - 25 = ₹20 crore, so with opening cash of ₹30 crore the balance sheet shows ₹50 crore of closing cash, and retained earnings rise by ₹50 crore if no dividend is paid.",
+    "formula": "Closing cash = Opening cash + Cash flow from operations + Cash flow from investing + Cash flow from financing",
+    "related": [
+      "Financial model",
+      "Income statement",
+      "Balance sheet",
+      "Cash flow statement",
+      "Working capital schedule",
+      "Model integrity checks"
+    ]
+  },
+  {
+    "id": "financial-forecasting",
+    "term": "Financial forecasting",
+    "cat": "modeling",
+    "level": "b",
+    "aliases": [
+      "financial projections",
+      "financial forecast"
+    ],
+    "hl": [
+      "financial forecasting",
+      "financial forecast",
+      "financial forecasts",
+      "financial projections"
+    ],
+    "abbr": [],
+    "short": "Estimating a company's future revenue, costs, profits and cash flows using past results, business drivers and reasoned assumptions.",
+    "kid": "Before a picnic you guess how many sandwiches your friends will eat, based on how many they ate last time. Guessing ahead like that, carefully, is what this is.",
+    "detail": "Financial forecasting is the process of estimating future financial results, usually starting with revenue and then moving to costs, capex, working capital, financing and the resulting statements. Forecasts draw on historical trends, management commentary, industry data and the economics of the business, and are typically built annually for three to ten years, with the near term in more detail. They drive budgets, valuation models, lending decisions and the earnings estimates analysts publish; where companies give little formal guidance, analysts' consensus estimates carry much of the market's expectations. A common confusion is between a forecast and a budget or target: a forecast is the honest best estimate of what will happen, while a budget is what management plans or commits to. Another is false precision: good forecasts are shown as ranges or scenarios, not as a single certain number.",
+    "example": "Say a café chain, ABC Ltd, had revenue of ₹200 crore last year and expects 12% growth. The forecast for next year is ₹200 crore × 1.12 = ₹224 crore, and for the year after ₹224 crore × 1.12 = ₹250.88 crore.",
+    "formula": "",
+    "related": [
+      "Financial model",
+      "Driver-based forecasting",
+      "Top-down approach",
+      "Base case",
+      "Budget",
+      "Consensus estimate"
+    ]
+  },
+  {
+    "id": "driver-based-forecasting",
+    "term": "Driver-based forecasting",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "revenue build",
+      "driver-based model",
+      "operating drivers"
+    ],
+    "hl": [
+      "driver-based forecasting",
+      "driver-based forecast",
+      "driver-based model"
+    ],
+    "abbr": [],
+    "short": "Forecasting financial results by projecting the underlying business numbers, such as customers, volumes and prices, and multiplying them out.",
+    "kid": "Instead of just guessing how many coins your lemonade stand will make, you count how many cups you can sell and how many coins each cup brings. Cups times coins per cup gives your total.",
+    "detail": "Driver-based forecasting builds revenue and costs from the operating variables that actually cause them, rather than applying one growth rate to last year's total. For a retailer the drivers might be store count, sales per square foot and like-for-like growth; for a telecom operator, subscribers and ARPU; for a bank, loan book growth and net interest margin; for an airline, seat capacity, load factor and fare per kilometre. Costs are linked to drivers too, such as raw material per unit or staff per store. This makes the model easier to reason about, to check against management commentary and industry data, and to stress-test, because you can flex the variable you actually doubt. The common mistake is using too many drivers, or ones you cannot estimate; the best models use a few drivers that genuinely explain most of the numbers.",
+    "example": "Say a hypothetical telecom company expects 10 crore subscribers next year and average revenue per user of ₹200 a month. Annual revenue = 10 crore × ₹200 × 12 = ₹24,000 crore. If subscribers rise 5% to 10.5 crore with the same ARPU, revenue becomes ₹25,200 crore.",
+    "formula": "Revenue = Volume driver × Price driver (for example, Subscribers × Monthly ARPU × 12)",
+    "related": [
+      "Financial forecasting",
+      "Top-down approach",
+      "Financial model",
+      "Sensitivity analysis",
+      "Average revenue per user",
+      "Unit economics"
+    ]
+  },
+  {
+    "id": "top-down-approach",
+    "term": "Top-down approach",
+    "cat": "modeling",
+    "level": "b",
+    "aliases": [
+      "bottom-up approach",
+      "top-down vs bottom-up"
+    ],
+    "hl": [
+      "top-down forecast",
+      "top-down forecasting",
+      "bottom-up forecast",
+      "bottom-up forecasting"
+    ],
+    "abbr": [],
+    "short": "Forecasting by starting from the total market and estimating a company's share, rather than building up from its own units, customers and prices.",
+    "kid": "To guess how many ice creams you will sell, you could start with all the ice creams eaten in your town and take your small slice. Or you could count your own friends who love ice cream and add them up.",
+    "detail": "A top-down approach starts with a large total, such as market size or industry demand, and narrows it down: market size times expected market share gives company revenue. A bottom-up approach does the reverse, building revenue from the company's own units, such as stores, customers, capacity and prices, and adding them up. Top-down is quick and useful for new businesses or sanity checks; bottom-up is more detailed and tied to things the company controls. In investing, top-down also describes starting from the economy and sectors before picking stocks, while bottom-up starts from individual companies. Strong models use both and compare them: if a bottom-up build implies a 40% share of a crowded market, something is wrong. The common mistake is the lazy top-down claim that a company will 'just win 1% of a huge market' without explaining how.",
+    "example": "Top-down: say the Indian market for a product is ₹10,000 crore and ABC Ltd expects a 5% share, giving ₹500 crore of revenue. Bottom-up: 250 stores × ₹2 crore of sales per store also gives ₹500 crore, so the two methods agree.",
+    "formula": "Top-down revenue = Total market size × Market share; Bottom-up revenue = Number of units × Revenue per unit",
+    "related": [
+      "Financial forecasting",
+      "Driver-based forecasting",
+      "Total addressable market",
+      "Market share",
+      "Financial model"
+    ]
+  },
+  {
+    "id": "pro-forma-financial-statements",
+    "term": "Pro forma financial statements",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "pro forma",
+      "pro forma financials"
+    ],
+    "hl": [
+      "pro forma financials",
+      "pro forma financial statements",
+      "pro forma basis",
+      "pro forma earnings",
+      "pro forma revenue"
+    ],
+    "abbr": [],
+    "short": "Financial statements prepared as if a planned or recent event, such as a merger or new loan, had already happened, to show its effect.",
+    "kid": "If two friends decide to join their piggy banks, you might count what the big shared piggy bank would hold as if they had joined already. That pretend count helps everyone see the result.",
+    "detail": "Pro forma, Latin for 'as a matter of form', describes financial statements adjusted to show what results would have looked like if a transaction or change had taken effect earlier. Typical uses include mergers and demergers (combining two companies' past numbers), acquisitions, new debt or equity raises, and IPO documents. In modelling, the pro forma balance sheet at the close of an LBO or merger is the starting point for projections. In India, under SEBI's ICDR disclosure rules as of 2025, IPO offer documents must include proforma financial information when an issuer has made material acquisitions or divestments. The common confusion is with 'adjusted' or non-GAAP earnings that companies sometimes label pro forma to leave out inconvenient costs; investors should always read what was adjusted and why, because pro forma figures are illustrations built on assumptions, not the company's actual reported results.",
+    "example": "Say ABC Ltd, with revenue of ₹800 crore and pre-tax profit of ₹80 crore, buys XYZ Ltd, with revenue of ₹200 crore and pre-tax profit of ₹20 crore, using a ₹100 crore loan at 9%. Pro forma revenue is ₹1,000 crore, and pro forma pre-tax profit is ₹80 + ₹20 - ₹9 crore of new interest = ₹91 crore, before any synergies.",
+    "formula": "",
+    "related": [
+      "Financial statements",
+      "Mergers and acquisitions",
+      "Leveraged buyout",
+      "Three-statement model",
+      "Adjusted earnings",
+      "Accretion and dilution"
+    ]
+  },
+  {
+    "id": "base-case",
+    "term": "Base case",
+    "cat": "modeling",
+    "level": "b",
+    "aliases": [
+      "bull case",
+      "bear case",
+      "downside case",
+      "upside case"
+    ],
+    "hl": [
+      "base case",
+      "base-case scenario",
+      "bull case",
+      "bull-case scenario",
+      "bear case",
+      "bear-case scenario",
+      "downside case",
+      "upside case"
+    ],
+    "abbr": [],
+    "short": "The most likely set of assumptions in a model, alongside more optimistic upside (bull) and more pessimistic downside (bear) cases.",
+    "kid": "When planning a picnic you think about a normal sunny day first. Then you also think about a perfect day and a rainy day, so you are ready for all three.",
+    "detail": "The base case is the scenario an analyst considers most likely, built on realistic, defensible assumptions for growth, margins, capex and financing. It is usually flanked by an upside or bull case, where things go better than expected, and a downside or bear case, where they go worse; lenders often add a harsher stress case to check whether debt can still be repaid. Equity research reports frequently show a value for each case, and investment committees study the downside before approving deals. The base case is not the same as management's plan, which may be optimistic, nor is it simply the average of the other cases. A common mistake is setting the bull and bear cases so close to the base that they say nothing about real risk; each case should tell a coherent story about what could actually happen.",
+    "example": "Say an analyst values ABC Ltd at ₹500 per share in the base case, ₹650 in the bull case and ₹350 in the bear case. With probabilities of 60%, 20% and 20%, the probability-weighted value is 0.6 × 500 + 0.2 × 650 + 0.2 × 350 = ₹300 + ₹130 + ₹70 = ₹500 per share.",
+    "formula": "",
+    "related": [
+      "Scenario analysis",
+      "Sensitivity analysis",
+      "Financial forecasting",
+      "Stress testing",
+      "Target price"
+    ]
+  },
+  {
+    "id": "scenario-analysis",
+    "term": "Scenario analysis",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "scenario switch",
+      "what-if scenarios"
+    ],
+    "hl": [
+      "scenario analysis",
+      "scenario analyses"
+    ],
+    "abbr": [],
+    "short": "Testing a model under a few internally consistent sets of assumptions, such as base, bull and bear cases, to see the range of outcomes.",
+    "kid": "You imagine a few different stories for your lemonade stand: a hot summer, a normal summer and a rainy summer. For each story you work out how many coins you would end up with.",
+    "detail": "Scenario analysis changes several assumptions at once to describe a whole possible world, then measures the result. A recession scenario might combine lower volumes, weaker prices, higher bad debts and costlier borrowing; a boom scenario the opposite. In a spreadsheet this is often done with a scenario switch: a single input cell (say 1 = base, 2 = bull, 3 = bear) that a CHOOSE or INDEX formula uses to pull the matching set of assumptions into the live model. It differs from sensitivity analysis, which changes one or two variables at a time while holding everything else constant. Banks run regulatory stress scenarios, companies use scenarios for budgets and capital decisions, and investors use them to judge downside risk. The common mistake is building scenarios whose assumptions contradict each other, such as collapsing demand alongside rising prices with no explanation.",
+    "example": "Say ABC Ltd's base case has revenue of ₹1,000 crore. Switching the scenario cell to bear cuts volume by 10% and price by 5%, so revenue becomes ₹1,000 crore × 0.90 × 0.95 = ₹855 crore, and EBITDA falls by up to the ₹145 crore of lost revenue, depending on how much of the cost base shrinks with volume.",
+    "formula": "",
+    "related": [
+      "Sensitivity analysis",
+      "Base case",
+      "Stress testing",
+      "Data table",
+      "Financial model",
+      "Monte Carlo simulation"
+    ]
+  },
+  {
+    "id": "sensitivity-analysis",
+    "term": "Sensitivity analysis",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "sensitivity table"
+    ],
+    "hl": [
+      "sensitivity analysis",
+      "sensitivity analyses",
+      "sensitivity table",
+      "sensitivity tables"
+    ],
+    "abbr": [],
+    "short": "Measuring how much a model's output changes when one or two inputs are changed while everything else stays the same.",
+    "kid": "You add one more spoon of sugar to your lemonade and taste how much sweeter it gets, keeping everything else the same. Then you try one more lemon, to see which change matters most.",
+    "detail": "Sensitivity analysis flexes one input, or two at a time, across a range of values and records the effect on a key output such as valuation, IRR, EPS or debt coverage, holding all other assumptions constant. The result is often shown as a sensitivity table, for example share value across a grid of WACC and terminal growth rates in a DCF, usually built with Excel's data table feature. It shows which assumptions really matter, so analysts can focus their research there and present a range instead of false precision. Lenders use it to see how far revenue can fall before covenants break. It differs from scenario analysis, which moves many linked inputs together to tell a story. A common mistake is flexing inputs over unrealistic ranges, or ignoring that some inputs, such as growth and capex, naturally move together.",
+    "example": "Say a DCF of ABC Ltd gives ₹1,000 crore of enterprise value at an 11% WACC. Rerunning it at 10% and 12% gives ₹1,150 crore and ₹880 crore, so a one-point change in WACC moves value by 12-15%, telling the analyst the discount rate needs careful support.",
+    "formula": "",
+    "related": [
+      "Scenario analysis",
+      "Data table",
+      "Tornado chart",
+      "Discounted cash flow",
+      "Weighted average cost of capital",
+      "Base case"
+    ]
+  },
+  {
+    "id": "tornado-chart",
+    "term": "Tornado chart",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "tornado diagram"
+    ],
+    "hl": [
+      "tornado chart",
+      "tornado charts",
+      "tornado diagram"
+    ],
+    "abbr": [],
+    "short": "A bar chart ranking a model's inputs by how much each one swings the output, with the widest bar on top.",
+    "kid": "You line up all the things that can change your lemonade money, and draw the biggest one at the top and smaller ones below. The picture looks like a spinning funnel of wind.",
+    "detail": "A tornado chart is a visual summary of one-at-a-time sensitivity analysis. Each input, such as price, volume, raw material cost or discount rate, is moved between a low and a high value while the others stay at the base case, and the resulting low and high outputs are drawn as a horizontal bar around a central line at the base-case value. Bars are sorted from widest to narrowest, so the chart narrows downward like a tornado. It shows decision-makers at a glance which few assumptions drive most of the uncertainty and deserve the most research or hedging. Tornado charts are common in project finance, pharma pipeline valuation and capital budgeting. A common confusion is reading bar width as probability: the chart shows impact for the ranges chosen, not how likely each swing is, so badly chosen ranges give a misleading ranking.",
+    "example": "Say ABC Ltd's project NPV is ₹50 crore in the base case. Moving selling price by 10% either way gives NPV from ₹20 crore to ₹80 crore, a ₹60 crore swing, while moving labour cost by 10% either way gives ₹42 crore to ₹58 crore, a ₹16 crore swing, so price sits at the top of the tornado.",
+    "formula": "Swing for each input = Absolute value of (Output at high input value - Output at low input value)",
+    "related": [
+      "Sensitivity analysis",
+      "Scenario analysis",
+      "Net present value",
+      "Base case",
+      "Data table"
+    ]
+  },
+  {
+    "id": "data-table",
+    "term": "Data table",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "what-if analysis",
+      "two-way data table"
+    ],
+    "hl": [
+      "two-way data table",
+      "one-way data table"
+    ],
+    "abbr": [],
+    "short": "An Excel tool that recalculates a model's output for a list or grid of input values, producing a sensitivity table automatically.",
+    "kid": "It is like a helper who tries every cup size and every price for your lemonade and writes down the coins for each one, all at once, in neat little boxes.",
+    "detail": "A data table, found under What-If Analysis on Excel's Data tab, reruns a model for many input values and returns the results in a grid. A one-way data table varies one input down a column; a two-way data table varies two inputs, one across the top row and one down the side, around a single output formula in the corner. The input cells must sit on the same sheet as the table. Analysts use two-way tables for classic DCF grids of WACC against terminal growth, or LBO grids of entry multiple against exit multiple. Because every cell triggers a full recalculation, large data tables slow workbooks, so many modellers set calculation to 'automatic except for data tables' and press F9 when needed. A common confusion is the name: this is not a generic table of data or an Excel Table object, but a specific what-if tool.",
+    "example": "Say a DCF values ABC Ltd at ₹400 per share at a 12% WACC and 5% terminal growth. A two-way data table with WACC of 11%, 12% and 13% across the top and growth of 4%, 5% and 6% down the side fills 3 × 3 = 9 cells in one step, one value for each combination.",
+    "formula": "",
+    "related": [
+      "Sensitivity analysis",
+      "Goal seek",
+      "Scenario analysis",
+      "Discounted cash flow",
+      "Tornado chart"
+    ]
+  },
+  {
+    "id": "goal-seek",
+    "term": "Goal seek",
+    "cat": "modeling",
+    "level": "b",
+    "aliases": [],
+    "hl": [
+      "goal seek"
+    ],
+    "abbr": [],
+    "short": "An Excel tool that finds the input value needed to make a formula reach a chosen result, by trying values automatically.",
+    "kid": "You know you want ten coins at the end of the day. A helper keeps trying different lemonade prices until it finds the one that gives exactly ten coins.",
+    "detail": "Goal Seek, under What-If Analysis on Excel's Data tab, works backwards: you tell it which formula cell to set, the value you want it to reach, and which single input cell it may change, and it iterates until the target is met. Analysts use it to find break-even volumes, the discount rate at which NPV is zero (which is the IRR), the growth needed to justify a share price, or the largest loan a project's cash flows can support. It changes only one input, which must be a typed value rather than a formula, and leaves the new number in that cell, so the answer does not update when other assumptions change. For several inputs or constraints, Excel's Solver is the tool. A common mistake is leaving the goal-seeked value in the model unnoticed, which quietly changes its logic later; record the answer and restore the original input.",
+    "example": "Say ABC Ltd's fixed costs are ₹60 lakh a year and each unit sold contributes ₹1,500. Goal Seek, asked to set profit to zero by changing units sold, returns 4,000 units, since 4,000 × ₹1,500 = ₹60 lakh.",
+    "formula": "",
+    "related": [
+      "Data table",
+      "Sensitivity analysis",
+      "Break-even point",
+      "Internal rate of return",
+      "Circular reference"
+    ]
+  },
+  {
+    "id": "circular-reference",
+    "term": "Circular reference",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "circularity",
+      "iterative calculation",
+      "circ breaker"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "A spreadsheet formula that depends, directly or through a chain of cells, on its own result, so Excel cannot calculate it in one pass.",
+    "kid": "Imagine you can only decide how many sweets to buy after you know how many you have, but you only know how many you have after you buy them. You go round and round in a circle.",
+    "detail": "A circular reference occurs when a formula refers back to itself, directly or indirectly. In financial models the classic case is interest: interest expense depends on average debt, debt depends on cash needs, and cash needs depend on net income after that same interest. Excel shows a circular reference warning unless iterative calculation is switched on, in which case it recalculates repeatedly until the values converge. Modellers handle this deliberately: they enable iteration and add a circuit breaker (circ breaker), a toggle cell that sets interest to zero, so an error such as #REF! cannot get trapped in the loop and spread. Others avoid circularity by calculating interest on opening balances. The common mistake is leaving an accidental circular reference in a model, which can silently produce wrong numbers or stall recalculation.",
+    "example": "Say ABC Ltd's debt opens the year at ₹100 crore and closes at ₹120 crore, at a 10% rate. Interest on the average balance is 10% × ₹110 crore = ₹11 crore, but closing debt itself depends on cash after that interest, creating a circular reference; using opening debt instead gives ₹10 crore of interest and no circularity.",
+    "formula": "Interest expense = Interest rate × (Opening debt + Closing debt) / 2, the usual source of circularity",
+    "related": [
+      "Debt schedule",
+      "Revolver",
+      "Interest expense",
+      "Three-statement model",
+      "Model integrity checks",
+      "Goal seek"
+    ]
+  },
+  {
+    "id": "plug",
+    "term": "Plug",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "balancing figure",
+      "cash plug"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "A model line that absorbs whatever surplus or shortfall is left, usually cash or a revolving loan, so the balance sheet balances.",
+    "kid": "When you share sweets and one is left over, you put it in a spare jar. The spare jar holds whatever is left so everything adds up.",
+    "detail": "In a three-statement model, a plug is the balancing item that takes up any gap after every other line has been forecast. Usually the plug is cash or the revolver: if the business generates surplus cash it builds up as a cash balance, and if it runs short, a revolver draw fills the gap so cash never falls below a set minimum. Used this way, the plug is a legitimate design choice that mirrors how a treasury actually funds a company. The word also has a bad meaning: a hard-coded number typed in to force the balance sheet to balance, which hides a broken link somewhere else. In accounting, a balancing figure similarly closes a reconciliation. The rule for students: a proper plug is driven by formulas from the cash flow statement; if you are typing a number to make the balance check zero, find the error instead.",
+    "example": "Say ABC Ltd starts the year with ₹10 crore of cash, which is also its minimum, generates ₹25 crore from operations and spends ₹40 crore on capex. The ₹15 crore shortfall is filled by a revolver draw, the plug, so closing cash stays at ₹10 crore and the balance sheet balances.",
+    "formula": "Revolver draw = MAX(0, Minimum cash - (Opening cash + Cash flow before revolver))",
+    "related": [
+      "Three-statement model",
+      "Revolver",
+      "Cash sweep",
+      "Balance sheet",
+      "Model integrity checks"
+    ]
+  },
+  {
+    "id": "revolver",
+    "term": "Revolver",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "revolving credit facility",
+      "RCF",
+      "revolving credit"
+    ],
+    "hl": [
+      "revolving credit facility",
+      "revolving credit facilities",
+      "revolving facility",
+      "revolving credit line",
+      "revolving loan facility"
+    ],
+    "abbr": [],
+    "short": "A credit line a company can draw, repay and draw again up to a set limit, used for short-term cash needs.",
+    "kid": "It is like a friend who keeps a jar of coins for you. You can borrow some when you are short, give them back later, and borrow again whenever you need.",
+    "detail": "A revolver, or revolving credit facility, is a committed bank line that lets a borrower draw funds, repay and redraw any number of times up to a limit during its term, often three to five years. The company pays interest only on the drawn amount, plus a commitment fee on the undrawn part. Companies use it for working capital swings and as a liquidity backstop, and in LBOs it sits alongside term loans. In models the revolver is the usual funding plug: it draws automatically when cash would fall below the minimum and is repaid first when spare cash appears. In India the closest everyday equivalents are cash credit limits, sanctioned against inventory and receivables, and overdraft facilities. A common confusion is with a term loan, which is drawn once, repaid on a fixed schedule and cannot be redrawn.",
+    "example": "Say ABC Ltd has a ₹100 crore revolver at 9% with a 0.5% commitment fee on undrawn amounts. If it keeps ₹40 crore drawn for a full year, it pays ₹3.6 crore of interest plus ₹0.3 crore of fees on the undrawn ₹60 crore, a total of ₹3.9 crore.",
+    "formula": "Annual revolver cost = Drawn amount × Interest rate + Undrawn amount × Commitment fee rate",
+    "related": [
+      "Term loan",
+      "Cash credit",
+      "Debt schedule",
+      "Plug",
+      "Cash sweep",
+      "Working capital"
+    ]
+  },
+  {
+    "id": "cash-sweep",
+    "term": "Cash sweep",
+    "cat": "modeling",
+    "level": "a",
+    "aliases": [
+      "excess cash flow sweep"
+    ],
+    "hl": [
+      "cash sweep",
+      "cash sweeps",
+      "excess cash flow sweep"
+    ],
+    "abbr": [],
+    "short": "A loan term, mirrored in models, that makes a company use its spare cash to repay debt early rather than keep it.",
+    "kid": "Every time you have coins left after buying what you need, you give some back to the friend you borrowed from. Soon you owe them nothing.",
+    "detail": "A cash sweep requires a borrower to use some or all of its excess cash flow, the cash left after operating costs, interest, capex, taxes and scheduled debt repayments, to prepay debt ahead of schedule. It is common in leveraged buyouts, project finance and other highly levered loans, often with the sweep percentage stepping down as leverage falls, for example 75% above a set debt-to-EBITDA level and 50% below it. In models the sweep is calculated after the minimum cash balance and mandatory repayments, and is usually applied first to the revolver and then to the most senior term loans. It cuts interest costs and risk for lenders and speeds up deleveraging, which can lift equity returns in an LBO. A common confusion is with mandatory amortisation, the fixed scheduled repayments; the sweep is extra and varies with each year's cash generation.",
+    "example": "Say ABC Ltd has ₹70 crore of excess cash flow after operating costs, interest, capex, tax and its ₹20 crore of scheduled repayments. With a 50% cash sweep it must prepay ₹35 crore of its term loan, which at a 10% interest rate cuts future interest by ₹3.5 crore a year.",
+    "formula": "Cash sweep = Sweep % × Excess cash flow (after minimum cash and mandatory repayments)",
+    "related": [
+      "Debt schedule",
+      "Revolver",
+      "Leveraged buyout",
+      "Term loan",
+      "Free cash flow",
+      "Plug"
+    ]
+  },
+  {
+    "id": "debt-schedule",
+    "term": "Debt schedule",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "debt roll-forward"
+    ],
+    "hl": [
+      "debt schedule",
+      "debt schedules"
+    ],
+    "abbr": [],
+    "short": "A supporting model sheet that tracks each loan's opening balance, new borrowing, repayments, closing balance and interest for every period.",
+    "kid": "You keep a little list of how many coins you borrowed, how many you paid back, and how many you still owe each week. That list is the schedule.",
+    "detail": "A debt schedule models each tranche of borrowing, such as the revolver, term loans, bonds or non-convertible debentures (NCDs), separately over the forecast. For every period it rolls the balance forward: opening balance plus new issuance or draws, minus scheduled amortisation and any prepayments or cash sweep, gives the closing balance. It then calculates interest using fixed or floating rates, with any floating benchmark set as a model input rather than assumed constant. The schedule feeds interest expense to the income statement, debt balances to the balance sheet, and issuance and repayments to the financing section of the cash flow statement. It is central to LBO models and credit analysis, where lenders check whether cash flows can service the debt. Common mistakes are calculating interest on closing balances without handling the resulting circular reference, and forgetting fees or lease liabilities.",
+    "example": "Say ABC Ltd's term loan opens the year at ₹200 crore, with ₹30 crore of scheduled repayment and ₹10 crore of extra prepayment. Closing debt is ₹200 - ₹30 - ₹10 = ₹160 crore, and interest at 9% on the opening balance is ₹18 crore.",
+    "formula": "Closing debt = Opening debt + New borrowing - Scheduled repayments - Prepayments",
+    "related": [
+      "Revolver",
+      "Cash sweep",
+      "Roll-forward schedule",
+      "Interest coverage ratio",
+      "Circular reference",
+      "Three-statement model"
+    ]
+  },
+  {
+    "id": "depreciation-schedule",
+    "term": "Depreciation schedule",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "PP&E schedule",
+      "fixed asset schedule"
+    ],
+    "hl": [
+      "depreciation schedule",
+      "depreciation schedules"
+    ],
+    "abbr": [],
+    "short": "A model sheet that projects a company's fixed assets, adding new capital spending and subtracting depreciation to give each period's closing value.",
+    "kid": "A new bicycle gets a little older and less shiny every year. You keep a list of how much each bike is worth as it ages, and add any new bikes you buy.",
+    "detail": "A depreciation schedule, or PP&E schedule, forecasts property, plant and equipment: opening net PP&E plus capex, minus depreciation and disposals, equals closing net PP&E. Capex is often split into maintenance capex, which keeps existing capacity running, and growth capex, tied to new capacity or revenue. Depreciation can be modelled as a percentage of opening assets or of revenue, or more precisely as a waterfall in which each year's capex is depreciated over its useful life. In India, Schedule II of the Companies Act, 2013 gives indicative useful lives for asset classes, while tax rules set separate block-wise rates, so book and tax depreciation differ and create deferred tax. The schedule feeds depreciation to the income statement, capex to the cash flow statement and net PP&E to the balance sheet. A common mistake is forecasting strong growth while letting capex stay below depreciation for years.",
+    "example": "Say ABC Ltd starts the year with ₹500 crore of net PP&E, spends ₹120 crore on capex and charges ₹70 crore of depreciation. Closing net PP&E is ₹500 + ₹120 - ₹70 = ₹550 crore.",
+    "formula": "Closing net PP&E = Opening net PP&E + Capex - Depreciation - Net book value of disposals",
+    "related": [
+      "Depreciation",
+      "Capital expenditure",
+      "Property, plant and equipment",
+      "Roll-forward schedule",
+      "Three-statement model",
+      "Deferred tax"
+    ]
+  },
+  {
+    "id": "working-capital-schedule",
+    "term": "Working capital schedule",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "NWC schedule"
+    ],
+    "hl": [
+      "working capital schedule"
+    ],
+    "abbr": [],
+    "short": "A model sheet that forecasts money owed by customers, stock on hand and unpaid supplier bills, to find the cash tied up in operations.",
+    "kid": "A toy shop buys toys before selling them, and some buyers pay later. This list keeps track of the coins stuck in toys on the shelf and in promises to pay.",
+    "detail": "A working capital schedule projects the operating current assets and liabilities that tie up or release cash. The standard approach uses days ratios: receivables from days sales outstanding on revenue, inventory from days inventory outstanding on cost of goods sold, and payables from days payables outstanding. Net working capital is receivables plus inventory minus payables, sometimes with other operating items such as advances and accrued expenses. An increase in net working capital is a use of cash on the cash flow statement; a decrease releases cash. This matters because a fast-growing company can be profitable yet short of cash if customers pay slowly. Indian sectors differ sharply: many FMCG companies run negative working capital because distributors pay quickly while suppliers are paid later, while capital goods and infrastructure firms carry heavy receivables. A common mistake is including cash or short-term debt, which belong elsewhere in the model.",
+    "example": "Say ABC Ltd expects revenue of ₹365 crore and 45 days of receivables. Receivables = ₹365 crore × 45 / 365 = ₹45 crore. If last year's receivables were ₹36 crore, the ₹9 crore increase is a cash outflow in the forecast.",
+    "formula": "Receivables = Revenue × DSO / 365; Inventory = COGS × DIO / 365; Payables = COGS × DPO / 365; NWC = Receivables + Inventory - Payables",
+    "related": [
+      "Working capital",
+      "Days sales outstanding",
+      "Cash conversion cycle",
+      "Three-statement model",
+      "Free cash flow"
+    ]
+  },
+  {
+    "id": "roll-forward-schedule",
+    "term": "Roll-forward schedule",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "corkscrew",
+      "BASE analysis"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "A schedule that links each period's opening balance, additions and subtractions to its closing balance, which then becomes the next period's opening balance.",
+    "kid": "You start the week with some marbles, win a few, lose a few, and count what is left. Next week you start with exactly that many.",
+    "detail": "A roll-forward, also called a corkscrew or BASE analysis (Beginning, Additions, Subtractions, Ending), is the basic building block of balance sheet forecasting. For any account, opening balance plus additions minus subtractions equals closing balance, and that closing balance links to the next period's opening, creating the corkscrew pattern of links across columns. It is used for PP&E, debt, retained earnings and other equity, provisions, deferred revenue and intangibles. Every flow line should connect to the income statement or cash flow statement, so the balance sheet stays consistent with them. Auditors use the same idea to reconcile movements in accounts. The most common mistake is hard-coding an opening balance in a forecast period instead of linking it to the prior closing, which breaks the chain and often explains a model that will not balance.",
+    "example": "Say ABC Ltd's retained earnings open the year at ₹300 crore. It earns net profit of ₹80 crore and pays ₹25 crore of dividends, so closing retained earnings are ₹300 + ₹80 - ₹25 = ₹355 crore, which becomes next year's opening balance.",
+    "formula": "Closing balance = Opening balance + Additions - Subtractions",
+    "related": [
+      "Debt schedule",
+      "Depreciation schedule",
+      "Three-statement model",
+      "Retained earnings",
+      "Model integrity checks"
+    ]
+  },
+  {
+    "id": "model-integrity-checks",
+    "term": "Model integrity checks",
+    "cat": "modeling",
+    "level": "i",
+    "aliases": [
+      "balance check",
+      "error checks",
+      "model audit"
+    ],
+    "hl": [],
+    "abbr": [],
+    "short": "Formulas built into a model that flag errors automatically, such as the balance sheet not balancing or cash turning negative.",
+    "kid": "After sharing sweets, you count them again to make sure none went missing. If the numbers do not match, you know something went wrong.",
+    "detail": "Integrity checks are formulas that test whether a model behaves as it should, each returning zero (or TRUE) when all is well and a flag when not. The core one is the balance check: total assets minus total liabilities and equity must be zero in every period. Others confirm that closing cash on the cash flow statement equals balance sheet cash, that sub-totals add up, that debt and cash never go negative, that the revolver stays within its limit and that the scenario switch holds a valid value. Good models roll all checks into one master check shown on the cover sheet. A model audit goes further: a reviewer traces the logic, hard-codes and links before a model is used for a deal or lending decision. A common mistake is fixing a failed balance check with a hard-coded number; the check exists to point you to the real error.",
+    "example": "Say ABC Ltd's forecast balance sheet shows total assets of ₹1,250 crore against liabilities and equity of ₹1,240 crore. The balance check returns ₹10 crore instead of zero, and tracing it reveals that ₹10 crore of capex was added to PP&E but never deducted from cash.",
+    "formula": "Balance check = Total assets - (Total liabilities + Shareholders' equity), which must equal 0",
+    "related": [
+      "Three-statement model",
+      "Financial model",
+      "Plug",
+      "Circular reference",
+      "Roll-forward schedule"
+    ]
+  }
+]

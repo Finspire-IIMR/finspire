@@ -1,0 +1,1128 @@
+[
+ {
+  "id": "mifid-ii",
+  "term": "MiFID II",
+  "cat": "governance",
+  "level": "a",
+  "aliases": [
+   "MiFID",
+   "Markets in Financial Instruments Directive"
+  ],
+  "hl": [
+   "mifid ii",
+   "mifid 2",
+   "mifid rules",
+   "markets in financial instruments directive"
+  ],
+  "abbr": [
+   "MiFID"
+  ],
+  "short": "The European Union's main rulebook for investment firms and trading venues, covering transparency, investor protection and how trading and research are paid for.",
+  "kid": "Imagine a big playground shared by many schools. The grown-ups write one set of rules so every game is fair, everyone can see the score, and nobody hides what things cost.",
+  "detail": "MiFID II is the European Union's framework for investment services: a directive plus a companion regulation (MiFIR) that took effect on 3 January 2018, replacing the original MiFID, in force since 2007. It covers brokers, banks, asset managers and trading venues. Key rules include pre- and post-trade transparency, best execution for clients, detailed transaction reporting, caps on dark-pool trading, controls on algorithmic trading, position limits in commodity derivatives, and product governance so firms sell products only to suitable clients. Its best-known change was research unbundling: fund managers had to pay for broker research separately instead of hiding it inside trading commissions, which shrank research budgets worldwide. Its reach goes beyond Europe because global banks serve EU clients; the UK kept its own version after Brexit, and both have since relaxed unbundling. Do not confuse MiFID II with MiFIR, its directly applicable sister regulation.",
+  "example": "Say an EU fund manager paid brokers $10 million a year in commissions, of which $3 million was really for research. Under MiFID II it must price that research separately; if it pays the $3 million from its own profits, its clients' trading costs fall to $7 million, a 30% cut.",
+  "formula": "",
+  "related": [
+   "Dark pool",
+   "Algorithmic trading",
+   "Market manipulation",
+   "Insider trading",
+   "Securities and Exchange Commission"
+  ]
+ },
+ {
+  "id": "fatf",
+  "term": "Financial Action Task Force",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "FATF",
+   "FATF grey list",
+   "Grey list",
+   "FATF black list"
+  ],
+  "hl": [
+   "financial action task force",
+   "fatf grey list",
+   "fatf black list",
+   "fatf greylist",
+   "fatf plenary",
+   "fatf mutual evaluation",
+   "fatf grey-list",
+   "fatf grey listing",
+   "fatf greylisting"
+  ],
+  "abbr": [
+   "FATF"
+  ],
+  "short": "An intergovernmental body that sets global standards against money laundering and terrorist financing, and publicly lists countries with weak controls.",
+  "kid": "Imagine grown-ups from many countries working together to stop people sneaking stolen sweets through school gates. If one school leaves its gate loose, they put its name on a 'watch closely' list until it is fixed.",
+  "detail": "The Financial Action Task Force (FATF) was set up by the G7 in 1989 and is based in Paris. It writes 40 Recommendations that countries are expected to turn into law: criminalising money laundering, making banks know their customers, tracking beneficial owners and reporting suspicious transactions. Peer reviews called mutual evaluations rate each country. Weak countries go on a public grey list (jurisdictions under increased monitoring) or, in the worst cases, the black list (high-risk jurisdictions subject to a call for action), which as of 2025 named North Korea, Iran and Myanmar. Grey-listing imposes no sanctions, but banks worldwide apply extra checks, raising costs and deterring investment. India joined in 2010, and its 2024 evaluation placed it in regular follow-up, the best outcome. The common confusion: FATF writes standards, not laws; countries and their banks enforce them.",
+  "example": "Pakistan was put on the FATF grey list in June 2018 and removed in October 2022, about four years and four months later, after completing its action plan. Say a grey-listed country, Country X, makes $10 billion of cross-border payments a year and the extra checks add 0.5% in costs: that is $50 million a year.",
+  "formula": "",
+  "related": [
+   "Anti-money laundering",
+   "Prevention of Money Laundering Act",
+   "Know your customer",
+   "Beneficial owner",
+   "Economic sanctions",
+   "Shell company"
+  ]
+ },
+ {
+  "id": "aml",
+  "term": "Anti-money laundering",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "AML",
+   "AML/CFT",
+   "Combating financing of terrorism",
+   "Money laundering"
+  ],
+  "hl": [
+   "money laundering",
+   "money-laundering",
+   "anti-money laundering",
+   "anti-money-laundering",
+   "laundering case",
+   "laundering charges",
+   "laundering probe",
+   "laundered money",
+   "launder money",
+   "terror financing",
+   "terrorist financing",
+   "terror funding",
+   "aml/cft",
+   "aml rules",
+   "aml norms",
+   "aml compliance",
+   "aml lapses",
+   "aml violations"
+  ],
+  "abbr": [],
+  "short": "The laws, checks and reporting systems that stop criminals disguising illegal money as clean income, and stop money from reaching terrorists.",
+  "kid": "If someone takes toys that are not theirs, they might swap them around until nobody remembers where they came from. Grown-ups keep careful notes so that trick does not work.",
+  "detail": "Anti-money laundering (AML) means the rules and systems that stop the proceeds of crime from being made to look legitimate. Laundering usually runs in three stages: placement (getting dirty cash into the system), layering (moving it through many transactions to hide the trail) and integration (bringing it back as apparently clean wealth). Banks, brokers, mutual funds, insurers and crypto platforms fight it with know-your-customer checks, identifying beneficial owners, monitoring transactions and filing suspicious transaction reports. CFT, combating the financing of terrorism, adds a twist: terror money can be small and come from legitimate sources. In India, the Prevention of Money Laundering Act and reports to FIU-IND form the backbone, guided by FATF standards. Lapses are costly: HSBC paid $1.9 billion to US authorities in 2012. Do not confuse AML with KYC; KYC is only one tool within AML.",
+  "example": "Say someone holds ₹45 lakh of cash from a crime and deposits it as nine ₹5 lakh amounts across several accounts in one week. No single deposit looks huge, but 9 x ₹5 lakh = ₹45 lakh moving with no matching business is exactly the pattern AML monitoring flags, and the bank must report it as a suspicious transaction.",
+  "formula": "",
+  "related": [
+   "Know your customer",
+   "Financial Action Task Force",
+   "Prevention of Money Laundering Act",
+   "Beneficial owner",
+   "Shell company",
+   "Round-tripping"
+  ]
+ },
+ {
+  "id": "pmla",
+  "term": "Prevention of Money Laundering Act",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "PMLA",
+   "PMLA 2002",
+   "Money Laundering Act"
+  ],
+  "hl": [
+   "prevention of money laundering act",
+   "pmla case",
+   "pmla cases",
+   "pmla court",
+   "pmla probe",
+   "pmla charges",
+   "under pmla",
+   "money laundering act"
+  ],
+  "abbr": [
+   "PMLA"
+  ],
+  "short": "India's 2002 law that makes money laundering a crime and lets the Enforcement Directorate investigate, arrest and seize property linked to crime.",
+  "kid": "If someone grabs sweets that belong to others, a special rule lets the teacher take those sweets back and stop the grabber, even after they hide them in a different jar.",
+  "detail": "The Prevention of Money Laundering Act, 2002 (PMLA), in force since July 2005, punishes anyone involved in hiding, using or passing off proceeds of crime as clean money. A PMLA case needs a scheduled offence, a predicate crime such as corruption, fraud, cheating or drug trafficking, registered by another agency. The Enforcement Directorate investigates and can search, arrest and provisionally attach property; bail is hard to get because of the twin conditions in Section 45, which the Supreme Court upheld in 2022. Punishment is 3 to 7 years of rigorous imprisonment, up to 10 years in drug-linked cases. Banks, brokers, mutual funds, crypto platforms and other reporting entities must verify customers, keep records and report suspicious transactions to FIU-IND. The common confusion: PMLA is not a tax law, and if the underlying predicate offence collapses, the money-laundering case generally falls with it.",
+  "example": "Say the ED provisionally attaches a flat worth ₹3 crore and deposits of ₹1.5 crore that it suspects came from a bank fraud, a total of ₹4.5 crore. The owner cannot sell or move them; the attachment lapses after 180 days unless the PMLA Adjudicating Authority confirms it, after which it continues while the case runs.",
+  "formula": "",
+  "related": [
+   "Enforcement Directorate",
+   "Anti-money laundering",
+   "Financial Action Task Force",
+   "Know your customer",
+   "FEMA"
+  ]
+ },
+ {
+  "id": "fcpa",
+  "term": "Foreign Corrupt Practices Act",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "FCPA",
+   "US anti-bribery law",
+   "Foreign Corrupt Practices Act of 1977"
+  ],
+  "hl": [
+   "foreign corrupt practices act",
+   "fcpa probe",
+   "fcpa charges",
+   "fcpa case",
+   "fcpa violation",
+   "fcpa violations",
+   "fcpa investigation"
+  ],
+  "abbr": [
+   "FCPA"
+  ],
+  "short": "A US law that bans paying bribes to foreign officials to win business and requires US-listed companies to keep honest books and controls.",
+  "kid": "Imagine a rule that says you cannot give the referee extra sweets to make your team win. Even when you play in another town, you must keep an honest list of every sweet you hand out.",
+  "detail": "The Foreign Corrupt Practices Act (FCPA) of 1977 has two parts. The anti-bribery provisions forbid offering anything of value, such as cash, gifts or jobs for relatives, to a foreign government official to win or keep business. The accounting provisions require companies with US-listed securities to keep accurate books and adequate internal controls, so bribes cannot hide as consulting fees. The Justice Department brings criminal cases and the SEC civil ones. Its reach is wide: US companies, foreign companies with US-listed shares or ADRs, and anyone acting on US soil, so Indian subsidiaries of US firms often feature in FCPA cases. Siemens paid $800 million to US authorities in 2008. Enforcement priorities shift with each administration; in 2025 the US narrowed its FCPA focus. The common confusion: the FCPA targets bribes to public officials; purely private bribery falls under other laws, such as the UK Bribery Act.",
+  "example": "Say ABC Inc, listed in New York, pays a $2 million bribe through an agent to win a $50 million government contract abroad, so the bribe is 4% of the contract. If caught, it can be made to give up its profit on the contract, say $8 million, and pay penalties on top, so the bribe ends up costing far more than it won.",
+  "formula": "",
+  "related": [
+   "Securities and Exchange Commission",
+   "Internal financial controls",
+   "Anti-money laundering",
+   "Whistleblower",
+   "Disgorgement",
+   "American depositary receipt"
+  ]
+ },
+ {
+  "id": "whistleblower",
+  "term": "Whistleblower",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "Whistle-blower",
+   "Whistleblower policy",
+   "Vigil mechanism"
+  ],
+  "hl": [
+   "whistleblower",
+   "whistleblowers",
+   "whistle-blower",
+   "whistle-blowers",
+   "whistleblower complaint",
+   "whistleblower complaints",
+   "whistleblower allegations",
+   "whistleblower letter",
+   "vigil mechanism"
+  ],
+  "abbr": [],
+  "short": "A person, usually an employee or insider, who reports suspected fraud or wrongdoing inside an organisation to its board, a regulator or the public.",
+  "kid": "If you see someone taking extra cookies from the class jar when no one is looking, and you quietly tell the teacher, you are being brave and helping keep things fair.",
+  "detail": "A whistleblower raises the alarm about suspected wrongdoing such as accounting fraud, bribery, insider trading, safety breaches or misuse of company money. They may report internally, for example to the audit committee, or externally to regulators like SEBI or the US SEC. In India, the Companies Act 2013 and SEBI's listing rules require listed companies to run a vigil mechanism, a whistleblower policy that gives direct access to the audit committee chair and protects complainants from retaliation. The US SEC pays awards of 10% to 30% of sanctions above $1 million to tipsters whose information leads to enforcement. Many big frauds have surfaced through insiders, which is why investors watch whistleblower complaints closely. The common confusion: a complaint is an allegation, not proof. Markets often sell first, but the facts emerge only after an independent investigation.",
+  "example": "Under the SEC programme as of 2025, if a tip leads to sanctions of $20 million, the whistleblower can receive 10% to 30% of that, or $2 million to $6 million. Say a junior accountant at ABC Ltd reports ₹15 crore of fake sales to the audit committee; the vigil mechanism must protect her job while the claim is investigated.",
+  "formula": "",
+  "related": [
+   "Audit committee",
+   "Corporate governance",
+   "Securities and Exchange Commission",
+   "Internal financial controls",
+   "Short-seller report"
+  ]
+ },
+ {
+  "id": "companies-act-2013",
+  "term": "Companies Act 2013",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Companies Act",
+   "Companies Act, 2013",
+   "Indian Companies Act",
+   "Companies Act of 2013"
+  ],
+  "hl": [
+   "companies act",
+   "companies act 2013",
+   "companies act, 2013",
+   "companies (amendment) act",
+   "companies amendment bill"
+  ],
+  "abbr": [],
+  "short": "India's main company law, covering how companies are formed, run, audited, merged and closed, and what their directors must do.",
+  "kid": "A big game needs one rule book everyone follows: how to join, who is captain and how to count points fairly. This is that rule book for businesses in India.",
+  "detail": "The Companies Act 2013 replaced the Companies Act 1956 and came largely into force on 1 April 2014. Administered by the Ministry of Corporate Affairs, it governs incorporation, share capital, directors' duties, board meetings, accounts, audit, related party transactions, mergers and winding up. Notable features include mandatory CSR spending for larger companies, independent directors (at least one-third of a listed company's board), at least one woman director for listed and certain other companies, rotation of auditors, class action suits, and bodies such as the National Company Law Tribunal, NFRA and a statutory SFIO. Insolvency cases moved to the Insolvency and Bankruptcy Code in 2016, and amendments in 2019 and 2020 decriminalised many minor offences. The common confusion: listed companies must follow both this Act and SEBI's listing rules, which are often stricter, for example on board independence.",
+  "example": "Say a listed company, ABC Ltd, has 12 directors. Under the Act it needs at least one-third, or 4, independent directors; under SEBI rules as of 2025, if its chair is an executive director, at least half, or 6, must be independent.",
+  "formula": "",
+  "related": [
+   "Ministry of Corporate Affairs",
+   "Corporate social responsibility",
+   "Independent director",
+   "National Financial Reporting Authority",
+   "Serious Fraud Investigation Office",
+   "Private limited company"
+  ]
+ },
+ {
+  "id": "csr",
+  "term": "Corporate social responsibility",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "CSR",
+   "CSR spending",
+   "CSR spend",
+   "2% CSR rule"
+  ],
+  "hl": [
+   "corporate social responsibility",
+   "csr spending",
+   "csr spend",
+   "csr activities",
+   "csr funds",
+   "csr obligation",
+   "csr obligations",
+   "csr expenditure",
+   "csr projects",
+   "csr rules",
+   "csr norms"
+  ],
+  "abbr": [
+   "CSR"
+  ],
+  "short": "Money and effort a company puts into social causes; Indian law requires larger companies to spend part of their profits on approved social projects.",
+  "kid": "When a lemonade stand does really well, it shares some of its coins to help fix the park swings for everyone in the neighbourhood.",
+  "detail": "Corporate social responsibility (CSR) broadly means a company's efforts to benefit society beyond making profits. India made it a legal duty: under Section 135 of the Companies Act 2013, a company with net worth of ₹500 crore or more, turnover of ₹1,000 crore or more, or net profit of ₹5 crore or more must spend at least 2% of its average net profit of the previous three years on activities listed in Schedule VII, such as education, health, sanitation and the environment (thresholds as of 2025). Unspent money must go to a specified government fund or, for ongoing projects, to an unspent CSR account to be used within three years. The rule took effect in 2014-15, making India the first country to mandate CSR spending. The common confusion: CSR is not the same as ESG, and CSR spending generally cannot be deducted as a business expense for income tax.",
+  "example": "Say XYZ Ltd earned net profits of ₹90 crore, ₹120 crore and ₹150 crore over the last three years. The average is ₹360 crore / 3 = ₹120 crore, so it must spend at least 2% of ₹120 crore, or ₹2.4 crore, on CSR this year.",
+  "formula": "Minimum CSR spend = 2% x Average net profit of the previous three financial years",
+  "related": [
+   "Companies Act 2013",
+   "ESG",
+   "Stakeholder theory",
+   "BRSR",
+   "Ministry of Corporate Affairs"
+  ]
+ },
+ {
+  "id": "mca",
+  "term": "Ministry of Corporate Affairs",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "MCA",
+   "Registrar of Companies",
+   "RoC",
+   "MCA21"
+  ],
+  "hl": [
+   "ministry of corporate affairs",
+   "corporate affairs ministry",
+   "registrar of companies",
+   "mca21",
+   "mca portal"
+  ],
+  "abbr": [
+   "RoC",
+   "MCA21"
+  ],
+  "short": "The Indian government ministry that administers company law, runs the companies register through Registrars of Companies, and oversees corporate filings.",
+  "kid": "Think of a big school office that keeps a name card for every club, checks that each club hands in its notebook every year, and removes clubs that stopped meeting.",
+  "detail": "The Ministry of Corporate Affairs (MCA) administers the Companies Act 2013, the LLP Act 2008 and the Competition Act 2002, and shares responsibility for the Insolvency and Bankruptcy Code. Its Registrars of Companies (RoCs), spread across states, register new companies and LLPs, receive annual returns and financial statements, record charges on assets, and can strike off companies that stop doing business. Filings are made on the MCA21 online portal, whose public records, such as a company's identification number, directors, capital and charges, are a standard first stop in due diligence. The Serious Fraud Investigation Office, the IEPF Authority and the audit regulator NFRA work under it. After 2017 it struck off over two lakh inactive companies in a crackdown on suspected shells. The common confusion: the MCA regulates all companies as legal entities, while SEBI regulates listed companies' conduct in the securities market.",
+  "example": "Say ABC Pvt Ltd files its annual return 60 days late. Under the MCA's additional-fee rule as of 2025, ₹100 for each day of delay, it pays 60 x ₹100 = ₹6,000 on top of the normal filing fee.",
+  "formula": "",
+  "related": [
+   "Companies Act 2013",
+   "Serious Fraud Investigation Office",
+   "Investor Education and Protection Fund",
+   "National Financial Reporting Authority",
+   "Competition Commission of India",
+   "Shell company"
+  ]
+ },
+ {
+  "id": "sfio",
+  "term": "Serious Fraud Investigation Office",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "SFIO"
+  ],
+  "hl": [
+   "serious fraud investigation office",
+   "sfio probe",
+   "sfio investigation",
+   "sfio case",
+   "sfio chargesheet"
+  ],
+  "abbr": [
+   "SFIO"
+  ],
+  "short": "India's specialist agency under the corporate affairs ministry that investigates serious and complex corporate fraud, using accountants, lawyers and forensic experts.",
+  "kid": "When something very tricky goes wrong in a game, the school calls a special team of puzzle-solvers who look at every clue until they find out who cheated.",
+  "detail": "The Serious Fraud Investigation Office (SFIO) was set up in 2003 and gained statutory backing under Section 211 of the Companies Act 2013. It is a multi-disciplinary team of experts in accountancy, forensic auditing, law, taxation, capital markets and IT, working under the Ministry of Corporate Affairs. It does not pick cases on its own: the central government assigns them, typically large frauds involving public money or many investors, as with the IL&FS collapse of 2018. Once SFIO takes a case, other agencies cannot investigate the same Companies Act offences, and under Section 212 it can arrest people suspected of fraud punishable under Section 447. Fraud carries 6 months to 10 years of jail and a fine of at least the amount involved, up to three times it. The common confusion: SFIO handles company-law fraud, the Enforcement Directorate money laundering and foreign exchange, and the CBI corruption and general crime.",
+  "example": "Say SFIO finds that directors of ABC Ltd diverted ₹40 crore through fake invoices. Under Section 447, the court can fine them at least ₹40 crore and up to 3 x ₹40 crore = ₹120 crore, besides a jail term of 6 months to 10 years.",
+  "formula": "",
+  "related": [
+   "Ministry of Corporate Affairs",
+   "Companies Act 2013",
+   "Enforcement Directorate",
+   "Forensic accounting",
+   "Shell company"
+  ]
+ },
+ {
+  "id": "shell-company",
+  "term": "Shell company",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "Shell companies",
+   "Shell firm",
+   "Shell entity",
+   "Shell corporation"
+  ],
+  "hl": [
+   "shell company",
+   "shell companies",
+   "shell firm",
+   "shell firms",
+   "shell entity",
+   "shell entities",
+   "shell corporation",
+   "shell corporations"
+  ],
+  "abbr": [],
+  "short": "A company that exists mainly on paper, with no real business, staff or assets of its own, used for legitimate structuring or to hide money.",
+  "kid": "Imagine an empty lunchbox with a name on it. There is no food inside, but people can pass it around and pretend it is full, which can be used to fool others.",
+  "detail": "A shell company has a legal existence, a bank account and often directors, but little or no actual operations. Shells are not illegal in themselves: groups use them as holding companies, special purpose vehicles for a deal, dormant firms kept for future use, or listed shells for reverse mergers. They become a problem when used to hide the true owner, launder money, evade tax, route funds back into the country disguised as investment, or generate fake invoices. Indian company law does not define the term, but after 2017 the government struck off over two lakh inactive companies and SEBI restricted trading in 331 suspected listed shells. Regulators now rely on beneficial-ownership disclosure to see through them. The common confusion: a shell is not a shelf company, a freshly registered company sold ready-made, nor a front company, which runs a real-looking business to hide illegal activity.",
+  "example": "Say Mr A sets up three shells, P, Q and R, with no staff. He puts ₹5 crore of unexplained cash into P; P pays Q ₹5 crore for 'consulting', Q pays R ₹5 crore for 'software', and R lends ₹5 crore to Mr A's listed firm. On paper ₹15 crore changed hands across three transfers, but no real service was delivered; the same ₹5 crore simply passed through layers to disguise its source.",
+  "formula": "",
+  "related": [
+   "Beneficial owner",
+   "Round-tripping",
+   "Anti-money laundering",
+   "Tax haven",
+   "Special purpose vehicle",
+   "Reverse merger"
+  ]
+ },
+ {
+  "id": "beneficial-owner",
+  "term": "Beneficial owner",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Ultimate beneficial owner",
+   "UBO",
+   "Significant beneficial owner",
+   "Beneficial ownership"
+  ],
+  "hl": [
+   "beneficial owner",
+   "beneficial owners",
+   "beneficial ownership",
+   "ultimate beneficial owner",
+   "ultimate beneficial owners",
+   "ultimate beneficial ownership",
+   "significant beneficial owner",
+   "significant beneficial owners"
+  ],
+  "abbr": [
+   "UBO",
+   "UBOs"
+  ],
+  "short": "The real person who ultimately owns or controls an asset or company and enjoys its benefits, even if it is registered in someone else's name.",
+  "kid": "If your teddy bear is kept in your friend's toy box, it is still your teddy. Grown-ups want to know who really owns each toy, not just whose box it sits in.",
+  "detail": "A beneficial owner is the natural person who ultimately owns, controls or benefits from an asset, as opposed to the legal or registered owner who holds title, such as a nominee, trust or chain of companies. Regulators care because hidden ownership enables money laundering, tax evasion, sanctions busting and governance abuse. In India, the Companies Act rules on significant beneficial owners require anyone holding, directly or indirectly, at least 10% of a company's shares, votes or dividends, or exercising significant influence or control, to be declared to the company and the Registrar (threshold as of 2025). Under anti-money-laundering rules, banks and brokers must identify the beneficial owners of corporate clients. A separate meaning arises in demat accounts: the depository is the registered owner and the investor is the beneficial owner. The common confusion: appearing on the shareholder register is not the same as being the beneficial owner.",
+  "example": "Say Mr C buys 15% of XYZ Ltd but splits it between two nominees: 8% in his driver's name and 7% in a friend's company. The shareholder register shows no stake above 10%, yet Mr C is the beneficial owner of 8% + 7% = 15% and, under the Indian rules as of 2025, must be declared as a significant beneficial owner.",
+  "formula": "",
+  "related": [
+   "Shell company",
+   "Know your customer",
+   "Anti-money laundering",
+   "Promoter",
+   "Demat account",
+   "Foreign portfolio investor"
+  ]
+ },
+ {
+  "id": "iepf",
+  "term": "Investor Education and Protection Fund",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "IEPF",
+   "IEPF Authority",
+   "Unclaimed dividends",
+   "Unclaimed shares"
+  ],
+  "hl": [
+   "investor education and protection fund",
+   "iepf authority",
+   "unclaimed dividends",
+   "unclaimed dividend",
+   "unclaimed shares",
+   "transferred to iepf"
+  ],
+  "abbr": [
+   "IEPF"
+  ],
+  "short": "An Indian government fund that holds unclaimed dividends, shares and other investor money until the rightful owner claims it, and pays for investor education.",
+  "kid": "If a child forgets a toy at school for a very long time, the teacher puts it in a safe lost-and-found box. The child can still come and take it back later.",
+  "detail": "The Investor Education and Protection Fund (IEPF) is set up under Section 125 of the Companies Act 2013 and managed by the IEPF Authority under the Ministry of Corporate Affairs. Under the rules as of 2025, when a dividend stays unpaid or unclaimed for seven years, the company must transfer it to the fund; matured deposits, debentures and refund money left unclaimed for seven years also go there. If dividends on a share go unclaimed for seven consecutive years, the shares themselves move to the IEPF's demat account. Nothing is confiscated: the owner or legal heir can claim money and shares back by filing form IEPF-5, after the company verifies the claim. The fund also pays for investor-awareness programmes. The common confusion: unclaimed bank deposits do not go to the IEPF; after ten years they move to the RBI's Depositor Education and Awareness Fund.",
+  "example": "Say Mrs D holds 500 shares of ABC Ltd and never cashes the ₹10-per-share dividend paid each year for seven years. Her shares move to the IEPF account, but she can still claim back the 500 shares and the 7 x 500 x ₹10 = ₹35,000 of unpaid dividends.",
+  "formula": "",
+  "related": [
+   "Dividend",
+   "Companies Act 2013",
+   "Ministry of Corporate Affairs",
+   "Demat account",
+   "Know your customer"
+  ]
+ },
+ {
+  "id": "sec",
+  "term": "Securities and Exchange Commission",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "SEC",
+   "US SEC",
+   "US Securities and Exchange Commission",
+   "Wall Street regulator"
+  ],
+  "hl": [
+   "securities and exchange commission",
+   "us sec",
+   "sec filing",
+   "sec filings",
+   "sec probe",
+   "sec charges",
+   "sec investigation",
+   "sec settlement",
+   "sec lawsuit",
+   "wall street regulator",
+   "wall street's top regulator",
+   "us securities regulator",
+   "sec sues",
+   "sec fines",
+   "sec penalty"
+  ],
+  "abbr": [],
+  "short": "The US government agency that regulates securities markets, makes public companies disclose information, and brings civil cases against fraud and insider trading.",
+  "kid": "Think of the main referee at a giant trading-card fair. The referee makes every seller tell the truth about their cards and punishes anyone who cheats.",
+  "detail": "The Securities and Exchange Commission (SEC) was created by the Securities Exchange Act of 1934 after the 1929 crash. Its mission is to protect investors, keep markets fair, orderly and efficient, and help companies raise capital. It registers securities offerings, requires listed companies to file reports such as the annual 10-K, quarterly 10-Q and event-driven 8-K, oversees stock exchanges, brokers, investment advisers and mutual funds, and enforces rules against fraud and insider trading. It is led by five commissioners, no more than three from one party. The SEC can only bring civil cases, seeking fines, disgorgement and bans; criminal prosecution is the Justice Department's job. It does not regulate futures (the CFTC does) or banks. India's closest counterpart is SEBI. The common confusion: when the SEC lets a filing become effective, it is not endorsing the investment.",
+  "example": "Say a director of ABC Inc buys 50,000 shares at $40 two days before a secret takeover offer is announced, and the price jumps to $50. His profit is 50,000 x $10 = $500,000; the SEC can sue to take that back and seek a civil penalty of up to 3 x $500,000 = $1.5 million.",
+  "formula": "",
+  "related": [
+   "SEBI",
+   "Insider trading",
+   "Disgorgement",
+   "Class action lawsuit",
+   "Foreign Corrupt Practices Act",
+   "Whistleblower"
+  ]
+ },
+ {
+  "id": "class-action-lawsuit",
+  "term": "Class action lawsuit",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Class action",
+   "Securities class action",
+   "Class action suit"
+  ],
+  "hl": [
+   "class action",
+   "class actions",
+   "class-action",
+   "class action lawsuit",
+   "class action lawsuits",
+   "class-action lawsuit",
+   "class-action lawsuits",
+   "class action suit",
+   "class-action suit",
+   "securities class action"
+  ],
+  "abbr": [],
+  "short": "A lawsuit in which one or a few people sue for a large group with the same complaint, such as shareholders misled by a company.",
+  "kid": "If a shop gave every child in class a broken toy, one child can speak to the grown-ups for everyone, and if the shop must pay, all the children get their share.",
+  "detail": "In a class action, a representative plaintiff sues for a whole class of people harmed in the same way, so thousands of small claims can be fought together. In securities cases, investors who bought during a class period when the company allegedly made false or misleading statements sue after the truth comes out and the price falls. They are most common in the US, where law firms often take cases for a share of any recovery, and most settle, frequently funded by directors and officers insurance. Indian companies with US-listed shares or ADRs have faced them. India allows class actions by shareholders and depositors before the NCLT under Section 245 of the Companies Act 2013, though they remain rare. The common confusion: press releases saying a law firm is investigating claims are marketing, not filed lawsuits, and a class action differs from a derivative suit filed on the company's behalf.",
+  "example": "Say ABC Inc's share falls from $50 to $35 after it admits overstating revenue. An investor who bought 2,000 shares during the class period lost 2,000 x $15 = $30,000; if the case settles for 20% of estimated losses, she receives about $6,000, before her share of legal fees.",
+  "formula": "",
+  "related": [
+   "Securities and Exchange Commission",
+   "Short-seller report",
+   "Whistleblower",
+   "American depositary receipt",
+   "Minority shareholders"
+  ]
+ },
+ {
+  "id": "short-seller-report",
+  "term": "Short-seller report",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Short report",
+   "Activist short seller",
+   "Short-seller attack",
+   "Short attack"
+  ],
+  "hl": [
+   "short-seller report",
+   "short seller report",
+   "short-seller reports",
+   "short seller reports",
+   "short-seller attack",
+   "short seller attack",
+   "activist short seller",
+   "activist short-seller",
+   "activist short sellers"
+  ],
+  "abbr": [],
+  "short": "A public research report by an investor betting on a company's share price falling, setting out alleged problems such as fraud, hidden debt or overvaluation.",
+  "kid": "Imagine a child who says, 'I bet that tall block tower will fall,' and then shows everyone the wobbly blocks at the bottom. They might be right, but they also win the bet if it falls.",
+  "detail": "A short-seller report is published by an activist short seller, a firm that first takes a short position (selling borrowed shares, or using derivatives, to profit from a fall) and then makes its case public. Reports typically allege accounting fraud, undisclosed related parties, round-tripping, hidden debt or poor governance. Well-known firms include Muddy Waters, Citron and Hindenburg Research, which closed in January 2025. Hindenburg's January 2023 report on the Adani Group was followed by a loss of more than $100 billion in the group's market value within weeks, and by regulatory scrutiny in India. Some campaigns have been vindicated, as with Wirecard, which collapsed in 2020; others fade. The common confusion: the author profits if the price falls, so a report is a set of allegations from an interested party; check the claims against filings and the company's response before acting.",
+  "example": "Say a short seller sells 1 lakh borrowed shares of ABC Ltd at ₹800 and then publishes a report alleging hidden debt. If the share falls 30% to ₹560 and it buys back, it makes 1 lakh x ₹240 = ₹2.4 crore before borrowing costs; if the share instead rises to ₹900, it loses ₹1 crore.",
+  "formula": "",
+  "related": [
+   "Short selling",
+   "Forensic accounting",
+   "Class action lawsuit",
+   "Related party transaction",
+   "Whistleblower",
+   "Securities and Exchange Commission"
+  ]
+ },
+ {
+  "id": "cci",
+  "term": "Competition Commission of India",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "CCI",
+   "Indian competition regulator",
+   "India's antitrust regulator",
+   "Competition watchdog",
+   "Competition Act 2002"
+  ],
+  "hl": [
+   "competition commission of india",
+   "competition commission",
+   "competition act",
+   "cci probe",
+   "cci penalty",
+   "cci order"
+  ],
+  "abbr": [
+   "CCI"
+  ],
+  "short": "India's competition regulator, which stops cartels and abuse of market dominance and must approve large mergers and acquisitions before they close.",
+  "kid": "If a few big kids secretly agree to charge everyone more for marbles, or one kid bullies others out of the game, a fair referee steps in so everyone can play and trade fairly.",
+  "detail": "The Competition Commission of India (CCI) enforces the Competition Act 2002, which replaced the old MRTP Act. It became fully active in 2009 and began reviewing mergers in 2011. It acts on three fronts: anti-competitive agreements such as cartels and bid-rigging, abuse of a dominant position, and combinations, meaning mergers and acquisitions above size thresholds, which need its approval before completion. Penalties can reach 10% of average turnover over the last three years, and for cartels up to three times profit if that is higher. A 2023 amendment added a deal-value test, so large acquisitions of digital firms with few assets also need approval, plus settlement and commitment options. In 2022 it fined Google ₹1,337.76 crore over Android practices. Appeals go to the NCLAT. The common confusion: being big or dominant is legal; only abusing that dominance is not, and the CCI does not set prices.",
+  "example": "Say ABC Ltd is found to be part of a price-fixing cartel, with turnover of ₹9,000 crore, ₹10,000 crore and ₹11,000 crore over the last three years. Its average turnover is ₹30,000 crore / 3 = ₹10,000 crore, so a penalty at 10% of average turnover could be up to ₹1,000 crore.",
+  "formula": "",
+  "related": [
+   "Antitrust review",
+   "Merger",
+   "Acquisition",
+   "Monopoly",
+   "Ministry of Corporate Affairs"
+  ]
+ },
+ {
+  "id": "nfra",
+  "term": "National Financial Reporting Authority",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "NFRA",
+   "India's audit regulator",
+   "Audit regulator"
+  ],
+  "hl": [
+   "national financial reporting authority",
+   "nfra order",
+   "nfra probe",
+   "nfra penalty",
+   "nfra fines",
+   "nfra bans"
+  ],
+  "abbr": [
+   "NFRA"
+  ],
+  "short": "India's independent regulator for auditors of listed and large companies, which checks audit quality and can fine or ban auditors.",
+  "kid": "When children mark each other's homework, someone must make sure the markers are careful and honest. This group checks the checkers.",
+  "detail": "The National Financial Reporting Authority (NFRA) was set up in October 2018 under Section 132 of the Companies Act 2013, after a run of accounting scandals. It recommends accounting and auditing standards to the government, monitors compliance with them, reviews audit quality, and investigates and disciplines auditors of listed companies, banks, insurers and large unlisted companies. It can fine an individual auditor from ₹1 lakh up to five times the fees received, an audit firm from ₹5 lakh up to ten times the fees, and debar them from practice for six months to ten years. Before NFRA, the Institute of Chartered Accountants of India (ICAI) disciplined its own members; NFRA brought independent oversight for important companies, similar to the PCAOB in the US. The common confusion: NFRA regulates auditors and audit quality, not companies' business decisions, and ICAI still regulates chartered accountants generally.",
+  "example": "Say NFRA finds that an audit firm ignored obvious red flags in a listed company's books while earning ₹40 lakh in audit fees. It can fine the firm at least ₹5 lakh and up to 10 x ₹40 lakh = ₹4 crore, and debar it for six months to ten years.",
+  "formula": "",
+  "related": [
+   "Audit",
+   "Statutory auditor",
+   "Companies Act 2013",
+   "Key audit matters",
+   "Auditor resignation",
+   "Sarbanes-Oxley Act"
+  ]
+ },
+ {
+  "id": "internal-financial-controls",
+  "term": "Internal financial controls",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "IFC",
+   "Internal controls",
+   "Internal control over financial reporting",
+   "ICFR"
+  ],
+  "hl": [
+   "internal financial controls",
+   "internal financial control",
+   "internal controls",
+   "internal control weakness",
+   "internal control over financial reporting",
+   "material weakness",
+   "material weaknesses"
+  ],
+  "abbr": [
+   "ICFR"
+  ],
+  "short": "The policies and checks a company uses to protect its assets, prevent and catch fraud or errors, and keep its accounting records accurate.",
+  "kid": "At a lemonade stand, one friend counts the coins and another writes them down. Because two people check, mistakes and sneaky taking are much harder.",
+  "detail": "Internal financial controls (IFC) are the processes a company uses to run its business in an orderly way, safeguard assets, prevent and detect fraud and errors, keep accounting records accurate and complete, and prepare reliable financial information on time; this is the Companies Act 2013 definition. Examples include segregation of duties (maker-checker), approval limits, bank reconciliations, physical stock counts and IT access controls. In India, directors of listed companies must state that IFC are adequate and working, and statutory auditors must report on controls over financial reporting. The US equivalent is Sarbanes-Oxley Section 404. A material weakness is a control gap that could let a significant misstatement slip through. The common confusion: internal audit is not the same thing; it is the team that tests whether controls work. And an adverse report on controls does not prove the accounts are wrong, only that errors could go unnoticed.",
+  "example": "Say ABC Ltd lets one clerk both add new vendors and approve payments. If the clerk pays a fake vendor ₹8 lakh a month for 15 months, the loss reaches 15 x ₹8 lakh = ₹1.2 crore before anyone notices; splitting the two jobs between two people is the basic control that prevents it.",
+  "formula": "",
+  "related": [
+   "Audit",
+   "Audit committee",
+   "Sarbanes-Oxley Act",
+   "Key audit matters",
+   "Forensic accounting",
+   "Statutory auditor"
+  ]
+ },
+ {
+  "id": "key-audit-matters",
+  "term": "Key audit matters",
+  "cat": "governance",
+  "level": "a",
+  "aliases": [
+   "KAM",
+   "KAMs",
+   "Critical audit matters",
+   "Key audit matter"
+  ],
+  "hl": [
+   "key audit matters",
+   "key audit matter",
+   "critical audit matters",
+   "critical audit matter"
+  ],
+  "abbr": [
+   "KAM",
+   "KAMs"
+  ],
+  "short": "The section of a listed company's audit report where the auditor explains which areas needed the most judgement and effort in that year's audit.",
+  "kid": "When a teacher marks a big project, they might write, 'I looked extra hard at the tricky parts, here and here.' That note shows where the hard bits were.",
+  "detail": "Key audit matters (KAMs) are the matters that, in the auditor's professional judgement, were most significant in auditing the year's financial statements. Required for listed companies under auditing standard SA 701 in India and ISA 701 internationally, each KAM explains why the area was significant and how the audit addressed it. Typical KAMs include revenue recognition, loan-loss provisions at banks, goodwill impairment, tax disputes and major litigation. The US version, under PCAOB rules, is called critical audit matters. KAMs do not change the audit opinion; they show investors where the risk and judgement lie. They differ from an emphasis of matter paragraph, which draws attention to something already disclosed, such as a major uncertainty, and from a qualified opinion, which means the auditor disagrees with, or could not verify, part of the accounts.",
+  "example": "Say ABC Bank's auditor lists loan-loss provisions as a key audit matter because ₹2,000 crore of loans are stressed and the bank has set aside ₹600 crore against them, a 30% provision. The KAM explains how the auditor tested those assumptions; it flags where judgement is heaviest, not that the numbers are wrong.",
+  "formula": "",
+  "related": [
+   "Audit",
+   "Qualified opinion",
+   "Going concern",
+   "Statutory auditor",
+   "Internal financial controls",
+   "National Financial Reporting Authority"
+  ]
+ },
+ {
+  "id": "auditor-resignation",
+  "term": "Auditor resignation",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Auditor exit",
+   "Auditor quits",
+   "Resignation of auditor",
+   "Statutory auditor resignation"
+  ],
+  "hl": [
+   "auditor resignation",
+   "auditor resignations",
+   "auditor resigns",
+   "auditor resigned",
+   "auditors resign",
+   "auditor quits",
+   "auditors quit",
+   "auditor exit",
+   "resignation of auditor",
+   "resignation of statutory auditor",
+   "statutory auditor resigns"
+  ],
+  "abbr": [],
+  "short": "When a company's statutory auditor quits before finishing its term, an event investors treat as a possible warning sign about the accounts.",
+  "kid": "If the child chosen to count the class's sweets suddenly says, 'I don't want to count any more,' the teacher wonders whether something about the sweets looked wrong.",
+  "detail": "Auditor resignation means the statutory auditor steps down mid-term. In India, the auditor must file form ADT-3 with the Registrar within 30 days explaining why, and a listed company must disclose the resignation and reasons to stock exchanges promptly. SEBI's 2019 rules stop auditors walking out with work unfinished: one who resigns within 45 days of a quarter's end must first issue that quarter's report, and one who resigns later must also cover the next quarter. A resignation citing lack of information, disagreements with management or doubts about transactions is a serious red flag that often precedes write-downs or investigations; vague reasons such as pre-occupation still deserve scrutiny. The common confusion: auditor rotation is different. Listed and certain other companies must change audit firms after at most two five-year terms (one term for an individual auditor), so a scheduled rotation is routine, not a warning.",
+  "example": "Say the auditor of ABC Ltd resigns on 20 August, 51 days after the quarter that ended on 30 June. Because that is more than 45 days after quarter-end, under SEBI rules as of 2025 it must issue its report for the June quarter and also for the September quarter before it leaves.",
+  "formula": "",
+  "related": [
+   "Audit",
+   "Statutory auditor",
+   "Audit opinion",
+   "Key audit matters",
+   "National Financial Reporting Authority",
+   "Corporate governance"
+  ]
+ },
+ {
+  "id": "nomination-and-remuneration-committee",
+  "term": "Nomination and remuneration committee",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "NRC",
+   "Remuneration committee",
+   "Compensation committee",
+   "Nomination committee"
+  ],
+  "hl": [
+   "nomination and remuneration committee",
+   "remuneration committee",
+   "nomination & remuneration committee",
+   "board remuneration committee"
+  ],
+  "abbr": [],
+  "short": "A board committee that recommends who should join the board and top management, and how directors and senior executives should be paid.",
+  "kid": "When a club picks new team captains and decides on prizes for them, a small fair group helps choose, so captains cannot just pick themselves and give themselves the biggest prizes.",
+  "detail": "The nomination and remuneration committee (NRC) identifies people qualified to become directors or senior managers, recommends their appointment and removal, sets criteria for independence, oversees board evaluation and recommends a pay policy for directors, key managerial personnel and senior management. In India, Section 178 of the Companies Act 2013 and SEBI's listing rules require listed companies to have one; under the rules as of 2025 it needs at least three non-executive directors, at least two-thirds of them independent, chaired by an independent director. In the US, nominating and compensation committees are usually separate. A strong NRC stops founders and CEOs from effectively setting their own pay and helps plan succession. The common confusion: the NRC only recommends; the board decides, and some pay decisions, such as managerial pay above legal limits, also need shareholder approval.",
+  "example": "Say ABC Ltd's NRC has 3 members, all non-executive, of whom 2 are independent, meeting the two-thirds test. If management proposes raising the CEO's pay from ₹8 crore to ₹10 crore, a 25% rise, the NRC reviews it against the pay policy and peers before recommending it to the board.",
+  "formula": "",
+  "related": [
+   "Board of directors",
+   "Independent director",
+   "Audit committee",
+   "Executive compensation",
+   "Corporate governance",
+   "Key person risk"
+  ]
+ },
+ {
+  "id": "proxy-fight",
+  "term": "Proxy fight",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Proxy battle",
+   "Proxy contest"
+  ],
+  "hl": [
+   "proxy fight",
+   "proxy fights",
+   "proxy contest",
+   "proxy contests"
+  ],
+  "abbr": [],
+  "short": "A contest in which a shareholder group tries to win other shareholders' votes, usually to put its own candidates on a company's board.",
+  "kid": "Imagine two groups in class who both want to choose the next game. Each goes around asking classmates, 'Will you vote with us?' and whoever gets the most votes decides.",
+  "detail": "In a proxy fight, a dissident shareholder, often an activist investor, asks fellow shareholders for their proxies, the authority to vote their shares, in order to elect its own nominees to the board or to block or force a deal. Both sides send materials, lobby large funds and court proxy advisers such as ISS and Glass Lewis, or IiAS and InGovern in India. Since 2022, US rules require a universal proxy card listing both sides' nominees. A famous case is Engine No. 1, which owned about 0.02% of ExxonMobil yet won three board seats in 2021. In India, proxy fights are rarer because promoters often hold large stakes, though Invesco's 2021 attempt to reshape Zee Entertainment's board drew wide attention. The common confusion: a proxy fight is not a hostile takeover; the challenger seeks votes and board influence without buying a majority of the shares.",
+  "example": "Say ABC Inc has 100 million shares, 80 million of which are voted at the meeting, and an activist owns 5 million. To win a simple-majority vote it needs a little over 40 million votes, so its own shares cover only one-eighth; it must persuade holders of about 35 million more.",
+  "formula": "",
+  "related": [
+   "Proxy voting",
+   "Activist investor",
+   "Hostile takeover",
+   "Board of directors",
+   "Proxy advisory firm",
+   "Poison pill"
+  ]
+ },
+ {
+  "id": "key-person-risk",
+  "term": "Key person risk",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Key-man risk",
+   "Key man risk",
+   "Succession risk",
+   "Key-person dependency"
+  ],
+  "hl": [
+   "key person risk",
+   "key-person risk",
+   "key man risk",
+   "key-man risk",
+   "keyman risk",
+   "key person clause",
+   "key-person clause",
+   "key-man clause",
+   "key-man insurance",
+   "keyman insurance",
+   "key person insurance"
+  ],
+  "abbr": [],
+  "short": "The danger that a business suffers badly if one crucial person, such as its founder, CEO or star fund manager, leaves, falls ill or dies.",
+  "kid": "If only one child knows how to build the class's favourite block castle, the castle cannot be built when that child is away. It is safer when several children learn how.",
+  "detail": "Key person risk arises when a company's value depends heavily on one individual's skills, relationships, reputation or decisions. Examples include a founder-led start-up, a promoter who personally manages lenders and customers, a fund house built around one star manager, or a biotech firm reliant on one scientist. Investors respond by applying a valuation discount, asking for succession plans and checking the depth of the management team. Companies manage it through succession planning, a strong board, key-person insurance on the individual's life and well-documented processes. In private equity and venture capital funds, key person clauses can freeze new investments if named partners leave. The common confusion: it is not only about the CEO; any concentrated dependence, such as one salesperson holding the biggest client relationship, is key person risk.",
+  "example": "Say ABC AMC manages ₹30,000 crore, of which ₹12,000 crore sits in funds run by one star manager, so 40% of its assets depend on her. If she leaves and a quarter of those investors follow, ABC loses ₹3,000 crore, or 10% of its total assets.",
+  "formula": "",
+  "related": [
+   "Corporate governance",
+   "Board of directors",
+   "Nomination and remuneration committee",
+   "Promoter",
+   "Term insurance"
+  ]
+ },
+ {
+  "id": "round-tripping",
+  "term": "Round-tripping",
+  "cat": "governance",
+  "level": "a",
+  "aliases": [
+   "Round tripping of funds",
+   "Round tripping",
+   "Round-trip transactions"
+  ],
+  "hl": [
+   "round-tripping",
+   "round tripping",
+   "round-tripped",
+   "round-tripping of funds",
+   "round tripping of funds",
+   "round-trip transactions"
+  ],
+  "abbr": [],
+  "short": "Sending money out and bringing it back disguised, so it looks like fresh foreign investment, real revenue or independent capital when it is not.",
+  "kid": "Imagine passing your own toy to a friend, who hands it back saying, 'Here is a present for you.' It looks like a new gift, but it was your toy all along.",
+  "detail": "Round-tripping is any arrangement where money leaves a company or country and returns disguised, creating a false picture. In capital round-tripping, residents move funds, often unaccounted money, to an offshore entity in a low-tax jurisdiction and reinvest them into India as foreign investment, to hide their identity, claim treaty tax benefits or launder cash. In revenue round-tripping, related or friendly companies buy from and sell to each other with no economic purpose, inflating sales, as some telecom firms did with capacity swaps around 2000. Promoters may also route money through friendly offshore funds to meet public shareholding norms or prop up share prices. India tightened the screws through the 2016 change to its Mauritius tax treaty and the 2022 overseas investment rules, which limit layers of subsidiaries. The common confusion: round-tripping moves funds, while circular trading churns shares among colluding traders to fake volume.",
+  "example": "Say Mr E sends ₹100 crore of untaxed money abroad to a shell company in a tax haven. The shell then invests the same ₹100 crore back into his Indian firm as 'foreign direct investment'. Recorded foreign inflows rise by ₹100 crore, yet no new foreign money has arrived: the same money went out and came back in disguise.",
+  "formula": "",
+  "related": [
+   "Shell company",
+   "Beneficial owner",
+   "Tax haven",
+   "Foreign direct investment",
+   "Anti-money laundering",
+   "Circular trading"
+  ]
+ },
+ {
+  "id": "circular-trading",
+  "term": "Circular trading",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Wash trading",
+   "Synchronised trading",
+   "Synchronized trading",
+   "Circular trades"
+  ],
+  "hl": [
+   "circular trading",
+   "circular trades",
+   "wash trading",
+   "wash trades",
+   "wash trade",
+   "synchronised trading",
+   "synchronized trading",
+   "synchronised trades"
+  ],
+  "abbr": [],
+  "short": "A form of market manipulation in which colluding traders keep buying and selling the same shares among themselves to fake volume or move the price.",
+  "kid": "Imagine three friends passing the same marble around in a circle, shouting 'Sold!' each time. Others think marbles are very popular, but nothing new was ever bought.",
+  "detail": "Circular trading happens when a group of connected traders repeatedly trade the same shares with each other, so the shares go round in a loop with no real change in who ultimately owns them. The aim is to create an illusion of demand: rising volume and price attract genuine investors, and the group then sells to them at inflated prices. Close cousins are wash trading, where buyer and seller are effectively the same person, and synchronised trading, where colluders place matching buy and sell orders at the same time, price and quantity. SEBI treats all three as fraudulent under its Prohibition of Fraudulent and Unfair Trade Practices (PFUTP) regulations; illiquid small-cap and SME stocks are frequent targets. In GST cases, circular trading also describes chains of fake invoices used to claim input tax credit, a different context. The common confusion: high volume does not prove real investor interest.",
+  "example": "Say four related accounts trade 2 lakh shares of a thinly traded stock, XYZ Ltd, back and forth 10 times in a day. The exchange shows 20 lakh shares traded though nobody outside the group bought; if they lift the price ₹2 on each round, it climbs from ₹50 to ₹70, a 40% jump built on fake demand.",
+  "formula": "",
+  "related": [
+   "Market manipulation",
+   "Pump and dump",
+   "SEBI",
+   "Round-tripping",
+   "Insider trading"
+  ]
+ },
+ {
+  "id": "enforcement-directorate",
+  "term": "Enforcement Directorate",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "ED",
+   "Directorate of Enforcement"
+  ],
+  "hl": [
+   "enforcement directorate",
+   "directorate of enforcement",
+   "ed raids",
+   "ed raid",
+   "ed searches",
+   "ed attaches",
+   "ed arrests",
+   "ed summons",
+   "ed probe",
+   "ed chargesheet"
+  ],
+  "abbr": [],
+  "short": "India's financial crime agency that enforces the money-laundering law (PMLA) and the foreign exchange law (FEMA), with powers to search, arrest and seize property.",
+  "kid": "When someone hides things they took from others, a special team follows the trail, finds where the things were hidden and takes them back.",
+  "detail": "The Enforcement Directorate (ED), set up in 1956 and now under the Finance Ministry's Department of Revenue, is India's lead agency for economic crime involving money laundering and foreign exchange. It enforces the Prevention of Money Laundering Act 2002 (criminal), the Foreign Exchange Management Act 1999 (civil penalties) and the Fugitive Economic Offenders Act 2018. Under PMLA it can search premises, arrest suspects and provisionally attach property, recording each case in an Enforcement Case Information Report (ECIR), its internal counterpart of a police FIR. It cannot start a money-laundering case alone: a predicate offence must be registered by another agency, such as the police or CBI. It has pursued high-profile bank-fraud cases and restored attached assets to lender banks. The common confusion: the ED is not the CBI (corruption and general crime) or the SFIO (company-law fraud), though the three often work on the same scandal.",
+  "example": "Say a bank loses ₹1,000 crore to a loan fraud and the ED provisionally attaches ₹250 crore of the borrower's property under PMLA. That covers ₹250 crore / ₹1,000 crore = 25% of the loss, and the law allows attached property to be restored to the bank as a legitimate claimant.",
+  "formula": "",
+  "related": [
+   "Prevention of Money Laundering Act",
+   "FEMA",
+   "Anti-money laundering",
+   "Serious Fraud Investigation Office",
+   "Shell company"
+  ]
+ },
+ {
+  "id": "disgorgement",
+  "term": "Disgorgement",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Disgorgement order",
+   "Impounding of gains",
+   "Disgorge"
+  ],
+  "hl": [
+   "disgorgement",
+   "disgorgement order",
+   "disgorgement orders",
+   "impounding of gains",
+   "impounds gains",
+   "impounded gains"
+  ],
+  "abbr": [],
+  "short": "An order making a wrongdoer give up the profits made, or losses avoided, through illegal conduct, usually with interest.",
+  "kid": "If someone wins a game by peeking at the answers, they must give back the prize they won. Any extra time-out for cheating comes on top of that.",
+  "detail": "Disgorgement strips a wrongdoer of ill-gotten gains, profits earned or losses avoided through insider trading, fraud, front-running or unauthorised schemes, usually with interest. Its aim is to undo unjust enrichment, not to punish, so monetary penalties are imposed separately. SEBI orders disgorgement under the SEBI Act, often using the money to repay harmed investors or crediting it to its investor protection fund. Before a final order, SEBI can also impound alleged gains, freezing them in an escrow account, as in its July 2025 interim order against trading firm Jane Street, which impounded about ₹4,844 crore. In the US, the Supreme Court ruled in 2020 (Liu v SEC) that SEC disgorgement is limited to net profits and must generally benefit victims. The common confusion: disgorgement is not a fine; a wrongdoer can be ordered to disgorge and pay a penalty on top.",
+  "example": "Say an insider buys 50,000 shares of XYZ Ltd at ₹400 the day before good news and sells at ₹520. The unlawful gain is 50,000 x ₹120 = ₹60 lakh, which SEBI can order disgorged with interest; separately, under the SEBI Act as of 2025, the penalty can reach ₹25 crore or three times the profit, whichever is higher.",
+  "formula": "",
+  "related": [
+   "SEBI",
+   "Securities and Exchange Commission",
+   "Insider trading",
+   "Securities Appellate Tribunal",
+   "SEBI settlement order",
+   "Front running"
+  ]
+ },
+ {
+  "id": "limited-liability",
+  "term": "Limited liability",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "Limited liability principle"
+  ],
+  "hl": [
+   "limited liability",
+   "corporate veil",
+   "lifting the corporate veil",
+   "piercing the corporate veil"
+  ],
+  "abbr": [],
+  "short": "The legal rule that a company's shareholders can lose at most the money they invested, not their personal savings, if the company fails.",
+  "kid": "If you put one coin into a shared piggy bank for a class party and the party goes badly, you lose only that coin. Nobody can come and take your toys from home.",
+  "detail": "Limited liability means the owners of a company are not personally responsible for its debts beyond the amount they invested, or agreed to pay, for their shares. It rests on the idea that a company is a separate legal person, confirmed in the 1897 British case Salomon v Salomon. This protection lets millions of passive investors buy shares without risking their homes, which makes stock markets and diversification possible. Indian companies signal it in their names with Limited or Private Limited. LLPs extend it to partners, while sole proprietors and partners in ordinary partnerships face unlimited liability. A limited liability company (LLC) is a specific US business form. The common confusions: the company itself remains fully liable for its debts; courts can lift the corporate veil in cases of fraud; and promoters who sign personal guarantees for bank loans, common in India, are personally on the hook.",
+  "example": "Say you buy 1,000 shares of ABC Ltd at ₹200 each, investing ₹2 lakh. If ABC collapses owing creditors ₹500 crore, the most you can lose is your ₹2 lakh. A sole proprietor running the same business would be personally liable for all of it.",
+  "formula": "",
+  "related": [
+   "Private limited company",
+   "Companies Act 2013",
+   "Insolvency and Bankruptcy Code",
+   "Shareholder",
+   "Equity shares"
+  ]
+ },
+ {
+  "id": "private-limited-company",
+  "term": "Private limited company",
+  "cat": "governance",
+  "level": "b",
+  "aliases": [
+   "Pvt Ltd",
+   "Private company",
+   "Private limited",
+   "Pvt. Ltd."
+  ],
+  "hl": [
+   "private limited company",
+   "private limited companies",
+   "pvt ltd company"
+  ],
+  "abbr": [],
+  "short": "A company whose shares cannot be offered to the public or freely traded, owned by a small group such as founders, family or investors.",
+  "kid": "A private club lets in only invited friends, and you cannot sell your place to a stranger without the club agreeing. Everyone in the club is still kept safe from big losses.",
+  "detail": "In India, the Companies Act 2013 defines a private limited company (Pvt Ltd) as one whose articles restrict the transfer of shares, cap members at 200 (excluding employees) and forbid inviting the public to buy its securities. It needs at least two members and two directors, and its shareholders enjoy limited liability. Most start-ups and family businesses start this way: it is cheap to run and can issue shares to investors and stock options to employees. A public limited company needs at least seven members and three directors and may raise money from the public, so a private company must convert into a public one before an IPO. An LLP, under the LLP Act 2008, is a different form: partners have limited liability but there are no shares, which suits professional firms. The common confusion: public does not mean listed; many public limited companies never list.",
+  "example": "Say three founders start ABC Pvt Ltd with 10,000 shares of ₹10 each, split 4,000, 3,000 and 3,000. A VC then invests ₹5 crore for 2,500 new shares, taking the total to 12,500, so the VC owns 2,500 / 12,500 = 20% and the founders are diluted to 32%, 24% and 24%.",
+  "formula": "",
+  "related": [
+   "Limited liability",
+   "Companies Act 2013",
+   "Initial public offering",
+   "Ministry of Corporate Affairs",
+   "Employee stock option plan"
+  ]
+ },
+ {
+  "id": "glass-steagall-act",
+  "term": "Glass-Steagall Act",
+  "cat": "governance",
+  "level": "a",
+  "aliases": [
+   "Glass-Steagall",
+   "Banking Act of 1933",
+   "Glass Steagall",
+   "Glass-Steagall law"
+  ],
+  "hl": [
+   "glass-steagall",
+   "glass steagall",
+   "glass-steagall act",
+   "gramm-leach-bliley"
+  ],
+  "abbr": [],
+  "short": "A 1933 US law that separated ordinary deposit-taking banks from investment banks dealing in securities; its key separation was repealed in 1999.",
+  "kid": "Imagine the piggy bank where children keep their savings is kept far away from the table where grown-ups play risky games, so the savings cannot be used for the games.",
+  "detail": "Glass-Steagall refers to provisions of the US Banking Act of 1933, named after Senator Carter Glass and Representative Henry Steagall and passed after thousands of banks failed in the Depression. They barred commercial banks, which take deposits and make loans, from underwriting and dealing in most securities, and kept them from affiliating with securities firms. The same Act created federal deposit insurance. The separation eroded over decades, and the Gramm-Leach-Bliley Act of 1999 repealed the affiliation limits, clearing the way for giants such as Citigroup. After 2008, the Volcker rule in the Dodd-Frank Act banned banks from most proprietary trading and limited their stakes in hedge and private equity funds, a partial echo of Glass-Steagall. The common confusion: Glass-Steagall was not fully repealed, since banks still cannot underwrite most securities directly, and the Volcker rule is a separate, narrower rule.",
+  "example": "After the 1933 Act, J.P. Morgan & Co. chose to stay a commercial bank, and in 1935 some of its partners set up Morgan Stanley as a separate investment bank. Under the later Volcker rule, say a bank with $500 billion of deposits wanted to bet $25 billion, 5% of that, of its own money on shares; that proprietary trading would be banned, though trading for clients and hedging are allowed.",
+  "formula": "",
+  "related": [
+   "Commercial bank",
+   "Investment banking",
+   "Deposit insurance",
+   "Too big to fail",
+   "Dodd-Frank Act"
+  ]
+ },
+ {
+  "id": "stakeholder-theory",
+  "term": "Stakeholder theory",
+  "cat": "governance",
+  "level": "i",
+  "aliases": [
+   "Stakeholder capitalism",
+   "Stakeholder approach",
+   "Stakeholder model"
+  ],
+  "hl": [
+   "stakeholder theory",
+   "stakeholder capitalism",
+   "stakeholder model"
+  ],
+  "abbr": [],
+  "short": "The idea that a company should be run for everyone affected by it, including employees, customers, suppliers and communities, not only its shareholders.",
+  "kid": "When you share a garden with friends, you think about everyone who helps or plays there, not just the one who brought the seeds.",
+  "detail": "Stakeholder theory, popularised by R. Edward Freeman in 1984, argues that managers should balance the interests of all stakeholders, the groups that affect or are affected by a company, such as employees, customers, suppliers, lenders, communities and the environment. It contrasts with shareholder theory, or shareholder primacy, set out by Milton Friedman in 1970, which holds that a firm's social responsibility is to increase profits for its owners within the law. In 2019, 181 CEOs in the US Business Roundtable endorsed a stakeholder view of corporate purpose, and the phrase stakeholder capitalism spread. India's Companies Act 2013 requires directors to act in the interests of the company, its employees, shareholders, the community and the environment. Critics argue that managers answerable to everyone are answerable to no one. The common confusion: shareholders are one kind of stakeholder, not the opposite of stakeholders.",
+  "example": "Say ABC Ltd could raise profit by ₹50 crore a year by closing a plant that employs 2,000 people, or ₹2.5 lakh of extra profit per job lost (₹50 crore / 2,000). A strict shareholder view asks mainly whether the closure lifts long-term value; a stakeholder view also weighs the workers, suppliers and the town before deciding.",
+  "formula": "",
+  "related": [
+   "Shareholder value",
+   "Corporate social responsibility",
+   "ESG",
+   "Agency problem",
+   "Corporate governance",
+   "Fiduciary duty"
+  ]
+ }
+]

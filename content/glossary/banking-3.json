@@ -1,0 +1,940 @@
+[
+  {
+    "id": "domestic-systemically-important-bank",
+    "term": "Domestic systemically important bank",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "D-SIB",
+      "systemically important bank"
+    ],
+    "hl": [
+      "domestic systemically important bank",
+      "domestic systemically important banks",
+      "systemically important bank",
+      "systemically important banks",
+      "d-sib",
+      "d-sibs"
+    ],
+    "abbr": [
+      "D-SIB",
+      "D-SIBs"
+    ],
+    "short": "A bank so large and interconnected within one country that its failure would hurt the whole economy, so it must hold extra capital.",
+    "kid": "Some big kids carry snacks for half the class. If one of them drops their lunchbox, lots of children go hungry, so the teacher asks those kids to pack extra food just in case.",
+    "detail": "A domestic systemically important bank (D-SIB) is a bank whose size, interconnectedness, complexity and lack of easy substitutes mean its failure would seriously disrupt a country's financial system. Under its 2014 framework, the RBI reviews banks every year and places D-SIBs in buckets that, under the rules as of 2025, require extra Common Equity Tier 1 capital of 0.20% to 1.00% of risk-weighted assets, on top of normal Basel III minimums; SBI, HDFC Bank and ICICI Bank were on the list as of 2025. Global systemically important banks (G-SIBs), such as JPMorgan Chase, are named each year by the Financial Stability Board and face surcharges of 1% to 3.5% under the rules as of 2025. The label is not a government guarantee: it means tighter supervision and more loss-absorbing capital, precisely to shrink the too-big-to-fail problem.",
+    "example": "Say ABC Bank has risk-weighted assets of ₹10 lakh crore and is placed in the lowest D-SIB bucket, with a 0.20% surcharge. It must hold an extra ₹2,000 crore of common equity (₹10,00,000 crore × 0.20%) beyond what a similar bank without the tag would need.",
+    "formula": "Additional CET1 required = D-SIB surcharge rate × Risk-weighted assets",
+    "related": [
+      "Too big to fail",
+      "Systemic risk",
+      "Basel III",
+      "Capital adequacy ratio",
+      "Common equity tier 1",
+      "Moral hazard"
+    ]
+  },
+  {
+    "id": "too-big-to-fail",
+    "term": "Too big to fail",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "TBTF"
+    ],
+    "hl": [
+      "too big to fail",
+      "too-big-to-fail"
+    ],
+    "abbr": [
+      "TBTF"
+    ],
+    "short": "The belief that some firms, usually banks, are so large and connected that governments must rescue them rather than let them collapse.",
+    "kid": "Imagine the biggest tent at a fair holding up all the smaller tents. If it starts to fall, grown-ups rush to prop it up so everything else does not come down too.",
+    "detail": "Too big to fail (TBTF) describes a firm, usually a bank, whose collapse would do such damage to payments, credit and confidence that the state feels compelled to rescue it. The expectation of rescue is itself the problem: creditors lend to such firms more cheaply, an implicit subsidy, and managers may take bigger risks, a form of moral hazard. The 2008 crisis made the issue concrete when the US let Lehman Brothers fail but rescued AIG and several large banks. Reforms since then include G-SIB and D-SIB capital surcharges, total loss-absorbing capacity rules, bail-in powers and resolution plans known as living wills. In India, the 2020 rescue of Yes Bank, with SBI leading the investment, followed similar logic. TBTF is not a legal status; regulators deliberately avoid promising support in advance.",
+    "example": "On 15 September 2008 Lehman Brothers, with about $639 billion of assets, filed for bankruptcy and markets went into freefall. The next day the Federal Reserve agreed to lend AIG up to $85 billion, judging its failure too dangerous to allow.",
+    "formula": "",
+    "related": [
+      "Moral hazard",
+      "Bailout",
+      "Bail-in",
+      "Systemic risk",
+      "Domestic systemically important bank",
+      "Global financial crisis"
+    ]
+  },
+  {
+    "id": "bank-recapitalisation",
+    "term": "Bank recapitalisation",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "recapitalisation",
+      "recapitalization",
+      "recap bonds",
+      "capital infusion"
+    ],
+    "hl": [
+      "bank recapitalisation",
+      "bank recapitalization",
+      "recapitalisation bonds",
+      "recapitalization bonds",
+      "recap bonds"
+    ],
+    "abbr": [],
+    "short": "Putting fresh capital into a bank, usually from the government or new shareholders, so it can absorb losses and keep lending.",
+    "kid": "If waves wash away part of your sandcastle, you pile on more sand so it stands strong again before the next wave comes.",
+    "detail": "Bank recapitalisation means rebuilding a bank's capital, its cushion of shareholders' funds, after losses have eaten into it or to support growth. The money can come from rights issues, share sales to new investors, retained profits or, for state-owned banks, the government as owner. In October 2017 India announced a ₹2.11 lakh crore recapitalisation of public sector banks, of which ₹1.35 lakh crore came through recapitalisation bonds: the government issued bonds to the banks, received their cash and put that cash back in as equity, so the main fiscal cost was the interest on the bonds. Recapitalisation restores capital ratios and lending capacity, but it does not by itself recover bad loans, and it usually dilutes existing shareholders. Do not confuse it with protecting depositors; it strengthens the bank's own buffer.",
+    "example": "Say ABC Bank has risk-weighted assets of ₹2,00,000 crore and capital of ₹16,000 crore, a ratio of 8%. To reach a target of 11.5% it needs ₹23,000 crore of capital (₹2,00,000 crore × 11.5%), so its owner must infuse ₹7,000 crore.",
+    "formula": "Capital needed = Target capital ratio × Risk-weighted assets − Existing capital",
+    "related": [
+      "Capital adequacy ratio",
+      "Public sector bank",
+      "Non-performing asset",
+      "Rights issue",
+      "Bailout",
+      "Basel III"
+    ]
+  },
+  {
+    "id": "mclr",
+    "term": "MCLR",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "marginal cost of funds based lending rate",
+      "MCLR rate"
+    ],
+    "hl": [
+      "mclr",
+      "marginal cost of funds based lending rate",
+      "marginal cost of funds-based lending rate",
+      "mclr rate",
+      "mclr rates",
+      "mclr-linked loans"
+    ],
+    "abbr": [
+      "MCLR"
+    ],
+    "short": "An internal lending benchmark Indian banks calculate from their latest cost of raising funds; many loans are priced as MCLR plus a spread.",
+    "kid": "A lemonade stand works out what today's lemons and sugar cost, then sets its cup price from that. When lemons get cheaper, the price slowly comes down too.",
+    "detail": "The marginal cost of funds based lending rate (MCLR) is the internal benchmark Indian banks have used since April 2016, replacing the base rate. Each bank computes it monthly from four parts: its marginal cost of funds (what new deposits and borrowings cost), the negative carry on cash it must park with the RBI as CRR, operating costs, and a tenor premium for longer periods. Banks publish MCLRs for tenors from overnight to one year or more, and a loan is priced as a chosen MCLR plus a spread, reset periodically, often yearly. Since October 2019, new floating-rate retail and small-business loans must use an external benchmark instead, but MCLR still prices many corporate and older loans. Because deposit costs adjust slowly and resets are infrequent, RBI rate changes reach MCLR borrowers with a lag.",
+    "example": "Say a bank's one-year MCLR is 9.00% and your home loan is priced at MCLR + 0.50%, so you pay 9.50%, about ₹4.75 lakh of interest a year on ₹50 lakh outstanding. If the one-year MCLR falls to 8.75%, your rate drops to 9.25% only at your next annual reset date.",
+    "formula": "MCLR = Marginal cost of funds + Negative carry on CRR + Operating costs + Tenor premium",
+    "related": [
+      "External benchmark lending rate",
+      "Base rate",
+      "Repo rate",
+      "Monetary policy transmission",
+      "Cash reserve ratio",
+      "Floating interest rate"
+    ]
+  },
+  {
+    "id": "external-benchmark-lending-rate",
+    "term": "External benchmark lending rate",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "EBLR",
+      "repo-linked lending rate",
+      "RLLR"
+    ],
+    "hl": [
+      "external benchmark lending rate",
+      "external benchmark lending rates",
+      "external benchmark-linked",
+      "repo-linked lending rate",
+      "repo linked lending rate",
+      "repo-linked loans",
+      "repo-linked loan",
+      "eblr",
+      "rllr"
+    ],
+    "abbr": [
+      "EBLR",
+      "RLLR"
+    ],
+    "short": "A loan interest rate tied directly to an outside benchmark, usually the RBI's repo rate, plus a fixed spread set by the bank.",
+    "kid": "Your weekly treat is set as the price of one ice cream plus one sweet. Whenever the ice cream price changes, your treat changes the same way, quickly and fairly.",
+    "detail": "An external benchmark lending rate (EBLR) is a floating loan rate linked to a benchmark the bank does not control. RBI rules made it compulsory from 1 October 2019 for new floating-rate personal and retail loans and loans to micro and small enterprises, later extended to medium enterprises. Banks may choose the RBI's policy repo rate, a Treasury bill yield or another benchmark published by FBIL; nearly all chose the repo rate, which is why the term repo-linked lending rate (RLLR) is common. The loan rate equals benchmark plus spread; the credit-risk part of the spread can change only if the borrower's credit assessment changes substantially, and the rate must reset at least once every three months. The aim is faster, more transparent transmission of policy rate changes than under MCLR, though borrowers also feel rate hikes sooner.",
+    "example": "Say the repo rate is 6.00% and your bank's spread on a home loan is 2.75%, giving a loan rate of 8.75%. If the RBI cuts the repo rate by 0.25 percentage point, your rate falls to 8.50% at the next reset, which must come within three months.",
+    "formula": "Loan rate = External benchmark (e.g. repo rate) + Spread",
+    "related": [
+      "MCLR",
+      "Repo rate",
+      "Monetary policy transmission",
+      "Floating interest rate",
+      "Home loan",
+      "Reserve Bank of India"
+    ]
+  },
+  {
+    "id": "priority-sector-lending",
+    "term": "Priority sector lending",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "PSL",
+      "priority sector",
+      "PSLC",
+      "priority sector lending certificate"
+    ],
+    "hl": [
+      "priority sector lending",
+      "priority sector loans",
+      "priority sector lending certificate",
+      "priority sector lending certificates",
+      "priority sector target",
+      "priority sector targets",
+      "priority sector norms",
+      "pslc",
+      "pslcs"
+    ],
+    "abbr": [
+      "PSLC",
+      "PSLCs"
+    ],
+    "short": "An RBI rule requiring banks to direct a set share of their lending to areas like farming, small businesses and weaker sections.",
+    "kid": "When you share sweets, the teacher says a few must always go to the little kids at the back who often get missed, not just to your best friends.",
+    "detail": "Priority sector lending (PSL) is the RBI's requirement that banks direct a minimum share of credit to sectors that might otherwise be under-served: agriculture, micro, small and medium enterprises, export credit, education, housing, social infrastructure, renewable energy and weaker sections. Under the rules as of 2025, domestic scheduled commercial banks must lend 40% of adjusted net bank credit (ANBC) or the credit equivalent of off-balance-sheet exposure, whichever is higher, with sub-targets such as 18% for agriculture and 7.5% for micro enterprises; some smaller bank types face higher targets. Shortfalls must be deposited in funds such as NABARD's RIDF at low returns. Since 2016 banks can trade priority sector lending certificates (PSLCs): the buyer gains credit toward its target while the underlying loan stays with the seller. PSL shapes banks' loan mix and returns.",
+    "example": "Say ABC Bank's adjusted net bank credit is ₹1,00,000 crore, so its priority sector target is ₹40,000 crore (40%). It has lent only ₹36,000 crore to priority sectors, so it buys ₹4,000 crore of PSLCs; at a 1% fee, that costs ₹40 crore.",
+    "formula": "PSL target = 40% × Higher of ANBC or credit equivalent of off-balance-sheet exposure (domestic banks, rules as of 2025)",
+    "related": [
+      "Financial inclusion",
+      "Kisan Credit Card",
+      "MUDRA loans",
+      "Co-lending",
+      "Scheduled commercial bank",
+      "NABARD"
+    ]
+  },
+  {
+    "id": "overdraft",
+    "term": "Overdraft",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "OD",
+      "overdraft facility"
+    ],
+    "hl": [
+      "overdraft",
+      "overdrafts",
+      "overdraft facility",
+      "overdraft facilities",
+      "overdraft limit",
+      "overdraft limits"
+    ],
+    "abbr": [],
+    "short": "A bank facility that lets you withdraw more than your account balance, up to an agreed limit, paying interest only on what you use.",
+    "kid": "A friend lets you borrow up to five extra marbles whenever you run out. You give them back soon, plus one small extra as a thank-you for the days you kept them.",
+    "detail": "An overdraft (OD) lets an account holder draw beyond the available balance up to a sanctioned limit, with interest charged only on the amount overdrawn and only for the days it stays negative. Repayments free up the limit to use again, so it works as a revolving line rather than a fixed loan. In India, common forms are overdrafts against fixed deposits (often up to about 90% of the deposit value), salary overdrafts, and ODs against property or securities; businesses also use them for short-term cash gaps. Because the limit is usually repayable on demand and reviewed yearly, it suits temporary needs rather than long-term funding. Do not confuse an overdraft with cash credit: in Indian practice cash credit is a working-capital limit tied to a business's stock and receivables, while an OD is usually backed by deposits, salary or other assets.",
+    "example": "Say you have a ₹2 lakh overdraft against your fixed deposit at 12% a year and draw ₹50,000 for 30 days. Interest = ₹50,000 × 12% × 30/365, about ₹493, and the full ₹2 lakh limit is available again once you repay.",
+    "formula": "Interest = Amount overdrawn × Annual rate × Days overdrawn / 365",
+    "related": [
+      "Cash credit",
+      "Working capital",
+      "Line of credit",
+      "Fixed deposit",
+      "Personal loan"
+    ]
+  },
+  {
+    "id": "cash-credit",
+    "term": "Cash credit",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "CC limit",
+      "cash credit account"
+    ],
+    "hl": [
+      "cash credit",
+      "cash credit limit",
+      "cash credit limits",
+      "cash credit account",
+      "cash credit accounts",
+      "cash credit facility"
+    ],
+    "abbr": [],
+    "short": "A running working-capital limit for Indian businesses, secured by their stock and receivables, that can be drawn and repaid again and again.",
+    "kid": "A shopkeeper may borrow from a big jar, but only as much as the toys on her own shelves are worth. When she sells toys, she puts some back in the jar.",
+    "detail": "Cash credit (CC) is the traditional Indian bank facility for funding a business's working capital. The bank sanctions a limit based on projected needs and the borrower draws through a running account, paying interest on the daily outstanding balance. The amount usable at any time is the lower of the sanctioned limit and the drawing power, which is the value of eligible inventory and receivables after deducting a margin, and often trade creditors, based on stock statements the borrower files regularly. The goods and book debts are hypothecated to the bank as security, and limits are reviewed annually. Because borrowers can leave limits unused, banks find cash credit hard to plan for, and the RBI has nudged large borrowers toward fixed working-capital loans. CC differs from an overdraft, which is usually backed by deposits, salary or property rather than trading stock.",
+    "example": "Say ABC Traders has stock of ₹60 lakh and receivables of ₹40 lakh, with a 25% margin and no trade creditors to deduct. Its drawing power is ₹75 lakh ((₹60 lakh + ₹40 lakh) × 75%), so even with an ₹80 lakh sanctioned limit it can draw only ₹75 lakh.",
+    "formula": "Drawing power = (Eligible stock + Eligible receivables − Trade creditors) × (1 − Margin); Usable limit = Lower of sanctioned limit and drawing power",
+    "related": [
+      "Overdraft",
+      "Working capital",
+      "Drawing power",
+      "Hypothecation",
+      "Working capital loan"
+    ]
+  },
+  {
+    "id": "letter-of-credit",
+    "term": "Letter of credit",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "LC",
+      "documentary credit"
+    ],
+    "hl": [
+      "letter of credit",
+      "letters of credit",
+      "documentary credit",
+      "documentary credits",
+      "standby letter of credit",
+      "standby letters of credit"
+    ],
+    "abbr": [],
+    "short": "A bank's promise to pay a seller on a buyer's behalf once the seller shows documents proving the goods were shipped as agreed.",
+    "kid": "You want a toy from a kid across town, but you have never met. A teacher you both trust promises to hand over your coins as soon as she sees the toy is on its way.",
+    "detail": "A letter of credit (LC) is an undertaking by a bank, issued at a buyer's request, to pay the seller a stated sum if the seller presents documents that comply exactly with the LC's terms, such as the invoice, bill of lading and insurance certificate, within a set time. Banks deal in documents, not goods: if the paperwork complies, the bank must pay even if the buyer is unhappy with the cargo. Most LCs follow the International Chamber of Commerce's UCP 600 rules. A sight LC pays on presentation, a usance LC after a fixed period, and a confirmed LC adds a second bank's promise, often in the seller's country. LCs are vital in cross-border trade where the parties do not know each other. Unlike a bank guarantee, which pays only if the applicant defaults, an LC is the expected route of payment.",
+    "example": "Say an Indian importer buys $200,000 of machinery from a German maker and its bank issues a 90-day usance LC. Once the exporter presents compliant shipping documents, the bank pays $200,000 at maturity; at an LC fee of 0.5% a quarter, the importer pays $1,000 for the comfort.",
+    "formula": "",
+    "related": [
+      "Bank guarantee",
+      "Trade finance",
+      "Bill of lading",
+      "Bill of exchange",
+      "Standby letter of credit",
+      "Forfaiting"
+    ]
+  },
+  {
+    "id": "bank-guarantee",
+    "term": "Bank guarantee",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "BG",
+      "performance guarantee"
+    ],
+    "hl": [
+      "bank guarantee",
+      "bank guarantees",
+      "performance bank guarantee",
+      "performance bank guarantees"
+    ],
+    "abbr": [],
+    "short": "A bank's promise to pay a third party a fixed sum if its customer fails to pay or fails to perform under a contract.",
+    "kid": "A friend lends you her bicycle, and your big sister says she will pay for a new one if you break it. Usually she never has to pay at all.",
+    "detail": "A bank guarantee (BG) is a written commitment by a bank to pay the beneficiary up to a stated amount if the applicant, the bank's customer, defaults on a payment or contractual obligation. Common types are financial guarantees, performance guarantees backing completion of a project, bid bonds and advance-payment guarantees. For the bank it is a non-fund-based exposure: no money moves unless the guarantee is invoked, but the bank charges a commission, takes margin or collateral, and must hold capital against it. Most guarantees in India are unconditional, and courts generally let beneficiaries invoke them except in cases of fraud or irretrievable injustice. The key contrast with a letter of credit: an LC is the normal way a seller gets paid, while a BG is a back-up that pays only if something goes wrong.",
+    "example": "Say XYZ Infra wins a ₹50 crore road contract that requires a 5% performance guarantee, so its bank issues a BG for ₹2.5 crore. At a commission of 1.5% a year, the guarantee costs XYZ ₹3.75 lakh annually, and the bank pays out only if the road authority invokes it.",
+    "formula": "",
+    "related": [
+      "Letter of credit",
+      "Trade finance",
+      "Non-fund-based exposure",
+      "Collateral",
+      "Counterparty risk"
+    ]
+  },
+  {
+    "id": "trade-finance",
+    "term": "Trade finance",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "export finance",
+      "import finance",
+      "packing credit"
+    ],
+    "hl": [
+      "trade finance",
+      "trade financing",
+      "export finance",
+      "import finance",
+      "packing credit",
+      "pre-shipment credit",
+      "post-shipment credit",
+      "trade finance gap"
+    ],
+    "abbr": [],
+    "short": "Bank loans, guarantees and payment tools that help exporters and importers fund their trade and settle cross-border deals safely.",
+    "kid": "A girl sells paper boats to a faraway class and must wait days to be paid. A helper gives her some coins now to buy paper, and she pays the helper back later.",
+    "detail": "Trade finance covers the funding and risk-reducing products that make international trade possible. Before shipment, exporters use packing credit (pre-shipment finance) to buy raw materials and make goods against a confirmed order or letter of credit. After shipment, banks offer post-shipment finance such as bill discounting and export bill negotiation, repaid from the buyer's payment. Importers use letters of credit, bank guarantees and buyer's credit, while factoring, forfaiting and supply chain finance turn receivables into cash early. In India, export credit can be taken in rupees or foreign currency, and ECGC offers export credit insurance. The WTO estimates that up to 80% of world trade relies on some form of credit or credit insurance, so its availability matters for exporters. Trade finance is mostly short term and self-liquidating, unlike long-term project loans.",
+    "example": "Say an exporter gets a confirmed ₹1 crore order and its bank gives packing credit of 75%, or ₹75 lakh, at 8% a year for 90 days. Interest = ₹75 lakh × 8% × 90/365, about ₹1.48 lakh, repaid from the buyer's payment after shipment.",
+    "formula": "",
+    "related": [
+      "Letter of credit",
+      "Bank guarantee",
+      "Factoring",
+      "Forfaiting",
+      "Supply chain finance",
+      "Export credit"
+    ]
+  },
+  {
+    "id": "gold-loan",
+    "term": "Gold loan",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "loan against gold",
+      "gold finance"
+    ],
+    "hl": [
+      "gold loan",
+      "gold loans",
+      "loan against gold",
+      "loans against gold",
+      "gold finance",
+      "gold financier",
+      "gold financiers",
+      "gold lending",
+      "gold loan nbfc",
+      "gold loan nbfcs"
+    ],
+    "abbr": [],
+    "short": "A loan given against gold jewellery that the lender holds as security; you get the gold back after repaying in full.",
+    "kid": "You give your friend your shiny toy car to hold, and she lets you ride her bike for the day. When you bring the bike back, you get your toy car back.",
+    "detail": "A gold loan is a secured loan in which the borrower pledges gold ornaments, or in some cases specified gold coins, with a bank or NBFC, which values the gold by weight and purity and lends a fraction of that value. The RBI caps the loan-to-value (LTV) ratio: 75% of the gold's value under the rules as of 2025, with 2025 directions allowing up to 85% for small loans from April 2026. Many gold loans use bullet repayment, with principal and interest paid together at the end; the cap then applies to the total due at maturity. Because the collateral is liquid and easy to value, approval is fast, making gold loans popular in India for emergencies and small businesses. If gold prices fall or the borrower defaults, the lender can seek a top-up or, after notice, auction the gold. Lending against bullion such as gold bars is not allowed.",
+    "example": "Say you pledge jewellery the lender values at ₹10,00,000 and it applies a 75% loan-to-value cap, or ₹7,50,000. On a six-month bullet loan at 12% a year the cap must cover principal plus interest, so you can borrow about ₹7,07,547 and repay about ₹7,50,000 at the end (₹7,07,547 × 1.06) to take back your gold.",
+    "formula": "Maximum loan = Value of gold × Loan-to-value ratio (for bullet loans, principal + interest due at maturity must stay within this)",
+    "related": [
+      "Loan-to-value ratio",
+      "Secured loan",
+      "Collateral",
+      "Non-banking financial company",
+      "Loan against property"
+    ]
+  },
+  {
+    "id": "loan-against-property",
+    "term": "Loan against property",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "LAP"
+    ],
+    "hl": [
+      "loan against property",
+      "loans against property",
+      "lap loan",
+      "lap loans"
+    ],
+    "abbr": [],
+    "short": "A secured loan where you pledge a home or commercial property you already own to borrow money for almost any purpose.",
+    "kid": "You let a friend keep the key to your toy house while she lends you some of her crayons. When you give the crayons back, you get your key back.",
+    "detail": "A loan against property (LAP) is a secured loan in which a borrower mortgages a residential or commercial property they already own and uses the money for business needs, education, medical costs or paying off costlier debt. Lenders typically lend around 50-70% of the property's assessed value, for tenures that can stretch to 15 years or more. Rates are usually higher than on home loans but lower than on personal loans, because the collateral is solid but the end use is broader. LAP is popular with self-employed borrowers and small businesses that lack formal income records. If the borrower defaults, the lender can enforce its security, for banks and large NBFCs under the SARFAESI Act. A common confusion: a home loan finances buying or building a house, while LAP borrows against one you already own, and home-loan tax breaks generally do not apply.",
+    "example": "Say your shop is valued at ₹1 crore and the lender offers a 60% loan-to-value ratio, so you can borrow ₹60 lakh. At 10% a year over 15 years, the EMI works out to about ₹64,476 a month.",
+    "formula": "Maximum loan = Property value × Loan-to-value ratio",
+    "related": [
+      "Home loan",
+      "Loan-to-value ratio",
+      "Mortgage",
+      "SARFAESI Act",
+      "Secured loan",
+      "Gold loan"
+    ]
+  },
+  {
+    "id": "co-lending",
+    "term": "Co-lending",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "co-lending model",
+      "CLM"
+    ],
+    "hl": [
+      "co-lending",
+      "co-lending model",
+      "co-lending partnership",
+      "co-lending partnerships",
+      "co-lending arrangement",
+      "co-lending arrangements",
+      "co-lending tie-up",
+      "co-lending tie-ups"
+    ],
+    "abbr": [],
+    "short": "An arrangement where a bank and an NBFC jointly fund the same loans, sharing the money, interest and risk in an agreed ratio.",
+    "kid": "Two friends chip in to buy a big box of crayons for a classmate. One gives most of the coins, the other finds the classmate and hands it over, and both share whatever comes back.",
+    "detail": "Co-lending is a partnership in which two regulated lenders, typically a bank and an NBFC, jointly fund loans. The NBFC usually finds and assesses borrowers through its local reach, while the bank brings cheaper and larger funds; each keeps its share of every loan on its own books, and the borrower pays a single blended interest rate. The RBI's co-lending model of 2020 focused on priority sector loans and required the NBFC to keep at least 20% of each loan. Directions issued in 2025, effective from 2026, broadened co-lending to more regulated lenders and to non-priority loans, with each partner retaining at least 10%. Co-lending helps banks meet priority sector targets and reach small borrowers cheaply. Do not confuse it with a loan sale or direct assignment, where loans are transferred after they are made.",
+    "example": "Say a bank and an NBFC co-lend ₹10 lakh to a small manufacturer in an 80:20 split: the bank funds ₹8 lakh at 9% and the NBFC ₹2 lakh at 15%. The borrower pays a blended rate of 10.2% (0.8 × 9% + 0.2 × 15%).",
+    "formula": "Blended rate = (Bank share × Bank rate) + (NBFC share × NBFC rate)",
+    "related": [
+      "Priority sector lending",
+      "Non-banking financial company",
+      "Direct assignment",
+      "Securitisation",
+      "MSME lending"
+    ]
+  },
+  {
+    "id": "bancassurance",
+    "term": "Bancassurance",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "bank-insurance tie-up",
+      "bancassurance partner"
+    ],
+    "hl": [
+      "bancassurance",
+      "bancassurance partner",
+      "bancassurance partners",
+      "bancassurance tie-up",
+      "bancassurance tie-ups",
+      "bancassurance channel",
+      "bank-insurance tie-up"
+    ],
+    "abbr": [],
+    "short": "A tie-up in which a bank sells an insurance company's policies to its own customers and earns a commission for doing so.",
+    "kid": "A busy lemonade stand also sells a neighbour's cookies on the same table. The neighbour bakes them, and the stand keeps a little for helping.",
+    "detail": "Bancassurance is the selling of insurance through a bank's branches and digital channels. In India a bank acts as a corporate agent registered with IRDAI and can partner several life, general and health insurers; the insurer designs the policy, sets the premium and bears the claims risk, while the bank supplies customers and trust and earns commission. For insurers, especially private life companies, bank partners are among the largest sources of new business, so a change in a key bancassurance tie-up can move an insurer's share price. For banks it is high-margin fee income that needs no capital. The main concern is mis-selling, such as pushing policies on borrowers or on depositors who wanted a fixed deposit. A common confusion: the bank does not insure you; if a claim arises, the insurer pays.",
+    "example": "Say ABC Bank sells 10,000 life policies with an annual premium of ₹30,000 each, bringing ₹30 crore of first-year premium to its partner insurer. At a 10% commission, ABC earns ₹3 crore of fee income without lending a rupee.",
+    "formula": "",
+    "related": [
+      "Fee income",
+      "Cross-selling",
+      "Life insurance",
+      "Insurance premium",
+      "Mis-selling",
+      "IRDAI"
+    ]
+  },
+  {
+    "id": "financial-inclusion",
+    "term": "Financial inclusion",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "Jan Dhan",
+      "banking the unbanked"
+    ],
+    "hl": [
+      "financial inclusion",
+      "jan dhan",
+      "jan dhan account",
+      "jan dhan accounts",
+      "jan dhan yojana",
+      "pradhan mantri jan dhan yojana",
+      "pmjdy",
+      "banking the unbanked",
+      "unbanked"
+    ],
+    "abbr": [
+      "PMJDY"
+    ],
+    "short": "Making useful, affordable financial services, such as bank accounts, payments, credit and insurance, available to everyone, including poor and rural households.",
+    "kid": "Everyone in the class gets their own safe pencil box, not just the kids who sit in front. Now nobody has to hide their crayons under the desk.",
+    "detail": "Financial inclusion means that individuals and small businesses can access, and actually use, affordable formal financial services: a safe account, digital payments, credit, insurance and pensions. Without it, people rely on cash and on informal moneylenders charging very high rates, with no buffer against shocks. India's big push came with the Pradhan Mantri Jan Dhan Yojana, launched in August 2014, which offers basic accounts with no minimum balance, a RuPay debit card with accident cover and a small overdraft. Combined with Aadhaar and mobile phones, the JAM trinity, these accounts carry direct benefit transfers, and UPI has made small payments cheap. The RBI tracks progress with a Financial Inclusion Index, and the World Bank's Global Findex compares countries. The common confusion: opening an account is not inclusion if it lies dormant; usage, credit and insurance matter too.",
+    "example": "By August 2023, more than 50 crore Jan Dhan accounts had been opened. In a village where 600 of 1,000 adults have accounts but only 240 used them in the past year, ownership is 60% but active use is just 24%, the gap policy now targets.",
+    "formula": "",
+    "related": [
+      "Priority sector lending",
+      "MUDRA loans",
+      "Direct benefit transfer",
+      "Unified Payments Interface",
+      "Microfinance",
+      "Kisan Credit Card"
+    ]
+  },
+  {
+    "id": "private-sector-bank",
+    "term": "Private sector bank",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "private bank",
+      "PVB"
+    ],
+    "hl": [
+      "private sector bank",
+      "private sector banks",
+      "private-sector bank",
+      "private-sector banks",
+      "private sector lender",
+      "private sector lenders",
+      "private-sector lender",
+      "private-sector lenders"
+    ],
+    "abbr": [],
+    "short": "A bank in which private shareholders, rather than the government, own the majority of the shares.",
+    "kid": "Some lemonade stands belong to the town and some belong to families. A family-run stand still follows the town's rules, but the family owns it.",
+    "detail": "A private sector bank is one in which most of the share capital is held by private shareholders such as promoters, institutions and the public, rather than the government. In India they split into old private banks, which existed before the 1969 and 1980 nationalisations but were not taken over, and new private banks licensed from the 1990s, such as HDFC Bank, ICICI Bank and Axis Bank, plus later universal and small finance bank licensees. The RBI regulates them under the same Banking Regulation Act as public sector banks, and also limits promoter stakes and approves top appointments. Private banks have steadily gained share of loans and deposits. Ownership does not decide safety: deposits up to ₹5 lakh are insured by DICGC at both types, under the limit as of 2025. A quirk: IDBI Bank has been classed as private since 2019, after state-owned LIC took majority control.",
+    "example": "Say ABC Bank has 100 crore shares: the promoter holds 26 crore, foreign investors 40 crore, and Indian funds and the public 34 crore. With no government majority it is a private sector bank, and the promoter's 26% stake sits at the long-run cap the RBI applies under the rules as of 2025.",
+    "formula": "",
+    "related": [
+      "Public sector bank",
+      "Scheduled commercial bank",
+      "Small finance bank",
+      "Promoter holding",
+      "Banking Regulation Act"
+    ]
+  },
+  {
+    "id": "scheduled-commercial-bank",
+    "term": "Scheduled commercial bank",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "SCB",
+      "scheduled bank"
+    ],
+    "hl": [
+      "scheduled commercial bank",
+      "scheduled commercial banks"
+    ],
+    "abbr": [
+      "SCBs"
+    ],
+    "short": "A commercial bank listed in the Second Schedule of the RBI Act, making it eligible for RBI funding and bound by its reserve rules.",
+    "kid": "Some lemonade stands are on the town's official list. Being on the list means the town can help them if they run short, but they must follow the town's careful rules.",
+    "detail": "A scheduled commercial bank (SCB) is a bank included in the Second Schedule of the Reserve Bank of India Act, 1934. To be scheduled, a bank must have paid-up capital and reserves of at least ₹5 lakh, the old statutory minimum, and satisfy the RBI that its affairs are not run against depositors' interests. Scheduled status brings access to RBI liquidity windows, along with the duty to keep the cash reserve ratio with the RBI and report regularly. SCBs include public and private sector banks, foreign banks, regional rural banks and small finance banks; scheduled cooperative banks are on the schedule but are not commercial banks. RBI data on SCB deposits and credit are watched as a read on credit growth. A common confusion: 'scheduled' refers to the legal list, not size or safety, and real capital floors for new banks are far higher than ₹5 lakh.",
+    "example": "Say all SCBs together hold deposits of ₹200 lakh crore and loans of ₹160 lakh crore (illustrative figures). Their credit-deposit ratio is 80% (₹160 lakh crore / ₹200 lakh crore), a figure analysts track to judge how hard banks are stretching deposits to lend.",
+    "formula": "",
+    "related": [
+      "Private sector bank",
+      "Public sector bank",
+      "Cash reserve ratio",
+      "Regional rural bank",
+      "Credit-deposit ratio",
+      "Small finance bank"
+    ]
+  },
+  {
+    "id": "unsecured-lending",
+    "term": "Unsecured lending",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "unsecured loans",
+      "unsecured retail credit"
+    ],
+    "hl": [
+      "unsecured lending",
+      "unsecured loan",
+      "unsecured loans",
+      "unsecured credit",
+      "unsecured retail credit",
+      "unsecured retail loans",
+      "unsecured retail lending",
+      "unsecured personal loans",
+      "unsecured consumer credit"
+    ],
+    "abbr": [],
+    "short": "Lending without collateral, such as personal loans and credit cards, where repayment depends only on the borrower's income and track record.",
+    "kid": "You lend a friend your skipping rope without keeping anything of theirs. You just trust them to bring it back, because they always have before.",
+    "detail": "Unsecured lending is credit given without collateral the lender can seize if the borrower stops paying. Personal loans, credit cards, consumer durable loans, buy-now-pay-later, most microfinance and some small-business loans are unsecured. Lenders rely on income, cash flow and credit history, often from bureaus such as CIBIL, and charge higher rates to cover larger expected losses. Unsecured retail credit grew fast in India after 2020, helped by digital lending and fintech partnerships; in November 2023 the RBI raised risk weights on many consumer loans and credit cards by 25 percentage points to cool that growth. For investors, unsecured books mean high margins in good times but sharp credit costs when defaults rise. The common confusion: 'unsecured' describes the loan, not the borrower; a salaried borrower with a strong record can be safer than a weak secured one.",
+    "example": "Say a lender gives ₹5 lakh of personal loans and expects a 4% chance of default, with 70% of the money lost if default happens. Expected loss = 4% × 70% × ₹5 lakh = ₹14,000, which the interest rate must cover along with funding and operating costs.",
+    "formula": "Expected loss = Probability of default × Loss given default × Exposure at default",
+    "related": [
+      "Personal loan",
+      "Credit card",
+      "Credit score",
+      "Risk weight",
+      "Secured loan",
+      "Expected loss"
+    ]
+  },
+  {
+    "id": "systemic-risk",
+    "term": "Systemic risk",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "contagion",
+      "systemic crisis",
+      "financial contagion"
+    ],
+    "hl": [
+      "systemic risk",
+      "systemic risks",
+      "financial contagion",
+      "systemic crisis",
+      "systemic banking crisis"
+    ],
+    "abbr": [],
+    "short": "The risk that trouble at one bank or market spreads through the financial system and damages the wider economy.",
+    "kid": "When one domino falls, it knocks over the next, and soon the whole line is down. Grown-ups worry about the whole line falling, not just one domino.",
+    "detail": "Systemic risk is the danger that distress at one institution, market or instrument spreads to others and impairs the financial system's ability to provide credit and payments, hurting the real economy. It travels through contagion: direct exposures between banks, fire sales that push down asset prices for everyone, runs on funding and sudden loss of confidence. The 2008 collapse of Lehman Brothers is the classic global case; in India, the 2018 default of IL&FS froze funding for many NBFCs. Regulators fight it with macroprudential tools such as capital surcharges for systemically important banks, countercyclical buffers and stress tests, and the RBI's twice-yearly Financial Stability Report assesses it. Do not confuse systemic risk with systematic risk, the market-wide risk in CAPM that diversification cannot remove.",
+    "example": "Say Bank A owes Bank B ₹500 crore, and Bank B has capital of only ₹400 crore. If Bank A fails and Bank B recovers just half, Bank B loses ₹250 crore, or 62.5% of its capital, and its own lenders may start pulling money: contagion in action.",
+    "formula": "",
+    "related": [
+      "Too big to fail",
+      "Domestic systemically important bank",
+      "Macroprudential policy",
+      "Stress test",
+      "Systematic risk",
+      "Bank run"
+    ]
+  },
+  {
+    "id": "moral-hazard",
+    "term": "Moral hazard",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "moral hazard problem"
+    ],
+    "hl": [
+      "moral hazard",
+      "moral hazards"
+    ],
+    "abbr": [],
+    "short": "When someone shielded from the cost of risk, by insurance or an expected bailout, takes more risk because others will pay.",
+    "kid": "If you know a friend will always fix your toys for free, you might start throwing them around. You stop being careful because someone else cleans up.",
+    "detail": "Moral hazard arises when a party takes more risk because it does not bear the full consequences, which fall on someone else. In banking, deposit insurance, central bank support and expected government bailouts can let shareholders and managers keep the gains from risky bets while taxpayers or depositors absorb the losses. Limited liability adds to it: shareholders can lose only their equity, so a nearly insolvent bank may gamble for resurrection. The idea also covers borrowers who expect loan waivers and insured people who grow careless. Remedies include higher capital so owners have more at stake, bail-in rules that make creditors share losses, deductibles in insurance and clawback of bonuses. A common confusion: moral hazard is about behaviour changing after a contract or guarantee is in place, while adverse selection is about hidden information before the deal.",
+    "example": "Say a bank has ₹10 crore of equity and can either earn a sure ₹5 crore or take a bet with a 50% chance of gaining ₹30 crore and a 50% chance of losing ₹50 crore (expected value −₹10 crore). Because shareholders can lose at most their ₹10 crore, their expected payoff from the bet is 0.5 × ₹30 crore − 0.5 × ₹10 crore = ₹10 crore, double the safe option. If depositors expect a bailout to cover the other ₹40 crore of losses, nobody pushes back: that is moral hazard.",
+    "formula": "",
+    "related": [
+      "Adverse selection",
+      "Too big to fail",
+      "Bailout",
+      "Bail-in",
+      "Deposit insurance",
+      "Principal-agent problem"
+    ]
+  },
+  {
+    "id": "bail-in",
+    "term": "Bail-in",
+    "cat": "banking",
+    "level": "a",
+    "aliases": [
+      "bail-in clause",
+      "creditor bail-in"
+    ],
+    "hl": [
+      "bail-in",
+      "bail-ins",
+      "bail-in clause",
+      "creditor bail-in",
+      "bail-in bonds",
+      "bail-in rules",
+      "bail-in powers"
+    ],
+    "abbr": [],
+    "short": "Rescuing a failing bank by making its own shareholders and creditors absorb the losses, through write-downs or by turning debt into shares.",
+    "kid": "When a team project goes wrong, the kids on that team fix it with their own crayons, instead of asking the whole school to chip in.",
+    "detail": "A bail-in is a resolution tool in which a failing bank's losses are absorbed from inside: shareholders are wiped out first, then certain creditors have their claims written down or converted into equity, so the bank can be recapitalised without taxpayer money. It became central to post-2008 reform; EU rules, for instance, require losses of at least 8% of a bank's total liabilities and own funds to be absorbed this way before resolution funds can step in. Bonds built to take losses, such as Additional Tier 1 (AT1) bonds, stand first in line among creditors. In March 2023 about CHF 16 billion of Credit Suisse AT1 bonds were written down to zero. India's proposed FRDI Bill, which had a bail-in clause, was withdrawn in 2018 after depositors grew worried. The key difference from a bailout: in a bail-in the bank's own investors pay; in a bailout outsiders do.",
+    "example": "Say failing XYZ Bank has ₹800 crore of losses but only ₹500 crore of equity. Under a bail-in, shareholders are wiped out and ₹300 crore of its ₹1,000 crore of AT1 bonds are written off, a 30% loss for those bondholders, while insured depositors are untouched.",
+    "formula": "",
+    "related": [
+      "Bailout",
+      "Additional Tier 1 bonds",
+      "Bank resolution",
+      "Too big to fail",
+      "Moral hazard",
+      "Deposit insurance"
+    ]
+  },
+  {
+    "id": "bailout",
+    "term": "Bailout",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "government bailout",
+      "rescue package"
+    ],
+    "hl": [
+      "bailout",
+      "bailouts",
+      "bail-out",
+      "bail-outs",
+      "bailout package",
+      "bailout packages",
+      "government bailout",
+      "rescue package",
+      "rescue packages"
+    ],
+    "abbr": [],
+    "short": "A rescue in which a government, central bank or other body gives a failing firm or country money or guarantees to keep it going.",
+    "kid": "A friend's boat is filling with water, so other kids rush over with buckets and scoop the water out before it sinks.",
+    "detail": "A bailout is outside financial support for a firm, sector or country in distress, given through capital injections, cheap loans, guarantees or purchases of troubled assets. Governments justify bailouts when a failure would cause wider damage, as with banks in 2008, when the US authorised $700 billion under the Troubled Asset Relief Program, or when the IMF and euro-area partners lent to Greece from 2010. India has seen rescues such as government support for UTI's US-64 scheme and the SBI-led reconstruction of Yes Bank in 2020. Bailouts can halt a panic and are sometimes repaid with a profit, but they put public money at risk and encourage moral hazard. A common confusion: bailout and bail-in are opposites; a bailout uses outsiders' money, while a bail-in imposes losses on the firm's own investors and creditors.",
+    "example": "In October 2008 the US Congress authorised up to $700 billion under TARP to stabilise the financial system. The Dodd-Frank Act of 2010 cut that authority to $475 billion, a reduction of $225 billion.",
+    "formula": "",
+    "related": [
+      "Bail-in",
+      "Moral hazard",
+      "Too big to fail",
+      "Bank recapitalisation",
+      "Lender of last resort",
+      "Systemic risk"
+    ]
+  },
+  {
+    "id": "leverage-ratio",
+    "term": "Leverage ratio",
+    "cat": "banking",
+    "level": "a",
+    "aliases": [
+      "Basel leverage ratio",
+      "supplementary leverage ratio"
+    ],
+    "hl": [
+      "basel leverage ratio",
+      "supplementary leverage ratio",
+      "enhanced supplementary leverage ratio",
+      "leverage ratio rule",
+      "leverage ratio rules"
+    ],
+    "abbr": [],
+    "short": "A bank's core (Tier 1) capital divided by everything it has lent, invested or promised, with no risk weighting; a simple backstop against excess borrowing.",
+    "kid": "If you build a tall block tower on a tiny base, it wobbles. This check makes sure the base stays wide enough for how tall the tower gets.",
+    "detail": "The Basel III leverage ratio is Tier 1 capital divided by a bank's total exposure measure, which includes on-balance-sheet assets, derivative exposures, securities financing transactions and off-balance-sheet items converted to credit equivalents. Unlike the capital adequacy ratio, it applies no risk weights, so it acts as a backstop against models that understate risk and against a build-up of leverage in assets that look safe. The Basel minimum is 3%; under the rules as of 2025 the RBI requires 4% for domestic systemically important banks and 3.5% for other banks. In the US the equivalent for large banks is the supplementary leverage ratio, with an enhanced version for the biggest. Two confusions to avoid: in India 'SLR' usually means the statutory liquidity ratio, a different rule, and corporate leverage ratios such as debt to equity are unrelated measures.",
+    "example": "Say ABC Bank has Tier 1 capital of ₹40,000 crore and a total exposure measure of ₹10,00,000 crore, a leverage ratio of 4.0%. If exposures grow to ₹12,00,000 crore with no new capital, the ratio falls to about 3.33%, below a 3.5% minimum.",
+    "formula": "Leverage ratio = Tier 1 capital / Total exposure measure",
+    "related": [
+      "Capital adequacy ratio",
+      "Basel III",
+      "Tier 1 capital",
+      "Risk-weighted assets",
+      "Statutory liquidity ratio",
+      "Financial leverage"
+    ]
+  },
+  {
+    "id": "days-past-due",
+    "term": "Days past due",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "DPD",
+      "90 DPD"
+    ],
+    "hl": [
+      "days past due",
+      "30 dpd",
+      "60 dpd",
+      "90 dpd",
+      "30+ dpd",
+      "60+ dpd",
+      "90+ dpd",
+      "90-dpd"
+    ],
+    "abbr": [],
+    "short": "The number of days a loan repayment has stayed unpaid after its due date, used by lenders and credit bureaus to grade lateness.",
+    "kid": "You promised to return a library book on Monday. Each day after Monday that you still have it, the librarian adds one more tick to her chart.",
+    "detail": "Days past due (DPD) counts how many days a scheduled repayment, such as an EMI or interest payment, has remained unpaid after its due date. Lenders sort accounts into DPD buckets: in India, dues overdue up to 30 days are SMA-0, 31-60 days SMA-1 and 61-90 days SMA-2, and a term loan with dues unpaid for more than 90 days becomes a non-performing asset, under the RBI rules as of 2025. Credit bureaus such as CIBIL record monthly DPD in your credit report, so even 30 DPD can dent your score and future loan offers. Analysts watch 30+ and 90+ DPD shares of a lender's book as early warnings of stress. A common confusion: DPD runs from the oldest unpaid due, so paying the latest EMI does not reset the count while an older one is still outstanding.",
+    "example": "Say your credit report shows 000, 000, 030, 060 for the last four months. You paid on time for two months, then fell 30 and then 60 days behind; one more missed month would take the loan to 90 DPD, one step from being classed as a non-performing asset.",
+    "formula": "",
+    "related": [
+      "Non-performing asset",
+      "Special mention account",
+      "Credit score",
+      "Equated monthly instalment",
+      "Default",
+      "Gross NPA ratio"
+    ]
+  },
+  {
+    "id": "nri-deposits",
+    "term": "NRI deposits",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "NRE account",
+      "NRO account",
+      "FCNR(B)"
+    ],
+    "hl": [
+      "nri deposits",
+      "nri deposit",
+      "nre account",
+      "nre accounts",
+      "nre deposits",
+      "nro account",
+      "nro accounts",
+      "fcnr deposits",
+      "fcnr(b) deposits",
+      "fcnr (b) deposits",
+      "non-resident deposits"
+    ],
+    "abbr": [
+      "NRE",
+      "NRO",
+      "FCNR"
+    ],
+    "short": "Bank deposits in India for non-resident Indians, mainly NRE, NRO and FCNR(B) accounts, each with different tax and repatriation rules.",
+    "kid": "A girl living far away keeps a jar of savings at her grandma's house back home. Some jars she can take back any time, and some must mostly stay with grandma.",
+    "detail": "NRI deposits are accounts that non-resident Indians can hold with Indian banks. An NRE (non-resident external) account holds rupees funded from income earned abroad; principal and interest are freely repatriable and the interest is tax-free in India. An NRO (non-resident ordinary) account holds income earned in India, such as rent or dividends; its interest is taxable in India, and repatriation is capped at USD 1 million a financial year under FEMA rules as of 2025. FCNR(B) accounts are term deposits kept in foreign currencies such as dollars, so the depositor bears no rupee risk. Together these deposits are an important source of foreign currency inflows, and the RBI has eased rate caps to attract them when the rupee is under pressure, as with the 2013 FCNR(B) swap window. NRE interest may still be taxed in the depositor's country of residence.",
+    "example": "Say an NRI puts $10,000 into a one-year FCNR(B) deposit at 5% and gets back $10,500, whatever the rupee does. If instead she converts at, say, ₹80 per dollar into an NRE deposit of ₹8,00,000 at 7%, she gets ₹8,56,000; if the rupee has weakened to ₹84, that is only about $10,190.",
+    "formula": "",
+    "related": [
+      "Remittances",
+      "FEMA",
+      "Foreign exchange reserves",
+      "Current account deficit",
+      "Rupee depreciation",
+      "Fixed deposit"
+    ]
+  },
+  {
+    "id": "mudra-loans",
+    "term": "MUDRA loans",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "Pradhan Mantri MUDRA Yojana",
+      "PMMY",
+      "Shishu Kishore Tarun"
+    ],
+    "hl": [
+      "mudra loan",
+      "mudra loans",
+      "mudra yojana",
+      "pradhan mantri mudra yojana",
+      "pmmy",
+      "mudra scheme",
+      "tarun plus"
+    ],
+    "abbr": [
+      "MUDRA",
+      "PMMY"
+    ],
+    "short": "Loans needing no security, given to tiny and small non-farm businesses in India under the Pradhan Mantri MUDRA Yojana, in four size bands.",
+    "kid": "A helper lends small amounts to people who want to start a tiny shop, like a tea stall or a sewing corner. The newest shops get a little, and growing shops can get more.",
+    "detail": "MUDRA loans are business loans under the Pradhan Mantri MUDRA Yojana (PMMY), launched in April 2015 to fund non-corporate, non-farm micro and small enterprises such as shops, small manufacturers, service providers and allied farm activities. Banks, regional rural banks, small finance banks, NBFCs and microfinance institutions make the loans without requiring collateral; MUDRA (Micro Units Development and Refinance Agency) mainly refinances these lenders rather than lending directly, and a government-backed fund guarantees part of the risk. Under the rules as of 2025, loans fall into Shishu (up to ₹50,000), Kishore (above ₹50,000 to ₹5 lakh), Tarun (above ₹5 lakh to ₹10 lakh) and Tarun Plus (above ₹10 lakh to ₹20 lakh, for those who have repaid a Tarun loan). MUDRA loans count toward priority sector lending. A common confusion: they are ordinary interest-bearing loans, not grants or subsidies.",
+    "example": "A tea-stall owner borrowing ₹40,000 falls under Shishu, a boutique borrowing ₹3 lakh under Kishore, and a workshop borrowing ₹8 lakh under Tarun. If the workshop repays fully, it can apply for up to ₹20 lakh under Tarun Plus.",
+    "formula": "",
+    "related": [
+      "Priority sector lending",
+      "Financial inclusion",
+      "Micro, small and medium enterprises",
+      "Microfinance",
+      "Credit guarantee",
+      "Small finance bank"
+    ]
+  },
+  {
+    "id": "kisan-credit-card",
+    "term": "Kisan Credit Card",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "KCC"
+    ],
+    "hl": [
+      "kisan credit card",
+      "kisan credit cards",
+      "kcc loan",
+      "kcc loans",
+      "kcc scheme",
+      "kcc limit",
+      "kcc holders"
+    ],
+    "abbr": [
+      "KCC"
+    ],
+    "short": "A revolving credit limit for Indian farmers to fund crops, farm upkeep and allied activities, often at a subsidised interest rate.",
+    "kid": "A farmer gets a special card from the village helper. She uses it to buy seeds in spring and pays it back after she sells her harvest.",
+    "detail": "The Kisan Credit Card (KCC) scheme, launched in 1998, gives farmers a single revolving credit limit for short-term crop costs, post-harvest expenses, household needs and upkeep of farm assets; since 2018-19 it also covers animal husbandry and fisheries. The limit is set from the crop pattern, area farmed and cost of cultivation, is valid for up to five years, and is drawn through a RuPay card or the bank account. Under the interest subvention scheme as of 2025, short-term loans up to ₹3 lakh carry 7%, and farmers who repay promptly get a further 3% rebate, making the effective rate 4%; the 2025 Union Budget announced raising this limit to ₹5 lakh. KCC lending counts toward banks' agriculture priority sector target. Despite the name, it is not a shopping credit card; it works like a cash credit limit for farm needs.",
+    "example": "Say a farmer with a ₹3 lakh KCC limit draws ₹2 lakh for the season at 7% and repays within a year. Interest is ₹14,000, but the 3% prompt-repayment rebate (₹6,000) cuts her cost to ₹8,000, an effective 4%.",
+    "formula": "",
+    "related": [
+      "Priority sector lending",
+      "Interest subvention",
+      "Cash credit",
+      "Financial inclusion",
+      "NABARD",
+      "Agricultural credit"
+    ]
+  }
+]

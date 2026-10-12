@@ -1,0 +1,757 @@
+[
+ {
+  "id": "climate-risk",
+  "term": "Climate risk",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "physical risk",
+   "transition risk",
+   "climate-related financial risk"
+  ],
+  "hl": [
+   "climate risk",
+   "climate risks",
+   "climate-related risk",
+   "climate-related risks",
+   "climate-related financial risk",
+   "climate-related financial risks",
+   "physical climate risk",
+   "physical climate risks",
+   "climate transition risk",
+   "climate transition risks",
+   "climate stress test",
+   "climate stress tests",
+   "climate stress testing",
+   "climate scenario analysis"
+  ],
+  "abbr": [],
+  "short": "The chance that climate change, or the shift away from fossil fuels, causes financial losses for companies, lenders, insurers or investors.",
+  "kid": "If you build a sandcastle too close to the sea, a big wave can wash it away. Grown-ups also worry that hotter weather and new rules could spoil the things they own.",
+  "detail": "Climate risk is the possibility of financial loss linked to climate change. It has two main forms. Physical risk comes from the weather itself: acute events such as floods, cyclones and heatwaves, and chronic shifts such as rising sea levels and temperatures that damage property, crops and supply chains. Transition risk comes from the move to a low-carbon economy: carbon prices, stricter rules, cheaper clean technology and changing customer tastes can cut the value of polluting businesses. For banks and insurers these risks show up as loan defaults, falling collateral values and higher claims, which is why central banks run climate stress tests. The RBI joined the Network for Greening the Financial System in 2021 and issued draft climate-risk disclosure rules for lenders in 2024. Common confusion: climate risk is not only about distant disasters; a policy change can hit a company's value within a single year.",
+  "example": "Say ABC Bank, a hypothetical lender, has ₹2,000 crore of home loans in a flood-prone coastal city. A climate stress test assumes 15% of these loans default after severe floods and the bank loses 40% on each defaulted rupee: loss = ₹2,000 crore × 0.15 × 0.40 = ₹120 crore.",
+  "formula": "",
+  "related": [
+   "Stranded assets",
+   "Task Force on Climate-related Financial Disclosures",
+   "Energy transition",
+   "Stress testing",
+   "Scenario analysis",
+   "Carbon tax"
+  ]
+ },
+ {
+  "id": "stranded-assets",
+  "term": "Stranded assets",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "stranded asset"
+  ],
+  "hl": [
+   "stranded assets",
+   "stranded asset",
+   "stranded coal assets",
+   "stranded fossil fuel assets",
+   "unburnable carbon"
+  ],
+  "abbr": [],
+  "short": "Assets like coal plants or oil reserves that lose much of their value early because of climate rules, cheaper clean technology or falling demand.",
+  "kid": "Imagine buying a big box of crayons, and then your school says only pencils are allowed. The crayons are still yours, but nobody wants them any more.",
+  "detail": "Stranded assets are assets that suffer unexpected or early write-downs, losing value well before the end of their planned life. In finance the term mostly refers to fossil-fuel assets: coal mines, oil and gas reserves, coal power plants and related infrastructure that may become uneconomic as carbon prices rise, emission rules tighten and solar, wind and batteries get cheaper. Climate analysts also talk of 'unburnable carbon', meaning reserves that cannot all be burned if the world is to meet the Paris Agreement goals. For investors the risk is that today's balance sheets and share prices assume these assets will earn cash for decades. For lenders, loans backed by such assets may turn bad. In India, coal-heavy utilities, mining firms and their banks face this question as renewable capacity grows. Common confusion: an asset can be stranded even while it still works perfectly; the problem is economic, not physical.",
+  "example": "Say XYZ Power, a hypothetical utility, carries a coal plant at a book value of ₹3,000 crore. After new emission rules shorten its expected life, the plant's recoverable amount falls to ₹1,800 crore, so XYZ records an impairment of ₹3,000 crore − ₹1,800 crore = ₹1,200 crore, or 40% of the book value.",
+  "formula": "",
+  "related": [
+   "Climate risk",
+   "Impairment",
+   "Write-off",
+   "Energy transition",
+   "Carbon tax",
+   "Thermal coal"
+  ]
+ },
+ {
+  "id": "business-responsibility-and-sustainability-report",
+  "term": "Business Responsibility and Sustainability Report",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "BRSR",
+   "BRSR Core"
+  ],
+  "hl": [
+   "brsr",
+   "brsr core",
+   "business responsibility and sustainability report",
+   "business responsibility and sustainability reporting",
+   "brsr disclosures",
+   "brsr disclosure",
+   "brsr report",
+   "brsr reports"
+  ],
+  "abbr": [
+   "BRSR"
+  ],
+  "short": "SEBI's required annual ESG report for India's largest listed companies, covering their environmental, social and governance performance in a standard format.",
+  "kid": "At the end of the year, a big shop writes a note about how it treated its workers, its neighbours and the trees around it. Everyone can read the note and see if the shop was kind and careful.",
+  "detail": "The Business Responsibility and Sustainability Report (BRSR) is the sustainability disclosure format SEBI requires, under the rules as of 2025, from India's top 1,000 listed companies by market capitalisation. Introduced in 2021 to replace the older Business Responsibility Report, it became mandatory from FY 2022-23. It has three sections: general company details, management processes, and performance against the nine principles of India's National Guidelines on Responsible Business Conduct, covering data such as energy and water use, greenhouse gas emissions, waste, employee safety, diversity and customer complaints. In 2023 SEBI added BRSR Core, a smaller set of key metrics that must be independently assessed or assured, phased in from the largest companies. Investors use BRSR data to compare ESG performance across Indian firms. Common confusion: BRSR is a disclosure rule, not a rating; a company can file a complete BRSR and still perform poorly.",
+  "example": "Say ABC Ltd, a hypothetical listed company, reports Scope 1 and 2 emissions of 50,000 tonnes of CO2 equivalent on a turnover of ₹2,500 crore in its BRSR. Its emissions intensity is 50,000 / 2,500 = 20 tonnes per ₹1 crore of turnover, which an analyst can compare with peers.",
+  "formula": "",
+  "related": [
+   "SEBI",
+   "ESG",
+   "International Sustainability Standards Board",
+   "Carbon footprint",
+   "Double materiality",
+   "Annual report"
+  ]
+ },
+ {
+  "id": "task-force-on-climate-related-financial-disclosures",
+  "term": "Task Force on Climate-related Financial Disclosures",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "TCFD"
+  ],
+  "hl": [
+   "tcfd",
+   "task force on climate-related financial disclosures",
+   "tcfd-aligned",
+   "tcfd recommendations",
+   "tcfd framework",
+   "tcfd disclosures",
+   "tcfd reporting"
+  ],
+  "abbr": [
+   "TCFD"
+  ],
+  "short": "A global group that set out how companies should tell investors about the financial risks and opportunities climate change creates for them.",
+  "kid": "Before a picnic, you tell your friends if it might rain and what you will do about it. This group asked companies to tell people about stormy weather that could hurt them, and their plan.",
+  "detail": "The Task Force on Climate-related Financial Disclosures (TCFD) was set up by the Financial Stability Board in 2015 and chaired by Michael Bloomberg. Its 2017 recommendations ask companies to disclose climate information under four pillars: governance (how the board oversees climate issues), strategy (how climate risks and opportunities affect the business, tested with scenarios such as a 2°C world), risk management (how these risks are identified and managed), and metrics and targets (such as greenhouse gas emissions and reduction goals). TCFD became the most widely used climate reporting framework, and regulators in the UK, Japan, New Zealand and elsewhere built rules on it. Having completed its work, the task force disbanded in 2023 and handed monitoring to the IFRS Foundation, whose IFRS S2 standard absorbs its recommendations. Common confusion: TCFD was a set of recommendations, not a law; it became binding only where regulators adopted it.",
+  "example": "Under the strategy pillar, say ABC Cement, a hypothetical company emitting 2 million tonnes of CO2 a year, tests a scenario with a carbon price of $100 per tonne. Its extra annual cost would be 2,000,000 × $100 = $200 million, which it would disclose along with its plan to reduce that exposure.",
+  "formula": "",
+  "related": [
+   "International Sustainability Standards Board",
+   "Climate risk",
+   "Scenario analysis",
+   "Carbon footprint",
+   "Double materiality"
+  ]
+ },
+ {
+  "id": "international-sustainability-standards-board",
+  "term": "International Sustainability Standards Board",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "ISSB",
+   "IFRS S1",
+   "IFRS S2"
+  ],
+  "hl": [
+   "issb",
+   "international sustainability standards board",
+   "ifrs s1",
+   "ifrs s2",
+   "issb standards",
+   "issb-aligned",
+   "ifrs sustainability disclosure standards"
+  ],
+  "abbr": [
+   "ISSB"
+  ],
+  "short": "The global body that writes standard rules for how companies report sustainability and climate information to investors, known as IFRS S1 and IFRS S2.",
+  "kid": "When children play a game, everyone needs the same rules or it gets messy. This group writes one set of rules so every company tells its green story the same way.",
+  "detail": "The International Sustainability Standards Board (ISSB) was created by the IFRS Foundation, which also oversees international accounting standards, and announced at COP26 in Glasgow in 2021. It absorbed earlier frameworks, including the SASB standards and the Climate Disclosure Standards Board. In June 2023 it issued two standards: IFRS S1, the general requirements for disclosing sustainability-related risks and opportunities, and IFRS S2, the climate standard, which builds on the TCFD recommendations and asks for Scope 1, 2 and 3 greenhouse gas emissions and climate scenario analysis. They apply where a country's regulators adopt them, and jurisdictions including Japan, Australia and Brazil have moved to do so. The ISSB takes an investor view, called financial materiality: report what could affect the company's cash flows and value. Common confusion: the ISSB cannot make its standards mandatory by itself; in India, under the rules as of 2025, listed companies report under SEBI's BRSR.",
+  "example": "Under IFRS S2, say XYZ plc, a hypothetical manufacturer, reports Scope 1 emissions of 40,000 tonnes, Scope 2 of 60,000 tonnes and Scope 3 of 900,000 tonnes of CO2 equivalent. Its total footprint is 1,000,000 tonnes, of which Scope 3 from its supply chain and customers makes up 900,000 / 1,000,000 = 90%.",
+  "formula": "",
+  "related": [
+   "Task Force on Climate-related Financial Disclosures",
+   "Double materiality",
+   "Business Responsibility and Sustainability Report",
+   "Scope 3 emissions",
+   "ESG rating"
+  ]
+ },
+ {
+  "id": "sustainable-finance-disclosure-regulation",
+  "term": "Sustainable Finance Disclosure Regulation",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "SFDR",
+   "Article 8 fund",
+   "Article 9 fund"
+  ],
+  "hl": [
+   "sfdr",
+   "sustainable finance disclosure regulation",
+   "article 8 fund",
+   "article 8 funds",
+   "article 9 fund",
+   "article 9 funds",
+   "article 8 and 9 funds",
+   "light green funds",
+   "dark green funds"
+  ],
+  "abbr": [
+   "SFDR"
+  ],
+  "short": "An EU law that makes fund managers disclose how they handle sustainability, sorting funds into groups often called Article 6, 8 and 9.",
+  "kid": "In Europe, grown-ups who look after other people's piggy banks must put a label on each one. The label says how much that piggy bank tries to help nature and people.",
+  "detail": "The Sustainable Finance Disclosure Regulation (SFDR) is a European Union law that has applied since March 2021 to asset managers, insurers, pension providers and advisers in the EU. It requires them to explain how sustainability risks enter their investment decisions and, for larger firms, to report the principal adverse impacts of their investments on the environment and society. Funds disclose under three main articles: Article 6 funds make no sustainability claims; Article 8 funds, often called light green, promote environmental or social characteristics; Article 9 funds, often called dark green, have sustainable investment as their objective. In 2022-23 many managers downgraded Article 9 funds to Article 8 after regulators clarified the bar. Common confusion: SFDR was designed as a disclosure regime, not a quality label, though the market treats it as one. The EU has proposed replacing the articles with simpler product categories, so check the current rules.",
+  "example": "Say ABC Green Equity Fund, a hypothetical Article 8 fund with $800 million of assets, commits that at least 30% of its portfolio will be sustainable investments. It must therefore hold at least 0.30 × $800 million = $240 million in investments that meet its stated sustainability test.",
+  "formula": "",
+  "related": [
+   "EU taxonomy",
+   "Greenwashing",
+   "ESG fund",
+   "Double materiality",
+   "Mutual fund"
+  ]
+ },
+ {
+  "id": "eu-taxonomy",
+  "term": "EU taxonomy",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "EU sustainable finance taxonomy",
+   "green taxonomy"
+  ],
+  "hl": [
+   "eu taxonomy",
+   "eu green taxonomy",
+   "eu sustainable finance taxonomy",
+   "green taxonomy",
+   "green taxonomies",
+   "taxonomy-aligned",
+   "taxonomy alignment",
+   "climate finance taxonomy",
+   "sustainable finance taxonomy"
+  ],
+  "abbr": [],
+  "short": "The European Union's official list of which business activities count as environmentally sustainable, with technical tests each activity must pass.",
+  "kid": "A teacher makes a list that says which snacks are healthy, so nobody can just call crisps healthy. This list does the same for jobs that are good for nature.",
+  "detail": "The EU taxonomy, set up by a 2020 EU regulation, is a classification system that defines which economic activities are environmentally sustainable. It covers six objectives: climate change mitigation, climate change adaptation, water and marine resources, the circular economy, pollution prevention, and biodiversity. To be taxonomy-aligned, an activity must make a substantial contribution to at least one objective, do no significant harm to the other five, meet minimum social safeguards and pass detailed technical screening criteria, such as an emissions threshold for electricity generation. Large EU companies report what share of their turnover, capital expenditure and operating expenditure is aligned, and funds use it under SFDR. The aim is a common language that limits greenwashing. Other countries are building their own; India's finance ministry released a draft climate finance taxonomy in 2025. Common confusion: 'not aligned' does not mean harmful; many activities are simply not covered yet.",
+  "example": "Say ABC SE, a hypothetical European utility, has turnover of $2 billion, of which $500 million comes from wind and solar activities that meet the taxonomy criteria. Its taxonomy-aligned turnover share is $500 million / $2,000 million = 25%.",
+  "formula": "Taxonomy-aligned turnover share = Turnover from taxonomy-aligned activities / Total turnover",
+  "related": [
+   "Sustainable Finance Disclosure Regulation",
+   "Greenwashing",
+   "Green bond",
+   "Double materiality",
+   "Renewable energy"
+  ]
+ },
+ {
+  "id": "double-materiality",
+  "term": "Double materiality",
+  "cat": "esg",
+  "level": "a",
+  "aliases": [
+   "financial materiality",
+   "impact materiality"
+  ],
+  "hl": [
+   "double materiality",
+   "financial materiality",
+   "impact materiality",
+   "double materiality assessment",
+   "double materiality assessments"
+  ],
+  "abbr": [],
+  "short": "The idea that a company should report both how sustainability issues affect its finances and how its own activities affect people and the planet.",
+  "kid": "When you play in the garden, the rain can spoil your game, and your game can also squash the flowers. Looking both ways means thinking about both.",
+  "detail": "Double materiality says a sustainability issue belongs in a company's report if it matters in either of two directions. Financial materiality (outside-in) asks how issues such as climate change, water scarcity or labour rules could affect the company's cash flows and value; this is the investor lens used by the ISSB standards. Impact materiality (inside-out) asks how the company affects the environment and society, for example through its emissions, pollution or treatment of workers, whether or not that hits profits today; this is the lens of the GRI standards. The EU's Corporate Sustainability Reporting Directive requires both, so a topic is reported if it passes either test. The two often converge: a harmful impact can later become a financial cost through fines, taxes or lost customers. Common confusion: this differs from accounting materiality, which asks whether an error or omission could change a user's view of the financial statements.",
+  "example": "Say ABC Textiles, a hypothetical mill in a drought-prone district, uses 2 crore litres (20,000 kilolitres) of water a year. Its pull on local groundwater is an impact issue, and it is also a financial one: if the water tariff rises from ₹50 to ₹80 per kilolitre, its bill goes from 20,000 × ₹50 = ₹10 lakh to 20,000 × ₹80 = ₹16 lakh.",
+  "formula": "",
+  "related": [
+   "Materiality",
+   "International Sustainability Standards Board",
+   "Business Responsibility and Sustainability Report",
+   "ESG",
+   "Sustainable Finance Disclosure Regulation"
+  ]
+ },
+ {
+  "id": "stewardship-code",
+  "term": "Stewardship code",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "stewardship",
+   "investor stewardship"
+  ],
+  "hl": [
+   "stewardship code",
+   "stewardship codes",
+   "investor stewardship",
+   "stewardship policy",
+   "stewardship policies",
+   "stewardship responsibilities",
+   "uk stewardship code",
+   "stewardship report"
+  ],
+  "abbr": [],
+  "short": "A set of principles telling big investors to actively look after the companies they own by monitoring them, engaging with management and voting responsibly.",
+  "kid": "If you look after a friend's puppy, you feed it, walk it and tell your friend how it is doing. These rules ask grown-ups who look after other people's piggy banks to care for them the same way.",
+  "detail": "A stewardship code sets out how institutional investors, such as mutual funds, insurers and pension funds, should act as responsible owners of the companies they invest in on behalf of savers. Typical principles include having a public stewardship policy, monitoring investee companies, managing conflicts of interest, engaging with management and escalating concerns, voting at shareholder meetings and disclosing those votes, and reporting on these activities. The UK Stewardship Code, first issued in 2010, was the model for many others. In India, SEBI's stewardship code, with six principles, has applied to mutual funds and alternative investment funds for their listed equity holdings since July 2020; IRDAI and PFRDA have similar codes for insurers and pension funds. Stewardship matters because institutions own a large share of listed companies. Common confusion: stewardship does not mean activism or trying to run the company; it usually works through quiet engagement and votes.",
+  "example": "Say XYZ Mutual Fund, a hypothetical fund house, owns 2% of ABC Ltd, which has 40 crore shares, so it holds 0.02 × 40 crore = 80 lakh shares. When ABC proposes a large related-party deal, XYZ's stewardship policy requires it to question the board, vote against the resolution if its concerns are not met, and publish its vote with reasons.",
+  "formula": "",
+  "related": [
+   "Proxy voting",
+   "Institutional investor",
+   "Mutual fund",
+   "Principles for Responsible Investment",
+   "Shareholder activism",
+   "Corporate governance"
+  ]
+ },
+ {
+  "id": "proxy-voting",
+  "term": "Proxy voting",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "proxy vote"
+  ],
+  "hl": [
+   "proxy voting",
+   "proxy vote",
+   "proxy votes",
+   "proxy adviser",
+   "proxy advisers",
+   "proxy advisor",
+   "proxy advisors",
+   "proxy advisory firm",
+   "proxy advisory firms",
+   "proxy season",
+   "proxy statement"
+  ],
+  "abbr": [],
+  "short": "Voting on company resolutions without attending the shareholder meeting, either by authorising someone else to vote for you or by voting remotely.",
+  "kid": "If you are sick on the day your class votes for a picnic spot, you can tell a friend which place you want. Your friend puts up a hand for you.",
+  "detail": "Proxy voting is how shareholders vote on company resolutions, such as electing directors, approving executive pay, mergers or related-party deals, without being physically present at the meeting. A shareholder can appoint a proxy to attend and vote on their behalf, and in India listed companies must also offer electronic voting, so most votes are cast remotely. Large institutional investors hold hundreds of companies, so many rely on proxy advisory firms, such as ISS and Glass Lewis globally or IiAS and InGovern in India, for voting recommendations. SEBI requires mutual funds to disclose how they voted on each resolution, which makes their stewardship visible. Under India's Companies Act, an ordinary resolution needs more votes for than against, while a special resolution needs votes in favour of at least three times the votes against. Common confusion: 'proxy' here means a stand-in voter, unrelated to the statistical sense of a proxy variable.",
+  "example": "Say ABC Ltd, a hypothetical company, puts a special resolution to shareholders and 10 crore votes are cast: 7.2 crore for and 2.8 crore against. A special resolution needs votes for of at least 3 × 2.8 crore = 8.4 crore, so it fails, even though 72% voted in favour and it would have passed as an ordinary resolution.",
+  "formula": "",
+  "related": [
+   "Stewardship code",
+   "Institutional investor",
+   "Shareholder activism",
+   "Proxy advisory firm",
+   "Annual general meeting",
+   "Mutual fund"
+  ]
+ },
+ {
+  "id": "principles-for-responsible-investment",
+  "term": "Principles for Responsible Investment",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "PRI",
+   "UN PRI"
+  ],
+  "hl": [
+   "principles for responsible investment",
+   "un pri",
+   "un-backed principles for responsible investment",
+   "un-supported principles for responsible investment",
+   "pri signatory",
+   "pri signatories"
+  ],
+  "abbr": [],
+  "short": "A UN-supported network whose investor members sign six voluntary principles to include environmental, social and governance factors in investing and ownership.",
+  "kid": "Some friends make a promise together to always share and play fair. These grown-ups promise to think about nature and people whenever they decide what to do with their piggy bank coins.",
+  "detail": "The Principles for Responsible Investment (PRI) were launched in 2006 at the New York Stock Exchange with the backing of the then UN Secretary-General, Kofi Annan, and are supported by the UN Environment Programme Finance Initiative and the UN Global Compact. Signatories, including pension funds, insurers, asset managers and service providers, commit to six principles: build ESG issues into investment analysis, act as active owners, seek ESG disclosure from companies, promote the principles in the industry, work together, and report on progress. Signatories report annually and can be delisted if they fail minimum requirements. The network has thousands of signatories worldwide, including several Indian asset managers. Common confusion: PRI is an independent, UN-supported organisation, not a UN agency, and signing is a voluntary commitment, not a certification; a signatory's funds are not automatically ESG or green funds.",
+  "example": "Say XYZ Asset Management, a hypothetical PRI signatory, holds shares in 80 listed companies. To act on the active ownership principle, it votes at all 80 annual meetings and engages 20 of them on emission targets, covering 20 / 80 = 25% of its holdings, and reports this in its annual PRI report.",
+  "formula": "",
+  "related": [
+   "ESG",
+   "Stewardship code",
+   "Proxy voting",
+   "Sustainable Development Goals",
+   "Impact investing"
+  ]
+ },
+ {
+  "id": "paris-agreement",
+  "term": "Paris Agreement",
+  "cat": "esg",
+  "level": "b",
+  "aliases": [
+   "Paris climate accord",
+   "COP21",
+   "nationally determined contributions",
+   "NDC"
+  ],
+  "hl": [
+   "paris agreement",
+   "paris climate agreement",
+   "paris climate accord",
+   "paris accord",
+   "paris climate deal",
+   "paris climate pact",
+   "paris goals",
+   "paris-aligned",
+   "nationally determined contributions",
+   "nationally determined contribution",
+   "cop21"
+  ],
+  "abbr": [
+   "NDCs",
+   "COP21"
+  ],
+  "short": "The 2015 global climate treaty in which countries agreed to keep warming well below 2°C and set their own emission-cutting plans.",
+  "kid": "Lots of children in one big class all promised to help keep the playground cool and clean. Each child wrote down what they will do, and they check every few years.",
+  "detail": "The Paris Agreement is a treaty under the UN climate convention, adopted at COP21 in Paris in December 2015 and in force since November 2016. Its goal is to hold the rise in global average temperature to well below 2°C above pre-industrial levels and to pursue efforts to limit it to 1.5°C. Each country sets its own targets in a nationally determined contribution (NDC), updated every five years, with a five-yearly global stocktake of progress. Article 6 lets countries trade emission reductions. India's 2022 NDC aims to cut the emissions intensity of its GDP by 45% from 2005 levels by 2030 and to have about 50% of its power capacity from non-fossil sources by 2030, alongside a net-zero goal for 2070. The agreement's goals shape carbon pricing and investor pledges. Common confusion: the agreement binds countries to submit and report targets, not to hit a specific emission level.",
+  "example": "Say a country's emissions intensity was 0.40 kg of CO2 per dollar of GDP in 2005. A 45% cut, the size of India's 2030 NDC target, brings it to 0.40 × (1 − 0.45) = 0.22 kg per dollar. Total emissions can still rise if GDP grows faster than intensity falls.",
+  "formula": "",
+  "related": [
+   "Conference of the Parties",
+   "Net zero",
+   "Climate finance",
+   "Carbon market",
+   "Energy transition",
+   "Sustainable Development Goals"
+  ]
+ },
+ {
+  "id": "conference-of-the-parties",
+  "term": "Conference of the Parties",
+  "cat": "esg",
+  "level": "b",
+  "aliases": [
+   "COP",
+   "UN climate summit",
+   "COP30"
+  ],
+  "hl": [
+   "conference of the parties",
+   "un climate summit",
+   "un climate summits",
+   "un climate talks",
+   "un climate conference",
+   "global climate summit",
+   "cop26",
+   "cop27",
+   "cop28",
+   "cop29",
+   "cop30",
+   "cop31"
+  ],
+  "abbr": [
+   "COP26",
+   "COP27",
+   "COP28",
+   "COP29",
+   "COP30",
+   "COP31"
+  ],
+  "short": "The yearly UN climate summit where nearly 200 countries negotiate how to tackle climate change; each meeting is numbered, such as COP30 in 2025.",
+  "kid": "Once a year, children from every school in town meet in one big hall. They talk about how to keep their town clean and cool, and try to agree on a plan.",
+  "detail": "The Conference of the Parties (COP) is the top decision-making body of the UN Framework Convention on Climate Change, the 1992 treaty that almost every country has joined. Its members meet annually, usually in November, in a host country that rotates across regions. Landmark meetings include COP3 in Kyoto (1997), which produced the Kyoto Protocol; COP21 in Paris (2015), which produced the Paris Agreement; COP26 in Glasgow (2021), where India announced its 2070 net-zero goal; COP28 in Dubai (2023), which called for transitioning away from fossil fuels and tripling renewable capacity by 2030; and COP29 in Baku (2024), which set a new climate finance goal. COP30 was held in Belém, Brazil, in 2025. Decisions need consensus, so outcomes are often compromises. Markets watch COPs for signals on carbon markets, climate finance and fossil fuels. Common confusion: 'COP' is also used for meetings under other treaties, such as the biodiversity convention.",
+  "example": "At COP29 in Baku in 2024, countries agreed that developed nations should lead in mobilising at least $300 billion a year for developing countries by 2035. That is three times the earlier goal of $100 billion a year, since $300 billion / $100 billion = 3.",
+  "formula": "",
+  "related": [
+   "Paris Agreement",
+   "Climate finance",
+   "Net zero",
+   "Sustainable Development Goals",
+   "Energy transition",
+   "Carbon market"
+  ]
+ },
+ {
+  "id": "sustainable-development-goals",
+  "term": "Sustainable Development Goals",
+  "cat": "esg",
+  "level": "b",
+  "aliases": [
+   "SDGs",
+   "UN SDGs"
+  ],
+  "hl": [
+   "sustainable development goals",
+   "sustainable development goal",
+   "un sdgs",
+   "sdgs",
+   "sdg india index",
+   "sdg index",
+   "2030 agenda for sustainable development"
+  ],
+  "abbr": [
+   "SDGs",
+   "SDG"
+  ],
+  "short": "Seventeen goals agreed by all UN member countries in 2015, such as ending poverty and acting on climate, to be reached by 2030.",
+  "kid": "The whole world made a list of 17 wishes, like every child having food, clean water and a school. Everyone is trying to make the wishes come true.",
+  "detail": "The Sustainable Development Goals (SDGs) are 17 goals with 169 targets adopted by all UN member states in September 2015 as part of the 2030 Agenda for Sustainable Development. They replaced the Millennium Development Goals and cover poverty, hunger, health, education, gender equality, clean water, affordable and clean energy (SDG 7), decent work, infrastructure, inequality, cities, responsible consumption, climate action (SDG 13), oceans, land, peace and partnerships. Governments track progress; in India, NITI Aayog publishes an SDG India Index ranking states. For finance, the SDGs give investors and companies a shared map: impact funds, green, social and blue bonds, and development banks often state which goals their money supports. Reaching the goals needs trillions of dollars of investment a year, much of it from private capital. Common confusion: the SDGs are goals for countries, not a reporting standard; a company citing SDG logos has not necessarily proven any impact.",
+  "example": "Say a hypothetical impact fund of ₹1,000 crore invests ₹400 crore in solar projects (SDG 7), ₹350 crore in affordable housing (SDG 11) and ₹250 crore in microfinance (SDGs 1 and 8). Its portfolio is 40%, 35% and 25% across these goals, adding up to the full ₹1,000 crore.",
+  "formula": "",
+  "related": [
+   "Paris Agreement",
+   "Impact investing",
+   "ESG",
+   "Blue bond",
+   "Principles for Responsible Investment",
+   "Green bond"
+  ]
+ },
+ {
+  "id": "renewable-energy",
+  "term": "Renewable energy",
+  "cat": "esg",
+  "level": "b",
+  "aliases": [
+   "renewables",
+   "clean energy",
+   "solar and wind"
+  ],
+  "hl": [
+   "renewable energy",
+   "renewables",
+   "clean energy",
+   "green energy",
+   "renewable power",
+   "renewable capacity",
+   "renewable energy capacity",
+   "renewable energy projects",
+   "solar power",
+   "wind power",
+   "solar energy",
+   "wind energy",
+   "solar capacity",
+   "wind capacity",
+   "solar and wind",
+   "solar power plant",
+   "solar power plants"
+  ],
+  "abbr": [],
+  "short": "Energy from sources that nature keeps refilling, such as sunlight, wind, flowing water and plant matter, unlike coal, oil and gas, which run out.",
+  "kid": "The sun shines every day and the wind keeps blowing, so we can use them again and again. They help make light for our homes without making the air dirty.",
+  "detail": "Renewable energy comes from sources that are naturally replenished: solar, wind, hydropower, biomass, geothermal and ocean energy. Solar and wind have become the cheapest new sources of electricity in many countries, including India, which targets 500 GW of non-fossil power capacity by 2030 and holds auctions, often through agencies such as SECI, where developers bid tariffs for long-term power purchase agreements. For investors, renewable projects look like infrastructure: high upfront capital, low running costs and steady contracted cash flows, financed through loans, green bonds and listed vehicles such as InvITs. Key risks are intermittency, grid and storage limits, and payment delays by state power distribution companies. Common confusion: capacity is not generation. A 1 MW solar plant does not produce 1 MW all day; it typically runs at a capacity utilisation factor of roughly 18-25%. India's official data often counts large hydro separately from 'renewable' sources.",
+  "example": "Say a hypothetical 100 MW solar plant runs at a 20% capacity utilisation factor. It generates 100 MW × 8,760 hours × 0.20 = 1,75,200 MWh a year. Sold at, say, ₹2.50 per kWh, that is 17,52,00,000 kWh × ₹2.50 = ₹43.8 crore of annual revenue.",
+  "formula": "Annual generation (MWh) = Capacity (MW) × 8,760 hours × Capacity utilisation factor",
+  "related": [
+   "Energy transition",
+   "Green hydrogen",
+   "Green bond",
+   "Infrastructure investment trust",
+   "Indian Energy Exchange",
+   "Carbon footprint"
+  ]
+ },
+ {
+  "id": "green-hydrogen",
+  "term": "Green hydrogen",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "National Green Hydrogen Mission",
+   "green ammonia"
+  ],
+  "hl": [
+   "green hydrogen",
+   "green ammonia",
+   "national green hydrogen mission",
+   "green hydrogen mission",
+   "green hydrogen hub",
+   "green hydrogen hubs",
+   "green hydrogen project",
+   "green hydrogen projects",
+   "green hydrogen production"
+  ],
+  "abbr": [],
+  "short": "Hydrogen made by splitting water with electricity from renewable sources, so producing it releases almost no carbon dioxide.",
+  "kid": "Water has a tiny bit of a special gas hiding inside it. If we use sunshine power to pull that gas out, we get a clean fuel that does not make smoke.",
+  "detail": "Green hydrogen is hydrogen produced by electrolysis, splitting water into hydrogen and oxygen with renewable electricity. Most hydrogen today is grey, made from fossil fuels with heavy CO2 emissions; blue hydrogen captures and stores part of that CO2. Green hydrogen can cut emissions in hard-to-electrify sectors such as fertilisers, refining, steel and shipping. Green ammonia, made from green hydrogen and nitrogen, is easier to ship and can replace grey ammonia in fertilisers. India's National Green Hydrogen Mission, approved in January 2023 with an initial outlay of ₹19,744 crore, targets at least 5 million tonnes a year of production capacity by 2030 with incentives for electrolysers and production. India's standard counts hydrogen as green if emissions are no more than 2 kg of CO2 equivalent per kg of hydrogen. Common confusion: green hydrogen is an energy carrier, not an energy source, and it has generally cost more than grey hydrogen.",
+  "example": "Say a hypothetical electrolyser needs 55 kWh of electricity to make 1 kg of hydrogen, and renewable power costs ₹3 per kWh. The power cost alone is 55 × ₹3 = ₹165 per kg, so producing 1,000 tonnes (10 lakh kg) needs ₹165 × 10,00,000 = ₹16.5 crore of electricity.",
+  "formula": "",
+  "related": [
+   "Renewable energy",
+   "Energy transition",
+   "Natural gas",
+   "Carbon footprint",
+   "Production Linked Incentive scheme"
+  ]
+ },
+ {
+  "id": "energy-transition",
+  "term": "Energy transition",
+  "cat": "esg",
+  "level": "b",
+  "aliases": [
+   "clean energy transition",
+   "decarbonisation"
+  ],
+  "hl": [
+   "energy transition",
+   "clean energy transition",
+   "green energy transition",
+   "green transition",
+   "just transition",
+   "just energy transition",
+   "decarbonisation",
+   "decarbonization",
+   "decarbonise",
+   "decarbonize",
+   "decarbonising",
+   "decarbonizing"
+  ],
+  "abbr": [],
+  "short": "The long shift of the world's energy system from coal, oil and gas towards low-carbon sources such as solar, wind and nuclear, plus electrification.",
+  "kid": "Our town used to cook with smoky wood fires. Now, step by step, it is switching to clean sunshine and wind power, so the sky can stay blue.",
+  "detail": "The energy transition is the multi-decade change in how the world produces and uses energy, away from fossil fuels and towards renewables, nuclear, hydrogen and better efficiency, with more electricity in transport and industry. Decarbonisation is the goal underneath it: cutting greenhouse gas emissions per unit of energy or output. It needs huge investment in grids, storage, electric vehicles and new industrial processes, which creates opportunities for some companies and stranded-asset risk for others. India's path is shaped by its net-zero goal for 2070, the 500 GW non-fossil capacity target for 2030 and its heavy reliance on coal for power. A 'just transition' means protecting workers and regions that depend on coal, such as parts of Jharkhand and Odisha. Common confusion: the transition does not mean fossil fuel use falls straight away; while energy demand grows, new clean supply may add to, not replace, old supply for years.",
+  "example": "Say a hypothetical steel maker produces 10 million tonnes a year at 2.5 tonnes of CO2 per tonne of steel, and plans to reach 1.5 tonnes by 2035 using scrap-fed electric furnaces. Its emissions intensity falls by (2.5 − 1.5) / 2.5 = 40%, and at the same output its yearly emissions fall from 25 million to 15 million tonnes.",
+  "formula": "",
+  "related": [
+   "Renewable energy",
+   "Net zero",
+   "Stranded assets",
+   "Green hydrogen",
+   "Transition finance",
+   "Climate risk"
+  ]
+ },
+ {
+  "id": "carbon-credit-trading-scheme",
+  "term": "Carbon Credit Trading Scheme",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "CCTS",
+   "Indian carbon market"
+  ],
+  "hl": [
+   "carbon credit trading scheme",
+   "indian carbon market",
+   "india's carbon market",
+   "india carbon market",
+   "ccts"
+  ],
+  "abbr": [
+   "CCTS"
+  ],
+  "short": "India's government-run carbon market: heavy industries get emission targets, earn tradable certificates if they beat them and must buy certificates if they miss.",
+  "kid": "Each factory is told how much smoke it may make. A factory that makes less smoke gets reward stickers, and a factory that makes too much must buy stickers from the good ones.",
+  "detail": "The Carbon Credit Trading Scheme (CCTS) is India's compliance carbon market, notified in June 2023 under the amended Energy Conservation Act. The Bureau of Energy Efficiency administers it, Grid Controller of India runs the registry, and trading happens on power exchanges under rules set by the Central Electricity Regulatory Commission. Under the compliance mechanism, obligated companies in energy-intensive sectors receive greenhouse gas emission intensity targets, measured in tonnes of CO2 equivalent per tonne of product. A company that beats its target earns carbon credit certificates, each worth one tonne of CO2 equivalent; one that misses must buy certificates or face a penalty. An offset mechanism lets other projects earn credits. Targets for the first sectors, including aluminium and cement, were notified in 2025. Common confusion: unlike the EU's cap-and-trade system, the CCTS caps emissions per unit of output, not total emissions, so absolute emissions can rise as output grows.",
+  "example": "Say ABC Cement, a hypothetical obligated company, has a target of 0.80 tonnes of CO2 per tonne of cement, produces 50 lakh tonnes and achieves 0.76. It earns (0.80 − 0.76) × 50,00,000 = 2,00,000 certificates. If certificates trade at, say, ₹800 each, they are worth 2,00,000 × ₹800 = ₹16 crore.",
+  "formula": "Certificates earned (negative means certificates to buy) = (Target emission intensity − Actual emission intensity) × Output",
+  "related": [
+   "Carbon market",
+   "Carbon credit",
+   "Emissions trading system",
+   "Carbon footprint",
+   "Net zero",
+   "Paris Agreement"
+  ]
+ },
+ {
+  "id": "carbon-footprint",
+  "term": "Carbon footprint",
+  "cat": "esg",
+  "level": "b",
+  "aliases": [
+   "carbon intensity",
+   "emissions intensity"
+  ],
+  "hl": [
+   "carbon footprint",
+   "carbon footprints",
+   "carbon intensity",
+   "emissions intensity",
+   "emission intensity",
+   "carbon emissions intensity",
+   "greenhouse gas intensity",
+   "weighted average carbon intensity"
+  ],
+  "abbr": [
+   "WACI"
+  ],
+  "short": "The total greenhouse gases released, directly and indirectly, by a person, product, company or portfolio, measured in tonnes of carbon dioxide equivalent.",
+  "kid": "When you walk on wet sand, you leave footprints behind. Cars, factories and lights leave invisible smoky footprints in the air, and we try to make them smaller.",
+  "detail": "A carbon footprint is the total greenhouse gas emissions caused by an entity or activity, expressed in tonnes of CO2 equivalent (CO2e), which converts gases such as methane into the amount of CO2 with the same warming effect. For companies it is usually split into Scope 1 (direct emissions), Scope 2 (purchased electricity) and Scope 3 (the rest of the value chain). Carbon or emissions intensity divides emissions by output or revenue, for example tonnes of CO2e per ₹1 crore of turnover or per tonne of steel, which allows fair comparison between firms of different sizes. Investors use portfolio measures such as weighted average carbon intensity (WACI) to gauge climate exposure, and India's BRSR and Carbon Credit Trading Scheme use intensity metrics. Common confusion: intensity can fall while total emissions rise, if output grows faster; a falling intensity is not the same as an absolute cut.",
+  "example": "Say ABC Ltd emits 2 lakh tonnes of CO2e on revenue of ₹4,000 crore, while XYZ Ltd emits 30,000 tonnes on revenue of ₹300 crore (both hypothetical). ABC's footprint is far larger, but its intensity is 2,00,000 / 4,000 = 50 tonnes per ₹ crore, against 30,000 / 300 = 100 tonnes per ₹ crore for XYZ.",
+  "formula": "Carbon intensity = Total greenhouse gas emissions (tonnes CO2e) / Revenue or units of output",
+  "related": [
+   "Scope 1 emissions",
+   "Scope 3 emissions",
+   "Net zero",
+   "Carbon Credit Trading Scheme",
+   "Business Responsibility and Sustainability Report",
+   "Carbon credit"
+  ]
+ },
+ {
+  "id": "blue-bond",
+  "term": "Blue bond",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "blue bonds",
+   "ocean bonds"
+  ],
+  "hl": [
+   "blue bond",
+   "blue bonds",
+   "ocean bond",
+   "ocean bonds",
+   "sovereign blue bond",
+   "blue economy bond",
+   "blue economy bonds"
+  ],
+  "abbr": [],
+  "short": "A bond, or tradable loan, that raises money only for ocean and water projects such as clean water, sustainable fishing or cleaner seas.",
+  "kid": "A town borrows some coins from its neighbours to clean up the beach and protect the fish. Later, it gives the coins back with a little extra as a thank-you.",
+  "detail": "A blue bond is a use-of-proceeds bond, a close cousin of the green bond, whose money is earmarked for projects that protect oceans and water resources: marine conservation, sustainable fisheries, coastal resilience, wastewater treatment, clean drinking water and reducing plastic waste. The issuer pays interest and repays principal like any normal bond; the 'blue' label only governs how the money is spent and reported. The Republic of Seychelles issued the first sovereign blue bond in 2018, raising $15 million with World Bank support. In India, SEBI's rules for green debt securities, as revised in 2023, recognise blue bonds for water management and the marine sector as a sub-category. Common confusion: a blue bond has nothing to do with blue-chip stocks, and the label is self-declared, so investors should check the issuer's reporting on how the money was used.",
+  "example": "Say ABC Ports Ltd, a hypothetical company, issues ₹500 crore of blue bonds at an 8% coupon, putting ₹300 crore into wastewater treatment and ₹200 crore into mangrove restoration. It pays ₹500 crore × 8% = ₹40 crore of interest a year, the same as on an ordinary bond with that coupon.",
+  "formula": "",
+  "related": [
+   "Green bond",
+   "Sustainable Development Goals",
+   "Greenwashing",
+   "Social bond",
+   "Sustainability-linked bond",
+   "Coupon rate"
+  ]
+ },
+ {
+  "id": "esg-backlash",
+  "term": "ESG backlash",
+  "cat": "esg",
+  "level": "i",
+  "aliases": [
+   "anti-ESG",
+   "greenhushing"
+  ],
+  "hl": [
+   "esg backlash",
+   "anti-esg",
+   "greenhushing",
+   "green hushing",
+   "backlash against esg",
+   "esg pushback",
+   "anti-esg law",
+   "anti-esg laws",
+   "anti-esg bill",
+   "anti-esg bills"
+  ],
+  "abbr": [],
+  "short": "Pushback against investing based on environmental, social and governance factors, mainly in the US, leading some firms to go quiet about climate goals.",
+  "kid": "Some children start helping to tidy the park, and others say it is silly and want them to stop. So some helpers keep tidying, but quietly, without telling anyone.",
+  "detail": "ESG backlash is the political, legal and investor resistance to environmental, social and governance investing that grew in the United States from around 2022. Critics argue it puts politics ahead of returns and hurts fossil-fuel industries. Several US states passed laws restricting state funds from working with asset managers or banks they saw as boycotting fossil fuels, and some state treasurers pulled money from large managers. Many big asset managers and banks left climate alliances such as Net Zero Asset Managers and the Net Zero Banking Alliance in 2024-25. One result is greenhushing: companies keep their climate targets but stop talking about them to avoid scrutiny or lawsuits, the reverse of greenwashing. Elsewhere, as of 2025, the EU had trimmed some rules but kept its framework, and India's BRSR remained in place. Common confusion: backlash against the ESG label does not remove the financial risks it tries to measure.",
+  "example": "Say a hypothetical US state pension fund with $50 billion of assets has 4% of it with a manager the state accuses of boycotting energy companies. Moving that money out means withdrawing 0.04 × $50 billion = $2 billion. Meanwhile, say ABC Inc, a hypothetical company, keeps its target to cut emissions 50% by 2030 but drops it from its annual report: that is greenhushing.",
+  "formula": "",
+  "related": [
+   "ESG",
+   "Greenwashing",
+   "Stewardship code",
+   "Principles for Responsible Investment",
+   "Net zero",
+   "Proxy voting"
+  ]
+ }
+]

@@ -1,0 +1,928 @@
+[
+  {
+    "id": "commercial-bank",
+    "term": "Commercial bank",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "scheduled commercial bank",
+      "SCB",
+      "commercial banks"
+    ],
+    "hl": [
+      "commercial bank",
+      "commercial banks",
+      "scheduled commercial bank",
+      "scheduled commercial banks"
+    ],
+    "abbr": [
+      "SCBs"
+    ],
+    "short": "A bank that takes deposits from people and businesses and lends that money out at a higher interest rate, like SBI or HDFC Bank.",
+    "kid": "It is like a big piggy bank for the whole town. People put their coins in to keep them safe, and some of those coins are lent to a neighbour who wants to start a lemonade stand.",
+    "detail": "A commercial bank is a profit-seeking bank that accepts deposits from the public, such as savings accounts, current accounts and fixed deposits, and uses them to make loans to households, businesses and governments. It earns mainly from the gap between the interest it charges borrowers and the interest it pays depositors, plus fees. In India, a scheduled commercial bank is one listed in the Second Schedule of the RBI Act, 1934; the group covers public and private sector banks, foreign banks, regional rural banks, small finance banks and payments banks. Scheduled banks can use the RBI's liquidity facilities and must report to it and keep reserves with it. Because banks pass on policy-rate changes to borrowers and savers, they are the main channel of monetary policy. A common confusion: commercial does not mean business-only; these banks serve individuals too.",
+    "example": "Say ABC Bank takes ₹100 crore of deposits at 6% a year and lends ₹80 crore of it at 10%, keeping the rest in cash and bonds. The loans earn ₹8 crore a year while depositors are paid ₹6 crore, so the loan book alone leaves a ₹2 crore cushion before bond income, salaries and bad-loan losses.",
+    "formula": "",
+    "related": [
+      "Public sector bank",
+      "Cooperative bank",
+      "Small finance bank",
+      "Non-banking financial company",
+      "Cash reserve ratio",
+      "Reserve Bank of India"
+    ]
+  },
+  {
+    "id": "cooperative-bank",
+    "term": "Cooperative bank",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "co-operative bank",
+      "urban cooperative bank",
+      "UCB"
+    ],
+    "hl": [
+      "cooperative bank",
+      "cooperative banks",
+      "co-operative bank",
+      "co-operative banks",
+      "urban cooperative bank",
+      "urban cooperative banks",
+      "urban co-operative bank",
+      "urban co-operative banks",
+      "co-op bank",
+      "co-op banks"
+    ],
+    "abbr": [
+      "UCBs"
+    ],
+    "short": "A bank owned by its members, often local people or traders, who pool their savings and borrow from it, with one vote per member.",
+    "kid": "Imagine all the kids on your street put their pocket money into one jar they own together. When one kid needs to borrow for a new ball, the group decides, and everyone gets one say.",
+    "detail": "A cooperative bank is a bank set up under cooperative societies law and owned by its members, who are usually also its depositors and borrowers. Control follows one member, one vote rather than the size of shareholding, and the aim is to serve members rather than maximise profit. India has urban cooperative banks (UCBs) in towns and cities, and a rural cooperative structure of state and district central cooperative banks. Regulation was long split between the RBI and registrars of cooperative societies, a gap blamed for failures such as the PMC Bank collapse in 2019; the Banking Regulation (Amendment) Act, 2020 gave the RBI wider powers over them. Their deposits carry DICGC insurance like other banks. A common confusion: cooperative banks are not the same as credit cooperative societies, which are not banks and whose deposits are not insured.",
+    "example": "Say a town's cooperative bank has 10,000 members. A trader holding ₹5 lakh of its shares and a teacher holding ₹1,000 each get exactly one vote when the board is elected. If the bank fails, a member with ₹3 lakh of deposits is covered in full, since that is within the ₹5 lakh DICGC limit under the rules as of 2025.",
+    "formula": "",
+    "related": [
+      "Commercial bank",
+      "Regional rural bank",
+      "Deposit insurance",
+      "Reserve Bank of India",
+      "NABARD"
+    ]
+  },
+  {
+    "id": "regional-rural-bank",
+    "term": "Regional rural bank",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "RRB",
+      "gramin bank"
+    ],
+    "hl": [
+      "regional rural bank",
+      "regional rural banks",
+      "gramin bank",
+      "gramin banks"
+    ],
+    "abbr": [],
+    "short": "A government-sponsored bank that lends to small farmers, labourers, artisans and small businesses in rural India, jointly owned by governments and a sponsor bank.",
+    "kid": "Some villages are far from the big town where people keep their money. So a small money house is built right in the village, where farmers can keep their savings and borrow to buy seeds.",
+    "detail": "Regional rural banks were created under the Regional Rural Banks Act, 1976 to bring formal credit to rural areas where commercial banks were thin and moneylenders dominated. Each RRB is owned by the central government (50%), a sponsor bank (35%) and the state government (15%), and operates in a defined set of districts. RRBs take deposits and lend mainly to small and marginal farmers, agricultural labourers, artisans and rural small businesses, and must direct 75% of their lending to the priority sector under the rules as of 2025, against 40% for most commercial banks. The RBI regulates them and NABARD supervises them. Repeated amalgamations cut their number from 196 at the peak to 28 as of 2025, under a one-state-one-RRB drive. Many have needed recapitalisation because of small size and bad loans. A common confusion: RRBs are scheduled commercial banks, not cooperatives, even though both serve rural India.",
+    "example": "Say an RRB needs ₹200 crore of fresh capital. Under the 50:35:15 ownership split, the central government puts in ₹100 crore, the sponsor bank ₹70 crore and the state government ₹30 crore.",
+    "formula": "",
+    "related": [
+      "Commercial bank",
+      "Cooperative bank",
+      "Priority sector lending",
+      "NABARD",
+      "Financial inclusion",
+      "Microfinance"
+    ]
+  },
+  {
+    "id": "small-finance-bank",
+    "term": "Small finance bank",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "SFB",
+      "small finance banks"
+    ],
+    "hl": [
+      "small finance bank",
+      "small finance banks"
+    ],
+    "abbr": [
+      "SFB",
+      "SFBs"
+    ],
+    "short": "A specialised Indian bank licensed to take deposits and lend mainly to small borrowers, such as tiny businesses, small farmers and low-income households.",
+    "kid": "Some helpers mostly lend to people who need just a little money, like a lady who wants a sewing machine or a man who sells fruit from a cart.",
+    "detail": "Small finance banks are differentiated banks licensed by the RBI from 2015 to push financial inclusion. They can do most things a commercial bank does, taking savings, current and fixed deposits and making loans, but must direct a larger share of lending to the priority sector than universal banks, and keep at least half of their loan book in loans of up to ₹25 lakh under the rules as of 2025. Many began as microfinance or vehicle-finance NBFCs, such as Ujjivan, Equitas and AU, and used deposits to replace costlier market borrowing. To attract savers they often pay higher deposit rates than large banks, and their deposits carry the same DICGC cover. A common confusion: small describes the borrowers they serve, not a cap on the bank's size; a successful SFB can seek to become a universal bank, as AU Small Finance Bank applied to do in 2024.",
+    "example": "Say an SFB has a ₹10,000 crore loan book. Under the rules as of 2025, at least ₹5,000 crore of it must be in loans of ₹25 lakh or less. If only ₹4,600 crore qualifies today, it must shift ₹400 crore of the book from large loans to small ones to comply.",
+    "formula": "",
+    "related": [
+      "Payments bank",
+      "Microfinance",
+      "Priority sector lending",
+      "Commercial bank",
+      "Financial inclusion",
+      "Non-banking financial company"
+    ]
+  },
+  {
+    "id": "payments-bank",
+    "term": "Payments bank",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "payment bank",
+      "payments banks"
+    ],
+    "hl": [
+      "payments bank",
+      "payments banks",
+      "payment bank",
+      "payment banks"
+    ],
+    "abbr": [],
+    "short": "A limited Indian bank that can take small deposits and handle payments and money transfers, but is not allowed to lend.",
+    "kid": "It is like a safe wallet that can also send coins to your grandma in another city. It keeps your coins and moves them, but it never lends them out.",
+    "detail": "Payments banks are differentiated banks licensed by the RBI from 2015 to spread basic banking and digital payments to people the big banks underserved. They can accept savings and current account deposits, issue debit cards, offer UPI, remittance and bill-payment services and sell third-party products such as insurance, but they cannot lend or issue credit cards. Under the rules as of 2025, the end-of-day balance per customer is capped at ₹2 lakh, and at least 75% of demand deposits must sit in government securities and treasury bills. Income therefore comes mostly from fees plus a thin return on safe bonds, which makes profits hard to earn. Examples include Airtel Payments Bank, India Post Payments Bank and Fino Payments Bank. A common confusion: a payments bank is not a wallet app; it is a regulated bank whose deposits carry DICGC cover, but it still cannot give you a loan.",
+    "example": "Say a customer has ₹1.9 lakh in a payments bank account and receives a ₹30,000 salary credit. Under the ₹2 lakh end-of-day cap as of 2025, the extra ₹20,000 is swept into a partner bank account she has authorised, so her balance stays at ₹2 lakh.",
+    "formula": "",
+    "related": [
+      "Small finance bank",
+      "Commercial bank",
+      "Savings account",
+      "Unified Payments Interface",
+      "Deposit insurance",
+      "Financial inclusion"
+    ]
+  },
+  {
+    "id": "non-banking-financial-company",
+    "term": "Non-banking financial company",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "NBFC",
+      "NBFCs",
+      "non-bank lender",
+      "non-banking finance company"
+    ],
+    "hl": [
+      "non-banking financial company",
+      "non-banking financial companies",
+      "non-banking finance company",
+      "non-banking finance companies",
+      "non-bank lender",
+      "non-bank lenders",
+      "non-banking lender",
+      "non-banking lenders"
+    ],
+    "abbr": [
+      "NBFC",
+      "NBFCs"
+    ],
+    "short": "A company that lends or invests like a bank but has no banking licence, so it cannot offer savings or current accounts.",
+    "kid": "Imagine a shop that will lend you money to buy a bicycle, but will not look after your piggy bank for you. It only helps with borrowing.",
+    "detail": "A non-banking financial company (NBFC) is a company registered under the Companies Act whose main business is lending, investing in securities, leasing or similar financial activity, and which is regulated by the RBI without holding a banking licence. Unlike banks, NBFCs cannot accept demand deposits such as savings and current accounts, are not part of the payment and settlement system, and cannot issue cheques drawn on themselves; deposits with the few deposit-taking NBFCs carry no DICGC insurance. They fund themselves through bank loans, bonds, commercial paper and equity, so their cost of funds is usually higher than a bank's. Large names such as Bajaj Finance and Shriram Finance reach borrowers banks often miss. Since 2022 the RBI has applied a scale-based framework, with tighter rules for bigger lenders. A common confusion: NBFCs are not unregulated; the 2018 IL&FS default showed how stress at one can spread across markets.",
+    "example": "Say XYZ Finance, an NBFC, borrows at 9% a year and lends two-wheeler loans at 15%. On a ₹500 crore loan book funded fully by borrowing, it earns ₹75 crore of interest and pays ₹45 crore, a spread of ₹30 crore before costs and bad loans. A bank funding the same book with deposits at 6% would pay only ₹30 crore in interest.",
+    "formula": "",
+    "related": [
+      "Commercial bank",
+      "Housing finance company",
+      "Microfinance",
+      "Shadow banking",
+      "Cost of funds",
+      "Reserve Bank of India"
+    ]
+  },
+  {
+    "id": "housing-finance-company",
+    "term": "Housing finance company",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "HFC",
+      "HFCs",
+      "housing finance"
+    ],
+    "hl": [
+      "housing finance company",
+      "housing finance companies",
+      "housing finance firm",
+      "housing finance firms",
+      "housing financier",
+      "housing financiers",
+      "home finance company",
+      "home finance companies"
+    ],
+    "abbr": [],
+    "short": "A specialised non-bank lender whose main business is giving home loans, mostly to individuals buying or building a house.",
+    "kid": "Building a house costs more coins than a family can save quickly. A special helper lends the family the money now, and the family pays it back bit by bit over many years.",
+    "detail": "A housing finance company (HFC) is a non-banking financial company whose principal business is financing the purchase or construction of homes. Under RBI rules as of 2025, at least 60% of its net assets must be in housing finance, and at least 50% of net assets must be housing loans to individuals. HFCs were regulated by the National Housing Bank until 2019, when regulation passed to the RBI; the NHB still supervises them and refinances their loans. They borrow through bank loans, bonds, commercial paper and, for some, public deposits, so their margins depend heavily on funding costs. Examples include LIC Housing Finance, Bajaj Housing Finance and PNB Housing Finance; HDFC Ltd was the largest until it merged into HDFC Bank in July 2023. A common confusion: an HFC is not a bank, and its fixed deposits are not covered by DICGC insurance.",
+    "example": "Say ABC Housing Finance has ₹10,000 crore of net assets. Under the rules as of 2025, at least ₹6,000 crore must be housing finance and at least ₹5,000 crore must be home loans to individuals; the remaining ₹4,000 crore can go to other loans, such as loans against property.",
+    "formula": "",
+    "related": [
+      "Non-banking financial company",
+      "Home loan",
+      "Loan against property",
+      "National Housing Bank",
+      "Cost of funds",
+      "Commercial bank"
+    ]
+  },
+  {
+    "id": "microfinance",
+    "term": "Microfinance",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "microfinance institution",
+      "MFI",
+      "microcredit",
+      "NBFC-MFI",
+      "microloans"
+    ],
+    "hl": [
+      "microfinance",
+      "microfinance institution",
+      "microfinance institutions",
+      "microfinance lender",
+      "microfinance lenders",
+      "microcredit",
+      "microloan",
+      "microloans",
+      "micro-loan",
+      "micro-loans",
+      "nbfc-mfi",
+      "nbfc-mfis"
+    ],
+    "abbr": [
+      "MFIs",
+      "NBFC-MFI",
+      "NBFC-MFIs"
+    ],
+    "short": "Very small loans and basic money services for low-income people who have no property to pledge, often lent to women in small groups.",
+    "kid": "Five friends each want a little money to start selling flowers. A helper lends each of them a small amount, and the friends promise to help each other pay it back, a few coins every week.",
+    "detail": "Microfinance means providing small, usually unsecured loans, along with savings, insurance and remittance services, to low-income households and tiny businesses that mainstream banks find too costly to serve. The classic model, popularised by Muhammad Yunus and Bangladesh's Grameen Bank, lends to groups of women who meet regularly and stand guarantee for one another, with small weekly or fortnightly repayments. In India it is delivered by NBFC-MFIs, small finance banks, banks and self-help group linkages. Under RBI rules as of 2025, a microfinance loan is a collateral-free loan to a household with annual income up to ₹3 lakh, and total loan repayments are capped at half of monthly household income. The sector is prone to over-lending, as the 2010 Andhra Pradesh crisis and the 2024-25 rise in overdue loans showed. A common confusion: microfinance is not charity; loans carry high interest rates to cover high servicing costs.",
+    "example": "Say a woman in a five-member group borrows ₹50,000 and repays ₹2,170 every fortnight for a year (26 instalments). She pays back ₹56,420 in all, ₹6,420 more than she borrowed. Because she repays the principal steadily, interest charged on the falling balance works out to about 24% a year (about 26.8% with compounding), not the 12.8% the totals suggest.",
+    "formula": "",
+    "related": [
+      "Small finance bank",
+      "Non-banking financial company",
+      "Self-help group",
+      "Financial inclusion",
+      "Priority sector lending",
+      "Regional rural bank"
+    ]
+  },
+  {
+    "id": "shadow-banking",
+    "term": "Shadow banking",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "shadow banks",
+      "non-bank financial intermediation"
+    ],
+    "hl": [
+      "shadow banking",
+      "shadow bank",
+      "shadow banks",
+      "shadow lender",
+      "shadow lenders",
+      "shadow banking system",
+      "shadow banking sector",
+      "non-bank financial intermediation"
+    ],
+    "abbr": [
+      "NBFI"
+    ],
+    "short": "Bank-like lending and borrowing done by firms outside the regular banking system, such as money market funds, finance companies and hedge funds.",
+    "kid": "Usually one big shop in town lends coins, and grown-ups watch it very closely. Sometimes other shops start lending coins too, but fewer grown-ups are watching them.",
+    "detail": "Shadow banking is credit intermediation by entities and activities outside the regulated banking system: money market funds, finance companies, broker-dealers, securitisation vehicles, repo markets and, in India, NBFCs. Like banks, they often borrow short term and lend or invest long term, but without bank-style deposit insurance or full access to central bank support. That makes them prone to runs when short-term funders pull back. Economist Paul McCulley coined the term in 2007, and the 2008 crisis showed the risks: runs on repo funding helped bring down Bear Stearns and Lehman Brothers, and Lehman's collapse set off a run on money market funds. The Financial Stability Board now prefers the neutral label non-bank financial intermediation (NBFI). A common confusion: shadow does not mean illegal or hidden; most shadow banks are licensed and regulated, only more lightly than banks.",
+    "example": "Say a hypothetical money market fund holds $100 billion of investor cash that can be withdrawn any day, and has lent $80 billion of it through 90-day commercial paper. If investors ask for $30 billion back in a week, the fund has only $20 billion in cash and must sell $10 billion of paper into a falling market, just like a bank facing a run.",
+    "formula": "",
+    "related": [
+      "Non-banking financial company",
+      "Bank run",
+      "Fractional-reserve banking",
+      "Money market fund",
+      "Securitisation",
+      "Repo market"
+    ]
+  },
+  {
+    "id": "fractional-reserve-banking",
+    "term": "Fractional-reserve banking",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "fractional reserve banking",
+      "fractional reserve"
+    ],
+    "hl": [
+      "fractional-reserve banking",
+      "fractional reserve banking",
+      "fractional-reserve",
+      "fractional reserve"
+    ],
+    "abbr": [],
+    "short": "A system in which banks keep only a small part of customers' deposits as cash reserves and lend out or invest the rest.",
+    "kid": "If ten friends leave their marbles with you, you keep a few in your pocket and lend the rest to other kids. Since not every friend wants their marbles back on the same day, it usually works.",
+    "detail": "Under fractional-reserve banking, a bank holds only a fraction of its deposits as cash or balances at the central bank and lends or invests the remainder. Because a loan usually ends up deposited back in the banking system, it can be lent again, so banks collectively create broad money far larger than the base money issued by the central bank. In India the cash reserve ratio sets the minimum share of deposits a bank must keep with the RBI; the US cut reserve requirements to zero in 2020, leaving capital and liquidity rules to do the work. The system funds productive lending, but no bank can repay every depositor at once, which is why deposit insurance and lenders of last resort exist. A common confusion: the textbook money multiplier is a simplification; in practice lending is limited by loan demand, capital rules and policy rates more than by reserves.",
+    "example": "Say the reserve requirement is 10% and ABC Bank receives a ₹1,000 deposit. It keeps ₹100 and lends ₹900; if that ₹900 is redeposited, the next bank keeps ₹90 and lends ₹810. In the simple textbook limit, the original ₹1,000 can support up to ₹1,000 / 0.10 = ₹10,000 of total deposits.",
+    "formula": "Maximum deposit expansion (textbook) = Initial deposit / Reserve ratio",
+    "related": [
+      "Cash reserve ratio",
+      "Money multiplier",
+      "Bank run",
+      "Deposit insurance",
+      "Lender of last resort",
+      "Reserve money"
+    ]
+  },
+  {
+    "id": "bank-run",
+    "term": "Bank run",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "run on the bank",
+      "deposit run",
+      "bank runs"
+    ],
+    "hl": [
+      "bank run",
+      "bank runs",
+      "run on the bank",
+      "run on a bank",
+      "runs on banks",
+      "run on deposits",
+      "deposit run",
+      "deposit runs"
+    ],
+    "abbr": [],
+    "short": "When many depositors rush to withdraw their money from a bank at the same time because they fear it will fail.",
+    "kid": "If everyone who left toys with a friend asks for them back at once, the friend may not have them all, because some are lent out. Then everyone gets scared and asks even faster.",
+    "detail": "A bank run happens when a large number of depositors try to withdraw their money at once, usually because they fear the bank is insolvent or will freeze withdrawals. Because a bank lends out most deposits and holds long-term loans and bonds, even a sound bank cannot pay everyone immediately, so the fear can become self-fulfilling as the bank sells assets at a loss. Runs can spread to other banks through contagion. Digital banking and social media have made them faster: Silicon Valley Bank saw about $42 billion of withdrawals in a single day in March 2023 and was shut the next morning. Deposit insurance, central bank lending and strong capital and liquidity rules exist mainly to prevent runs. A common confusion: a run is about liquidity and confidence, not only losses; a solvent bank can still fail if it cannot raise cash fast enough.",
+    "example": "Say ABC Bank has ₹1,000 crore of deposits, keeps ₹100 crore in cash and reserves, and holds ₹200 crore of bonds it can sell quickly. If depositors demand ₹400 crore in two days, it can meet only ₹300 crore from liquid assets and must sell loans at a discount or seek central bank help for the remaining ₹100 crore.",
+    "formula": "",
+    "related": [
+      "Deposit insurance",
+      "Fractional-reserve banking",
+      "Lender of last resort",
+      "Liquidity coverage ratio",
+      "Contagion",
+      "Shadow banking"
+    ]
+  },
+  {
+    "id": "deposit-insurance",
+    "term": "Deposit insurance",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "DICGC",
+      "FDIC",
+      "deposit insurance cover",
+      "insured deposits"
+    ],
+    "hl": [
+      "deposit insurance",
+      "deposit insurance cover",
+      "deposit insurance limit",
+      "insured deposits",
+      "uninsured deposits",
+      "deposit insurer"
+    ],
+    "abbr": [
+      "DICGC",
+      "FDIC"
+    ],
+    "short": "A government-backed guarantee that repays bank depositors up to a set limit if their bank fails.",
+    "kid": "Imagine a grown-up promises that if your piggy bank ever breaks, they will give you back your coins, up to a certain number. That promise helps everyone feel safe leaving coins there.",
+    "detail": "Deposit insurance protects depositors' money, up to a limit, if a bank fails or is placed under restrictions. In India the Deposit Insurance and Credit Guarantee Corporation (DICGC), a wholly owned RBI subsidiary, covers savings, current, fixed and recurring deposits at commercial, small finance, payments, regional rural and cooperative banks, up to ₹5 lakh per depositor per bank, including interest, under the rules as of 2025. Banks pay the premium, not customers. In the US the FDIC covers $250,000 per depositor, per bank, per ownership category, as of 2025. Insurance reduces the risk of bank runs because small savers know they will be repaid, but it can also encourage risk-taking, a moral hazard regulators offset with supervision. A common confusion: the limit applies per bank, not per account or branch, so spreading money across several accounts at one bank does not raise the cover.",
+    "example": "Say you hold ₹4 lakh in a savings account and ₹3 lakh in a fixed deposit at the same bank, and it fails. Under the ₹5 lakh DICGC limit as of 2025, insurance repays ₹5 lakh; the other ₹2 lakh depends on what the liquidator recovers. Had the ₹3 lakh been at a different bank, all ₹7 lakh would have been covered.",
+    "formula": "",
+    "related": [
+      "Bank run",
+      "Savings account",
+      "Moral hazard",
+      "Lender of last resort",
+      "Reserve Bank of India",
+      "Commercial bank"
+    ]
+  },
+  {
+    "id": "savings-account",
+    "term": "Savings account",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "SB account",
+      "savings bank account",
+      "savings deposit"
+    ],
+    "hl": [
+      "savings account",
+      "savings accounts",
+      "savings bank account",
+      "savings bank accounts",
+      "savings account rate",
+      "savings account rates",
+      "savings deposit rate",
+      "savings deposits"
+    ],
+    "abbr": [],
+    "short": "A bank account for keeping money safe that pays some interest and lets you withdraw whenever you need.",
+    "kid": "It is like a piggy bank kept in a big, safe building in town. You can take your coins out when you want, and they add a few extra coins as a thank-you for keeping them there.",
+    "detail": "A savings account is a deposit account, mainly for individuals, that pays interest on the balance and allows withdrawals on demand, though banks may limit free transactions or require a minimum balance. In India, banks have set their own savings rates since the RBI deregulated them in 2011; most large banks pay well below fixed deposit rates, while some smaller private banks and small finance banks pay more to attract money. Interest is calculated on the daily closing balance and usually credited quarterly. For banks, savings deposits are cheap, sticky funding, which is why the CASA ratio matters to bank investors. For savers, the return often trails inflation, so a savings account suits an emergency fund rather than long-term wealth building. A common confusion: savings interest is taxable income, and the balance is insured only up to the DICGC limit.",
+    "example": "Say you keep ₹1 lakh in a savings account paying 3% a year, with no withdrawals for a full year. Simple daily interest comes to about ₹3,000; with quarterly crediting, the interest itself earns interest and the total is about ₹3,034. If inflation runs at 5% that year, your money buys about 1.9% less at the end of the year than at the start.",
+    "formula": "Interest = Sum over each day of (Closing balance x Annual rate / 365)",
+    "related": [
+      "CASA ratio",
+      "Fixed deposit",
+      "Current account",
+      "Deposit insurance",
+      "Cost of funds",
+      "Real interest rate"
+    ]
+  },
+  {
+    "id": "casa-ratio",
+    "term": "CASA ratio",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "CASA",
+      "current account savings account ratio",
+      "low-cost deposits",
+      "CASA deposits"
+    ],
+    "hl": [
+      "casa ratio",
+      "casa deposits",
+      "casa share",
+      "low-cost deposits",
+      "low cost deposits",
+      "current account savings account ratio"
+    ],
+    "abbr": [
+      "CASA"
+    ],
+    "short": "The share of a bank's deposits held in current and savings accounts, which pay little or no interest, making them cheap money for the bank.",
+    "kid": "Some friends lend you toys for free, and some want a sweet in return. The more toys you get from the free friends, the more sweets you get to keep.",
+    "detail": "The CASA ratio measures current account and savings account deposits as a percentage of a bank's total deposits. Current accounts, used mostly by businesses, pay no interest, and savings accounts pay low rates, so together they are the cheapest and most stable funding a bank has, compared with fixed deposits or market borrowing. A higher CASA ratio usually means a lower cost of funds and a wider net interest margin, which is why analysts watch it in every bank result. The ratio tends to fall when interest rates rise and savers move money into higher-paying fixed deposits, as happened across Indian banks in 2023 and 2024. A common confusion: a high CASA ratio is not automatically good; if a bank gets it by paying unusually high savings rates, the cost advantage disappears, so read it alongside the cost of deposits.",
+    "example": "Say ABC Bank has ₹1 lakh crore of deposits: ₹15,000 crore in current accounts, ₹25,000 crore in savings accounts and ₹60,000 crore in fixed deposits. Its CASA ratio is (15,000 + 25,000) / 1,00,000 = 40%.",
+    "formula": "CASA ratio = (Current account deposits + Savings account deposits) / Total deposits x 100",
+    "related": [
+      "Savings account",
+      "Current account",
+      "Cost of funds",
+      "Net interest margin",
+      "Fixed deposit",
+      "Credit-deposit ratio"
+    ]
+  },
+  {
+    "id": "net-demand-and-time-liabilities",
+    "term": "Net demand and time liabilities",
+    "cat": "banking",
+    "level": "a",
+    "aliases": [
+      "NDTL",
+      "demand and time liabilities"
+    ],
+    "hl": [
+      "net demand and time liabilities",
+      "demand and time liabilities"
+    ],
+    "abbr": [
+      "NDTL"
+    ],
+    "short": "The base on which Indian banks' cash and bond reserve requirements are calculated: mainly deposits and other money the bank owes the public.",
+    "kid": "Count up everything you have promised to give back to your friends, now or later. Grown-ups use that total to decide how many coins you must always keep in your pocket.",
+    "detail": "Net demand and time liabilities (NDTL) is the measure of a bank's liabilities that the RBI uses to apply the cash reserve ratio (CRR) and statutory liquidity ratio (SLR). Demand liabilities are payable on demand, such as current deposits, the demand portion of savings deposits and overdue fixed deposits; time liabilities are payable after a period, such as fixed and recurring deposits. Other liabilities, such as certain borrowings, are added, while paid-up capital and reserves are excluded. Liabilities to other banks count only to the extent they exceed the bank's own claims on the banking system, hence net. Banks report NDTL to the RBI every fortnight. Because every CRR change is applied to this base, NDTL tells you how much liquidity a cut releases. A common confusion: NDTL is not the same as total deposits; it includes some non-deposit liabilities and nets out interbank positions.",
+    "example": "Say ABC Bank's NDTL is ₹2 lakh crore. With a hypothetical 4% CRR it must keep ₹8,000 crore with the RBI; if the CRR is cut by 0.5 percentage point to 3.5%, the requirement falls to ₹7,000 crore, freeing ₹1,000 crore to lend or invest.",
+    "formula": "NDTL = Demand and time liabilities to others + (Liabilities to the banking system - Assets with the banking system, if positive)",
+    "related": [
+      "Cash reserve ratio",
+      "Statutory liquidity ratio",
+      "CASA ratio",
+      "Banking system liquidity",
+      "Reserve Bank of India"
+    ]
+  },
+  {
+    "id": "cost-of-funds",
+    "term": "Cost of funds",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "cost of deposits",
+      "funding cost",
+      "cost of borrowing for banks"
+    ],
+    "hl": [
+      "cost of funds",
+      "cost of deposits",
+      "funding cost",
+      "funding costs",
+      "deposit costs"
+    ],
+    "abbr": [],
+    "short": "The average interest rate a bank or other lender pays on the money it uses to make loans, such as deposits and borrowings.",
+    "kid": "To share sweets with friends, you first borrow them from your big sister, and she wants a little extra back. The extra you give her is what your sweets really cost you.",
+    "detail": "Cost of funds is the average rate a lender pays for the money it lends out: interest on deposits for a bank, and on bank loans, bonds and commercial paper for an NBFC. It is usually measured as interest expended divided by average interest-bearing liabilities; cost of deposits is a narrower version that counts only deposits. Because a lender's margin is the gap between the yield on its loans and its cost of funds, this number drives net interest margin and profitability. It depends on the deposit mix (cheap current and savings deposits versus pricier fixed deposits), the lender's credit rating and the policy-rate cycle. In India, the marginal cost of funds also feeds the MCLR benchmark used for some loans. A common confusion: cost of funds lags policy-rate moves, because older fixed deposits reprice only when they mature, so margins can swing for several quarters after a rate change.",
+    "example": "Say ABC Bank has average interest-bearing liabilities of ₹50,000 crore and paid ₹2,750 crore of interest in the year. Its cost of funds is 2,750 / 50,000 = 5.5%. If its loans yield 9.5%, the gap is 4 percentage points.",
+    "formula": "Cost of funds = Interest expended / Average interest-bearing liabilities x 100",
+    "related": [
+      "Net interest margin",
+      "CASA ratio",
+      "Marginal cost of funds based lending rate",
+      "Net interest income",
+      "Cost of debt",
+      "Repo rate"
+    ]
+  },
+  {
+    "id": "net-interest-income",
+    "term": "Net interest income",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "NII",
+      "net interest earnings"
+    ],
+    "hl": [
+      "net interest income",
+      "net interest earnings"
+    ],
+    "abbr": [],
+    "short": "The interest a bank earns on loans and investments minus the interest it pays on deposits and borrowings; its main source of income.",
+    "kid": "You lend crayons and friends give back a few extra. But you also borrowed crayons and owe a few extra. What is left after both is what you really earned.",
+    "detail": "Net interest income (NII) is interest earned minus interest expended. Interest earned comes from loans, investments such as government bonds, and balances with other banks; interest expended goes on deposits and borrowings. For most Indian banks NII is the largest part of revenue, usually well over half, so quarterly NII growth is one of the first numbers analysts check in results. It grows when the loan book expands or when the spread between asset yields and funding costs widens. Rate cuts can squeeze NII for banks with many floating-rate loans because those loans reprice faster than deposits, while rate hikes often help at first. A common confusion: NII is an amount in rupees, not a ratio; to compare banks of different sizes, use net interest margin. Also, in IPO news NII means non-institutional investors, an unrelated term.",
+    "example": "Say ABC Bank earns ₹12,000 crore of interest in a year and pays ₹7,000 crore to depositors and lenders. Its net interest income is ₹12,000 crore - ₹7,000 crore = ₹5,000 crore. If other income is ₹1,500 crore, NII makes up 5,000 / 6,500, or about 77%, of its total income after interest costs.",
+    "formula": "NII = Interest earned - Interest expended",
+    "related": [
+      "Net interest margin",
+      "Cost of funds",
+      "Non-interest income",
+      "Pre-provision operating profit",
+      "Advances"
+    ]
+  },
+  {
+    "id": "net-interest-margin",
+    "term": "Net interest margin",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "NIM",
+      "NIMs",
+      "interest margin"
+    ],
+    "hl": [
+      "net interest margin",
+      "net interest margins",
+      "interest margin",
+      "interest margins"
+    ],
+    "abbr": [
+      "NIM",
+      "NIMs"
+    ],
+    "short": "How much a bank earns from interest after paying its own interest costs, as a percentage of the loans and investments that produce it.",
+    "kid": "If you sell cups of lemonade and the lemons cost you a little, what you keep from each cup shows how good your stand is. A bigger leftover per cup means a better stand.",
+    "detail": "Net interest margin (NIM) is net interest income divided by average interest-earning assets, usually annualised and shown as a percentage. It captures the spread between what a bank earns on loans and investments and what it pays for deposits and borrowings, adjusted for the share of assets that earn interest. A higher NIM generally means more profitable lending, helped by a strong base of current and savings deposits, higher-yield loans such as unsecured retail credit, or low funding costs. Indian banks have historically earned wider margins than banks in Europe or Japan, and NBFCs usually earn more than banks on riskier loans. NIM compresses when deposit costs rise faster than loan yields, or after rate cuts on floating-rate books. A common confusion: a high NIM is not automatically better; it can reflect riskier lending that later shows up as bad loans, so read it alongside asset quality.",
+    "example": "Say ABC Bank has NII of ₹4,500 crore for the year and average interest-earning assets of ₹1.25 lakh crore. Its NIM is 4,500 / 1,25,000 = 3.6%. If NII stays the same but assets grow to ₹1.5 lakh crore, NIM falls to 3.0%.",
+    "formula": "NIM = Net interest income / Average interest-earning assets x 100",
+    "related": [
+      "Net interest income",
+      "Cost of funds",
+      "CASA ratio",
+      "Yield on advances",
+      "Return on assets"
+    ]
+  },
+  {
+    "id": "non-interest-income",
+    "term": "Non-interest income",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "other income",
+      "fee income",
+      "core fee income"
+    ],
+    "hl": [
+      "non-interest income",
+      "non interest income",
+      "fee income",
+      "core fee income"
+    ],
+    "abbr": [],
+    "short": "A bank's earnings from sources other than lending, such as fees, commissions, card charges, insurance sales and gains on selling bonds.",
+    "kid": "Besides lending crayons, you charge one sticker for wrapping a friend's present. Those stickers are treats you earn without lending anything.",
+    "detail": "Non-interest income, reported by Indian banks as other income, is everything a bank earns apart from interest. It includes fee and commission income (loan processing fees, card and payment fees, account charges, fees for selling insurance and mutual funds, guarantees and letters of credit), foreign-exchange income, treasury gains from trading bonds and other securities, and recoveries from loans already written off. Analysts separate core fee income, which is recurring and tied to customer activity, from volatile items such as treasury profits, which swing with bond yields. A bank with strong fee income relies less on interest spreads and needs less capital to earn it, which supports return on equity. A common confusion: in an ordinary company's accounts, other income means income outside the main business, but for a bank fee income is part of the core business, so do not dismiss it.",
+    "example": "Say ABC Bank reports other income of ₹2,000 crore: ₹1,400 crore of fees and commissions, ₹400 crore of treasury gains and ₹200 crore of recoveries from written-off loans. Core fee income is ₹1,400 crore, or 70% of the total; the ₹400 crore of treasury gains could vanish next quarter if bond prices fall.",
+    "formula": "",
+    "related": [
+      "Net interest income",
+      "Pre-provision operating profit",
+      "Cost-to-income ratio",
+      "Treasury income",
+      "Return on equity"
+    ]
+  },
+  {
+    "id": "pre-provision-operating-profit",
+    "term": "Pre-provision operating profit",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "PPOP",
+      "operating profit before provisions",
+      "core operating profit"
+    ],
+    "hl": [
+      "pre-provision operating profit",
+      "pre-provision profit",
+      "pre-provisioning operating profit",
+      "operating profit before provisions",
+      "ppop"
+    ],
+    "abbr": [
+      "PPOP"
+    ],
+    "short": "A bank's profit before setting money aside for bad loans and before tax, after paying interest and running costs.",
+    "kid": "After selling lemonade and paying for lemons and cups, you count your coins. That pile, before you put some away in case a friend never pays you back, is this number.",
+    "detail": "Pre-provision operating profit (PPOP), often just called operating profit in Indian bank results, is net interest income plus non-interest income minus operating expenses such as salaries, rent and technology. It is struck before provisions for bad loans and other contingencies, and before tax. Because provisions swing sharply with the credit cycle, PPOP shows the underlying earning power of the franchise and how much cushion a bank has to absorb loan losses without making a loss. Analysts compare provisions with PPOP to judge stress: if credit costs eat most of it, profit is fragile. Core PPOP strips out treasury gains, which are volatile. A common confusion: PPOP is not net profit; a bank can report healthy PPOP and still post a loss after heavy provisioning, as many Indian public sector banks did between 2016 and 2018.",
+    "example": "Say ABC Bank has NII of ₹5,000 crore, other income of ₹1,500 crore and operating expenses of ₹3,000 crore. PPOP = 5,000 + 1,500 - 3,000 = ₹3,500 crore. If provisions are ₹1,000 crore, profit before tax is ₹2,500 crore.",
+    "formula": "PPOP = Net interest income + Non-interest income - Operating expenses",
+    "related": [
+      "Net interest income",
+      "Non-interest income",
+      "Cost-to-income ratio",
+      "Provisions",
+      "Credit cost",
+      "Provision coverage ratio"
+    ]
+  },
+  {
+    "id": "cost-to-income-ratio",
+    "term": "Cost-to-income ratio",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "cost to income ratio",
+      "cost-income ratio",
+      "efficiency ratio"
+    ],
+    "hl": [
+      "cost-to-income ratio",
+      "cost to income ratio",
+      "cost-income ratio",
+      "cost-to-income"
+    ],
+    "abbr": [],
+    "short": "A bank's running costs as a percentage of its income after interest costs; a lower figure means it spends less to earn each rupee.",
+    "kid": "If you spend four coins on lemons and cups to earn ten coins, your stand is doing well. If you spend eight coins to earn ten, it is not working as hard.",
+    "detail": "The cost-to-income ratio divides a bank's operating expenses (staff costs, rent, technology, marketing and other overheads) by its total operating income, which is net interest income plus non-interest income. It shows how efficiently the bank turns revenue into profit before provisions: a ratio of 40% means 40 paise of every rupee earned goes on running costs. In the US it is usually called the efficiency ratio. Lower is generally better, but context matters: a bank building branches or digital platforms may run a high ratio for years, while one that cuts costs too hard may hurt growth or controls. Track the trend over several quarters, since one-offs such as wage settlements can distort a single period. A common confusion: income here is net of interest expense, not gross interest earned, and costs exclude provisions for bad loans, so the ratio says nothing about credit quality.",
+    "example": "Say ABC Bank has NII of ₹5,000 crore, other income of ₹1,500 crore and operating expenses of ₹2,925 crore. Its cost-to-income ratio is 2,925 / 6,500 = 45%, so 45 paise of every rupee of income goes on running costs.",
+    "formula": "Cost-to-income ratio = Operating expenses / (Net interest income + Non-interest income) x 100",
+    "related": [
+      "Pre-provision operating profit",
+      "Net interest income",
+      "Non-interest income",
+      "Operating leverage",
+      "Return on assets"
+    ]
+  },
+  {
+    "id": "advances",
+    "term": "Advances",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "loans and advances",
+      "loan book",
+      "gross advances",
+      "loan portfolio"
+    ],
+    "hl": [
+      "loans and advances",
+      "loan book",
+      "loan books",
+      "gross advances",
+      "net advances",
+      "loan portfolio",
+      "advances growth"
+    ],
+    "abbr": [],
+    "short": "The total loans a bank has given out and not yet been repaid, shown as an asset on its balance sheet.",
+    "kid": "When you lend toys to friends, those toys are still yours; your friends just have them for now. Money that has been lent out and is waiting to come back works the same way.",
+    "detail": "Advances are the loans and credit facilities a bank has extended, including term loans, cash credit, overdrafts and bills purchased or discounted. In Indian bank balance sheets they appear as an asset under Schedule 9 and are usually the largest item, so analysts track their size and growth every quarter. Gross advances are the total outstanding; net advances deduct provisions held against bad loans. Banks break the book into retail (home, vehicle, personal, cards), MSME, corporate and agriculture, and the mix drives yields, risk and capital needs. Advances are funded mainly by deposits, which is why they are compared with deposits in the credit-deposit ratio. A common confusion: to a bank, a loan is an asset because it is money owed to the bank, while the deposits that fund it are liabilities, the opposite of how a borrower or saver sees them.",
+    "example": "Say ABC Bank's gross advances are ₹80,000 crore, gross NPAs are ₹2,400 crore and provisions against them are ₹1,800 crore. Net advances are 80,000 - 1,800 = ₹78,200 crore. If gross advances were ₹70,000 crore a year earlier, the loan book grew (80,000 - 70,000) / 70,000, or about 14.3%.",
+    "formula": "Net advances = Gross advances - Provisions held against non-performing assets",
+    "related": [
+      "Credit-deposit ratio",
+      "Credit growth",
+      "Non-performing asset",
+      "Gross NPA",
+      "Net interest income",
+      "Priority sector lending"
+    ]
+  },
+  {
+    "id": "credit-deposit-ratio",
+    "term": "Credit-deposit ratio",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "CD ratio",
+      "loan-to-deposit ratio",
+      "LDR",
+      "credit deposit ratio"
+    ],
+    "hl": [
+      "credit-deposit ratio",
+      "credit deposit ratio",
+      "credit-to-deposit ratio",
+      "credit to deposit ratio",
+      "loan-to-deposit ratio",
+      "loan to deposit ratio",
+      "loan-deposit ratio",
+      "cd ratio"
+    ],
+    "abbr": [],
+    "short": "The share of a bank's deposits that it has lent out, showing how fully it uses deposit money for lending.",
+    "kid": "If friends leave ten marbles with you and you lend eight to other kids, you have lent out most of them. If you lend twelve, you must have borrowed extra marbles from somewhere.",
+    "detail": "The credit-deposit (CD) ratio compares a bank's advances with its deposits; a ratio of 80% means ₹80 of loans for every ₹100 of deposits. Because Indian banks must keep part of their deposits as cash reserves (CRR) and in government securities (SLR), they cannot lend out every rupee of deposits without other funding. A very high ratio means lending is outrunning deposits, forcing reliance on costlier borrowings and leaving thinner liquidity buffers; HDFC Bank's ratio rose above 100% after its July 2023 merger with HDFC Ltd, whose loans came without matching deposits. A very low ratio may signal weak loan demand or idle funds. The RBI publicly flagged the gap between loan and deposit growth in 2024. A common confusion: the ratio says nothing about loan quality. Regional CD ratios are also tracked to see whether deposits raised in a state are lent there.",
+    "example": "Say ABC Bank has deposits of ₹1 lakh crore and advances of ₹82,000 crore. Its CD ratio is 82,000 / 1,00,000 = 82%. If loans grow 15% and deposits 10% over the next year, the ratio rises to 94,300 / 1,10,000, or about 85.7%.",
+    "formula": "CD ratio = Advances / Deposits x 100",
+    "related": [
+      "Advances",
+      "CASA ratio",
+      "Credit growth",
+      "Statutory liquidity ratio",
+      "Cash reserve ratio",
+      "Net demand and time liabilities"
+    ]
+  },
+  {
+    "id": "credit-growth",
+    "term": "Credit growth",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "loan growth",
+      "bank credit growth",
+      "non-food credit"
+    ],
+    "hl": [
+      "credit growth",
+      "loan growth",
+      "bank credit growth",
+      "non-food credit",
+      "non-food bank credit",
+      "credit offtake",
+      "bank credit offtake"
+    ],
+    "abbr": [],
+    "short": "How fast the total amount of loans given by banks rises over a period, usually measured year on year as a percentage.",
+    "kid": "If last summer kids borrowed ten toys from the toy shelf and this summer they borrow twelve, borrowing has gone up. This idea measures how much more borrowing is happening than before.",
+    "detail": "Credit growth is the percentage increase in outstanding loans, either for one lender or for the whole banking system, usually measured year on year. In India the RBI publishes fortnightly data on banks' credit and a monthly breakdown by sector. Analysts focus on non-food credit, which excludes loans to the Food Corporation of India and state agencies for buying foodgrains, because those swing with government procurement rather than economic demand. Strong credit growth signals businesses investing and households spending, and supports bank earnings; very fast growth, especially in unsecured loans, can sow the seeds of future bad loans, which is why the RBI raised risk weights on some consumer credit in November 2023. Credit growth is usually compared with deposit growth and nominal GDP growth. A common confusion: a jump can be statistical; the HDFC merger in July 2023 inflated reported bank credit growth for a year.",
+    "example": "Say ABC Bank's loans were ₹40,000 crore a year ago and are ₹46,000 crore now. Its credit growth is (46,000 - 40,000) / 40,000 = 15%. If its deposits grew only 10% in the same year, it is lending faster than it is raising deposits, which pushes up its credit-deposit ratio.",
+    "formula": "Credit growth = (Loans now - Loans a year ago) / Loans a year ago x 100",
+    "related": [
+      "Advances",
+      "Credit-deposit ratio",
+      "Deposit growth",
+      "Monetary policy transmission",
+      "Risk weight",
+      "Non-performing asset"
+    ]
+  },
+  {
+    "id": "non-performing-asset",
+    "term": "Non-performing asset",
+    "cat": "banking",
+    "level": "b",
+    "aliases": [
+      "NPA",
+      "NPAs",
+      "bad loan",
+      "bad loans",
+      "non-performing loan",
+      "NPL"
+    ],
+    "hl": [
+      "non-performing asset",
+      "non-performing assets",
+      "non performing asset",
+      "non performing assets",
+      "non-performing loan",
+      "non-performing loans",
+      "bad loan",
+      "bad loans"
+    ],
+    "abbr": [
+      "NPA",
+      "NPAs",
+      "NPLs"
+    ],
+    "short": "A loan whose borrower has not paid interest or instalments for over 90 days, so it has stopped earning money for the lender.",
+    "kid": "You lent your friend a toy car and he promised to give it back soon. Weeks pass and he still hasn't, and you start to worry you may never see it again.",
+    "detail": "A non-performing asset (NPA) is a loan or advance where interest or principal remains overdue for more than 90 days, under the RBI's income recognition and asset classification rules. For farm loans the test is linked to crop seasons, and a cash credit or overdraft account becomes an NPA if it stays out of order for 90 days. Once a loan is an NPA, the bank stops counting unpaid interest as income and must set aside provisions, which rise as the loan ages from substandard to doubtful to loss. NPAs hurt profits, eat into capital and limit fresh lending, which is why India's bad-loan cycle of 2015 to 2018, exposed by the RBI's asset quality review, mattered for the whole economy. A common confusion: an NPA is not automatically a loss; banks can still recover money through restructuring, sale of collateral or the Insolvency and Bankruptcy Code.",
+    "example": "Say a borrower with ₹10 lakh outstanding on a loan at 9.6% stops paying. Once the dues stay unpaid for 90 days, the bank classifies the loan as an NPA, stops booking the ₹8,000 of monthly interest as income, and, under the norms as of 2025, sets aside at least 15% of the amount, or ₹1.5 lakh, if the loan is secured.",
+    "formula": "",
+    "related": [
+      "Gross NPA",
+      "Net NPA",
+      "Provision coverage ratio",
+      "Special mention account",
+      "Insolvency and Bankruptcy Code",
+      "Asset quality review"
+    ]
+  },
+  {
+    "id": "gross-npa",
+    "term": "Gross NPA",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "GNPA",
+      "gross non-performing assets",
+      "gross NPA ratio"
+    ],
+    "hl": [
+      "gross npa",
+      "gross npas",
+      "gross npa ratio",
+      "gross non-performing assets",
+      "gross non-performing asset",
+      "gross non-performing asset ratio",
+      "gross non-performing loans",
+      "gross bad loans"
+    ],
+    "abbr": [
+      "GNPA",
+      "GNPAs"
+    ],
+    "short": "The total of a bank's bad loans before deducting money set aside for losses, often shown as a percentage of all its loans.",
+    "kid": "Count every toy you lent that has not come back for a long time. That whole pile, before you think about which ones you have already given up on, is the gross number.",
+    "detail": "Gross NPA is the total outstanding amount of all loans classified as non-performing, with no deduction for provisions. The gross NPA ratio divides this by gross advances and is the headline measure of a bank's asset quality, published every quarter and aggregated by the RBI in its Financial Stability Report. The ratio rises when new loans turn bad (slippages) and falls through recoveries, upgrades and write-offs. For India's scheduled commercial banks it peaked above 11% around March 2018 and fell below 3% by March 2024. A common confusion: a falling gross NPA ratio is not always genuine improvement; it can come from writing off bad loans or from a fast-growing loan book that enlarges the denominator, so check slippages and write-offs too, and compare it with net NPA and the provision coverage ratio.",
+    "example": "Say ABC Bank has gross advances of ₹2 lakh crore, of which ₹6,000 crore are NPAs, a gross NPA ratio of 6,000 / 2,00,000 = 3%. If it writes off ₹2,000 crore of those bad loans, gross NPAs fall to ₹4,000 crore and the ratio to 4,000 / 1,98,000, about 2.02%, without a rupee being recovered.",
+    "formula": "Gross NPA ratio = Gross NPAs / Gross advances x 100",
+    "related": [
+      "Non-performing asset",
+      "Net NPA",
+      "Provision coverage ratio",
+      "Slippage ratio",
+      "Write-off",
+      "Advances"
+    ]
+  },
+  {
+    "id": "net-npa",
+    "term": "Net NPA",
+    "cat": "banking",
+    "level": "i",
+    "aliases": [
+      "NNPA",
+      "net non-performing assets",
+      "net NPA ratio"
+    ],
+    "hl": [
+      "net npa",
+      "net npas",
+      "net npa ratio",
+      "net non-performing assets",
+      "net non-performing asset",
+      "net non-performing asset ratio",
+      "net bad loans"
+    ],
+    "abbr": [
+      "NNPA",
+      "NNPAs"
+    ],
+    "short": "A bank's bad loans minus the money already set aside to cover losses on them, often shown as a percentage of net loans.",
+    "kid": "You lent ten toys that have not come back, but you have already saved up to replace seven. Only three toys are still a real worry.",
+    "detail": "Net NPA is gross NPAs minus the provisions a bank holds against them, along with a few other deductions such as interest held in suspense and guarantee claims received. The net NPA ratio divides this by net advances, which are gross advances minus those provisions. It shows how much of the bad-loan problem is still unprovided and could hit future profits or capital. A bank with a 4% gross NPA ratio but a 0.5% net NPA ratio has already absorbed most of the expected loss, while one at 4% gross and 2.5% net still carries a large exposure. Indian banks' net NPA ratio fell well below 1% by 2024 as provisions caught up with old bad loans. A common confusion: a low net NPA does not mean the bad loans were recovered; it can simply mean they were provided for, and the provision coverage ratio links the two measures.",
+    "example": "Say ABC Bank has gross advances of ₹1 lakh crore, gross NPAs of ₹4,000 crore and provisions of ₹3,000 crore against them. Net NPA = 4,000 - 3,000 = ₹1,000 crore; net advances = 1,00,000 - 3,000 = ₹97,000 crore, so the net NPA ratio is 1,000 / 97,000, about 1.03%.",
+    "formula": "Net NPA = Gross NPAs - Provisions held against them; Net NPA ratio = Net NPA / Net advances x 100",
+    "related": [
+      "Gross NPA",
+      "Non-performing asset",
+      "Provision coverage ratio",
+      "Advances",
+      "Provisions"
+    ]
+  }
+]

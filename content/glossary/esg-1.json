@@ -1,0 +1,651 @@
+[
+  {
+    "id": "esg",
+    "term": "ESG",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [
+      "Environmental, social and governance",
+      "ESG investing"
+    ],
+    "hl": [
+      "environmental, social and governance",
+      "esg investing",
+      "esg investors",
+      "esg factors",
+      "esg criteria",
+      "esg disclosures",
+      "esg norms",
+      "esg compliance"
+    ],
+    "abbr": [
+      "ESG"
+    ],
+    "short": "A way of judging companies on their environmental impact, how they treat people, and how honestly they are run, alongside their profits.",
+    "kid": "A good friend does more than share sweets. They keep the playground clean, are kind to everyone and play fair. This checks whether a company is that kind of friend.",
+    "detail": "ESG stands for environmental, social and governance: three groups of non-financial factors used to judge how a company affects, and is affected by, the world around it. Environmental covers emissions, energy, water and waste; social covers employees, customers, suppliers and communities; governance covers board independence, executive pay, shareholder rights and honest accounts. Investors use ESG analysis to spot long-term risks that financial statements miss, such as a carbon tax hitting a cement maker or weak governance ahead of a fraud. The term was popularised by a 2004 UN-backed report, Who Cares Wins. In India, under SEBI rules as of 2025, the top 1,000 listed companies by market capitalisation must publish a Business Responsibility and Sustainability Report (BRSR). The common confusion is treating ESG as charity: mainstream ESG analysis is mostly about financial risk, and a high-ESG company is not automatically a good investment.",
+    "example": "Say two cement makers, ABC Ltd and XYZ Ltd, each make 10 lakh tonnes of cement and an operating profit of ₹500 crore a year. ABC emits 0.8 tonnes of CO2 per tonne of cement and XYZ emits 0.6. A carbon charge of ₹1,000 per tonne of CO2 would cost ABC ₹80 crore (16% of profit) and XYZ ₹60 crore (12%), exactly the kind of risk ESG analysis tries to flag.",
+    "formula": "",
+    "related": [
+      "Sustainable finance",
+      "ESG rating",
+      "ESG fund",
+      "BRSR",
+      "Greenwashing",
+      "Stewardship code"
+    ]
+  },
+  {
+    "id": "sustainable-finance",
+    "term": "Sustainable finance",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [
+      "Green finance"
+    ],
+    "hl": [
+      "sustainable finance",
+      "sustainable financing",
+      "green finance",
+      "green financing"
+    ],
+    "abbr": [],
+    "short": "Money raised, lent or invested in ways that support environmental and social goals, such as cutting pollution, while still earning a financial return.",
+    "kid": "Your class has a big box of crayons to give out. You can hand them to friends who will scribble on the walls, or to friends who will make cards for sick children. This is choosing the second group, on purpose.",
+    "detail": "Sustainable finance means bringing environmental, social and governance considerations into lending, investing, insurance and fundraising decisions. It includes green bonds and loans for clean energy, social bonds for housing or healthcare, sustainability-linked debt, ESG funds, and climate-risk management at banks. Green finance is the environmental subset, focused on climate and nature. It matters because climate change and social stress create financial risks, such as stranded coal assets or flood losses, and because the energy transition needs very large investment. In India, the government has issued sovereign green bonds since 2023, the RBI has a framework for banks to accept green deposits, and the finance ministry released a draft climate finance taxonomy in 2025. The common confusion is that sustainable finance means lower returns or charity: most of it is ordinary commercial finance with an extra sustainability test.",
+    "example": "Say a bank lends ₹10,000 crore in a year, of which ₹1,500 crore goes to rooftop solar, electric buses and energy-efficient buildings. Its sustainable-finance share of new lending is ₹1,500 crore / ₹10,000 crore = 15%.",
+    "formula": "",
+    "related": [
+      "ESG",
+      "Green bond",
+      "Climate finance",
+      "Transition finance",
+      "Social bond",
+      "Impact investing"
+    ]
+  },
+  {
+    "id": "esg-rating",
+    "term": "ESG rating",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "ESG score",
+      "Sustainability rating"
+    ],
+    "hl": [
+      "esg rating",
+      "esg ratings",
+      "esg score",
+      "esg scores",
+      "sustainability rating",
+      "sustainability ratings",
+      "esg rating provider",
+      "esg rating providers",
+      "esg rating agency",
+      "esg rating agencies"
+    ],
+    "abbr": [],
+    "short": "A score or grade from a specialist firm judging how well a company manages environmental, social and governance risks and issues.",
+    "kid": "Your teacher gives stars for being tidy, being kind and following the class rules. This is a star chart like that, but for a company.",
+    "detail": "An ESG rating is a provider's assessment of a company's exposure to, and management of, environmental, social and governance factors, shown as a letter grade, score or risk level. Major global providers include MSCI, which grades firms from AAA to CCC against industry peers, Sustainalytics, which scores unmanaged ESG risk, and S&P Global. Asset managers use ratings to build ESG funds and indices, and companies with weak ratings may face exclusion or higher funding costs. In India, SEBI has regulated ESG rating providers since 2023 and requires them to disclose their methods. The key confusion: most ratings measure how ESG issues could hurt the company's own finances, not how much good the company does for the world. Ratings from different providers also disagree far more than credit ratings do, so a firm can look strong on one and weak on another.",
+    "example": "Say a rater scores ABC Ltd 70 on environment, 60 on social and 80 on governance, with weights of 50%, 30% and 20% for its industry. The overall score is 0.5 × 70 + 0.3 × 60 + 0.2 × 80 = 35 + 18 + 16 = 69.",
+    "formula": "ESG score = (wE × E score) + (wS × S score) + (wG × G score), with pillar weights that vary by industry and sum to 1",
+    "related": [
+      "ESG",
+      "ESG fund",
+      "Credit rating",
+      "Greenwashing",
+      "BRSR",
+      "Negative screening"
+    ]
+  },
+  {
+    "id": "esg-fund",
+    "term": "ESG fund",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [
+      "Sustainable fund",
+      "ESG mutual fund"
+    ],
+    "hl": [
+      "esg fund",
+      "esg funds",
+      "esg mutual fund",
+      "esg mutual funds",
+      "esg scheme",
+      "esg schemes",
+      "esg etf",
+      "esg etfs",
+      "sustainable fund",
+      "sustainable funds"
+    ],
+    "abbr": [],
+    "short": "A mutual fund or ETF that picks its investments using environmental, social and governance criteria as well as normal financial analysis.",
+    "kid": "When you pack a lunchbox for a class picnic, you might choose only foods that are healthy and safe for everyone. This is a basket packed the same careful way, with companies instead of food.",
+    "detail": "An ESG fund is a pooled investment vehicle, usually a mutual fund or exchange-traded fund, that follows a stated ESG strategy when choosing holdings. Strategies include excluding harmful sectors, favouring best-in-class companies, tilting towards high ESG ratings, or targeting themes such as clean energy. In India, ESG schemes are a type of thematic fund; under SEBI rules as of 2025 they must invest at least 80% of assets in line with their stated ESG strategy. In Europe, the SFDR rules classify funds as Article 8 (promoting environmental or social characteristics) or Article 9 (having sustainable investment as the objective). The common confusion is assuming an ESG fund holds only spotless companies: many hold the same large technology and bank stocks as ordinary index funds, so investors should read the portfolio, not just the label.",
+    "example": "Say an ESG fund manages ₹1,000 crore. Under an 80% rule, at least ₹800 crore must sit in holdings that meet its stated ESG strategy, leaving at most ₹200 crore for cash and other holdings.",
+    "formula": "",
+    "related": [
+      "ESG",
+      "Thematic fund",
+      "ESG rating",
+      "Negative screening",
+      "Greenwashing",
+      "Exchange-traded fund"
+    ]
+  },
+  {
+    "id": "negative-screening",
+    "term": "Negative screening",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Exclusionary screening",
+      "Exclusionary screens"
+    ],
+    "hl": [
+      "negative screening",
+      "exclusionary screening",
+      "exclusionary screens"
+    ],
+    "abbr": [],
+    "short": "Leaving certain companies or industries, such as tobacco, weapons or coal, out of a portfolio because they fail chosen ethical or ESG tests.",
+    "kid": "When you share sweets at a party, you leave out the ones with nuts so nobody gets ill. This is leaving out the things you do not want in your basket.",
+    "detail": "Negative, or exclusionary, screening is the oldest and most common responsible-investing strategy: the investor removes companies from its eligible universe if they earn revenue from activities it rejects, or if they breach norms such as UN principles on human rights. Typical exclusions are tobacco, controversial weapons, thermal coal and gambling, often with a revenue threshold such as more than 10% of sales. Norway's government pension fund, the world's largest sovereign wealth fund, publishes the companies it excludes. Positive screening is the opposite approach: instead of removing the worst, it actively selects the companies that score best on ESG, often the best in each sector. The common confusion is thinking screening alone makes a portfolio sustainable: excluding a few sectors changes little about the remaining holdings, and a screened portfolio can carry extra sector concentration and tracking error against its benchmark.",
+    "example": "Say a fund's universe has 500 companies, and 40 fail its screen because more than 10% of their revenue comes from tobacco, alcohol or thermal coal. The fund can choose only from the remaining 460, which is 92% of the universe.",
+    "formula": "",
+    "related": [
+      "ESG fund",
+      "ESG",
+      "Impact investing",
+      "ESG rating",
+      "Tracking error",
+      "Stewardship code"
+    ]
+  },
+  {
+    "id": "impact-investing",
+    "term": "Impact investing",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Impact investment"
+    ],
+    "hl": [
+      "impact investing",
+      "impact investment",
+      "impact investments",
+      "impact investor",
+      "impact investors",
+      "impact fund",
+      "impact funds"
+    ],
+    "abbr": [],
+    "short": "Investing with the deliberate goal of creating a measurable social or environmental benefit, while also expecting some financial return.",
+    "kid": "You help plant a lemon tree in a dry village. The village gets shade and lemons, and you get a glass of lemonade too. You planted it mainly to help, and you go back to check that it grew.",
+    "detail": "Impact investing means putting money into companies, funds or projects with the intention of generating positive, measurable social or environmental results alongside a financial return. The Global Impact Investing Network (GIIN) stresses intentionality, measuring and reporting the impact, and a return expectation that can range from below-market to market-rate. Typical areas include renewable energy, affordable housing, microfinance, healthcare and agriculture, often in emerging markets; India is a major market, with funds backing financial inclusion, clean energy and farm-tech start-ups. It differs from ESG investing, which mostly screens listed companies for risk, and from philanthropy, which expects no money back. The common confusion is calling any green-sounding investment impact investing: buying a solar company's shares on the stock exchange adds little new capital, whereas impact investors aim for additionality, meaning the good outcome would not have happened without their money.",
+    "example": "Say an impact fund lends ₹50 crore to a hypothetical rural solar company that installs home systems costing ₹25,000 each. That money finances 20,000 systems, and the fund reports both its interest income and the number of households that gained electricity.",
+    "formula": "",
+    "related": [
+      "ESG",
+      "Social bond",
+      "Social Stock Exchange",
+      "Blended finance",
+      "Microfinance",
+      "Sustainable finance"
+    ]
+  },
+  {
+    "id": "greenwashing",
+    "term": "Greenwashing",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [],
+    "hl": [
+      "greenwashing",
+      "greenwash",
+      "green-washing",
+      "greenwashed"
+    ],
+    "abbr": [],
+    "short": "Making a company, product or fund sound more environmentally friendly than it really is, to win over customers or investors.",
+    "kid": "A boy paints his old, broken toy car green and says it is brand new and good for the planet. It only looks nice; nothing really changed.",
+    "detail": "Greenwashing is any misleading claim about environmental or sustainability credentials, made by companies, banks or fund managers. Common forms are vague labels like eco-friendly with no evidence, promoting one small green project while the core business stays high-emitting, net-zero pledges with no interim plan, and ESG funds whose holdings do not match their marketing. It matters because investors pay for these labels and regulators now punish false claims: in 2023 the US SEC fined DWS, Deutsche Bank's asset manager, $19 million over misstatements about its ESG process. In India, SEBI's rules for green debt securities and ESG mutual funds include disclosure and assurance requirements aimed at preventing greenwashing. The common confusion is equating greenwashing only with outright fraud: much of it is selective or exaggerated disclosure, which is why independent verification and clear taxonomies matter.",
+    "example": "Say XYZ Green Leaders Fund advertises a low-carbon portfolio, yet ₹150 crore of its ₹500 crore portfolio is in coal miners and oil refiners. That is 30% of the fund in high-emitting businesses, a gap between label and holdings that investors or regulators could challenge as greenwashing.",
+    "formula": "",
+    "related": [
+      "ESG",
+      "ESG fund",
+      "Net zero",
+      "Green bond",
+      "ESG rating",
+      "Carbon credit"
+    ]
+  },
+  {
+    "id": "net-zero",
+    "term": "Net zero",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [
+      "Net-zero emissions",
+      "Net zero emissions"
+    ],
+    "hl": [
+      "net zero",
+      "net-zero",
+      "net zero emissions",
+      "net-zero emissions",
+      "net zero target",
+      "net-zero target",
+      "net zero targets",
+      "net-zero targets"
+    ],
+    "abbr": [],
+    "short": "A state where the greenhouse gases a company or country releases are balanced by an equal amount it removes from the air.",
+    "kid": "If you spill ten drops of juice on the table, you wipe up ten drops. The best plan is to spill less first, and then wipe up whatever is left.",
+    "detail": "Net zero means cutting greenhouse gas emissions as close to zero as possible and balancing any residual emissions with an equal amount of lasting removals, such as new forests or direct air capture. Limiting warming to 1.5°C, the Paris Agreement's stretch goal, requires global carbon dioxide emissions to reach net zero around 2050. India announced a net-zero target of 2070 at COP26 in 2021, China targets 2060, and the EU and UK 2050. Investors scrutinise such pledges because they imply heavy spending on new technology and the risk of stranded high-carbon assets. The common confusion is with carbon neutral: carbon neutrality is often claimed by buying offsets for today's emissions, sometimes covering only carbon dioxide, while credible net-zero standards, such as the Science Based Targets initiative's, require cuts of around 90% across all scopes before neutralising the rest.",
+    "example": "Say ABC Ltd emits 1,00,000 tonnes of CO2 equivalent today. To reach net zero it cuts emissions by 90% to 10,000 tonnes and pays for 10,000 tonnes of permanent removals, so its net emissions are 10,000 − 10,000 = 0.",
+    "formula": "Net emissions = Gross emissions − Removals; net zero is reached when this equals 0",
+    "related": [
+      "Scope 1 emissions",
+      "Scope 3 emissions",
+      "Carbon credit",
+      "Paris Agreement",
+      "Science Based Targets initiative",
+      "Transition finance"
+    ]
+  },
+  {
+    "id": "scope-1-emissions",
+    "term": "Scope 1 emissions",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Direct emissions"
+    ],
+    "hl": [
+      "scope 1 emissions",
+      "scope-1 emissions",
+      "scope one emissions",
+      "direct emissions",
+      "direct ghg emissions",
+      "direct greenhouse gas emissions"
+    ],
+    "abbr": [],
+    "short": "Greenhouse gases released directly from sources a company owns or controls, such as its own furnaces, boilers and vehicles.",
+    "kid": "When you cook, the smoke from your own kitchen chimney is your smoke. This counts only the smoke that comes out of your own house.",
+    "detail": "Scope 1 emissions are the direct greenhouse gas emissions from sources owned or controlled by a company, as defined by the Greenhouse Gas Protocol, the standard used worldwide for carbon accounting. They include fuel burned in boilers, furnaces and company vehicles, chemical process emissions such as those released when making cement or steel, and leaks of refrigerant gases. Emissions are reported in tonnes of carbon dioxide equivalent (CO2e), which converts gases like methane into the warming effect of carbon dioxide. For heavy industry, Scope 1 is usually the largest and most costly category, because it is directly exposed to carbon taxes and emissions trading. In India, large listed companies report Scope 1 figures in their BRSR. The common confusion is counting electricity use here: emissions from power bought from the grid are Scope 2, even though the company itself uses the electricity.",
+    "example": "Say ABC Logistics burns 10 lakh litres of diesel in its own trucks in a year. At an emission factor of 2.68 kg of CO2 per litre, its Scope 1 emissions from that fuel are 10,00,000 × 2.68 = 26,80,000 kg, or 2,680 tonnes.",
+    "formula": "Emissions (tCO2e) = Activity data (e.g. litres of fuel burned) × Emission factor",
+    "related": [
+      "Scope 2 emissions",
+      "Scope 3 emissions",
+      "Net zero",
+      "Carbon tax",
+      "Emissions trading system",
+      "BRSR"
+    ]
+  },
+  {
+    "id": "scope-2-emissions",
+    "term": "Scope 2 emissions",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Indirect energy emissions",
+      "Purchased electricity emissions"
+    ],
+    "hl": [
+      "scope 2 emissions",
+      "scope-2 emissions",
+      "scope two emissions",
+      "indirect energy emissions",
+      "purchased electricity emissions"
+    ],
+    "abbr": [],
+    "short": "Greenhouse gases released at power plants to make the electricity, steam, heat or cooling that a company buys and uses.",
+    "kid": "When you switch on a lamp, smoke may puff out of a faraway building that makes the electricity. Some of that smoke counts as yours, because the light was for you.",
+    "detail": "Scope 2 emissions are indirect emissions from generating the electricity, steam, heating and cooling that a company buys and consumes. The gases physically leave the power plant's chimney, but the Greenhouse Gas Protocol assigns them to the user because its demand causes them. There are two methods. The location-based method multiplies electricity use by the average emission factor of the local grid, which in India is published by the Central Electricity Authority and is high because coal dominates generation. The market-based method uses the emission factor of the power the company has contractually chosen, so buying renewable energy through power purchase agreements or certificates lowers it. This is why many Indian IT firms and data-centre operators sign large solar and wind contracts. The common confusion: electricity from a company's own diesel generator is Scope 1, not Scope 2.",
+    "example": "Say XYZ Ltd uses 50,000 megawatt-hours of grid power a year and the grid emission factor is 0.7 tonnes of CO2 per MWh. Its location-based Scope 2 emissions are 50,000 × 0.7 = 35,000 tonnes. If it moves 40% of that use to contracted solar power counted at zero, and the rest keeps the 0.7 factor, market-based Scope 2 falls to 30,000 × 0.7 = 21,000 tonnes.",
+    "formula": "Scope 2 emissions (tCO2) = Electricity used (MWh) × Emission factor (tCO2 per MWh)",
+    "related": [
+      "Scope 1 emissions",
+      "Scope 3 emissions",
+      "Power purchase agreement",
+      "Renewable energy certificate",
+      "Net zero"
+    ]
+  },
+  {
+    "id": "scope-3-emissions",
+    "term": "Scope 3 emissions",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Value chain emissions"
+    ],
+    "hl": [
+      "scope 3 emissions",
+      "scope-3 emissions",
+      "scope three emissions",
+      "value chain emissions",
+      "value-chain emissions",
+      "supply chain emissions"
+    ],
+    "abbr": [],
+    "short": "All other indirect greenhouse gases linked to a company, released by its suppliers and by customers using or discarding its products.",
+    "kid": "When you bake a cake, the farm that grew the wheat made some smoke, and the cars that brought your guests made some smoke too. This counts all of that smoke, not just your oven.",
+    "detail": "Scope 3 emissions are all indirect emissions in a company's value chain that are not counted in Scope 2. The Greenhouse Gas Protocol sorts them into 15 categories: upstream, such as purchased goods, transport and business travel, and downstream, such as the use and disposal of sold products. For many companies Scope 3 is by far the largest part of the footprint. For an oil producer, burning the fuel it sells dwarfs its own operations; for a bank, the financed emissions of its loans and investments are Scope 3. Investors watch Scope 3 because it reveals exposure to the energy transition that Scope 1 and 2 hide. It is also the hardest to measure, relying on supplier data and estimates, and the same tonne can appear in several companies' Scope 3. The common confusion is assuming low Scope 1 and 2 means a low-carbon business.",
+    "example": "Say ABC Motors reports Scope 1 emissions of 50,000 tonnes, Scope 2 of 1.5 lakh tonnes and Scope 3 of 38 lakh tonnes, mostly from customers driving its petrol cars. Its total footprint is 40 lakh tonnes, of which Scope 3 is 38 / 40 = 95%.",
+    "formula": "Total footprint = Scope 1 + Scope 2 + Scope 3; Scope 3 share = Scope 3 / Total footprint",
+    "related": [
+      "Scope 1 emissions",
+      "Scope 2 emissions",
+      "Net zero",
+      "Financed emissions",
+      "Carbon footprint"
+    ]
+  },
+  {
+    "id": "carbon-credit",
+    "term": "Carbon credit",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [
+      "Carbon offset",
+      "Carbon credits"
+    ],
+    "hl": [
+      "carbon credit",
+      "carbon credits",
+      "carbon offset",
+      "carbon offsets",
+      "carbon offsetting",
+      "carbon credit certificate",
+      "carbon credit certificates"
+    ],
+    "abbr": [],
+    "short": "A tradable certificate showing that one tonne of carbon dioxide, or an equal amount of another greenhouse gas, was avoided or removed.",
+    "kid": "Your friend plants a tree and gets a gold star for cleaning the air. If you made some smoke, you can swap her a toy for that gold star, to show your smoke was balanced out.",
+    "detail": "A carbon credit represents one tonne of CO2 equivalent that a project has avoided or removed, verified under a standard such as Verra or Gold Standard, or under a government scheme. Projects include renewable energy, clean cookstoves, forest protection, methane capture and direct air capture. A buyer that retires a credit can count it as a carbon offset against its own emissions. Credits differ from allowances in an emissions trading system: an allowance is a permit to emit under a cap, while a credit comes from a project that reduces or removes emissions. India's Carbon Credit Trading Scheme issues Carbon Credit Certificates, each worth one tonne. The common confusion is that all credits are equal: quality depends on additionality, permanence and honest baselines, and studies have found some forestry credits overstated their impact, so prices vary widely by type and vintage.",
+    "example": "Say ABC Ltd emits 10,000 tonnes of CO2e a year and cannot yet cut the last 2,000 tonnes. It buys and retires 2,000 credits at a hypothetical ₹1,200 each, spending 2,000 × ₹1,200 = ₹24 lakh to offset that remainder.",
+    "formula": "1 carbon credit = 1 tonne of CO2 equivalent avoided or removed",
+    "related": [
+      "Carbon market",
+      "Emissions trading system",
+      "Net zero",
+      "Greenwashing",
+      "Carbon tax"
+    ]
+  },
+  {
+    "id": "carbon-market",
+    "term": "Carbon market",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Carbon trading",
+      "Voluntary carbon market",
+      "Carbon Credit Trading Scheme",
+      "CCTS"
+    ],
+    "hl": [
+      "carbon market",
+      "carbon markets",
+      "carbon trading",
+      "voluntary carbon market",
+      "voluntary carbon markets",
+      "compliance carbon market",
+      "compliance carbon markets",
+      "carbon credit trading scheme"
+    ],
+    "abbr": [
+      "CCTS"
+    ],
+    "short": "A marketplace where carbon credits or emission allowances are bought and sold, which puts a price on releasing greenhouse gases.",
+    "kid": "Every child in class gets a few tickets for making noise. A quiet child can swap spare tickets with a chatty one, so the whole room stays calmer.",
+    "detail": "A carbon market is any system for trading units that each stand for one tonne of CO2 equivalent. Compliance markets are created by law: emissions trading systems such as the EU ETS require covered firms to hold allowances for their emissions. Voluntary carbon markets let companies and individuals buy project-based credits to meet their own climate pledges, with no legal duty. Under Article 6 of the Paris Agreement, countries can also trade emission reductions with each other. India's Carbon Credit Trading Scheme (CCTS), notified in 2023, has, under the rules as of 2025, a compliance side setting greenhouse-gas intensity targets for sectors such as aluminium, cement and pulp and paper, plus an offset side for voluntary projects, with certificates to be traded on power exchanges. The common confusion is to treat all carbon markets as one: prices, rules and credit quality differ hugely between compliance and voluntary markets.",
+    "example": "Say a cement plant's target is 0.60 tonnes of CO2 per tonne of cement. If it makes 10 lakh tonnes at 0.57, it beats the target by 0.03 × 10,00,000 = 30,000 tonnes and can earn 30,000 certificates to sell; a plant missing its target by the same margin would have to buy 30,000.",
+    "formula": "Certificates earned (or owed) = (Target intensity − Actual intensity) × Output",
+    "related": [
+      "Carbon credit",
+      "Emissions trading system",
+      "Carbon tax",
+      "Net zero",
+      "Carbon Border Adjustment Mechanism"
+    ]
+  },
+  {
+    "id": "emissions-trading-system",
+    "term": "Emissions trading system",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "ETS",
+      "Cap and trade",
+      "EU ETS"
+    ],
+    "hl": [
+      "emissions trading system",
+      "emissions trading scheme",
+      "emission trading system",
+      "emission trading scheme",
+      "cap-and-trade",
+      "cap and trade",
+      "eu ets",
+      "carbon allowance",
+      "carbon allowances",
+      "emission allowances",
+      "emissions allowances",
+      "carbon permits"
+    ],
+    "abbr": [
+      "ETS"
+    ],
+    "short": "A government scheme that caps total emissions, issues permits up to that cap, and lets companies buy and sell those permits.",
+    "kid": "The teacher hands out only 20 noise tickets for the whole class each day, and a few less every week. Children who stay quiet can swap their spare tickets with chatty ones.",
+    "detail": "An emissions trading system, also called cap and trade, sets a legal limit (the cap) on total emissions from covered sectors and creates that many allowances, each permitting one tonne of CO2 equivalent. Allowances are auctioned or handed out free, and every year firms must surrender enough to cover their verified emissions. Firms that can cut cheaply sell spare allowances, while those facing high costs buy them, so emissions fall where it is cheapest. The cap shrinks over time, which tends to push the allowance price up. The EU ETS, launched in 2005, is the best-known example; China's national ETS, started in 2021, covers more emissions than any other. India's CCTS uses intensity targets rather than an absolute cap. The common confusion with a carbon tax: an ETS fixes the quantity of emissions and lets the price float, while a tax fixes the price and lets the quantity adjust.",
+    "example": "Say a hypothetical European steel plant receives 80,000 free allowances but emits 100,000 tonnes in a year. It must buy 20,000 more; at an assumed €70 per allowance that costs 20,000 × €70 = €1.4 million.",
+    "formula": "Allowances to buy = Verified emissions − Allowances held; Compliance cost = Allowances to buy × Allowance price",
+    "related": [
+      "Carbon market",
+      "Carbon tax",
+      "Carbon credit",
+      "Carbon Border Adjustment Mechanism",
+      "Externalities"
+    ]
+  },
+  {
+    "id": "carbon-tax",
+    "term": "Carbon tax",
+    "cat": "esg",
+    "level": "b",
+    "aliases": [
+      "Carbon levy"
+    ],
+    "hl": [
+      "carbon tax",
+      "carbon taxes",
+      "carbon levy",
+      "carbon levies"
+    ],
+    "abbr": [],
+    "short": "A tax charged on each tonne of greenhouse gas released, usually collected on fossil fuels, to make polluting more expensive.",
+    "kid": "If every sweet wrapper you drop costs you one sticker, you will soon start using the bin. This makes smoke cost something, so people make less of it.",
+    "detail": "A carbon tax is a government levy per tonne of CO2 equivalent, usually collected on coal, oil and gas according to their carbon content. It is the simplest form of carbon pricing, the broader idea of making polluters pay for the damage, or externality, their emissions cause; the other main form is an emissions trading system. Finland introduced the first carbon tax in 1990 and Sweden followed in 1991. India has no explicit carbon tax, but it levied a clean energy cess on coal, raised to ₹400 per tonne in 2016 and later folded into the GST compensation cess, which acted as an implicit carbon price. The key confusion: a tax gives price certainty but no guaranteed emissions outcome, while cap and trade guarantees quantity but not price. Rates vary widely and change often, so check current figures.",
+    "example": "Say a country sets a carbon tax of $50 per tonne of CO2. Burning one litre of petrol releases about 2.3 kg of CO2, so the tax adds 2.3 / 1,000 × $50 = $0.115, about 11.5 cents, per litre. A factory emitting 20,000 tonnes a year would pay 20,000 × $50 = $1 million.",
+    "formula": "Carbon tax bill = Emissions (tonnes of CO2e) × Tax rate per tonne",
+    "related": [
+      "Emissions trading system",
+      "Carbon market",
+      "Externalities",
+      "Carbon Border Adjustment Mechanism",
+      "Pigouvian tax"
+    ]
+  },
+  {
+    "id": "carbon-border-adjustment-mechanism",
+    "term": "Carbon Border Adjustment Mechanism",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "CBAM",
+      "Carbon border tax"
+    ],
+    "hl": [
+      "carbon border adjustment mechanism",
+      "carbon border adjustment",
+      "carbon border tax",
+      "carbon border taxes",
+      "carbon border levy",
+      "eu carbon border tax"
+    ],
+    "abbr": [
+      "CBAM"
+    ],
+    "short": "An EU charge on imports of carbon-heavy goods such as steel and cement, matching the carbon price that EU producers pay at home.",
+    "kid": "If children in your class must tidy up after playing, a visitor who comes to play must tidy up too. That way the rule is fair for everyone.",
+    "detail": "The Carbon Border Adjustment Mechanism is the European Union's charge on the emissions embedded in certain imports, designed to prevent carbon leakage, where production shifts to countries with weaker climate rules. It covers cement, iron and steel, aluminium, fertilisers, electricity and hydrogen. After a reporting-only transitional phase from October 2023 through 2025, the definitive phase began in January 2026. Under the rules as of 2025, EU importers must surrender CBAM certificates priced off the EU ETS allowance price, reduced for any carbon price paid abroad. It phases in as free EU ETS allowances are withdrawn through 2034. India is directly affected, since the EU is a major market for its steel and aluminium, and Indian officials have called it a unilateral trade barrier. The common confusion is that exporters pay it directly: legally the EU importer pays, though the cost usually flows back to exporters through lower prices.",
+    "example": "Say an Indian mill ships 10,000 tonnes of steel to Europe with embedded emissions of 2.5 tonnes of CO2 per tonne, or 25,000 tonnes in all. At an assumed certificate price of €80 a tonne, and ignoring free-allocation adjustments and any carbon price paid in India, the EU importer owes 25,000 × €80 = €2 million, or €200 per tonne of steel.",
+    "formula": "CBAM cost = (Embedded emissions in tCO2e × CBAM certificate price) − Carbon price already paid abroad on those emissions, further reduced for EU free allocation during the phase-in",
+    "related": [
+      "Emissions trading system",
+      "Carbon tax",
+      "Carbon market",
+      "Carbon leakage",
+      "Scope 1 emissions"
+    ]
+  },
+  {
+    "id": "sustainability-linked-bond",
+    "term": "Sustainability-linked bond",
+    "cat": "esg",
+    "level": "a",
+    "aliases": [
+      "SLB",
+      "Sustainability-linked loan",
+      "SLL"
+    ],
+    "hl": [
+      "sustainability-linked bond",
+      "sustainability-linked bonds",
+      "sustainability linked bond",
+      "sustainability linked bonds",
+      "sustainability-linked loan",
+      "sustainability-linked loans",
+      "sustainability linked loan",
+      "sustainability linked loans"
+    ],
+    "abbr": [
+      "SLL",
+      "SLLs"
+    ],
+    "short": "A bond whose interest rate usually rises if the issuer misses pre-set sustainability targets, such as cutting emissions, by an agreed date.",
+    "kid": "You promise to tidy your room by Sunday. If you do not, you must give your brother one extra sweet. The promise is about the tidy room, not about what you do with your sweets.",
+    "detail": "A sustainability-linked bond (SLB) is a general-purpose bond whose financial terms depend on the issuer meeting sustainability performance targets, measured by chosen key performance indicators such as emissions intensity or renewable-energy share, by a set observation date. If a target is missed, the coupon usually steps up, often by 0.25 percentage points, until maturity. Unlike a green or social bond, the money is not ring-fenced for specific projects; the issuer can use it for anything, and the commitment lies in company-wide performance. ICMA's Sustainability-Linked Bond Principles set the market standard, and Italy's Enel issued the first such bond in 2019. A sustainability-linked loan (SLL) works the same way for bank loans, with the margin moving up or down. The common criticism is weak design: easy targets, small step-ups and call options that let issuers repay before any penalty applies.",
+    "example": "Say ABC Ltd issues a ₹500 crore SLB at a 7.5% coupon, with a 0.25 percentage-point step-up if it fails to cut emissions intensity by 30% by 2028. If it misses, the coupon becomes 7.75%, raising annual interest from ₹37.5 crore to ₹38.75 crore, an extra ₹1.25 crore a year.",
+    "formula": "Coupon after observation date = Initial coupon + Step-up (applies only if the target is missed)",
+    "related": [
+      "Green bond",
+      "Social bond",
+      "Transition finance",
+      "Step-up bond",
+      "Coupon",
+      "ESG"
+    ]
+  },
+  {
+    "id": "social-bond",
+    "term": "Social bond",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Social bonds"
+    ],
+    "hl": [
+      "social bond",
+      "social bonds",
+      "social bond framework"
+    ],
+    "abbr": [],
+    "short": "A bond whose money must be spent on projects with clear social benefits, such as affordable housing, healthcare, education or jobs.",
+    "kid": "You collect crayons from your friends and promise to use every one to draw get-well cards for children in hospital. Everyone can check that the crayons really went there.",
+    "detail": "A social bond is a use-of-proceeds bond: the issuer commits to spend the money raised only on eligible social projects, such as affordable housing, healthcare, education, food security, basic infrastructure and jobs for underserved groups, and to report where the funds went and what outcomes followed. ICMA's Social Bond Principles set the global standard. Issuance surged in 2020 as governments and development banks raised money for pandemic relief; the EU's SURE programme alone raised about €98 billion through social bonds. In India, SEBI extended its ESG debt framework to social bonds in 2025, building on its green bond rules. Investors still carry the issuer's normal credit risk, because repayment does not depend on the projects. The common confusion is with a social impact bond, which is not really a bond but a pay-for-success contract where investors are repaid only if a social target is met.",
+    "example": "Say XYZ Housing Finance raises ₹1,000 crore through a social bond and lends it only for affordable homes, at an average of ₹5 lakh per loan. That funds 20,000 home loans, since ₹1,000 crore = ₹1,00,000 lakh and 1,00,000 / 5 = 20,000.",
+    "formula": "",
+    "related": [
+      "Green bond",
+      "Sustainability-linked bond",
+      "Sustainability bond",
+      "Impact investing",
+      "Social Stock Exchange",
+      "Use of proceeds"
+    ]
+  },
+  {
+    "id": "transition-finance",
+    "term": "Transition finance",
+    "cat": "esg",
+    "level": "a",
+    "aliases": [
+      "Transition bond"
+    ],
+    "hl": [
+      "transition finance",
+      "transition financing",
+      "transition bond",
+      "transition bonds",
+      "climate transition bond",
+      "climate transition bonds"
+    ],
+    "abbr": [],
+    "short": "Funding that helps high-emitting companies, such as steel, cement or power producers, cut their emissions step by step towards net zero.",
+    "kid": "A friend who eats lots of sweets cannot stop all at once, so you help him swap one sweet for an apple each week. This helps people change slowly, but for real.",
+    "detail": "Transition finance is money raised to help carbon-intensive companies and sectors, such as steel, cement, power, aviation, shipping and chemicals, decarbonise along a credible path. Many such investments, like an efficiency upgrade at a steel plant or gas replacing coal, do not qualify as green, yet the world cannot reach net zero without them. A transition bond is a use-of-proceeds bond for such projects, while sustainability-linked bonds tie terms to company-wide targets. ICMA's Climate Transition Finance Handbook asks issuers for a science-based strategy, strong governance and transparent reporting. Japan issued the first sovereign climate transition bonds in 2024, and India's draft climate finance taxonomy of 2025 includes transition activities for hard-to-abate sectors. The main risk is transition-washing: labelling business-as-usual spending as transition, or locking in fossil assets for decades, so investors judge the whole decarbonisation plan, not one project.",
+    "example": "Say ABC Steel raises ₹2,000 crore through a transition bond to replace a blast furnace with an electric arc furnace, cutting emissions from 2.5 to 0.7 tonnes of CO2 per tonne of steel. On 20 lakh tonnes of output, annual emissions fall from 50 lakh to 14 lakh tonnes, a 72% cut.",
+    "formula": "",
+    "related": [
+      "Sustainability-linked bond",
+      "Green bond",
+      "Net zero",
+      "Climate finance",
+      "Greenwashing",
+      "Green taxonomy"
+    ]
+  },
+  {
+    "id": "climate-finance",
+    "term": "Climate finance",
+    "cat": "esg",
+    "level": "i",
+    "aliases": [
+      "Climate financing"
+    ],
+    "hl": [
+      "climate finance",
+      "climate financing",
+      "climate finance goal",
+      "loss and damage fund",
+      "new collective quantified goal"
+    ],
+    "abbr": [
+      "NCQG"
+    ],
+    "short": "Money from governments, development banks and private investors used to cut emissions and to help people adapt to climate change.",
+    "kid": "When a storm breaks the little house next door, the families in the big houses help fix it and build it stronger. Countries can help each other in the same way.",
+    "detail": "Climate finance is local, national or international funding, public or private, for mitigation, which cuts emissions, and adaptation, which helps people cope with climate impacts. In UN climate talks it usually means flows from developed to developing countries. In 2009 developed countries pledged $100 billion a year by 2020, a goal the OECD says was first met in 2022. At COP29 in Baku in 2024, countries agreed the New Collective Quantified Goal (NCQG): developed countries are to lead in mobilising at least $300 billion a year by 2035, within a wider call for $1.3 trillion a year from all sources. A separate fund for responding to loss and damage, harm that cannot be adapted to, was agreed at COP27 in 2022 and set up at COP28. India called the NCQG inadequate. The common confusion is treating all climate finance as grants: much of it is loans that must be repaid.",
+    "example": "At COP29 in 2024, the goal for developed countries was raised from $100 billion a year to at least $300 billion a year by 2035, three times the earlier target. If, say, 60% of that $300 billion arrived as loans, $180 billion a year would have to be repaid, which is why developing countries push for more grants.",
+    "formula": "",
+    "related": [
+      "Sustainable finance",
+      "Transition finance",
+      "Green bond",
+      "Net zero",
+      "Paris Agreement",
+      "Blended finance"
+    ]
+  }
+]

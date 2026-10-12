@@ -1,0 +1,828 @@
+[
+  {
+    "id": "corporate-finance",
+    "term": "Corporate finance",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [],
+    "hl": [
+      "corporate finance"
+    ],
+    "abbr": [],
+    "short": "The part of finance that decides how a company raises money, which projects it spends money on, and how it rewards its owners.",
+    "kid": "A lemonade stand has to choose where to get coins for lemons, what to buy, and how to share what is left with the friends who helped. Making those choices well is the whole idea.",
+    "detail": "Corporate finance studies three linked decisions every firm makes. The investment decision asks which projects or assets to put money into, judged with tools such as NPV and IRR. The financing decision asks how to pay for them, through a mix of debt and equity, which sets the firm's cost of capital. The payout decision asks whether to return surplus cash through dividends or buybacks or to reinvest it. The guiding goal is to maximise the long-run value of the firm for its shareholders, not just this year's profit. In India these choices show up in board approvals for capex, rights issues, debenture raisings and dividend policies of listed companies. A common confusion is to treat corporate finance as accounting: accounting records what has happened, while corporate finance uses cash flows, the time value of money and risk to decide what should happen next.",
+    "example": "Say ABC Ltd has ₹50 crore of spare cash. Corporate finance asks whether it should spend ₹30 crore on a new plant expected to earn more than its cost of capital, whether it should borrow for part of that instead of using its own cash, and whether the remaining ₹20 crore should be paid out as dividends or kept for future projects.",
+    "formula": "",
+    "related": [
+      "Capital budgeting",
+      "Capital structure",
+      "Cost of capital",
+      "Dividend policy",
+      "Net present value"
+    ]
+  },
+  {
+    "id": "present-value",
+    "term": "Present value",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "PV",
+      "discounting",
+      "discounted value"
+    ],
+    "hl": [
+      "present value",
+      "present values"
+    ],
+    "abbr": [],
+    "short": "What a sum of money expected in the future is worth today, after allowing for the return you could earn meanwhile.",
+    "kid": "A sweet in your hand today is better than a sweet promised next year, because you can enjoy it now. So a promise of sweets later is worth a little less than sweets right now.",
+    "detail": "Present value converts a future cash flow into today's money by discounting it at a rate that reflects time and risk. Because money available now can be invested to earn a return, ₹1 received later is worth less than ₹1 today; the higher the discount rate or the longer the wait, the smaller the present value. Discounting is simply compounding run in reverse. PV is the building block of almost every valuation: bond prices, loan EMIs, the NPV of projects and DCF valuations of companies are all sums of present values. A common confusion is to treat the discount rate as inflation alone; it should reflect the return available on alternatives of similar risk, which includes inflation, a real return and a risk premium. Another is mismatching periods: monthly cash flows need a monthly rate.",
+    "example": "₹1,10,000 receivable one year from now, discounted at 10%, has a present value of ₹1,10,000 / 1.10 = ₹1,00,000. The same amount received in two years is worth ₹1,10,000 / 1.21 = ₹90,909 (rounded) today.",
+    "formula": "PV = FV / (1 + r)^n, where r is the discount rate per period and n is the number of periods",
+    "related": [
+      "Future value",
+      "Discount rate",
+      "Net present value",
+      "Time value of money",
+      "Discounted cash flow",
+      "Annuity"
+    ]
+  },
+  {
+    "id": "future-value",
+    "term": "Future value",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "FV"
+    ],
+    "hl": [
+      "future value",
+      "future values"
+    ],
+    "abbr": [],
+    "short": "What money invested today will grow to by a future date, when it earns a given return and the earnings are reinvested.",
+    "kid": "If you plant one seed and every plant gives you more seeds to plant, your garden gets bigger each year. This tells you how big the garden will be later.",
+    "detail": "Future value is the amount a sum invested today will reach after a set number of periods at a given rate of return, assuming the returns are reinvested, that is, compounded. It is the mirror image of present value: compounding moves money forward in time, discounting moves it back. The result depends heavily on time and on how often returns compound, which is why long-horizon saving through instruments such as PPF or equity mutual fund SIPs can build large balances. Future value also helps set goals, for example estimating what a retirement corpus will grow to. Two common confusions: using simple interest when the investment actually compounds, and forgetting that a large future amount may buy far less after inflation, so the real future value is what matters for goals.",
+    "example": "₹1,00,000 invested at 8% a year, compounded annually, grows to ₹1,00,000 x 1.08^3 = ₹1,25,971 (rounded) after three years. With simple interest it would reach only ₹1,24,000.",
+    "formula": "FV = PV x (1 + r)^n",
+    "related": [
+      "Present value",
+      "Compound interest",
+      "Time value of money",
+      "Annuity",
+      "Discount rate"
+    ]
+  },
+  {
+    "id": "annuity",
+    "term": "Annuity",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "ordinary annuity",
+      "annuity due",
+      "annuity payments",
+      "annuity plan",
+      "immediate annuity",
+      "deferred annuity"
+    ],
+    "hl": [
+      "annuity",
+      "annuities",
+      "annuity plan",
+      "annuity plans",
+      "annuity payments",
+      "immediate annuity",
+      "deferred annuity",
+      "annuity due"
+    ],
+    "abbr": [],
+    "short": "A series of equal payments made at regular intervals, for a set period or for life, such as loan instalments or a pension.",
+    "kid": "Grandma gives you the same pocket money every Sunday for a whole year. Getting the same amount again and again on a set day is what this word means.",
+    "detail": "An annuity is a stream of equal cash flows paid or received at equal intervals. In an ordinary annuity each payment falls at the end of the period, as with most loan EMIs; in an annuity due it falls at the start, as with rent or insurance premiums, so an annuity due is worth more by one period of interest. The word also names an insurance product: you pay a lump sum or premiums to an insurer, which then pays you a regular income, starting at once (immediate annuity) or after a waiting phase (deferred annuity). In India, under the NPS rules as of 2025, most subscribers must use part of their corpus to buy an annuity at exit unless the corpus is small; PFRDA sets and revises that share. Key points: an annuity's present value falls when interest rates rise, and fixed annuity income loses buying power to inflation.",
+    "example": "₹10,000 received at the end of each year for 3 years, discounted at 10%, has a present value of ₹10,000 x (1 - 1.10^-3) / 0.10 = ₹24,869 (rounded). If each payment came at the start of the year instead (an annuity due), the present value would be ₹10,000 + ₹9,091 + ₹8,264 = ₹27,355.",
+    "formula": "PV of ordinary annuity = P x [1 - (1 + r)^-n] / r; PV of annuity due = PV of ordinary annuity x (1 + r)",
+    "related": [
+      "Present value",
+      "Future value",
+      "Perpetuity",
+      "Equated monthly instalment",
+      "Time value of money"
+    ]
+  },
+  {
+    "id": "capital-budgeting",
+    "term": "Capital budgeting",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "capital investment decisions",
+      "investment appraisal"
+    ],
+    "hl": [
+      "capital budgeting",
+      "capital budgeting decision",
+      "capital budgeting decisions",
+      "investment appraisal",
+      "capital investment decision",
+      "capital investment decisions"
+    ],
+    "abbr": [],
+    "short": "The process a company uses to decide which long-term projects, such as new plants or machines, are worth spending money on.",
+    "kid": "You have saved some coins and can buy either a bike or a big puzzle. You think about which one will give you more fun for longer before you spend.",
+    "detail": "Capital budgeting is the process of identifying, evaluating and selecting long-term investments whose benefits arrive over several years: new factories, product launches, acquisitions, IT systems. Analysts estimate the incremental after-tax cash flows of each proposal, discount them at a rate that reflects the project's risk, and apply decision rules such as NPV, IRR, the profitability index and payback. Because these outlays are large and hard to reverse, mistakes can destroy value for years, which is why boards and investors scrutinise capex plans closely; announcements of big capex programmes by listed Indian firms often move their share prices. The common confusion is to judge projects on accounting profit or on how quickly they repay rather than on the value they create. Good practice adds sensitivity and scenario analysis, and post-audits that compare actual results with the original forecasts.",
+    "example": "Say ABC Ltd can spend ₹10 crore on a machine expected to generate ₹4 crore of cash a year for 3 years. At a 10% cost of capital, the present value of the inflows is ₹4 crore x 2.4869 = ₹9.95 crore (rounded), so the NPV is about minus ₹5 lakh and the project should be rejected, even though total inflows of ₹12 crore exceed the cost.",
+    "formula": "",
+    "related": [
+      "Net present value",
+      "Internal rate of return",
+      "Payback period",
+      "Profitability index",
+      "Incremental cash flows",
+      "Capital rationing"
+    ]
+  },
+  {
+    "id": "net-present-value",
+    "term": "Net present value",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "NPV"
+    ],
+    "hl": [
+      "net present value",
+      "net present values"
+    ],
+    "abbr": [
+      "NPV"
+    ],
+    "short": "A project's future cash inflows converted into today's money, minus its costs in today's money; positive means it adds value.",
+    "kid": "You spend 10 coins on seeds, and later the flowers you sell bring coins back. If what comes back is more than you put in, even after remembering you had to wait, it was a good plan.",
+    "detail": "Net present value is the sum of the present values of all a project's expected cash flows, inflows and outflows, discounted at a cost of capital that matches the project's risk. A positive NPV means the project is expected to earn more than investors could get elsewhere for similar risk, so accepting it should raise the firm's value by roughly that amount; a negative NPV destroys value. NPV is regarded as the most reliable capital budgeting rule because it measures value in rupees, respects the time value of money, and can be added up across projects. Its weakness is sensitivity to the discount rate and to cash flow forecasts, so analysts test their assumptions. A common confusion is to think an NPV of zero means no profit: it means the project earns exactly its required return, which is still a fair deal for investors.",
+    "example": "A project costs ₹100 lakh today and is expected to bring in ₹55 lakh after one year and ₹72.6 lakh after two years. At a 10% discount rate, NPV = -100 + 55 / 1.10 + 72.6 / 1.21 = -100 + 50 + 60 = ₹10 lakh, so accepting it should add about ₹10 lakh of value.",
+    "formula": "NPV = sum of CFt / (1 + r)^t for t = 0 to n, where CF0 is usually the negative initial outlay",
+    "related": [
+      "Present value",
+      "Internal rate of return",
+      "Capital budgeting",
+      "Discount rate",
+      "Profitability index",
+      "Weighted average cost of capital"
+    ]
+  },
+  {
+    "id": "internal-rate-of-return",
+    "term": "Internal rate of return",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "IRR"
+    ],
+    "hl": [
+      "internal rate of return",
+      "internal rates of return"
+    ],
+    "abbr": [
+      "IRR"
+    ],
+    "short": "The yearly percentage return a project is expected to earn, worked out so that its future cash, valued today, exactly equals its cost.",
+    "kid": "You lend a friend 10 marbles and get 11 back later. This is a way of saying how fast your marbles grew while they were away.",
+    "detail": "The internal rate of return is the discount rate that makes the NPV of a project's cash flows equal to zero. It expresses a project's return as a single annual percentage, which managers find intuitive: accept the project if its IRR exceeds the required rate of return, often called the hurdle rate. IRR is widely quoted in private equity, infrastructure and real estate, and in India advisers use it to reveal the true return on insurance-cum-investment plans. But it has traps. Cash flows that switch sign more than once can produce several IRRs or none. When ranking mutually exclusive projects of different size or timing, IRR can contradict NPV, and NPV should win because it measures value created. IRR also implicitly assumes interim cash flows are reinvested at the IRR itself, which is often unrealistic; MIRR fixes that.",
+    "example": "A project costs ₹1,00,000 today and pays ₹1,21,000 in two years, with nothing in between. Its IRR is 10%, because ₹1,00,000 x 1.10^2 = ₹1,21,000. If the hurdle rate is 12%, the project should be rejected even though it makes ₹21,000 in absolute terms.",
+    "formula": "IRR is the rate r that solves: 0 = sum of CFt / (1 + r)^t for t = 0 to n",
+    "related": [
+      "Net present value",
+      "Modified internal rate of return",
+      "Required rate of return",
+      "Capital budgeting",
+      "Discount rate"
+    ]
+  },
+  {
+    "id": "modified-internal-rate-of-return",
+    "term": "Modified internal rate of return",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "MIRR"
+    ],
+    "hl": [
+      "modified internal rate of return"
+    ],
+    "abbr": [
+      "MIRR"
+    ],
+    "short": "A version of the internal rate of return that assumes cash a project earns along the way is reinvested at a realistic rate.",
+    "kid": "Coins you earn early go into your piggy bank, where they grow only a little. This way of counting remembers that, so it does not pretend your coins grow faster than they really do.",
+    "detail": "The modified internal rate of return corrects two flaws of IRR. First, instead of assuming interim inflows are reinvested at the IRR itself, it compounds them forward to the end of the project at a chosen reinvestment rate, usually the firm's cost of capital. Second, it discounts outflows to the present at a finance rate, so every project has a single answer. MIRR is then the rate that links the present value of outflows to the terminal value of inflows. For high-IRR projects, MIRR is noticeably lower and closer to economic reality, which helps avoid overstating returns on infrastructure or private equity deals. MIRR is still a percentage, not a rupee amount, so when choosing between projects of different sizes NPV remains the better guide. Spreadsheets compute it directly with the MIRR function.",
+    "example": "A project costs ₹100 lakh today and pays ₹60 lakh at the end of years 1 and 2; its IRR is about 13.1%. With reinvestment at 10%, the terminal value of the inflows is 60 x 1.10 + 60 = ₹126 lakh, so MIRR = (126 / 100)^(1/2) - 1 = about 12.2%.",
+    "formula": "MIRR = (FV of positive cash flows at the reinvestment rate / PV of negative cash flows at the finance rate)^(1/n) - 1",
+    "related": [
+      "Internal rate of return",
+      "Net present value",
+      "Cost of capital",
+      "Capital budgeting",
+      "Future value"
+    ]
+  },
+  {
+    "id": "payback-period",
+    "term": "Payback period",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "payback"
+    ],
+    "hl": [
+      "payback period",
+      "payback periods"
+    ],
+    "abbr": [],
+    "short": "How long it takes for the cash a project brings in to add up to the amount originally spent on it.",
+    "kid": "You spend 10 coins on a lemonade stand and earn 2 coins a day. After 5 days you have your 10 coins back, and that wait is the answer.",
+    "detail": "The payback period counts the time needed for a project's cumulative cash inflows to recover its initial investment. Shorter is better, and many firms set a maximum cut-off, such as three years for a new product line. Its appeal is simplicity and a rough sense of liquidity and risk: a quick payback limits how long money is exposed, which matters for cash-strapped firms, fast-changing industries, and household decisions such as rooftop solar panels. But it ignores the time value of money and everything that happens after the cut-off, so it can reject a highly profitable long-life project in favour of a quick but small one. Treat it as a supporting check alongside NPV, not as the decision rule. The discounted payback period fixes the time-value flaw but not the cut-off problem.",
+    "example": "A ₹5 lakh machine saves ₹2 lakh a year. After two years ₹4 lakh has been recovered, and the remaining ₹1 lakh takes half of the third year, so the payback period is 2.5 years.",
+    "formula": "Payback period = Years before full recovery + (Unrecovered cost at start of that year / Cash flow during that year); with even cash flows, Initial investment / Annual cash flow",
+    "related": [
+      "Discounted payback period",
+      "Net present value",
+      "Capital budgeting",
+      "Internal rate of return",
+      "Profitability index"
+    ]
+  },
+  {
+    "id": "discounted-payback-period",
+    "term": "Discounted payback period",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "discounted payback"
+    ],
+    "hl": [
+      "discounted payback period",
+      "discounted payback"
+    ],
+    "abbr": [],
+    "short": "How long it takes for a project's cash inflows, each converted into today's money, to add up to its original cost.",
+    "kid": "Coins you get later are worth a little less than coins now, because you had to wait. So you count later coins as slightly smaller and see how long it takes to get your spending back.",
+    "detail": "The discounted payback period is the time needed for the present values of a project's cash inflows, discounted at the cost of capital, to recover the initial investment. It improves on the simple payback period by recognising that ₹1 received in year four is worth less than ₹1 today, so at any positive discount rate it is longer than the simple payback for the same project. If the discounted payback is reached within the project's life and no further outflows follow, the project's NPV is zero or positive at that discount rate. However, like simple payback, it ignores everything after the cut-off and relies on an arbitrary maximum period, so it can still undervalue long-lived projects such as infrastructure assets. Use it as a risk and liquidity check, not as a substitute for NPV.",
+    "example": "A ₹2,00,000 project returns ₹1,10,000 at the end of year 1 and ₹1,21,000 at the end of year 2; at 10% each is worth ₹1,00,000 today. Simple payback is about 1.74 years (₹90,000 / ₹1,21,000 of year 2 is needed), but discounted payback is exactly 2 years.",
+    "formula": "Discounted payback = Years before full recovery + (Unrecovered discounted cost at start of that year / Discounted cash flow during that year)",
+    "related": [
+      "Payback period",
+      "Net present value",
+      "Present value",
+      "Capital budgeting",
+      "Cost of capital"
+    ]
+  },
+  {
+    "id": "profitability-index",
+    "term": "Profitability index",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "PI",
+      "benefit-cost ratio"
+    ],
+    "hl": [
+      "profitability index",
+      "benefit-cost ratio",
+      "benefit-cost ratios",
+      "benefit cost ratio"
+    ],
+    "abbr": [],
+    "short": "The value today of a project's future cash inflows divided by its upfront cost; above 1 means the project adds value.",
+    "kid": "For every coin you put into a plan, how many coins come back? If you get back more than one coin for each coin, the plan is a good one.",
+    "detail": "The profitability index, also called the benefit-cost ratio, divides the present value of a project's future cash flows by its initial investment. A PI above 1 means a positive NPV and below 1 a negative NPV, so for a single independent project it always gives the same accept or reject answer as NPV. Its special use is under capital rationing: when a firm cannot fund every positive-NPV project, ranking projects by PI, the value created per rupee invested, helps pick the combination that maximises total NPV within the budget. Governments and development lenders use benefit-cost ratios to appraise roads, dams and other public projects. The common confusion is to rank mutually exclusive projects by PI when there is no budget limit: a small project with a high PI may create less total value than a large one with a slightly lower PI.",
+    "example": "A project costing ₹50 lakh has inflows worth ₹60 lakh in present-value terms, so PI = 60 / 50 = 1.2 and NPV = ₹10 lakh. A second project costing ₹10 lakh with inflows worth ₹14 lakh has a higher PI of 1.4 but an NPV of only ₹4 lakh.",
+    "formula": "PI = PV of future cash flows / Initial investment = 1 + (NPV / Initial investment)",
+    "related": [
+      "Net present value",
+      "Capital rationing",
+      "Capital budgeting",
+      "Internal rate of return",
+      "Present value"
+    ]
+  },
+  {
+    "id": "required-rate-of-return",
+    "term": "Required rate of return",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "required return",
+      "minimum acceptable rate of return"
+    ],
+    "hl": [
+      "required rate of return",
+      "required rates of return",
+      "required return",
+      "minimum acceptable rate of return"
+    ],
+    "abbr": [],
+    "short": "The minimum yearly return an investor or company needs from an investment to make it worth the risk and the wait.",
+    "kid": "Before you lend your toy car to a friend for a week, you might ask for a sticker in return. The smallest reward that makes lending worth it is the answer.",
+    "detail": "The required rate of return is the minimum return an investor demands for holding an asset, or a company demands from a project, given its risk and the alternatives available. It is built from a risk-free rate, often proxied in India by the yield on government securities, plus a premium for risk; riskier assets require higher returns. For a company, a project's required return is usually its cost of capital, adjusted up or down for the project's own risk, and it serves as the discount rate in NPV and the hurdle rate for IRR. For an equity investor it is often estimated with CAPM. Common confusion: the required return is what investors demand, whereas the expected return is what they forecast; an asset is attractive only when expected return exceeds required return. It moves with interest rates and risk appetite, so it is never fixed.",
+    "example": "Say the risk-free rate is 7%, a stock's beta is 1.2 and the market risk premium is 5%. Its required return is 7% + 1.2 x 5% = 13%, so if you expect only 11% from it, the stock looks unattractive.",
+    "formula": "Required return = Risk-free rate + Risk premium; for equity under CAPM, Rf + Beta x (Rm - Rf)",
+    "related": [
+      "Cost of capital",
+      "Discount rate",
+      "Cost of equity",
+      "Capital asset pricing model",
+      "Hurdle rate",
+      "Risk premium"
+    ]
+  },
+  {
+    "id": "discount-rate",
+    "term": "Discount rate",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [],
+    "hl": [],
+    "abbr": [],
+    "short": "The yearly rate used to convert money expected in the future into its value today, reflecting time and risk.",
+    "kid": "A cookie you can eat now feels better than a cookie next week. This is how much smaller we count next week's cookie because we have to wait for it.",
+    "detail": "In valuation, the discount rate is the rate of return used to bring future cash flows back to present value. It should equal the return investors could earn on alternatives of comparable risk, so it bundles the time value of money, expected inflation and a risk premium. Companies typically use WACC for projects of average risk, a higher rate for riskier ventures, and the cost of equity when valuing cash flows that belong only to shareholders. Small changes in the discount rate move valuations sharply, especially for long-duration assets such as growth stocks or infrastructure, which is why rising interest rates tend to pull equity valuations down. Be careful: in central banking, discount rate also names the rate at which a central bank lends to commercial banks, as the US Federal Reserve uses the term, which is a different concept from the valuation rate.",
+    "example": "₹1 crore due in 5 years is worth ₹1 crore / 1.08^5 = ₹68.06 lakh (rounded) today at an 8% discount rate, but only ₹1 crore / 1.12^5 = ₹56.74 lakh (rounded) at 12%.",
+    "formula": "PV = CF / (1 + discount rate)^n",
+    "related": [
+      "Present value",
+      "Cost of capital",
+      "Weighted average cost of capital",
+      "Required rate of return",
+      "Net present value"
+    ]
+  },
+  {
+    "id": "opportunity-cost",
+    "term": "Opportunity cost",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "opportunity costs"
+    ],
+    "hl": [
+      "opportunity cost",
+      "opportunity costs"
+    ],
+    "abbr": [],
+    "short": "The benefit you give up from the next best choice when you pick one option over another.",
+    "kid": "If you spend your only free afternoon playing football, you cannot also go swimming. The swim you missed is what the football really cost you.",
+    "detail": "Opportunity cost is the value of the best alternative given up when resources are committed to one use. In corporate finance it appears in two ways. First, the cost of capital is itself an opportunity cost: it is the return investors could earn elsewhere at similar risk, which is why it is used as the discount rate. Second, when a project uses an asset the firm already owns, such as land or spare factory space, the asset's value in its best alternative use, for example its sale or rental value, must be charged to the project even though no cash changes hands. For individuals, the opportunity cost of leaving money in a savings account is the higher return it could have earned elsewhere. Common confusion: opportunity costs are future benefits you give up and are highly relevant, while sunk costs are already spent and irrelevant.",
+    "example": "Say ABC Ltd owns a vacant plot it could sell today for ₹2 crore. If it builds a warehouse there instead, the project must be charged ₹2 crore as an opportunity cost, even though the land was bought years ago for ₹50 lakh.",
+    "formula": "",
+    "related": [
+      "Sunk cost",
+      "Incremental cash flows",
+      "Cost of capital",
+      "Capital budgeting",
+      "Required rate of return"
+    ]
+  },
+  {
+    "id": "sunk-cost",
+    "term": "Sunk cost",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "sunk costs"
+    ],
+    "hl": [
+      "sunk cost",
+      "sunk costs",
+      "sunk cost fallacy"
+    ],
+    "abbr": [],
+    "short": "Money already spent that cannot be recovered whatever you decide next, so it should not affect future decisions.",
+    "kid": "You bought a movie ticket, but the movie is boring. The ticket money is gone whether you stay or leave, so just choose whatever makes the rest of your day better.",
+    "detail": "A sunk cost is money already spent and impossible to recover, such as the cost of a feasibility study, past research or a non-refundable deposit. Because it is gone whichever option the firm chooses, it is not an incremental cash flow and must be left out of capital budgeting. The sunk cost fallacy is the behavioural trap of continuing a failing project because so much has already been invested, often described as throwing good money after bad. Investors fall into it too, holding a losing stock just to get back to their purchase price. Watch the distinctions: a cost already committed under a binding contract but not yet paid is effectively sunk, while an asset that could still be sold or rented out is not sunk, because using it has an opportunity cost.",
+    "example": "Say ABC Ltd has spent ₹40 lakh on a market survey for a new snack. Finishing the launch needs ₹1 crore more and will bring in cash worth ₹90 lakh in today's money, so the NPV of going ahead is minus ₹10 lakh and the firm should stop, whatever it has already spent.",
+    "formula": "",
+    "related": [
+      "Opportunity cost",
+      "Incremental cash flows",
+      "Capital budgeting",
+      "Net present value",
+      "Behavioural finance"
+    ]
+  },
+  {
+    "id": "incremental-cash-flows",
+    "term": "Incremental cash flows",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "relevant cash flows",
+      "incremental cash flow"
+    ],
+    "hl": [
+      "incremental cash flow",
+      "incremental cash flows",
+      "relevant cash flows"
+    ],
+    "abbr": [],
+    "short": "The extra cash a company gains or loses only because it takes on a project, compared with not doing it.",
+    "kid": "If you start selling cookies next to your lemonade, count only the new coins the cookies bring and any coins they take away. Coins you would have got anyway do not count.",
+    "detail": "Incremental cash flows are the differences in a firm's after-tax cash flows with a project versus without it, and they are the only cash flows that belong in a capital budgeting analysis. They include the initial investment, changes in working capital, after-tax operating cash flows (depreciation counts only through the tax it saves), the opportunity cost of assets used, side effects such as cannibalisation of existing sales, and terminal items such as salvage value. They exclude sunk costs, allocated overheads that do not change, and financing costs such as interest, since the cost of financing is already captured in the discount rate. The commonest errors are counting interest twice, ignoring working capital and using accounting profit instead of cash. The test is simple: does this cash flow happen only because we take the project?",
+    "example": "Say a new product line adds ₹30 lakh of yearly sales but reduces sales of an existing product by ₹8 lakh, and ₹5 lakh of existing head-office costs is reallocated to it. Incremental revenue is ₹30 lakh - ₹8 lakh = ₹22 lakh a year, and the ₹5 lakh allocation is ignored because it would be spent anyway.",
+    "formula": "Incremental cash flow = Firm's cash flow with the project - Firm's cash flow without the project",
+    "related": [
+      "Sunk cost",
+      "Opportunity cost",
+      "Cannibalisation",
+      "Capital budgeting",
+      "Free cash flow",
+      "Working capital"
+    ]
+  },
+  {
+    "id": "cannibalisation",
+    "term": "Cannibalisation",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "cannibalization",
+      "sales cannibalisation"
+    ],
+    "hl": [
+      "sales cannibalisation",
+      "sales cannibalization",
+      "cannibalise sales",
+      "cannibalize sales",
+      "cannibalising sales",
+      "cannibalizing sales"
+    ],
+    "abbr": [],
+    "short": "When a company's new product takes sales away from its own existing products instead of winning new customers.",
+    "kid": "Your stand sells lemonade, and now you add orange juice too. If some friends just switch from lemonade to orange juice, you have not gained new friends; they only moved.",
+    "detail": "Cannibalisation occurs when a new product, store or channel draws customers away from a firm's existing offerings. In capital budgeting, the profit lost on existing products is a negative side effect that must be subtracted from the new project's incremental cash flows; ignoring it overstates NPV. Examples include a phone maker launching a cheaper model that eats into its premium range, a bank's app replacing branch visits, or a carmaker's electric model taking buyers from its petrol version. Cannibalisation is not always bad: if competitors would have taken those sales anyway, the true loss is smaller, and deliberate self-cannibalisation can be a strategy to stay ahead of disruption. The analyst's real question is what existing sales would have been without the new product, not simply how many buyers switched.",
+    "example": "Say ABC Ltd launches a new soap expected to sell ₹10 crore a year, but ₹3 crore of that comes from customers switching from its older soap. Incremental sales are ₹10 crore - ₹3 crore = ₹7 crore, so if both soaps earn similar margins, the project's cash flows should be built on ₹7 crore of sales, not ₹10 crore.",
+    "formula": "",
+    "related": [
+      "Incremental cash flows",
+      "Capital budgeting",
+      "Opportunity cost",
+      "Net present value",
+      "Contribution margin"
+    ]
+  },
+  {
+    "id": "capital-rationing",
+    "term": "Capital rationing",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "hard capital rationing",
+      "soft capital rationing"
+    ],
+    "hl": [
+      "capital rationing"
+    ],
+    "abbr": [],
+    "short": "A situation where a company has more good projects than money available, so it must choose which ones to fund.",
+    "kid": "You have 10 coins and three games you want, costing 10, 5 and 5 coins. You cannot buy them all, so you pick the ones that make you happiest for your 10 coins.",
+    "detail": "Capital rationing exists when a firm limits its total investment budget even though more projects have positive NPV. Soft rationing is self-imposed, such as a management budget cap or a wish to avoid issuing new shares; hard rationing comes from outside, such as lenders refusing more credit or weak capital markets, and is common for small firms and during credit crunches. Under rationing the goal becomes maximising total NPV within the budget. For a single period with divisible projects, ranking by profitability index works; otherwise one compares feasible combinations, and multi-period problems need linear or integer programming. In a perfect market rationing would not exist, since any positive-NPV project could find funding, so persistent rationing signals frictions or caution. Common mistake: picking the single highest-NPV project first can lower the total NPV achieved.",
+    "example": "With a ₹10 crore budget, project A costs ₹10 crore (NPV ₹4 crore), while B and C cost ₹5 crore each (NPVs ₹3 crore and ₹2.5 crore). Picking the biggest NPV, A, gives ₹4 crore of value; picking B and C uses the same ₹10 crore and gives ₹3 crore + ₹2.5 crore = ₹5.5 crore.",
+    "formula": "",
+    "related": [
+      "Profitability index",
+      "Capital budgeting",
+      "Net present value",
+      "Cost of capital",
+      "Opportunity cost"
+    ]
+  },
+  {
+    "id": "real-options",
+    "term": "Real options",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "real option analysis",
+      "option to expand",
+      "option to abandon",
+      "option to delay"
+    ],
+    "hl": [
+      "real option",
+      "real options",
+      "real options analysis",
+      "real option analysis"
+    ],
+    "abbr": [],
+    "short": "The valuable right, but not the duty, of managers to change a project later, such as expanding, delaying or abandoning it.",
+    "kid": "If your lemonade stand does well, you can add a second table; if it rains all week, you can pack up. Being able to choose later, once you know more, is a good thing to have.",
+    "detail": "Real options are choices built into real investments that let management respond as uncertainty clears: the option to expand if demand is strong, to delay until conditions are clearer, to abandon and sell assets if things go badly, or to switch inputs or products. They are called options because, like financial options, they give a right without an obligation, so they have value that a static NPV, which assumes a fixed plan, misses. Real option analysis adds that flexibility value, using decision trees or option-pricing models such as Black-Scholes or binomial trees. It matters most for uncertain, staged investments: drug research, mining, oil exploration, telecom spectrum and technology pilots. The common misuse is to justify any negative-NPV project by pointing to vague strategic options; the options must be real, identifiable and valued with sensible assumptions.",
+    "example": "Say a pilot plant has an NPV of minus ₹2 crore, but if demand turns out strong (a 40% chance) the firm can expand, adding ₹10 crore of NPV in today's money, and if demand is weak it simply does not expand. The option to expand is worth 0.4 x ₹10 crore = ₹4 crore, so the total value is -₹2 crore + ₹4 crore = ₹2 crore and the pilot is worth doing.",
+    "formula": "Expanded (strategic) NPV = Static NPV + Value of real options",
+    "related": [
+      "Net present value",
+      "Capital budgeting",
+      "Decision tree analysis",
+      "Black-Scholes model",
+      "Call option",
+      "Sensitivity analysis"
+    ]
+  },
+  {
+    "id": "break-even-point",
+    "term": "Break-even point",
+    "cat": "corp-fin",
+    "level": "b",
+    "aliases": [
+      "break-even analysis",
+      "BEP",
+      "cost-volume-profit analysis",
+      "CVP"
+    ],
+    "hl": [
+      "break-even point",
+      "break-even points",
+      "breakeven point",
+      "break even point",
+      "break-even analysis",
+      "breakeven analysis",
+      "cost-volume-profit analysis",
+      "operating breakeven",
+      "operational breakeven"
+    ],
+    "abbr": [],
+    "short": "The level of sales at which a business earns exactly enough to cover all its costs, making neither profit nor loss.",
+    "kid": "Your lemonade table and jug cost 20 coins, and each cup gives you 2 coins after paying for lemons. Once you sell 10 cups you have your 20 coins back, and every cup after that is extra.",
+    "detail": "The break-even point is the sales volume, or revenue, at which total revenue equals total costs. It is found by dividing fixed costs by the contribution margin per unit, which is price minus variable cost per unit. Break-even analysis, part of cost-volume-profit (CVP) analysis, shows how changes in price, costs or volume affect profit, and the margin of safety, meaning how far sales can fall before losses begin. Firms with high fixed costs, such as airlines, telecom operators and steel makers, have high break-even points and high operating leverage, so profits swing sharply with volume. Indian startups often announce reaching EBITDA or operational breakeven, which leaves out costs such as depreciation and interest, so check which costs are included. Accounting break-even also differs from financial break-even, the volume needed for a zero NPV.",
+    "example": "Say a café has fixed costs of ₹3 lakh a month and sells coffee at ₹150 a cup with variable costs of ₹50 a cup. Contribution per cup is ₹100, so break-even is ₹3,00,000 / ₹100 = 3,000 cups a month, or ₹4.5 lakh of sales.",
+    "formula": "Break-even units = Fixed costs / (Selling price per unit - Variable cost per unit); Break-even revenue = Fixed costs / Contribution margin ratio",
+    "related": [
+      "Contribution margin",
+      "Operating leverage",
+      "Fixed costs",
+      "Variable costs",
+      "Margin of safety"
+    ]
+  },
+  {
+    "id": "cost-of-capital",
+    "term": "Cost of capital",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "cost of capital",
+      "costs of capital"
+    ],
+    "abbr": [],
+    "short": "The minimum return a company must earn on its investments to satisfy the people who lend to it and own it.",
+    "kid": "If friends lend you marbles to build a marble run, they want a few extra marbles back. Your run must win at least that many extra marbles to keep everyone happy.",
+    "detail": "The cost of capital is the rate of return a firm's providers of finance, its lenders and shareholders, require for funding it, and therefore the minimum return the firm must earn on new investments of similar risk to create value. It is an opportunity cost: investors could put their money elsewhere at similar risk. It is usually measured as the weighted average cost of capital (WACC), combining the after-tax cost of debt and the cost of equity. It serves as the discount rate in NPV and the hurdle rate for IRR, and comparing a firm's return on capital with it shows whether the business is genuinely creating value. It rises with interest rates and business risk. Common confusion: a firm's overall cost of capital suits only projects of average risk; a riskier venture, such as a new overseas business, deserves a higher, project-specific rate.",
+    "example": "Say ABC Ltd's cost of capital is 11%. A ₹50 crore project expected to earn 14% creates value, while one earning 9% falls 2 percentage points short, destroying roughly ₹1 crore of value a year on the same ₹50 crore.",
+    "formula": "Cost of capital (as WACC) = (E/V x Re) + (D/V x Rd x (1 - Tc))",
+    "related": [
+      "Weighted average cost of capital",
+      "Cost of equity",
+      "Cost of debt",
+      "Required rate of return",
+      "Discount rate",
+      "Capital structure"
+    ]
+  },
+  {
+    "id": "weighted-average-cost-of-capital",
+    "term": "Weighted average cost of capital",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "WACC"
+    ],
+    "hl": [
+      "weighted average cost of capital"
+    ],
+    "abbr": [
+      "WACC"
+    ],
+    "short": "A company's average cost of funding, combining what it pays lenders after tax and what shareholders expect, weighted by how much each provides.",
+    "kid": "Mum lends you some coins and wants one extra back, and Grandpa lends you some and wants two extra back. Mixing both, in the right amounts, tells you what each coin costs you on average.",
+    "detail": "WACC is the average rate of return a company must pay its providers of capital, with each source weighted by its share of total financing, ideally at market values rather than book values. Debt enters at its after-tax cost because interest is tax-deductible, which is why moderate borrowing can lower WACC. WACC is the standard discount rate for a firm's free cash flows in DCF valuation and for projects with the same risk as the firm's existing business. India's airport tariff regulator, AERA, uses a WACC-based fair rate of return when setting airport charges. Common errors: using book weights, using the coupon on old debt instead of today's borrowing rate, applying one firm-wide WACC to projects of different risk, and assuming more debt always lowers WACC, since beyond a point higher default risk pushes up the costs of both debt and equity.",
+    "example": "Say ABC Ltd is funded 60% by equity costing 14% and 40% by debt at 10% before tax, with a 25% tax rate. WACC = 0.6 x 14% + 0.4 x 10% x (1 - 0.25) = 8.4% + 3.0% = 11.4%.",
+    "formula": "WACC = (E/V x Re) + (D/V x Rd x (1 - Tc)), where E and D are the market values of equity and debt, V = E + D, and Tc is the tax rate",
+    "related": [
+      "Cost of capital",
+      "Cost of equity",
+      "Cost of debt",
+      "Capital structure",
+      "Discounted cash flow",
+      "Net present value"
+    ]
+  },
+  {
+    "id": "cost-of-equity",
+    "term": "Cost of equity",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "required return on equity",
+      "Ke"
+    ],
+    "hl": [
+      "cost of equity"
+    ],
+    "abbr": [],
+    "short": "The return shareholders expect from owning a company's shares, as payment for the risk they take.",
+    "kid": "When friends put their toys into your toy shop, nobody promises them anything back. So they hope for a bigger reward than if they had simply lent the toys.",
+    "detail": "The cost of equity is the rate of return shareholders require for investing in a company's shares. It is not a bill the company pays but an opportunity cost: if the firm does not earn it, investors will sell and the share price will fall. Because shareholders are paid only after lenders and have no promised return, equity is riskier than debt and so costs more. It is most often estimated with the capital asset pricing model, using a risk-free rate, the stock's beta and an equity risk premium; alternatives include the dividend discount (Gordon growth) model and a bond-yield-plus-premium approach. Cost of equity is the discount rate for free cash flow to equity and a key input to WACC. Common confusion: a company that pays no dividend does not have a zero cost of equity, since shareholders still expect a return through price gains.",
+    "example": "Say the risk-free rate is 7%, ABC Ltd's beta is 1.1 and the equity risk premium is 6%. Under CAPM, its cost of equity is 7% + 1.1 x 6% = 13.6%.",
+    "formula": "Cost of equity (CAPM): Ke = Rf + Beta x (Rm - Rf); Gordon growth version: Ke = D1 / P0 + g",
+    "related": [
+      "Capital asset pricing model",
+      "Beta",
+      "Equity risk premium",
+      "Weighted average cost of capital",
+      "Cost of debt",
+      "Dividend discount model"
+    ]
+  },
+  {
+    "id": "cost-of-debt",
+    "term": "Cost of debt",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "Kd",
+      "after-tax cost of debt"
+    ],
+    "hl": [
+      "cost of debt",
+      "after-tax cost of debt",
+      "pre-tax cost of debt"
+    ],
+    "abbr": [],
+    "short": "The effective interest rate a company pays on its borrowings, usually measured after the tax saving that interest brings.",
+    "kid": "If you borrow 10 stickers from a friend and promise to give back 11, that one extra sticker is what borrowing cost you.",
+    "detail": "The cost of debt is the return lenders require on a company's borrowings, best measured as the current yield to maturity on its bonds or the rate it would pay on new loans, not the coupon on old debt. Because interest is tax-deductible, the figure used in WACC is the after-tax cost: the pre-tax rate x (1 - tax rate). It depends on the general level of interest rates, the firm's credit rating, and the loan's maturity and security; in India, a downgrade by a rating agency such as CRISIL or ICRA typically raises it. Debt is usually the cheapest source of capital because lenders are paid first and the tax saving helps, but piling on debt raises default risk and so the cost of both debt and equity. Common confusion: the tax benefit exists only if the firm has taxable profits to offset.",
+    "example": "Say ABC Ltd can borrow at 9% and faces a 25% tax rate. Its after-tax cost of debt is 9% x (1 - 0.25) = 6.75%.",
+    "formula": "After-tax cost of debt = Pre-tax cost of debt (Kd) x (1 - Tax rate)",
+    "related": [
+      "Weighted average cost of capital",
+      "Cost of equity",
+      "Yield to maturity",
+      "Interest tax shield",
+      "Credit rating",
+      "Capital structure"
+    ]
+  },
+  {
+    "id": "flotation-costs",
+    "term": "Flotation costs",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "issue costs",
+      "flotation cost",
+      "issuance costs"
+    ],
+    "hl": [
+      "flotation cost",
+      "flotation costs",
+      "issuance cost",
+      "issuance costs"
+    ],
+    "abbr": [],
+    "short": "The fees and expenses a company pays when it raises new money by selling shares or bonds, such as banker and legal fees.",
+    "kid": "To get friends to join your club, you first print posters and buy snacks. Those things use up some of the coins the new friends bring in.",
+    "detail": "Flotation costs are the expenses of issuing new securities: underwriting fees paid to merchant bankers, legal and audit fees, regulatory and stock exchange charges, printing and marketing, and in a broader sense the underpricing of an IPO. They are generally higher for equity than for debt, and higher as a percentage for small issues because many costs are fixed. In India, IPO offer documents filed with SEBI disclose these issue expenses. Because they reduce the money a firm actually receives, they raise the effective cost of new external capital. Textbooks debate how to treat them; the preferred approach is to add flotation costs to the project's initial outlay, since they are a one-time cash cost of that financing, rather than permanently raising the discount rate applied to every year's cash flows. Retained earnings carry no flotation cost, one reason firms prefer internal funds.",
+    "example": "Say ABC Ltd needs ₹95 crore for a project and flotation costs are 5% of the gross amount raised. It must raise ₹95 crore / 0.95 = ₹100 crore, so ₹5 crore of issue costs should be added to the project's initial outlay.",
+    "formula": "Gross amount to raise = Funds needed / (1 - Flotation cost rate); adjusted cost of new equity = D1 / [P0 x (1 - f)] + g",
+    "related": [
+      "Initial public offering",
+      "Cost of equity",
+      "Cost of capital",
+      "Underwriting",
+      "Pecking order theory"
+    ]
+  },
+  {
+    "id": "unlevered-beta",
+    "term": "Unlevered beta",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "asset beta"
+    ],
+    "hl": [
+      "unlevered beta",
+      "asset beta",
+      "hamada equation"
+    ],
+    "abbr": [],
+    "short": "A measure of how much a business's value swings with the overall market, with the extra swing caused by its borrowing removed.",
+    "kid": "Riding a bike on a bumpy road is shaky, and carrying a heavy bag makes it even shakier. This tells you how shaky the road is on its own, without the bag.",
+    "detail": "Beta measures how sensitive a stock's returns are to market movements. The beta you observe for a listed share is a levered, or equity, beta: it reflects both the risk of the business and the extra financial risk from debt, because borrowing magnifies the swings in shareholders' returns. Unlevered, or asset, beta strips out the debt effect to show pure business risk. Analysts use it to value private companies or new divisions: take the levered betas of comparable listed firms, unlever each using its own debt-to-equity ratio, average them, then relever at the target's capital structure. The usual tool is the Hamada equation, which assumes debt carries no market risk and the tax saving on debt is fixed. Common confusion: two firms in the same industry can show very different equity betas purely because of different leverage, even when their business risk is identical.",
+    "example": "Say a comparable firm has a levered beta of 1.5, a debt-to-equity ratio of 0.8 and a 25% tax rate. Unlevered beta = 1.5 / (1 + 0.75 x 0.8) = 1.5 / 1.6 = 0.9375. Relevered for a target with debt-to-equity of 0.4, beta = 0.9375 x (1 + 0.75 x 0.4) = 0.9375 x 1.3 = 1.21875, about 1.22.",
+    "formula": "Hamada: Unlevered beta = Levered beta / [1 + (1 - Tax rate) x (Debt / Equity)]; Levered beta = Unlevered beta x [1 + (1 - Tax rate) x (Debt / Equity)]",
+    "related": [
+      "Beta",
+      "Cost of equity",
+      "Capital asset pricing model",
+      "Capital structure",
+      "Financial leverage",
+      "Weighted average cost of capital"
+    ]
+  },
+  {
+    "id": "country-risk-premium",
+    "term": "Country risk premium",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "CRP"
+    ],
+    "hl": [
+      "country risk premium",
+      "country risk premiums"
+    ],
+    "abbr": [],
+    "short": "The extra return investors demand for investing in a riskier country, to cover dangers like political turmoil, unpaid government debts or currency controls.",
+    "kid": "Lending your ball to a friend at a calm park feels safe, but lending it at a wild, noisy park feels risky. You might ask for a little extra treat for the noisy park.",
+    "detail": "The country risk premium is the additional return investors require for investing in a country with higher economic, political, legal or currency risk than a mature market such as the US. It is added to the cost of equity, and sometimes reflected in the cost of debt, when valuing companies or projects in emerging markets. A common estimate starts from the sovereign default spread, the gap between a country's US-dollar government bond yield and the US Treasury yield, or its sovereign CDS spread, and scales it by how much more volatile the local equity market is than its bond market. Aswath Damodaran of NYU publishes widely used estimates for India and others. The premium changes with credit ratings, crises and capital flows, so use a current estimate. Common confusion: a firm's exposure depends on where it earns revenue and operates, not merely where it is listed.",
+    "example": "Say a country's dollar bonds yield 2 percentage points more than US Treasuries and its equity market is 1.5 times as volatile as its bond market. A simple estimate of the country risk premium is 2% x 1.5 = 3%, which an investor would add to an 8% required return on a similar US project, giving 11%.",
+    "formula": "Country risk premium = Sovereign default spread x (Volatility of local equity market / Volatility of local government bond market)",
+    "related": [
+      "Cost of equity",
+      "Equity risk premium",
+      "Sovereign credit rating",
+      "Credit default swap",
+      "Capital asset pricing model"
+    ]
+  },
+  {
+    "id": "capital-structure",
+    "term": "Capital structure",
+    "cat": "corp-fin",
+    "level": "i",
+    "aliases": [
+      "debt-equity mix",
+      "optimal capital structure"
+    ],
+    "hl": [
+      "capital structure",
+      "capital structures",
+      "optimal capital structure",
+      "debt-equity mix"
+    ],
+    "abbr": [],
+    "short": "The mix of borrowed money and owners' money a company uses to pay for its assets and operations.",
+    "kid": "To build a treehouse, you can use your own pocket money or borrow some from a friend that you must pay back. How much comes from each is what this word is about.",
+    "detail": "Capital structure is the combination of debt (bank loans, bonds, debentures) and equity (share capital and retained earnings), plus hybrids such as preference shares and convertibles, that finances a firm. It is usually summarised by ratios such as debt-to-equity or debt-to-capital. Debt is cheaper because interest is tax-deductible and lenders take less risk, but more debt raises fixed obligations and the risk of bankruptcy. The trade-off theory says firms balance tax benefits against distress costs to reach an optimal capital structure that minimises WACC and maximises firm value; the pecking order theory says firms prefer internal funds first, then debt, then equity. In practice, stable businesses such as power utilities carry more debt than young technology firms. Modigliani and Miller showed that in a perfect market capital structure does not matter, so real-world effects come from taxes, distress costs, information gaps and agency problems.",
+    "example": "Say ABC Ltd has ₹60 crore of equity and ₹40 crore of debt. Its capital structure is 60% equity and 40% debt, and its debt-to-equity ratio is 40 / 60 = 0.67 (rounded).",
+    "formula": "Debt-to-equity = Total debt / Shareholders' equity; Debt-to-capital = Debt / (Debt + Equity)",
+    "related": [
+      "Modigliani-Miller theorem",
+      "Weighted average cost of capital",
+      "Debt-to-equity ratio",
+      "Financial leverage",
+      "Pecking order theory",
+      "Trade-off theory"
+    ]
+  },
+  {
+    "id": "modigliani-miller-theorem",
+    "term": "Modigliani-Miller theorem",
+    "cat": "corp-fin",
+    "level": "a",
+    "aliases": [
+      "MM theorem",
+      "M&M theorem",
+      "capital structure irrelevance",
+      "dividend irrelevance theory"
+    ],
+    "hl": [
+      "modigliani-miller",
+      "modigliani miller",
+      "modigliani-miller theorem",
+      "capital structure irrelevance",
+      "dividend irrelevance"
+    ],
+    "abbr": [],
+    "short": "The idea that, in a perfect market without taxes or bankruptcy costs, how a company is financed does not change its total value.",
+    "kid": "A pizza is the same size whether you cut it into four slices or eight. Cutting it differently does not make more pizza.",
+    "detail": "The Modigliani-Miller theorem, set out by Franco Modigliani and Merton Miller in 1958, says that in a perfect capital market, with no taxes, no bankruptcy or transaction costs, equal information, and investors able to borrow on the same terms as firms, a firm's value depends only on the cash flows from its assets, not on its mix of debt and equity. Proposition II follows: as leverage rises, the cost of equity rises enough to keep WACC constant. Their 1961 paper applied the same logic to dividends: payout policy does not change value, because investors can create homemade dividends by selling shares. Adding corporate taxes (1963) makes debt add value through the interest tax shield. Modigliani won the Nobel Memorial Prize in Economic Sciences in 1985 and Miller in 1990. Its real value is as a benchmark: capital structure matters only because of taxes, distress costs, information gaps and agency problems.",
+    "example": "Say ABC Ltd and XYZ Ltd each earn ₹10 crore of operating profit a year forever; ABC has no debt and XYZ has borrowed ₹40 crore. With no taxes, MM says both firms are worth the same, say ₹100 crore, so XYZ's equity is worth ₹100 crore - ₹40 crore = ₹60 crore. With a 25% corporate tax, XYZ's permanent debt adds a tax shield worth 0.25 x ₹40 crore = ₹10 crore to its value.",
+    "formula": "Proposition I: VL = VU without taxes, VL = VU + Tc x D with corporate taxes; Proposition II (no taxes): Re = R0 + (D/E) x (R0 - Rd), where R0 is the cost of capital of an all-equity firm",
+    "related": [
+      "Capital structure",
+      "Weighted average cost of capital",
+      "Cost of equity",
+      "Interest tax shield",
+      "Dividend policy",
+      "Trade-off theory"
+    ]
+  }
+]

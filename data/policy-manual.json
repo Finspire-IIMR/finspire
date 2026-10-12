@@ -1,0 +1,7 @@
+{
+  "_note": "Central-bank rates with no reliable free feed. Update the value and asOf date after each policy meeting. RBI, Fed, ECB and Bank of England rates are fetched automatically and need no edits here.",
+  "rates": [
+    {"id": "boj", "bank": "Bank of Japan", "short": "BoJ", "name": "Short-term policy rate", "value": null, "display": "", "asOf": "", "src": "boj.or.jp", "term": "policy-rate"},
+    {"id": "pboc-lpr", "bank": "People's Bank of China", "short": "PBoC", "name": "1-year loan prime rate", "value": null, "display": "", "asOf": "", "src": "pbc.gov.cn", "term": "loan-prime-rate"}
+  ]
+}

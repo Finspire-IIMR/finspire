@@ -1,0 +1,879 @@
+[
+  {
+    "id": "option",
+    "term": "Option",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "options",
+      "option contract",
+      "options contract"
+    ],
+    "hl": [
+      "option contract",
+      "option contracts",
+      "options contract",
+      "options contracts",
+      "options trading",
+      "options traders"
+    ],
+    "abbr": [],
+    "short": "A contract giving the buyer the right, not the duty, to buy or sell an asset at a fixed price by a set date.",
+    "kid": "You give your friend one sweet, and they promise you can swap for their toy car next week at the deal you agree today. You can choose to swap or not, but the sweet stays with your friend.",
+    "detail": "An option is a derivative contract between two parties. The buyer pays an upfront price, the premium, for the right but not the obligation to buy (a call) or sell (a put) an underlying asset, such as a share or an index, at a fixed strike price on or before a set expiry date. The seller (writer) keeps the premium and must perform if the buyer exercises. This lopsided deal makes options useful: buyers get leveraged upside or insurance with their loss capped at the premium, while writers earn income but take on potentially large losses. In India, options on indices such as the Nifty 50 and on individual stocks trade on the NSE and BSE, and index options make up the bulk of derivatives contracts traded. A common confusion: an option is not the share itself; it carries no voting rights or dividends, and it can expire worthless.",
+    "example": "Say you buy one call option on ABC Ltd with a strike price of ₹500, paying a premium of ₹20 per share on a lot of 100 shares, so ₹2,000 in total. If the share is at ₹560 on expiry, the option is worth ₹60 per share, or ₹6,000, a profit of ₹4,000. If the share ends below ₹500, you let the option lapse and lose only the ₹2,000.",
+    "formula": "",
+    "related": [
+      "Call option",
+      "Put option",
+      "Strike price",
+      "Option premium",
+      "Derivative",
+      "Futures contract"
+    ]
+  },
+  {
+    "id": "call-option",
+    "term": "Call option",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "call",
+      "calls",
+      "CE"
+    ],
+    "hl": [
+      "call option",
+      "call options"
+    ],
+    "abbr": [],
+    "short": "A contract giving the buyer the right, but not the duty, to buy an asset at a fixed price by a set date.",
+    "kid": "You give a friend one marble so they keep their kite for you, and you can swap for it later at the deal you agreed today. If kites become really popular, your deal is great. If not, you just don't swap.",
+    "detail": "A call option gives its holder the right to buy the underlying asset at the strike price on or before expiry. The buyer pays a premium for this right; the seller (writer) receives it and must deliver the asset, or pay the difference in cash, if the call is exercised. A call gains value as the underlying price rises, so traders buy calls to bet on a rally with limited downside, and investors sell covered calls against shares they own to earn income. The buyer's maximum loss is the premium; an uncovered seller's loss is, in theory, unlimited. On Indian option chains calls are labelled CE, short for call European. A common confusion: buying a call is not the same as buying the share; the call can still lose money if the share rises but ends below the strike plus the premium paid.",
+    "example": "Say ABC Ltd trades at ₹1,000 and you buy a ₹1,050 call for a premium of ₹15 per share on a lot of 500 shares, paying ₹7,500. Your breakeven at expiry is ₹1,065. If the share closes at ₹1,100, the call is worth ₹50 per share, or ₹25,000, a profit of ₹17,500.",
+    "formula": "Call payoff at expiry = max(S - K, 0), where S is the underlying price and K the strike; Buyer's profit = Payoff - Premium paid",
+    "related": [
+      "Put option",
+      "Strike price",
+      "Option premium",
+      "In the money",
+      "Covered call",
+      "Option writer"
+    ]
+  },
+  {
+    "id": "put-option",
+    "term": "Put option",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "put",
+      "puts",
+      "PE"
+    ],
+    "hl": [
+      "put option",
+      "put options"
+    ],
+    "abbr": [],
+    "short": "A contract giving the buyer the right, but not the duty, to sell an asset at a fixed price by a set date.",
+    "kid": "You give a friend a sticker, and they promise to take your old bike in a fair swap any time this summer. If nobody else wants the bike later, you are glad you have that promise.",
+    "detail": "A put option gives its holder the right to sell the underlying asset at the strike price on or before expiry. The buyer pays a premium; the writer receives it and must buy the asset at the strike, or pay the difference in cash, if the put is exercised. A put gains value as the underlying falls, so it works like insurance: investors buy puts to protect a portfolio (a protective put), and traders buy them to profit from a decline with the loss capped at the premium. Put writers collect premium but can lose heavily in a sharp crash. On Indian option chains puts are labelled PE. A common confusion: buying a put is not the same as short selling; the put buyer's loss is limited to the premium, and no shares need to be borrowed.",
+    "example": "Say you own 500 shares of ABC Ltd at ₹800 and buy a ₹760 put for a premium of ₹12 per share, paying ₹6,000. If the share falls to ₹650, the put is worth ₹110 per share, or ₹55,000, a net gain of ₹49,000 that offsets most of the ₹75,000 fall in your shares.",
+    "formula": "Put payoff at expiry = max(K - S, 0), where K is the strike and S the underlying price; Buyer's profit = Payoff - Premium paid",
+    "related": [
+      "Call option",
+      "Protective put",
+      "Strike price",
+      "Option premium",
+      "Short selling",
+      "Hedging"
+    ]
+  },
+  {
+    "id": "strike-price",
+    "term": "Strike price",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "strike",
+      "exercise price"
+    ],
+    "hl": [
+      "strike price",
+      "strike prices",
+      "exercise price",
+      "exercise prices"
+    ],
+    "abbr": [],
+    "short": "The fixed price, agreed upfront in an option contract, at which the holder may later buy or sell the asset.",
+    "kid": "Before the fair, you and your friend agree that a teddy will swap for three marbles, no matter what happens. Those three marbles are the number you both remember.",
+    "detail": "The strike price, or exercise price, is the price written into an option contract at which the underlying can be bought (for a call) or sold (for a put) if the option is exercised. It stays fixed for the life of the contract, apart from adjustments after corporate actions such as stock splits, bonus issues or large special dividends. Exchanges list a ladder of strikes at set intervals above and below the current price. The gap between the strike and the market price decides whether an option is in, at or out of the money, and so drives its intrinsic value and premium. Choosing a strike is a trade-off: a call with a lower strike costs more but is more likely to pay off. A common confusion: the strike is not the price you pay for the option; that is the premium.",
+    "example": "Say ABC Ltd trades at ₹2,000. A ₹1,900 call already has ₹100 of value built in, while a ₹2,100 call has none yet. If the share ends at ₹2,150 on expiry, the ₹1,900 call is worth ₹250 per share and the ₹2,100 call ₹50.",
+    "formula": "",
+    "related": [
+      "Option premium",
+      "Moneyness",
+      "Call option",
+      "Put option",
+      "Option intrinsic value",
+      "Option exercise"
+    ]
+  },
+  {
+    "id": "option-premium",
+    "term": "Option premium",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "premium",
+      "option price"
+    ],
+    "hl": [
+      "option premium",
+      "option premiums",
+      "options premium",
+      "options premiums"
+    ],
+    "abbr": [],
+    "short": "The price an option buyer pays the seller upfront for the right the option gives; the seller keeps it whatever happens.",
+    "kid": "To make your friend promise to save their last cupcake for you, you give them a shiny sticker. Even if you don't take the cupcake later, your friend keeps the sticker.",
+    "detail": "The option premium is the market price of an option, paid by the buyer to the writer when the trade is made. It is quoted per unit of the underlying, so the cash paid equals the premium times the lot size. The premium has two parts: intrinsic value (what the option would be worth if exercised now) and time value (the extra paid for the chance of a bigger move before expiry). It rises with more time to expiry and with higher expected volatility, and it moves with the underlying price, the strike and interest rates; models such as Black-Scholes estimate it. For the buyer the premium is the maximum loss; for the writer it is the maximum gain. A common confusion: the premium is different from margin. Buyers pay the full premium upfront, while writers must also post margin with their broker, because their potential loss is far larger.",
+    "example": "Say a call on ABC Ltd quotes at a premium of ₹120 and one lot is 250 shares. The buyer pays ₹30,000 (₹120 x 250) to the writer. If the call is worth ₹200 a week later, the position is worth ₹50,000.",
+    "formula": "Option premium = Intrinsic value + Time value",
+    "related": [
+      "Option intrinsic value",
+      "Option time value",
+      "Black-Scholes model",
+      "Implied volatility",
+      "Lot size",
+      "Margin"
+    ]
+  },
+  {
+    "id": "in-the-money",
+    "term": "In the money",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "ITM",
+      "deep ITM",
+      "in-the-money"
+    ],
+    "hl": [
+      "deep in-the-money",
+      "in-the-money option",
+      "in-the-money options"
+    ],
+    "abbr": [],
+    "short": "Describes an option that would be worth something if used right now: a call with strike below the market price, or a put above.",
+    "kid": "You have a promise to get a toy for three marbles, and right now everyone would give five marbles for it. Your promise is already a good one.",
+    "detail": "An option is in the money (ITM) when exercising it immediately would produce a positive payoff: for a call, the underlying price is above the strike; for a put, it is below the strike. The amount by which it is in the money is its intrinsic value. ITM options cost more than at- or out-of-the-money options of the same type and expiry because they carry this built-in value, and they behave more like the underlying, with deltas closer to 1 for calls or -1 for puts. Options far into it are deep ITM. In India, under the rules as of 2025, stock options that expire in the money are settled by physical delivery of shares, so a holder may need the full cash or shares, while index options are cash-settled. A common confusion: ITM does not mean profitable; the buyer profits only if the intrinsic value exceeds the premium paid.",
+    "example": "Say ABC Ltd trades at ₹540. A ₹500 call is ₹40 in the money, and a ₹580 put is also ₹40 in the money. If you paid a ₹55 premium for the call, it is in the money but you are still ₹15 per share short of breaking even.",
+    "formula": "A call is ITM when S is above K; a put is ITM when S is below K (S = underlying price, K = strike)",
+    "related": [
+      "At the money",
+      "Out of the money",
+      "Moneyness",
+      "Option intrinsic value",
+      "Delta"
+    ]
+  },
+  {
+    "id": "at-the-money",
+    "term": "At the money",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "ATM",
+      "at-the-money"
+    ],
+    "hl": [
+      "at-the-money option",
+      "at-the-money options",
+      "at-the-money strike"
+    ],
+    "abbr": [],
+    "short": "Describes an option whose strike price equals, or sits very close to, the current market price of the underlying asset.",
+    "kid": "Your promise lets you get a toy for three marbles, and right now the toy is worth just about three marbles. So the promise is neither a win nor a loss yet.",
+    "detail": "An option is at the money (ATM) when its strike price equals the current price of the underlying. Because listed strikes come in fixed steps, traders usually call the strike nearest the spot price the ATM strike. ATM options have no intrinsic value, so their whole premium is time value, and this is where time value is at its largest. They have a delta of roughly 0.5 for calls and -0.5 for puts, and close to the highest gamma and vega of any strike, so their prices react most to changes in volatility and to fast moves near expiry. ATM implied volatility is the headline volatility number many traders quote for an underlying. A common confusion: ATM is a moving target; as the market moves through the day, yesterday's ATM strike can become in or out of the money.",
+    "example": "Say ABC Ltd trades at exactly ₹1,000 and its ₹1,000 call quotes at ₹28. The call has no intrinsic value, so all ₹28 is time value. If the share is still at ₹1,000 at expiry, the call expires worthless and the buyer loses the full ₹28 per share.",
+    "formula": "An option is ATM when S is approximately equal to K (S = underlying price, K = strike)",
+    "related": [
+      "In the money",
+      "Out of the money",
+      "Moneyness",
+      "Option time value",
+      "Implied volatility"
+    ]
+  },
+  {
+    "id": "out-of-the-money",
+    "term": "Out of the money",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "OTM",
+      "deep OTM",
+      "out-of-the-money"
+    ],
+    "hl": [
+      "deep out-of-the-money",
+      "out-of-the-money option",
+      "out-of-the-money options"
+    ],
+    "abbr": [
+      "OTM"
+    ],
+    "short": "Describes an option worth nothing if used now: a call with strike above the market price, or a put with strike below it.",
+    "kid": "Your promise lets you get a toy for five marbles, but right now anyone can get it for three. Your promise only helps if the toy becomes much more wanted soon.",
+    "detail": "An option is out of the money (OTM) when exercising it now would bring no gain: a call whose strike is above the underlying price, or a put whose strike is below it. OTM options have zero intrinsic value, so their entire premium is time value, which makes them cheap in rupee terms and popular with small traders hoping for a big move. Most options that stay OTM expire worthless, and their low price reflects a low probability of paying off; SEBI studies of individual F&O traders have found that a large majority lose money. Writers often sell OTM options to collect premium, accepting rare but large losses. A common confusion: cheap is not the same as good value; a ₹2 option that expires worthless is still a 100% loss.",
+    "example": "Say ABC Ltd trades at ₹400 and a ₹450 call costs ₹3. The share must rise above ₹450 for the call to be worth anything at expiry, and above ₹453 for the buyer to break even. If it ends at ₹440, the call expires worthless and the buyer loses all ₹3 per share.",
+    "formula": "A call is OTM when S is below K; a put is OTM when S is above K (S = underlying price, K = strike)",
+    "related": [
+      "In the money",
+      "At the money",
+      "Moneyness",
+      "Option time value",
+      "Option writer"
+    ]
+  },
+  {
+    "id": "moneyness",
+    "term": "Moneyness",
+    "cat": "options",
+    "level": "i",
+    "aliases": [],
+    "hl": [
+      "moneyness"
+    ],
+    "abbr": [],
+    "short": "Where an option's strike price sits relative to the current market price, telling you whether it is in, at or out of the money.",
+    "kid": "It is a way of sorting your swap promises into three boxes: already a good deal, just even, and not a good deal yet.",
+    "detail": "Moneyness describes the relationship between an option's strike price and the current price of the underlying. It places every option in one of three buckets: in the money (positive intrinsic value), at the money (strike roughly equal to spot) and out of the money (no intrinsic value). Professionals also express it as a number, such as the ratio of strike to spot (a 110% strike), the logarithm of that ratio, or the option's delta (a 25-delta put). Moneyness matters because it shapes nearly everything about an option: how much of its premium is intrinsic versus time value, how sensitive it is to the underlying, and the implied volatility the market charges, which varies by moneyness along the volatility smile. A common confusion: a call and a put with the same strike have opposite moneyness; if the call is in the money, the put is out of the money.",
+    "example": "Say ABC Ltd trades at ₹1,000. A ₹900 call has a strike-to-spot ratio of 90% and is ₹100 in the money; a ₹1,100 call has a ratio of 110% and is ₹100 out of the money; and the ₹900 put is ₹100 out of the money.",
+    "formula": "Simple moneyness = K / S (some traders use S / K); Log moneyness = ln(K / S)",
+    "related": [
+      "In the money",
+      "At the money",
+      "Out of the money",
+      "Strike price",
+      "Volatility smile",
+      "Delta"
+    ]
+  },
+  {
+    "id": "option-intrinsic-value",
+    "term": "Option intrinsic value",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "intrinsic value of an option"
+    ],
+    "hl": [
+      "intrinsic value of an option",
+      "intrinsic value of the option",
+      "option intrinsic value",
+      "option's intrinsic value"
+    ],
+    "abbr": [],
+    "short": "What an option would pay if used right now, based on the gap between the market price and the strike; never below zero.",
+    "kid": "If your promise lets you get a toy for three marbles and the toy is worth five, your promise is already worth two marbles. That two is what this means.",
+    "detail": "Intrinsic value is the part of an option's premium that comes from being in the money. For a call it is the underlying price minus the strike; for a put, the strike minus the underlying price. If the result is negative, intrinsic value is zero, because the holder would simply not exercise. At expiry an option is worth exactly its intrinsic value, since no time is left for things to change. Before expiry the premium is intrinsic value plus time value, so intrinsic value acts as a floor under the price of American-style options; a European option's price can occasionally dip below it, for example a deep in-the-money put, or a call on a stock about to pay a large dividend. A common confusion: this has nothing to do with the intrinsic value of a company in value investing, which is an estimate of what the whole business is worth.",
+    "example": "Say ABC Ltd trades at ₹350. A ₹300 call has an intrinsic value of ₹50 and a ₹400 put also ₹50, while a ₹380 call has none. If the ₹300 call trades at ₹62, ₹50 is intrinsic value and the other ₹12 is time value.",
+    "formula": "Call intrinsic value = max(S - K, 0); Put intrinsic value = max(K - S, 0)",
+    "related": [
+      "Option time value",
+      "Option premium",
+      "In the money",
+      "Moneyness",
+      "Strike price"
+    ]
+  },
+  {
+    "id": "option-time-value",
+    "term": "Option time value",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "time value of an option",
+      "extrinsic value",
+      "time premium"
+    ],
+    "hl": [
+      "extrinsic value",
+      "time value of an option",
+      "time value of the option",
+      "option time value",
+      "options time value"
+    ],
+    "abbr": [],
+    "short": "The part of an option's price above what it would pay if used now, reflecting the chance of a better outcome before it expires.",
+    "kid": "A promise that lasts a whole week is worth a bit more than one that ends tonight, because more nice things can happen in a week. That extra bit slowly melts away as the days pass.",
+    "detail": "Time value, also called extrinsic value, is the option premium minus its intrinsic value. It is what buyers pay for the possibility that the option becomes more valuable before expiry. Time value is largest for at-the-money options, grows with more time to expiry and with higher implied volatility, and is also nudged by interest rates and expected dividends. It shrinks as expiry approaches, a process called time decay (theta), which speeds up in the final days; at expiry it is zero. Out-of-the-money options are made up entirely of time value. This is why option buyers fight the clock, while option writers, who are short time value, earn it if the market stays quiet. A common confusion: this is not the time value of money from discounting cash flows, though interest rates do feed into it.",
+    "example": "Say a ₹500 call on ABC Ltd trades at ₹35 when the share is at ₹520. Intrinsic value is ₹20, so time value is ₹15. If the share is still at ₹520 at expiry, the call is worth ₹20 and the ₹15 of time value has gone.",
+    "formula": "Time value = Option premium - Intrinsic value",
+    "related": [
+      "Option intrinsic value",
+      "Option premium",
+      "Theta",
+      "Implied volatility",
+      "At the money"
+    ]
+  },
+  {
+    "id": "option-writer",
+    "term": "Option writer",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "option seller",
+      "writing options",
+      "short option",
+      "option writing"
+    ],
+    "hl": [
+      "option writer",
+      "option writers",
+      "options writers",
+      "option writing",
+      "options writing",
+      "option seller",
+      "option sellers",
+      "options sellers"
+    ],
+    "abbr": [],
+    "short": "The person who sells an option, receives the buyer's payment upfront and must honour the deal if the buyer chooses to use it.",
+    "kid": "Your friend gives you a sticker, and in return you promise to swap your toy car for three marbles if they ask. You keep the sticker, but you must keep your promise.",
+    "detail": "The option writer is the seller who opens a short option position, taking the opposite side to the buyer. The writer receives the premium upfront and takes on an obligation: a call writer must deliver the underlying at the strike if assigned, and a put writer must buy it at the strike. The writer's maximum gain is the premium, while the potential loss is large, and for an uncovered (naked) call, unlimited. Because of this, exchanges and brokers require writers to post margin, usually far more than the premium a buyer pays for the same contract. Writers profit from time decay and falling volatility, which is why many institutions sell options systematically, often hedged. A common confusion: a high win rate does not mean low risk; writers often win small amounts for months and then lose heavily in one sharp move.",
+    "example": "Say you write one ₹2,000 call on ABC Ltd for a ₹30 premium on a lot of 250 shares, collecting ₹7,500. If the share ends at or below ₹2,000, you keep the full ₹7,500. If it ends at ₹2,100, you owe ₹100 per share, or ₹25,000, a net loss of ₹17,500.",
+    "formula": "Writer's profit at expiry = Premium received - Option payoff",
+    "related": [
+      "Option buyer",
+      "Option assignment",
+      "Option premium",
+      "Margin",
+      "Covered call",
+      "Naked option"
+    ]
+  },
+  {
+    "id": "option-buyer",
+    "term": "Option buyer",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "option holder",
+      "long option"
+    ],
+    "hl": [
+      "option buyer",
+      "option buyers",
+      "options buyer",
+      "options buyers",
+      "option holder",
+      "option holders"
+    ],
+    "abbr": [],
+    "short": "The person who pays for an option and gains the right, but not the duty, to buy or sell the asset at the agreed price.",
+    "kid": "You give your friend a sticker so they must swap their kite with you later if you ask. You get to choose, and they have to wait and see what you decide.",
+    "detail": "The option buyer, or holder, takes the long side of an option contract by paying the premium. In return the buyer gets a right without an obligation: to buy the underlying at the strike with a call, or to sell it with a put, on or before expiry depending on the exercise style. The buyer's maximum loss is the premium paid, while the potential gain is large, and for a call, uncapped. Buyers do not post margin beyond the premium, which is why buying options is popular with small traders. But time decay works against them every day, and the underlying must move far enough, and soon enough, to cover the premium. Buyers use options to speculate with limited risk or to hedge existing holdings. A common confusion: limited loss does not mean a low chance of loss; many bought options, especially out-of-the-money ones, expire worthless.",
+    "example": "Say you buy a ₹300 put on ABC Ltd for ₹8 per share on a lot of 1,000 shares, paying ₹8,000. The most you can lose is ₹8,000. You break even if the share ends at ₹292, and if it falls to ₹270 your put is worth ₹30,000, a profit of ₹22,000.",
+    "formula": "Buyer's profit at expiry = Option payoff - Premium paid",
+    "related": [
+      "Option writer",
+      "Option exercise",
+      "Option premium",
+      "Call option",
+      "Put option",
+      "Theta"
+    ]
+  },
+  {
+    "id": "option-exercise",
+    "term": "Option exercise",
+    "cat": "options",
+    "level": "b",
+    "aliases": [
+      "exercise",
+      "exercising an option"
+    ],
+    "hl": [
+      "option exercise",
+      "options exercise",
+      "exercise of options",
+      "exercised options"
+    ],
+    "abbr": [],
+    "short": "The holder's act of using an option's right: buying or selling the asset at the agreed price, or taking the cash difference.",
+    "kid": "You had a promise that your friend would swap their kite for your three marbles. Today you say yes, let's swap, and the swap happens.",
+    "detail": "Exercise is the holder's decision to use an option: a call holder buys the underlying at the strike, and a put holder sells it at the strike. A rational holder exercises only when the option is in the money. When an option is exercised, the clearing corporation assigns the obligation to a writer. Timing depends on style: American options can be exercised on any day up to expiry, European options only at expiry. Settlement is either physical (the asset changes hands) or cash (only the difference is paid). In India, exchange-traded equity options are European-style; under the rules as of 2025, index options are cash-settled, stock options that expire in the money are settled by delivery of shares, and in-the-money contracts are generally exercised automatically at expiry. A common confusion: selling an option in the market usually beats exercising it early, because a sale also collects the remaining time value.",
+    "example": "Say you hold a ₹1,200 call on ABC Ltd for a lot of 500 shares, bought at ₹25, and the share settles at ₹1,260 at expiry. On exercise you buy 500 shares for ₹6,00,000 that are worth ₹6,30,000, a gain of ₹30,000 before the ₹12,500 premium, so ₹17,500 net.",
+    "formula": "",
+    "related": [
+      "Option assignment",
+      "American option",
+      "European option",
+      "Option buyer",
+      "Physical settlement",
+      "Strike price"
+    ]
+  },
+  {
+    "id": "option-assignment",
+    "term": "Option assignment",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "assignment",
+      "assigned"
+    ],
+    "hl": [
+      "option assignment",
+      "options assignment"
+    ],
+    "abbr": [],
+    "short": "The notice to an option seller that a buyer has used their right, so the seller must now deliver or take the asset as promised.",
+    "kid": "You promised a friend you would swap your toy car if they asked. Today they asked, so now you have to hand it over, just as you said.",
+    "detail": "Assignment is the other side of exercise. When an option holder exercises, the clearing corporation picks a writer with an open short position in that contract, typically at random, and assigns the obligation to them. An assigned call writer must deliver the underlying at the strike, or pay the cash difference; an assigned put writer must buy it at the strike. With American-style options, such as most US stock options, assignment can come early, for example on a deep in-the-money call just before a dividend, which surprises many new writers. In India, equity options are European-style, so assignment happens only at expiry, and for in-the-money stock options it means delivering or taking delivery of shares. A common confusion: writers cannot choose whether to be assigned; once they sell an option, the decision is in the buyer's hands.",
+    "example": "Say you wrote a ₹900 put on ABC Ltd for ₹15 on a lot of 600 shares, and the share settles at ₹860 at expiry. You are assigned and must buy 600 shares at ₹900, paying ₹5,40,000 for shares worth ₹5,16,000. After the ₹9,000 premium you kept, your net loss is ₹15,000.",
+    "formula": "",
+    "related": [
+      "Option exercise",
+      "Option writer",
+      "American option",
+      "Clearing corporation",
+      "Physical settlement"
+    ]
+  },
+  {
+    "id": "american-option",
+    "term": "American option",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "American-style option"
+    ],
+    "hl": [
+      "american-style option",
+      "american-style options"
+    ],
+    "abbr": [],
+    "short": "An option that its holder can use on any trading day up to and including its expiry date, not just on the final day.",
+    "kid": "Your swap promise is good for the whole week, so you can ask for the toy on any day you like. You don't have to wait until Saturday.",
+    "detail": "An American option can be exercised at any time up to and including its expiry date. Most single-stock options listed in the US are American-style, while many index options, such as S&P 500 index options on Cboe, are European-style. Because the holder has extra flexibility, an American option is worth at least as much as an otherwise identical European option. In practice early exercise rarely pays for calls on shares that pay no dividend, because selling the option captures its remaining time value; it can make sense for deep in-the-money puts, or for a call just before a large dividend. American options are usually valued with binomial trees rather than the basic Black-Scholes formula. A common confusion: the name has nothing to do with geography. Indian stock options were once American-style, but NSE switched them to European style in 2011.",
+    "example": "Say you hold an American-style $50 put on a hypothetical XYZ Inc, and the stock collapses to $20 a month before expiry. You can exercise at once and receive $30 per share, or $3,000 on a 100-share contract, and earn interest on that cash for the remaining month.",
+    "formula": "",
+    "related": [
+      "European option",
+      "Option exercise",
+      "Option assignment",
+      "Binomial option pricing model",
+      "Bermudan option"
+    ]
+  },
+  {
+    "id": "european-option",
+    "term": "European option",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "European-style option"
+    ],
+    "hl": [
+      "european-style option",
+      "european-style options"
+    ],
+    "abbr": [],
+    "short": "An option that its holder can use only on its expiry date, not on any day before it.",
+    "kid": "Your swap promise only works on Saturday. You can't ask for the toy on Tuesday; you have to wait for Saturday to decide.",
+    "detail": "A European option can be exercised only at expiry. The name describes the exercise style, not where the option trades. Index options around the world are mostly European-style, and in India all exchange-traded equity options, on the Nifty 50, other indices and individual stocks, are European-style. Even though the holder cannot exercise early, they can still sell the option on the exchange at any time before expiry, so the restriction matters less than it seems. European options are simpler to price: the Black-Scholes model gives a closed-form value for them, and put-call parity holds exactly. They can be worth slightly less than American options with the same terms, because the early-exercise right is missing. A common confusion: being unable to exercise early does not lock you into the trade until expiry; you can exit at any time by selling the option.",
+    "example": "Say you buy a European ₹2,500 call on ABC Ltd and the share jumps to ₹2,700 a week before expiry. You cannot exercise yet, but you can sell the call, which might trade at about ₹215: ₹200 of intrinsic value plus some time value. If you hold on and the share settles at ₹2,650, you receive ₹150 per share.",
+    "formula": "",
+    "related": [
+      "American option",
+      "Black-Scholes model",
+      "Option exercise",
+      "Put-call parity",
+      "Cash settlement"
+    ]
+  },
+  {
+    "id": "black-scholes-model",
+    "term": "Black-Scholes model",
+    "cat": "options",
+    "level": "a",
+    "aliases": [
+      "Black-Scholes-Merton",
+      "BSM",
+      "Black-Scholes formula",
+      "Black Scholes"
+    ],
+    "hl": [
+      "black-scholes",
+      "black-scholes model",
+      "black-scholes-merton",
+      "black-scholes formula",
+      "black scholes model"
+    ],
+    "abbr": [],
+    "short": "A mathematical formula that estimates the fair price of a European option from the asset price, strike, time, interest rate and expected volatility.",
+    "kid": "It is a clever recipe that tells you how much a swap promise should cost. You put in what the toy is worth, how long the promise lasts and how much the toy's worth jumps around, and out comes a fair answer.",
+    "detail": "The Black-Scholes model, published by Fischer Black and Myron Scholes in 1973 and extended by Robert Merton, gives a closed-form price for European options. It assumes the underlying price follows a random walk with constant volatility (lognormal prices), constant interest rates, no trading frictions and continuous hedging by trading the underlying. Its key insight is that a perfectly hedged position is riskless, so the option's value does not depend on investors' views of expected return. Scholes and Merton received the 1997 Nobel memorial prize in economic sciences; Black had died in 1995. The model also yields the Greeks used for hedging, and traders invert it to back out implied volatility from market prices. A common confusion: real markets break its assumptions, with fat tails and volatility that varies by strike and over time, so traders use it as a quoting language and adjust for the volatility smile.",
+    "example": "Take a hypothetical share at $100 that pays no dividend, a one-year European call with a $100 strike, a 5% risk-free rate and 20% volatility. Black-Scholes gives a call price of about $10.45 and, through put-call parity, a put price of about $5.57.",
+    "formula": "C = S x N(d1) - K x e^(-rT) x N(d2); P = K x e^(-rT) x N(-d2) - S x N(-d1); d1 = [ln(S/K) + (r + sigma^2/2) x T] / (sigma x sqrt(T)); d2 = d1 - sigma x sqrt(T)",
+    "related": [
+      "Implied volatility",
+      "Binomial option pricing model",
+      "Option Greeks",
+      "European option",
+      "Put-call parity",
+      "Volatility smile"
+    ]
+  },
+  {
+    "id": "binomial-option-pricing-model",
+    "term": "Binomial option pricing model",
+    "cat": "options",
+    "level": "a",
+    "aliases": [
+      "binomial model",
+      "binomial tree",
+      "Cox-Ross-Rubinstein model"
+    ],
+    "hl": [
+      "binomial option pricing",
+      "binomial option pricing model",
+      "binomial options pricing",
+      "binomial tree model",
+      "cox-ross-rubinstein"
+    ],
+    "abbr": [],
+    "short": "A method that prices an option by mapping the asset's possible up and down moves step by step, then working the option's value backwards.",
+    "kid": "Imagine a toy's worth can go up or down each day, like a path that splits at every step. You draw all the paths, see what your promise is worth at each end, and walk back to today.",
+    "detail": "The binomial model, set out by Cox, Ross and Rubinstein in 1979, values an option by splitting the time to expiry into small steps. At each step the underlying price can move up by a factor u or down by a factor d, forming a tree of possible prices. At the final nodes the option is worth its payoff; the model then works backwards, valuing each earlier node as the discounted expected value using risk-neutral probabilities rather than real-world ones. Because it can check at every node whether exercising early is worth more than holding, it handles American options naturally, which the basic Black-Scholes formula cannot. With enough steps, its price for a European option converges to the Black-Scholes value. A common confusion: the up-move probability p is not a forecast of how likely the price is to rise.",
+    "example": "Take a hypothetical share at ₹100 that can move to ₹120 or ₹80 in one period, a ₹100 call and a 5% risk-free rate for the period. The risk-neutral up probability is (1.05 - 0.80) / (1.20 - 0.80) = 0.625, so the call is worth (0.625 x ₹20 + 0.375 x ₹0) / 1.05, or about ₹11.90.",
+    "formula": "p = (R - d) / (u - d), where R = 1 + per-period risk-free rate (or e^(r x dt)); Node value = [p x V(up) + (1 - p) x V(down)] / R; in Cox-Ross-Rubinstein, u = e^(sigma x sqrt(dt)) and d = 1/u",
+    "related": [
+      "Black-Scholes model",
+      "American option",
+      "Risk-neutral valuation",
+      "Option premium",
+      "Monte Carlo simulation"
+    ]
+  },
+  {
+    "id": "implied-volatility",
+    "term": "Implied volatility",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "IV",
+      "implied vol"
+    ],
+    "hl": [
+      "implied volatility",
+      "implied volatilities",
+      "implied vol",
+      "implied vols"
+    ],
+    "abbr": [],
+    "short": "The size of future price swings the market is expecting, worked backwards from an option's current price and quoted as a yearly percentage.",
+    "kid": "If people expect a big storm, umbrellas cost more in the shop. Looking at how much umbrellas cost tells you how big a storm everyone is expecting.",
+    "detail": "Implied volatility (IV) is the volatility number that, when plugged into an option pricing model such as Black-Scholes, makes the model price equal the option's market price. Since every other input (spot, strike, time, interest rate) can be observed, IV is the market's price of uncertainty: the higher it is, the more expensive options are. It is quoted as an annualised standard deviation, so an IV of 16% implies a typical daily move of roughly 1% (16 divided by 16, the approximate square root of the number of trading days in a year). IV tends to rise ahead of events such as company results, the Union Budget or election results, and when markets fall sharply. India VIX is calculated from Nifty 50 option prices and summarises near-term implied volatility. A common confusion: IV is not a forecast of direction, and it is not the same as historical volatility.",
+    "example": "Say ABC Ltd trades at ₹1,000 and its options carry an implied volatility of 32%. By the rule of 16, the market is pricing a typical daily move of about 2%, or ₹20, and about 4%, or ₹40, over four trading days, since volatility grows with the square root of time.",
+    "formula": "Implied volatility = the sigma that solves Model price(S, K, T, r, sigma) = Market price; Typical daily move = IV / sqrt(252), roughly IV / 16",
+    "related": [
+      "Historical volatility",
+      "Black-Scholes model",
+      "Volatility smile",
+      "Vega",
+      "India VIX",
+      "Volatility crush"
+    ]
+  },
+  {
+    "id": "historical-volatility",
+    "term": "Historical volatility",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "realised volatility",
+      "realized volatility",
+      "HV"
+    ],
+    "hl": [
+      "historical volatility",
+      "realised volatility",
+      "realized volatility",
+      "realised vol",
+      "realized vol"
+    ],
+    "abbr": [],
+    "short": "How much an asset's price has really bounced around over a past period, usually expressed as a yearly percentage.",
+    "kid": "If you count how many times a bouncy ball went up and down last week, and how high, you know how jumpy it was. That count looks back, not forward.",
+    "detail": "Historical, or realised, volatility measures how much an asset's price actually moved over a past window, such as 20, 30 or 60 trading days. It is calculated as the standard deviation of daily log returns, then annualised by multiplying by the square root of the number of trading days in a year, usually taken as 252. Traders compare it with implied volatility: if options imply 25% but the stock has been realising 15%, options look expensive, which can favour option sellers; the reverse suggests options are cheap. Risk managers use it in value-at-risk models and position sizing. The window matters a lot: a 10-day measure reacts quickly to a crash, while a one-year measure smooths it out. A common confusion: historical volatility describes only the past; what matters for an option's payoff is the volatility over its remaining life, which nobody knows in advance.",
+    "example": "Say ABC Ltd's daily returns over the last 30 sessions have a standard deviation of 1.5%. Annualised, that is 1.5% x the square root of 252, or about 1.5% x 15.87, which is roughly 23.8% historical volatility.",
+    "formula": "Historical volatility = Standard deviation of daily log returns x sqrt(252)",
+    "related": [
+      "Implied volatility",
+      "Standard deviation",
+      "Volatility smile",
+      "Value at risk",
+      "Beta"
+    ]
+  },
+  {
+    "id": "volatility-smile",
+    "term": "Volatility smile",
+    "cat": "options",
+    "level": "a",
+    "aliases": [
+      "volatility skew",
+      "skew",
+      "volatility smirk"
+    ],
+    "hl": [
+      "volatility smile",
+      "volatility smiles",
+      "volatility skew",
+      "volatility smirk",
+      "vol skew",
+      "put skew"
+    ],
+    "abbr": [],
+    "short": "The pattern where options on the same asset and date are priced as if different swings are expected at different strike prices, forming a curve.",
+    "kid": "Umbrellas for really big storms cost a lot more than you'd guess, because people are scared of big storms. If you draw how much each one costs, the line curves like a smile.",
+    "detail": "If Black-Scholes held exactly, every option on the same underlying and expiry would have the same implied volatility. In practice, plotting implied volatility against strike gives a curve. When both deep out-of-the-money puts and calls carry higher IV than at-the-money options, the curve looks like a smile, a shape often seen in currency options. In equity indices, including the Nifty 50, the curve is usually a downward-sloping skew or smirk: low-strike puts carry much higher IV than high-strike calls, because investors pay up for crash protection and markets tend to fall faster than they rise. The pattern became pronounced after the October 1987 crash. Traders read changes in skew as a gauge of fear. A common confusion: skew does not mean the market expects a fall; it means protection against a fall costs more than a constant-volatility model would charge.",
+    "example": "Say a hypothetical index's one-month options show implied volatility of 13% at the at-the-money strike, 18% on a put 5% below spot and 11% on a call 5% above spot. The 7-point gap between that put and call is the skew, and it shows downside protection is priced richly.",
+    "formula": "One common skew measure = IV of 25-delta put - IV of 25-delta call",
+    "related": [
+      "Implied volatility",
+      "Volatility surface",
+      "Black-Scholes model",
+      "Moneyness",
+      "Out of the money"
+    ]
+  },
+  {
+    "id": "volatility-surface",
+    "term": "Volatility surface",
+    "cat": "options",
+    "level": "a",
+    "aliases": [
+      "vol surface"
+    ],
+    "hl": [
+      "volatility surface",
+      "volatility surfaces",
+      "vol surface",
+      "implied volatility surface"
+    ],
+    "abbr": [],
+    "short": "A 3D map of how much price swing the market is pricing into an asset's options, across every strike price and expiry date.",
+    "kid": "Picture a bumpy blanket. Each bump shows how worried people are about big jumps, for different sizes of jump and for different days ahead.",
+    "detail": "The volatility surface combines the volatility smile (implied volatility across strikes) with the term structure (implied volatility across expiries) into one grid or 3D plot. One axis is strike or moneyness, often measured by delta; the other is time to expiry; the height is implied volatility. Trading desks build the surface from listed option prices, smooth it so it contains no arbitrage gaps, and use it to price and risk-manage options, including exotic and over-the-counter contracts that do not trade on an exchange. Its shape carries information: short-dated volatility usually moves more than long-dated volatility, often jumping in a sell-off, and skew is typically steeper for near expiries. Scheduled events, such as an RBI policy decision or an election result, show up as bumps on the expiries that cover them. A common confusion: the surface is not a forecast; it is a snapshot of option prices that changes all day.",
+    "example": "Say a hypothetical index's at-the-money implied volatility is 15% at one month and 17% at one year, while a one-month put 10% below spot shows 22%. Pricing that put at the flat 15% would make it look 7 volatility points cheaper than the market is charging.",
+    "formula": "Implied volatility = f(strike or moneyness, time to expiry)",
+    "related": [
+      "Volatility smile",
+      "Implied volatility",
+      "Term structure of volatility",
+      "Black-Scholes model",
+      "Vega"
+    ]
+  },
+  {
+    "id": "volatility-crush",
+    "term": "Volatility crush",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "IV crush",
+      "vol crush"
+    ],
+    "hl": [
+      "volatility crush",
+      "iv crush",
+      "vol crush",
+      "implied volatility crush"
+    ],
+    "abbr": [],
+    "short": "A sharp fall in the expected price swings built into options once a big event passes, which quickly makes the options cheaper.",
+    "kid": "Before the big football match, everyone wants a ticket and they cost a lot. The moment the match is over, nobody wants one, even though the ticket looks the same.",
+    "detail": "Volatility crush, or IV crush, is the sudden fall in implied volatility once a known event is out of the way. Before quarterly results, a Union Budget, an RBI policy decision or election results, traders bid up option prices to cover a possible big move. When the news arrives, uncertainty collapses, implied volatility drops and option premiums lose much of their time value, often within minutes of the market opening. Buyers who bet on a move can lose money even when they guess the direction correctly, if the move is smaller than the market had priced in. Option writers who sold before the event benefit, though they risk a much larger loss if the surprise is big. A common confusion: the crush is not caused by the price falling; it hits calls and puts alike, and its size depends on vega, the option's sensitivity to volatility.",
+    "example": "Say ABC Ltd trades at ₹800 the day before results, and its two-week ₹800 call costs ₹38 with implied volatility at 60%. The results are good, the share rises to ₹815 and implied volatility falls to 30%, so the call now trades at about ₹28. The buyer was right on direction but lost about ₹10 per share.",
+    "formula": "",
+    "related": [
+      "Implied volatility",
+      "Vega",
+      "Option time value",
+      "Earnings season",
+      "India VIX"
+    ]
+  },
+  {
+    "id": "option-greeks",
+    "term": "Option Greeks",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "Greeks",
+      "the Greeks"
+    ],
+    "hl": [
+      "option greeks",
+      "options greeks"
+    ],
+    "abbr": [],
+    "short": "A set of measures, named after Greek letters, that show how an option's price changes when the asset price, time, volatility or interest rates change.",
+    "kid": "A kite flies differently when the wind blows harder, when it rains or when the string gets shorter. These are little gauges that tell you how much each of those things changes your kite's flight.",
+    "detail": "The Greeks measure how sensitive an option's value is to each input of a pricing model. Delta is the change in option price for a one-unit move in the underlying; gamma, the change in delta; theta, the value lost as one day passes; vega, the change for a one-point move in implied volatility; and rho, the change for a one-point move in interest rates. Traders add up the Greeks across all their positions to see the overall risk of a book, and hedge them, for example by trading the underlying to bring delta near zero (delta hedging). Retail traders in India see the Greeks on broker option chains and use them to judge how a strategy will behave. A common confusion: the Greeks are local, model-based estimates that keep changing as the market moves; a delta of 0.5 today can be 0.8 tomorrow after a rally.",
+    "example": "Say a call on ABC Ltd costs ₹50 with a delta of 0.6, a theta of -₹2 per day and a vega of ₹3 per volatility point. If the share rises ₹10 in a day while implied volatility rises 1 point, the call should be worth about ₹50 + ₹6 - ₹2 + ₹3 = ₹57, ignoring gamma.",
+    "formula": "Delta = dV/dS; Gamma = d2V/dS2; Theta = dV/dt; Vega = dV/d(sigma); Rho = dV/dr (V = option value)",
+    "related": [
+      "Delta",
+      "Gamma",
+      "Theta",
+      "Vega",
+      "Rho",
+      "Delta hedging"
+    ]
+  },
+  {
+    "id": "delta",
+    "term": "Delta",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "option delta"
+    ],
+    "hl": [
+      "option delta",
+      "options delta",
+      "delta of the option",
+      "delta of an option"
+    ],
+    "abbr": [],
+    "short": "How much an option's price is expected to move for a one-rupee (or one-dollar) move in the price of the underlying asset.",
+    "kid": "If your toy's worth goes up by one marble and your swap promise goes up by half a marble, that half tells you how closely the promise follows the toy.",
+    "detail": "Delta is the first-order sensitivity of an option's price to the underlying price. Call deltas range from 0 to 1 and put deltas from 0 to -1: a delta of 0.5 means the option gains about ₹0.50 for each ₹1 rise in the underlying. At-the-money options have deltas near 0.5 (or -0.5), deep in-the-money options approach 1 (or -1) and far out-of-the-money options approach 0. Multiplying delta by the number of shares the options cover gives a position's share-equivalent exposure, which is how dealers hedge: a dealer who has sold calls with a combined delta of -2,000 shares buys 2,000 shares to become delta-neutral. Traders also use delta as a rough guide to the chance of expiring in the money. A common confusion: delta is not fixed; it changes as the price moves (gamma), as time passes and as volatility changes.",
+    "example": "Say ABC Ltd is at ₹600 and a ₹600 call trades at ₹25 with a delta of 0.55. If the share rises to ₹610, the call should be worth about ₹25 + 0.55 x ₹10 = ₹30.50. On a lot of 1,000 shares the position behaves like holding 550 shares.",
+    "formula": "Delta = Change in option price / Change in underlying price; Black-Scholes call delta = N(d1), put delta = N(d1) - 1",
+    "related": [
+      "Option Greeks",
+      "Gamma",
+      "Delta hedging",
+      "Moneyness",
+      "Hedge ratio"
+    ]
+  },
+  {
+    "id": "gamma",
+    "term": "Gamma",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "option gamma"
+    ],
+    "hl": [
+      "option gamma",
+      "options gamma",
+      "gamma risk"
+    ],
+    "abbr": [],
+    "short": "How quickly an option's sensitivity to the asset price (its delta) changes as that price moves.",
+    "kid": "When you ride a bike downhill, you go faster and faster. This tells you how quickly the speeding-up happens, not just how fast you are going.",
+    "detail": "Gamma is the rate of change of delta for a one-unit move in the underlying, the second-order price sensitivity. It is positive for anyone who owns options, calls or puts, and negative for writers. Gamma is highest for at-the-money options and rises sharply as expiry nears, which is why option prices can swing so violently on expiry day. Long gamma means delta moves in your favour: you get longer as prices rise and shorter as they fall, so big moves help you. Short gamma is the reverse, and it forces hedgers to buy into rallies and sell into falls, which can amplify market moves. Owning gamma costs time decay (theta), so gamma and theta are two sides of the same trade-off. A common confusion: high gamma does not mean high value; a cheap, near-expiry at-the-money option can have enormous gamma.",
+    "example": "Say a call has a delta of 0.50 and a gamma of 0.04. If the underlying rises ₹5, delta becomes about 0.50 + 0.04 x 5 = 0.70; if it falls ₹5, delta drops to about 0.30. The option has gone from behaving like half a share to behaving like seven-tenths of one.",
+    "formula": "Gamma = Change in delta / Change in underlying price",
+    "related": [
+      "Delta",
+      "Option Greeks",
+      "Theta",
+      "Delta hedging",
+      "Gamma squeeze"
+    ]
+  },
+  {
+    "id": "theta",
+    "term": "Theta",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "time decay",
+      "theta decay"
+    ],
+    "hl": [
+      "time decay",
+      "theta decay",
+      "option theta",
+      "options theta"
+    ],
+    "abbr": [],
+    "short": "How much value an option loses as one day passes with everything else unchanged, also called time decay.",
+    "kid": "An ice-cream cone melts a little every minute it sits in the sun, and faster near the end. A swap promise shrinks the same way as its last day gets closer.",
+    "detail": "Theta measures the change in an option's value as time passes, usually quoted per calendar day. For option buyers theta is negative: each day the time value shrinks, even if nothing else changes. For writers it is positive, which is why selling options is often described as collecting theta. Time decay is not linear; it is slow when expiry is months away and speeds up in the final days, especially for at-the-money options, while deep in- or out-of-the-money options lose less in rupee terms. This is why short-dated options, such as the weekly Nifty 50 options listed in India under the rules as of 2025, can lose much of their value within a day or two. A common confusion: theta assumes everything else stays the same; in reality, a rise in implied volatility or a move in the underlying can more than offset a day's decay.",
+    "example": "Say a ₹1,500 call on ABC Ltd costs ₹30 with a theta of -₹1.50 per day. If the share price and implied volatility stay unchanged, the call should be worth about ₹28.50 tomorrow and about ₹22.50 after five days, ignoring that decay usually speeds up.",
+    "formula": "Theta = Change in option price / Change in time (usually per day)",
+    "related": [
+      "Option time value",
+      "Option Greeks",
+      "Gamma",
+      "Option writer",
+      "Vega"
+    ]
+  },
+  {
+    "id": "vega",
+    "term": "Vega",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "option vega"
+    ],
+    "hl": [
+      "option vega",
+      "options vega"
+    ],
+    "abbr": [],
+    "short": "How much an option's price changes when the market's expected price swings (implied volatility) rise or fall by one percentage point.",
+    "kid": "When people think a storm is coming, umbrellas cost more, even before any rain. This tells you how much more your umbrella costs when people worry a bit more.",
+    "detail": "Vega measures an option's sensitivity to implied volatility, usually stated as the price change for a one-percentage-point move in IV. Option buyers are long vega: calls and puts both gain when implied volatility rises. Writers are short vega. Vega is largest for at-the-money options and for longer-dated options, since there is more time for volatility to matter, and it shrinks as expiry approaches. This is why long-dated options react strongly to shifts in market fear, while near-expiry options are driven more by gamma and theta. Vega also explains volatility crush: after an event, falling IV cuts option prices even if the underlying barely moves. Traders weigh their vega exposure against their view of whether IV is too high or too low. A common confusion: vega is not actually a Greek letter; the name was borrowed because it starts with v, for volatility.",
+    "example": "Say a three-month ₹2,000 put on ABC Ltd costs ₹80 with a vega of ₹4 and implied volatility of 25%. If fear rises and IV jumps to 30% with the share price unchanged, the put should be worth about ₹80 + 5 x ₹4 = ₹100.",
+    "formula": "Vega = Change in option price / 1 percentage-point change in implied volatility",
+    "related": [
+      "Implied volatility",
+      "Option Greeks",
+      "Volatility crush",
+      "Gamma",
+      "Theta"
+    ]
+  },
+  {
+    "id": "rho",
+    "term": "Rho",
+    "cat": "options",
+    "level": "i",
+    "aliases": [
+      "option rho"
+    ],
+    "hl": [
+      "option rho",
+      "options rho"
+    ],
+    "abbr": [],
+    "short": "How much an option's price changes when interest rates move by one percentage point, all else unchanged.",
+    "kid": "Sometimes waiting a little longer to hand over your coins gets you a small treat. This tells you how a swap promise changes when that treat gets bigger.",
+    "detail": "Rho measures an option's sensitivity to the risk-free interest rate, usually per one-percentage-point change. Calls have positive rho and puts negative rho: higher rates make calls slightly more valuable and puts slightly less, because the strike paid in the future is worth less in today's money, and because holding a call instead of the shares frees up cash that can earn interest. Rho grows with time to expiry and with how deep in the money the option is, so it matters most for long-dated options, such as LEAPS in the US. For weekly or monthly options its effect is usually tiny next to delta, gamma, theta and vega, which is why many traders ignore it. A common confusion: rho captures only the direct effect of rates on the option's price, not the effect of a rate change on the share price itself, which is often far larger.",
+    "example": "Say a one-year ₹500 call on ABC Ltd trades at ₹60 with a rho of ₹2.10. If the risk-free rate rises from 6% to 7% and nothing else changes, the call should be worth about ₹62.10, while a one-week option with a rho of ₹0.05 would barely move.",
+    "formula": "Rho = Change in option price / 1 percentage-point change in the risk-free rate",
+    "related": [
+      "Option Greeks",
+      "Risk-free rate",
+      "Black-Scholes model",
+      "Vega",
+      "Theta"
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en">
+  <title>Sample central bank (Atom)</title>
+  <id>tag:example.org,2026:feed</id>
+  <updated>2026-10-11T09:00:00Z</updated>
+  <entry>
+    <title type="html">Bank holds policy rate at 4.00% &amp;amp; signals patience</title>
+    <link rel="alternate" type="text/html" href="https://example.org/press/2026/rate-decision?utm_source=rss&amp;id=7"/>
+    <link rel="enclosure" href="https://example.org/press/2026/rate-decision.pdf"/>
+    <id>tag:example.org,2026:7</id>
+    <published>2026-10-11T08:30:00+02:00</published>
+    <updated>2026-10-11T09:15:00+02:00</updated>
+    <summary type="html">&lt;p&gt;The Monetary Policy Committee kept the &lt;b&gt;repo rate&lt;/b&gt; unchanged and said inflation is easing.&lt;/p&gt;</summary>
+  </entry>
+  <entry>
+    <title type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml">Bond yields fall as <em>GDP</em> data disappoints</div></title>
+    <link href="https://example.org/news/yields-fall"/>
+    <id>tag:example.org,2026:8</id>
+    <updated>2026-10-10T17:05:00Z</updated>
+    <content type="xhtml"><div xmlns="http://www.w3.org/1999/xhtml"><p>Ten-year yields dropped 8 basis points after GDP growth slowed to 5.1%.</p></div></content>
+  </entry>
+  <entry>
+    <title>Item without a usable link</title>
+    <link href="javascript:alert(1)"/>
+    <id>tag:example.org,2026:9</id>
+    <updated>2026-10-10T17:05:00Z</updated>
+  </entry>
+</feed>

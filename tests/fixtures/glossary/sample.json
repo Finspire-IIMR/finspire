@@ -1,0 +1,355 @@
+[
+ {
+  "id": "repo-rate",
+  "term": "Repo rate",
+  "cat": "central-banks",
+  "level": "b",
+  "aliases": [
+   "policy repo rate",
+   "repurchase rate"
+  ],
+  "hl": [
+   "repo rate",
+   "repo rates",
+   "policy repo rate"
+  ],
+  "abbr": [],
+  "short": "The interest rate at which a central bank lends short-term money to banks against government securities.",
+  "kid": "When a bank runs short of money, it borrows from the big bank. The repo rate is the small extra it has to give back.",
+  "detail": "The repo rate is the main policy rate of the Reserve Bank of India. Banks borrow overnight funds from the RBI by selling government securities and agreeing to buy them back. Raising the repo rate makes borrowing costlier across the economy and cools inflation; cutting it does the opposite. Lending and deposit rates, bond yields and bank stocks react to every change.",
+  "example": "If the repo rate is cut from 6.00% to 5.75%, a bank borrowing ₹1,000 crore for a week pays about ₹4.8 lakh less interest (₹1,000 crore × 0.25% × 7/365 ≈ ₹4.8 lakh).",
+  "formula": "",
+  "related": [
+   "Monetary policy",
+   "Inflation",
+   "Basis point"
+  ]
+ },
+ {
+  "id": "inflation",
+  "term": "Inflation",
+  "cat": "macro",
+  "level": "b",
+  "aliases": [
+   "price rise"
+  ],
+  "hl": [
+   "inflation",
+   "retail inflation",
+   "consumer inflation"
+  ],
+  "abbr": [],
+  "short": "The rate at which the general level of prices rises, so the same money buys less over time.",
+  "kid": "Last year a toffee cost one coin. Now it costs a little more. That is inflation.",
+  "detail": "Inflation measures how fast prices of goods and services rise across the economy, usually as a yearly percentage change in an index such as India's Consumer Price Index. Moderate inflation is normal; high inflation erodes savings and pushes central banks to raise interest rates, which affects bond yields, loan EMIs and stock valuations.",
+  "example": "If a basket of goods cost ₹1,000 last year and ₹1,050 today, inflation is 5%.",
+  "formula": "Inflation = (Price index now − Price index a year ago) / Price index a year ago × 100",
+  "related": [
+   "Repo rate",
+   "Consumer price index",
+   "Gross domestic product"
+  ]
+ },
+ {
+  "id": "gross-domestic-product",
+  "term": "Gross domestic product",
+  "cat": "macro",
+  "level": "b",
+  "aliases": [
+   "GDP"
+  ],
+  "hl": [
+   "gross domestic product",
+   "gdp growth"
+  ],
+  "abbr": [
+   "GDP"
+  ],
+  "short": "The total value of all final goods and services produced in a country in a period.",
+  "kid": "Add up everything a whole country makes and does in a year. That big number is GDP.",
+  "detail": "GDP is the broadest measure of an economy's size and growth. Real GDP strips out inflation so growth reflects more output, not higher prices. Markets watch quarterly GDP releases because faster growth usually means stronger company earnings, while a slowdown can lead central banks to cut rates.",
+  "example": "If real GDP rises from ₹200 lakh crore to ₹214 lakh crore, real growth is 7%.",
+  "formula": "GDP = Consumption + Investment + Government spending + (Exports − Imports)",
+  "related": [
+   "Inflation",
+   "Recession"
+  ]
+ },
+ {
+  "id": "initial-public-offering",
+  "term": "Initial public offering",
+  "cat": "ib-deals",
+  "level": "b",
+  "aliases": [
+   "IPO",
+   "public issue"
+  ],
+  "hl": [
+   "initial public offering",
+   "initial public offerings"
+  ],
+  "abbr": [
+   "IPO",
+   "IPOs"
+  ],
+  "short": "The first time a company sells its shares to the public and lists them on a stock exchange.",
+  "kid": "A lemonade stand lets lots of people buy a tiny piece of it for the first time. Now everyone can share in it.",
+  "detail": "In an IPO a private company raises money (fresh issue) and/or lets existing holders sell (offer for sale) by offering shares to the public at a price band set through book building. After allotment the shares list on the exchange, and the first-day move versus the issue price is the listing gain or loss.",
+  "example": "A company, say ABC Ltd, offers 1 crore shares at ₹200 each, raising ₹200 crore; if it lists at ₹240 the listing gain is 20%.",
+  "formula": "",
+  "related": [
+   "Grey market premium",
+   "Book building"
+  ]
+ },
+ {
+  "id": "nifty-50",
+  "term": "Nifty 50",
+  "cat": "india-mkts",
+  "level": "b",
+  "aliases": [
+   "Nifty",
+   "NSE Nifty"
+  ],
+  "hl": [
+   "nifty 50",
+   "nifty"
+  ],
+  "abbr": [],
+  "short": "An index of 50 large, actively traded companies listed on the National Stock Exchange of India.",
+  "kid": "Pick fifty big shops and check how they are doing together. If most are doing well, the Nifty goes up.",
+  "detail": "The Nifty 50 is the NSE's benchmark index, weighted by free-float market capitalisation. It is used to judge the direction of the Indian stock market, as the benchmark for many mutual funds and as the underlying for India's most traded futures and options.",
+  "example": "If the Nifty 50 moves from 24,000 to 24,240, the index is up 1%.",
+  "formula": "",
+  "related": [
+   "Sensex",
+   "Market capitalisation"
+  ]
+ },
+ {
+  "id": "sensex",
+  "term": "Sensex",
+  "cat": "india-mkts",
+  "level": "b",
+  "aliases": [
+   "S&P BSE Sensex",
+   "BSE Sensex"
+  ],
+  "hl": [
+   "sensex"
+  ],
+  "abbr": [],
+  "short": "An index of 30 large companies listed on the BSE, India's oldest stock exchange.",
+  "kid": "Thirty big shops get a score together. When the score goes up, people say the Sensex rose.",
+  "detail": "The Sensex tracks 30 established, financially sound companies on the BSE, weighted by free-float market capitalisation. Along with the Nifty 50 it is the headline measure of Indian stock-market performance quoted in the news every day.",
+  "example": "A 500-point rise in a Sensex at 80,000 is a gain of 0.625%.",
+  "formula": "",
+  "related": [
+   "Nifty 50",
+   "Market capitalisation"
+  ]
+ },
+ {
+  "id": "bond-yield",
+  "term": "Bond yield",
+  "cat": "bonds",
+  "level": "b",
+  "aliases": [
+   "yield to maturity"
+  ],
+  "hl": [
+   "bond yield",
+   "bond yields",
+   "10-year yield",
+   "treasury yields",
+   "g-sec yield"
+  ],
+  "abbr": [],
+  "short": "The return an investor earns on a bond at its current price, shown as a yearly percentage.",
+  "kid": "You lend a friend coins and they give you a few extra back each year. The extra, compared with what you lent, is the yield.",
+  "detail": "A bond's yield moves opposite to its price: when prices fall, yields rise. Government bond yields, especially the 10-year, are the benchmark for borrowing costs across the economy and shape how investors value stocks and other assets.",
+  "example": "A bond paying ₹70 a year bought at ₹1,000 yields 7%; if its price falls to ₹950 the current yield rises to about 7.37%.",
+  "formula": "Current yield = Annual coupon / Price",
+  "related": [
+   "Basis point",
+   "Repo rate"
+  ]
+ },
+ {
+  "id": "basis-point",
+  "term": "Basis point",
+  "cat": "rates",
+  "level": "b",
+  "aliases": [
+   "bps",
+   "bp"
+  ],
+  "hl": [
+   "basis point",
+   "basis points"
+  ],
+  "abbr": [
+   "bps"
+  ],
+  "short": "One hundredth of a percentage point (0.01%), used to describe changes in interest rates and yields.",
+  "kid": "Cut a tiny slice into a hundred even tinier slices. One of those is a basis point.",
+  "detail": "Basis points avoid confusion when talking about small rate changes: a rise from 6.50% to 6.75% is 25 basis points. Central-bank moves, bond-yield changes and loan spreads are all quoted this way.",
+  "example": "A 25 bps cut takes a 6.50% repo rate to 6.25%.",
+  "formula": "1 basis point = 0.01%",
+  "related": [
+   "Repo rate",
+   "Bond yield"
+  ]
+ },
+ {
+  "id": "foreign-portfolio-investor",
+  "term": "Foreign portfolio investor",
+  "cat": "india-mkts",
+  "level": "i",
+  "aliases": [
+   "FPI",
+   "FII",
+   "foreign institutional investor"
+  ],
+  "hl": [
+   "foreign portfolio investors",
+   "foreign investors",
+   "foreign institutional investors"
+  ],
+  "abbr": [
+   "FPI",
+   "FPIs",
+   "FII",
+   "FIIs"
+  ],
+  "short": "An overseas investor that buys Indian shares or bonds as financial investments rather than to run the business.",
+  "kid": "Friends from far away put some of their coins into Indian shops, hoping the shops do well.",
+  "detail": "FPIs include foreign funds, pension funds and banks registered with SEBI. Their daily net buying or selling is reported and can move the Nifty and the rupee, because large outflows mean selling of Indian assets and conversion of rupees into dollars.",
+  "example": "If FPIs sell ₹5,000 crore of shares in a day while domestic institutions buy ₹4,000 crore, net institutional selling is ₹1,000 crore.",
+  "formula": "",
+  "related": [
+   "Nifty 50",
+   "Rupee"
+  ]
+ },
+ {
+  "id": "recession",
+  "term": "Recession",
+  "cat": "macro",
+  "level": "b",
+  "aliases": [
+   "economic downturn"
+  ],
+  "hl": [
+   "recession",
+   "recessions"
+  ],
+  "abbr": [],
+  "short": "A significant, broad decline in economic activity that lasts more than a few months.",
+  "kid": "For a while, people buy less and shops sell less, so everyone has a bit less to share.",
+  "detail": "A common rule of thumb is two consecutive quarters of falling real GDP, though official bodies look at jobs, income, spending and output together. Recessions hit company profits and jobs, and central banks usually respond by cutting interest rates.",
+  "example": "If real GDP falls 0.5% in one quarter and 0.3% in the next, many would call it a technical recession.",
+  "formula": "",
+  "related": [
+   "Gross domestic product",
+   "Inflation"
+  ]
+ },
+ {
+  "id": "brent-crude",
+  "term": "Brent crude",
+  "cat": "commodities",
+  "level": "b",
+  "aliases": [
+   "Brent"
+  ],
+  "hl": [
+   "brent crude",
+   "brent"
+  ],
+  "abbr": [],
+  "short": "A benchmark grade of crude oil from the North Sea used to price most of the world's oil.",
+  "kid": "There are many kinds of oil. People agree to use one kind, Brent, as the measuring stick for all of them.",
+  "detail": "Brent is quoted in US dollars per barrel and is the reference price for oil that India imports. Rising Brent raises India's import bill, can weaken the rupee and push up inflation, while falling prices help oil-importing economies.",
+  "example": "If Brent rises from $80 to $88 a barrel, that is a 10% increase.",
+  "formula": "",
+  "related": [
+   "Inflation"
+  ]
+ },
+ {
+  "id": "market-capitalisation",
+  "term": "Market capitalisation",
+  "cat": "equities",
+  "level": "b",
+  "aliases": [
+   "market cap",
+   "m-cap"
+  ],
+  "hl": [
+   "market capitalisation",
+   "market capitalization",
+   "market cap"
+  ],
+  "abbr": [],
+  "short": "The total market value of a company's shares: share price multiplied by the number of shares.",
+  "kid": "If a shop is cut into many little pieces and each piece has a price, add them all up to see what the whole shop is worth.",
+  "detail": "Market cap tells you how big a listed company is in the eyes of the market. In India SEBI uses market-cap rank to sort companies into large-cap, mid-cap and small-cap buckets for mutual-fund rules.",
+  "example": "A company with 10 crore shares at ₹500 each has a market cap of ₹5,000 crore.",
+  "formula": "Market capitalisation = Share price × Shares outstanding",
+  "related": [
+   "Nifty 50",
+   "Sensex"
+  ]
+ },
+ {
+  "id": "federal-reserve",
+  "term": "Federal Reserve",
+  "cat": "central-banks",
+  "level": "b",
+  "aliases": [
+   "the Fed",
+   "US Federal Reserve"
+  ],
+  "hl": [
+   "federal reserve"
+  ],
+  "abbr": [
+   "Fed"
+  ],
+  "short": "The central bank of the United States, which sets US interest rates and oversees its banking system.",
+  "kid": "America has one big bank that looks after all the other banks and decides how costly borrowing is.",
+  "detail": "The Fed's Federal Open Market Committee sets a target range for the federal funds rate. Because the dollar is the world's main currency, Fed decisions move bond yields, currencies including the rupee, and stock markets worldwide.",
+  "example": "A Fed cut from a 4.25–4.50% range to 4.00–4.25% lowers the target by 25 basis points.",
+  "formula": "",
+  "related": [
+   "Repo rate",
+   "Basis point"
+  ]
+ },
+ {
+  "id": "yield-curve",
+  "term": "Yield curve",
+  "cat": "rates",
+  "level": "i",
+  "aliases": [
+   "term structure of interest rates"
+  ],
+  "hl": [
+   "yield curve",
+   "inverted yield curve",
+   "yield-curve"
+  ],
+  "abbr": [],
+  "short": "A line showing the yields of bonds of the same issuer across different maturities, from months to decades.",
+  "kid": "Lending for a long time usually earns more than lending for a short time. Draw that on a line and you get a curve.",
+  "detail": "Normally longer bonds yield more, so the curve slopes up. When short-term yields rise above long-term ones the curve is inverted, which has often come before recessions because it signals markets expect rates to fall. Analysts watch the gap between 2-year and 10-year yields.",
+  "example": "If the 2-year yield is 4.8% and the 10-year is 4.3%, the 2s10s spread is −50 basis points: an inverted curve.",
+  "formula": "",
+  "related": [
+   "Bond yield",
+   "Basis point",
+   "Recession"
+  ]
+ }
+]

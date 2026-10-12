@@ -1,0 +1,969 @@
+[
+  {
+    "id": "valuation-multiple",
+    "term": "Valuation multiple",
+    "cat": "valuation",
+    "level": "b",
+    "aliases": [
+      "multiple",
+      "trading multiple",
+      "valuation multiples"
+    ],
+    "hl": [
+      "valuation multiple",
+      "valuation multiples",
+      "trading multiple",
+      "trading multiples"
+    ],
+    "abbr": [],
+    "short": "A shortcut for valuing a company: its price or total value divided by a measure such as profit, sales or net assets.",
+    "kid": "Your friend sold her lemonade stand for ten times what it makes in a week. If your stand is just like hers, yours might be worth about ten weeks of what it makes too.",
+    "detail": "A valuation multiple expresses what investors pay as a multiple of some financial measure. Equity multiples such as P/E, P/B and price-to-sales put the share price or market capitalisation on top, so they pair with measures that belong only to shareholders, like net profit or book value. Enterprise multiples such as EV/EBITDA, EV/EBIT and EV/Sales put enterprise value on top and pair it with measures earned for all providers of capital, before interest. Multiples power relative valuation: analysts value a company by applying the multiple at which similar listed firms or recent deals trade. They are quick and capture current market mood, but they hide the assumptions about growth, risk and returns that a DCF makes explicit. The classic mistake is a mismatch, such as dividing enterprise value by net profit, or comparing multiples across firms with very different growth, debt or accounting.",
+    "example": "Say ABC Ltd has a market capitalisation of ₹1,200 crore and a net profit of ₹80 crore, so it trades at 15 times earnings (1,200 / 80). If similar listed companies trade at 20 times earnings, the same ₹80 crore profit would imply a value of ₹1,600 crore.",
+    "formula": "Valuation multiple = Value measure (share price, market capitalisation or enterprise value) / Financial metric (earnings, EBITDA, sales or book value)",
+    "related": [
+      "Price-to-earnings ratio",
+      "EV/EBITDA",
+      "Relative valuation",
+      "Comparable company analysis",
+      "Enterprise value"
+    ]
+  },
+  {
+    "id": "price-to-earnings-ratio",
+    "term": "Price-to-earnings ratio",
+    "cat": "valuation",
+    "level": "b",
+    "aliases": [
+      "P/E ratio",
+      "PE ratio",
+      "P/E",
+      "earnings multiple",
+      "PE multiple"
+    ],
+    "hl": [
+      "price-to-earnings ratio",
+      "price to earnings ratio",
+      "price-to-earnings",
+      "price-earnings ratio",
+      "p/e ratio",
+      "p/e ratios",
+      "pe ratio",
+      "pe ratios",
+      "p/e multiple",
+      "pe multiple",
+      "earnings multiple",
+      "earnings multiples"
+    ],
+    "abbr": [
+      "P/E"
+    ],
+    "short": "How many rupees investors pay for each rupee of a company's yearly profit; the share price divided by earnings per share.",
+    "kid": "A toy shop brings in 1 coin a year. If you pay 20 coins to buy it, you are paying for 20 years of its coins up front.",
+    "detail": "The price-to-earnings ratio divides a company's share price by its earnings per share, or equivalently its market capitalisation by its net profit. It tells you how many years of current profit investors are paying for, and it is the most quoted valuation measure in India and abroad, used for single stocks and for indices such as the Nifty 50 and Sensex. A high P/E usually signals that the market expects fast or reliable growth; a low P/E may mean the business is cheap, but also that it is cyclical, risky or shrinking. P/E can be trailing, using the last twelve months' profit, or forward, using expected profit. Common confusion: a low P/E is not automatically good value, and P/E is meaningless for loss-making companies. One-off gains and losses distort it, so analysts often use adjusted or diluted EPS.",
+    "example": "Say ABC Ltd's share trades at ₹600 and its earnings per share over the past year were ₹30. Its P/E is 600 / 30 = 20, meaning investors pay ₹20 for every ₹1 of annual profit.",
+    "formula": "P/E = Share price / Earnings per share (or Market capitalisation / Net profit)",
+    "related": [
+      "Earnings per share",
+      "Forward P/E ratio",
+      "Trailing P/E ratio",
+      "PEG ratio",
+      "Earnings yield"
+    ]
+  },
+  {
+    "id": "forward-pe-ratio",
+    "term": "Forward P/E ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "forward P/E",
+      "forward PE",
+      "one-year forward P/E",
+      "forward earnings multiple"
+    ],
+    "hl": [
+      "forward p/e",
+      "forward pe",
+      "forward p/e ratio",
+      "forward pe ratio",
+      "one-year forward p/e",
+      "one-year forward pe",
+      "1-year forward p/e",
+      "1-year forward pe",
+      "forward earnings multiple",
+      "forward price-to-earnings"
+    ],
+    "abbr": [],
+    "short": "A company's share price divided by the profit per share analysts expect it to earn over the next twelve months or next financial year.",
+    "kid": "Your lemon tree gave three lemons this year, but it is growing and should give five next year. When you decide what the tree is worth, you think about next year's lemons too.",
+    "detail": "Forward P/E divides today's share price by expected earnings per share, usually the consensus analyst estimate for the next twelve months or the next financial year. Because markets price the future, brokers and fund managers quote forward P/E far more often than trailing P/E, and index valuations such as the Nifty's one-year forward P/E are routinely compared with their long-run averages. For a growing company, forward P/E is lower than trailing P/E because expected profit is higher than past profit. The catch is that the denominator is a forecast: if estimates are too optimistic, the stock only looks cheap. Analysts also cut estimates after weak results, which can push forward P/E up without any change in price. Always check whose estimates are being used and which year they cover.",
+    "example": "Say ABC Ltd trades at ₹900, earned ₹36 per share last year and is expected to earn ₹45 per share next year. Its trailing P/E is 900 / 36 = 25, while its forward P/E is 900 / 45 = 20.",
+    "formula": "Forward P/E = Current share price / Expected EPS for the next twelve months (or next financial year)",
+    "related": [
+      "Price-to-earnings ratio",
+      "Trailing P/E ratio",
+      "Consensus estimate",
+      "Earnings per share",
+      "PEG ratio"
+    ]
+  },
+  {
+    "id": "trailing-pe-ratio",
+    "term": "Trailing P/E ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "trailing P/E",
+      "trailing PE",
+      "TTM P/E"
+    ],
+    "hl": [
+      "trailing p/e",
+      "trailing pe",
+      "trailing p/e ratio",
+      "trailing pe ratio",
+      "ttm p/e",
+      "ttm pe",
+      "trailing price-to-earnings"
+    ],
+    "abbr": [],
+    "short": "A company's share price divided by the profit per share it actually reported over the last twelve months.",
+    "kid": "To guess how good a lemonade stand is, you can count the cups it really sold last year. That is a real number, not a guess about tomorrow.",
+    "detail": "Trailing P/E uses actual reported earnings, normally the sum of the last four quarters (trailing twelve months, or TTM), rather than forecasts. Indian listed companies report quarterly, so the trailing figure updates every results season. Its strength is that the earnings are real and have been audited or reviewed; its weakness is that it looks backward. For a fast-growing company, trailing P/E looks high even when the stock is reasonably priced on next year's profit, and for a cyclical company at the peak of its cycle it looks deceptively low. One-off items such as gains on asset sales or write-offs can also swing it, so analysts often use adjusted earnings. The common confusion is mixing trailing and forward figures when comparing stocks: stock screeners and exchange quote pages generally show trailing P/E, while brokerage reports usually quote forward P/E.",
+    "example": "Say ABC Ltd reported EPS of ₹8, ₹9, ₹10 and ₹11 in its last four quarters, a total of ₹38. At a share price of ₹760, its trailing P/E is 760 / 38 = 20.",
+    "formula": "Trailing P/E = Current share price / EPS over the last twelve months",
+    "related": [
+      "Price-to-earnings ratio",
+      "Forward P/E ratio",
+      "Trailing twelve months",
+      "Earnings per share",
+      "Normalised earnings"
+    ]
+  },
+  {
+    "id": "ev-ebitda",
+    "term": "EV/EBITDA",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "EV to EBITDA",
+      "enterprise multiple",
+      "EBITDA multiple",
+      "enterprise value to EBITDA"
+    ],
+    "hl": [
+      "ev/ebitda",
+      "ev to ebitda",
+      "ev-to-ebitda",
+      "enterprise value to ebitda",
+      "enterprise multiple",
+      "ebitda multiple",
+      "ebitda multiples"
+    ],
+    "abbr": [
+      "EV/EBITDA"
+    ],
+    "short": "A company's total value to all its investors, lenders included, divided by its yearly operating profit before interest, tax and wear-and-tear charges.",
+    "kid": "To buy a bakery, you pay the owner and also take over what the bakery owes. Then you ask how many years of the bakery's coins it would take to earn all that back.",
+    "detail": "EV/EBITDA divides enterprise value (market capitalisation plus debt, minority interest and preference capital, minus cash) by EBITDA. Both numbers belong to all providers of capital, so the ratio is not affected by how a company is financed, which makes it better than P/E for comparing firms with different debt levels or tax positions. It is the workhorse multiple for capital-heavy sectors such as telecom, cement, steel, power and hospitals, and for leveraged buyouts and M&A, where bankers in India and abroad quote deals as so many times EBITDA. Common mistakes: EBITDA ignores capital spending, so a firm that must reinvest heavily can look cheap; lease accounting under Ind AS 116 raises EBITDA, so enterprise value should include lease liabilities consistently; and enterprise value must cover the same subsidiaries as the consolidated EBITDA it is divided by.",
+    "example": "Say ABC Ltd has a market capitalisation of ₹5,000 crore, debt of ₹1,500 crore and cash of ₹500 crore, giving an enterprise value of ₹6,000 crore. With EBITDA of ₹750 crore, its EV/EBITDA is 6,000 / 750 = 8 times.",
+    "formula": "EV/EBITDA = (Market capitalisation + Debt + Minority interest + Preference capital - Cash and equivalents) / EBITDA",
+    "related": [
+      "Enterprise value",
+      "EBITDA",
+      "EV/EBIT",
+      "EV/Sales",
+      "Valuation multiple"
+    ]
+  },
+  {
+    "id": "ev-sales",
+    "term": "EV/Sales",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "EV/Revenue",
+      "EV to sales",
+      "EV to revenue",
+      "enterprise value to sales"
+    ],
+    "hl": [
+      "ev/sales",
+      "ev/revenue",
+      "ev to sales",
+      "ev-to-sales",
+      "ev to revenue",
+      "ev-to-revenue",
+      "enterprise value to sales",
+      "enterprise value to revenue"
+    ],
+    "abbr": [
+      "EV/Sales",
+      "EV/sales",
+      "EV/Revenue"
+    ],
+    "short": "A company's total value to shareholders and lenders divided by its yearly revenue; used when profits are small, negative or unreliable.",
+    "kid": "A new ice-cream cart sells lots of cones but has not kept any coins yet. You can still guess what it is worth by looking at how many cones it sells.",
+    "detail": "EV/Sales divides enterprise value by revenue. Because revenue sits above every cost line, the ratio works for young or loss-making companies whose EBITDA and earnings are negative, which is why it is common for startups, new-age technology listings, software firms and early-stage consumer brands. Using enterprise value rather than market capitalisation keeps it consistent: revenue serves both lenders and shareholders, so the value of both claims belongs on top. EV/Sales is closely tied to margins. A company with 30% EBITDA margins deserves a far higher sales multiple than one with 5% margins, all else equal, so the ratio should only be compared across firms with similar economics. The common confusion is with price-to-sales, which uses market capitalisation and ignores debt; for a debt-free company the two are nearly equal, but for a heavily indebted one they differ sharply.",
+    "example": "Say ABC Ltd has an enterprise value of ₹3,000 crore and annual revenue of ₹1,200 crore. Its EV/Sales is 3,000 / 1,200 = 2.5 times.",
+    "formula": "EV/Sales = Enterprise value / Revenue",
+    "related": [
+      "Enterprise value",
+      "Price-to-sales ratio",
+      "EV/EBITDA",
+      "Revenue",
+      "Valuation multiple"
+    ]
+  },
+  {
+    "id": "price-to-book-ratio",
+    "term": "Price-to-book ratio",
+    "cat": "valuation",
+    "level": "b",
+    "aliases": [
+      "P/B ratio",
+      "P/B",
+      "P/BV",
+      "price to book value",
+      "price-to-book value"
+    ],
+    "hl": [
+      "price-to-book ratio",
+      "price to book ratio",
+      "price-to-book",
+      "price to book value",
+      "price-to-book value",
+      "p/b ratio",
+      "p/b multiple",
+      "p/bv",
+      "p/bv multiple"
+    ],
+    "abbr": [
+      "P/B",
+      "P/BV"
+    ],
+    "short": "A company's share price divided by its net assets per share as shown in its accounts (assets minus liabilities).",
+    "kid": "If you sold all the toys in your toy box and paid back what you borrowed, you would have some coins left. This compares what people will pay for your toy box with those leftover coins.",
+    "detail": "Price-to-book divides the share price by book value per share, where book value is shareholders' equity on the balance sheet (total assets minus total liabilities). A P/B of 1 means the market values the company at exactly its accounting net worth. P/B is the main valuation yardstick for banks, NBFCs and other financial firms, whose balance sheets consist mostly of loans and investments, so book value is a meaningful guide to worth; Indian banking analysts routinely compare lenders on P/B, often after adjusting book value for bad loans. A high P/B is justified when a company earns a high return on equity, because each rupee of book value generates more profit. P/B is less useful for asset-light firms such as software or consumer brands, where brands, people and know-how never appear on the balance sheet. Common confusion: a P/B below 1 can signal hidden losses rather than a bargain.",
+    "example": "Say ABC Bank Ltd's shares trade at ₹150 and its book value per share is ₹100. Its P/B is 150 / 100 = 1.5, so investors pay ₹1.50 for every ₹1 of net worth in its accounts.",
+    "formula": "P/B = Share price / Book value per share (or Market capitalisation / Shareholders' equity)",
+    "related": [
+      "Book value per share",
+      "Shareholders' equity",
+      "Return on equity",
+      "Price-to-earnings ratio",
+      "Tobin's Q"
+    ]
+  },
+  {
+    "id": "price-to-sales-ratio",
+    "term": "Price-to-sales ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "P/S",
+      "P/S ratio",
+      "price to sales",
+      "price-to-revenue ratio"
+    ],
+    "hl": [
+      "price-to-sales ratio",
+      "price to sales ratio",
+      "price-to-sales",
+      "p/s ratio",
+      "p/s multiple"
+    ],
+    "abbr": [
+      "P/S"
+    ],
+    "short": "A company's total share-market value divided by its yearly revenue; how many rupees investors pay for each rupee of sales.",
+    "kid": "A cookie stall sells 100 cookies a week. Someone who wants to buy the stall might offer a set number of coins for every cookie it sells.",
+    "detail": "Price-to-sales divides market capitalisation by annual revenue, or share price by revenue per share. Like EV/Sales, it works for companies that have no profits yet. Investor Ken Fisher popularised it in his 1984 book Super Stocks, arguing that revenue is steadier and harder to manipulate than earnings. Its weakness is a mismatch: market capitalisation belongs only to shareholders, while revenue also has to service lenders, so a heavily indebted company looks artificially cheap on P/S. That is why professionals usually prefer EV/Sales. P/S also says nothing about profitability, so a retailer earning thin margins will naturally trade at a much lower P/S than a software company. Use it to compare companies within the same industry with similar margins and debt levels, and never as a stand-alone verdict on value.",
+    "example": "Say ABC Ltd has a market capitalisation of ₹2,400 crore and annual revenue of ₹800 crore. Its P/S is 2,400 / 800 = 3, so investors pay ₹3 for every ₹1 of sales.",
+    "formula": "P/S = Market capitalisation / Revenue (or Share price / Revenue per share)",
+    "related": [
+      "EV/Sales",
+      "Price-to-earnings ratio",
+      "Revenue",
+      "Market capitalisation",
+      "Valuation multiple"
+    ]
+  },
+  {
+    "id": "price-to-cash-flow-ratio",
+    "term": "Price-to-cash-flow ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "P/CF",
+      "P/CF ratio",
+      "price to cash flow"
+    ],
+    "hl": [
+      "price-to-cash-flow ratio",
+      "price to cash flow ratio",
+      "price-to-cash-flow",
+      "price to cash flow",
+      "p/cf ratio"
+    ],
+    "abbr": [
+      "P/CF"
+    ],
+    "short": "A company's share price divided by the cash its business generates per share, rather than its accounting profit.",
+    "kid": "A lemonade stand might say it did well, but what matters is how many real coins land in the jar. This checks what people pay for the stand against the coins in the jar.",
+    "detail": "Price-to-cash-flow divides the share price by operating cash flow per share, or market capitalisation by operating cash flow. Some analysts use a simpler proxy, net profit plus depreciation and amortisation. Because cash flow is harder to flatter with accounting choices such as depreciation methods, provisioning or aggressive revenue recognition, P/CF is a useful cross-check on P/E. A company whose P/E looks cheap but whose P/CF is high may be booking profits that are not turning into cash, a warning sign Indian analysts watch closely in sectors with large receivables, such as infrastructure and government contracting. P/CF also helps with capital-heavy firms that carry large non-cash depreciation charges. The common confusion is which cash flow is used: operating cash flow and free cash flow give very different answers, so always check the definition.",
+    "example": "Say ABC Ltd trades at ₹240, earns ₹12 per share and generates operating cash flow of ₹20 per share. Its P/E is 240 / 12 = 20, but its P/CF is only 240 / 20 = 12.",
+    "formula": "P/CF = Share price / Operating cash flow per share (or Market capitalisation / Operating cash flow)",
+    "related": [
+      "Cash flow from operations",
+      "Free cash flow yield",
+      "Price-to-earnings ratio",
+      "Cash conversion ratio",
+      "Cash flow statement"
+    ]
+  },
+  {
+    "id": "peg-ratio",
+    "term": "PEG ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "price/earnings-to-growth ratio",
+      "PEG",
+      "price-earnings-to-growth ratio"
+    ],
+    "hl": [
+      "peg ratio",
+      "peg ratios",
+      "price/earnings-to-growth",
+      "price-earnings-to-growth",
+      "price/earnings to growth"
+    ],
+    "abbr": [],
+    "short": "A company's price-to-earnings ratio divided by its expected yearly profit growth, used to judge whether a high valuation is backed by fast growth.",
+    "kid": "A small plant that grows fast can be worth more than a big plant that has stopped growing. This checks whether you are paying a fair amount for how fast it grows.",
+    "detail": "The PEG ratio divides the P/E ratio by the expected annual growth rate of earnings per share, entered as a whole number (20 for 20% growth). It adjusts P/E for growth, so a fast-growing company on a high P/E can be compared with a slow grower on a low one. Investor Peter Lynch popularised the rule of thumb that a PEG near 1 suggests fair value, well below 1 looks cheap and well above 1 looks expensive. In India, PEG often comes up when discussing consumer, specialty chemical and other growth stocks that trade at high P/Es. Its weaknesses: the growth figure is a forecast, usually covering only three to five years; it ignores risk, dividends and the durability of growth; and it breaks down for companies with very low or negative growth. Always check the growth period and whether trailing or forward P/E is used.",
+    "example": "Say ABC Ltd trades at a P/E of 30 with expected EPS growth of 20% a year, so its PEG is 30 / 20 = 1.5. XYZ Ltd trades at a P/E of 18 with expected growth of 24%, giving a PEG of 18 / 24 = 0.75, which is cheaper once growth is considered.",
+    "formula": "PEG = P/E ratio / Expected annual EPS growth rate (as a whole number)",
+    "related": [
+      "Price-to-earnings ratio",
+      "Forward P/E ratio",
+      "Earnings per share",
+      "Growth investing",
+      "Justified P/E"
+    ]
+  },
+  {
+    "id": "earnings-yield",
+    "term": "Earnings yield",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "E/P",
+      "earnings-to-price ratio"
+    ],
+    "hl": [
+      "earnings yield",
+      "earnings yields",
+      "earnings-to-price ratio",
+      "earnings to price ratio"
+    ],
+    "abbr": [
+      "E/P"
+    ],
+    "short": "A company's yearly profit per share divided by its share price; the price-to-earnings ratio turned upside down and shown as a percentage.",
+    "kid": "You pay 20 coins for a little garden that grows 1 coin's worth of carrots each year. This tells you how much the garden gives back for every coin you paid.",
+    "detail": "Earnings yield is earnings per share divided by the share price, the inverse of the P/E ratio, so a stock on a P/E of 25 has an earnings yield of 4%. Expressing valuation as a yield makes it easy to compare equities with bonds, fixed deposits and other income-producing investments, which is the basis of the Fed model and of the bond-equity earnings yield ratio tracked in India. Investor Joel Greenblatt's magic formula uses a variant, EBIT divided by enterprise value, to rank cheap companies. The key confusion: earnings yield is not cash in your pocket. Unlike a dividend yield or a bond coupon, much of the earnings may be retained and reinvested, and they can grow or shrink, so a 4% earnings yield on a growing company and a 4% bond yield are not like-for-like. It also turns negative for loss-making firms, where P/E simply stops working.",
+    "example": "Say ABC Ltd earns ₹25 per share and its shares trade at ₹500. Its earnings yield is 25 / 500 = 5%, the mirror image of a P/E of 20.",
+    "formula": "Earnings yield = Earnings per share / Share price = 1 / (P/E ratio)",
+    "related": [
+      "Price-to-earnings ratio",
+      "Fed model",
+      "Dividend yield",
+      "Free cash flow yield",
+      "Equity risk premium"
+    ]
+  },
+  {
+    "id": "free-cash-flow-yield",
+    "term": "Free cash flow yield",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "FCF yield",
+      "free-cash-flow yield"
+    ],
+    "hl": [
+      "free cash flow yield",
+      "free cash flow yields",
+      "free-cash-flow yield",
+      "fcf yield",
+      "fcf yields"
+    ],
+    "abbr": [],
+    "short": "The spare cash a business generates in a year, after paying running costs and new investment, divided by its market value.",
+    "kid": "After buying lemons, sugar and a new jug, your stand still has some coins left over. This compares those spare coins with what someone would pay for the whole stand.",
+    "detail": "Free cash flow yield divides free cash flow, usually operating cash flow minus capital expenditure, by market capitalisation, or free cash flow per share by the share price. It shows how much spare cash the business throws off for each rupee of market value, cash that could fund dividends, buybacks, debt repayment or acquisitions. Many investors prefer it to earnings yield because cash is harder to dress up than accounting profit, and a company with a high FCF yield has room to reward shareholders. Some analysts use an enterprise version, unlevered free cash flow divided by enterprise value, which must not be mixed up with the equity version. Watch for one-off swings: a year of delayed capital spending or a release of working capital can inflate free cash flow, while a heavy expansion phase, common among Indian manufacturers adding capacity, can depress it for a while.",
+    "example": "Say ABC Ltd generates operating cash flow of ₹500 crore, spends ₹200 crore on capital expenditure and has a market capitalisation of ₹6,000 crore. Its free cash flow is ₹300 crore and its FCF yield is 300 / 6,000 = 5%.",
+    "formula": "FCF yield = (Operating cash flow - Capital expenditure) / Market capitalisation",
+    "related": [
+      "Free cash flow",
+      "Earnings yield",
+      "Price-to-cash-flow ratio",
+      "Dividend yield",
+      "Capital expenditure"
+    ]
+  },
+  {
+    "id": "shiller-pe-ratio",
+    "term": "Shiller P/E ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "CAPE ratio",
+      "CAPE",
+      "cyclically adjusted P/E",
+      "Shiller PE",
+      "cyclically adjusted price-to-earnings ratio"
+    ],
+    "hl": [
+      "shiller p/e",
+      "shiller pe",
+      "shiller p/e ratio",
+      "shiller pe ratio",
+      "cape ratio",
+      "cyclically adjusted p/e",
+      "cyclically adjusted pe",
+      "cyclically adjusted price-to-earnings",
+      "cyclically-adjusted p/e"
+    ],
+    "abbr": [],
+    "short": "A market's price divided by its average inflation-adjusted profits over the past ten years, smoothing out booms and busts.",
+    "kid": "Your apple tree gives lots of apples in some years and only a few in others. To know how good the tree really is, you count its apples over many years and think about a usual year.",
+    "detail": "The Shiller P/E, or cyclically adjusted price-to-earnings (CAPE) ratio, divides the current level of a market index by the average of its last ten years of earnings, with both adjusted for inflation. Developed by economists John Campbell and Robert Shiller and popularised in Shiller's 2000 book Irrational Exuberance, it smooths out the business cycle so that a temporary surge or collapse in profits does not distort the reading. A high CAPE relative to its own history has been followed by lower returns over the next decade on average, though it is a poor short-term timing tool. The US CAPE peaked at about 44 in December 1999, just before the dot-com crash. It is mainly applied to whole markets, including the Nifty and Sensex, rather than single stocks. Common confusion: CAPE levels are not directly comparable across countries or eras, because accounting rules, sector mix and interest rates differ.",
+    "example": "Say an index stands at 20,000 and its inflation-adjusted earnings averaged 800 a year over the past ten years, while this year's earnings are 1,000. Its CAPE is 20,000 / 800 = 25, higher than its ordinary trailing P/E of 20,000 / 1,000 = 20.",
+    "formula": "CAPE = Inflation-adjusted index level / Average inflation-adjusted earnings over the last 10 years",
+    "related": [
+      "Price-to-earnings ratio",
+      "Normalised earnings",
+      "Market cap to GDP ratio",
+      "Business cycle",
+      "Asset bubble"
+    ]
+  },
+  {
+    "id": "market-cap-to-gdp-ratio",
+    "term": "Market cap to GDP ratio",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "Buffett indicator",
+      "market-cap-to-GDP",
+      "market capitalisation to GDP ratio"
+    ],
+    "hl": [
+      "buffett indicator",
+      "market cap to gdp",
+      "market-cap-to-gdp",
+      "market cap-to-gdp",
+      "market capitalisation to gdp",
+      "market capitalization to gdp",
+      "m-cap-to-gdp",
+      "mcap-to-gdp"
+    ],
+    "abbr": [],
+    "short": "The total value of all a country's listed companies divided by the size of its yearly economy, used to judge if markets look expensive.",
+    "kid": "Imagine everything a town makes in a year fills one big basket. This compares what people would pay for all the town's shops with the size of that basket.",
+    "detail": "This ratio divides the total market capitalisation of a country's listed companies by its nominal gross domestic product. Warren Buffett called it, in a 2001 Fortune article, probably the best single measure of where valuations stand, hence the nickname Buffett indicator. A reading well above its own long-run average suggests share prices have run ahead of the economy's output. It is widely tracked in India alongside the Nifty P/E. The ratio has big blind spots. It rises naturally as more companies list, as India has seen with waves of IPOs; it ignores that many listed firms earn much of their profit abroad, which matters greatly for the US; and it moves with interest rates and profit margins. Use it as a slow-moving, economy-wide gauge, never for a single stock or for short-term timing, and compare countries with care.",
+    "example": "Say a country's listed companies are together worth $3 trillion and its annual GDP is $2.5 trillion. Its market cap to GDP ratio is 3 / 2.5 = 1.2, or 120%.",
+    "formula": "Market cap to GDP = Total market capitalisation of listed companies / Nominal GDP x 100",
+    "related": [
+      "Market capitalisation",
+      "Gross domestic product",
+      "Shiller P/E ratio",
+      "Fed model",
+      "Asset bubble"
+    ]
+  },
+  {
+    "id": "re-rating",
+    "term": "Re-rating",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "rerating",
+      "multiple expansion",
+      "valuation re-rating"
+    ],
+    "hl": [
+      "re-rating",
+      "rerating",
+      "multiple expansion",
+      "valuation re-rating",
+      "p/e re-rating"
+    ],
+    "abbr": [],
+    "short": "A rise in the valuation multiple, such as the price-to-earnings ratio, that investors are willing to pay for a company, sector or market.",
+    "kid": "People used to pay 5 coins for your cookies, and now they happily pay 8 for the very same cookies because they like your shop more. The cookies did not change, but how people feel about them did.",
+    "detail": "A re-rating happens when the market assigns a higher multiple, such as P/E, P/B or EV/EBITDA, to the same earnings or assets. Since the share price equals earnings per share times the P/E multiple, a stock can rise even if profits stay flat. Re-ratings usually follow a change in how investors see a company's future: faster or more durable growth, better return on capital, lower debt, improved governance, a shift into a more highly valued business, or inclusion in major indices. Indian market commentary often speaks of whole sectors being re-rated, for example when government capital spending lifts growth expectations for capital-goods makers. The strongest investment outcomes combine earnings growth with a re-rating. The risk is the reverse: a multiple that rose on hope can fall quickly if growth disappoints. The opposite of a re-rating is a de-rating, or multiple compression.",
+    "example": "Say ABC Ltd earns ₹50 per share and trades at a P/E of 20, so its share price is ₹1,000. If investors re-rate it to a P/E of 25 with no change in earnings, the price rises to ₹1,250, a 25% gain; if EPS also grows to ₹55, the price becomes 55 x 25 = ₹1,375.",
+    "formula": "Share price = EPS x P/E multiple; a re-rating raises the multiple",
+    "related": [
+      "De-rating",
+      "Valuation multiple",
+      "Price-to-earnings ratio",
+      "Earnings per share",
+      "Margin of safety"
+    ]
+  },
+  {
+    "id": "de-rating",
+    "term": "De-rating",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "derating",
+      "multiple compression",
+      "valuation de-rating"
+    ],
+    "hl": [
+      "de-rating",
+      "derating",
+      "multiple compression",
+      "valuation de-rating",
+      "p/e de-rating"
+    ],
+    "abbr": [],
+    "short": "A fall in the valuation multiple, such as the price-to-earnings ratio, that investors are willing to pay for a company, sector or market.",
+    "kid": "Last summer people paid 8 coins for your cookies, but now they will only pay 5 for the very same cookies. The cookies are just as tasty; people simply feel less excited about them.",
+    "detail": "A de-rating, or multiple compression, happens when the market applies a lower multiple to a company's earnings, book value or EBITDA. Because the share price equals EPS times the multiple, a stock can fall even while profits rise. Common triggers are slowing growth, rising interest rates (which reduce the present value of future profits), governance or regulatory worries, higher debt, disruption by competitors, or simply a stock having been priced for perfection. Indian markets have seen phases where high-P/E consumer stocks kept growing earnings for years while their share prices went sideways because their multiples shrank. De-rating is the key risk of buying high-multiple stocks: even a good business can deliver poor returns if you pay too much for it. The opposite of a de-rating is a re-rating, or multiple expansion.",
+    "example": "Say ABC Ltd's EPS rises 10% from ₹40 to ₹44, but its P/E falls from 50 to 40. Its share price drops from 40 x 50 = ₹2,000 to 44 x 40 = ₹1,760, a 12% loss despite higher profits.",
+    "formula": "Share price = EPS x P/E multiple; a de-rating lowers the multiple",
+    "related": [
+      "Re-rating",
+      "Valuation multiple",
+      "Price-to-earnings ratio",
+      "Interest rate risk",
+      "Margin of safety"
+    ]
+  },
+  {
+    "id": "sum-of-the-parts-valuation",
+    "term": "Sum-of-the-parts valuation",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "SOTP",
+      "SOTP valuation",
+      "sum of the parts",
+      "break-up value"
+    ],
+    "hl": [
+      "sum-of-the-parts valuation",
+      "sum-of-the-parts",
+      "sotp valuation",
+      "break-up value",
+      "breakup value"
+    ],
+    "abbr": [
+      "SOTP"
+    ],
+    "short": "Valuing a company with several different businesses by valuing each one separately, adding them up and subtracting debt.",
+    "kid": "Your toy box has a bike, some puzzles and a teddy bear. To know what the whole box is worth, you work out each toy's worth and add them together.",
+    "detail": "Sum-of-the-parts (SOTP) valuation values each division or subsidiary of a diversified company on its own, using the method and multiple that suit it, then adds them up and subtracts net debt and other claims at the parent level to reach equity value. It is standard for conglomerates, because a single group-wide multiple would blur very different businesses. Indian analysts routinely value groups such as Reliance Industries this way, separating its energy, telecom and retail arms, and value holding companies by marking their listed stakes to market. The result is sometimes called break-up value, what the parts might fetch if sold separately. Common pitfalls: double-counting cash or debt held inside subsidiaries, ignoring minority shareholders' share of a subsidiary, and forgetting that the market often applies a holding company discount, so a stock can trade below its SOTP value for years.",
+    "example": "Say ABC Ltd has a chemicals arm valued at 10 times its ₹400 crore EBITDA (₹4,000 crore), a retail arm valued at 2 times its ₹1,500 crore sales (₹3,000 crore) and a listed stake worth ₹1,000 crore. The parts total ₹8,000 crore; after subtracting net debt of ₹1,000 crore, equity is worth ₹7,000 crore, or ₹100 per share across 70 crore shares.",
+    "formula": "SOTP equity value = Sum of the values of each business and investment - Net debt and other claims at the parent",
+    "related": [
+      "Holding company discount",
+      "Enterprise value",
+      "EV/EBITDA",
+      "Football field chart",
+      "Conglomerate"
+    ]
+  },
+  {
+    "id": "holding-company-discount",
+    "term": "Holding company discount",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "holdco discount",
+      "conglomerate discount"
+    ],
+    "hl": [
+      "holding company discount",
+      "holding company discounts",
+      "holdco discount",
+      "holdco discounts",
+      "conglomerate discount",
+      "conglomerate discounts"
+    ],
+    "abbr": [],
+    "short": "The gap by which a company that mainly owns stakes in other companies trades below the market value of those stakes.",
+    "kid": "A big basket holds an apple, a banana and an orange. Strangely, people pay less for the full basket than they would for the three fruits bought one by one.",
+    "detail": "A holding company discount is the percentage by which a holding company's market capitalisation falls short of the net asset value (NAV) of what it owns, usually stakes in listed group companies plus cash, minus debt. A conglomerate discount is the related gap between a diversified operating group and its sum-of-the-parts value. Reasons include tax that would fall due if stakes were sold, the holding company's own running costs, low trading liquidity, the indirect nature of the ownership, and doubts that value will ever be passed on to minority shareholders. Indian promoter-group holding companies have often traded at steep discounts, at times more than half of their NAV. Discounts can narrow on events such as a demerger, a buyback, higher dividends or a stake sale. Common mistake: treating a deep discount alone as a reason to buy; without a trigger, it can persist for decades.",
+    "example": "Say ABC Holdings Ltd owns listed stakes worth ₹10,000 crore at market prices and ₹500 crore of cash, with no debt, giving a NAV of ₹10,500 crore. If its own market capitalisation is ₹6,300 crore, the holding company discount is (10,500 - 6,300) / 10,500 = 40%.",
+    "formula": "Holding company discount = (NAV of holdings - Market capitalisation) / NAV of holdings x 100",
+    "related": [
+      "Sum-of-the-parts valuation",
+      "Net asset value",
+      "Demerger",
+      "Promoter",
+      "Conglomerate"
+    ]
+  },
+  {
+    "id": "control-premium",
+    "term": "Control premium",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "acquisition premium",
+      "takeover premium",
+      "premium for control"
+    ],
+    "hl": [
+      "control premium",
+      "control premiums",
+      "takeover premium",
+      "takeover premiums",
+      "acquisition premium",
+      "acquisition premiums",
+      "premium for control"
+    ],
+    "abbr": [],
+    "short": "The extra amount a buyer pays above the market share price to gain control of a company.",
+    "kid": "Your friend has a toy everyone likes, and you want to be the one who decides how it is played with. To get it, you offer a bit more than it usually costs.",
+    "detail": "A control premium is the excess of the price paid for a controlling stake over the company's unaffected share price, meaning the price before deal rumours or an announcement. Buyers pay it because control lets them change strategy, management, dividends and capital structure, and capture synergies such as cost savings or cross-selling. Premiums vary widely by industry, competition for the target and market conditions. In India, under SEBI's takeover regulations as of 2025, an acquirer that reaches 25% or more of a listed company's voting rights must make an open offer to public shareholders, at a minimum price set by formula, so minority holders can share in the premium. Common confusion: trading prices reflect small minority stakes, so valuers add a control premium only when valuing control and should not apply it to small holdings. Overpaying is a classic cause of value-destroying deals.",
+    "example": "Say ABC Ltd's shares trade at ₹200 before any deal news, and XYZ Ltd offers ₹260 per share to buy control. The control premium is (260 - 200) / 200 = 30%.",
+    "formula": "Control premium = (Offer price per share - Unaffected share price) / Unaffected share price x 100",
+    "related": [
+      "Mergers and acquisitions",
+      "Open offer",
+      "Synergies",
+      "Precedent transactions",
+      "Illiquidity discount"
+    ]
+  },
+  {
+    "id": "illiquidity-discount",
+    "term": "Illiquidity discount",
+    "cat": "valuation",
+    "level": "a",
+    "aliases": [
+      "discount for lack of marketability",
+      "DLOM",
+      "marketability discount"
+    ],
+    "hl": [
+      "illiquidity discount",
+      "illiquidity discounts",
+      "discount for lack of marketability",
+      "marketability discount",
+      "marketability discounts"
+    ],
+    "abbr": [
+      "DLOM"
+    ],
+    "short": "A reduction in the value of shares that cannot be sold quickly or easily, such as stakes in unlisted companies.",
+    "kid": "A toy you can swap with friends any day is easy to trade. A toy stuck in a locked box until next year is worth a bit less to you, even if it is the same toy.",
+    "detail": "An illiquidity discount, or discount for lack of marketability (DLOM), lowers the value of an asset that cannot be sold quickly at a fair price. Valuers typically start from what the shares would be worth if freely traded, often using listed peers, then cut that value because the owner of an unlisted or locked-in stake bears extra costs and risks: finding a buyer, waiting, and possibly selling at a poor price. Studies of restricted shares suggest the discount can be large; its size depends on the expected holding period, the company's risk and whether it pays dividends. In India, valuers apply DLOM to shares of unlisted companies, private equity stakes and shares under lock-in, for example in fundraising or tax valuations. Common confusion: DLOM is about how easily a stake can be sold, while a minority discount is about lack of control; the two are separate adjustments.",
+    "example": "Say listed peers imply that a 10% stake in unlisted ABC Pvt Ltd would be worth ₹50 crore if it could be freely traded. Applying a 25% illiquidity discount values the stake at 50 x (1 - 0.25) = ₹37.5 crore.",
+    "formula": "Value of illiquid stake = Value as if freely traded x (1 - Illiquidity discount)",
+    "related": [
+      "Control premium",
+      "Liquidity",
+      "Unlisted shares",
+      "Private equity",
+      "Lock-in period"
+    ]
+  },
+  {
+    "id": "asset-based-valuation",
+    "term": "Asset-based valuation",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "net asset value method",
+      "adjusted book value method",
+      "asset approach",
+      "NAV method"
+    ],
+    "hl": [
+      "asset-based valuation",
+      "asset based valuation",
+      "net asset value method",
+      "adjusted book value method",
+      "nav method",
+      "asset approach to valuation"
+    ],
+    "abbr": [],
+    "short": "Valuing a company by adding up what its assets are really worth today and subtracting everything it owes.",
+    "kid": "To know what your toy box is worth, count up what each toy could be sold for today. Then give back anything you borrowed, and what is left is its worth.",
+    "detail": "Asset-based valuation, also called the net asset value or adjusted book value method, estimates equity value as the fair value of a company's assets minus the fair value of its liabilities. Balance-sheet figures are restated to current values: land bought decades ago is marked to market, investments are revalued, obsolete inventory and doubtful receivables are written down, and off-balance-sheet obligations are added. It suits companies whose value lies mainly in what they own, such as holding and investment companies, real-estate firms, asset-heavy businesses with weak earnings, and companies being wound up. Indian valuers present it as one of three standard approaches, alongside the income approach (such as DCF) and the market approach (multiples), for example in merger share-swap reports. Its main limitation is that it ignores intangible value from brands, people and growth, so it usually undervalues healthy, profitable businesses.",
+    "example": "Say ABC Ltd's balance sheet shows assets of ₹500 crore, including land at its old cost of ₹50 crore, and liabilities of ₹300 crore, so book equity is ₹200 crore. If the land is now worth ₹250 crore, adjusted assets are ₹700 crore and the asset-based equity value is 700 - 300 = ₹400 crore.",
+    "formula": "Equity value = Fair value of assets - Fair value of liabilities",
+    "related": [
+      "Book value per share",
+      "Liquidation value",
+      "Net asset value",
+      "Fair value",
+      "Sum-of-the-parts valuation"
+    ]
+  },
+  {
+    "id": "liquidation-value",
+    "term": "Liquidation value",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "fire-sale value",
+      "forced sale value"
+    ],
+    "hl": [
+      "liquidation value",
+      "liquidation values",
+      "fire-sale value",
+      "fire sale value",
+      "forced sale value"
+    ],
+    "abbr": [],
+    "short": "The cash a company's assets would fetch if it shut down and sold them off quickly, after paying the costs of selling.",
+    "kid": "If you had to sell all your toys by tonight, you would get less for them than if you had a whole month. That quick-sale money is this.",
+    "detail": "Liquidation value is the net cash that would be realised if a business stopped operating and its assets were sold off individually, usually under time pressure, minus selling costs such as legal and auction fees. It is normally well below going-concern value because buyers know the seller is forced, and specialised machinery or inventory may fetch little. Orderly liquidation assumes a reasonable selling period; forced liquidation assumes a rush and gives a lower figure. It acts as a floor when valuing distressed companies and tells lenders how much they might recover. Under India's Insolvency and Bankruptcy Code rules as of 2025, two registered valuers estimate both the fair value and the liquidation value of a company in insolvency, and creditors use the liquidation value as a benchmark when weighing resolution plans. Common confusion: the proceeds go to creditors first in a fixed order, so shareholders often receive nothing.",
+    "example": "Say ABC Ltd's inventory sells for ₹60 crore, its receivables yield ₹56 crore and its plant fetches ₹90 crore, a total of ₹206 crore. After ₹6 crore of sale costs, liquidation value is ₹200 crore; with ₹250 crore of liabilities, creditors recover 80% and shareholders get nothing.",
+    "formula": "Liquidation value = Cash realised from selling assets quickly - Costs of liquidation",
+    "related": [
+      "Asset-based valuation",
+      "Going concern",
+      "Insolvency and Bankruptcy Code",
+      "Recovery rate",
+      "Distressed debt"
+    ]
+  },
+  {
+    "id": "tobins-q",
+    "term": "Tobin's Q",
+    "cat": "valuation",
+    "level": "a",
+    "aliases": [
+      "Q ratio",
+      "Tobin's q"
+    ],
+    "hl": [
+      "tobin's q",
+      "tobins q",
+      "tobin q",
+      "q ratio"
+    ],
+    "abbr": [],
+    "short": "The market value of a company divided by what it would cost to rebuild all its assets from scratch today.",
+    "kid": "Building a new treehouse takes ten coins of wood. If people would happily pay twenty coins for yours, it is worth more than the wood it is made of.",
+    "detail": "Tobin's Q, named after Nobel prize-winning economist James Tobin, divides the market value of a firm (its equity plus debt) by the replacement cost of its assets, meaning what it would cost to buy or build the same productive capacity today. A Q above 1 means the market values the business at more than its physical assets, suggesting valuable intangibles such as brands, patents or market power, and giving companies an incentive to invest because new assets are worth more than they cost. A Q below 1 suggests it may be cheaper to buy existing firms than to build new capacity. Economists also apply it to whole stock markets. In practice replacement cost is hard to measure, so analysts often approximate it with the book value of assets, which makes Q resemble a price-to-book measure. Common confusion: replacement cost is not the same as book value or historical cost.",
+    "example": "Say ABC Ltd's shares are worth ₹1,100 crore and its debt ₹400 crore, a total market value of ₹1,500 crore. If replacing its plants and other assets would cost ₹1,000 crore, its Tobin's Q is 1,500 / 1,000 = 1.5.",
+    "formula": "Tobin's Q = Market value of the firm's equity and debt / Replacement cost of its assets",
+    "related": [
+      "Price-to-book ratio",
+      "Replacement cost",
+      "Intangible assets",
+      "Economic moat",
+      "Market capitalisation"
+    ]
+  },
+  {
+    "id": "normalised-earnings",
+    "term": "Normalised earnings",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "normalized earnings",
+      "mid-cycle earnings",
+      "through-the-cycle earnings"
+    ],
+    "hl": [
+      "normalised earnings",
+      "normalized earnings",
+      "mid-cycle earnings",
+      "mid cycle earnings",
+      "through-the-cycle earnings",
+      "normalised profit",
+      "normalized profit"
+    ],
+    "abbr": [],
+    "short": "An estimate of what a company would earn in a typical year, stripping out one-off items and unusually good or bad times.",
+    "kid": "Some summers your lemonade stand is super busy and some rainy summers it is quiet. To know how good your stand is, you think about a normal summer, not the best or the worst.",
+    "detail": "Normalised earnings are the profits a business would make under ordinary conditions. Analysts get there in two ways: by removing one-off items such as gains on asset sales, impairments, restructuring charges or tax refunds, and, for cyclical businesses, by estimating mid-cycle earnings, often an average over a full cycle or a normal margin applied to current revenue. This matters because multiples applied to peak or trough profits mislead. Steel, cement, metals, sugar, chemicals and other commodity producers can post record profits at the top of the cycle, when their P/E looks temptingly low, and losses at the bottom, when P/E is meaningless. Benjamin Graham recommended averaging earnings over several years for exactly this reason, and the Shiller P/E applies the same idea to whole markets. Common confusion: normalising involves judgement, so always check which items a company or analyst has excluded and why.",
+    "example": "Say ABC Steel Ltd earned ₹200, ₹900, ₹1,500, ₹400 and ₹500 crore over five years, an average of ₹700 crore. At 8 times earnings, it is worth ₹5,600 crore on normalised profit, but ₹12,000 crore if you wrongly use the peak-year profit of ₹1,500 crore.",
+    "formula": "Normalised earnings = Reported earnings adjusted for one-off items, or average earnings across a full business cycle",
+    "related": [
+      "Shiller P/E ratio",
+      "Cyclical stocks",
+      "Trailing P/E ratio",
+      "Exceptional items",
+      "Business cycle"
+    ]
+  },
+  {
+    "id": "embedded-value",
+    "term": "Embedded value",
+    "cat": "valuation",
+    "level": "a",
+    "aliases": [
+      "P/EV",
+      "price to embedded value",
+      "Indian embedded value",
+      "IEV"
+    ],
+    "hl": [
+      "embedded value",
+      "price to embedded value",
+      "price-to-embedded value",
+      "price-to-embedded-value",
+      "p/ev",
+      "indian embedded value"
+    ],
+    "abbr": [
+      "P/EV",
+      "IEV"
+    ],
+    "short": "A life insurer's value to shareholders today: its net worth plus the future profits expected from policies it has already sold.",
+    "kid": "You planted apple trees last year and they will give apples for many years. Your garden's worth is the apples in your basket now plus all the apples those trees will still give.",
+    "detail": "Embedded value (EV) measures the shareholder value already locked into a life insurance company. It adds the adjusted net worth (free surplus plus required capital, at market value) to the value of in-force business: the present value of future profits expected from existing policies, less the cost of holding required capital and of options and guarantees. Because life insurers' accounting profits lag the economics of long-term policies, investors value them mainly on price-to-embedded-value (P/EV), market capitalisation divided by EV. Listed Indian life insurers report Indian Embedded Value (IEV) under actuarial guidance, along with the value of new business (VNB), the value added by policies sold during the year, and the VNB margin. Growth in EV and VNB drives their valuations. Common confusion: insurance EV has nothing to do with enterprise value, despite the shared abbreviation, and it excludes any value from future new sales.",
+    "example": "Say ABC Life Insurance Ltd has adjusted net worth of ₹8,000 crore and a value of in-force business of ₹12,000 crore, giving an embedded value of ₹20,000 crore. With a market capitalisation of ₹50,000 crore, it trades at a P/EV of 50,000 / 20,000 = 2.5 times.",
+    "formula": "Embedded value = Adjusted net worth + Value of in-force business; P/EV = Market capitalisation / Embedded value",
+    "related": [
+      "Value of new business",
+      "Life insurance",
+      "Price-to-book ratio",
+      "Present value",
+      "Actuary"
+    ]
+  },
+  {
+    "id": "football-field-chart",
+    "term": "Football field chart",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "football field",
+      "valuation summary chart",
+      "valuation football field"
+    ],
+    "hl": [
+      "football field chart",
+      "football field charts",
+      "football-field chart",
+      "valuation football field"
+    ],
+    "abbr": [],
+    "short": "A bar chart showing side by side the range of values each valuation method gives for a company, to help settle on a price range.",
+    "kid": "You ask five friends how many sweets are in a jar, and each gives a low and a high guess. You draw their guesses as bars side by side to see where most of them agree.",
+    "detail": "A football field chart is the standard summary page in investment banking pitch books and fairness opinions. Each horizontal bar shows the low-to-high range of value from one approach, such as discounted cash flow, comparable company multiples, precedent transactions, the 52-week trading range and analyst price targets, usually stated as value per share or as enterprise value. Stacking the bars makes it easy to see where methods overlap and to support an offer price or a recommended range. Indian bankers use it in IPO pricing discussions, merger share-swap work and takeover advice, and it is a staple of finance interviews and case competitions. Common confusion: the chart summarises valuations, it does not create one. Each bar is only as good as its assumptions, and the ranges are often wide because they come from sensitivity tables that vary discount rates and multiples.",
+    "example": "Say a banker's chart for ABC Ltd shows DCF at ₹480 to ₹600 per share, trading comparables at ₹420 to ₹540, precedent deals at ₹520 to ₹660 and the 52-week range at ₹380 to ₹500. The three valuation methods overlap only between ₹520 and ₹540, a natural zone for an offer price.",
+    "formula": "",
+    "related": [
+      "Discounted cash flow",
+      "Comparable company analysis",
+      "Precedent transactions",
+      "Fairness opinion",
+      "Sum-of-the-parts valuation"
+    ]
+  },
+  {
+    "id": "justified-pe",
+    "term": "Justified P/E",
+    "cat": "valuation",
+    "level": "a",
+    "aliases": [
+      "justified price-to-earnings",
+      "fundamental P/E",
+      "justified P/E ratio"
+    ],
+    "hl": [
+      "justified p/e",
+      "justified pe",
+      "justified p/e ratio",
+      "justified price-to-earnings",
+      "fundamental p/e"
+    ],
+    "abbr": [],
+    "short": "The price-to-earnings ratio a company deserves given its growth, the share of profit it pays out and its risk, worked out from a valuation model.",
+    "kid": "A tree that grows more fruit every year and rarely gets sick is worth more than a weak tree. This works out a fair amount to pay for the tree.",
+    "detail": "The justified P/E is the multiple implied by a company's fundamentals rather than by market prices. It comes from the Gordon growth (constant-growth dividend discount) model: if a company pays out a fixed share of its earnings, grows steadily at rate g, and shareholders require a return r, then price divided by next year's earnings equals the payout ratio divided by (r - g). The trailing version multiplies this by (1 + g). The formula shows what drives P/E: a higher payout for the same growth, faster sustainable growth and lower risk all justify a higher multiple. Analysts compare a stock's actual P/E with its justified P/E to judge whether it looks over- or undervalued. Pitfalls: it is extremely sensitive to the gap between r and g, it breaks down when g approaches r, and growth and payout are linked, since faster growth usually needs more reinvestment.",
+    "example": "Say ABC Ltd pays out 40% of its earnings, is expected to grow at 8% a year forever, and its shareholders require a 12% return. Its justified forward P/E is 0.40 / (0.12 - 0.08) = 10, and its justified trailing P/E is 10 x 1.08 = 10.8.",
+    "formula": "Justified forward P/E = Payout ratio / (Cost of equity - Growth rate); Justified trailing P/E = Payout ratio x (1 + Growth rate) / (Cost of equity - Growth rate)",
+    "related": [
+      "Price-to-earnings ratio",
+      "Gordon growth model",
+      "Dividend discount model",
+      "Cost of equity",
+      "Sustainable growth rate"
+    ]
+  },
+  {
+    "id": "ev-ebit",
+    "term": "EV/EBIT",
+    "cat": "valuation",
+    "level": "i",
+    "aliases": [
+      "enterprise value to EBIT",
+      "EV to EBIT",
+      "EBIT multiple"
+    ],
+    "hl": [
+      "ev/ebit",
+      "ev to ebit",
+      "ev-to-ebit",
+      "enterprise value to ebit",
+      "ebit multiple",
+      "ebit multiples"
+    ],
+    "abbr": [
+      "EV/EBIT"
+    ],
+    "short": "A company's total value to shareholders and lenders divided by its operating profit after wear-and-tear charges but before interest and tax.",
+    "kid": "Two bikes earn the same pocket money doing deliveries, but one needs new tyres all the time. You count the tyre money too before deciding which bike is the better buy.",
+    "detail": "EV/EBIT divides enterprise value by earnings before interest and tax. Like EV/EBITDA it is independent of how a company is financed, but because EBIT is struck after depreciation and amortisation, it reflects the cost of wearing out assets. That makes it fairer when comparing companies with very different capital intensity, such as an asset-light services firm and a manufacturer that must keep replacing machines. Value investors favour it: its inverse, EBIT divided by enterprise value, is the earnings yield used in Joel Greenblatt's magic formula. For any company with positive depreciation, EV/EBIT is higher than EV/EBITDA. Watch for distortions: depreciation policies differ, acquisitions add amortisation of intangibles that some analysts add back, and one-off items in EBIT should be removed. In India, also check whether reported EBIT includes other income, such as treasury gains, which can flatter the figure.",
+    "example": "Say ABC Ltd and XYZ Ltd each have an enterprise value of ₹6,000 crore and EBITDA of ₹750 crore, so both trade at 8 times EBITDA. ABC's depreciation is ₹350 crore, so its EBIT is ₹400 crore and its EV/EBIT is 15; XYZ's depreciation is ₹150 crore, giving EBIT of ₹600 crore and an EV/EBIT of 10.",
+    "formula": "EV/EBIT = Enterprise value / Earnings before interest and tax",
+    "related": [
+      "EV/EBITDA",
+      "Enterprise value",
+      "Operating profit",
+      "Earnings yield",
+      "Depreciation"
+    ]
+  },
+  {
+    "id": "fed-model",
+    "term": "Fed model",
+    "cat": "valuation",
+    "level": "a",
+    "aliases": [
+      "yield gap",
+      "bond-equity earnings yield ratio",
+      "BEER",
+      "Fed valuation model"
+    ],
+    "hl": [
+      "bond-equity earnings yield ratio",
+      "bond equity earnings yield ratio",
+      "bond-equity earnings yield",
+      "bond equity earnings yield"
+    ],
+    "abbr": [],
+    "short": "A rule of thumb that compares the stock market's earnings yield with the government bond yield to judge whether shares or bonds look cheaper.",
+    "kid": "One jar gives you a sweet every week and another gives you a sweet and a half. You pick the jar that gives more, and check again whenever the sweets change.",
+    "detail": "The Fed model compares the earnings yield of the stock market, forward earnings divided by the index level, with the yield on long-term government bonds, usually the 10-year. If the earnings yield is above the bond yield, equities are seen as cheap relative to bonds. Strategist Ed Yardeni named it in 1997 after spotting the comparison in a US Federal Reserve report; the Fed never adopted it as policy. In India, analysts track a version called the bond-equity earnings yield ratio (BEER), the 10-year government bond yield divided by the Nifty's earnings yield, where a high reading versus history suggests stocks look expensive relative to bonds. The difference between the two is often called the yield gap. Main criticism: it sets earnings, which tend to rise with inflation, against a fixed nominal bond yield and ignores the extra risk of equities, so it works best as a rough relative gauge.",
+    "example": "Say an index trades at 20 times forward earnings, an earnings yield of 1 / 20 = 5%, while the 10-year government bond yields 7%. The BEER is 7 / 5 = 1.4 and the yield gap is 2 percentage points in favour of bonds; analysts would compare these readings with their own history.",
+    "formula": "Fed model: compare Earnings yield (forward E/P) with the 10-year government bond yield; BEER = Bond yield / Earnings yield",
+    "related": [
+      "Earnings yield",
+      "Equity risk premium",
+      "Government securities",
+      "Price-to-earnings ratio",
+      "Market cap to GDP ratio"
+    ]
+  }
+]

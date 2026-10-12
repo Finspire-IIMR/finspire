@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="fs-root" content="../">
+<meta name="theme-color" content="#141416">
+<meta name="color-scheme" content="dark">
+<title>Dictionary · Finspire</title>
+<meta name="description" content="Finance terms explained in plain language, with examples, related ideas and the headlines they appear in.">
+<link rel="icon" type="image/png" href="../assets/img/logo-light.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/shell.css">
+<link rel="stylesheet" href="../assets/css/dictionary.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" data-fs-header>
+  <div class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="../index.html" aria-label="Finspire home">
+        <img class="logo-img lt" src="../assets/img/logo-light.png" alt="" width="35" height="34">
+        <img class="logo-img dk" src="../assets/img/logo-dark.png" alt="" width="35" height="34">
+        <span class="wm">Finspire</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nl" href="../index.html#paths">Start here</a>
+        <a class="nl" href="../index.html#repository">Repository</a>
+        <a class="nl" href="../markets/">Markets</a>
+        <a class="nl" href="../dictionary/">Dictionary</a>
+        <a class="nl" href="../library/">Library</a>
+        <a class="nl" href="../index.html#events">Events</a>
+      </nav>
+      <div class="nav-cta">
+        <div class="fs-acct" data-fs-account></div>
+        <a class="btn btn-primary join" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join Finspire</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="wrap mobile-menu" id="mobileMenu" aria-label="Menu" hidden>
+      <a href="../index.html#paths">Start here</a>
+      <a href="../index.html#repository">Repository</a>
+      <a href="../markets/">Markets</a>
+      <a href="../dictionary/">Dictionary</a>
+      <a href="../library/">Library</a>
+      <a href="../index.html#events">Events</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join Finspire</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="wrap dc-top">
+    <header class="pg-head dc-head">
+      <p class="eyebrow">Dictionary</p>
+      <h1 class="h1">Finance, in plain words.</h1>
+      <p class="lede" id="dcLede">Short meanings, everyday analogies and worked examples for the terms you meet in class and in the news.</p>
+      <div class="dc-search" role="search">
+        <label class="sr-only" for="dcQ">Search the dictionary</label>
+        <svg class="dc-search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="dcQ" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search"
+          placeholder="Search a term, e.g. repo rate or EBITDA" role="combobox" aria-autocomplete="list" aria-expanded="false"
+          aria-controls="dcList" aria-describedby="dcCount">
+        <kbd class="dc-kbd" aria-hidden="true">/</kbd>
+        <button class="dc-q-x" type="button" aria-label="Clear search" hidden></button>
+      </div>
+    </header>
+    <aside class="dc-tod" id="dcTod" aria-labelledby="dcTodLbl">
+      <p class="dc-tod-top"><span class="eyebrow" id="dcTodLbl">Term of the day</span><span class="dc-tod-date" id="dcTodDate"></span></p>
+      <div class="dc-tod-body" id="dcTodBody">
+        <span class="skel skel-line w60"></span><span class="skel skel-line w80"></span><span class="skel skel-line w40"></span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap dc-me-slot" id="dcMeSlot">
+    <div class="dc-me" id="me" role="region" aria-labelledby="dcMeTitle" tabindex="-1"></div>
+  </div>
+
+  <section class="wrap dc-topics" aria-labelledby="dcTopicsTitle">
+    <div class="dc-sec-head">
+      <h2 class="dc-h2" id="dcTopicsTitle">Browse by topic</h2>
+      <div class="dc-sec-head-r">
+        <p class="dc-legend" aria-hidden="true"><span><i class="b"></i>Beginner</span><span><i class="i"></i>Intermediate</span><span><i class="a"></i>Advanced</span></p>
+        <button class="dc-more-btn" id="dcCatsMore" type="button" aria-expanded="false" aria-controls="dcCats" hidden></button>
+      </div>
+    </div>
+    <div class="dc-cats" id="dcCats" aria-label="Topics"></div>
+  </section>
+
+  <section class="wrap dc-work" id="dcWork" aria-labelledby="dcListTitle">
+    <div class="dc-col">
+      <div class="dc-tools">
+        <div class="dc-tools-row">
+          <h2 class="dc-h2" id="dcListTitle">All terms</h2>
+          <div class="dc-levels" id="dcLevels" role="group" aria-label="Level"></div>
+        </div>
+        <nav class="dc-az" id="dcAz" aria-label="Jump to letter"></nav>
+        <p class="dc-count" id="dcCount" aria-live="polite" aria-atomic="true"></p>
+      </div>
+      <ul class="dc-list" id="dcList" role="listbox" aria-label="Terms" tabindex="0"></ul>
+      <div class="dc-empty" id="dcEmpty" hidden></div>
+      <div class="dc-sentinel" id="dcSentinel" aria-hidden="true"></div>
+    </div>
+    <div class="dc-side" id="dcSide">
+      <article class="dc-entry" id="dcEntry" aria-labelledby="dcTerm" hidden></article>
+      <div class="dc-desk" id="dcDesk">
+        <div class="dc-idle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg>
+          <div><p><b>Pick a term to read it here.</b></p>
+          <p class="muted">Search, choose a topic or a letter. Underlined words inside an entry explain themselves.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fs-foot">
+  <div class="wrap">
+    <div class="fcols">
+      <nav class="fcol" aria-label="Learn"><b>Learn</b><a href="../index.html#paths">Start here</a><a href="../index.html#repository">Repository</a><a href="../index.html#events">Events</a></nav>
+      <nav class="fcol" aria-label="Tools"><b>Tools</b><a href="../markets/">Markets &amp; News</a><a href="../dictionary/">Dictionary</a><a href="../library/">Library</a></nav>
+      <nav class="fcol" aria-label="Club"><b>Club</b><a href="../index.html#about">About Finspire</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join the club</a></nav>
+      <nav class="fcol" aria-label="Follow"><b>Follow</b><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://iimranchi.ac.in/" target="_blank" rel="noopener noreferrer">IIM Ranchi</a></nav>
+    </div>
+    <div class="fbot">
+      <div class="fbot-brand">
+        <a class="logo" href="../index.html" aria-label="Finspire home"><img class="logo-img lt" src="../assets/img/logo-light.png" alt="" width="29" height="28">Finspire</a>
+        <p>© <span data-fs-year>2026</span> Finspire, IIM Ranchi</p>
+      </div>
+      <div class="fbot-copy">
+        <p>Finspire is the student-run finance club of the IPM programme at the Indian Institute of Management Ranchi, not a financial advisor or a broker. Nothing on this site is investment advice.</p>
+        <p class="fbot-meta" id="fsFootNote">Headlines link to their publishers. Definitions are for learning, not advice.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../config.js"></script>
+<script src="../assets/js/finspire.js"></script>
+<script src="../assets/js/dictionary.js"></script>
+</body>
+</html>

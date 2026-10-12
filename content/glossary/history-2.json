@@ -1,0 +1,1136 @@
+[
+  {
+    "id": "demonetisation",
+    "term": "Demonetisation",
+    "cat": "history",
+    "level": "b",
+    "aliases": [
+      "note ban",
+      "2016 demonetisation",
+      "demonetization",
+      "notebandi"
+    ],
+    "hl": [
+      "demonetisation",
+      "demonetization",
+      "note ban",
+      "notebandi",
+      "2016 note ban"
+    ],
+    "abbr": [],
+    "short": "India's overnight cancellation of old ₹500 and ₹1,000 notes as valid money on 8 November 2016, covering about 86% of cash in circulation.",
+    "kid": "Imagine your teacher suddenly says the old class tokens stop working tonight. Everyone rushes to swap them for new ones, and for weeks there are not enough new tokens to go round.",
+    "detail": "Demonetisation means a government stripping a currency note of its status as legal tender. On 8 November 2016 India announced that ₹500 and ₹1,000 notes, worth about ₹15.4 lakh crore and roughly 86% of cash by value, would stop being legal tender from midnight. People could deposit or exchange old notes at banks until 30 December 2016 while new ₹500 and ₹2,000 notes were printed. The stated aims were to flush out black money, kill counterfeit notes and push digital payments. The RBI later reported that about 99% of the withdrawn value came back to banks, so very little black money was destroyed. The cash crunch hurt the informal economy and slowed GDP growth for a few quarters, but it gave a lasting push to UPI and digital payments. Common confusion: the 2023 withdrawal of ₹2,000 notes was not demonetisation, because those notes stayed legal tender.",
+    "example": "The RBI counted ₹15,31,073 crore of the ₹15,41,793 crore in withdrawn notes coming back to banks, about 99.3%. Only ₹10,720 crore (the difference) never returned, far less than the black money many had expected to vanish.",
+    "formula": "",
+    "related": [
+      "Black money",
+      "Currency in circulation",
+      "Unified Payments Interface",
+      "Banking system liquidity",
+      "Legal tender"
+    ]
+  },
+  {
+    "id": "punjab-national-bank-fraud",
+    "term": "Punjab National Bank fraud",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "PNB scam",
+      "Nirav Modi scam",
+      "LoU fraud",
+      "PNB fraud",
+      "Nirav Modi-Mehul Choksi fraud"
+    ],
+    "hl": [
+      "pnb fraud",
+      "pnb scam",
+      "punjab national bank fraud",
+      "punjab national bank scam",
+      "nirav modi",
+      "mehul choksi",
+      "lou fraud",
+      "lou scam"
+    ],
+    "abbr": [],
+    "short": "A fraud of over ₹13,000 crore, exposed in 2018, in which PNB staff issued unauthorised bank guarantees to firms of Nirav Modi and Mehul Choksi.",
+    "kid": "Imagine a shop helper secretly writing notes that say 'the shop will pay for this' and handing them to a friend. The friend uses the notes to get lots of toys from other shops, and in the end the first shop is stuck paying.",
+    "detail": "The PNB fraud was India's biggest bank fraud when it came to light in February 2018. From about 2011, a few employees at PNB's Brady House branch in Mumbai issued Letters of Undertaking (LoUs), a bank's promise to repay overseas lenders, to firms run by jeweller Nirav Modi and his uncle Mehul Choksi of Gitanjali Gems. The LoUs were sent over the SWIFT messaging system but never entered in PNB's core banking software, so no limits, collateral or approvals applied. Overseas branches of other Indian banks lent against them, and old LoUs were repaid with new ones. When a fresh request was refused in early 2018, the chain broke. The RBI then banned LoUs for trade credit and made banks link SWIFT to core banking. Both men left India and faced extradition proceedings abroad. Common confusion: PNB itself did not fail; it absorbed the losses through provisions.",
+    "example": "Say a bank issues a one-year LoU letting XYZ Exports Ltd borrow $10 million abroad. If XYZ cannot repay, the issuing bank must pay the full $10 million, about ₹83 crore at ₹83 per dollar, even though it never recorded the guarantee or took collateral.",
+    "formula": "",
+    "related": [
+      "Letter of credit",
+      "Bank guarantee",
+      "Operational risk",
+      "Wilful defaulter",
+      "Provisioning"
+    ]
+  },
+  {
+    "id": "ilfs-crisis",
+    "term": "IL&FS crisis",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "IL&FS default",
+      "ILFS crisis",
+      "IL&FS collapse",
+      "Infrastructure Leasing & Financial Services crisis"
+    ],
+    "hl": [
+      "il&fs",
+      "ilfs",
+      "il&fs crisis",
+      "il&fs default",
+      "il&fs defaults",
+      "ilfs crisis",
+      "il&fs collapse"
+    ],
+    "abbr": [
+      "IL&FS"
+    ],
+    "short": "The 2018 collapse of IL&FS, a top-rated Indian infrastructure lender, whose surprise defaults froze lending to non-bank finance companies.",
+    "kid": "Imagine building a huge treehouse with blocks you borrow for just one week at a time. If one week nobody lends you blocks, you cannot give back the old ones, and soon nobody wants to lend blocks to anyone building treehouses.",
+    "detail": "Infrastructure Leasing & Financial Services (IL&FS) was a systemically important group with over 300 subsidiaries that financed and built roads, power and water projects. Its shareholders included LIC, SBI, ORIX and ADIA, and its debt carried top ratings until weeks before it failed. With about ₹91,000 crore of debt, it borrowed through short-term paper and loans to fund projects that paid back over decades: a classic asset-liability mismatch. Between June and September 2018 group companies missed payments, ratings were cut to default and the government replaced the board, with Uday Kotak as chairman. Mutual funds holding IL&FS paper took losses and stopped rolling over short-term loans to other NBFCs, setting off the 2018-19 NBFC liquidity crunch that later felled DHFL. Common confusion: the problem was not one bad project but a funding model that depended on endlessly refinancing short-term debt.",
+    "example": "Say ABC Infra Finance funds a ₹1,000 crore toll road that repays over 20 years using 90-day commercial paper. It must find new lenders for the full ₹1,000 crore about four times a year (365 / 90 is about 4); if lenders refuse even once, it defaults although the road keeps earning tolls.",
+    "formula": "",
+    "related": [
+      "Non-banking financial company",
+      "Commercial paper",
+      "Asset-liability management",
+      "DHFL collapse",
+      "Contagion",
+      "Credit rating"
+    ]
+  },
+  {
+    "id": "dhfl-collapse",
+    "term": "DHFL collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "DHFL crisis",
+      "DHFL",
+      "Dewan Housing Finance collapse",
+      "DHFL insolvency"
+    ],
+    "hl": [
+      "dhfl",
+      "dhfl crisis",
+      "dhfl collapse",
+      "dhfl case",
+      "dewan housing",
+      "dewan housing finance"
+    ],
+    "abbr": [
+      "DHFL"
+    ],
+    "short": "The 2019 failure of Dewan Housing Finance, a large Indian home lender, after alleged fund diversion and a funding freeze; resolved through insolvency in 2021.",
+    "kid": "Imagine a kid who collected pocket money from lots of friends, promising to give it back, but quietly handed a big chunk to his cousins. When friends asked for it back there wasn't enough, so a grown-up stepped in and everyone got back only part.",
+    "detail": "Dewan Housing Finance Corporation (DHFL) was one of India's biggest home lenders. After the IL&FS default, on 21 September 2018 its shares crashed over 40% in a day when a mutual fund sold its short-term paper at a steep discount, signalling funding stress. In 2019 allegations surfaced that promoters Kapil and Dheeraj Wadhawan had diverted thousands of crores through shell companies, and DHFL began missing bond and deposit payments. In November 2019 the RBI superseded its board and sent it to insolvency, the first finance company taken through the Insolvency and Bankruptcy Code under its special rules for financial firms; Piramal's plan was approved in 2021. In the Yes Bank case, the CBI alleged that Yes Bank's investment in DHFL debentures was linked to kickbacks. Common confusion: DHFL was not a bank, so its public fixed deposits had no deposit insurance and holders also recovered only part of their money.",
+    "example": "Financial creditors' admitted claims were about ₹87,000 crore, and Piramal's resolution plan was valued at about ₹37,250 crore. That is a recovery of roughly 43 paise per rupee (37,250 / 87,000 = 0.43), a haircut of about 57%.",
+    "formula": "",
+    "related": [
+      "Housing finance company",
+      "Insolvency and Bankruptcy Code",
+      "Corporate insolvency resolution process",
+      "IL&FS crisis",
+      "Yes Bank crisis",
+      "Haircut"
+    ]
+  },
+  {
+    "id": "yes-bank-crisis",
+    "term": "Yes Bank crisis",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Yes Bank moratorium",
+      "Yes Bank rescue",
+      "Yes Bank reconstruction scheme",
+      "Yes Bank collapse"
+    ],
+    "hl": [
+      "yes bank crisis",
+      "yes bank moratorium",
+      "yes bank rescue",
+      "yes bank reconstruction",
+      "yes bank at1",
+      "rana kapoor"
+    ],
+    "abbr": [],
+    "short": "The March 2020 near-failure of India's Yes Bank, when the RBI capped withdrawals and an SBI-led group of banks injected fresh capital to rescue it.",
+    "kid": "Imagine a piggy bank club whose leader lent lots of coins to friends who never paid back. The grown-ups stepped in, stopped everyone taking out too much at once, and a bigger, stronger club put in new coins to keep it going.",
+    "detail": "Yes Bank grew fast under co-founder Rana Kapoor by lending to riskier borrowers, including IL&FS, DHFL and other stressed groups, and RBI inspections found it had under-reported bad loans. After the RBI declined to extend Kapoor's term in 2018, defaults mounted, capital ran short and deposits fled. On 5 March 2020 the RBI superseded the board and imposed a moratorium capping withdrawals at ₹50,000 per depositor. Under a reconstruction scheme SBI invested ₹7,250 crore for close to half the bank, ICICI, HDFC, Axis, Kotak and others added capital, and the moratorium was lifted on 18 March. About ₹8,400 crore of AT1 bonds were written off, a decision later fought in court, and Kapoor was arrested by the ED. In 2025 Japan's SMBC agreed to buy a large stake. Common confusion: depositors did not lose money; the pain fell on shareholders and AT1 bondholders.",
+    "example": "During the moratorium, a depositor with ₹3 lakh in Yes Bank could withdraw only ₹50,000, leaving ₹2.5 lakh locked until 18 March 2020. Meanwhile SBI bought new shares at ₹10 each, so its ₹7,250 crore bought 725 crore shares.",
+    "formula": "",
+    "related": [
+      "Additional Tier 1 bond",
+      "Bail-in",
+      "Deposit insurance",
+      "Bank run",
+      "Prompt corrective action"
+    ]
+  },
+  {
+    "id": "covid-19-market-crash",
+    "term": "COVID-19 market crash",
+    "cat": "history",
+    "level": "b",
+    "aliases": [
+      "COVID crash",
+      "March 2020 crash",
+      "coronavirus crash",
+      "pandemic crash",
+      "2020 stock market crash"
+    ],
+    "hl": [
+      "covid crash",
+      "covid-19 crash",
+      "covid market crash",
+      "covid-19 market crash",
+      "coronavirus crash",
+      "march 2020 crash",
+      "coronavirus selloff",
+      "coronavirus sell-off"
+    ],
+    "abbr": [],
+    "short": "The steep, fast fall in world stock markets between late February and 23 March 2020 as the pandemic shut economies down.",
+    "kid": "Imagine everyone at the fair hears a scary rumour and rushes to sell their toys for whatever they can get. Things get very cheap very fast, but once grown-ups promise help and everyone calms down, people start buying again.",
+    "detail": "The COVID-19 crash was the fastest bear market on record. As lockdowns spread, the S&P 500 fell about 34% from its 19 February 2020 peak to 23 March, dropping 30% in just 22 trading days. In India the Nifty 50 fell about 38% from its January high, market-wide circuit breakers halted trading on 13 and 23 March, and on 23 March the Sensex lost about 13% in a single day. Volatility indices hit records, and even gold and US Treasuries were briefly sold as investors scrambled for cash. Policymakers responded massively: the US Fed cut rates to near zero and began unlimited bond buying, and the RBI cut the repo rate and pumped in liquidity. Markets then rebounded sharply, and the Nifty regained its old high by November 2020. Common confusion: the stock rebound ran far ahead of the real economy, which took much longer to recover.",
+    "example": "The Nifty 50 closed at a record 12,362 on 14 January 2020 and at 7,610 on 23 March 2020. That is a fall of 4,752 points, or about 38% (4,752 / 12,362 = 0.384).",
+    "formula": "",
+    "related": [
+      "Bear market",
+      "Circuit breaker",
+      "Cboe Volatility Index",
+      "Quantitative easing",
+      "Flight to safety",
+      "Black swan"
+    ]
+  },
+  {
+    "id": "franklin-templeton-debt-fund-closure",
+    "term": "Franklin Templeton debt fund closure",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Franklin Templeton crisis",
+      "2020 debt fund wind-up",
+      "Franklin Templeton wind-up",
+      "Franklin Templeton six schemes"
+    ],
+    "hl": [
+      "franklin templeton crisis",
+      "franklin templeton debt schemes",
+      "franklin templeton debt funds",
+      "franklin templeton wind-up",
+      "franklin templeton winding up",
+      "franklin templeton case"
+    ],
+    "abbr": [],
+    "short": "The April 2020 shutdown of six Franklin Templeton India debt mutual funds holding roughly ₹25,000 crore, which froze investors' money for months.",
+    "kid": "Imagine a toy library that lent its toys to other kids for a long time. When lots of children want their own toys back at once, the toys are still out on loan, so the library shuts its doors and hands them back slowly.",
+    "detail": "On 23 April 2020 Franklin Templeton Mutual Fund India wound up six debt schemes, including its Ultra Short Bond, Low Duration, Short Term Income and Credit Risk funds, holding roughly ₹25,000 crore of investor money. The schemes owned many lower-rated, hard-to-sell corporate bonds. When COVID panic triggered heavy redemptions and the corporate bond market froze, the fund house said it could not sell without big losses, so it stopped redemptions and chose to return money only as bonds matured or were sold. The case reached the Supreme Court, unitholders voted for the wind-up, and SBI Mutual Fund was appointed to distribute the cash; investors eventually got back roughly the schemes' full value at closure, but over years. SEBI later penalised the fund house and tightened debt-fund rules on liquidity and risk labelling. Common confusion: a debt fund is not a fixed deposit; it carries credit and liquidity risk.",
+    "example": "Say a debt fund, ABC Credit Fund, holds ₹1,000 crore of bonds but can sell only ₹100 crore quickly at fair prices. If investors ask for ₹300 crore in one week, it faces a ₹200 crore gap and must either dump bonds at a loss or stop redemptions, which is what Franklin chose.",
+    "formula": "",
+    "related": [
+      "Debt fund",
+      "Credit risk fund",
+      "Liquidity risk",
+      "Side pocketing",
+      "Redemption",
+      "Risk-o-meter"
+    ]
+  },
+  {
+    "id": "gamestop-short-squeeze",
+    "term": "GameStop short squeeze",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "GameStop saga",
+      "meme stock mania",
+      "WallStreetBets",
+      "GME squeeze",
+      "GameStop frenzy"
+    ],
+    "hl": [
+      "gamestop short squeeze",
+      "gamestop squeeze",
+      "gamestop saga",
+      "gamestop frenzy",
+      "gamestop mania",
+      "wallstreetbets",
+      "meme stock mania",
+      "meme-stock mania",
+      "meme stock frenzy",
+      "roaring kitty"
+    ],
+    "abbr": [],
+    "short": "The January 2021 frenzy in which Reddit-organised small investors drove GameStop's shares up over 25-fold, crushing hedge funds that had bet they would fall.",
+    "kid": "Imagine some kids promised to hand back stickers later, sure they would get cheap. Then a big crowd of children all decided to collect those same stickers, so they became very hard to get, and the kids who promised had to pay a huge amount to get them back.",
+    "detail": "GameStop, a struggling US video-game retailer, was one of America's most shorted stocks, with short interest above 100% of the shares available to trade. Retail traders on Reddit's WallStreetBets forum, inspired by Keith Gill ('Roaring Kitty'), piled into the shares and short-dated call options. Rising prices forced short sellers to buy back shares and option dealers to hedge by buying more: a short squeeze plus a gamma squeeze. The stock went from under $20 at the start of January 2021 to an intraday high of $483 on 28 January (before a 2022 stock split). Hedge fund Melvin Capital lost over half its value and needed a $2.75 billion rescue. That day Robinhood and other brokers restricted buying after clearing houses demanded more collateral, sparking outrage and US Congressional hearings. Common confusion: the spike reflected trading dynamics, not a change in GameStop's business, and many late buyers lost heavily.",
+    "example": "GameStop closed 2020 at about $18.84 and hit $483 intraday on 28 January 2021, more than 25 times higher (483 / 18.84 = 25.6). A fund that had shorted 100,000 shares at $20 and bought them back at $300 would lose $28 million ((300 - 20) x 100,000).",
+    "formula": "",
+    "related": [
+      "Short selling",
+      "Short squeeze",
+      "Gamma squeeze",
+      "Short interest",
+      "Meme stock",
+      "Payment for order flow"
+    ]
+  },
+  {
+    "id": "archegos-collapse",
+    "term": "Archegos collapse",
+    "cat": "history",
+    "level": "a",
+    "aliases": [
+      "Archegos Capital",
+      "Archegos",
+      "Archegos Capital Management",
+      "Bill Hwang"
+    ],
+    "hl": [
+      "archegos",
+      "archegos capital",
+      "archegos capital management",
+      "archegos collapse",
+      "bill hwang"
+    ],
+    "abbr": [],
+    "short": "The March 2021 collapse of Archegos Capital, Bill Hwang's private investment firm, whose huge hidden bets made with borrowed money cost banks over $10 billion.",
+    "kid": "Imagine someone borrows toys from many friends to build one giant tower, and none of the friends knows the others lent toys too. When one block wobbles, the tower crashes and everyone loses toys at once.",
+    "detail": "Archegos Capital Management was the family office of former hedge fund manager Bill Hwang. Instead of buying shares directly, it used total return swaps with several prime brokers, including Credit Suisse, Nomura, Morgan Stanley and Goldman Sachs, to build huge leveraged positions in a few stocks such as ViacomCBS, Discovery and Chinese tech names. The swaps meant Archegos never had to disclose its stakes, and each bank saw only its own slice. In late March 2021, after ViacomCBS announced a share sale and its price fell, Archegos could not meet margin calls. Banks raced to dump the shares in giant block trades; those that sold first lost little, while Credit Suisse lost about $5.5 billion and Nomura about $2.9 billion. Hwang was convicted of fraud in 2024 and sentenced to 18 years. Common confusion: light rules for family offices meant nobody saw the total leverage until it blew up.",
+    "example": "Say a family office has $10 billion of its own money but controls $50 billion of shares through swaps, which is 5x leverage. A 20% fall in those shares wipes out $10 billion (20% of $50 billion), its entire capital, and any further fall becomes the banks' loss.",
+    "formula": "",
+    "related": [
+      "Total return swap",
+      "Family office",
+      "Margin call",
+      "Prime brokerage",
+      "Financial leverage",
+      "Credit Suisse collapse"
+    ]
+  },
+  {
+    "id": "uk-gilt-crisis-2022",
+    "term": "UK gilt crisis 2022",
+    "cat": "history",
+    "level": "a",
+    "aliases": [
+      "mini-budget crisis",
+      "LDI crisis",
+      "Liz Truss mini-budget",
+      "2022 gilt crisis",
+      "Kwarteng mini-budget"
+    ],
+    "hl": [
+      "gilt crisis",
+      "uk gilt crisis",
+      "gilt market crisis",
+      "gilt market turmoil",
+      "ldi crisis",
+      "mini-budget crisis",
+      "truss mini-budget",
+      "kwarteng mini-budget",
+      "liz truss mini-budget"
+    ],
+    "abbr": [],
+    "short": "The September-October 2022 crash in UK government bond prices after an unfunded tax-cut 'mini-budget', forcing the Bank of England to step in.",
+    "kid": "Imagine a family promising everyone big treats without saying how they would pay. The shopkeepers got worried, things went wobbly, and Grandma had to rush in to calm everyone down.",
+    "detail": "On 23 September 2022, Chancellor Kwasi Kwarteng, under new Prime Minister Liz Truss, announced about £45 billion of unfunded tax cuts without independent forecasts. Investors dumped gilts and sterling: 30-year gilt yields jumped by more than a percentage point in days and the pound hit a record low near $1.03. The fall was amplified by liability-driven investment (LDI) funds, which many defined-benefit pension schemes used to hedge, often with borrowed gilt exposure. Falling gilt prices triggered collateral calls, forcing LDI funds to sell gilts, which pushed prices lower still: a doom loop. On 28 September the Bank of England began emergency purchases of long-dated gilts. Most of the tax cuts were reversed, Kwarteng was sacked and Truss resigned after 45 days. Common confusion: pension funds were not insolvent; the crisis was about finding cash for collateral fast.",
+    "example": "A long gilt with a duration of about 20 loses roughly 20% of its value for each 1 percentage point rise in yield. Say an LDI fund has £100 million of gilt exposure backed by £25 million of collateral: a 1.25-point jump in yields cuts the exposure's value by about £25 million (20 x 1.25 = 25%), wiping out the whole buffer.",
+    "formula": "",
+    "related": [
+      "Gilt",
+      "Liability-driven investing",
+      "Duration",
+      "Margin call",
+      "Bond vigilantes",
+      "Bank of England"
+    ]
+  },
+  {
+    "id": "ftx-collapse",
+    "term": "FTX collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "FTX",
+      "FTX bankruptcy",
+      "FTX crash",
+      "Sam Bankman-Fried fraud"
+    ],
+    "hl": [
+      "ftx",
+      "ftx collapse",
+      "ftx bankruptcy",
+      "ftx crash",
+      "sam bankman-fried",
+      "bankman-fried",
+      "alameda research"
+    ],
+    "abbr": [
+      "FTX",
+      "SBF"
+    ],
+    "short": "The November 2022 collapse of crypto exchange FTX, after it emerged that customer deposits had been secretly used by founder Sam Bankman-Fried's trading firm.",
+    "kid": "Imagine a friend who looks after everyone's marbles but secretly lends them to his brother to play risky games. When all the kids ask for their marbles back at once, half of them are gone.",
+    "detail": "FTX was one of the world's largest crypto exchanges, valued at $32 billion in early 2022. On 2 November 2022 CoinDesk reported that Alameda Research, the trading firm also owned by founder Sam Bankman-Fried, held much of its balance sheet in FTT, a token FTX itself had created. Binance then said it would sell its FTT, triggering a run: customers tried to withdraw billions within days, and FTX could not pay because customer money had been moved to Alameda to fund trading, loans and investments. A rescue by Binance fell through and FTX filed for US bankruptcy on 11 November 2022. Bankman-Fried was convicted of fraud in 2023 and sentenced to 25 years. The bankruptcy estate later recovered enough to repay customer claims in full plus interest in dollar terms. Common confusion: claims were valued at November 2022 crypto prices, so customers missed the later rally.",
+    "example": "Say a trading firm counts 50 million units of its sister exchange's own token, priced at $25, as $1.25 billion of assets (50 million x $25). If the token falls 90% to $2.50, the same holding is worth just $125 million, and anyone who lent against it is exposed.",
+    "formula": "",
+    "related": [
+      "Cryptocurrency",
+      "Centralised exchange",
+      "Bank run",
+      "Token",
+      "Terra-Luna collapse",
+      "Proof of reserves"
+    ]
+  },
+  {
+    "id": "silicon-valley-bank-collapse",
+    "term": "Silicon Valley Bank collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "SVB collapse",
+      "SVB",
+      "2023 US banking crisis",
+      "SVB failure",
+      "Silicon Valley Bank failure"
+    ],
+    "hl": [
+      "silicon valley bank",
+      "silicon valley bank collapse",
+      "svb collapse",
+      "svb crisis",
+      "svb failure",
+      "2023 banking crisis",
+      "2023 us banking crisis"
+    ],
+    "abbr": [
+      "SVB"
+    ],
+    "short": "The March 2023 failure of Silicon Valley Bank, a US startup lender, after bond losses sparked a lightning-fast rush of depositors pulling money out.",
+    "kid": "Imagine a lemonade stand that locked its saved coins in a box it could not open for years. When lots of friends wanted their coins back on the same day, the stand could not get them out fast enough and had to close.",
+    "detail": "Silicon Valley Bank (SVB) was the 16th-largest US bank, with about $209 billion of assets, serving startups and venture capital firms. Deposits tripled in 2020-21, and SVB parked much of the cash in long-dated US Treasuries and mortgage bonds at low yields. When the Fed raised rates in 2022, those bonds lost value, leaving unrealised losses close to the bank's entire equity. On 8 March 2023 SVB said it had sold bonds at a $1.8 billion loss and needed fresh capital. Founders and VCs, most holding far more than the $250,000 insured limit, tried to withdraw $42 billion in one day, and regulators closed the bank on 10 March. US authorities protected all deposits and launched an emergency lending facility, while Signature Bank and First Republic also failed. Common confusion: SVB's assets were safe government bonds, not risky loans; its problem was interest rate risk plus concentrated, uninsured deposits.",
+    "example": "Say a bank buys $10 billion of 10-year bonds paying 1.5% a year (annual coupons). If market yields rise to 4%, each $100 bond is worth about $79.72, so the holding falls to about $7.97 billion. If depositors demand cash and the bank must sell, it locks in a loss of about $2.03 billion.",
+    "formula": "",
+    "related": [
+      "Bank run",
+      "Interest rate risk",
+      "Held-to-maturity securities",
+      "Deposit insurance",
+      "Unrealised loss",
+      "Credit Suisse collapse"
+    ]
+  },
+  {
+    "id": "credit-suisse-collapse",
+    "term": "Credit Suisse collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Credit Suisse rescue",
+      "UBS takeover of Credit Suisse",
+      "Credit Suisse crisis",
+      "UBS-Credit Suisse merger"
+    ],
+    "hl": [
+      "credit suisse collapse",
+      "credit suisse crisis",
+      "credit suisse rescue",
+      "credit suisse takeover",
+      "credit suisse at1",
+      "ubs takeover of credit suisse",
+      "ubs acquisition of credit suisse",
+      "ubs-credit suisse deal",
+      "ubs-credit suisse merger"
+    ],
+    "abbr": [],
+    "short": "The March 2023 emergency takeover of troubled Swiss bank Credit Suisse by rival UBS, arranged by Swiss authorities to prevent a disorderly failure.",
+    "kid": "Imagine an old shop that kept making mistakes until customers stopped trusting it and took their coins away. To stop a big mess, the town asked the shop next door to take it over in a single weekend.",
+    "detail": "Credit Suisse, founded in 1856, was one of the world's global systemically important banks. A string of scandals and losses, including the Greensill funds collapse, a $5.5 billion hit from Archegos, the Mozambique 'tuna bonds' affair and a money-laundering conviction, drained trust, and clients pulled over CHF 110 billion in late 2022. After SVB failed in March 2023, its shares plunged when its largest shareholder, Saudi National Bank, ruled out more support. On 19 March 2023 Swiss authorities brokered a takeover by UBS for about CHF 3 billion in UBS shares, backed by central bank liquidity and a government loss guarantee. Regulator FINMA wiped out about CHF 16 billion of Additional Tier 1 bonds while shareholders still received something, reversing the usual pecking order; the write-off has been challenged in Swiss courts. Common confusion: it was a forced merger, not a formal bankruptcy.",
+    "example": "Credit Suisse shares closed at about CHF 1.86 on Friday 17 March 2023, while UBS paid the equivalent of CHF 0.76 per share, about 59% less ((1.86 - 0.76) / 1.86 = 0.59). AT1 bondholders, who normally rank above shareholders, got nothing on about CHF 16 billion of bonds.",
+    "formula": "",
+    "related": [
+      "Additional Tier 1 bond",
+      "Global systemically important bank",
+      "Bail-in",
+      "Too big to fail",
+      "Silicon Valley Bank collapse",
+      "Archegos collapse"
+    ]
+  },
+  {
+    "id": "adani-hindenburg-episode",
+    "term": "Adani-Hindenburg episode",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Hindenburg report",
+      "Hindenburg Research Adani report",
+      "Adani-Hindenburg saga",
+      "Hindenburg-Adani row"
+    ],
+    "hl": [
+      "hindenburg report",
+      "hindenburg research",
+      "hindenburg allegations",
+      "hindenburg's report",
+      "adani-hindenburg",
+      "adani hindenburg",
+      "hindenburg-adani"
+    ],
+    "abbr": [],
+    "short": "The 2023 episode where Hindenburg Research, a firm betting on falling shares, accused the Adani Group of fraud, wiping over $100 billion off its value.",
+    "kid": "Imagine a classmate stands up and says a popular kid's tower of blocks is held up with tricks. Everyone gets nervous and pulls their blocks away, even before the teacher checks whether it is true.",
+    "detail": "On 24 January 2023, days before Adani Enterprises' ₹20,000 crore follow-on public offer (FPO), US short seller Hindenburg Research published a report alleging that the Adani Group used offshore shell entities in places such as Mauritius to manipulate share prices, hide related-party dealings and inflate valuations. Hindenburg disclosed it was short the group through US-traded bonds and non-Indian derivatives. Adani denied it, but group stocks crashed, losing over $100 billion of market value within weeks. Although the FPO was fully subscribed, Adani withdrew it on 1 February and refunded investors. The Supreme Court left the investigation with SEBI, which sent Hindenburg a show-cause notice in 2024 and in September 2025 dismissed two of the allegations against the group. Hindenburg later made allegations against the SEBI chair, which she denied, and the firm shut down in January 2025. Common confusion: a short seller's report is an allegation, not a regulator's finding.",
+    "example": "Say a short seller borrows and sells 1,000 shares of ABC Ltd at ₹3,000, publishes a damaging report and buys the shares back at ₹1,500. It makes ₹15 lakh (1,000 x ₹1,500) before borrowing costs, which is why such reports should be read alongside the author's position.",
+    "formula": "",
+    "related": [
+      "Short selling",
+      "Follow-on public offer",
+      "Related-party transaction",
+      "Promoter holding",
+      "Minimum public shareholding",
+      "SEBI"
+    ]
+  },
+  {
+    "id": "yen-carry-trade-unwind",
+    "term": "Yen carry trade unwind",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "August 2024 carry trade unwind",
+      "August 2024 crash",
+      "August 2024 sell-off",
+      "5 August 2024 crash"
+    ],
+    "hl": [
+      "yen carry trade unwind",
+      "yen carry-trade unwind",
+      "yen carry trade unwinding",
+      "unwinding of the yen carry trade",
+      "august 2024 crash",
+      "august 2024 sell-off",
+      "august 2024 selloff"
+    ],
+    "abbr": [],
+    "short": "The August 2024 sell-off when a surging yen forced investors to close trades funded by cheap yen borrowing, crashing Japan's Nikkei 12% in a day.",
+    "kid": "Imagine borrowing a friend's stickers to trade for shiny ones. If the friend's stickers suddenly become precious, everyone rushes to give them back at once, and the shiny ones get dumped in a hurry.",
+    "detail": "A yen carry trade means borrowing yen at Japan's near-zero interest rates and investing the money in higher-yielding assets such as US bonds, Mexican pesos or tech stocks. It pays as long as the yen stays weak. In late July 2024 the Bank of Japan raised rates and hinted at more, and on 2 August a weak US jobs report raised bets on Fed rate cuts. The yen jumped from around 160 to about 142 per dollar, turning carry trades into losses and triggering margin calls and forced selling across markets. On 5 August 2024 Japan's Nikkei 225 fell 12.4%, its worst day since 1987, the VIX briefly spiked above 60 and India's Sensex dropped about 2.7%. After a BoJ deputy governor said it would not raise rates while markets were unstable, prices rebounded within weeks. Common confusion: nobody knows the exact size of the carry trade; estimates vary widely.",
+    "example": "Say an investor borrows ¥150 million at almost zero interest when $1 = ¥150, converts it into $1 million and earns 5% ($50,000) in a year. If the yen strengthens to ¥140 per dollar, repaying ¥150 million needs about $1,071,429, a currency loss of about $71,429 that more than wipes out the $50,000 gain.",
+    "formula": "",
+    "related": [
+      "Carry trade",
+      "Bank of Japan",
+      "Nikkei 225",
+      "Margin call",
+      "Cboe Volatility Index",
+      "Deleveraging"
+    ]
+  },
+  {
+    "id": "liberation-day-tariff-shock",
+    "term": "Liberation Day tariff shock",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Liberation Day tariffs",
+      "April 2025 tariff crash",
+      "reciprocal tariffs 2025",
+      "Liberation Day crash"
+    ],
+    "hl": [
+      "liberation day tariffs",
+      "liberation day tariff",
+      "liberation day tariff shock",
+      "liberation day selloff",
+      "liberation day sell-off",
+      "april 2025 tariff crash"
+    ],
+    "abbr": [],
+    "short": "The global market crash after US President Trump announced sweeping import taxes on nearly all countries on 2 April 2025, which he called 'Liberation Day'.",
+    "kid": "Imagine one big kid suddenly says every child must hand him extra sweets to bring toys into his playground. Everyone panics about how games will work, until he says he will wait a while before collecting.",
+    "detail": "On 2 April 2025 President Trump announced 'reciprocal' tariffs: a 10% baseline on almost all US imports plus higher country rates, such as 34% on China, 20% on the EU and 26% on India. The rates came from a simple formula based on each country's trade surplus with the US, not its actual tariffs. Markets were stunned: the S&P 500 fell about 10.5% over 3-4 April, one of its worst two-day drops, and the VIX jumped above 45. Unusually, US Treasuries and the dollar fell too, raising fears that investors were losing faith in US assets. On 9 April the higher rates were paused for 90 days and the S&P 500 rose 9.5% that day. US-China tariffs escalated above 100% before a truce in May, and US stocks hit new highs by mid-2025. Common confusion: tariffs are paid by importers, not foreign governments, and the rates have changed repeatedly since.",
+    "example": "Say the US imports $100 billion of goods from Country X and exports $40 billion to it. The deficit is $60 billion, or 60% of imports; halving that gives a 30% 'reciprocal' tariff. A country with which the US runs a surplus still faced the 10% floor.",
+    "formula": "Announced rate = max(10%, 0.5 x US trade deficit with the country / US imports from the country)",
+    "related": [
+      "Reciprocal tariffs",
+      "Tariff",
+      "Trade war",
+      "IEEPA tariffs",
+      "Trade deficit",
+      "Cboe Volatility Index"
+    ]
+  },
+  {
+    "id": "black-wednesday",
+    "term": "Black Wednesday",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "1992 ERM crisis",
+      "Soros breaks the Bank of England",
+      "ERM crisis",
+      "sterling crisis of 1992"
+    ],
+    "hl": [
+      "1992 erm crisis",
+      "erm crisis",
+      "exchange rate mechanism crisis",
+      "broke the bank of england",
+      "breaking the bank of england"
+    ],
+    "abbr": [],
+    "short": "16 September 1992, when speculators forced Britain to pull the pound out of Europe's currency-pegging system (the ERM) after a costly failed defence.",
+    "kid": "Imagine a shop promising one of its paper tickets will always be worth four sweets, even when people think it is worth less. Lots of people trade in tickets until the shop runs out of sweets and has to give up its promise.",
+    "detail": "Britain joined the European Exchange Rate Mechanism (ERM) in 1990, committing to keep the pound near 2.95 Deutschmarks within a band. After German reunification the Bundesbank kept interest rates high to fight inflation, while Britain was in recession and needed lower rates. Speculators, most famously George Soros's Quantum Fund, bet heavily that the pound would fall. On 16 September 1992 the Bank of England spent billions buying pounds and the government raised its base rate from 10% to 12% and announced 15%, but selling continued. That evening Britain suspended ERM membership and the pound fell sharply. Soros reportedly made about $1 billion; the Treasury later put the cost at about £3.3 billion. Britain then adopted inflation targeting and later made the Bank of England independent. Common confusion: Soros did not cause the crisis alone; a peg is hard to defend when the interest rates it requires hurt the home economy.",
+    "example": "Say a speculator borrows £1 billion and converts it at DM 2.78 per pound, getting DM 2.78 billion. If the pound then falls to DM 2.50, repaying the £1 billion costs only DM 2.50 billion, leaving DM 280 million of profit (DM 2.78 billion - DM 2.50 billion) before interest.",
+    "formula": "",
+    "related": [
+      "Fixed exchange rate",
+      "Impossible trinity",
+      "Devaluation",
+      "Speculative attack",
+      "Inflation targeting",
+      "Currency peg"
+    ]
+  },
+  {
+    "id": "1998-russian-financial-crisis",
+    "term": "1998 Russian financial crisis",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Russian default 1998",
+      "ruble crisis",
+      "rouble crisis of 1998",
+      "1998 Russian default"
+    ],
+    "hl": [
+      "1998 russian financial crisis",
+      "russian financial crisis of 1998",
+      "1998 russian default",
+      "russian default of 1998",
+      "russia's 1998 default",
+      "1998 ruble crisis",
+      "1998 rouble crisis"
+    ],
+    "abbr": [],
+    "short": "Russia's August 1998 default on its government debt and sharp cut in the ruble's value, which shook world markets and helped sink hedge fund LTCM.",
+    "kid": "Imagine a kid who kept borrowing from friends with bigger and bigger promises while his pocket money kept shrinking. One day he says he cannot pay anyone back, and his tokens are suddenly worth much less.",
+    "detail": "In the 1990s Russia ran large budget deficits and funded them with short-term ruble bills called GKOs, which paid very high yields that drew foreign investors, while it held the ruble in a managed band. The 1997 Asian crisis pushed down prices of oil and metals, Russia's main exports, and tax collection was weak. Despite a $22.6 billion IMF-led package in July 1998, reserves drained. On 17 August 1998 Russia widened the ruble band, defaulted on its domestic debt and froze some payments to foreign creditors. Within weeks the ruble lost about two-thirds of its value against the dollar, inflation surged and banks failed. Global investors fled to safe assets, and Long-Term Capital Management, a heavily leveraged US hedge fund, collapsed and needed a Fed-organised rescue by banks. Common confusion: a government can default even on debt in its own currency; Russia chose default over printing rubles to repay.",
+    "example": "Say a foreign fund held 63 million rubles of Russian bills, worth $10 million at about 6.3 rubles per dollar before the crisis. At about 21 rubles per dollar a few weeks later, the same rubles were worth only $3 million (63 million / 21), a 70% loss before counting the default itself.",
+    "formula": "",
+    "related": [
+      "Sovereign default",
+      "Devaluation",
+      "Long-Term Capital Management",
+      "Flight to safety",
+      "International Monetary Fund",
+      "Asian financial crisis"
+    ]
+  },
+  {
+    "id": "terra-luna-collapse",
+    "term": "Terra-Luna collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "TerraUSD collapse",
+      "UST depeg",
+      "Luna crash",
+      "Terra collapse"
+    ],
+    "hl": [
+      "terra-luna",
+      "terra luna",
+      "terra-luna collapse",
+      "terrausd",
+      "ust depeg",
+      "terra collapse",
+      "terraform labs",
+      "do kwon"
+    ],
+    "abbr": [],
+    "short": "The May 2022 crash of TerraUSD, a crypto coin meant to stay worth $1, and its sister token Luna, wiping out about $40 billion.",
+    "kid": "Imagine a club promising its paper tickets are always worth one sweet, backed only by another kind of ticket the club prints. When people doubt it and rush to swap, the club prints more and more tickets until none of them are worth anything.",
+    "detail": "TerraUSD (UST) was an algorithmic stablecoin created by Do Kwon's Terraform Labs. Unlike stablecoins backed by cash or Treasury bills, UST held its $1 peg through a swap: anyone could exchange 1 UST for $1 worth of newly created LUNA, or burn LUNA to make UST. Much of the demand came from Anchor Protocol, which paid close to 20% a year on UST deposits. In early May 2022 large withdrawals and sales pushed UST below $1. Holders rushed to swap UST for LUNA, flooding the market with new LUNA, whose price collapsed from around $80 to almost zero, so the swap could no longer support UST: a death spiral. The crash spread to crypto lenders such as Celsius and Three Arrows Capital, and Do Kwon later pleaded guilty to fraud in the US. Common confusion: 'stable' described the goal, not a guarantee.",
+    "example": "When UST traded at $0.90, an arbitrageur could buy 1,000 UST for $900 and swap them for $1,000 of newly minted LUNA, a $100 profit. But every such swap created new LUNA, and once panic set in the extra supply crushed LUNA's price faster than the trade could restore the peg.",
+    "formula": "",
+    "related": [
+      "Stablecoin",
+      "Stablecoin depeg",
+      "Cryptocurrency",
+      "Tokenomics",
+      "Bank run",
+      "FTX collapse"
+    ]
+  },
+  {
+    "id": "madoff-ponzi-scheme",
+    "term": "Madoff Ponzi scheme",
+    "cat": "history",
+    "level": "b",
+    "aliases": [
+      "Bernie Madoff",
+      "Madoff fraud",
+      "Bernard Madoff",
+      "Madoff scandal"
+    ],
+    "hl": [
+      "madoff",
+      "bernie madoff",
+      "bernard madoff",
+      "madoff ponzi",
+      "madoff fraud",
+      "madoff scheme",
+      "madoff scandal"
+    ],
+    "abbr": [],
+    "short": "The largest known Ponzi scheme, run by US investment manager Bernie Madoff, which paid old investors with new investors' money until it collapsed in 2008.",
+    "kid": "Imagine a friend who says he will grow your marbles, but he just takes marbles from new kids to hand some to the old ones. It works until new kids stop coming, and then everyone finds the bag was nearly empty.",
+    "detail": "Bernard Madoff was a respected Wall Street figure and a former chairman of the Nasdaq stock market. For decades his advisory business reported steady returns of about 10-12% a year, with almost no losing months, from an options strategy it never actually traded. Withdrawals were paid from new deposits, a classic Ponzi scheme, and wealthy families, charities and feeder funds poured money in. When the 2008 crisis brought about $7 billion of redemption requests, the money was not there; Madoff confessed and was arrested on 11 December 2008. Statements showed about $65 billion in fictitious balances, though the cash actually lost was roughly $17-20 billion. He was sentenced to 150 years and died in prison in 2021, and a court-appointed trustee has recovered over $14 billion. Common confusion: unusually smooth returns are a warning sign, not proof of skill; the SEC ignored repeated warnings from analyst Harry Markopolos.",
+    "example": "Say 100 investors each give a manager $1 million and are promised 10% a year. He must pay out $10 million a year (10% of $100 million); if he earns nothing, that cash can only come from new investors, so the scheme needs ever more new money and collapses when it dries up.",
+    "formula": "",
+    "related": [
+      "Ponzi scheme",
+      "Hedge fund",
+      "Feeder fund",
+      "Due diligence",
+      "Securities and Exchange Commission",
+      "Saradha scam"
+    ]
+  },
+  {
+    "id": "saradha-scam",
+    "term": "Saradha scam",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Saradha chit fund scam",
+      "Saradha Group scam",
+      "Saradha case"
+    ],
+    "hl": [
+      "saradha scam",
+      "saradha chit fund",
+      "saradha chit fund scam",
+      "saradha group",
+      "saradha case",
+      "saradha ponzi"
+    ],
+    "abbr": [],
+    "short": "A scheme by West Bengal's Saradha Group that paid old savers with new savers' money, taking thousands of crores before collapsing in April 2013.",
+    "kid": "Imagine someone collecting coins from your whole village, promising to double them, but only paying the first people with coins from newer people. When newcomers stop joining, the coins run out and most families lose theirs.",
+    "detail": "The Saradha Group, led by Sudipta Sen, raised money from about 17 lakh mostly rural depositors in West Bengal, Odisha, Assam and nearby states, using agents and promises of high, fixed returns. Often called a chit fund scam, it was really an unregistered collective investment and deposit scheme, dressed up as tour packages and real-estate bonds, that paid old investors from new deposits. It also spent heavily on media and sport. When inflows slowed in April 2013 it collapsed; Sen fled and was arrested, and estimated losses run from about ₹2,500 crore upward. The Supreme Court handed the probe to the CBI in 2014, and several politicians were questioned or arrested. The scam led Parliament to give SEBI stronger powers over collective investment schemes and later to pass the Banning of Unregulated Deposit Schemes Act, 2019. Common confusion: registered chit funds are legal under the Chit Funds Act, 1982.",
+    "example": "Say an agent promises that ₹10,000 deposited today becomes ₹20,000 in five years, about 15% a year compounded (1.15^5 = 2.01). Spread across 17 lakh depositors, a ₹2,500 crore loss works out to about ₹14,700 each (₹2,500 crore / 17 lakh), mostly small savings.",
+    "formula": "",
+    "related": [
+      "Ponzi scheme",
+      "Chit fund",
+      "Collective investment scheme",
+      "Unregulated deposit scheme",
+      "Madoff Ponzi scheme",
+      "SEBI"
+    ]
+  },
+  {
+    "id": "nsel-scam",
+    "term": "NSEL scam",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "National Spot Exchange crisis",
+      "NSEL payment crisis",
+      "NSEL default",
+      "NSEL case"
+    ],
+    "hl": [
+      "nsel",
+      "nsel scam",
+      "nsel case",
+      "nsel crisis",
+      "nsel default",
+      "nsel payment crisis",
+      "national spot exchange"
+    ],
+    "abbr": [
+      "NSEL"
+    ],
+    "short": "A 2013 payment default of about ₹5,600 crore at National Spot Exchange, where commodity trades turned out to be disguised loans backed by missing goods.",
+    "kid": "Imagine a market where people paid for bags of rice kept in a storeroom and promised to sell them back later for more. When buyers wanted their coins back, they found the storeroom almost empty.",
+    "detail": "National Spot Exchange Ltd (NSEL), promoted by Jignesh Shah's Financial Technologies, was set up in 2008 for spot trading in commodities and was exempted from futures-market rules on condition that trades settled within 11 days. In practice it ran 'paired contracts': an investor bought a commodity for delivery in two days and simultaneously sold it for delivery weeks later at a higher, pre-fixed price. Sold through brokers as safe fixed-return products, these were really loans to the trading members on the other side, supposedly backed by goods in exchange warehouses. In July 2013 the government ordered NSEL to stop new contracts, and it defaulted on about ₹5,600 crore owed to some 13,000 investors; warehouses were short of stock. The fallout led to the merger of the commodities regulator, the FMC, into SEBI in 2015. Common confusion: an exchange name does not make a product regulated or guaranteed.",
+    "example": "Say an investor buys castor seed worth ₹10 lakh for delivery in 2 days and at once sells it for delivery in 32 days at ₹10.12 lakh. The ₹12,000 gain over 30 days is about 14.6% a year (1.2% x 365 / 30), a fixed return that behaves like a deposit, not a commodity trade.",
+    "formula": "",
+    "related": [
+      "Spot market",
+      "Commodity futures",
+      "Multi Commodity Exchange",
+      "Forward Markets Commission",
+      "Counterparty risk",
+      "SEBI"
+    ]
+  },
+  {
+    "id": "byjus-collapse",
+    "term": "Byju's collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Byju's crisis",
+      "Byjus collapse",
+      "Byju's insolvency",
+      "Think & Learn insolvency"
+    ],
+    "hl": [
+      "byju's",
+      "byjus",
+      "byju's crisis",
+      "byju's collapse",
+      "byju's insolvency",
+      "byju raveendran"
+    ],
+    "abbr": [],
+    "short": "The fall of online-learning firm Byju's from a $22 billion valuation in 2022 to insolvency proceedings, amid debt disputes, delayed accounts and governance failures.",
+    "kid": "Imagine a lemonade stand that grew super fast, borrowed lots to buy other stands, and stopped showing anyone its notebook. When the people who lent it coins wanted them back and the notebook did not add up, the stand fell apart.",
+    "detail": "Byju's (Think & Learn Pvt Ltd), founded by Byju Raveendran, boomed during the pandemic and was valued at about $22 billion in 2022, making it India's most valuable startup. It spent heavily on marketing and on acquisitions such as Aakash and WhiteHat Jr, and raised a $1.2 billion US term loan in 2021. Losses mounted as schools reopened, accounts were filed very late, and in 2023 its auditor Deloitte and several board members quit. Lenders declared a default on the term loan, and courts fought over about $533 million that had been moved offshore. Investors cut their valuations to around $1 billion or less. In 2024 a BCCI claim over unpaid sponsorship dues pushed the company into insolvency proceedings, which continued after the Supreme Court set aside a settlement. Common confusion: a startup valuation is a price set in a funding round, not cash the company holds.",
+    "example": "At about $22 billion, each 1% of Byju's was worth about $220 million on paper. After investors marked it down to about $1 billion, the same 1% was worth roughly $10 million, a fall of over 95% ((220 - 10) / 220 = 0.95).",
+    "formula": "",
+    "related": [
+      "Startup",
+      "Valuation markdown",
+      "Down round",
+      "Corporate governance",
+      "Corporate insolvency resolution process",
+      "Term loan"
+    ]
+  },
+  {
+    "id": "paytm-payments-bank-crackdown",
+    "term": "Paytm Payments Bank crackdown",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Paytm Payments Bank ban",
+      "RBI action on Paytm",
+      "PPBL ban",
+      "Paytm crisis"
+    ],
+    "hl": [
+      "paytm payments bank",
+      "paytm payments bank ban",
+      "ppbl",
+      "paytm crisis",
+      "paytm ban",
+      "rbi action on paytm",
+      "rbi curbs on paytm"
+    ],
+    "abbr": [
+      "PPBL"
+    ],
+    "short": "The RBI's January 2024 order barring Paytm Payments Bank from taking new deposits or top-ups after repeated compliance failures, hitting parent One97 Communications hard.",
+    "kid": "Imagine the class monitor keeps breaking the rules about checking names on the lunch list. The teacher finally says nobody can put new coins in the monitor's tin, though everyone can still take out what is already there.",
+    "detail": "Paytm Payments Bank Ltd (PPBL) was a payments bank, a licensed bank that can take small deposits and offer payment services but cannot lend. It was 49% owned by One97 Communications, which runs the Paytm app, and 51% by founder Vijay Shekhar Sharma. After barring it from adding new customers in 2022, the RBI on 31 January 2024 ordered it to stop accepting deposits, credits and top-ups in accounts, wallets and FASTags after 29 February, later extended to 15 March 2024, citing persistent non-compliance including know-your-customer gaps. Customers could still withdraw existing balances. One97 shares hit two straight 20% lower circuits and lost over a third of their value within days. Paytm moved UPI payments to partner banks such as Axis, HDFC, SBI and Yes Bank. Common confusion: the Paytm app and its UPI service kept running; the ban hit the bank.",
+    "example": "Say a share closes at ₹750 and then hits a 20% lower circuit on each of the next two days. It falls to ₹600 (750 x 0.8) and then ₹480 (600 x 0.8), a 36% drop in two sessions, close to what One97's shares suffered after the RBI order.",
+    "formula": "",
+    "related": [
+      "Payments bank",
+      "Unified Payments Interface",
+      "Know your customer",
+      "Upper and lower circuit",
+      "Digital wallet",
+      "eKYC"
+    ]
+  },
+  {
+    "id": "indusind-bank-accounting-lapse",
+    "term": "IndusInd Bank accounting lapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "IndusInd derivatives discrepancy",
+      "IndusInd Bank crisis",
+      "IndusInd derivatives issue",
+      "IndusInd accounting lapse"
+    ],
+    "hl": [
+      "indusind bank derivatives",
+      "indusind derivatives",
+      "indusind derivative discrepancy",
+      "indusind derivatives discrepancy",
+      "indusind accounting lapse",
+      "indusind bank accounting",
+      "indusind accounting",
+      "indusind bank crisis"
+    ],
+    "abbr": [],
+    "short": "The 2025 discovery that IndusInd Bank had wrongly accounted for internal currency-protection trades and other items, overstating profits and forcing out its top management.",
+    "kid": "Imagine a shop's notebook showing a pile of coins that were never really there, because someone wrote the same coins down the wrong way. When a checker found it, the shop had to rub out the extra coins and the boss had to leave.",
+    "detail": "On 10 March 2025 IndusInd Bank, a large Indian private lender, disclosed discrepancies in its derivatives accounting. When it took deposits or borrowed in foreign currency, its treasury hedged the currency risk through internal trades between desks, and gains on these had been booked without the matching losses being recognised. The bank first estimated a hit of about 2.35% of its net worth, and outside auditors later put the impact at close to ₹2,000 crore. Its shares fell about 27% the next day. Further reviews found problems with microfinance interest income and unexplained balances in other assets, and the bank reported a loss for the March 2025 quarter. The CEO and deputy CEO resigned, SEBI acted against executives over insider trading, and the RBI stressed that the bank was well capitalised. Common confusion: depositors were not at risk; the problem was overstated past profits.",
+    "example": "Say a bank's internal hedge shows a ₹100 crore gain on one desk while the matching ₹100 crore loss on the hedged deposits is never recorded. Reported profit is overstated by ₹100 crore until it is corrected out of net worth. In IndusInd's case, a share price of about ₹900 falling 27% left it near ₹657 (900 x 0.73).",
+    "formula": "",
+    "related": [
+      "Derivative",
+      "Hedge accounting",
+      "Mark-to-market",
+      "Net worth",
+      "Insider trading",
+      "Forensic audit"
+    ]
+  },
+  {
+    "id": "jane-street-sebi-case",
+    "term": "Jane Street SEBI case",
+    "cat": "history",
+    "level": "a",
+    "aliases": [
+      "Jane Street ban",
+      "Jane Street index manipulation",
+      "SEBI Jane Street order",
+      "Jane Street case"
+    ],
+    "hl": [
+      "jane street case",
+      "jane street ban",
+      "jane street order",
+      "jane street manipulation",
+      "jane street index manipulation",
+      "jane street sebi",
+      "sebi jane street",
+      "jane street probe"
+    ],
+    "abbr": [],
+    "short": "SEBI's July 2025 order accusing US trading firm Jane Street of rigging the Bank Nifty index to profit on options, and seizing about ₹4,844 crore.",
+    "kid": "Imagine someone pushes the classroom scoreboard up in the morning and down in the afternoon, after betting friends that the score would end low. The teacher says that looks like cheating and holds on to the winnings while checking.",
+    "detail": "On 3 July 2025 SEBI issued an interim order barring Jane Street group entities from Indian markets and impounding ₹4,843.57 crore of alleged unlawful gains. SEBI alleged that on certain expiry days Jane Street bought large amounts of Bank Nifty stocks and futures in the morning, lifting the index, while building much larger bearish positions in index options; later in the day it sold the stocks and futures, pushing the index down so the options paid off. It also alleged 'marking the close' near expiry. SEBI said the group earned over ₹36,000 crore from Indian index options between January 2023 and March 2025. Jane Street denied wrongdoing, calling its trades ordinary index arbitrage, deposited the amount in escrow, regained market access and appealed. Common confusion: an interim order is not a final verdict; the case also put a spotlight on how much retail options traders lose.",
+    "example": "Say a trader loses ₹50 crore buying stocks in the morning and dumping them in the afternoon, but the index swing this creates lifts its options book by ₹700 crore. Net profit is ₹650 crore (700 - 50); SEBI's case is that deliberately loss-making trades used to move an index amount to manipulation.",
+    "formula": "",
+    "related": [
+      "Index options",
+      "Bank Nifty",
+      "Expiry",
+      "Market manipulation",
+      "F&O segment",
+      "SEBI"
+    ]
+  },
+  {
+    "id": "wirecard-scandal",
+    "term": "Wirecard scandal",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Wirecard collapse",
+      "Wirecard fraud",
+      "Wirecard insolvency"
+    ],
+    "hl": [
+      "wirecard",
+      "wirecard scandal",
+      "wirecard collapse",
+      "wirecard fraud",
+      "markus braun",
+      "jan marsalek"
+    ],
+    "abbr": [],
+    "short": "The 2020 collapse of German payments company Wirecard after it admitted that €1.9 billion of cash on its books probably never existed.",
+    "kid": "Imagine a toy company that told everyone it had a huge jar of coins in a faraway room. When checkers finally went to look, the jar was not there at all, and the company fell apart.",
+    "detail": "Wirecard was a fast-growing German payment processor that joined the DAX blue-chip index in 2018, replacing Commerzbank, and was worth over €20 billion at its peak. From 2015 the Financial Times and short sellers questioned its accounts, especially revenue routed through third-party partners in Asia. Instead of probing Wirecard, German regulator BaFin temporarily banned short selling of its shares and filed a complaint against journalists. In June 2020 auditor EY refused to sign the accounts because €1.9 billion supposedly held in trust accounts at two Philippine banks could not be confirmed; the banks said the documents were fake. CEO Markus Braun resigned and was arrested, COO Jan Marsalek fled, and on 25 June 2020 Wirecard became the first DAX member to file for insolvency. Germany then overhauled BaFin and its audit rules. Common confusion: a clean audit opinion is not a guarantee against fraud.",
+    "example": "Say an investor holds 100 shares bought at €100 each, a €10,000 stake. If the price drops to €3, the holding is worth €300 (100 x €3), a 97% loss, roughly what Wirecard shareholders suffered within about a week in June 2020.",
+    "formula": "",
+    "related": [
+      "Accounting fraud",
+      "Audit",
+      "Short selling",
+      "Creative accounting",
+      "Corporate governance",
+      "Forensic audit"
+    ]
+  },
+  {
+    "id": "barings-bank-collapse",
+    "term": "Barings Bank collapse",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Nick Leeson",
+      "Barings",
+      "Barings collapse",
+      "collapse of Barings"
+    ],
+    "hl": [
+      "barings bank",
+      "barings bank collapse",
+      "barings collapse",
+      "collapse of barings",
+      "nick leeson"
+    ],
+    "abbr": [],
+    "short": "The 1995 failure of Britain's oldest merchant bank after one trader in Singapore, Nick Leeson, hid losses of about £827 million from unauthorised bets.",
+    "kid": "Imagine one helper at a shop who both sells the toys and writes the sales in the notebook. He loses lots of coins, hides it on a secret page, and by the time anyone looks, the shop has nothing left.",
+    "detail": "Barings, founded in 1762, was Britain's oldest merchant bank. Nick Leeson, its derivatives trader in Singapore, was meant to run low-risk arbitrage between Nikkei 225 futures in Singapore and Osaka. Instead he made large unauthorised bets on the Nikkei, including selling options that profit only if the market stays calm, and hid losses in a secret error account numbered 88888. Because he controlled both trading and the back office that settled his trades, nobody caught it, and London kept sending margin cash. After the Kobe earthquake in January 1995 the Nikkei fell and Leeson doubled down. By February losses reached about £827 million, more than the bank's capital, and Barings collapsed on 26 February 1995. ING bought it for £1, and Leeson served a jail term in Singapore. Common confusion: the lesson is weak controls, especially failing to separate front and back office, not just one rogue trader.",
+    "example": "Say a trader sells a straddle on an index at 19,000 and collects 1,000 points of premium. He profits only if the index ends between 18,000 and 20,000; if it falls to 17,000, the put he sold costs him 2,000 points, a net loss of 1,000 points per contract (2,000 - 1,000).",
+    "formula": "",
+    "related": [
+      "Rogue trader",
+      "Straddle",
+      "Operational risk",
+      "Segregation of duties",
+      "Nikkei 225",
+      "Margin call"
+    ]
+  },
+  {
+    "id": "negative-oil-prices-2020",
+    "term": "Negative oil prices 2020",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "WTI below zero",
+      "negative crude",
+      "negative oil price",
+      "oil below zero"
+    ],
+    "hl": [
+      "negative oil prices",
+      "negative oil price",
+      "oil below zero",
+      "wti below zero",
+      "negative crude",
+      "crude below zero",
+      "negative wti",
+      "oil prices turn negative",
+      "oil price turns negative"
+    ],
+    "abbr": [],
+    "short": "20 April 2020, when a US contract for next-month oil delivery settled at minus $37.63 a barrel: sellers paid buyers to take the oil.",
+    "kid": "Imagine you ordered a giant box of juice, but your fridge is already full and so is everyone else's. You would even pay someone to take the box away, because you have nowhere to put it.",
+    "detail": "WTI crude futures traded on NYMEX require physical delivery at Cushing, Oklahoma, when they expire. In April 2020 COVID lockdowns had crushed fuel demand and storage tanks at Cushing were filling fast. As the May 2020 contract neared expiry on 21 April, traders and funds holding it had no way to take or store the oil, so they had to sell at any price. On 20 April it settled at -$37.63 a barrel, the first negative price in its history, while the June contract stayed around $20 and Brent, which settles in cash, stayed positive. India's MCX crude contract, which tracks WTI, also settled below zero, leaving some traders with losses. Some brokers' systems could not handle prices below zero, and many later restricted trading in contracts near expiry. Common confusion: oil itself did not become free everywhere; it was one expiring contract tied to full storage at one location.",
+    "example": "One WTI contract covers 1,000 barrels, so at -$37.63 the holder had to pay $37,630 to get rid of it (1,000 x $37.63). A trader who had bought at $18 that morning lost $55,630 per contract ((18 + 37.63) x 1,000).",
+    "formula": "",
+    "related": [
+      "Crude oil",
+      "Futures contract",
+      "Contango",
+      "Physical settlement",
+      "Brent crude",
+      "Crude oil inventories"
+    ]
+  },
+  {
+    "id": "deepseek-selloff",
+    "term": "DeepSeek selloff",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "DeepSeek shock",
+      "Nvidia selloff January 2025",
+      "DeepSeek sell-off",
+      "DeepSeek moment"
+    ],
+    "hl": [
+      "deepseek selloff",
+      "deepseek sell-off",
+      "deepseek shock",
+      "deepseek rout",
+      "deepseek crash",
+      "deepseek moment"
+    ],
+    "abbr": [],
+    "short": "The January 2025 stock slump after China's DeepSeek released a cheap, powerful AI model, erasing about $590 billion of Nvidia's value in one day.",
+    "kid": "Imagine everyone thought you needed a huge, costly box of crayons to draw a great picture. Then a kid draws one just as good with a few cheap crayons, and the crayon shop suddenly worries fewer people will buy big boxes.",
+    "detail": "DeepSeek, a Chinese AI lab backed by the hedge fund High-Flyer, released its R1 reasoning model on 20 January 2025, rivalling leading US models on several benchmarks. It said the final training run of a key earlier model cost only about $5.6 million on less advanced Nvidia chips. Investors began asking whether the hundreds of billions planned for AI chips and data centres were really needed, and on 27 January 2025 Nvidia fell about 17%, the largest one-day loss of market value for any US company. Chipmakers, power and data-centre stocks also fell and the Nasdaq dropped about 3%. Many argued that cheaper AI would raise total demand, and Nvidia recovered to new highs within months. Common confusion: the $5.6 million figure excluded research, earlier experiments and hardware, so DeepSeek's true total cost was far higher.",
+    "example": "Nvidia was worth roughly $3.5 trillion before the drop. A fall of about 17% on that base is about $595 billion (0.17 x $3.5 trillion), in line with the roughly $590 billion actually lost on 27 January 2025, more than the entire market value of most listed companies.",
+    "formula": "",
+    "related": [
+      "Market capitalisation",
+      "Capex cycle",
+      "Magnificent Seven",
+      "Asset bubble",
+      "Nasdaq Composite"
+    ]
+  },
+  {
+    "id": "china-property-crisis",
+    "term": "China property crisis",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Evergrande crisis",
+      "Country Garden default",
+      "China real estate crisis",
+      "Chinese property crisis"
+    ],
+    "hl": [
+      "china property crisis",
+      "china's property crisis",
+      "chinese property crisis",
+      "china property slump",
+      "china's property slump",
+      "china real estate crisis",
+      "evergrande",
+      "evergrande crisis",
+      "country garden default",
+      "evergrande liquidation"
+    ],
+    "abbr": [],
+    "short": "The slump in China's real estate sector since 2021, as heavily indebted developers such as Evergrande and Country Garden defaulted and home prices fell.",
+    "kid": "Imagine builders who borrowed lots of bricks to build houses they had already promised to families. When the brick sellers stopped helping, many houses were left half-built and people stopped wanting new ones.",
+    "detail": "For two decades property and related industries made up roughly a quarter of China's economy, with developers borrowing heavily and pre-selling flats before building them. In August 2020 Beijing introduced the 'three red lines', caps on developers' debt ratios, to curb risk. Cut off from new credit, many developers ran short of cash. Evergrande, with over $300 billion of liabilities, defaulted on dollar bonds in late 2021 and was ordered liquidated by a Hong Kong court in January 2024; Country Garden defaulted in 2023. Unfinished projects led to mortgage boycotts, sales and land auctions slumped, local governments lost land revenue, and household wealth, mostly held in housing, fell. Beijing has eased rules and backed project completion step by step. Common confusion: this is a slow-burning, state-managed crisis, not a single Lehman-style crash, and it weighs on global demand for commodities such as iron ore.",
+    "example": "Under one red line, liabilities excluding advance payments from buyers must be below 70% of assets excluding those payments. Say XYZ Homes has $100 billion of assets and $85 billion of liabilities, including $20 billion of advances: its ratio is (85 - 20) / (100 - 20) = 81%, so it breaches the line and cannot add debt.",
+    "formula": "Three red lines: (Liabilities - Advance receipts) / (Assets - Advance receipts) must stay under 70%; Net debt / Equity must stay under 100%; Cash / Short-term debt must stay above 1",
+    "related": [
+      "Default",
+      "Debt restructuring",
+      "Asset bubble",
+      "People's Bank of China",
+      "Iron ore",
+      "Liquidation"
+    ]
+  },
+  {
+    "id": "sri-lanka-economic-crisis",
+    "term": "Sri Lanka economic crisis",
+    "cat": "history",
+    "level": "i",
+    "aliases": [
+      "Sri Lanka default 2022",
+      "Sri Lankan crisis",
+      "Sri Lanka debt crisis",
+      "2022 Sri Lanka crisis"
+    ],
+    "hl": [
+      "sri lanka crisis",
+      "sri lanka economic crisis",
+      "sri lanka's economic crisis",
+      "sri lankan crisis",
+      "sri lankan economic crisis",
+      "sri lanka default",
+      "sri lanka's default",
+      "sri lanka debt crisis"
+    ],
+    "abbr": [],
+    "short": "Sri Lanka's 2022 crisis, when it ran out of dollars, made its first-ever foreign debt default and faced fuel shortages and soaring prices.",
+    "kid": "Imagine a family that emptied its savings jar and borrowed from neighbours until there were no coins left to buy milk or bread. The neighbours had to agree to wait and help them start again.",
+    "detail": "Sri Lanka entered the crisis with heavy foreign debt, including international sovereign bonds, and twin deficits. Deep tax cuts in 2019 shrank revenue, the 2019 Easter bombings and COVID wrecked tourism, and a sudden 2021 ban on chemical fertiliser hit harvests. Foreign exchange reserves fell so low that the country could not pay for fuel, food and medicine, causing power cuts and queues. In March 2022 the rupee was allowed to float and fell from about 200 to around 360 per dollar; in April 2022 Sri Lanka suspended foreign debt payments, its first default. Inflation peaked near 70% and mass protests forced President Gotabaya Rajapaksa out in July 2022. India extended about $4 billion of support, the IMF approved a roughly $3 billion programme in 2023 and creditors agreed debt restructurings in 2024. Common confusion: a sovereign default starts a negotiation with creditors; the country does not shut down.",
+    "example": "Say a Sri Lankan importer must pay $1 million for a fuel cargo. At 200 rupees per dollar that costs 200 million rupees; at 360 it costs 360 million rupees, 80% more for the same fuel ((360 - 200) / 200 = 0.8).",
+    "formula": "",
+    "related": [
+      "Sovereign default",
+      "Foreign exchange reserves",
+      "International Monetary Fund",
+      "Debt restructuring",
+      "Balance of payments",
+      "Twin deficits"
+    ]
+  }
+]

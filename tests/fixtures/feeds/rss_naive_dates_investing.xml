@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Stock Market News</title>
+    <link>https://www.investing.com</link>
+    <item>
+      <enclosure url="https://content-media.investing.com/news/Volaris_800x533_L_1612420004.jpg" length="41626" type="image/jpeg"/>
+      <title>Citi opens 30-day downside catalyst watch on Volaris ahead of earnings</title>
+      <pubDate>2026-10-12 03:43:33</pubDate>
+      <author>Investing.com</author>
+      <link>https://www.investing.com/news/stock-market-news/citi-opens-30day-downside-catalyst-watch-on-volaris-ahead-of-earnings-4943037</link>
+    </item>
+<item>
+      <enclosure url="https://content-media.investing.com/news/LYNXNPEB940MS_M.jpg" length="48328" type="image/jpeg"/>
+      <title>Asia stocks mixed as oil retreats, earnings season gathers pace</title>
+      <pubDate>2026-10-12 03:25:35</pubDate>
+      <author>Investing.com</author>
+      <link>https://www.investing.com/news/stock-market-news/asia-stocks-mixed-as-oil-retreats-earnings-season-gathers-pace-4943026</link>
+    </item>
+<item>
+      <enclosure url="https://content-media.investing.com/trkd-images/LYNXMPEM9B00O_L.jpg" length="109813" type="image/jpeg"/>
+      <title>Shares seesaw in Asia as earnings loom, oil skids</title>
+      <pubDate>2026-10-12 02:48:25</pubDate>
+      <author>Reuters</author>
+      <link>https://www.investing.com/news/stock-market-news/shares-cautious-in-asia-as-earnings-loom-oil-slips-4942949</link>
+    </item>
+</channel></rss>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel><title>Broken feed & friends</title>
+<item><title>Sensex & Nifty rally 1%&nbsp;as FIIs return</title><link>https://example.com/markets/sensex-nifty-rally?x=1&y=2</link>
+<description>Markets rose on Monday &mdash; banks led. <br> Read more</description><pubDate>Mon, 12 Oct 2026 09:15:00 +0530</pubDate></item>
+<item><title>Rupee hits record low against the dollar</title><link>https://example.com/fx/rupee-record-low</link><pubDate>Mon, 12 Oct 2026 10:00:00 +0530</pubDate></item>
+<item><title>Unclosed description item</title><link>https://example.com/x</link><description>oops <b>bold</description></item>
+</channel></rss>

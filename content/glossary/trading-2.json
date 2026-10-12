@@ -1,0 +1,1078 @@
+[
+  {
+    "id": "block-deal",
+    "term": "Block deal",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "block window",
+      "block trade",
+      "block deals"
+    ],
+    "hl": [
+      "block deal",
+      "block deals",
+      "block trade",
+      "block trades",
+      "block deal window"
+    ],
+    "abbr": [],
+    "short": "A single large trade of shares between two parties, done through a special stock-exchange window with a high minimum size.",
+    "kid": "Imagine one friend wants to swap a whole big box of toy cars with another friend. Instead of swapping one car at a time in the busy playground, they meet in a quiet corner and swap the whole box at once.",
+    "detail": "A block deal is a large, pre-negotiated transaction in one stock executed as a single trade between a buyer and a seller. Under SEBI rules as of 2025, Indian block deals go through a separate exchange window, with sessions from 8:45 to 9:00 am and 2:05 to 2:20 pm; each order must be worth at least ₹25 crore, the price must stay within a narrow band around a reference price, and every trade must end in actual delivery of shares. Exchanges publish the buyer, seller, quantity and price the same day. Promoters selling stakes and funds buying them often use block deals, so traders read them as signals of who is entering or exiting. News reports often mix them up with bulk deals, which happen in the normal market and are defined by crossing 0.5% of a company's shares.",
+    "example": "Say a promoter of ABC Ltd sells 50 lakh shares at ₹420 each to a mutual fund in the morning block window. The single trade is worth ₹210 crore (50,00,000 x ₹420), well above the minimum order size, and the exchanges disclose it the same day.",
+    "formula": "",
+    "related": [
+      "Bulk deal",
+      "Promoter holding",
+      "Offer for sale",
+      "Dark pool",
+      "Impact cost"
+    ]
+  },
+  {
+    "id": "bulk-deal",
+    "term": "Bulk deal",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "bulk deals",
+      "bulk trade"
+    ],
+    "hl": [
+      "bulk deal",
+      "bulk deals"
+    ],
+    "abbr": [],
+    "short": "A trade where one buyer or seller deals in more than 0.5% of a listed company's shares in a single day on the normal market.",
+    "kid": "If one child buys a huge pile of sweets from the school shop in a single day, the shopkeeper writes their name on a board so everyone knows. Very big buys get noticed and shared.",
+    "detail": "Under SEBI rules as of 2025, a bulk deal is any transaction, or set of transactions in one day, in which a single client buys or sells more than 0.5% of a listed company's total equity shares. Unlike a block deal, it happens in the normal trading session through the regular order book, often as many smaller trades. Brokers must report such trades to the exchange, and NSE and BSE publish the client name, quantity and average price after market hours. Investors track bulk deals to see when well-known funds, foreign investors or promoters are building or cutting stakes, especially in smaller companies where 0.5% of the shares can move the price. A common confusion is treating bulk and block deals as the same: block deals use a separate window with a large minimum order size, while bulk deals are defined by the share of the company traded.",
+    "example": "Say ABC Ltd has 4 crore shares outstanding, so 0.5% is 2 lakh shares. If a fund buys 2.4 lakh shares through several orders in one day, the total crosses the threshold and the exchange discloses it as a bulk deal.",
+    "formula": "Bulk deal threshold = 0.5% x Total equity shares of the company",
+    "related": [
+      "Block deal",
+      "Promoter holding",
+      "Shareholding pattern",
+      "Foreign portfolio investor",
+      "Insider trading"
+    ]
+  },
+  {
+    "id": "dark-pool",
+    "term": "Dark pool",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "dark pools",
+      "dark liquidity",
+      "off-exchange trading"
+    ],
+    "hl": [
+      "dark pool",
+      "dark pools",
+      "dark liquidity"
+    ],
+    "abbr": [],
+    "short": "A private trading venue where large investors can buy and sell shares without showing their orders to the public before the trade.",
+    "kid": "Two friends want to swap lots of marbles without the whole class crowding around and changing their minds. They swap quietly behind a curtain, then tell the teacher afterwards what they did.",
+    "detail": "A dark pool is a trading system, usually run by a bank or broker, that matches buy and sell orders without displaying them in a public order book. Prices are typically pegged to the public market, often the midpoint of the best bid and ask, and trades are reported only after they happen. Large institutions use dark pools to avoid the impact cost that would follow if the market saw a big order coming. In the United States they are regulated as alternative trading systems and handle a meaningful share of daily volume, while European rules limit how much trading can happen in the dark. Critics argue that too much dark trading weakens price discovery on public exchanges. Indian rules as of 2025 do not allow dark pools; large Indian trades use the block deal window instead. Dark pools are legal and regulated, not a black market.",
+    "example": "Say a pension fund wants to buy 500,000 shares of a hypothetical XYZ Inc, quoted at $49.98 bid and $50.02 ask. In a dark pool it might be matched with a seller at the $50.00 midpoint, saving $0.02 a share, or $10,000, compared with buying at the ask.",
+    "formula": "",
+    "related": [
+      "Block deal",
+      "Market depth",
+      "Price discovery",
+      "Impact cost",
+      "High-frequency trading"
+    ]
+  },
+  {
+    "id": "slippage",
+    "term": "Slippage",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "execution slippage",
+      "price slippage"
+    ],
+    "hl": [
+      "price slippage",
+      "execution slippage",
+      "trading slippage"
+    ],
+    "abbr": [],
+    "short": "The gap between the price you expected to trade at and the price your order actually got filled at.",
+    "kid": "You see a toy marked 10 coins, but by the time you reach the counter the tag says 11. That small surprise between what you saw and what you paid is slippage.",
+    "detail": "Slippage is the difference between the expected price of a trade, usually the price on screen when the order is placed, and the average price at which it actually executes. It happens because prices move between decision and execution, and because a large order may use up the best available quotes and fill at worse levels further down the order book. Slippage is largest in fast markets, around news, at the open, in thinly traded stocks and with market or stop-loss orders, and it can occasionally work in your favour. For active traders it is a real cost alongside brokerage and taxes, and backtests that ignore it overstate profits. Limit orders cap slippage but risk not being filled. Do not confuse it with the bid-ask spread, which exists before you trade. Also note that in Indian bank results, slippages means something else entirely: loans turning bad.",
+    "example": "Say you place a market order to buy 1,000 shares of ABC Ltd when the screen shows ₹500. The order fills at an average of ₹500.40, so slippage is ₹0.40 a share, or ₹400 in total.",
+    "formula": "Slippage (buy order) = Average execution price - Expected price",
+    "related": [
+      "Impact cost",
+      "Bid-ask spread",
+      "Market order",
+      "Limit order",
+      "Stop-loss order",
+      "Market depth"
+    ]
+  },
+  {
+    "id": "impact-cost",
+    "term": "Impact cost",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "market impact",
+      "price impact"
+    ],
+    "hl": [
+      "impact cost",
+      "impact costs",
+      "market impact cost"
+    ],
+    "abbr": [],
+    "short": "The extra cost of buying or selling a given amount of a stock because the order itself pushes the price against you.",
+    "kid": "If you want only one apple, the fruit seller gives you one at the normal price. If you want a whole basketful, you have to take some pricier apples too, so each apple costs you a bit more.",
+    "detail": "Impact cost measures how far a trade of a given size moves the price away from the ideal price, defined as the midpoint of the best bid and best ask. A small order fills at or near the best quote, but a large order eats through several price levels in the order book, so its average price is worse. Impact cost is expressed as a percentage of the ideal price and is a direct measure of liquidity: the lower it is for a given order size, the more liquid the stock. NSE calculates impact cost regularly and uses it as a liquidity test when deciding which stocks can enter indices such as the Nifty 50. Fund managers running large portfolios watch it closely because it quietly eats into returns. It differs from slippage, which also includes price moves caused by delay, and from brokerage, which is an explicit fee.",
+    "example": "Say the best bid for ABC Ltd is ₹99.90 and the best ask is ₹100.10, so the ideal price is ₹100. Buying 5,000 shares sweeps several ask levels at an average of ₹100.30, so the impact cost is 0.30 / 100 = 0.30%.",
+    "formula": "Impact cost (%) = (Average execution price - Ideal price) / Ideal price x 100, where Ideal price = (Best bid + Best ask) / 2",
+    "related": [
+      "Slippage",
+      "Market depth",
+      "Bid-ask spread",
+      "Liquidity",
+      "Block deal"
+    ]
+  },
+  {
+    "id": "price-discovery",
+    "term": "Price discovery",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "price formation"
+    ],
+    "hl": [
+      "price discovery",
+      "price formation"
+    ],
+    "abbr": [],
+    "short": "The process by which buyers and sellers, by placing and matching orders, arrive at the market price of an asset.",
+    "kid": "At a lemonade stand, if lots of children want a cup, the seller can ask a bit more. If nobody comes, the price goes down. Watching who wants to buy and sell helps everyone find the right price.",
+    "detail": "Price discovery is how a market turns the views, information and needs of many buyers and sellers into a single traded price. Every order adds information: a buyer willing to pay more pushes the price up, a seller keen to exit pushes it down. Good price discovery needs many participants, transparent order books and low trading costs. It happens continuously during the trading day and in special mechanisms such as the pre-open call auction on NSE and BSE, IPO book building and the special listing-day session for new shares. Futures markets often lead price discovery because trading them is cheaper and faster than trading the underlying assets. It matters well beyond traders, since companies raise capital, lenders value collateral and mutual funds compute NAVs using market prices. A discovered price is not the same as fair or intrinsic value; it reflects what buyers and sellers agree on at that moment.",
+    "example": "Say ABC Ltd closes at ₹400 the day before reporting much better-than-expected profits. Next morning buyers outnumber sellers, orders keep matching at higher prices, and the stock settles near ₹440, a 10% rise, as the market discovers a new price.",
+    "formula": "",
+    "related": [
+      "Pre-open session",
+      "Order-driven market",
+      "Market depth",
+      "Efficient market hypothesis",
+      "Book building"
+    ]
+  },
+  {
+    "id": "ohlc-prices",
+    "term": "OHLC prices",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "OHLC",
+      "open high low close",
+      "opening price",
+      "closing price",
+      "day's high",
+      "day's low"
+    ],
+    "hl": [
+      "ohlc",
+      "open high low close",
+      "closing price",
+      "intraday high",
+      "intraday low"
+    ],
+    "abbr": [
+      "OHLC"
+    ],
+    "short": "The four prices that summarise a trading period: the first trade (open), the highest (high), the lowest (low) and the final price (close).",
+    "kid": "Think of a kite on a windy day. Where it starts, the highest it flies, the lowest it dips and where it lands tell the whole story of its flight.",
+    "detail": "OHLC stands for open, high, low and close, the four prices that describe how a security traded over a period such as a day, an hour or a week. Together they show direction (close versus open) and volatility (the range from high to low), and they are the building blocks of bar and candlestick charts. In India, the official opening price for most actively traded stocks comes from the pre-open call auction, and under the rules as of 2025, NSE and BSE set the official closing price as the volume-weighted average price of the last 30 minutes, not the last traded price. That closing price is used for settling derivatives, valuing mutual fund NAVs and calculating index levels. A common mistake is measuring a day's change from today's open: the change shown on screens is measured from the previous day's close.",
+    "example": "Say ABC Ltd opens at ₹250, rises to a high of ₹262, falls to a low of ₹247 and closes at ₹259, after closing at ₹245 the previous day. Its day's range is ₹15, and its daily change is +₹14, or about 5.7%, measured from the previous close.",
+    "formula": "",
+    "related": [
+      "Candlestick chart",
+      "Last traded price",
+      "Pre-open session",
+      "VWAP",
+      "Volatility"
+    ]
+  },
+  {
+    "id": "pre-open-session",
+    "term": "Pre-open session",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "pre-open",
+      "call auction",
+      "pre-open call auction"
+    ],
+    "hl": [
+      "pre-open session",
+      "pre-opening session",
+      "pre-open trade",
+      "pre-open call auction",
+      "call auction session"
+    ],
+    "abbr": [],
+    "short": "The 15 minutes before Indian stock markets open, when orders are collected and matched to fix each stock's opening price.",
+    "kid": "Before a game starts, everyone writes down which stickers they want to swap. Then the teacher looks at all the lists at once and picks the swap that lets the most children trade.",
+    "detail": "The pre-open session is a call auction held on NSE and BSE from 9:00 to 9:15 am, under exchange timings as of 2025, before continuous trading begins. For roughly the first eight minutes, traders can place, change or cancel orders, with order entry closing at a random moment between the seventh and eighth minute to stop last-second gaming. The exchange then calculates an equilibrium price, the price at which the largest quantity of shares can be matched, and executes all matched trades at that single price. The last few minutes are a buffer before normal trading starts at 9:15. Pooling overnight news and orders before setting a price reduces wild opening swings. IPOs and relisted shares use a longer special pre-open session on their first day. Do not confuse it with US pre-market trading, which is continuous trading in the hours before the official open.",
+    "example": "Say buyers want 500 shares at up to ₹101 and 300 more at up to ₹100, while sellers offer 400 shares at ₹99 or above and 300 more at ₹101 or above. At ₹101, 500 shares can be matched, more than the 400 possible at ₹100, so ₹101 becomes the opening price.",
+    "formula": "Equilibrium price = the price at which the maximum quantity of buy and sell orders can be matched",
+    "related": [
+      "Price discovery",
+      "OHLC prices",
+      "Order-driven market",
+      "After-hours trading",
+      "Circuit breaker"
+    ]
+  },
+  {
+    "id": "market-breadth",
+    "term": "Market breadth",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "advance-decline ratio",
+      "A/D ratio",
+      "advances and declines",
+      "breadth"
+    ],
+    "hl": [
+      "market breadth",
+      "advance-decline ratio",
+      "advance decline ratio",
+      "advance-decline line",
+      "advances and declines",
+      "a/d ratio"
+    ],
+    "abbr": [],
+    "short": "A measure of how many stocks are rising versus falling, showing whether a market move is broad-based or driven by a few big names.",
+    "kid": "If one tall child jumps up, the class photo looks taller, but most children might still be sitting. Counting how many are standing tells you how the whole class is really doing.",
+    "detail": "Market breadth looks beyond an index level to count how many stocks took part in a move. The most common measure is the advance-decline ratio: the number of stocks that rose divided by the number that fell on a day. Others include the cumulative advance-decline line, the share of stocks trading above their 200-day moving average, and new 52-week highs versus new lows. Because indices such as the Nifty 50 and Sensex are weighted by market value, a few heavyweights can lift the index while most shares fall. Strong breadth suggests a healthy, broad rally; a rising index with weak breadth, often called a narrow market, warns that the move may be fragile. Indian exchanges publish advances and declines daily, and business channels quote them alongside index levels. Breadth gives context about the market's health, but it is not a precise timing signal on its own.",
+    "example": "Say 2,000 stocks trade on NSE today: 1,200 advance, 750 decline and 50 are unchanged. The advance-decline ratio is 1,200 / 750 = 1.6, so the day's gains were broad-based.",
+    "formula": "Advance-decline ratio = Number of advancing stocks / Number of declining stocks",
+    "related": [
+      "Moving average",
+      "Technical analysis",
+      "Benchmark index",
+      "Free-float market capitalisation",
+      "Market sentiment"
+    ]
+  },
+  {
+    "id": "contract-note",
+    "term": "Contract note",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "trade confirmation",
+      "contract notes"
+    ],
+    "hl": [
+      "contract note",
+      "contract notes",
+      "electronic contract note"
+    ],
+    "abbr": [],
+    "short": "The official record a broker sends after you trade, listing what was bought or sold, at what price, and every charge deducted.",
+    "kid": "When you buy sweets, the shopkeeper hands you a slip showing what you bought, how many and how much you paid. You keep it so everyone remembers the deal the same way.",
+    "detail": "A contract note is the legal confirmation of a trade issued by a stockbroker to its client. In India, SEBI rules as of 2025 require brokers to send it within 24 hours of the trade, usually as a digitally signed electronic contract note by email. It records the exchange, order and trade numbers, time of trade, security, quantity and price, along with each charge: brokerage, securities transaction tax, exchange transaction charges, SEBI turnover fees, stamp duty and GST. It is the primary evidence in any dispute with the broker and a key document for calculating capital gains and filing tax returns. Investors should check every note against their own orders and report errors quickly. A common confusion is with the broker's ledger or profit-and-loss report: those are summaries, while the contract note is the trade-by-trade legal record.",
+    "example": "Say you buy 100 shares of ABC Ltd at ₹1,000 each. The contract note shows a trade value of ₹1,00,000 plus, say, ₹125 of total charges, so the net amount payable is ₹1,00,125.",
+    "formula": "Net amount payable on a buy = Trade value + Brokerage + Taxes and statutory charges",
+    "related": [
+      "Securities transaction tax",
+      "Demat account",
+      "Stockbroker",
+      "Settlement cycle",
+      "Capital gains tax"
+    ]
+  },
+  {
+    "id": "tick-size",
+    "term": "Tick size",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "tick",
+      "minimum price movement"
+    ],
+    "hl": [
+      "tick size",
+      "tick sizes",
+      "minimum tick"
+    ],
+    "abbr": [],
+    "short": "The smallest amount by which a share's price is allowed to move up or down on an exchange.",
+    "kid": "On a staircase you can only stand on the steps, not in between them. Prices also climb and fall in small fixed steps.",
+    "detail": "Tick size is the minimum price increment for orders in a security. Orders must be placed at prices that are exact multiples of the tick, so it also sets the narrowest possible gap between the best bid and ask. Exchanges choose tick sizes as a trade-off: a tick that is too large forces wide spreads and higher costs for investors, while one that is too small lets traders jump ahead of others by a trivial amount and spreads orders thinly across many price levels. Under NSE's price-based schedule as of 2025, shares priced below ₹250 move in 1-paisa steps, while costlier shares use larger steps starting at 5 paise. US rules have long used one-cent steps for most shares priced at $1 or more. In futures, tick value, the money gained or lost per contract for a one-tick move, is a separate idea.",
+    "example": "Say ABC Ltd has a tick size of ₹0.05 and last traded at ₹512.35. The next possible prices are ₹512.30 or ₹512.40, so an order at ₹512.37 would be rejected.",
+    "formula": "",
+    "related": [
+      "Bid-ask spread",
+      "Market depth",
+      "Order-driven market",
+      "Last traded price",
+      "Lot size"
+    ]
+  },
+  {
+    "id": "technical-analysis",
+    "term": "Technical analysis",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "TA",
+      "charting",
+      "technicals",
+      "chart analysis"
+    ],
+    "hl": [
+      "technical analysis",
+      "technical analyst",
+      "technical analysts",
+      "chart analysis",
+      "technical charts",
+      "technical indicators"
+    ],
+    "abbr": [],
+    "short": "Studying past price and trading-volume patterns on charts to judge where a market price is likely to move next.",
+    "kid": "If you notice that the ice-cream van always comes on sunny afternoons, you start guessing when it will come next. Chart readers look for patterns like that in prices.",
+    "detail": "Technical analysis tries to forecast price movements by studying the market's own data: price, volume and sometimes open interest. Its practitioners believe that prices already reflect known information, that prices move in trends, and that crowd behaviour repeats, leaving recognisable patterns. Tools include support and resistance levels, trend lines, chart patterns such as head and shoulders, and indicators such as moving averages, RSI and MACD. Traders mainly use it to time entries and exits and to set stop-losses. Fundamental analysis, by contrast, studies a company's business, earnings and valuation to judge what it is worth. Many investors combine both: fundamentals to choose what to buy, technicals to decide when. The common mistake is treating chart signals as certain. Evidence that technical rules earn consistent profits after costs is mixed, and patterns are easy to see in hindsight, so disciplined risk control matters more than any single indicator.",
+    "example": "Say ABC Ltd has bounced off ₹480 three times in six months. A technical trader buys at ₹485 with a stop-loss at ₹470 and a target of ₹530, risking ₹15 a share to make ₹45, a risk-reward ratio of 1:3.",
+    "formula": "",
+    "related": [
+      "Fundamental analysis",
+      "Support level",
+      "Resistance level",
+      "Moving average",
+      "Candlestick chart",
+      "Relative strength index"
+    ]
+  },
+  {
+    "id": "support-level",
+    "term": "Support level",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "support",
+      "support zone"
+    ],
+    "hl": [
+      "support zone",
+      "support zones"
+    ],
+    "abbr": [],
+    "short": "A price level where a falling share has repeatedly stopped dropping because buyers tend to step in there.",
+    "kid": "When you drop a ball, it stops falling when it hits the floor and bounces back up. A support level is like a floor that prices keep bouncing off.",
+    "detail": "Support is a price area where demand has been strong enough to halt declines in the past, so traders expect buyers to appear there again. It often forms around earlier lows, round numbers such as ₹1,000, moving averages, or prices where heavy volume traded before. The more times a level holds, and the higher the volume there, the more significant traders consider it. Traders use support to place buy orders and to set stop-losses just below it. When support breaks decisively, it often turns into resistance, because buyers who bought there now want to get out at break-even. Support is a zone, not an exact number, and it is not a guarantee: bad news can push a price straight through it. Market commentary also quotes daily support levels for indices such as the Nifty 50.",
+    "example": "Say ABC Ltd fell to about ₹1,200 in March, May and August and bounced each time. Traders treat ₹1,200 as support, buying near ₹1,210 with a stop-loss at ₹1,180, which risks ₹30 a share.",
+    "formula": "",
+    "related": [
+      "Resistance level",
+      "Breakout",
+      "Trend line",
+      "Stop-loss order",
+      "Technical analysis"
+    ]
+  },
+  {
+    "id": "resistance-level",
+    "term": "Resistance level",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "resistance",
+      "resistance zone",
+      "overhead supply"
+    ],
+    "hl": [
+      "resistance zone",
+      "resistance zones"
+    ],
+    "abbr": [],
+    "short": "A price level where a rising share has repeatedly stalled because sellers tend to appear there.",
+    "kid": "When you throw a ball up indoors, it bumps the ceiling and comes back down. A resistance level is like a ceiling that prices keep hitting.",
+    "detail": "Resistance is a price area where selling pressure has been strong enough to stop rallies in the past. It often forms at earlier highs, round numbers, falling moving averages, or levels where many investors bought earlier and are now waiting to sell at break-even, which traders call overhead supply. Traders use resistance to book profits or to open short trades, and they watch it closely because a decisive move above it, a breakout, can start a new uptrend. Once broken, resistance often becomes support, a pattern called role reversal. Like support, resistance is a zone rather than a precise number, and its importance grows with the number of times it has been tested and the volume traded there. It describes a probability, not a wall: strong earnings or news can carry prices straight through it.",
+    "example": "Say ABC Ltd failed to rise above ₹850 three times this year. When it finally closes at ₹872 on heavy volume, traders call it a breakout and expect ₹850 to act as support on any dip.",
+    "formula": "",
+    "related": [
+      "Support level",
+      "Breakout",
+      "Head and shoulders pattern",
+      "Technical analysis",
+      "Trend line"
+    ]
+  },
+  {
+    "id": "breakout",
+    "term": "Breakout",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "breakdown",
+      "price breakout",
+      "breaking out"
+    ],
+    "hl": [
+      "price breakout",
+      "technical breakout",
+      "breakout stock",
+      "breakout stocks",
+      "breakout trade",
+      "breakout above",
+      "breakdown below"
+    ],
+    "abbr": [],
+    "short": "When a price moves decisively above a resistance level, or below a support level in a breakdown, often signalling the start of a new move.",
+    "kid": "Picture a ball rolling back and forth inside a box. One day it hops over the wall and rolls off somewhere new. That hop over the wall is a breakout.",
+    "detail": "A breakout happens when a price escapes a range it has been stuck in, closing above resistance or, in a breakdown, below support. Traders see it as a sign that the balance between buyers and sellers has shifted and that a new trend may begin. Breakouts are considered more reliable when trading volume is well above average, when the price closes beyond the level rather than just touching it during the day, and when the earlier range lasted a long time. A common target method adds the height of the range to the breakout level. The big risk is a false breakout, or fakeout, where the price pokes through the level and quickly falls back, trapping buyers. Disciplined traders wait for confirmation and place a stop-loss just inside the old range. Breakouts in thinly traded small-cap stocks are especially prone to failure.",
+    "example": "Say ABC Ltd traded between ₹400 and ₹450 for three months, then closes at ₹462 on 6 lakh shares against an average of 2 lakh. Adding the ₹50 range height to ₹450 gives a measured target of ₹500, with a stop-loss near ₹440.",
+    "formula": "Measured target (upside breakout) = Breakout level + (Top of range - Bottom of range)",
+    "related": [
+      "Resistance level",
+      "Support level",
+      "Trend line",
+      "Head and shoulders pattern",
+      "Bollinger Bands"
+    ]
+  },
+  {
+    "id": "trend-line",
+    "term": "Trend line",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "trendline",
+      "uptrend",
+      "downtrend",
+      "higher highs and higher lows"
+    ],
+    "hl": [
+      "trend line",
+      "trend lines",
+      "trendline",
+      "trendlines",
+      "higher highs and higher lows",
+      "lower highs and lower lows"
+    ],
+    "abbr": [],
+    "short": "A straight line drawn on a price chart connecting rising lows or falling highs, showing the direction and slope of a trend.",
+    "kid": "When you climb a hill, each step is a little higher than the last. A line drawn along your footprints shows that you are going up.",
+    "detail": "A trend line connects at least two, and ideally three or more, price points to show a trend. In an uptrend the price makes higher highs and higher lows, and the line is drawn under the rising lows, acting as moving support. In a downtrend the price makes lower highs and lower lows, and the line is drawn across the falling highs, acting as moving resistance. The more times a line is touched without breaking, the more traders trust it. Traders buy near a rising trend line, sell near a falling one, and treat a decisive break as a warning that the trend may be ending. Trend lines are subjective: two analysts can draw them differently, and the result changes between ordinary and logarithmic chart scales. Steep trend lines tend to break sooner than gentle ones, and a break often signals slowing momentum rather than an immediate reversal.",
+    "example": "Say ABC Ltd made lows of ₹200 in January, ₹220 in March and ₹240 in May. A line through these lows rises about ₹10 a month, so traders would expect support near ₹260 in July if the uptrend holds.",
+    "formula": "",
+    "related": [
+      "Support level",
+      "Resistance level",
+      "Breakout",
+      "Moving average",
+      "Technical analysis"
+    ]
+  },
+  {
+    "id": "moving-average",
+    "term": "Moving average",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "MA",
+      "SMA",
+      "EMA",
+      "simple moving average",
+      "exponential moving average",
+      "50-DMA",
+      "200-DMA",
+      "200-day moving average"
+    ],
+    "hl": [
+      "moving average",
+      "moving averages",
+      "simple moving average",
+      "exponential moving average",
+      "50-day moving average",
+      "100-day moving average",
+      "200-day moving average",
+      "50-dma",
+      "200-dma",
+      "50 dma",
+      "200 dma"
+    ],
+    "abbr": [],
+    "short": "The average of a security's closing prices over a recent set of days, recalculated daily to smooth out short-term price swings.",
+    "kid": "Count how many sweets you ate on each of the last five days and find your usual amount. Doing it again every day shows whether you are slowly eating more or less.",
+    "detail": "A moving average smooths price data by averaging the last n periods and rolling forward each day. A simple moving average (SMA) gives every day equal weight. An exponential moving average (EMA) gives more weight to recent prices, so it reacts faster. Traders use short averages such as the 20-day for short-term trends, and the 50-day and 200-day for medium and long-term trends; in India these are often called the 50-DMA and 200-DMA. A price above a rising 200-day average is widely read as a long-term uptrend. Averages also act as moving support or resistance, and crossovers between two averages produce signals such as the golden cross. The key limitation is lag: because they use past prices, moving averages confirm trends late and give many false signals in sideways markets. They describe what has happened, not what will happen.",
+    "example": "Say ABC Ltd's last five closes are ₹100, ₹102, ₹101, ₹105 and ₹107; they add up to ₹515, so the 5-day SMA is ₹103. If the next close is ₹110, the oldest price of ₹100 drops out and the new average is ₹525 / 5 = ₹105.",
+    "formula": "SMA = Sum of closing prices over n periods / n; EMA today = Price today x k + EMA yesterday x (1 - k), where k = 2 / (n + 1)",
+    "related": [
+      "Golden cross",
+      "MACD",
+      "Bollinger Bands",
+      "Trend line",
+      "Technical analysis"
+    ]
+  },
+  {
+    "id": "golden-cross",
+    "term": "Golden cross",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "death cross",
+      "golden crossover"
+    ],
+    "hl": [
+      "golden cross",
+      "golden crossover",
+      "death cross",
+      "death crossover"
+    ],
+    "abbr": [],
+    "short": "A chart signal where a price's 50-day moving average crosses above its 200-day average; the reverse is called a death cross.",
+    "kid": "Imagine a fast runner and a slow walker on the same path. When the runner overtakes the walker, it shows things have started speeding up.",
+    "detail": "A golden cross occurs when a shorter moving average, typically the 50-day, rises above a longer one, typically the 200-day. It shows that recent prices have climbed above the long-run average strongly enough to turn the medium-term trend up, and many traders read it as a bullish, long-term signal. A death cross is the mirror image: the 50-day falls below the 200-day, read as a bearish sign. Both signals feature heavily in media coverage of indices such as the Nifty 50 and S&P 500 because they are simple and easy to spot. Their main weakness is lag: by the time two slow averages cross, much of the move has often already happened, and in choppy, sideways markets the averages can cross back and forth, producing false signals. Treat a cross as confirmation of a trend already under way, not as a prediction.",
+    "example": "Say ABC Ltd's 50-day average is ₹1,495 and its 200-day average is ₹1,500 on Monday. By Friday they are ₹1,508 and ₹1,502, so the 50-day has crossed above the 200-day, forming a golden cross.",
+    "formula": "",
+    "related": [
+      "Moving average",
+      "MACD",
+      "Trend line",
+      "Technical analysis",
+      "Breakout"
+    ]
+  },
+  {
+    "id": "relative-strength-index",
+    "term": "Relative strength index",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "RSI",
+      "14-day RSI"
+    ],
+    "hl": [
+      "relative strength index",
+      "14-day rsi",
+      "rsi divergence"
+    ],
+    "abbr": [
+      "RSI"
+    ],
+    "short": "A momentum indicator that scores recent price gains against recent losses on a 0 to 100 scale, used to spot overbought or oversold conditions.",
+    "kid": "If your team has been scoring lots of goals and letting in very few, you are on a winning run. This score shows how strong the run has been lately.",
+    "detail": "The relative strength index, introduced by J. Welles Wilder in 1978, compares the size of recent gains with recent losses, usually over 14 periods, and scales the result from 0 to 100. Readings above 70 are conventionally called overbought and below 30 oversold, suggesting a move may be stretched and due for a pause. Traders also watch divergence: if the price makes a new high but RSI makes a lower high, upward momentum may be fading. RSI is useful for gauging momentum and timing entries, but it is often misused. In a strong trend RSI can stay above 70 or below 30 for weeks, so selling just because it reads overbought can mean exiting a winner too early. It is also unrelated to relative strength in the sense of comparing a stock's performance with an index, a common source of confusion.",
+    "example": "Say ABC Ltd's average daily gain over the last 14 days is ₹2 and its average daily loss is ₹1. RS is 2 / 1 = 2, so RSI = 100 - 100 / (1 + 2) = 66.7, strong but not yet overbought.",
+    "formula": "RSI = 100 - 100 / (1 + RS), where RS = Average gain / Average loss over n periods (usually 14)",
+    "related": [
+      "MACD",
+      "Moving average",
+      "Technical analysis",
+      "Bollinger Bands",
+      "Momentum investing"
+    ]
+  },
+  {
+    "id": "macd",
+    "term": "MACD",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "moving average convergence divergence",
+      "MACD crossover",
+      "signal line"
+    ],
+    "hl": [
+      "moving average convergence divergence",
+      "macd crossover",
+      "macd signal",
+      "macd histogram"
+    ],
+    "abbr": [
+      "MACD"
+    ],
+    "short": "A momentum indicator showing the gap between a fast and a slow moving average of price, plus a signal line to spot trend changes.",
+    "kid": "Think of two friends walking together, one quick and one slow. When the quick one pulls ahead, things are speeding up; when they come back together, things are slowing down.",
+    "detail": "MACD, short for moving average convergence divergence and created by Gerald Appel in the late 1970s, subtracts the 26-period exponential moving average of price from the 12-period EMA. When the result is positive, short-term momentum is stronger than the longer trend. A signal line, the 9-period EMA of the MACD line, is plotted alongside, and a histogram shows the gap between the two. Traders read the MACD line crossing above the signal line as bullish and crossing below as bearish, while a move through the zero line confirms a trend change. Divergence between MACD and price can warn that a trend is losing strength. Because MACD is built from moving averages, it lags price and gives many whipsaw signals in sideways markets. Its values are in price units rather than on a fixed scale like RSI, so readings cannot be compared directly across stocks with very different prices.",
+    "example": "Say ABC Ltd's 12-day EMA is ₹515 and its 26-day EMA is ₹508, so the MACD line is +7. If the signal line is at +5, the histogram reads +2, and a MACD line above its signal line is read as bullish momentum.",
+    "formula": "MACD line = 12-period EMA - 26-period EMA; Signal line = 9-period EMA of the MACD line; Histogram = MACD line - Signal line",
+    "related": [
+      "Moving average",
+      "Relative strength index",
+      "Golden cross",
+      "Technical analysis",
+      "Bollinger Bands"
+    ]
+  },
+  {
+    "id": "bollinger-bands",
+    "term": "Bollinger Bands",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "Bollinger",
+      "Bollinger band squeeze"
+    ],
+    "hl": [
+      "bollinger bands",
+      "bollinger band",
+      "bollinger band squeeze",
+      "bollinger squeeze"
+    ],
+    "abbr": [],
+    "short": "Lines drawn above and below a price's 20-day average that widen when prices swing a lot and narrow when they calm down.",
+    "kid": "Imagine a puppy on a stretchy lead. When the puppy is calm, the lead stays short; when it gets excited and runs around, the lead stretches wide.",
+    "detail": "Bollinger Bands, developed by John Bollinger in the 1980s, plot a middle band, usually the 20-day simple moving average, with an upper and a lower band two standard deviations above and below it. Because standard deviation measures volatility, the bands widen when prices swing sharply and contract when they are calm. Most closing prices fall inside the bands, so a move to an edge shows a price that is stretched relative to its recent average. A squeeze, when the bands become unusually narrow, often comes before a sharp move, although it does not reveal the direction. Traders use the bands for mean-reversion trades in sideways markets and as a breakout signal when prices close outside them. The common mistake is treating a touch of the upper band as an automatic sell signal: in strong uptrends, prices can ride along the upper band for weeks.",
+    "example": "Say ABC Ltd's 20-day average is ₹400 and the standard deviation of its closes over those 20 days is ₹12. The upper band is ₹400 + 2 x ₹12 = ₹424 and the lower band is ₹400 - 2 x ₹12 = ₹376.",
+    "formula": "Middle band = 20-day SMA; Upper band = Middle band + 2 x Standard deviation; Lower band = Middle band - 2 x Standard deviation",
+    "related": [
+      "Moving average",
+      "Standard deviation",
+      "Volatility",
+      "Relative strength index",
+      "Breakout"
+    ]
+  },
+  {
+    "id": "candlestick-chart",
+    "term": "Candlestick chart",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "candlesticks",
+      "candle",
+      "Japanese candlesticks",
+      "candlestick"
+    ],
+    "hl": [
+      "candlestick chart",
+      "candlestick charts",
+      "japanese candlesticks",
+      "candlestick charting"
+    ],
+    "abbr": [],
+    "short": "A price chart where each bar, shaped like a candle, shows the open, high, low and close for one time period.",
+    "kid": "Each little candle is a picture of one day. Its fat middle shows where the price started and finished, and its thin wick shows how high and how low it reached.",
+    "detail": "A candlestick chart shows each period, such as a day or five minutes, as a candle. The thick body spans the opening and closing prices, and thin lines called wicks or shadows extend to the period's high and low. If the close is above the open, the candle is usually green or hollow; if below, red or filled. Candlesticks carry the same OHLC information as a bar chart but make the tug of war between buyers and sellers easier to see: a long body shows conviction, while long wicks show prices that were pushed back. The method traces back to Japanese rice traders in the 18th century, often linked to Munehisa Homma, and was popularised in the West by Steve Nison in the early 1990s. A common confusion: a red candle means the close was below that period's own open, not necessarily below the previous day's close.",
+    "example": "Say ABC Ltd opens at ₹200, rises to ₹215, dips to ₹198 and closes at ₹212. The day's candle is green, with a body of ₹12 (₹200 to ₹212), an upper wick of ₹3 and a lower wick of ₹2.",
+    "formula": "",
+    "related": [
+      "Candlestick patterns",
+      "OHLC prices",
+      "Technical analysis",
+      "Support level",
+      "Trend line"
+    ]
+  },
+  {
+    "id": "candlestick-patterns",
+    "term": "Candlestick patterns",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "doji",
+      "hammer",
+      "engulfing pattern",
+      "shooting star",
+      "morning star"
+    ],
+    "hl": [
+      "candlestick pattern",
+      "candlestick patterns",
+      "doji",
+      "bullish engulfing",
+      "bearish engulfing",
+      "engulfing pattern",
+      "hammer pattern",
+      "shooting star pattern",
+      "morning star pattern",
+      "evening star pattern"
+    ],
+    "abbr": [],
+    "short": "Recognisable shapes formed by one to three candles on a price chart that traders read as hints of a coming reversal or continuation.",
+    "kid": "Dark clouds can be a clue that rain is coming. Some grown-ups look at the shapes of a few candles together as clues about what prices might do next.",
+    "detail": "Candlestick patterns are formations of one or a few candles that traders interpret as signs of shifting sentiment. A doji has almost equal open and close, showing indecision. A hammer, appearing after a decline, has a small body near the top and a long lower wick at least twice the body, showing that sellers pushed prices down but buyers drove them back up. A shooting star is its mirror image after a rise. An engulfing pattern occurs when one candle's body completely covers the previous candle's body in the opposite colour, and a morning star is a three-candle bullish reversal after a downtrend. Context matters: a pattern means little unless it appears at a meaningful support or resistance level, after a clear trend, and preferably on high volume. On their own most patterns are only modestly reliable, so traders usually wait for the next candle to confirm before acting.",
+    "example": "Say after a fall ABC Ltd opens at ₹100, drops to ₹95, closes at ₹101 and touches a high of ₹101.20. The body is ₹1 and the lower wick is ₹5 (₹100 - ₹95), five times the body, making it a classic hammer.",
+    "formula": "",
+    "related": [
+      "Candlestick chart",
+      "Support level",
+      "Resistance level",
+      "Technical analysis",
+      "Head and shoulders pattern"
+    ]
+  },
+  {
+    "id": "vwap",
+    "term": "VWAP",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "volume-weighted average price",
+      "volume weighted average price"
+    ],
+    "hl": [
+      "volume-weighted average price",
+      "volume weighted average price"
+    ],
+    "abbr": [
+      "VWAP"
+    ],
+    "short": "The average price of a stock over a period, where prices at which more shares traded count for more.",
+    "kid": "You buy 3 cookies for 2 coins each and 1 cookie for 6 coins. You paid 12 coins for 4 cookies, so 3 coins each, because the cheaper price you used more often counts more.",
+    "detail": "VWAP, the volume-weighted average price, multiplies the price of each trade by its quantity, adds these up, and divides by the total quantity traded over the period, usually one trading day. Because it weights by volume, it reflects where most trading happened better than a simple average of prices. Institutional investors use VWAP as a benchmark: a buy order filled below the day's VWAP is considered good execution, and broker algorithms often spread a large order through the day to track it. Intraday traders read a price above VWAP as a sign of buyer control. In India, VWAP also appears in rules: as of 2025, the official closing price on NSE and BSE is the VWAP of the last 30 minutes, and SEBI pricing formulas for preferential allotments use VWAP over set periods. Do not confuse it with a moving average, which averages closing prices across days without volume weights.",
+    "example": "Say ABC Ltd trades 1,000 shares at ₹100, 3,000 at ₹102 and 1,000 at ₹105 in a day. The total value is ₹5,11,000 for 5,000 shares, so VWAP is ₹102.20, below the simple average of the three prices, ₹102.33.",
+    "formula": "VWAP = Sum of (Price x Volume) for each trade / Total volume traded",
+    "related": [
+      "Moving average",
+      "OHLC prices",
+      "Impact cost",
+      "Block deal",
+      "Algorithmic trading"
+    ]
+  },
+  {
+    "id": "fibonacci-retracement",
+    "term": "Fibonacci retracement",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "Fibonacci levels",
+      "Fib retracement",
+      "61.8% retracement"
+    ],
+    "hl": [
+      "fibonacci retracement",
+      "fibonacci retracements",
+      "fibonacci levels",
+      "fibonacci level",
+      "fib retracement",
+      "61.8% retracement"
+    ],
+    "abbr": [],
+    "short": "A charting tool that marks levels such as 38.2%, 50% and 61.8% of a previous price move, where a pullback might pause.",
+    "kid": "If you run up a hill and then walk back down a little to rest, you usually stop partway, not at the bottom. This tool guesses the resting spots partway down.",
+    "detail": "Fibonacci retracement draws horizontal lines at fixed percentages of a prior price swing, most commonly 23.6%, 38.2%, 50%, 61.8% and 78.6%. The ratios come from the Fibonacci number sequence, where 61.8% is linked to the golden ratio; 50% is not a Fibonacci ratio but is included by convention. After a strong rise, traders watch these levels as possible support where a pullback might end and the uptrend resume; after a fall, they act as possible resistance to a bounce. The levels are usually combined with other evidence such as earlier support, moving averages or candlestick patterns. They are popular partly because so many traders watch the same levels, which can make them self-fulfilling. The common error is treating them as precise: the results depend entirely on which high and low you pick, and there is no economic reason a market must respect a mathematical ratio.",
+    "example": "Say ABC Ltd rises from ₹200 to ₹300, a ₹100 move. The 38.2% retracement level is ₹300 - ₹38.20 = ₹261.80, the 50% level is ₹250 and the 61.8% level is ₹238.20.",
+    "formula": "Retracement level (after a rise) = High - (High - Low) x Fibonacci ratio",
+    "related": [
+      "Support level",
+      "Resistance level",
+      "Trend line",
+      "Technical analysis",
+      "Moving average"
+    ]
+  },
+  {
+    "id": "head-and-shoulders-pattern",
+    "term": "Head and shoulders pattern",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "head and shoulders",
+      "inverse head and shoulders",
+      "H&S pattern"
+    ],
+    "hl": [
+      "head and shoulders pattern",
+      "head-and-shoulders pattern",
+      "inverse head and shoulders",
+      "reverse head and shoulders"
+    ],
+    "abbr": [],
+    "short": "A chart pattern of three peaks, the middle one highest, that traders read as a sign an uptrend is turning down.",
+    "kid": "Draw a person: one shoulder, a taller head, then the other shoulder. When prices make that shape, it can mean they are getting tired of going up.",
+    "detail": "A head and shoulders pattern forms after an uptrend when the price makes a peak (left shoulder), a higher peak (head) and then a lower peak (right shoulder). A neckline is drawn through the lows between the peaks. The pattern is complete only when the price closes below the neckline, ideally on rising volume, which signals that buyers have lost control. Traders estimate a target by measuring the distance from the head to the neckline and projecting it down from the breakdown point. The inverse head and shoulders, three troughs with the middle one deepest, is the bullish version found at the end of downtrends. Common mistakes include acting before the neckline breaks, since many apparent patterns never complete, and forgetting that a broken neckline is often retested before the move continues. It is one of the best-known chart patterns, but like every pattern it fails regularly.",
+    "example": "Say ABC Ltd peaks at ₹540, then ₹600, then ₹545, with the neckline at ₹500. The head is ₹100 above the neckline, so a close below ₹500 points to a target of about ₹400.",
+    "formula": "Price target = Neckline - (Head - Neckline)",
+    "related": [
+      "Support level",
+      "Resistance level",
+      "Breakout",
+      "Technical analysis",
+      "Candlestick patterns"
+    ]
+  },
+  {
+    "id": "market-depth",
+    "term": "Market depth",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "depth of market",
+      "Level 2 data",
+      "order depth"
+    ],
+    "hl": [
+      "market depth",
+      "depth of market",
+      "level 2 data",
+      "order book depth",
+      "order depth"
+    ],
+    "abbr": [],
+    "short": "A live list of pending buy and sell orders for a stock at different prices, showing how much can trade near the current price.",
+    "kid": "Imagine one queue of children waiting to buy marbles and another waiting to sell them, each holding a sign with their price. Market depth lets you see both queues at once.",
+    "detail": "Market depth, also called the order book or Level 2 data, shows the outstanding limit orders on both sides of the market: bids to buy and offers to sell, with the quantity and often the number of orders at each price. The best bid and best ask sit at the top, and the gap between them is the bid-ask spread. Deep markets have large quantities close to the current price, so big orders can trade without moving the price much; shallow markets mean higher impact cost and slippage. Indian broker apps typically show the best five bid and ask levels, and some offer 20 levels. Traders read depth to judge liquidity and short-term buying or selling pressure, but should be careful: displayed orders can be changed or cancelled in an instant, and hidden or iceberg orders mean the visible book never shows the full picture.",
+    "example": "Say the best ask for ABC Ltd is 300 shares at ₹250.10, followed by 2,000 shares at ₹250.20. A market order to buy 1,000 shares fills 300 at ₹250.10 and 700 at ₹250.20, costing ₹2,50,170 in all, an average of ₹250.17.",
+    "formula": "",
+    "related": [
+      "Bid-ask spread",
+      "Impact cost",
+      "Slippage",
+      "Limit order",
+      "Order-driven market"
+    ]
+  },
+  {
+    "id": "square-off",
+    "term": "Square off",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "auto square-off",
+      "squaring off"
+    ],
+    "hl": [
+      "auto square-off",
+      "auto square off",
+      "square off positions",
+      "squaring off positions",
+      "squared off positions"
+    ],
+    "abbr": [],
+    "short": "Closing an open trade by making the opposite trade in the same quantity, such as selling shares you bought earlier that day.",
+    "kid": "If you borrow a friend's toy and then give it back, you are even again. Nothing is left hanging between you.",
+    "detail": "To square off is to close a position with an equal and opposite trade: selling what you bought, or buying back what you sold short. The term is used most for intraday trades in India, where a trader takes a position with broker-provided leverage under an intraday order type and must close it the same day. If the trader does not, the broker's risk system automatically squares it off shortly before the 3:30 pm close (under timings as of 2025), often with an extra charge. Futures and options positions can also be squared off any time before expiry. The profit or loss is the difference between the two prices times the quantity, less costs. A common confusion is between squaring off and taking delivery: a squared-off intraday buy never reaches your demat account, and an unclosed intraday position is not quietly converted into an investment.",
+    "example": "Say you buy 500 shares of ABC Ltd intraday at ₹320 and sell all 500 at ₹326 before the close. Squaring off locks in a gross profit of ₹6 x 500 = ₹3,000 before brokerage and taxes.",
+    "formula": "Profit or loss on square-off (long position) = (Exit price - Entry price) x Quantity - Costs",
+    "related": [
+      "Intraday trading",
+      "Margin trading",
+      "Short selling",
+      "Contract note",
+      "Stop-loss order"
+    ]
+  },
+  {
+    "id": "last-traded-price",
+    "term": "Last traded price",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "LTP"
+    ],
+    "hl": [
+      "last traded price",
+      "last trade price"
+    ],
+    "abbr": [
+      "LTP"
+    ],
+    "short": "The price at which a stock's most recent trade actually took place, shown as the live price on trading screens.",
+    "kid": "If the last cup of lemonade sold for 5 coins, that is the newest price everyone talks about. The next cup could sell for a little more or a little less.",
+    "detail": "The last traded price is the price of the most recent completed transaction in a security. It is the headline price on broker apps and TV screens, and it changes with every new trade. It tells you where a buyer and seller last agreed, but not necessarily where you can trade next: a market buy order fills at the best ask and a market sell at the best bid, either of which may differ from the LTP, especially in thinly traded stocks. In India, the final LTP of the day is also not the official closing price. Under the rules as of 2025, NSE and BSE compute the close as the volume-weighted average price of the last 30 minutes of trading, which is why the closing price and the last trade often differ slightly. Mutual fund NAVs and many margin calculations use the official close, not the LTP.",
+    "example": "Say ABC Ltd's LTP is ₹1,245.50, but the best ask is ₹1,246.00. A market order to buy fills at ₹1,246.00, ₹0.50 above the price on your screen.",
+    "formula": "",
+    "related": [
+      "OHLC prices",
+      "Market depth",
+      "Bid-ask spread",
+      "VWAP",
+      "Market order"
+    ]
+  },
+  {
+    "id": "risk-reward-ratio",
+    "term": "Risk-reward ratio",
+    "cat": "trading",
+    "level": "b",
+    "aliases": [
+      "reward-to-risk ratio",
+      "R-multiple"
+    ],
+    "hl": [
+      "risk-reward ratio",
+      "risk reward ratio",
+      "risk-to-reward ratio",
+      "reward-to-risk ratio"
+    ],
+    "abbr": [],
+    "short": "A comparison of how much a trade could lose if it goes wrong with how much it could gain if it works.",
+    "kid": "Before swapping one sticker for a chance to win three, you think: I might lose one, but I could win three. If the win is much bigger than the loss, the try might be worth it.",
+    "detail": "The risk-reward ratio compares a trade's planned downside, the distance from entry to the stop-loss, with its planned upside, the distance from entry to the target. Traders usually write it as risk to reward, such as 1:3, meaning they risk ₹1 to make ₹3. The ratio links directly to how often you must be right: at 1:3 you break even before costs if just 25% of trades hit their targets, while at 1:1 you need to win more than half. The R-multiple expresses a trade's actual result in units of the initial risk, so a gain of twice the amount risked is +2R. The common mistake is setting attractive ratios on paper with unrealistic targets, or moving the stop-loss once a trade goes against you, which quietly destroys the ratio. A good ratio does not make a trade good if the chance of reaching the target is small.",
+    "example": "Say you buy ABC Ltd at ₹500 with a stop-loss at ₹480 and a target of ₹560. You risk ₹20 to make ₹60, a risk-reward ratio of 1:3; if you instead exit at ₹540, your ₹40 gain is +2R.",
+    "formula": "Risk-reward ratio (long trade) = (Entry price - Stop-loss price) / (Target price - Entry price); R-multiple = Profit or loss / Initial risk",
+    "related": [
+      "Stop-loss order",
+      "Position sizing",
+      "Technical analysis",
+      "Expected value",
+      "Square off"
+    ]
+  },
+  {
+    "id": "short-interest",
+    "term": "Short interest",
+    "cat": "trading",
+    "level": "a",
+    "aliases": [
+      "days to cover",
+      "short interest ratio"
+    ],
+    "hl": [
+      "short interest",
+      "short interest ratio",
+      "days to cover"
+    ],
+    "abbr": [],
+    "short": "The number of a company's shares that investors have borrowed and sold, betting the price will fall, and not yet bought back.",
+    "kid": "Some children borrow a friend's toys and sell them, hoping to buy them back cheaper later and give them back. Counting all the borrowed toys shows how many children expect toys to get cheaper.",
+    "detail": "Short interest is the total quantity of a stock that has been sold short and not yet bought back. It is often shown as a percentage of free float, and as days to cover, also called the short interest ratio: short interest divided by average daily volume, an estimate of how many trading days short sellers would need to buy back their shares. High short interest signals widespread pessimism, but it also creates fuel for a short squeeze, where a rising price forces short sellers to buy back in a rush. In the US, FINRA publishes short interest twice a month. India works differently: naked short selling is banned, overnight shorts in cash shares require borrowing through the securities lending and borrowing (SLB) mechanism, and traders often watch open interest in stock futures for similar signals. It is a sentiment indicator, not proof that a stock is overvalued.",
+    "example": "Say 12 million shares of a hypothetical XYZ Inc are sold short, its free float is 80 million shares and it trades 3 million shares a day on average. Short interest is 15% of float, and days to cover is 12 / 3 = 4 days.",
+    "formula": "Days to cover = Short interest / Average daily trading volume; Short interest as % of float = Shares sold short / Free-float shares x 100",
+    "related": [
+      "Short selling",
+      "Short squeeze",
+      "Open interest",
+      "Securities lending and borrowing",
+      "Free float"
+    ]
+  },
+  {
+    "id": "order-driven-market",
+    "term": "Order-driven market",
+    "cat": "trading",
+    "level": "a",
+    "aliases": [
+      "quote-driven market",
+      "dealer market",
+      "call market"
+    ],
+    "hl": [
+      "order-driven market",
+      "order driven market",
+      "quote-driven market",
+      "quote driven market"
+    ],
+    "abbr": [],
+    "short": "A market where prices are set by matching buy and sell orders from all participants, rather than by dealers quoting their own prices.",
+    "kid": "At a swap meet, children who want to trade stickers find each other directly. In another kind of market, a shopkeeper buys from everyone and sells to everyone, and sets the prices himself.",
+    "detail": "In an order-driven market, investors' buy and sell limit orders are collected in a central order book and matched by price and then time priority, so prices come directly from supply and demand. NSE and BSE are fully electronic order-driven markets, and most stock exchanges worldwide now work this way. In a quote-driven or dealer market, market makers continuously post the prices at which they will buy (bid) and sell (ask), and investors trade with them; the dealer earns the spread in return for providing liquidity. Foreign exchange, many corporate bond markets and other over-the-counter markets are largely quote-driven. Order-driven markets can be continuous, matching orders as they arrive, or call markets, which collect orders and match them all at a single price at set times, as in the pre-open call auction. Many modern venues are hybrids, with designated market makers supporting an order book.",
+    "example": "Say on NSE your buy order for ABC Ltd at ₹150 trades directly against another investor's sell order at ₹150. In a dealer market, a dealer might quote ₹149.80 bid and ₹150.20 ask, so you buy at ₹150.20, and the dealer earns ₹0.40 a share if it later buys the same quantity back at ₹149.80.",
+    "formula": "",
+    "related": [
+      "Market depth",
+      "Pre-open session",
+      "Bid-ask spread",
+      "Market maker",
+      "Price discovery"
+    ]
+  },
+  {
+    "id": "after-hours-trading",
+    "term": "After-hours trading",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "pre-market trading",
+      "extended-hours trading"
+    ],
+    "hl": [
+      "after-hours trading",
+      "after hours trading",
+      "after-hours trade",
+      "after-hours session",
+      "extended-hours trading",
+      "extended hours trading",
+      "premarket trading",
+      "pre-market trading"
+    ],
+    "abbr": [],
+    "short": "Buying and selling shares outside an exchange's regular trading hours, before the open or after the close, when far fewer people are trading.",
+    "kid": "The toy shop has normal opening hours, but a few children swap toys outside the door before it opens and after it shuts. With fewer people around, fair swaps are harder to find.",
+    "detail": "After-hours trading, part of extended-hours trading along with pre-market trading, lets investors trade outside the regular session. It is common in the United States, where electronic trading networks run sessions from early morning before the 9:30 am Eastern open until the evening after the 4 pm close. Many US companies report earnings after the close, so the biggest price reactions often happen in these sessions. Liquidity is thinner, spreads are wider and prices can swing sharply, and many brokers accept only limit orders. Indian exchanges have no comparable continuous after-hours session for shares: under timings as of 2025, regular trading runs from 9:15 am to 3:30 pm after a pre-open auction, followed only by a short post-close session at the closing price. Orders placed in the evening through brokers, called after-market orders, queue for the next morning. Overnight sentiment for Indian shares is often read from GIFT Nifty futures instead.",
+    "example": "Say a hypothetical XYZ Inc closes at $100 at 4 pm and reports strong earnings at 4:15 pm. In after-hours trading it jumps to $108, an 8% gain on thin volume, and the next morning it opens at $105.",
+    "formula": "",
+    "related": [
+      "Pre-open session",
+      "Last traded price",
+      "Earnings announcement",
+      "Bid-ask spread",
+      "Gap up and gap down"
+    ]
+  },
+  {
+    "id": "positional-trading",
+    "term": "Positional trading",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "position trading",
+      "BTST"
+    ],
+    "hl": [
+      "positional trading",
+      "position trading",
+      "positional trade",
+      "positional trades",
+      "positional traders",
+      "btst trade",
+      "btst trades"
+    ],
+    "abbr": [
+      "BTST"
+    ],
+    "short": "Holding a trade for days, weeks or a few months to profit from a larger price move, rather than closing it the same day.",
+    "kid": "Some children plant a seed and wait a few weeks for it to grow, instead of hoping for a flower the same afternoon. Some grown-ups wait like that too, hoping prices change a lot later.",
+    "detail": "Positional trading means holding a trade overnight, usually for several days to a few months, to capture a meaningful price move often identified through technical analysis. It sits between intraday trading, which closes everything the same day, and long-term investing, which holds for years. In Indian equities, positional trades are taken either on delivery, so shares land in the demat account, or through futures and options, where positions are carried forward with margin until exit or expiry. A related Indian term is BTST, buy today sell tomorrow, where shares bought one day are sold the next; it carries a small risk of short delivery if the original seller fails to deliver. Positional traders accept overnight gap risk from news, so they size positions and set stop-losses carefully. Do not confuse it with investing: positional traders exit on price signals, not on changes in a company's long-term value.",
+    "example": "Say you buy 200 shares of ABC Ltd at ₹750 expecting a move to ₹850 over a few weeks, with a stop-loss at ₹710. Five weeks later you sell at ₹830, a profit of ₹80 x 200 = ₹16,000 before costs.",
+    "formula": "",
+    "related": [
+      "Swing trading",
+      "Intraday trading",
+      "Scalping",
+      "Square off",
+      "Risk-reward ratio"
+    ]
+  },
+  {
+    "id": "scalping",
+    "term": "Scalping",
+    "cat": "trading",
+    "level": "i",
+    "aliases": [
+      "scalper",
+      "scalp trading"
+    ],
+    "hl": [
+      "scalp trading",
+      "scalping strategy",
+      "scalping trades",
+      "intraday scalping"
+    ],
+    "abbr": [],
+    "short": "A trading style that makes many very quick trades, held for seconds or minutes, to collect tiny profits from small price moves.",
+    "kid": "Imagine selling lots of sweets very quickly and earning just a tiny bit on each one. If you sell enough sweets, the tiny bits add up, but one mistake can wipe them out.",
+    "detail": "Scalping is the shortest-term form of trading. Scalpers enter and exit positions within seconds or minutes, aiming to capture a few ticks of movement many times a day, usually in highly liquid instruments such as index futures, index options or large-company shares. Because each gain is tiny, success depends on very low costs, fast execution, tight bid-ask spreads and strict discipline about cutting losses immediately. Professional firms often scalp with algorithms and servers placed next to the exchange, giving them a speed edge individuals cannot match. For retail traders, brokerage, taxes, exchange charges and slippage can consume most of the profit, and leverage magnifies mistakes. A SEBI study found that about seven in ten individual intraday traders in the equity cash segment lost money in 2022-23. Scalping is often confused with high-frequency market making; both depend on speed, but scalpers take directional bets rather than earning the spread.",
+    "example": "Say a scalper buys 2,000 shares of ABC Ltd at ₹410.10 and sells them two minutes later at ₹410.35. The gross gain is ₹0.25 x 2,000 = ₹500, but if brokerage, taxes and charges total ₹180, the net profit is only ₹320.",
+    "formula": "",
+    "related": [
+      "Intraday trading",
+      "Positional trading",
+      "Slippage",
+      "Bid-ask spread",
+      "High-frequency trading",
+      "Tick size"
+    ]
+  }
+]

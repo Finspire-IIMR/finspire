@@ -1,0 +1,86 @@
+# Builds and deploys the Finspire site to GitHub Pages.
+#   on every push to main, every 15 minutes (fresh markets + news), and by hand (Actions → Site → Run workflow)
+# Steps: build the dictionary → fetch markets → fetch news → assemble dist/ → deploy.
+# The fetchers continue from the files already on the live site (SITE_URL), so the 30-day news archive survives
+# between runs without committing generated data. A failing source never blocks a deploy: the fetchers reuse the last
+# good values, and if a fetcher fails outright the build still ships with what it has. No secrets are needed.
+name: Site
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Work out the public site address
+        env:
+          SITE_URL_VAR: ${{ vars.SITE_URL }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          if [ -n "$SITE_URL_VAR" ]; then
+            url="$SITE_URL_VAR"
+          else
+            owner=$(printf '%s' "$OWNER" | tr '[:upper:]' '[:lower:]')
+            repo_lc=$(printf '%s' "$REPO" | tr '[:upper:]' '[:lower:]')
+            if [ "$repo_lc" = "$owner.github.io" ]; then
+              url="https://$owner.github.io/"
+            else
+              url="https://$owner.github.io/$REPO/"
+            fi
+          fi
+          case "$url" in */) ;; *) url="$url/" ;; esac
+          echo "SITE_URL=$url" >> "$GITHUB_ENV"
+          echo "Site address: $url"
+
+      - name: Build the dictionary
+        run: python scripts/build_glossary.py --out "$RUNNER_TEMP/glossary"
+
+      - name: Fetch markets
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python scripts/fetch_markets.py --glossary "$RUNNER_TEMP/glossary/index.json"
+
+      - name: Fetch news
+        continue-on-error: true
+        timeout-minutes: 8
+        run: python scripts/fetch_news.py --glossary "$RUNNER_TEMP/glossary/index.json"
+
+      - name: Assemble the site
+        run: python scripts/build_site.py --out dist
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

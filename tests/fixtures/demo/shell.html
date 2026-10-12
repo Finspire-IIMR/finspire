@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="fs-root" content="../">
+<meta name="theme-color" content="#141416">
+<meta name="color-scheme" content="dark">
+<title>Shell test · Finspire</title>
+<meta name="description" content="Test page for the shared Finspire runtime (local only).">
+<link rel="icon" type="image/png" href="../assets/img/logo-light.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/css/pages.css">
+<link rel="stylesheet" href="../assets/css/shell.css">
+<style>
+.demo-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.demo-sec{padding-top:24px}
+.demo-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(28px,5vw,72px)}
+.demo-col{display:grid;gap:12px;align-content:start;min-width:0}
+.demo-mt{margin-top:18px}
+.demo-prose{color:var(--ink2);font-size:17px;line-height:1.7;max-width:62ch}
+.demo-prose code{font-family:var(--mono);font-size:14px;background:var(--bg3);padding:1px 6px;border-radius:6px}
+.demo-news{display:grid;gap:0;border-top:1px solid var(--line)}
+.demo-news li{display:grid;gap:4px;padding:16px 0;border-bottom:1px solid var(--line)}
+.demo-news a{font-size:17px;font-weight:600;letter-spacing:-.01em;line-height:1.35}
+.demo-news a:hover{color:#fff}
+.demo-news p{color:var(--muted);font-size:14.5px}
+.demo-board{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.demo-q{display:grid;gap:2px;padding:14px 16px}
+.demo-q b{font-size:20px;font-weight:600;letter-spacing:-.01em}
+.demo-q span:last-child{font-size:13.5px}
+.demo-lbl{justify-self:start;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink2);text-decoration:underline dotted color-mix(in srgb,var(--ink2) 50%,transparent);text-underline-offset:3px;border-radius:4px}
+.demo-res{display:grid;gap:0;counter-reset:r}
+.demo-res li{display:flex;justify-content:space-between;gap:12px;padding:10px 2px;border-bottom:1px solid var(--line);font-size:15px}
+.demo-res li span{color:var(--muted);font-size:13px}
+.demo-skel{padding:18px 20px}
+.demo-store{margin:0;padding:14px 16px;border-radius:14px;background:var(--bg2);border:1px solid var(--line);font-family:var(--mono);font-size:12px;line-height:1.6;color:var(--ink2);white-space:pre-wrap;word-break:break-word;max-height:220px;overflow:auto}
+@media(max-width:860px){.demo-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" data-fs-header>
+  <div class="nav">
+    <div class="wrap nav-in">
+      <a class="logo" href="../index.html" aria-label="Finspire home">
+        <img class="logo-img lt" src="../assets/img/logo-light.png" alt="" width="35" height="34">
+        <img class="logo-img dk" src="../assets/img/logo-dark.png" alt="" width="35" height="34">
+        <span class="wm">Finspire</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a class="nl" href="../index.html#paths">Start here</a>
+        <a class="nl" href="../index.html#repository">Repository</a>
+        <a class="nl" href="../markets/">Markets</a>
+        <a class="nl" href="../dictionary/">Dictionary</a>
+        <a class="nl" href="../library/">Library</a>
+        <a class="nl" href="../index.html#events">Events</a>
+      </nav>
+      <div class="nav-cta">
+        <div class="fs-acct" data-fs-account></div>
+        <a class="btn btn-primary join" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join Finspire</a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="wrap mobile-menu" id="mobileMenu" aria-label="Menu" hidden>
+      <a href="../index.html#paths">Start here</a>
+      <a href="../index.html#repository">Repository</a>
+      <a href="../markets/">Markets</a>
+      <a href="../dictionary/">Dictionary</a>
+      <a href="../library/">Library</a>
+      <a href="../index.html#events">Events</a>
+      <a class="btn btn-primary" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join Finspire</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="wrap">
+    <header class="pg-head">
+      <p class="eyebrow">Shared runtime</p>
+      <h1 class="h1">Shell test page <span class="dim">for the parts every page uses.</span></h1>
+      <p class="lede">Header, account, dictionary tooltips, search, storage and dialogs. Local testing only.</p>
+      <div class="demo-acts">
+        <button class="btn btn-primary" type="button" id="bToast">Show a toast</button>
+        <button class="btn btn-ghost" type="button" id="bModal">Open a dialog</button>
+        <button class="btn btn-ghost" type="button" id="bSignin">Sign-in dialog</button>
+      </div>
+    </header>
+  </div>
+
+  <section class="sec demo-sec">
+    <div class="wrap demo-grid">
+      <div class="demo-col">
+        <p class="eyebrow">Annotated text</p>
+        <h2 class="h3">Prose</h2>
+        <p class="demo-prose" id="prose">The RBI kept the repo rate unchanged as retail inflation cooled. GDP growth beat estimates, the Sensex rallied and bond yields fell 10 basis points. Analysts expect the repo rate to stay on hold. <code>repo rate</code> inside code is left alone.</p>
+        <h2 class="h3 demo-mt">Headlines (links)</h2>
+        <ul class="demo-news" id="news">
+          <li><a href="https://example.com/fpi" target="_blank" rel="noopener noreferrer" id="hl1">FPIs pull money as Brent crude rises; Nifty 50 slips</a><p>Foreign portfolio investors sold shares for a third day as the market cap of listed firms fell.</p></li>
+          <li><a href="https://example.com/fed" target="_blank" rel="noopener noreferrer" id="hl2">Fed signals patience as the yield curve steepens</a><p>Treasury yields rose while traders priced in a slower path of cuts.</p></li>
+          <li><a href="https://example.com/ipo" target="_blank" rel="noopener noreferrer" id="hl3">Three IPOs open this week; recession fears fade</a><p data-no-gloss>Not annotated: IPO, recession.</p></li>
+        </ul>
+      </div>
+      <div class="demo-col">
+        <p class="eyebrow">Labels with data-term</p>
+        <h2 class="h3">Instruments</h2>
+        <div class="demo-board">
+          <div class="card demo-q"><span class="demo-lbl" data-term="nifty-50" tabindex="0">NIFTY 50</span><b class="tnum">24,812.35</b><span class="up tnum">+0.59%</span></div>
+          <div class="card demo-q"><span class="demo-lbl" data-term="sensex" tabindex="0">SENSEX</span><b class="tnum">81,204.10</b><span class="down tnum">&minus;0.12%</span></div>
+          <div class="card demo-q"><span class="demo-lbl" data-term="brent-crude" tabindex="0">Brent</span><b class="tnum">71.40</b><span class="up tnum">+1.02%</span></div>
+          <div class="card demo-q"><span class="demo-lbl" data-term="unknown-term" tabindex="0">Unknown</span><b class="tnum">—</b><span class="muted">Not available right now</span></div>
+        </div>
+        <h2 class="h3 demo-mt">Search</h2>
+        <label class="search"><span class="sr-only">Search the dictionary</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Try repo, GDP, inflaton" autocomplete="off">
+        </label>
+        <ol class="demo-res" id="res" data-no-gloss></ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="light sec" id="band">
+    <div class="wrap demo-grid">
+      <div class="demo-col">
+        <p class="eyebrow">Light band</p>
+        <h2 class="h2">Concepts in today&rsquo;s news</h2>
+        <p class="lede" id="lightProse">Bond yields and the yield curve moved after the Federal Reserve meeting, while foreign investors watched the Sensex.</p>
+        <div class="chips demo-mt" role="tablist" aria-label="Markets">
+          <button class="chip on" type="button">All <span class="n">48</span></button><button class="chip" type="button">Stocks</button><button class="chip" type="button">Bonds &amp; rates</button><button class="chip" type="button">Central banks</button><button class="chip" type="button">Currencies</button><button class="chip" type="button">Commodities &amp; energy</button><button class="chip" type="button">Crypto</button>
+        </div>
+      </div>
+      <div class="demo-col">
+        <p class="eyebrow">Loading state</p>
+        <div class="card demo-skel"><span class="skel skel-line w40"></span><span class="skel skel-line w80"></span><span class="skel skel-line w60"></span></div>
+        <p class="eyebrow demo-mt">Your storage (this browser)</p>
+        <pre class="demo-store" id="storeOut" data-no-gloss></pre>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fs-foot">
+  <div class="wrap">
+    <div class="fcols">
+      <nav class="fcol" aria-label="Learn"><b>Learn</b><a href="../index.html#paths">Start here</a><a href="../index.html#repository">Repository</a><a href="../index.html#events">Events</a></nav>
+      <nav class="fcol" aria-label="Tools"><b>Tools</b><a href="../markets/">Markets &amp; News</a><a href="../dictionary/">Dictionary</a><a href="../library/">Library</a><a href="shell.html">Shell test page</a></nav>
+      <nav class="fcol" aria-label="Club"><b>Club</b><a href="../index.html#about">About Finspire</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">Join the club</a></nav>
+      <nav class="fcol" aria-label="Follow"><b>Follow</b><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://iimranchi.ac.in/" target="_blank" rel="noopener noreferrer">IIM Ranchi</a></nav>
+    </div>
+    <div class="fbot">
+      <div class="fbot-brand">
+        <a class="logo" href="../index.html" aria-label="Finspire home"><img class="logo-img lt" src="../assets/img/logo-light.png" alt="" width="29" height="28">Finspire</a>
+        <p>© <span data-fs-year>2026</span> Finspire, IIM Ranchi</p>
+      </div>
+      <div class="fbot-copy">
+        <p>Finspire is the student-run finance club of the IPM programme at the Indian Institute of Management Ranchi, not a financial advisor or a broker. Nothing on this site is investment advice.</p>
+        <p class="fbot-meta" id="fsFootNote">Prices may be delayed.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../config.js"></script>
+<script src="../assets/js/finspire.js"></script>
+<script>
+(() => {
+  const F = Finspire, $ = s => document.querySelector(s), h = F.dom.h;
+  $("#bToast").addEventListener("click", () => F.ui.toast("Saved. This is a toast.", {kind: "ok"}));
+  $("#bModal").addEventListener("click", () => F.ui.modal({title: "A plain dialog", body: [h("p", null, "Escape, the close button or the backdrop closes it. Focus stays inside while it is open."), h("label", {class: "search"}, h("input", {id: "mInput", placeholder: "Type here"}))], actions: [{label: "Cancel", kind: "ghost"}, {label: "Done", kind: "primary"}]}));
+  $("#bSignin").addEventListener("click", () => F.ui.signInDialog("Sign in to save words and open the Library."));
+  const out = $("#storeOut");
+  const show = () => { const u = F.auth.user(); out.textContent = "namespace: " + (u ? u.sub : "guest") + "\nsaved: " + JSON.stringify(F.store.get("dict.saved", [])) + "\nhistory: " + JSON.stringify(F.store.get("dict.history", []).slice(0, 4).map(x => x.id + " (" + x.via + ")")); };
+  F.on("store", show); F.on("auth", show); show();
+  F.glossary.annotate($("#prose")); F.glossary.annotate($("#lightProse"));
+  document.querySelectorAll("#news li").forEach(li => F.glossary.annotate(li));
+  const res = $("#res");
+  const run = () => { F.dom.clear(res); F.glossary.search($("#q").value, {limit: 6}).forEach(r => res.appendChild(h("li", null, h("b", {"data-term": r.id, tabindex: "0", style: "font-weight:500"}, r.term), h("span", null, F.glossary.LEVELS[r.level])))); };
+  $("#q").addEventListener("input", run);
+  F.glossary.load().then(run, () => {});
+})();
+</script>
+</body>
+</html>
