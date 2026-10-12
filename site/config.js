@@ -6,7 +6,8 @@ window.FINSPIRE_CONFIG = {
   driveApiKey: "",                    // optional: lets the Library list folders shared "anyone with the link"
   admins: [],                         // plain emails allowed to use Edit mode (prefer adminHashes in a public repo)
   adminHashes: [                      // SHA-256 of each admin's lower-case email (ask the site maintainer to add one)
-    "af437f26c4a57fef2b0458fbecef3c24c75f5a327beded63b63c81120e14117c"
+    "af437f26c4a57fef2b0458fbecef3c24c75f5a327beded63b63c81120e14117c",
+    "d888a4c1fb9008f91e705a3b3cb391dee51f9617c0c9198f434c67da83ba94ba"
   ],
   github: { owner: "ctaiuser", repo: "finspire", branch: "main" },  // where Edit mode saves data/site-data.json
   siteUrl: "https://ctaiuser.github.io/finspire/",
