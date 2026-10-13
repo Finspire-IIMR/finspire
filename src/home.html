@@ -858,7 +858,7 @@ em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.0
 .tm::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.05),transparent 50%)}
 .tm:hover{transform:translateY(-4px);border-color:rgba(219,41,48,.55);box-shadow:0 26px 60px -30px rgba(219,41,48,.55)}
 .tm-ph{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#2B2B33,#1A1A1F)}
-.tm-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.tm-ph img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
 .tm:hover .tm-ph img{transform:scale(1.04)}
 .tm-ph i{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-style:normal;font-weight:600;font-size:44px;letter-spacing:.02em;color:#FF8A8F;background:radial-gradient(70% 70% at 50% 30%,rgba(219,41,48,.28),transparent 70%)}
 .tm-ph::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
@@ -1524,7 +1524,7 @@ function renderGallery(){
   const show = i => { cur = (i + GALLERY.length) % GALLERY.length; const p = GALLERY[cur]; img.src = p.src; img.alt = p.alt || p.cap || ""; cap.textContent = p.cap || ""; tag.textContent = p.tag || ""; n.textContent = (cur + 1) + " / " + GALLERY.length; };
   $("#gallery").addEventListener("click", e => { const a = e.target.closest("a.gal-it"); if(!a) return; e.preventDefault(); show(+a.dataset.i); if(!lb.open) lb.showModal(); });
   lb.addEventListener("click", e => { const b = e.target.closest("[data-lb]"); if(b){ const k = b.dataset.lb; if(k === "close") lb.close(); else show(cur + (k === "next" ? 1 : -1)); return; } if(e.target === lb) lb.close(); });
-  lb.addEventListener("keydown", e => { if(e.key === "ArrowRight") show(cur + 1); else if(e.key === "ArrowLeft") show(cur - 1); });
+  lb.addEventListener("keydown", e => { if(e.key === "ArrowRight") show(cur + 1); else if(e.key === "ArrowLeft") show(cur - 1); else if(e.key === "Escape"){ e.preventDefault(); lb.close(); } });
   let tx = null; lb.addEventListener("touchstart", e => { tx = e.touches[0].clientX; }, {passive: true});
   lb.addEventListener("touchend", e => { if(tx == null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if(Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
 })();

@@ -853,7 +853,7 @@
    "role": "",
    "group": "team",
    "url": "https://www.linkedin.com/in/aadyot-karna/",
-   "photo": ""
+   "photo": "assets/img/team/aadyot-karna.jpg"
   },
   {
    "name": "Geetika Issrani",
@@ -861,7 +861,7 @@
    "role": "",
    "group": "team",
    "url": "https://www.linkedin.com/in/geetika-issrani/",
-   "photo": ""
+   "photo": "assets/img/team/geetika-issrani.jpg"
   },
   {
    "name": "Piyush Sharma",
@@ -869,8 +869,81 @@
    "role": "",
    "group": "team",
    "url": "https://www.linkedin.com/in/piyush-sharma-29a18a237/",
-   "photo": ""
+   "photo": "assets/img/team/piyush-sharma.jpg"
   }
  ],
- "gallery": []
+ "gallery": [
+  {
+   "src": "assets/img/events/01-finance-lab-ticker.jpg",
+   "w": 1600,
+   "h": 900,
+   "cap": "Under the live ticker in the finance lab",
+   "tag": "Finance lab",
+   "span": "big",
+   "alt": "Under the live ticker in the finance lab"
+  },
+  {
+   "src": "assets/img/events/02-binomial-model.jpg",
+   "w": 1600,
+   "h": 1200,
+   "cap": "Options pricing: the binomial model",
+   "tag": "Session",
+   "span": "",
+   "alt": "Options pricing: the binomial model"
+  },
+  {
+   "src": "assets/img/events/03-world-indices.jpg",
+   "w": 1600,
+   "h": 1106,
+   "cap": "Reading world indices, live",
+   "tag": "Session",
+   "span": "",
+   "alt": "Reading world indices, live"
+  },
+  {
+   "src": "assets/img/events/04-efficient-frontier.jpg",
+   "w": 1600,
+   "h": 1146,
+   "cap": "The efficient frontier, explained",
+   "tag": "Session",
+   "span": "wide",
+   "alt": "The efficient frontier, explained"
+  },
+  {
+   "src": "assets/img/events/05-planning-the-year.jpg",
+   "w": 1600,
+   "h": 1200,
+   "cap": "Planning the year on the whiteboard",
+   "tag": "Club meet",
+   "span": "big",
+   "alt": "Planning the year on the whiteboard"
+  },
+  {
+   "src": "assets/img/events/06-finance-lab.jpg",
+   "w": 1600,
+   "h": 1204,
+   "cap": "The finance lab: terminals and a live ticker",
+   "tag": "Finance lab",
+   "span": "wide",
+   "alt": "The finance lab: terminals and a live ticker"
+  },
+  {
+   "src": "assets/img/events/07-time-value-of-money.jpg",
+   "w": 1600,
+   "h": 900,
+   "cap": "Time value of money, on the board",
+   "tag": "Session",
+   "span": "",
+   "alt": "Time value of money, on the board"
+  },
+  {
+   "src": "assets/img/events/08-after-hours.jpg",
+   "w": 1600,
+   "h": 1200,
+   "cap": "The walk back after a session",
+   "tag": "After hours",
+   "span": "",
+   "alt": "The walk back after a session"
+  }
+ ]
 }
