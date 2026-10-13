@@ -845,5 +845,32 @@
     "icon": "play"
    }
   ]
- }
+ },
+ "team": [
+  {
+   "name": "Aadyot Karna",
+   "batch": "IPM 2024–29",
+   "role": "",
+   "group": "team",
+   "url": "https://www.linkedin.com/in/aadyot-karna/",
+   "photo": ""
+  },
+  {
+   "name": "Geetika Issrani",
+   "batch": "IPM 2024–29",
+   "role": "",
+   "group": "team",
+   "url": "https://www.linkedin.com/in/geetika-issrani/",
+   "photo": ""
+  },
+  {
+   "name": "Piyush Sharma",
+   "batch": "IPM 2024–29",
+   "role": "",
+   "group": "team",
+   "url": "https://www.linkedin.com/in/piyush-sharma-29a18a237/",
+   "photo": ""
+  }
+ ],
+ "gallery": []
 }

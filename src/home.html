@@ -180,14 +180,25 @@ ul{margin:0;padding:0;list-style:none}
 .hero-form .btn{height:40px}
 .hero-note{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;max-width:92vw;background:rgba(18,18,22,.9);color:#D7D7DE;font-size:12.5px;padding:10px 18px;border-radius:14px;text-align:center;white-space:normal}
 .hero-shade{position:absolute;inset:0;background:var(--bg);opacity:0;z-index:2;pointer-events:none}
-.device-wrap{position:absolute;left:50%;top:50%;width:min(1180px,94vw);z-index:2;transform:translate(-50%,-50%) translateY(var(--dy,24vh)) scale(var(--s,.18));transform-origin:center;will-change:transform;transform-style:preserve-3d}
-.device{background:#0B0B0F;border-radius:20px;padding:12px 12px 0;box-shadow:0 60px 140px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1)}
-.screen{position:relative;aspect-ratio:16/10;max-width:100%;background:#141418;border-radius:10px;overflow:hidden}
+.device-wrap{--rx:8deg;position:absolute;left:50%;top:50%;width:min(1180px,94vw);z-index:2;transform:translate(-50%,-50%) translateY(var(--dy,24vh)) scale(var(--s,.18));transform-origin:center;will-change:transform;transform-style:preserve-3d}
+/* Laptop: a thin dark bezel (lid) with a camera dot, and an aluminium base hinged below it, laid out at 64% of the screen
+   width-ratio and rotated back 70deg in the lid's own perspective so it reads as a keyboard seen from slightly above.
+   The base is absolutely positioned, so the wrapper's box (used by measureHero and the scroll-zoom) stays the lid only. */
+.device{position:relative;background:#0B0B0F;border-radius:18px 18px 10px 10px;padding:1.4% 1.35%;box-shadow:0 60px 140px -30px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.1);perspective:6000px;perspective-origin:50% 50%}
+.device::before{content:"";position:absolute;left:50%;top:5px;width:6px;height:6px;margin-left:-3px;border-radius:50%;background:#1C1E25;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 0 0 1px rgba(0,0,0,.5)}
+.screen{position:relative;aspect-ratio:16/10;max-width:100%;background:#141418;border-radius:8px;overflow:hidden}
 .splash{position:absolute;inset:0;background:radial-gradient(60% 60% at 50% 45%,#1A1A20,#0B0B0F 80%);display:grid;place-items:center;z-index:2;will-change:opacity}
 .splash img{width:34%;max-width:100%;height:auto;filter:drop-shadow(0 20px 60px rgba(219,41,48,.35))}
 html.rm .splash{display:none}
-.deck{height:22px;margin:0 -12px;background:linear-gradient(#e2e3ea,#b4b7c4);border-radius:0 0 26px 26px;position:relative}
-.deck::after{content:"";position:absolute;left:50%;top:0;width:16%;height:7px;transform:translateX(-50%);background:#9ea2b0;border-radius:0 0 8px 8px}
+.base{position:absolute;left:0;right:0;top:100%;aspect-ratio:160/64;transform-origin:50% 0;transform:rotateX(70deg);border-radius:0 0 14px 14px;overflow:hidden;
+  background:linear-gradient(180deg,#8F939E 0,#BFC2CB 5%,#CFD1D8 14%,#D5D7DE 60%,#CACDD5 100%);box-shadow:0 2px 0 rgba(0,0,0,.25),0 30px 50px -10px rgba(0,0,0,.55)}
+.base::before{content:"";position:absolute;left:0;right:0;top:0;height:4.5%;background:linear-gradient(#17181D,#34363E 55%,#6E717B)}
+.base::after{content:"";position:absolute;left:0;right:0;bottom:0;height:7%;background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.06) 45%,rgba(0,0,0,.22) 100%)}
+.keys{position:absolute;left:9.35%;width:81.3%;top:9%;aspect-ratio:15/4;border-radius:6px;background:#C9CCD4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3.5' y='3.5' width='57' height='57' rx='7' fill='%23B6B9C3'/%3E%3C/svg%3E") 0 0/calc(100%/15) auto}
+.keys i{position:absolute;left:33.333%;width:33.334%;bottom:0;height:25%;background:#C9CCD4}
+.keys i::after{content:"";position:absolute;inset:5.5% 1.1%;border-radius:7px;background:#B6B9C3}
+.pad{position:absolute;left:34%;width:32%;top:66%;height:26%;border-radius:8px;background:linear-gradient(#D9DBE2,#D1D3DB);box-shadow:inset 0 0 0 1px rgba(0,0,0,.13),inset 0 1px 0 rgba(255,255,255,.5)}
+.notch{position:absolute;left:46%;width:8%;bottom:0;height:5%;background:#A3A7B1;border-radius:60% 60% 0 0/100% 100% 0 0}
 html.rm .hero{height:auto}
 html.rm .hero-sticky{position:relative;height:auto;padding:calc(var(--hdr) + 40px) 0 60px}
 html.rm .hero-copy{position:relative;top:auto}
@@ -255,54 +266,21 @@ html.rm .hero-note{position:relative;left:auto;bottom:auto;transform:none;margin
 .acc-item.on .dot{opacity:1}
 .acc-item.on .b{max-height:220px;opacity:1;margin:-10px 0 18px;visibility:visible}
 .acc-item .prog{position:absolute;left:0;top:-1px;height:1px;width:100%;background:var(--accent);opacity:0;transform:scaleX(0);transform-origin:left center}
-.acc-item.on .prog{opacity:1;transition:transform var(--dur,7s) linear}
+.acc-item.on .prog{opacity:1;transition:transform .25s linear}
 .product-panel{position:relative}
-.pscreen{position:relative;aspect-ratio:1000/640;max-width:100%;border-radius:18px;overflow:hidden;background:#141418;border:1px solid var(--line2);box-shadow:var(--shadow)}
-.pview{width:1000px;height:640px;position:absolute;left:0;top:0;transform-origin:0 0;transform:scale(var(--s,1));opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;background:#141418;color:#EDEDF1;font-size:13px;padding:26px 30px;display:grid;gap:18px;align-content:start}
-.pview.on{opacity:1;visibility:visible}
-.pv-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
-.pv-h h4{font-size:26px;font-weight:500;letter-spacing:-.02em;color:#fff}
-.pv-h span{font-family:var(--mono);font-size:11.5px;color:#8E8E9A;letter-spacing:.08em;text-transform:uppercase}
-.pv-search{display:flex;align-items:center;gap:10px;height:42px;padding:0 14px;border-radius:10px;background:#1F1F26;border:1px solid rgba(255,255,255,.08);color:#CFCFD8;font-size:14px}
-.pv-search kbd{margin-left:auto;font-family:var(--mono);font-size:11px;padding:2px 7px;border-radius:5px;background:rgba(255,255,255,.08);color:#8E8E9A}
-.pv-chips{display:flex;gap:8px;flex-wrap:wrap}
-.pv-chips span{height:30px;display:inline-flex;align-items:center;padding:0 13px;border-radius:999px;background:#1F1F26;border:1px solid rgba(255,255,255,.08);font-size:12.5px;color:#CFCFD8}
-.pv-chips span.on{background:#F4F4F6;color:#141416;border-color:transparent}
-.pv-list{display:grid;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
-.pv-row{display:grid;grid-template-columns:96px 1fr 120px 70px;align-items:center;gap:14px;padding:12px 16px;border-top:1px solid rgba(255,255,255,.06);background:#19191F}
-.pv-row:first-child{border-top:0}
-.pv-row .f{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#FF6B71}
-.pv-row .t{font-weight:500;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pv-row .s{font-size:12px;color:#8E8E9A;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.pv-row .l{font-size:11.5px;padding:3px 9px;border-radius:999px;justify-self:start;background:rgba(255,255,255,.08);color:#DADAE2}
-.pv-row .l.b{background:rgba(61,190,134,.18);color:#5ED3A0}.pv-row .l.i{background:rgba(219,41,48,.2);color:#FFB3B6}.pv-row .l.a{background:rgba(228,111,106,.18);color:#F09A96}
-.pv-row .o{justify-self:end;font-size:12.5px;color:#fff;font-weight:500}
-.pv-paths{display:grid;gap:10px}
-.pv-path{display:grid;grid-template-columns:1fr auto;gap:6px 16px;padding:14px 18px;border-radius:12px;background:#19191F;border:1px solid rgba(255,255,255,.07)}
-.pv-path .t{font-size:16px;font-weight:500;color:#fff}
-.pv-path .d{font-family:var(--mono);font-size:11px;color:#8E8E9A;text-transform:uppercase;letter-spacing:.08em;align-self:center}
-.pv-path .steps{grid-column:1/-1;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
-.pv-path .steps span{font-size:12px;color:#CFCFD8;background:rgba(255,255,255,.06);padding:4px 10px;border-radius:999px}
-.pv-path .steps i{width:12px;height:1px;background:rgba(255,255,255,.25)}
-.pv-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.pv-card{background:#19191F;border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px 18px;display:grid;gap:10px;align-content:start}
-.pv-card h5{margin:0;font-size:15px;font-weight:500;color:#fff}
-.pv-card .st{display:grid;gap:8px}
-.pv-card .st div{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:center;color:#CFCFD8;font-size:13px}
-.pv-card .st div i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;font-style:normal;font-family:var(--mono);font-size:10.5px;color:#FF6B71}
-.pv-card .st div.done i{background:#3DBE86;border-color:#3DBE86;color:#0D0D11}
-.pv-card .rub{display:grid;gap:8px}
-.pv-card .rub div{display:grid;grid-template-columns:90px 1fr 34px;gap:10px;align-items:center;font-size:12.5px;color:#CFCFD8}
-.pv-card .rub b{height:6px;border-radius:999px;background:rgba(255,255,255,.08);position:relative;overflow:hidden}
-.pv-card .rub b::after{content:"";position:absolute;inset:0;width:var(--w);background:linear-gradient(90deg,#DB2930,#FF6B71);border-radius:999px}
-.pv-card .rub span:last-child{font-family:var(--mono);font-size:11px;color:#8E8E9A;text-align:right}
-.pv-card .ag{display:grid;gap:0}
-.pv-card .ag div{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:9px 0;border-top:1px solid rgba(255,255,255,.06);font-size:13px;color:#CFCFD8}
-.pv-card .ag div:first-child{border-top:0}
-.pv-card .ag span:first-child{font-family:var(--mono);font-size:11px;color:#8E8E9A}
-.pv-card .ag b{font-weight:500;color:#fff;display:block}
+.pscreen{position:relative;aspect-ratio:1280/800;max-width:100%;border-radius:18px;overflow:hidden;background:#141418;border:1px solid var(--line2);box-shadow:var(--shadow)}
+.tour-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:#141418}
+.tour-play{position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:rgba(20,20,24,.84);border:1px solid rgba(255,255,255,.18);display:none;place-items:center;color:#fff;z-index:2;cursor:pointer}
+.tour-play svg{width:26px;height:26px;margin-left:3px}
+.pscreen.still .tour-play{display:grid}
+.pscreen.still .pause{display:none}
 .pause{position:absolute;left:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:rgba(20,20,24,.84);border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;color:#fff;z-index:2}
 .pause svg{width:16px;height:16px}
+/* phones: the panel is hidden; a small link under the accordion loads the same video inline on tap */
+.tour-m{display:none}
+.tour-m .tour-link{font-size:14.5px;min-height:40px;cursor:pointer;background:none;border:0;border-bottom:1px solid var(--line2);padding:0 0 2px;border-radius:0;font:inherit;font-weight:500;color:var(--ink);display:inline-flex;align-items:center;gap:8px}
+.tour-m .tour-link svg{width:14px;height:14px}
+.tour-m video{display:block;width:100%;height:auto;aspect-ratio:1280/800;border-radius:12px;border:1px solid var(--line2);background:#141418}
 
 /* Roles marquee */
 .roles{padding-block:clamp(48px,6vw,90px);border-top:1px solid var(--line)}
@@ -379,7 +357,7 @@ html.rm .hero-note{position:relative;left:auto;bottom:auto;transform:none;margin
 #mnNews .mn-wait.rows i:nth-child(3n+2){height:16px;width:96%}
 #mnNews .mn-wait.rows i:nth-child(3n){height:16px;width:64%}
 /* term card: a title, the category, three lines of meaning */
-#mnTodBody .mn-wait{min-height:336px;padding:4px 0 0}
+#mnTodBody .mn-wait{min-height:300px;padding:4px 0 0}
 #mnTodBody .mn-wait i:nth-child(1){height:30px;width:52%;margin-bottom:6px}
 #mnTodBody .mn-wait i:nth-child(2){height:12px;width:34%;margin-bottom:10px}
 #mnTodBody .mn-wait i:nth-child(4){width:88%}
@@ -728,6 +706,7 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
   .product-copy{gap:24px}
   .product-copy .h2{font-size:28px}
   .product-panel{display:none}
+  .tour-m{display:block}
   .acc-item .prog{display:none}
   .acc-head{padding:15px 0}
   .acc-item.on .b{margin:-7px 0 15px}
@@ -870,6 +849,65 @@ html.editing .fs-toasts{bottom:calc(var(--edbar-h,60px) + 32px + env(safe-area-i
 .h1,.h2{font-family:var(--display);font-weight:600;letter-spacing:-.025em}
 em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.08em;line-height:.9;letter-spacing:-.01em}
 
+/* Our team: senior members (and, over time, alumni) with LinkedIn */
+#team{scroll-margin-top:var(--hdr);padding-block:0 clamp(72px,9vw,130px)}
+.team-head{display:grid;gap:14px;max-width:720px;margin-bottom:36px;padding-top:36px;border-top:1px solid var(--line)}
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;max-width:1000px}
+.team-grid:empty{display:none}
+.tm{position:relative;display:grid;gap:14px;padding:18px 18px 20px;border-radius:22px;background:var(--bg2);border:1px solid var(--line);transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.tm::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.05),transparent 50%)}
+.tm:hover{transform:translateY(-4px);border-color:rgba(219,41,48,.55);box-shadow:0 26px 60px -30px rgba(219,41,48,.55)}
+.tm-ph{position:relative;aspect-ratio:1;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#2B2B33,#1A1A1F)}
+.tm-ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.tm:hover .tm-ph img{transform:scale(1.04)}
+.tm-ph i{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-style:normal;font-weight:600;font-size:44px;letter-spacing:.02em;color:#FF8A8F;background:radial-gradient(70% 70% at 50% 30%,rgba(219,41,48,.28),transparent 70%)}
+.tm-ph::after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.tm-body{display:grid;gap:4px}
+.tm-name{font-family:var(--display);font-size:19px;font-weight:600;letter-spacing:-.015em;color:var(--ink);display:inline-flex;align-items:center;gap:8px;justify-self:start}
+.tm-name svg{width:15px;height:15px;color:#0A66C2;flex:none;transition:transform .25s}
+.tm-name:hover{color:#FF8A8F}
+.tm-name:hover svg{transform:translateY(-1px)}
+.tm-batch{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tm-role{font-size:13.5px;color:var(--ink2)}
+.tm-role:empty{display:none}
+.team-sub{margin-top:36px;padding-top:20px;border-top:1px solid var(--line)}
+.team-sub .eyebrow{margin-bottom:14px;display:block}
+.team-note{margin-top:22px;font-size:14px;color:var(--muted);max-width:60ch}
+@media(max-width:720px){#team{padding-bottom:56px}.team-head{margin-bottom:22px;padding-top:28px}.team-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.tm{padding:12px 12px 14px;border-radius:16px}.tm-ph{border-radius:12px}.tm-name{font-size:16px}.tm-ph i{font-size:34px}}
+@media(max-width:400px){.team-grid{grid-template-columns:1fr}}
+
+/* Events gallery: photos from sessions, the lab and outings (DATA.gallery); replaces the event cards when present */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;grid-auto-flow:dense;gap:12px}
+.gal:empty{display:none}
+.gal-it{position:relative;display:block;border-radius:16px;overflow:hidden;background:var(--bg3);border:1px solid var(--line);cursor:zoom-in;transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s}
+.gal-it.big{grid-column:span 2;grid-row:span 2}.gal-it.wide{grid-column:span 2}.gal-it.tall{grid-row:span 2}
+.gal-it img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s;filter:saturate(.92)}
+.gal-it::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,14,.72),rgba(10,10,14,0) 48%);opacity:.9;transition:opacity .3s}
+.gal-it:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.22);box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.gal-it:hover img{transform:scale(1.04);filter:saturate(1)}
+.gal-it:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.gal-cap{position:absolute;left:14px;right:14px;bottom:12px;z-index:1;display:grid;gap:3px;color:#fff;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.gal-cap small{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:#FF9AA0}
+.gal-cap b{font-weight:500;font-size:14.5px;letter-spacing:-.01em;line-height:1.3}
+.gal-more{margin-top:18px;font-size:14px;color:var(--muted)}
+/* lightbox */
+.lb{border:0;padding:0;background:transparent;max-width:min(96vw,1400px);max-height:96vh;width:auto;color:#fff;overflow:visible}
+.lb::backdrop{background:rgba(8,8,10,.92)}
+.lb figure{margin:0;display:grid;gap:12px;justify-items:center}
+.lb img{max-width:min(96vw,1400px);max-height:84vh;width:auto;height:auto;border-radius:14px;box-shadow:0 40px 120px -40px rgba(0,0,0,.9);display:block}
+.lb figcaption{display:flex;align-items:center;gap:14px;font-size:14px;color:#D7D7DE;min-height:24px;flex-wrap:wrap;justify-content:center}
+.lb figcaption small{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#FF9AA0}
+.lb-btn{position:fixed;top:50%;width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;display:grid;place-items:center;transform:translateY(-50%);transition:background .2s}
+.lb-btn:hover{background:rgba(255,255,255,.2)}
+.lb-btn svg{width:18px;height:18px}
+.lb-prev{left:max(12px,calc(50vw - min(48vw,700px) - 60px))}.lb-next{right:max(12px,calc(50vw - min(48vw,700px) - 60px))}
+.lb-x{position:fixed;top:14px;right:14px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#fff;display:grid;place-items:center}
+.lb-x svg{width:18px;height:18px}
+.lb-n{position:fixed;top:24px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:#9A9AA6}
+@media(max-width:900px){.gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:8px}.gal-it.big{grid-row:span 1}.gal-it.tall{grid-row:span 1}.gal-it{border-radius:12px}.gal-cap{left:10px;right:10px;bottom:9px}.gal-cap b{font-size:13px}.gal-cap small{font-size:9.5px}}
+@media(max-width:720px){.lb-prev{left:8px}.lb-next{right:8px}.lb-btn{width:40px;height:40px}.lb img{max-height:70vh;border-radius:10px}}
+@media(prefers-reduced-motion:reduce){.gal-it,.gal-it img{transition:none}.gal-it:hover{transform:none}.gal-it:hover img{transform:none}}
+
 /* Motion */
 .rv{transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
 .rv.pre{opacity:0;transform:translateY(14px)}
@@ -992,7 +1030,7 @@ em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.0
           </div>
           <div class="splash" id="splash" aria-hidden="true"><img src="assets/img/dash-mock.png" alt="" width="640" height="544" decoding="async"></div>
         </div>
-        <div class="deck" aria-hidden="true"></div>
+        <div class="base" aria-hidden="true"><div class="keys"><i></i></div><div class="pad"></div><div class="notch"></div></div>
       </div>
     </div>
     <div class="hero-shade" id="heroShade" aria-hidden="true"></div>
@@ -1010,50 +1048,15 @@ em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.0
         <div class="acc-item" data-view="2"><button class="acc-head" aria-expanded="false" aria-controls="acc-b2"><span class="prog"></span><span class="dot"></span><span class="t">Competitions &amp; bootcamps</span></button><div class="b" id="acc-b2">Bulls &amp; Bears, the flagship stock pitch, and the term-start Valuation Bootcamp. Build the model, defend the thesis, get judged by people who do this for a living.<br><a class="link" href="#events">See flagship events →</a></div></div>
         <div class="acc-item" data-view="3"><button class="acc-head" aria-expanded="false" aria-controls="acc-b3"><span class="prog"></span><span class="dot"></span><span class="t">Market wrap &amp; alumni</span></button><div class="b" id="acc-b3">A weekly thirty-minute wrap on what moved and why, plus alumni sessions across investment banking, research, asset management and corporate finance.<br><a class="link" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Follow on LinkedIn ↗</a></div></div>
       </div>
+      <div class="tour-m" id="tourM"><button class="tour-link" id="tourLink" type="button">Watch the one-minute tour <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div>
     </div>
     <div class="product-panel rv">
       <div class="pscreen" id="pscreen">
-        <div class="pview on" id="pv0" aria-hidden="true"></div>
-        <div class="pview" id="pv1" aria-hidden="true"></div>
-        <div class="pview" id="pv2" aria-hidden="true">
-          <div class="pv-h"><h4>Bulls &amp; Bears</h4><span>Stock pitch · flagship</span></div>
-          <div class="pv-cols">
-            <div class="pv-card"><h5>How the competition runs</h5><div class="st">
-              <div class="done"><i>✓</i><span>Register your team of two or three</span></div>
-              <div class="done"><i>✓</i><span>Pick one listed company. Long or short.</span></div>
-              <div><i>3</i><span>Submit a ten-slide deck and a one-page model</span></div>
-              <div><i>4</i><span>Campus round: ten minutes, five for questions</span></div>
-              <div><i>5</i><span>Finals in front of an alumni panel</span></div>
-            </div></div>
-            <div class="pv-card"><h5>Judging rubric</h5><div class="rub">
-              <div><span>Thesis</span><b style="--w:30%"></b><span>30</span></div>
-              <div><span>Valuation</span><b style="--w:30%"></b><span>30</span></div>
-              <div><span>Risks</span><b style="--w:20%"></b><span>20</span></div>
-              <div><span>Delivery</span><b style="--w:20%"></b><span>20</span></div>
-            </div><p style="color:#8E8E9A;font-size:12px;margin-top:4px">Judges are alumni from investment banking, equity research and asset management.</p></div>
-          </div>
-          <div class="pv-card"><h5>Valuation Bootcamp</h5><div class="ag">
-            <div><span>Day 1</span><span><b>Three statements</b>Link the P&amp;L, balance sheet and cash flow in Excel, from a real annual report.</span></div>
-            <div><span>Day 2</span><span><b>Forecast and WACC</b>Revenue drivers, margins, reinvestment, cost of capital.</span></div>
-            <div><span>Day 3</span><span><b>DCF and sanity checks</b>Terminal value, sensitivity tables, comparables, and defending the number.</span></div>
-          </div></div>
-        </div>
-        <div class="pview" id="pv3" aria-hidden="true">
-          <div class="pv-h"><h4>Market wrap &amp; alumni</h4><span>Every week · every season</span></div>
-          <div class="pv-cols">
-            <div class="pv-card"><h5>Market wrap · Fridays</h5><div class="ag">
-              <div><span>10 min</span><span><b>What moved</b>Indices, rates, currencies, the sectors that led and lagged.</span></div>
-              <div><span>10 min</span><span><b>Why it moved</b>The data print, the policy decision, the earnings surprise.</span></div>
-              <div><span>10 min</span><span><b>What the desk would do</b>How a trader, an analyst and a treasurer would each read the week.</span></div>
-            </div></div>
-            <div class="pv-card"><h5>Alumni Konnect</h5><div class="ag">
-              <div><span>IB</span><span><b>Investment banking</b>Deal teams, hours, and what the first-year analyst actually builds.</span></div>
-              <div><span>ER</span><span><b>Equity research</b>Coverage, models, initiations and how a call gets made.</span></div>
-              <div><span>AM</span><span><b>Asset management</b>Portfolio construction, risk and how a fund makes a decision.</span></div>
-              <div><span>CF</span><span><b>Corporate finance</b>FP&amp;A, treasury and the path to CFO.</span></div>
-            </div></div>
-          </div>
-        </div>
+        <video class="tour-video" id="tourVideo" muted loop playsinline preload="none" data-poster="assets/video/tour-poster.jpg" width="1280" height="800" aria-hidden="true" tabindex="-1" disablepictureinpicture disableremoteplayback>
+          <source src="assets/video/tour.webm" type="video/webm">
+          <source src="assets/video/tour.mp4" type="video/mp4">
+        </video>
+        <button class="tour-play" id="tourPlay" aria-label="Play the product tour"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
         <button class="pause" id="pause" aria-label="Pause the product tour" aria-pressed="false"><svg viewBox="0 0 24 24" fill="currentColor" id="pauseIcon"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg></button>
       </div>
     </div>
@@ -1241,10 +1244,18 @@ em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.0
 <section id="events">
   <div class="wrap">
     <div class="events-head rv">
-      <span class="eyebrow">Flagship events</span>
-      <h2 class="h2">Where the repository gets <em class="ital">used</em>.</h2>
-      <p class="lede">Dates for each edition go up on LinkedIn and the campus mailer.</p>
+      <span class="eyebrow">Events</span>
+      <h2 class="h2">Sessions, the lab, and the <em class="ital">people</em> in them.</h2>
+      <p class="lede">Moments from Finspire: whiteboard sessions, the finance lab under the live ticker, and the walk back after. Dates for each edition go up on LinkedIn.</p>
     </div>
+    <div class="gal" id="gallery" aria-label="Photos from Finspire sessions and events"></div>
+    <dialog class="lb" id="lightbox" aria-label="Photo viewer">
+      <button class="lb-x" type="button" data-lb="close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      <span class="lb-n" id="lbN"></span>
+      <button class="lb-btn lb-prev" type="button" data-lb="prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 6-6 6 6 6"/></svg></button>
+      <figure><img id="lbImg" alt=""><figcaption><small id="lbTag"></small><span id="lbCap"></span></figcaption></figure>
+      <button class="lb-btn lb-next" type="button" data-lb="next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></button>
+    </dialog>
     <div class="egrid" id="egrid"></div>
   </div>
 </section>
@@ -1272,6 +1283,20 @@ em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.0
     <a class="link" href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Message us on LinkedIn ↗</a>
   </article>
 </div>
+<section id="team">
+  <div class="wrap">
+    <div class="team-head">
+      <span class="eyebrow">Our team</span>
+      <h2 class="h2">The people behind <em class="ital">Finspire</em>.</h2>
+      <p class="lede">The senior members who run the club this year. Say hello on LinkedIn.</p>
+    </div>
+    <div class="team-grid" id="teamGrid"></div>
+    <div class="team-sub" id="teamAlumni" hidden>
+      <span class="eyebrow">Alumni</span>
+      <div class="team-grid" id="alumniGrid"></div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -1280,7 +1305,7 @@ em.ital{font-family:var(--serif);font-style:italic;font-weight:400;font-size:1.0
       <div class="fcol"><b>Repository</b><div id="footTracks" style="display:grid;gap:10px"></div></div>
       <div class="fcol"><b>Start here</b><div id="footPaths" style="display:grid;gap:10px"></div></div>
       <div class="fcol fcol-tools"><b>Tools</b><a href="markets/">Markets &amp; News</a><a href="dictionary/">Dictionary</a><a href="library/">Library</a></div>
-      <div class="fcol fcol-club"><b>Club</b><a href="#about">About Finspire</a><a href="#drive">Finspire Drive</a><a href="#events">Flagship events</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Join the club</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Suggest a resource</a></div>
+      <div class="fcol fcol-club"><b>Club</b><a href="#about">About Finspire</a><a href="#team">Our team</a><a href="#drive">Finspire Drive</a><a href="#events">Flagship events</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Join the club</a><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">Suggest a resource</a></div>
       <div class="fcol"><b>Follow</b><a href="https://www.linkedin.com/company/finspire-iimranchi/" target="_blank" rel="noopener">LinkedIn</a><a href="https://iimranchi.ac.in/" target="_blank" rel="noopener">IIM Ranchi</a></div>
     </div>
     <div class="fbot">
@@ -1371,16 +1396,7 @@ function renderNumbers(){
   $("#statTracksN").dataset.count = Object.keys(TRACKS).length; $("#statTracksN").textContent = Object.keys(TRACKS).length; $("#statPathsN").dataset.count = PATHS.length; $("#statPathsN").textContent = PATHS.length;
 }
 function renderDash(){ $("#dashTracks").innerHTML = Object.entries(TRACKS).map(([k, n]) => `<div class="row"><span><i></i>${esc(n)}</span><b>${counts[k] || 0}</b></div>`).join(""); }
-function renderMocks(){
-  renderDash();
-  const firstK = Object.keys(TRACKS)[1] || Object.keys(TRACKS)[0];
-  $("#pv0").innerHTML = `<div class="pv-h"><h4>Repository</h4><span>${R.length} resources · ${Object.keys(TRACKS).length} tracks</span></div>
-  <div class="pv-search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Search the repository<kbd>⌘ K</kbd></div>
-  <div class="pv-chips"><span>All</span>${Object.entries(TRACKS).map(([k, n]) => `<span class="${k === firstK ? "on" : ""}">${esc(n)}</span>`).join("")}</div>
-  <div class="pv-list">${trackItems(firstK).slice(0, 6).map(r => `<div class="pv-row"><span class="f">${esc(r.f)}</span><span><span class="t" style="display:block">${esc(r.t)}</span><span class="s" style="display:block">${esc(r.s)}</span></span><span class="l ${r.l}">${LEVELS[r.l]}</span><span class="o">Open ↗</span></div>`).join("")}</div>`;
-  $("#pv1").innerHTML = `<div class="pv-h"><h4>Learning paths</h4><span>${PATHS.length} sequences · ordered</span></div>
-  <div class="pv-paths">${PATHS.map(p => `<div class="pv-path"><span class="t">${esc(p.n)}</span><span class="d">${esc(p.dur)}</span><div class="steps">${p.steps.map((t, i) => `${i ? '<i></i>' : ''}<span>${esc(t)}</span>`).join("")}</div></div>`).join("")}</div>`;
-}
+function renderMocks(){ renderDash(); }
 function renderMega(){
   const keys = Object.keys(TRACKS), groups = [];
   for(let i = 0; i < keys.length; i += keys.length > 4 ? 2 : 1) groups.push(keys.slice(i, i + (keys.length > 4 ? 2 : 1)));
@@ -1475,16 +1491,54 @@ function renderFormats(){
 // repository first (what the first scroll reaches), then events, Drive, the mocks and the mega menu as the browser idles.
 // Anything that needs a slice earlier (the mega menu opening, a #hash on arrival, Edit mode) asks for it by name.
 let belowDone = false; const built = {};
+
+/* ---------- Our team (DATA.team: name, batch, role, group "team"|"alumni", url, photo) ---------- */
+function renderTeam(){
+  const list = Array.isArray(DATA.team) ? DATA.team : [];
+  const LI = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0z"/></svg>';
+  const card = m => {
+    const initials = esc(String(m.name || "").split(/\s+/).map(w => w[0] || "").join("").slice(0, 2).toUpperCase());
+    const ok = /^https?:\/\//.test(m.url || "");
+    const name = ok ? `<a class="tm-name" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer" data-own aria-label="${esc(m.name)} on LinkedIn">${esc(m.name)}${LI}</a>` : `<span class="tm-name">${esc(m.name)}</span>`;
+    const photo = m.photo ? `<img src="${esc(m.photo)}" alt="${esc(m.name)}" width="480" height="480" loading="lazy" decoding="async" onerror="this.remove()">` : "";
+    return `<article class="tm gc"><div class="tm-ph"><i aria-hidden="true">${initials}</i>${photo}</div><div class="tm-body">${name}<span class="tm-batch">${esc(m.batch || "")}</span><span class="tm-role">${esc(m.role || "")}</span></div></article>`;
+  };
+  const team = list.filter(m => (m.group || "team") !== "alumni"), alumni = list.filter(m => m.group === "alumni");
+  $("#teamGrid").innerHTML = team.map(card).join("");
+  $("#alumniGrid").innerHTML = alumni.map(card).join("");
+  $("#teamAlumni").hidden = !alumni.length;
+  document.getElementById("team").hidden = !list.length;
+}
+
+
+/* ---------- Events gallery (DATA.gallery: src, w, h, cap, tag, span "big"|"wide"|"tall"|"") ---------- */
+const GALLERY = Array.isArray(DATA.gallery) ? DATA.gallery.filter(g => g && g.src) : [];
+function renderGallery(){
+  const g = $("#gallery"), grid = $("#egrid"); if(!g) return;
+  g.innerHTML = GALLERY.map((p, i) => `<a class="gal-it ${esc(p.span || "")}" href="${esc(p.src)}" data-i="${i}" aria-label="${esc(p.cap || "Photo")}"><img src="${esc(p.src)}" alt="${esc(p.alt || p.cap || "")}" width="${+p.w || 1600}" height="${+p.h || 1200}" loading="lazy" decoding="async"><span class="gal-cap">${p.tag ? `<small>${esc(p.tag)}</small>` : ""}${p.cap ? `<b>${esc(p.cap)}</b>` : ""}</span></a>`).join("");
+  if(grid) grid.hidden = GALLERY.length > 0;   // photos replace the event cards once there are photos
+}
+(function(){
+  const lb = $("#lightbox"); if(!lb) return;
+  const img = $("#lbImg"), cap = $("#lbCap"), tag = $("#lbTag"), n = $("#lbN"); let cur = 0;
+  const show = i => { cur = (i + GALLERY.length) % GALLERY.length; const p = GALLERY[cur]; img.src = p.src; img.alt = p.alt || p.cap || ""; cap.textContent = p.cap || ""; tag.textContent = p.tag || ""; n.textContent = (cur + 1) + " / " + GALLERY.length; };
+  $("#gallery").addEventListener("click", e => { const a = e.target.closest("a.gal-it"); if(!a) return; e.preventDefault(); show(+a.dataset.i); if(!lb.open) lb.showModal(); });
+  lb.addEventListener("click", e => { const b = e.target.closest("[data-lb]"); if(b){ const k = b.dataset.lb; if(k === "close") lb.close(); else show(cur + (k === "next" ? 1 : -1)); return; } if(e.target === lb) lb.close(); });
+  lb.addEventListener("keydown", e => { if(e.key === "ArrowRight") show(cur + 1); else if(e.key === "ArrowLeft") show(cur - 1); });
+  let tx = null; lb.addEventListener("touchstart", e => { tx = e.touches[0].clientX; }, {passive: true});
+  lb.addEventListener("touchend", e => { if(tx == null) return; const dx = e.changedTouches[0].clientX - tx; tx = null; if(Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
+})();
+
 const SLICES = {
   core(){ render(); renderPaths(); renderFormats(); },
-  events: renderEvents, drive: renderDrive, mocks: renderMocks, mega: renderMega
+  events: renderEvents, drive: renderDrive, mocks: renderMocks, mega: renderMega, team: renderTeam, gallery: renderGallery
 };
 function buildSlice(k){ if(built[k]) return; built[k] = true; SLICES[k](); }
 function renderBelow(all){
   if(belowDone) return; belowDone = true;
   buildSlice("core");
   if(all) Object.keys(SLICES).forEach(buildSlice);
-  else { const idle = window.requestIdleCallback || (f => setTimeout(f, 60)); ["events", "drive", "mocks", "mega"].forEach(k => idle(() => buildSlice(k), {timeout: 1500})); }
+  else { const idle = window.requestIdleCallback || (f => setTimeout(f, 60)); ["events", "drive", "mocks", "mega", "team", "gallery"].forEach(k => idle(() => buildSlice(k), {timeout: 1500})); }
 }
 const svgI = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const DRIVE_ICONS = {
@@ -1832,7 +1886,7 @@ new IntersectionObserver(es => { scene.visible = es[0].isIntersecting; if(!scene
 
 /* ---------- Fit fixed-design mocks into their frames ---------- */
 function fit(el, designW){ const frame = el.parentElement; const s = frame.clientWidth / designW; el.style.transform = `scale(${s})`; }
-function fitAll(){ fit($("#dash"), 1100); $$(".pview").forEach(v => fit(v, 1000)); }
+function fitAll(){ fit($("#dash"), 1100); }
 
 /* ---------- Hero scroll zoom ---------- */
 const hero = $("#top"), deviceWrap = $("#deviceWrap"), heroCopy = $("#heroCopy"), heroShade = $("#heroShade");
@@ -1858,7 +1912,7 @@ function measureHero(){
 let devStr = "";
 function applyDevice(){
   if(reduce) return;
-  const t = `translate(-50%,-50%) translateY(${scene.devDy.toFixed(2)}vh) scale(${scene.devS.toFixed(4)}) rotateX(${scene.rx.toFixed(2)}deg) rotateY(${scene.ry.toFixed(2)}deg)`;
+  const t = `translate(-50%,-50%) translateY(${scene.devDy.toFixed(2)}vh) scale(${scene.devS.toFixed(4)}) rotateX(${(scene.rx + 8 * (1 - scene.zoom)).toFixed(2)}deg) rotateY(${scene.ry.toFixed(2)}deg)`;   // 8deg: the lid leans back at rest and flattens as the screen zooms in
   if(t !== devStr){ devStr = t; deviceWrap.style.transform = t; }
 }
 const ease = t => 1 - Math.pow(1 - t, 3);
@@ -1952,29 +2006,52 @@ function drawDashChart(){
 }
 drawDashChart();
 
-/* ---------- Product tour ---------- */
-const accItems = $$(".acc-item"), views = $$(".pview"), pauseBtn = $("#pause");
-let cur = 0, paused = reduce || PHONE.matches, tourTimer = null; const DUR = 7000;
-function showView(i, restart){
+/* ---------- Product tour: the recorded walkthrough in assets/video/ (tools/record-tour.mjs) ---------- */
+const accItems = $$(".acc-item"), pauseBtn = $("#pause"), tourVideo = $("#tourVideo"), tourPlayBtn = $("#tourPlay"), pscreen = $("#pscreen");
+// chapter start times (seconds) in tour.mp4; assets/video/chapters.json (written with the video) overrides these once it loads
+let CHAPTERS = [0, 14.9, 22.6, 28.1], TOUR_DUR = 53.9;
+let cur = 0, userPaused = false, tourLock = false, stillOk = false, tourNear = false, paused = true;
+const PAUSE_ICON = '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>', PLAY_ICON = '<path d="M8 5v14l11-7z"/>';
+const chapterAt = t => { let i = 0; for(let j = 0; j < CHAPTERS.length; j++) if(t + .05 >= CHAPTERS[j]) i = j; return i; };
+const chapterEnd = i => i + 1 < CHAPTERS.length ? CHAPTERS[i + 1] : (tourVideo.duration || TOUR_DUR);
+function setActive(i){
   cur = i;
-  accItems.forEach((b,j) => { b.classList.toggle("on", j===i); b.querySelector(".acc-head").setAttribute("aria-expanded", String(j===i)); const pr = b.querySelector(".prog"); pr.style.transition = "none"; pr.style.transform = "scaleX(0)"; });
-  views.forEach((v,j) => v.classList.toggle("on", j===i));
-  requestAnimationFrame(() => requestAnimationFrame(() => { if(!paused && cur === i){ const pr = accItems[i].querySelector(".prog"); pr.style.transition = ""; pr.style.transform = "scaleX(1)"; } }));
-  clearTimeout(tourTimer);
-  if(!paused) tourTimer = setTimeout(() => showView((cur+1) % views.length), DUR);
+  accItems.forEach((b, j) => { b.classList.toggle("on", j === i); b.querySelector(".acc-head").setAttribute("aria-expanded", String(j === i)); if(j !== i) b.querySelector(".prog").style.transform = "scaleX(0)"; });
 }
-accItems.forEach((b,i) => b.addEventListener("click", e => { if(e.target.closest("a")) return; showView(i); }));
-let userPaused = false;
-pauseBtn.addEventListener("click", () => {
-  paused = !paused; userPaused = paused; pauseBtn.setAttribute("aria-pressed", String(paused));
-  pauseBtn.setAttribute("aria-label", paused ? "Resume the product tour" : "Pause the product tour");
-  $("#pauseIcon").innerHTML = paused ? '<path d="M8 5v14l11-7z"/>' : '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>';
-  showView(cur);
+function setProg(t){ const s = CHAPTERS[cur], e = chapterEnd(cur); accItems[cur].querySelector(".prog").style.transform = `scaleX(${clamp((t - s) / Math.max(e - s, .1), 0, 1)})`; }
+// the video plays only while it can be seen: section near the viewport, tab visible, not on a phone, not in Edit mode,
+// not paused by the visitor; with reduced motion it waits on its poster until the visitor presses play
+function tourSync(){
+  paused = userPaused || tourLock || PHONE.matches || (reduce && !stillOk);
+  pauseBtn.setAttribute("aria-pressed", String(paused)); pauseBtn.setAttribute("aria-label", paused ? "Resume the product tour" : "Pause the product tour");
+  $("#pauseIcon").innerHTML = paused ? PLAY_ICON : PAUSE_ICON;
+  pscreen.classList.toggle("still", reduce && !stillOk);
+  const play = !paused && tourNear && !document.hidden;
+  if(play){ if(tourVideo.paused){ const pr = tourVideo.play(); if(pr && pr.catch) pr.catch(() => {}); } }
+  else if(!tourVideo.paused) tourVideo.pause();
+}
+function tourGo(i){ setActive(i); tourVideo.currentTime = CHAPTERS[i]; setProg(CHAPTERS[i]); if(!reduce || stillOk) userPaused = false; tourSync(); }
+accItems.forEach((b, i) => b.addEventListener("click", e => { if(e.target.closest("a")) return; tourGo(i); }));
+tourVideo.addEventListener("timeupdate", () => { const t = tourVideo.currentTime, i = chapterAt(t); if(i !== cur) setActive(i); setProg(t); });
+tourVideo.addEventListener("seeked", () => setProg(tourVideo.currentTime));
+pauseBtn.addEventListener("click", () => { userPaused = !paused; if(!userPaused && reduce) stillOk = true; tourSync(); });
+tourPlayBtn.addEventListener("click", () => { stillOk = true; userPaused = false; tourSync(); });
+document.addEventListener("visibilitychange", tourSync);
+new IntersectionObserver(es => { tourNear = es[0].isIntersecting; tourSync(); }, {rootMargin: "200px 0px"}).observe($("#about"));
+// the poster and metadata load only where the panel can be seen (phones get the on-tap video instead), and only after the
+// window has loaded: a video that is still fetching holds back the load event (and everything that waits on it)
+addEventListener("load", () => { if(!PHONE.matches && !tourVideo.poster){ tourVideo.poster = tourVideo.dataset.poster; if(tourVideo.preload === "none") tourVideo.preload = "metadata"; } }, {once: true});
+fetch("assets/video/chapters.json").then(r => r.ok ? r.json() : null).then(j => { if(j && Array.isArray(j.chapters) && j.chapters.length === accItems.length){ CHAPTERS = j.chapters.map(c => +c.t || 0); TOUR_DUR = +j.duration || TOUR_DUR; } }).catch(() => {});
+setActive(0); tourSync();
+// phones: the same video, full width under the accordion, created (and so loaded) only when the link is tapped
+$("#tourLink").addEventListener("click", () => {
+  const v = document.createElement("video");
+  v.controls = true; v.muted = true; v.playsInline = true; v.loop = true; v.preload = "auto"; v.poster = tourVideo.dataset.poster; v.width = 1280; v.height = 800;
+  v.setAttribute("aria-label", "A one-minute tour of the Finspire site"); v.setAttribute("disablepictureinpicture", "");
+  [["assets/video/tour.webm", "video/webm"], ["assets/video/tour.mp4", "video/mp4"]].forEach(([s, t]) => { const src = document.createElement("source"); src.src = s; src.type = t; v.appendChild(src); });
+  $("#tourLink").replaceWith(v); const pr = v.play(); if(pr && pr.catch) pr.catch(() => {});
 });
-if(paused){ $("#pauseIcon").innerHTML = '<path d="M8 5v14l11-7z"/>'; pauseBtn.setAttribute("aria-pressed","true"); }
-showView(0);
-document.addEventListener("visibilitychange", () => { if(document.hidden) clearTimeout(tourTimer); else showView(cur); });
-PHONE.addEventListener("change", e => { lastP = -1; measureHero(); onScroll(); if(reduce) return; if(ED.on){ ED.wasPaused = e.matches || userPaused; return; } paused = e.matches || userPaused; pauseBtn.setAttribute("aria-pressed", String(paused)); pauseBtn.setAttribute("aria-label", paused ? "Resume the product tour" : "Pause the product tour"); $("#pauseIcon").innerHTML = paused ? '<path d="M8 5v14l11-7z"/>' : '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>'; showView(cur); });
+PHONE.addEventListener("change", () => { lastP = -1; measureHero(); onScroll(); tourSync(); });
 
 /* ---------- Count-up stats ---------- */
 (function(){
@@ -2216,7 +2293,7 @@ if(!reduce && "IntersectionObserver" in window){
 
 /* ---------- Edit mode: change the page in place, then publish ---------- */
 S.copy = S.copy || {};
-const ED_EXCL = ".credit,#mnBoard,#mnNews,#mnTod,.mn-ctas,.mn-lbl,.fcol-tools,.gl-term,.gl-tip,.fs-acct,.fs-toasts,.fs-modal,#grid,#tiles,#pwList,#pwMap,#driveGrid,#driveCtas,#driveCount,footer a[href='#drive'],#egrid,#chips,#megaCols,#marq,.device-wrap,.pscreen,.field-stage,.repo-bar,.hero-copy,.announce,.mega,.mobile-menu,.nav,.stat .n,#footTracks,#footPaths,#footMail,.fbot > div,.acc-head,.ed-bar,.ed-dialog,.toast,.edit-fab,.mini,.stack,.ill,.candles";
+const ED_EXCL = "#gallery,#lightbox,footer a[href='#team'],#teamGrid,#alumniGrid,.credit,#mnBoard,#mnNews,#mnTod,.mn-ctas,.mn-lbl,.fcol-tools,.gl-term,.gl-tip,.fs-acct,.fs-toasts,.fs-modal,#grid,#tiles,#pwList,#pwMap,#driveGrid,#driveCtas,#driveCount,footer a[href='#drive'],#egrid,#chips,#megaCols,#marq,.device-wrap,.pscreen,.tour-m,.field-stage,.repo-bar,.hero-copy,.announce,.mega,.mobile-menu,.nav,.stat .n,#footTracks,#footPaths,#footMail,.fbot > div,.acc-head,.ed-bar,.ed-dialog,.toast,.edit-fab,.mini,.stack,.ill,.candles";
 const ED_TAGS = "h2,h3,h4,p,li,span,small,b,em,blockquote,figcaption,a,.acc-item .b,.stat .l";
 const INLINE_OK = new Set(["SPAN","BR","B","EM","STRONG","I","A"]);
 const simpleEl = el => el.textContent.trim() && [...el.childNodes].every(n => n.nodeType === 3 || (n.nodeType === 1 && INLINE_OK.has(n.tagName.toUpperCase())));
@@ -2283,8 +2360,7 @@ function setEdit(on){
   ED.on = on; document.documentElement.classList.toggle("editing", on);
   ED.els.forEach(el => on ? el.setAttribute("contenteditable", "true") : el.removeAttribute("contenteditable"));
   [["h1", "s.headline"], ["sub", "s.subline"], ["annName", "s.announcement"]].forEach(([id, p]) => { const el = document.getElementById(id); if(on){ el.setAttribute("contenteditable", "true"); el.dataset.b = p; } else { el.removeAttribute("contenteditable"); delete el.dataset.b; } });
-  if(on){ ED.wasPaused = paused; paused = true; clearTimeout(tourTimer); $("#pauseIcon").innerHTML = '<path d="M8 5v14l11-7z"/>'; pauseBtn.setAttribute("aria-pressed", "true"); }
-  else { paused = ED.wasPaused ?? paused; $("#pauseIcon").innerHTML = paused ? '<path d="M8 5v14l11-7z"/>' : '<rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/>'; pauseBtn.setAttribute("aria-pressed", String(paused)); showView(cur); }
+  tourLock = on; tourSync();
   renderAll();
   bar.hidden = !on; fab.hidden = on || !ED.art;
   fab.lastChild.textContent = ED.dirty ? "Edit site · unsaved changes" : "Edit site";

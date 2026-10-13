@@ -57,7 +57,9 @@ async function open(url, opts = {}) {
   await p.goto(url, opts.wait || 2600);
   return p;
 }
-const done = p => { allErrors.push(...p.errors); p.close(); };
+// close the tab for real (not just its socket): tabs left behind keep their copy of the tour video open, and a dozen of
+// them starve the next tab's media requests on the local server, so its video never loads
+const done = async p => { allErrors.push(...p.errors); let id = null; try { id = (await p.send("Target.getTargetInfo")).targetInfo.targetId; } catch {} p.close(); if (id) await fetch(`http://127.0.0.1:${port}/json/close/${id}`).catch(() => {}); };
 
 // ---- helpers --------------------------------------------------------------------------------------------------------
 const center = (p, sel) => p.js(`(()=>{const e=document.querySelector(${JSON.stringify(sel)}); if(!e) return null;
@@ -194,7 +196,7 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
   await p.js("document.dispatchEvent(new KeyboardEvent('keydown',{key:'Escape'})); 1"); await sleep(200);
   check("burger opens the menu (aria-expanded, label) and Escape closes it", mm.open && mm.exp === "true" && mm.label === "Close menu" && (await q(p, "document.getElementById('mobileMenu').hidden")), mm);
   check("no console errors in the desktop run", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -233,7 +235,7 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
     await p.send("Input.dispatchMouseEvent", { type: "mouseMoved", x: 5, y: 450 }); await sleep(500);
   } else check("hovering a highlighted headline term opens its dictionary tooltip", false, "no .gl-term in the teaser");
   check("Markets & News: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 
 // real data: live numbers, real headlines, real dictionary
@@ -244,7 +246,7 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
   const r = await q(p, "({nums: (document.getElementById('mnBoard').textContent.match(/\\d[\\d,]*\\.\\d+/g) || []).length, heads: document.querySelectorAll('#mnNews a[href^=\"http\"]').length, tod: document.querySelector('#mnTod h3')?.textContent || document.querySelector('#mnTod .mn-empty')?.textContent})");
   check("real data: numbers, three real headlines and a term of the day", ok && r.nums >= 6 && r.heads >= 3 && !!r.tod, r);
   check("real data: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -276,7 +278,7 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
   await goTo(p, "#paths", 40); await sleep(300);
   await shot(p, "desktop-account-light.png");
   check("account: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 {
   const p = await open(base, { width: 1280, height: 900 });
@@ -285,7 +287,7 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
   const gd = await q(p, `({lede: document.querySelector('#drive .lede').textContent, links: [...document.querySelectorAll('#driveGrid a.df, #driveCtas a')].map(a => a.getAttribute('href')), lib: document.querySelectorAll('#drive a[href*="library/"]').length})`);
   check("Drive, no client id: folders open in Google Drive (the Library can't open files yet) and the copy doesn't promise sign-in", gd.lib === 0 && gd.links.length > 0 && gd.links.every(h => /^https:\/\/drive\.google\.com\//.test(h)) && !/right here/.test(gd.lede), gd);
   check("edit mode: hidden for visitors", await q(p, "document.getElementById('editFab').hidden"));
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -322,7 +324,7 @@ const NAV = ["Start here", "Repository", "Markets", "Dictionary", "Library", "Ev
     const c=st.querySelector('.term-card'); if(c && c.querySelector('a').getAttribute('href').startsWith('./dictionary/')) return 1; } } return 0})()`);
   await sleep(300); await shot(p, "desktop-field-card.png");
   check("Drive + field: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -349,6 +351,8 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   await p.js(MOCK);
   await click(p, "#editFab"); await sleep(400);
   check("edit mode: in-place editing switches on", await q(p, "document.documentElement.classList.contains('editing') && !document.getElementById('edBar').hidden && document.querySelectorAll('[contenteditable=true]').length > 20"));
+  const edTour = await q(p, "({paused, lock: tourLock, pressed: document.getElementById('pause').getAttribute('aria-pressed'), playing: !document.getElementById('tourVideo').paused, link: document.getElementById('tourLink').getAttribute('contenteditable')})");
+  check("edit mode: the tour video is held (pause button pressed) and the phone tour link is not editable", edTour.paused && edTour.lock && edTour.pressed === "true" && !edTour.playing && edTour.link === null, edTour);
   const newSection = await q(p, "[...document.querySelectorAll('#markets-news [data-ck]')].map(e => e.dataset.ck)");
   const keys = await q(p, `({drive: document.querySelector('#drive .lede').dataset.ck, about: document.querySelector('#about .h2').dataset.ck, quote: document.querySelector('.quote blockquote').dataset.ck,
     foot: [...document.querySelectorAll('footer [data-ck]')].map(e => e.dataset.ck + '=' + e.textContent.trim().slice(0, 12).trim()).join(','), tools: document.querySelectorAll('.fcol-tools [data-ck]').length,
@@ -431,9 +435,10 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   await p.js("document.querySelector('#edDialog [data-close]')?.click(); document.querySelector('[data-ed=\"done\"]').click(); 1"); await sleep(400);
   const d1 = await q(p, "({anchor: [...document.querySelectorAll('#driveGrid a.df')].map(a => a.getAttribute('href')).find(h => h.includes('EXAMPLE_FOLDER_ID_123')), editing: document.documentElement.classList.contains('editing'), fab: !document.getElementById('editFab').hidden})");
   check("after editing: the pasted folder opens in the Library and Edit site is back", d1.anchor === "./library/?f=EXAMPLE_FOLDER_ID_123" && !d1.editing && d1.fab, d1);
+  check("after editing: the tour is released again (not locked, button reads Pause)", await q(p, "!tourLock && !paused && document.getElementById('pause').getAttribute('aria-pressed') === 'false'"));
   check("edit mode: no console errors", p.errors.length === 0, p.errors);
   await p.js("localStorage.removeItem('fs.gh.token'); 1");
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -448,6 +453,13 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
     acctHidden: document.getElementById('hdrAcct').hidden})`);
   check("phone: announcement, tour mock, repo explainer and tiles hidden; chips in one row; tour paused", ph.announce === "none" && ph.panel === "none" && ph.steps === "none" && ph.tiles === "none" && ph.chips === "nowrap" && ph.chipsH < 60 && ph.paused === true, ph);
   check("phone: header has the burger; no account control for the local guest", ph.burger !== "none" && ph.acct === 0 && ph.acctHidden, ph);
+  await goTo(p, "#acc", 120);
+  const tl = await q(p, "(()=>{const l=document.getElementById('tourLink'), r=l.getBoundingClientRect(); return {text: l.textContent.trim(), h: Math.round(r.height), left: Math.round(r.left), visible: r.width > 0, loaded: performance.getEntriesByType('resource').filter(e => /assets\\/video\\//.test(e.name) && !/chapters\\.json/.test(e.name)).map(e => e.name.split('/').pop()), preload: document.getElementById('tourVideo').preload, poster: document.getElementById('tourVideo').poster}})()");
+  check("phone: 'Watch the one-minute tour' link under the accordion (≥ 40 px, 16 px gutter); the hidden panel loads neither the video nor its poster", /^Watch the one-minute tour/.test(tl.text) && tl.h >= 40 && tl.left === 16 && tl.visible && tl.loaded.length === 0 && tl.preload === "none" && tl.poster === "", tl);
+  await tap(p, "#tourLink"); await sleep(2500);
+  const tv = await q(p, "(()=>{const v=document.querySelector('#tourM video'); if(!v) return {none: true}; const r=v.getBoundingClientRect(); return {w: Math.round(r.width), h: Math.round(r.height), left: Math.round(r.left), ratio: +(r.width / r.height).toFixed(2), controls: v.controls, muted: v.muted, playing: !v.paused && v.currentTime > 0, src: v.currentSrc.split('/').pop(), link: !!document.getElementById('tourLink'), ov: document.documentElement.scrollWidth > innerWidth}})()");
+  check("phone: tapping the link swaps it for the video, full width (358 px, 16:10) with controls, playing muted, no sideways scroll", !tv.none && tv.w === 358 && tv.ratio === 1.6 && tv.left === 16 && tv.controls && tv.muted && tv.playing && /^tour\.(webm|mp4)$/.test(tv.src) && !tv.link && !tv.ov, tv);
+  await shot(p, "phone-tour-video.png");
   await tap(p, "#burger"); await sleep(300);
   const mob = await q(p, "({open: !document.getElementById('mobileMenu').hidden, links: [...document.querySelectorAll('#mobileMenu a')].map(a => a.textContent.trim()), h: Math.min(...[...document.querySelectorAll('#mobileMenu a')].map(a => a.getBoundingClientRect().height))})");
   check("phone: burger menu lists the same links, each at least 40 px tall", mob.open && JSON.stringify(mob.links.slice(0, 6)) === JSON.stringify(NAV) && mob.h >= 40, mob);
@@ -478,7 +490,7 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   const dk = await q(p, "({announce: getComputedStyle(document.querySelector('.announce')).display, panel: getComputedStyle(document.querySelector('.product-panel')).display, tiles: getComputedStyle(document.getElementById('tiles')).display, chips: getComputedStyle(document.getElementById('chips')).flexWrap, paused, menu: document.getElementById('mobileMenu').hidden})");
   check("desktop after rotating back: everything restored and the tour resumes", dk.announce !== "none" && dk.panel !== "none" && dk.tiles !== "none" && dk.chips === "wrap" && dk.paused === false, dk);
   check("phone: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 {
   // phone, signed in: account avatar fits, menu full width
@@ -490,7 +502,7 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   check("phone: account menu opens inside the 16 px gutters", m.open && m.left === 16 && m.right === 16, m);
   await shot(p, "phone-account-menu.png");
   check("phone, signed in: no overflow, no console errors", (await noOverflow(p)) && p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -506,7 +518,7 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   check("features off: Markets & News hidden and not mounted; Markets/Library links hidden; no account control", f.sec && !f.mounted && f.nav.join("|") === "Start here|Repository|Dictionary|Events" && f.acct, f);
   check("features off: Drive links open Google Drive again (no Library links)", f.drive.length > 0 && f.drive.every(h => /^https:\/\/drive\.google\.com\//.test(h)) && f.lib === 0, f);
   check("features off: no overflow, no console errors", (await noOverflow(p)) && p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -520,7 +532,62 @@ const decodePut = `(()=>{const c=__gh.calls.filter(x=>x.method==='PUT').pop(); i
   check("reduced motion: Markets & News still mounts", await waitFor(p, "document.querySelector('#mnTodBody .mn-tod-in') && document.querySelectorAll('#mnNews a[href^=\"https://\"]').length >= 3", 8000));
   await shot(p, "desktop-reduced-motion.png");
   check("reduced motion: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
+}
+
+// =====================================================================================================================
+// 7b. Product tour: the recorded walkthrough (assets/video/tour.*) wired to the accordion
+// =====================================================================================================================
+const TOUR = "(()=>{const v=document.getElementById('tourVideo'); return {t: +v.currentTime.toFixed(2), playing: !v.paused, src: v.currentSrc.split('/').pop(), on: [...document.querySelectorAll('.acc-item')].findIndex(x => x.classList.contains('on')), expanded: [...document.querySelectorAll('.acc-head')].map(b => b.getAttribute('aria-expanded')).join(), prog: document.querySelector('.acc-item.on .prog').style.transform, pressed: document.getElementById('pause').getAttribute('aria-pressed'), label: document.getElementById('pause').getAttribute('aria-label'), still: document.getElementById('pscreen').classList.contains('still'), playBtn: getComputedStyle(document.getElementById('tourPlay')).display, ratio: +(document.getElementById('pscreen').clientWidth / document.getElementById('pscreen').clientHeight).toFixed(2), cover: getComputedStyle(v).objectFit, poster: v.poster.split('/').pop(), ch: CHAPTERS}})()";
+for (const width of [1440, 1280]) {
+  const p = await open(base, { width, height: 900 });
+  await sleep(400);
+  const t0 = await q(p, TOUR);
+  check(`tour ${width}: before the section is near, the video waits (poster set, metadata only, not playing)`, !t0.playing && t0.t === 0 && t0.poster === "tour-poster.jpg" && t0.on === 0 && t0.expanded === "true,false,false,false" && t0.ratio === 1.6 && t0.cover === "cover", t0);
+  await goTo(p, "#about", 60); await sleep(2500);
+  const t1 = await q(p, TOUR);
+  check(`tour ${width}: scrolled into view, the video plays by itself (webm or mp4), chapter 1 lit, progress bar filling`, t1.playing && t1.t > 1 && /^tour\.(webm|mp4)$/.test(t1.src) && t1.on === 0 && /^scaleX\(0\.[0-9]+\)$/.test(t1.prog) && t1.pressed === "false" && !t1.still && t1.playBtn === "none" && JSON.stringify(t1.ch) === "[0,14.9,22.6,28.1]", t1);
+  await shot(p, `tour-${width}.png`);
+  // the accordion follows the video across a chapter boundary
+  await p.js("document.getElementById('tourVideo').currentTime = 14.5; 1"); await sleep(1500);
+  const t2 = await q(p, TOUR);
+  check(`tour ${width}: playing past 14.9 s moves the highlight to chapter 2 on its own`, t2.on === 1 && t2.expanded === "false,true,false,false" && t2.t >= 15 && t2.t < 18, t2);
+  // clicking a chapter seeks there and keeps playing
+  await click(p, ".acc-item:nth-child(4) .acc-head"); await sleep(900);
+  const t3 = await q(p, TOUR);
+  check(`tour ${width}: clicking 'Market wrap & alumni' seeks to its chapter (28.1 s) and plays on`, t3.on === 3 && t3.t >= 28.1 && t3.t < 31 && t3.playing, t3);
+  await shot(p, `tour-${width}-chapter4.png`);
+  // pause button
+  await click(p, "#pause"); await sleep(400);
+  const t4 = await q(p, TOUR); const tAt = t4.t; await sleep(700);
+  const t5 = await q(p, TOUR);
+  check(`tour ${width}: the pause button stops the video (aria-pressed, 'Resume' label) and the time stands still`, !t4.playing && t4.pressed === "true" && /Resume/.test(t4.label) && t5.t === tAt, { t4, t5 });
+  await click(p, "#pause"); await sleep(600);
+  const t6 = await q(p, TOUR);
+  check(`tour ${width}: pressing it again resumes from the same place`, t6.playing && t6.pressed === "false" && t6.t > tAt && t6.t < tAt + 2, t6);
+  // leaving the section pauses; coming back resumes without a reset
+  await p.js("scrollTo({top: 0, behavior: 'instant'}); 1"); await sleep(600);
+  const t7 = await q(p, TOUR);
+  await goTo(p, "#about", 60); await sleep(900);
+  const t8 = await q(p, TOUR);
+  check(`tour ${width}: scrolling away pauses the video (button stays 'Pause'); scrolling back resumes where it was`, !t7.playing && t7.pressed === "false" && t8.playing && t8.t >= t7.t && t8.t < t7.t + 3, { t7, t8 });
+  check(`tour ${width}: no overflow, no console errors`, (await noOverflow(p)) && p.errors.length === 0, p.errors);
+  await done(p);
+}
+{
+  const p = await open(base, { width: 1280, height: 900, reducedMotion: true });
+  await goTo(p, "#about", 60); await sleep(1200);
+  const r0 = await q(p, TOUR);
+  check("tour, reduced motion: the poster waits with a centred play button, nothing plays, the small pause button is hidden", !r0.playing && r0.t === 0 && r0.still && r0.playBtn === "grid" && (await q(p, "getComputedStyle(document.getElementById('pause')).display")) === "none", r0);
+  await shot(p, "tour-reduced-motion.png");
+  await click(p, ".acc-item:nth-child(2) .acc-head"); await sleep(900);
+  const r1 = await q(p, TOUR);
+  check("tour, reduced motion: a chapter click still seeks (frame at 14.9 s) without playing", r1.on === 1 && r1.t === 14.9 && !r1.playing && r1.still, r1);
+  await click(p, "#tourPlay"); await sleep(1500);
+  const r2 = await q(p, TOUR);
+  check("tour, reduced motion: pressing play starts the video from that chapter and removes the overlay", r2.playing && r2.t > 14.9 && r2.t < 18 && !r2.still && r2.playBtn === "none", r2);
+  check("tour, reduced motion: no console errors", p.errors.length === 0, p.errors);
+  await done(p);
 }
 
 // =====================================================================================================================
@@ -552,17 +619,17 @@ const MOUNTED = "document.querySelectorAll('#mnNews a[href^=\"https://\"]').leng
   check("hero: the canvas animates at the top, stops once the shade has covered it, and resumes on the way back", h0.raf && !h0.shaded && !h1.raf && h1.shaded && h1.shade === "1" && h2.raf && !h2.shaded && !h2.low, { h0, h1, h2 });
   // semantics
   const a = await q(p, `({tabs: document.querySelectorAll('[role=tab],[role=tablist]').length, group: document.getElementById('pwList').getAttribute('role'), pressed: [...document.querySelectorAll('#pwList .pw-item')].map(b => b.getAttribute('aria-pressed')).join(),
-    megaH: document.querySelectorAll('#mega h4, #mega h5').length, megaP: document.querySelectorAll('#mega p.h4, #mega p.h5').length, mock: document.getElementById('deviceWrap').getAttribute('aria-hidden'), pv: [...document.querySelectorAll('.pview')].every(v => v.getAttribute('aria-hidden') === 'true'),
+    megaH: document.querySelectorAll('#mega h4, #mega h5').length, megaP: document.querySelectorAll('#mega p.h4, #mega p.h5').length, mock: document.getElementById('deviceWrap').getAttribute('aria-hidden'), pv: document.getElementById('tourVideo').getAttribute('aria-hidden') === 'true' && document.querySelectorAll('.pview').length === 0,
     openUnlabelled: [...document.querySelectorAll('a.open')].filter(x => !/^Open .+ \\(.+\\)$/.test(x.getAttribute('aria-label') || '')).length, openN: document.querySelectorAll('a.open').length,
     join: document.querySelector('.nav-cta .btn-primary').getAttribute('aria-label'), joinTitle: document.querySelector('.nav-cta .btn-primary').getAttribute('title'),
     mobJoin: (() => { const l = document.querySelector('#mobileMenu a:last-child'); return l.className + '|' + l.getAttribute('aria-label'); })(),
     acc: (() => { const i = document.querySelectorAll('.acc-item')[1], b = i.querySelector('.acc-head'); return [Math.round(i.getBoundingClientRect().height), Math.round(b.getBoundingClientRect().height), getComputedStyle(i).padding]; })(),
-    pview: getComputedStyle(document.querySelector('.pview')).transitionDuration, accB: getComputedStyle(document.querySelector('.acc-item .b')).transitionDuration.split(',')[0].trim()})`);
+    accB: getComputedStyle(document.querySelector('.acc-item .b')).transitionDuration.split(',')[0].trim()})`);
   check("starting points: a group of toggle buttons (aria-pressed), no half-built tabs pattern", a.tabs === 0 && a.group === "group" && a.pressed === "true,false,false,false", a);
-  check("headings: the laptop mock and product-tour mocks are aria-hidden; the mega menu uses styled <p>, not h4/h5", a.megaH === 0 && a.megaP >= 7 && a.mock === "true" && a.pv, a);
+  check("headings: the laptop mock and the tour video are aria-hidden (no mock views left); the mega menu uses styled <p>, not h4/h5", a.megaH === 0 && a.megaP >= 7 && a.mock === "true" && a.pv, a);
   check("repository + paths: every 'Open' link is named 'Open <title> (<source>)'", a.openN >= 5 && a.openUnlabelled === 0, a);
   check("join buttons: header 'Join Finspire' says it opens LinkedIn in a new tab; the burger menu ends in the red button", /LinkedIn.*new tab/.test(a.join) && a.joinTitle === a.join && a.mobJoin === "btn btn-primary|Join Finspire on LinkedIn (opens in a new tab)", a);
-  check("product tour: the accordion row is the button (hit area = whole row) and the panel transitions in 0.3 s", Math.abs(a.acc[0] - a.acc[1]) <= 1 && a.acc[1] >= 44 && a.acc[2] === "0px" && a.pview === "0.3s, 0.3s" && a.accB === "0.3s", a);
+  check("product tour: the accordion row is the button (hit area = whole row) and its body opens in 0.3 s", Math.abs(a.acc[0] - a.acc[1]) <= 1 && a.acc[1] >= 44 && a.acc[2] === "0px" && a.accB === "0.3s", a);
   const cp = await q(p, "({step1: document.querySelector('.rstep span').textContent, step2: document.querySelector('.rstep:nth-child(2) b').textContent, drive: [...document.querySelectorAll('#driveSteps > div')].map(d => d.textContent.trim()), count: document.getElementById('driveCount').textContent, linked: DRIVE.folders.filter(f => /^https?:\\/\\/\\S+$/.test(f.u || '')).length, n: DRIVE.folders.length})");
   check("copy: repository step 1 says what to do (no 'Click'); Drive steps are plain with typographic quotes", cp.step1 === "Open a track to see its entries in the order we would learn them." && cp.step2 === "Begin at “Start here”" &&
     /^1Press “Add your files”/.test(cp.drive[0]) && /“Topic – Your name – Year”/.test(cp.drive[1]) && /^3The team files it/.test(cp.drive[2]) && !/It's above/.test(cp.drive[0]), cp);
@@ -577,7 +644,7 @@ const MOUNTED = "document.querySelectorAll('#mnNews a[href^=\"https://\"]').leng
   const qx2 = await q(p, "({hidden: document.getElementById('qx').hidden, v: document.getElementById('q').value, q: state.q, focus: document.activeElement.id, n: document.querySelectorAll('#grid .rrow').length})");
   check("repository search: a 40 px clear (×) button appears while typing, empties the search, re-renders and keeps focus in the field", qx1.shown && qx1.w === 40 && qx1.h === 40 && qx1.label === "Clear search" && qx2.hidden && qx2.v === "" && qx2.q === "" && qx2.focus === "q" && qx2.n !== qx1.n, { qx1, qx2 });
   check("smooth UI (desktop): no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 for (const [name, opts] of [["desktop", { width: 1280, height: 900 }], ["phone", { width: 390, height: 844, mobile: true, scale: 2 }]]) {
   // real build data: the placeholders are sized to the live board (3 × 2 tiles + status line), three two-line headlines and a term card
@@ -587,7 +654,7 @@ for (const [name, opts] of [["desktop", { width: 1280, height: 900 }], ["phone",
   const ok = await waitFor(p, MOUNTED.replace("https://", "http"), 10000); await sleep(1500);
   const lv = await p.js(MN);
   check(`${name}, real data: Markets & News keeps its height when the live widgets replace the placeholders (≤ 40 px)`, ok && Math.abs(lv.sec - ph.sec) <= 40 && Math.abs(lv.paths - ph.paths) <= 40 && Math.abs(lv.board - ph.board) <= 30, { placeholder: ph, live: lv });
-  done(p);
+  await done(p);
 }
 {
   const p = await open(base, { width: 390, height: 844, mobile: true, scale: 2 });
@@ -615,7 +682,7 @@ for (const [name, opts] of [["desktop", { width: 1280, height: 900 }], ["phone",
   const op = await q(p, "(()=>{const r=document.querySelector('#track-val .rrow'); const o=r.querySelector('a.open').getBoundingClientRect(), t=r.querySelector('a.rt').getBoundingClientRect(); return {openH: Math.round(o.height), title: Math.round(t.height), pw: Math.round(document.querySelector('.pw-step .open').getBoundingClientRect().height)}})()");
   check("phone: 'Open' links in repository rows and path steps are 44 px tall; the row title is a link", op.openH >= 44 && op.pw >= 44 && op.title > 0, op);
   check("phone: no sideways scroll, no console errors", (await noOverflow(p)) && p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 {
   // landscape phone 844 × 390: no overlap in the hero, the menu scrolls
@@ -627,13 +694,13 @@ for (const [name, opts] of [["desktop", { width: 1280, height: 900 }], ["phone",
   const mm = await q(p, "(()=>{const m=document.getElementById('mobileMenu'); const ev=[...m.querySelectorAll('a')].find(a => a.textContent.trim() === 'Events').getBoundingClientRect(); return {scrolls: m.scrollHeight > m.clientHeight, fits: m.getBoundingClientRect().bottom <= innerHeight + 1, eventsVisible: ev.top >= 0 && ev.bottom <= innerHeight}})()");
   check("landscape phone: the burger menu stays inside the screen and scrolls, so Events and Join can be reached", mm.scrolls && mm.fits && mm.eventsVisible, mm);
   check("landscape: no console errors", p.errors.length === 0, p.errors);
-  done(p);
+  await done(p);
 }
 {
   const p = await open(base, { width: 1280, height: 900, reducedMotion: true });
   const rm = await q(p, "({sb: getComputedStyle(document.documentElement).scrollBehavior, inline: document.documentElement.style.scrollBehavior, ul: getComputedStyle(document.querySelector('.hero-copy h1 .hl'), '::after').animationName, menuAnim: getComputedStyle(document.getElementById('mobileMenu')).animationDuration})");
   check("reduced motion: instant scrolling, no headline underline animation, no menu animation", rm.sb === "auto" && rm.inline === "" && rm.ul === "none", rm);
-  done(p);
+  await done(p);
 }
 
 check("zero console errors across every run", allErrors.length === 0, allErrors);

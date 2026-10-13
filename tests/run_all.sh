@@ -37,8 +37,8 @@ fi
 step "Building the site (--demo) and the claude.ai dictionary build"
 python3 "$ROOT/scripts/build_site.py" --demo --out "$SITE" | tail -1 || exit 1
 # words the site must never use (the glossary explains genuine finance terms and is off-limits, so it is skipped)
-if grep -rniE 'placement|undergraduate|\bMBA\b' "$SITE" --exclude-dir=glossary -l | grep -q .; then
-  echo "FORBIDDEN WORDS in the build:"; grep -rniE 'placement|undergraduate|\bMBA\b' "$SITE" --exclude-dir=glossary | cut -c1-200; exit 1
+if grep -rIniE 'placement|undergraduate|\bMBA\b' "$SITE" --exclude-dir=glossary -l | grep -q .; then
+  echo "FORBIDDEN WORDS in the build:"; grep -rniIE 'placement|undergraduate|\bMBA\b' "$SITE" --exclude-dir=glossary | cut -c1-200; exit 1
 fi
 rm -rf "$SUB"; mkdir -p "$SUB"; cp -R "$SITE" "$SUB/finspire"
 ART_OK=1

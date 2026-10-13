@@ -1,0 +1,23 @@
+{
+  "chapters": [
+    {
+      "id": "repository",
+      "t": 0
+    },
+    {
+      "id": "paths",
+      "t": 14.9
+    },
+    {
+      "id": "events",
+      "t": 22.6
+    },
+    {
+      "id": "markets",
+      "t": 28.1
+    }
+  ],
+  "duration": 53.9,
+  "width": 1280,
+  "height": 800
+}

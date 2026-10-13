@@ -28,7 +28,13 @@ OUT = TOP / "artifact-out"
 BASE = ["assets/css/pages.css", "assets/css/shell.css", "assets/js/finspire.js",
         "assets/img/logo-light.png", "assets/img/logo-dark.png", "assets/img/icon.png", "assets/img/apple-touch-icon.png",
         "assets/fonts/plex-sans-latin.woff2", "assets/fonts/plex-mono-400-latin.woff2", "assets/fonts/plex-mono-500-latin.woff2",
-        "assets/fonts/outfit-latin.woff2", "assets/fonts/instrument-serif-italic-latin.woff2"]
+        "assets/fonts/outfit-latin.woff2", "assets/fonts/instrument-serif-italic-latin.woff2",
+        # the home page's product tour (recorded by tools/record-tour.mjs)
+        "assets/video/tour.mp4", "assets/video/tour.webm", "assets/video/tour-poster.jpg", "assets/video/chapters.json"]
+# people and event photos (added by admins; copied when present)
+for _d in ("assets/img/team", "assets/img/events"):
+    BASE += sorted(str(f.relative_to(ROOT / "site")) for f in (ROOT / "site" / _d).glob("*") if f.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp"))
+
 PAGES = {
     "dictionary": {"copy": ["assets/css/dictionary.css", "assets/js/dictionary.js"], "live": ["news-terms.json"]},
     "markets": {"copy": ["assets/css/markets.css", "assets/js/markets.js", "assets/js/news.js"],
